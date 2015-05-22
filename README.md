@@ -1,6 +1,6 @@
 Health Allianze DAPs
 ===========================================
 
-Health Allianze DAPs web application 
+Dare Devil Ducks web application 
 
 Built with AngularJS and Boostrap
