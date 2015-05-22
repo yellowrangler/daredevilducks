@@ -1,0 +1,13 @@
+<div style="padding-top:25px;" class="row">
+
+    <div data-ng-repeat="item in teamMetaData.person" class="col-sm-6 col-md-4">
+      <div style="height:620px;" class="thumbnail">
+        <img ng-src="{{item.image}}">
+        <div class="caption">
+          <h4 style="color:green;">{{item.caption}}</h4>
+          <p>{{item.body}}</p>
+        </div> <!-- end of caption  -->
+      </div> <!-- end of thumbnail -->
+    </div> <!-- end of col -->
+
+  </div> <!-- end of row -->

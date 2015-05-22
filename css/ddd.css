@@ -1,0 +1,164 @@
+/* create sticky menu bar */
+.fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
+
+.iconImage {
+	height: 50px;
+}
+
+.menuItems {
+	padding-top:10px;
+	padding-right:20px;
+	font-size: 25px;˚
+}
+
+/*banner stuff*/
+.bannerText  {
+	font-size: 24px;
+	font-family: "Balthazar", Arial, Helvetica, sans-serif;
+}
+
+.bannerTextSmall {
+	font-size: 13px;
+	font-family: "Balthazar", Arial, Helvetica, sans-serif;
+}
+
+/*imgae css*/
+.centeredImage {
+	text-align: center;
+	/*clear: left;*/
+    margin-right: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	width:'100%';
+}
+
+/* all page css */
+.topPagePosition {
+	padding-top:85px; 
+}
+
+.pageCaption {
+	padding-left:15px;
+	height: 35px;
+	/*padding-top:5px;*/
+	color:maroon;
+	font-weight:600; 
+}
+
+.panelCaption {
+	color:teal;
+	font-weight:700; 
+}
+
+.panelTable {
+	/*color:teal;*/
+	/*font-weight:700; */
+	line-height: 35px;
+	border-color: white;
+}
+
+.subpanelCaption {	
+	color:red;
+	font-weight:600; 
+}
+
+.pageStandardOffset {
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.objectOffset {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.inboxTableFirstRow {
+	width:20%;
+}
+
+.keyrequestsTableFirstRow {
+	width:20%;
+}
+
+.keyrequestDetailTableFirstRow {
+	width:35%;
+}
+
+/* inbox grid */
+.inboxGrid {
+    width: 100%;
+    height: 250px;
+}
+
+/* keyRequestsGrid grid */
+.keyRequestsGrid {
+    width: 100%;
+    height: 250px;
+}
+
+.header-filtered {
+  color: blue;
+}
+
+/*panel images */
+.panel-img {
+    margin-left:auto;
+    margin-right:auto;
+    width:"100%" !important;
+    /*height:350px !important;*/
+}
+
+/*drop down boostrap menus */
+.dropdown :hover {
+    cursor: pointer;
+}
+
+/*boostrap collabsable*/
+.panel-title :hover {
+    cursor: pointer;
+}
+
+.showPointer :hover {
+    cursor: pointer;
+}
+
+/*ddd footer*/
+.ddd-footer {
+	background:#EAF6FF;	
+	height:475px;
+	color:grey;
+	font-family:"Lusitana", Arial, Helvetica, sans-serif;
+}
+
+.ddd-footer a {
+/*	background:#333333;	*/
+	color:#DDDDDD;
+}
+
+/* ddd paragraph text large */
+.ddd-paragraph {
+	color:grey;
+	font-size:18px;
+	font-weight:300;
+	/*font-family:"Lusitana", Arial, Helvetica, sans-serif;*/
+	padding:15px;
+}
+
+.ddd-paragraph-header-large {
+	color:black;
+	font-size:18px;
+	font-weight:600;
+	/*font-family:"Lusitana", Arial, Helvetica, sans-serif;*/
+}
+
+.ddd-paragraph-large {
+	color:black;
+	font-size:20px;
+	font-weight:300;
+	/*font-family:Verdana, Arial, Helvetica, sans-serif;*/
+}
+
+.ddd-paragraph-large li {
+	padding-top:10px;
+}

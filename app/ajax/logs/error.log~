@@ -1,0 +1,212 @@
+2014-06-15 17:56:52 : SQL error: Unknown column '2' in 'field list' - Error doing insert to add daily time
+2014-06-15 17:56:52 : SQL: INSERT INTO projectdailytimetbl (`projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`)VALUES (`2`,`1402804800`,`1402857000`,`1402857000`,`5.00`,`woof`)
+2014-06-15 18:00:47 : SQL error: Unknown column '1402804800' in 'field list' - Error doing insert to add daily time
+2014-06-15 18:00:47 : SQL: INSERT INTO projectdailytimetbl (`projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`)VALUES (2,`1402804800`,`1402857000`,`1402857000`,5.00,`woof`)
+2014-06-15 18:03:24 : SQL error: Unknown column '2014-06-15 00:00:00' in 'field list' - Error doing insert to add daily time
+2014-06-15 18:03:24 : SQL: INSERT INTO projectdailytimetbl (`projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`)VALUES (2,`2014-06-15 00:00:00`,`2014-06-15 14:30:00`,`2014-06-15 14:30:00`,5.00,`woof`)
+2014-06-15 18:10:14 : SQL error: Unknown column '2014-06-15 00:00:00' in 'field list' - Error doing insert to add daily time
+2014-06-15 18:10:14 : SQL: INSERT INTO projectdailytimetbl (`projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`)VALUES (2,`2014-06-15 00:00:00`,`2014-06-15 09:30:00`,`2014-06-15 14:30:00`,5.00,`woof`)
+2014-06-15 18:13:58 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '00:00:00,2014-06-15 09:30:00,2014-06-15 14:30:00,5.00,`woof`)' at line 1 - Error doing insert to add daily time
+2014-06-15 18:13:58 : SQL: INSERT INTO projectdailytimetbl (`projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`)VALUES (2,2014-06-15 00:00:00,2014-06-15 09:30:00,2014-06-15 14:30:00,5.00,`woof`)
+2014-06-15 18:18:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '00:00:00,2014-06-15 09:30:00,2014-06-15 14:30:00,5.00,'woof')' at line 1 - Error doing insert to add daily time
+2014-06-15 18:18:46 : SQL: INSERT INTO projectdailytimetbl (`projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`)VALUES (2,2014-06-15 00:00:00,2014-06-15 09:30:00,2014-06-15 14:30:00,5.00,'woof')
+2014-06-16 09:21:56 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - Error doing get client project list select
+2014-06-16 09:21:56 : SQL: SELECT id, clientid, name FROM projecttbl WHERE CLIENTID = 
+2014-06-16 15:11:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - Error doing get client project list select
+2014-06-16 15:11:47 : SQL: SELECT id, clientid, name FROM projecttbl WHERE CLIENTID = 
+2014-06-16 15:36:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY starttime' at line 3 - Error doing get time entry daily project list select
+2014-06-16 15:36:45 : SQL: SELECT `projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`
+FROM projectdailytimetbl WHERE projectid = 2 AND enterdate = 
+ORDER BY starttime
+2014-06-16 15:37:59 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY starttime' at line 3 - Error doing get time entry daily project list select
+2014-06-16 15:37:59 : SQL: SELECT `projectid`,`enterdate`,`starttime`,`stoptime`,`interval`,`intervaldescription`
+FROM projectdailytimetbl WHERE projectid = 2 AND enterdate = 
+ORDER BY starttime
+2014-06-16 16:51:31 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND enterdate = '1969-12-31 19:00:00'
+ORDER BY starttime' at line 2 - Error doing get time entry daily project list select
+2014-06-16 16:51:31 : SQL: SELECT projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p'),DATE_FORMAT(stoptime,'%h %i %p'),FORMAT(timeinterval,2),intervaldescription
+FROM projectdailytimetbl WHERE projectid =  AND enterdate = '1969-12-31 19:00:00'
+ORDER BY starttime
+2014-06-17 08:40:57 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - Error doing get client project list select
+2014-06-17 08:40:57 : SQL: SELECT id, clientid, name FROM projecttbl WHERE CLIENTID = 
+2014-06-17 08:40:57 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND enterdate = '1969-12-31 19:00:00'
+ORDER BY starttime ASC' at line 4 - Error doing get time entry daily project list select
+2014-06-17 08:40:57 : SQL: SELECT projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl WHERE projectid =  AND enterdate = '1969-12-31 19:00:00'
+ORDER BY starttime ASC
+2014-06-17 17:29:52 : SQL error: Unknown column 'PFT.projectid' in 'on clause' - Error doing get time entry daily project list select
+2014-06-17 17:29:52 : SQL: SELECT projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PFT.projectid
+WHERE enterdate = '2014-06-17 00:00:00'
+ORDER BY starttime ASC
+2014-06-17 17:29:59 : SQL error: Unknown column 'PFT.projectid' in 'on clause' - Error doing get time entry daily project list select
+2014-06-17 17:29:59 : SQL: SELECT projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PFT.projectid
+WHERE enterdate = '2014-06-16 00:00:00'
+ORDER BY starttime ASC
+2014-06-17 17:30:15 : SQL error: Unknown column 'PFT.projectid' in 'on clause' - Error doing get time entry daily project list select
+2014-06-17 17:30:15 : SQL: SELECT projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PFT.projectid
+WHERE enterdate = '2014-06-16 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:45:55 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:45:55 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '1969-12-31 19:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:46:12 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:46:12 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-18 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:46:12 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:46:12 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-18 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:47:56 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:47:56 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-18 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:47:56 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:47:56 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-18 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:48:04 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:48:04 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-15 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:48:16 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:48:16 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-16 00:00:00'
+ORDER BY starttime ASC
+2014-06-18 15:49:40 : SQL error: Column 'id' in field list is ambiguous - Error doing get time entry daily project list select
+2014-06-18 15:49:40 : SQL: SELECT id as projectdailytimeid, projectid,enterdate,DATE_FORMAT(starttime,'%h %i %p') AS fstarttime, PT.name as projectname,
+DATE_FORMAT(stoptime,'%h %i %p') as fstoptime,
+FORMAT(timeinterval,2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+WHERE enterdate = '2014-06-15 00:00:00'
+ORDER BY starttime ASC
+2014-06-21 10:25:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'A' at line 8 - Error doing get time entry daily project review list select
+2014-06-21 10:25:49 : SQL: SELECT PDT.id as projectdailytimeid, projectid,enterdate, 
+PT.name as projectname, 
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+GROUP BY enterdate
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' ORDER BY enterdate ASC
+2014-06-21 10:46:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%m/%d/%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(' at line 2 - Error doing get time entry daily project review list select
+2014-06-21 10:46:04 : SQL: SELECT PDT.id as projectdailytimeid, projectid,
+DATE_FORMAT(enterdate, ,'%m/%d/%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' GROUP BY enterdate ORDER BY enterdate ASC
+2014-06-21 10:46:21 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%m/%d/%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(' at line 2 - Error doing get time entry daily project review list select
+2014-06-21 10:46:21 : SQL: SELECT PDT.id as projectdailytimeid, projectid,
+DATE_FORMAT(enterdate, ,'%m/%d/%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' GROUP BY enterdate ORDER BY enterdate ASC
+2014-06-21 10:46:32 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%m/%d/%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(' at line 2 - Error doing get time entry daily project review list select
+2014-06-21 10:46:32 : SQL: SELECT PDT.id as projectdailytimeid, projectid,
+DATE_FORMAT(enterdate, ,'%m/%d/%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' GROUP BY enterdate ORDER BY enterdate ASC
+2014-06-21 10:47:19 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%m-%d-%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(' at line 2 - Error doing get time entry daily project review list select
+2014-06-21 10:47:19 : SQL: SELECT PDT.id as projectdailytimeid, projectid,
+DATE_FORMAT(enterdate, ,'%m-%d-%y') as enterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' GROUP BY enterdate ORDER BY enterdate ASC
+2014-06-21 10:48:16 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%m-%d-%y') as fenterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT' at line 2 - Error doing get time entry daily project review list select
+2014-06-21 10:48:16 : SQL: SELECT PDT.id as projectdailytimeid, projectid,
+DATE_FORMAT(enterdate, ,'%m-%d-%y') as fenterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' GROUP BY enterdate ORDER BY enterdate ASC
+2014-06-21 10:48:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''%m-%d-%y') as fenterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT' at line 2 - Error doing get time entry daily project review list select
+2014-06-21 10:48:36 : SQL: SELECT PDT.id as projectdailytimeid, projectid,
+DATE_FORMAT(enterdate, ,'%m-%d-%y') as fenterdate,
+PT.name as projectname, CT.name as clientname,
+FORMAT(SUM(timeinterval),2) as finterval,intervaldescription
+FROM projectdailytimetbl PDT 
+LEFT JOIN projecttbl PT ON PT.id = PDT.projectid
+LEFT JOIN clienttbl CT ON CT.id = PT.clientid
+WHERE enterdate >= '2014-06-15 00:00:00' AND enterdate <= '2014-06-22 00:00:00'AND clientid = '1' GROUP BY enterdate ORDER BY enterdate ASC
+2014-07-19 10:07:39 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - Error doing get client details select
+2014-07-19 10:07:39 : SQL: SELECT * FROM clienttbl CT LEFT JOIN addresstbl AT ON AT.id = CT.addressid WHERE AT.id = 
+2014-07-19 10:08:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - Error doing get client details select
+2014-07-19 10:08:41 : SQL: SELECT * FROM clienttbl CT LEFT JOIN addresstbl AT ON AT.id = CT.addressid WHERE AT.id = 
+2014-07-19 10:08:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - Error doing get client details select
+2014-07-19 10:08:51 : SQL: SELECT * FROM clienttbl CT LEFT JOIN addresstbl AT ON AT.id = CT.addressid WHERE AT.id = 
+2014-07-19 16:39:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<br />
+<b>Warning</b>:  Illegal offset type in <b>/home/tarryc/Development/Stuff' at line 1 - Error doing get client details select
+2014-07-19 16:39:49 : SQL: SELECT * FROM clienttbl CT LEFT JOIN addresstbl AT ON AT.id = CT.addressid WHERE AT.id = <br />
+<b>Warning</b>:  Illegal offset type in <b>/home/tarryc/Development/Stuff/selfemployment/app/ajax/addupdateclient.php</b> on line <b>162</b><br />
+1

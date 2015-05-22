@@ -1,0 +1,20 @@
+<div class="pageCaption row">
+     <div class="col-md-12">
+     	
+ 	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div data-ng-repeat="item in teamMetaData.person" class="col-md-12">
+      <div style="height:620px;" class="thumbnail">
+        <img ng-src="{{item.image}}">
+        <div class="caption">
+          <h4 style="color:green;">{{item.caption}}</h4>
+          <p>{{item.body}}</p>
+        </div> <!-- end of caption  -->
+      </div> <!-- end of thumbnail -->
+    </div> <!-- end of col -->
+
+</div> <!-- end of row -->
+
+<div style="padding-bottom:350px;">&nbsp;</div>
