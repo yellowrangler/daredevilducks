@@ -2,8 +2,11 @@ USE ddd;
 DROP TABLE usertbl;
 CREATE TABLE usertbl (
   id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  name varchar(255) NULL,
+  fullname varchar(100) NULL,
+  gender varchar(5) NULL,
+  username varchar(255) NULL,
   email varchar(255) NULL,
+  phonenumber varchar(255) NULL,
   passwd varchar(255) NULL,
   status INT NULL,
   enterdate datetime,
@@ -20,6 +23,7 @@ CREATE TABLE teamstbl (
   conference varchar(255) NULL,
   division varchar(255) NULL,
   teamiconname varchar(255) NULL,
+  teamorder INT NULL,
   teamurl varchar(255) NULL,
   status INT NULL,
   enterdate datetime,

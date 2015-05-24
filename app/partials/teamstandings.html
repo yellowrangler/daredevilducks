@@ -1,0 +1,133 @@
+<div class="pageCaption row">
+     <div class="col-md-12">
+     	Team Standings
+ 	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-6">
+
+		<table class="tableItems">
+			<tr class="afctitle">
+				<th>Team</th>
+				<th>Conf</th>
+				<th>Div</th>
+				<th>Wins</th>
+				<th>Loses</th>
+				<th>Total Games</th>
+				<th>Percent</th>
+			</tr>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'AFC', division: 'East'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+
+			<tr style="background-color:maroon;line-height:2px;"><td colspan=7>&nbsp;</td>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'AFC', division: 'North'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+
+			<tr style="background-color:maroon;line-height:2px;"><td colspan=7>&nbsp;</td>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'AFC', division: 'South'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+
+			<tr style="background-color:maroon;line-height:2px;"><td colspan=7>&nbsp;</td>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'AFC', division: 'West'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+		</table>
+
+  </div> <!-- end of col -->
+
+  <div class="col-md-6">
+
+		<table class="tableItems">
+			<tr class="nfctitle">
+				<th>Team</th>
+				<th>Conf</th>
+				<th>Div</th>
+				<th>Wins</th>
+				<th>Loses</th>
+				<th>Total Games</th>
+				<th>Percent</th>
+			</tr>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'NFC', division: 'East'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+
+			<tr style="background-color:#000066;line-height:2px;"><td colspan=7>&nbsp;</td>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'NFC', division: 'North'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+
+			<tr style="background-color:#000066;line-height:2px;"><td colspan=7>&nbsp;</td>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'NFC', division: 'South'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+
+			<tr style="background-color:#000066;line-height:2px;"><td colspan=7>&nbsp;</td>
+
+			<tr data-ng-repeat="team in teams | filter: {conference: 'NFC', division: 'West'}" >
+				<td><img height="25" ng-src="img/nflicons/{{team.teamiconname}}"> {{team.name}}</td>
+				<td style="text-align: center;">{{team.conference}}</td>
+				<td style="text-align: center;">{{team.division}}</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0</td>
+				<td style="text-align: right;">0%</td>
+			</tr>
+		</table>
+
+  </div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<div style="padding-bottom:50px;">&nbsp;</div>

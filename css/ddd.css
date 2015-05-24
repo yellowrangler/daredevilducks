@@ -8,7 +8,31 @@
 .menuItems {
 	padding-top:10px;
 	padding-right:20px;
-	font-size: 25px;˚
+	font-size: 25px;
+}
+
+.tableItems tr {
+	border-bottom: 1px solid lightgrey;
+}
+
+.tableItems tr td {
+	padding:5px;
+	font-size: 13px;
+}
+
+.tableItems tr th {
+	padding:5px;
+	font-size: 14px;
+	color:white;
+	text-align: center;
+}
+
+.afctitle  {
+	background:maroon;
+}
+
+.nfctitle  {
+	background:#000066;
 }
 
 /*banner stuff*/

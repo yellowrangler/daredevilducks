@@ -1,11 +1,11 @@
 // define factories
-dddApp.factory('inboxFactory', function($q, $http) {
+dddApp.factory('nflteamsFactory', function($q, $http) {
     var factory = {};
 
-    factory.getInBoxItems = function () {
+    factory.getNFLTeams = function () {
         return $http({ 
             method: 'POST', 
-            url: "app/ajax/getinboxitems.php",
+            url: "app/ajax/getnflteams.php",
             // data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })

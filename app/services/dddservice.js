@@ -23,15 +23,19 @@ dddApp.service('msgService', function () {
 
 });
 
-dddApp.service('registerService', function () {
+dddApp.service('nflTeamsService', function () {
 
-    this.getEmptyRegister = function() {
-        var register = emptyRegister;
+    this.setNFLTeams = function(jsonteams) {
+        nflTeams = jsonteams;
 
-        return register;
+        return;
     }
 
-    var emptyRegister = [
+    this.getNFLTeams = function() {
+        return nflTeams;
+    }
+
+    var nflTeams = [
         {  }
     ];
 

@@ -1,10 +1,20 @@
 // define controllers for app
 var controllers = {};
-controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService) {
+controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, nflteamsFactory, nflTeamsService) {
    
     init();
     function init() {
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);
+
+        // preload nfl team data
+        nflteamsFactory.getNFLTeams()
+            .success( function(data) {
+                nflTeamsService.setNFLTeams(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
     };         
 
     $scope.loginlogoff = function () {
@@ -26,19 +36,35 @@ controllers.homeController = function ($scope, $http, $location) {
 }
 
 
-controllers.chooseController = function ($scope, $http, $location) {
-
+controllers.chooseController = function ($scope, $http, $location, nflTeamsService) {
+    
     init();
     function init() {
-      
+        $scope.teams = nflTeamsService.getNFLTeams(); 
     };
 }
 
-controllers.statisticsController = function ($scope, $http, $location) {
+controllers.teamstandingsController = function ($scope, $http, $location, nflTeamsService) {
 
     init();
     function init() {
-      
+        $scope.teams = nflTeamsService.getNFLTeams(); 
+    };
+}
+
+controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService) {
+
+    init();
+    function init() {
+        $scope.teams = nflTeamsService.getNFLTeams(); 
+    };
+}
+
+controllers.halloffameController = function ($scope, $http, $location, nflTeamsService) {
+
+    init();
+    function init() {
+        $scope.teams = nflTeamsService.getNFLTeams(); 
     };
 }
 

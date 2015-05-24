@@ -13,10 +13,21 @@ dddApp.config(function ($routeProvider) {
                 controller: 'chooseController',
                 templateUrl: 'app/partials/choose.html'
             })   
-        .when('/statistics',
+        .when('/leaderboard',
             {
-                controller: 'statisticsController',
-                templateUrl: 'app/partials/statistics.html'
-            })                             
+                controller: 'leaderboardController',
+                templateUrl: 'app/partials/leaderboard.html'
+            }) 
+        .when('/teamstandings',
+            {
+                controller: 'teamstandingsController',
+                templateUrl: 'app/partials/teamstandings.html'
+            })    
+        .when('/halloffame',
+            {
+                controller: 'halloffameController',
+                templateUrl: 'app/partials/halloffame.html'
+            })
+                                        
         .otherwise({redirectTo: '/home' });
 });
