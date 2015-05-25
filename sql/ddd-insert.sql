@@ -63,6 +63,8 @@ CREATE TABLE `teamstatstbl` (
   `seasonyear` int(11) DEFAULT NULL,
   `wins` int(11) DEFAULT NULL,
   `losses` int(11) DEFAULT NULL,
+  `totalgames` int(11) DEFAULT NULL,
+  `percent` DECIMAL( 8, 4 ) NOT NULL,  
   `enterdate` datetime DEFAULT NULL,
   `createdate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)

@@ -16,14 +16,11 @@ $datetime = date("Y-m-d H:i:s");
 // print_r($_POST);
 // die();
 
-// get post values & set values for insert
-$loginemail = $_POST["loginemail"];
-$loginpasswd = $_POST["loginpasswd"];
-$logincomments = $_POST["logincomments"];
-$status = 1;
+// get post values & set values for query
+$loginpasswd = $_POST["passwd"];
+$loginusername = $_POST["username"];
+$rc = 1;
 $msgtext = "";
-$registerclientid = "";
-$registerclientname = "";
 
 //
 // messaging
@@ -36,9 +33,9 @@ $returnArrayLog = new AccessLog("logs/");
 //------------------------------------------------------
 // open connection to host
 $DBhost = "localhost";
-$DBschema = "ichcpm";
-$DBuser = "ichcpm";
-$DBpassword = "ichcpm";
+$DBschema = "ddd";
+$DBuser = "tarryc";
+$DBpassword = "tarryc";
 
 //
 // connect to db
@@ -48,7 +45,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to login for ICHCP client.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to login for ddd user $loginusername.");
 
 	$rv = "";
 	exit($rv);
@@ -58,68 +55,69 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to login for ICHCP client.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to login for ddd user $loginusername.");
 
 	$rv = "";
 	exit($rv);
 }
 
 //---------------------------------------------------------------
-// Get email address password for compare.
+// Get userid password for compare.
 //---------------------------------------------------------------
-$sql = "SELECT id,name,email,passwd,status FROM regitertbl WHERE email = '$loginemail'";
+$sql = "SELECT id AS userid,fullname,username,passwd,role,status FROM usertbl WHERE username = '$loginusername'";
 // print $sql;
 
-$rv = "";
+$rc = 1;
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {
 	$log = new ErrorLog("logs/");
 	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to login for ICHCP client.");
+	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to login for ddd username $loginusername.");
 	$log->writeLog("SQL: $sql");
 
-	$status = -100;
+	$rc = -100;
 	$msgtext = "System Error: $sqlerr";
 }
 
 //
 // check if we got any rows
 //
-if ($status == 1)
+if ($rc == 1)
 {
 	$count = mysql_num_rows($sql_result);
 	if ($count == 1)
 	{
 		$row = mysql_fetch_assoc($sql_result);
-
-		$registerclientid = $row['id'];
-		$registerclientname = ucwords($row['name']);
-		$passwdontable = $row['passwd'];
+		$tblpassw = $row['passwd'];
+		$tbluserid = $row['userid'];
+		$tblfullname = $row['fullname'];
+		$tblusername = $row['username'];
+		$tblrole = $row['role'];
 	}
 	else
 	{
-		$status = -1;
-		$msgtext = "Email address not registered. Please register!";
+		$rc = -1;
+		$msgtext = "Username not registered. Please contact website administrator and register!";
 	}
 }
 	
 //
-// zero status = error
+// zero rc = error
 //
-if ($status == 1)
+if ($rc == 1)
 {
 	//
 	// passwords must match
 	//
-	if ($passwdontable != $loginpasswd)
+	if ($tblpassw != $loginpasswd)
 	{
-		$status = -1;
-		$msgtext = "Password does not match  password on file. Please try again!";
+		$rc = -1;
+		$msgtext = "Password does not match password on file. Please try again!";
 	}
 	else
 	{
-		$msgtext = "You are now logged into International Concierge Health Partners!";
+		$msgtext = "You are now logged into Dare Devil Ducks NFL game Website!";
 	}
 }
 
@@ -135,9 +133,11 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-$msg["status"] = sprintf("%u", $status);
-$msg["clientid"] = sprintf("%u", $registerclientid); 
-$msg["clientname"] = $registerclientname;
+$msg["userid"] = sprintf("%u", $tbluserid); 
+$msg["fullname"] = $tblfullname;
+$msg["tblrole"] = $tblrole;
+$msg["username"] = $tblusername;
+$msg["rc"] = $rc;
 $msg["text"] = $msgtext;
 
 exit(json_encode($msg));

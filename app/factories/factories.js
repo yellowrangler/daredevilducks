@@ -14,14 +14,14 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
     return factory;
 });
 
-dddApp.factory('requestsFactory', function($q, $http) {
+dddApp.factory('loginFactory', function($q, $http) {
     var factory = {};
 
     factory.getRequestItems = function () {
         return $http({ 
             method: 'POST', 
-            url: "app/ajax/getrequestitems.php",
-            // data: data,
+            url: "app/ajax/login.php",
+            data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

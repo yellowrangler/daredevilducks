@@ -41,20 +41,6 @@ dddApp.service('nflTeamsService', function () {
 
 });
 
-dddApp.service('temploginService', function () {
-
-    this.getEmptyTemplogin = function() {
-        var templogin = emptyTemplogin;
-
-        return templogin;
-    }
-
-    var emptyTemplogin = [
-        {  }
-    ];
-
-});
-
 dddApp.service('loginService', function () {
     this.setLoginLogoffLabel = function(labelid, action) {
         var login = this.getLogin();
@@ -68,7 +54,7 @@ dddApp.service('loginService', function () {
         {
             $("#"+labelid).text(logintext.login.text);
             if (action)
-                location = "/dddlogin";
+                location = "/login";
         }
         else
         {
@@ -80,7 +66,7 @@ dddApp.service('loginService', function () {
             }
             else
             {
-                $("#"+labelid).text(login.clientname+" "+logintext.logoff.text);
+                $("#"+labelid).text(login.fullname+" "+logintext.logoff.text);
             }
         } 
 
@@ -91,6 +77,14 @@ dddApp.service('loginService', function () {
         var labels = loginLogoffService;
 
         return labels;
+    }
+
+    this.isLoggedIn = function() {
+        var login = this.getLogin();
+        if (login == null)
+            return false
+        else
+            return true;
     }
 
     this.getEmptyLogin = function() {

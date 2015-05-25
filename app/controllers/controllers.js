@@ -26,15 +26,69 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     }
 }
 
+controllers.loginController = function ($scope, $http, $location, loginService, msgService, loginFactory) {
+    $scope.login = loginService.getEmptyLogin();
+    $scope.msg = msgService.getEmptyMsg();
+     
+    init();
+    function init() {
+        
+    };
 
-controllers.homeController = function ($scope, $http, $location) {
+    $scope.sendLoginForm = function() {
+        var data = "username="+$scope.login.username+"&passwd="+$scope.login.passwd;
+
+        loginFactory.loginPassword(data)
+            .success( function(login) {
+                if (login.rc == "1")
+                {
+                    loginService.addLogin(login);
+
+                    // flip the label
+                    var route = loginService.setLoginLogoffLabel("menubarlogin",0);
+                    
+                    $('#iformationDialogModalTitle').text("Success");
+                    $('#iformationDialogModalLabelBody').text(login.text);
+                    $('#iformationDialogModal').modal();
+                }
+                else
+                {
+                    $('#iformationDialogModalTitle').text("Error");
+                    $('#iformationDialogModalLabelBody').text(login.text);
+                    $('#iformationDialogModal').modal();
+                }   
+            })
+            .error( function(edata) {
+                $('#iformationDialogModalTitle').text("Success");
+                $('#iformationDialogModalLabelBody').text("Syetem Error", edata);
+                $('#iformationDialogModal').modal();
+            });
+    }
+
+    $scope.goHome = function () {
+        $location.path("/home");
+    }
+        
+}
+
+controllers.homeController = function ($scope, $http, $location, $route, loginService) {
 
     init();
     function init() {
+        var loggedIn = loginService.isLoggedIn();
+        if (loggedIn)
+            $("#loginHomeButton").hide();
+        else
+            $("#loginHomeButton").show();
       
     };
-}
 
+    $scope.homepagelogin = function () {
+        $scope.$parent.loginlogoff();
+
+        // $route.reload();
+    }
+}
 
 controllers.chooseController = function ($scope, $http, $location, nflTeamsService) {
     
