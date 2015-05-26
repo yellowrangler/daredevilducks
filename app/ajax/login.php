@@ -135,7 +135,7 @@ mysql_close($dbConn);
 //
 $msg["userid"] = sprintf("%u", $tbluserid); 
 $msg["fullname"] = $tblfullname;
-$msg["tblrole"] = $tblrole;
+$msg["role"] = $tblrole;
 $msg["username"] = $tblusername;
 $msg["rc"] = $rc;
 $msg["text"] = $msgtext;

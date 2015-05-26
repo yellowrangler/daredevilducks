@@ -87,6 +87,20 @@ dddApp.service('loginService', function () {
             return true;
     }
 
+    this.getUserRole = function() {
+        var role = "";
+        var login = "";
+
+        var login = this.getLogin();
+        if (login != null)
+        {
+            var role = login.role;
+        }
+        
+
+        return role;
+    }
+
     this.getEmptyLogin = function() {
         var login = emptyLogin;
 

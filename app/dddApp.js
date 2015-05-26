@@ -29,6 +29,13 @@ dddApp.config(function ($routeProvider) {
                 templateUrl: 'app/partials/halloffame.html'
             })
 
+        .when('/teaminfo',
+            {
+                controller: 'teaminfoController',
+                templateUrl: 'app/partials/teaminfo.html'
+            })
+
+
         .when('/login',
             {
                 controller: 'loginController',

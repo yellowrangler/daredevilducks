@@ -1,7 +1,20 @@
 // define controllers for app
 var controllers = {};
 controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, nflteamsFactory, nflTeamsService) {
-   
+    $("#adminselect").hide();
+
+    function checkRole() {
+        var role = loginService.getUserRole();
+        if (role == "admin")
+        {
+            $("#adminselect").show();
+        }
+        else
+        {
+            $("#adminselect").hide();
+        }  
+    }
+
     init();
     function init() {
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);
@@ -15,10 +28,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 alert(edata);
             });
 
+        checkRole();  
     };         
 
     $scope.loginlogoff = function () {
         var route = loginService.setLoginLogoffLabel("menubarlogin",1);
+        checkRole();
         if (route != "")
         {
             $location.path(route);
@@ -65,7 +80,17 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
             });
     }
 
-    $scope.goHome = function () {
+    $scope.closeModalCleanUp = function () {
+        var role = loginService.getUserRole();
+        if (role == "admin")
+        {
+            $("#adminselect").show();
+        }
+        else
+        {
+            $("#adminselect").hide();
+        }
+        
         $location.path("/home");
     }
         
@@ -122,39 +147,12 @@ controllers.halloffameController = function ($scope, $http, $location, nflTeamsS
     };
 }
 
-controllers.inboxController = function ($scope, $http, $log, $location, metaDataService, languageService, inboxFactory, requestsFactory, uiGridConstants) {
-    $scope.inboxMetaData = "";
-
+controllers.teaminfoController = function ($scope, $http, $log, $location, uiGridConstants, nflteamsFactory) {
     $scope.current = {};
-    $scope.current.inBox = {};
-    $scope.current.HARequest = {};    
-    $scope.current.inBox.filename = "";
-    $scope.current.HARequest.requestid = "";
-
-    $scope.language = languageService.getLanguage();
-
-    //
-    // check to see if need to showo link button
-    //
-    function showLinkButtonCheck()
-    {
-        if ($scope.current.inBox.filename != "" && $scope.current.HARequest.requestid != "")
-        {
-            $("#linkButton").show();
-        }
-        else
-        {
-            $("#linkButton").hide();
-        }
-    }
 
     init();
     function init() {
-        $scope.inboxMetaData = metaDataService.getInboxMetaData($scope.language);
-      
-        $("#linkButton").hide();
-
-        $scope.gridOptionsInBox = {
+       $scope.gridOptionsTeams = {
             showGridFooter: true,
             // showColumnFooter: true,
             enableFiltering: true,
@@ -173,109 +171,74 @@ controllers.inboxController = function ($scope, $http, $log, $location, metaData
 
                     if (row.isSelected)
                     {
-                        // if row is seleted ad information to current inbox
-                        $scope.current.inBox.filename = row.entity[$scope.inboxMetaData.inBox.gridHdr.filename.text]; 
-                        $scope.current.inBox.filenameurl = "inbox/"+row.entity[$scope.inboxMetaData.inBox.gridHdr.filename.text];      
-                        $scope.current.inBox.type = row.entity[$scope.inboxMetaData.inBox.gridHdr.type.text];                
-                        $scope.current.inBox.datetime = row.entity[$scope.inboxMetaData.inBox.gridHdr.datetime.text];
+                        // if row is seleted ad information to current team
+                        $scope.current.name = row.entity["name"]; 
+                        $scope.current.league = row.entity["league"];      
+                        $scope.current.conference = row.entity["conference"];                
+                        $scope.current.division = row.entity["division"];
+
+                        // fill in data from hidden fields
+                        $scope.current.id = row.entity["id"];
+                        $scope.current.teamiconname = row.entity["teamiconname"];
+                        $scope.current.teamorder = row.entity["teamorder"];  
+                        $scope.current.teamurl = row.entity["teamurl"];   
+                        $scope.current.status = row.entity["status"];  
                     }
                     else
                     {
-                        // if row is unseleted remove from current inbox
-                        $scope.current.inBox.filename = "";      
-                        $scope.current.inBox.type = "";                
-                        $scope.current.inBox.datetime = "";
+                        // if row is unseleted remove from current team
+                        $scope.current.name = ""; 
+                        $scope.current.league = ""; 
+                        $scope.current.conference = ""; 
+                        $scope.current.division = ""; 
+
+                        // clear data from hidden fields
+                        $scope.current.id = ""; 
+                        $scope.current.teamiconname = ""; 
+                        $scope.current.teamorder = "";  
+                        $scope.current.teamurl = "";    
+                        $scope.current.status = "";  
                     }
 
                     //
                     // check to see if both inbox and request have been selected
                     // If yes then show link button
                     //
-                    showLinkButtonCheck();
+                    // showLinkButtonCheck();
             
                 })
             },
             columnDefs: [
                 // default
-                { field: $scope.inboxMetaData.inBox.gridHdr.filename.text, width: '45%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: $scope.inboxMetaData.inBox.gridHdr.type.text, width: '15%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: $scope.inboxMetaData.inBox.gridHdr.datetime.text, width: '40%', headerCellClass: $scope.highlightFilteredHeader }
+                { field: "name", width: '40%', headerCellClass: $scope.highlightFilteredHeader },
+                { field: "league", width: '20%', headerCellClass: $scope.highlightFilteredHeader },
+                { field: "conference", width: '20%', headerCellClass: $scope.highlightFilteredHeader },
+                { field: "division", width: '20%', headerCellClass: $scope.highlightFilteredHeader }
             ]
         }
 
-        $scope.gridOptionsRequest = {
-            showGridFooter: true,
-            // showColumnFooter: true,
-            enableFiltering: true,
-            enableRowSelection: true,
-            enableRowHeaderSelection: false,
-            multiSelect: false,
-            modifierKeysToMultiSelect: false,
-            noUnselect: false,
-            onRegisterApi: function( gridApi ) {
-                $scope.gridApi = gridApi;
-
-                gridApi.selection.on.rowSelectionChanged($scope, function(row) {
-                    // var msg = "row seleted" + row.isSelected;
-                    // $log.log(msg);
-
-                    if (row.isSelected)
-                    {
-                        // if row is seleted ad information to current inbox
-                        $scope.current.HARequest.requestid = row.entity[$scope.inboxMetaData.HARequest.gridHdr.requestid.text]; 
-                        $scope.current.HARequest.patient = row.entity[$scope.inboxMetaData.HARequest.gridHdr.patient.text];       
-                        $scope.current.HARequest.provider = row.entity[$scope.inboxMetaData.HARequest.gridHdr.provider.text];               
-                        $scope.current.HARequest.eventdate = row.entity[$scope.inboxMetaData.HARequest.gridHdr.eventdate.text];
-                    }
-                    else
-                    {
-                        // if row is unseleted remove from current inbox
-                        $scope.current.HARequest.requestid = "";  
-                        $scope.current.HARequest.patient = "";      
-                        $scope.current.HARequest.provider = "";                
-                        $scope.current.HARequest.eventdate = "";
-                    }
-
-                    //
-                    // check to see if both inbox and request have been selected
-                    // If yes then show link button
-                    //
-                    showLinkButtonCheck();
-                })
-            },
-            columnDefs: [
-                // default
-                { field: $scope.inboxMetaData.HARequest.gridHdr.requestid.text, width: '30%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: $scope.inboxMetaData.HARequest.gridHdr.patient.text, width: '25%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: $scope.inboxMetaData.HARequest.gridHdr.provider.text, width: '25%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: $scope.inboxMetaData.HARequest.gridHdr.eventdate.text, width: '20%', headerCellClass: $scope.highlightFilteredHeader }
-            
-            ]
-        }
-
-        inboxFactory.getInBoxItems()
+        nflteamsFactory.getNFLTeams()
             .success( function(data) {
-                $scope.inboxItemsList = data; 
-                $scope.gridOptionsInBox.data = data;
+                $scope.nflteam = data; 
+                $scope.gridOptionsTeams.data = data;
             })
             .error( function(edata) {
                 alert(edata);
             });
 
-        requestsFactory.getRequestItems()
-            .success( function(data) {
-                $scope.requestItemsList = data; 
-                $scope.gridOptionsRequest.data = data;
-            })
-            .error( function(edata) {
-                alert(edata);
-            });    
     };
 
-    $scope.linkInboxRequestRecords = function () {
-
-        alert("You have linked the records");
+    $scope.updateTeamInfoRequest = function () {
+        alert("You be submitting update request");
     }
+
+    $scope.newTeamInfo = function () {
+        alert("You be submitting new request");
+    }
+
+    $scope.Delete = function () {
+        alert("You be submitting delete request");
+    } 
 
 }
 
