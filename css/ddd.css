@@ -161,15 +161,17 @@
 
 /*ddd footer*/
 .ddd-footer {
-	background:#EAF6FF;	
+	background:LightSeaGreen;
 	height:475px;
-	color:grey;
+	color:Snow;
+	font-size:15px;
+	text-decoration: none;
 	font-family:"Lusitana", Arial, Helvetica, sans-serif;
 }
 
 .ddd-footer a {
-/*	background:#333333;	*/
-	color:#DDDDDD;
+	color:NavajoWhite;
+	font-size:15px;
 }
 
 /* ddd paragraph text large */

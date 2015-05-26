@@ -18,6 +18,40 @@
 --
 -- used command line mysqldump -u tarryc -p ddd > ddd-dumo.sql
 --
+-- Table structure for table `teamgamestbl`
+--
+
+DROP TABLE IF EXISTS `teamgamestbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `teamgamestbl` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `teamid` int(11) DEFAULT NULL,
+  `gamenbr` int(11) DEFAULT NULL,
+  `location` varchar(5) DEFAULT NULL,
+  `teamscore` int(11) DEFAULT NULL,
+  `enterdate` datetime DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=big5;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teamgamestbl`
+--
+
+LOCK TABLES `teamgamestbl` WRITE;
+INSERT INTO `teamgamestbl` VALUES 
+(1,29,1,'H',36,NULL,NULL),
+(2,24,1,'A',16,NULL,NULL),
+(3,26,2,'H',37,NULL,NULL),
+(4,27,2,'A',34,NULL,NULL);
+
+/*!40000 ALTER TABLE `gamestbl` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gamestbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `gamestbl`
 --
 
@@ -29,12 +63,9 @@ CREATE TABLE `gamestbl` (
   `seasonyear` int(11) DEFAULT NULL,
   `weeknbr` int(11) DEFAULT NULL,
   `gamenbr` int(11) DEFAULT NULL,
-  `gamedate` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `hometeamid` int(11) DEFAULT NULL,
-  `awayteamid` int(11) DEFAULT NULL,
-  `hometeamscore` int(11) DEFAULT NULL,
-  `awayteamscore` int(11) DEFAULT NULL,
+  `gamedate` varchar(25) DEFAULT NULL,
+  `gameday` varchar(25) DEFAULT NULL,
+  `type` varchar(5) DEFAULT NULL,
   `enterdate` datetime DEFAULT NULL,
   `createdate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -46,6 +77,10 @@ CREATE TABLE `gamestbl` (
 --
 
 LOCK TABLES `gamestbl` WRITE;
+INSERT INTO `gamestbl` VALUES 
+(1,2014,1,1,'09/04/2014','Thursday','R',NULL,NULL),
+(2,2014,1,2,'09/07/2014','Sunday','R',NULL,NULL);
+
 /*!40000 ALTER TABLE `gamestbl` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gamestbl` ENABLE KEYS */;
 UNLOCK TABLES;
