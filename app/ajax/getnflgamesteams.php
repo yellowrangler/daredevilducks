@@ -65,7 +65,35 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //---------------------------------------------------------------
 // Get nfl team information
 //---------------------------------------------------------------
-$sql = "SELECT * FROM gamestbl G LEFT JOIN teamstbl T ORDER BY conference ASC, division ASC, teamorder ASC";
+$sql = "SELECT
+	G.id as gameid,
+	G.seasonyear as seasonyear,
+	G.weeknbr as weeknbr,
+	G.gamenbr as gamenbr,
+	G.gamedate as gamedate,
+	G.gameday as gameday,
+	G.type as type,
+	GTA.teamid as awayteamid,
+	GTA.teamscore as awayteamscore,
+	TA.name as awayteamname,
+	TA.conference as awayconference,
+	TA.division as awaydivision,
+	TA.teamiconname as awayteamiconname,
+	GTH.teamid as hometeamid,
+	GTH.teamscore as hometeamscore,
+	TH.name as hometeamname,
+	TH.conference as homeconference,
+	TH.division as homedivision,
+	TH.teamiconname as hometeamiconname 
+
+FROM gamestbl G 
+LEFT JOIN teamgamestbl GTA ON GTA.gamenbr = G.gamenbr
+AND GTA.location = 'A'
+LEFT JOIN teamgamestbl GTH ON GTH.gamenbr = G.gamenbr
+AND GTH.location = 'H'
+LEFT JOIN teamstbl TA ON TA.id = GTA.teamid
+LEFT JOIN teamstbl TH ON TH.id = GTH.teamid
+WHERE G.seasonyear = '2014'";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);
@@ -73,7 +101,7 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl gam team information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl game team information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;

@@ -249,12 +249,22 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
 
 }
 
-controllers.gameinfoController = function ($scope, $http, $log, $location, uiGridConstants, nflteamsFactory) {
+controllers.gameinfoController = function ($scope, $http, $log, $location, uiGridConstants, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
+    $scope.teams = {};
 
     init();
     function init() {
-       $scope.gridOptionsGames = {
+        // get nfl team data
+        nflteamsFactory.getNFLTeams()
+            .success( function(data) {
+                $scope.teams = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        $scope.gridOptionsGames = {
             showGridFooter: true,
             // showColumnFooter: true,
             enableFiltering: true,
@@ -328,17 +338,12 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             },
             columnDefs: [
                 // default
-                { field: "teamiconname",    
-                    cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
-                    displayName: "I", 
-                    width: '5%',
-                    headerCellClass: $scope.highlightFilteredHeader },
                 { field: "seasonyear", 
-                    displayName: "Season", width: '15%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Year", width: '10%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "weeknbr", 
-                    displayName: "Week", width: '5%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Week", width: '10%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamenbr", 
-                    displayName: "Nbr", width: '5%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Nbr", width: '10%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamedate", 
                     displayName: "Date", width: '15%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "hometeamname", 
@@ -361,11 +366,12 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     };
 
-    $scope.updateTeamInfoRequest = function () {
+    $scope.updateGameInfoRequest = function () {
+        var i = 0;
         alert("You be submitting update request");
     }
 
-    $scope.newTeamInfo = function () {
+    $scope.newGameInfo = function () {
         alert("You be submitting new request");
     }
 

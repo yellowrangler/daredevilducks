@@ -19,79 +19,103 @@
 	</div> <!-- end of column -->
 
 <!-- Detail Data -->
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<div style="width:100%;">
 			<div class="panel panel-default">
-				<div class="subpanelCaption panel-heading">NFL Team Detail</div>
+				<div class="subpanelCaption panel-heading">NFL Game Detail</div>
 
-				<form style="padding:10px;" class="form-horizontal">
+				<form name="gameForm" id="gameForm" style="padding:10px;" class="form-horizontal">
+					<div class="row">
+						<div id="col-a" class="col-md-5">
+				            <div class="form-group">
+				              <label for="seasonyear" class="col-sm-4 control-label">Season</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="seasonyear" placeholder="{{current.seasonyear}}" ng-model="current.seasonyear">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <label for="name" class="col-sm-2 control-label">Team</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="name" placeholder="{{current.name}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="weeknbr" class="col-sm-4 control-label">Week</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="weeknbr" placeholder="current.weeknbr" ng-model="current.weeknbr">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <label for="league" class="col-sm-2 control-label">League</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="league" placeholder="{{current.league}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="gamenbr" class="col-sm-4 control-label">Game Nbr</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="gamenbr" placeholder="current.gamenbr" ng-model="current.gamenbr">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group --> 
 
-		            <div class="form-group">
-		              <label for="conference" class="col-sm-2 control-label">Conference</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="conference" placeholder="{{current.conference}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="gamedate" class="col-sm-4 control-label">Game Date</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="gamedate" placeholder="{{current.gamedate}}" ng-model="current.gamedate">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <label for="division" class="col-sm-2 control-label">Division</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="division" placeholder="{{current.division}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="type" class="col-sm-4 control-label">Type</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="type" placeholder="{{current.type}}" ng-model="current.type">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <label for="teamiconname" class="col-sm-2 control-label">Icon Name</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="teamiconname" placeholder="{{current.teamiconname}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="gameday" class="col-sm-4 control-label">Day</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="gameday" placeholder="{{current.gameday}}" ng-model="current.gameday">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
+		  		        </div> <!-- end of col-a -->
 
-		            <div class="form-group">
-		              <label for="teamorder" class="col-sm-2 control-label">Display Order</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="teamorder" placeholder="{{current.teamorder}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				        <div id="col-b" class="col-md-2-offset col-md-5">
+				          	<div class="form-group">
+				              <label for="hometeamname" class="col-sm-4 control-label">Home Team</label>
+				              <div class="col-sm-8">
+				                <select class="form-control" ng-model="current.hometeamid" ng-options="team.id as team.name for team in teams" id="hometeamname"></select>
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <label for="teamurl" class="col-sm-2 control-label">Team URL</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="teamurl" placeholder="{{current.teamurl}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="awayteamname" class="col-sm-4 control-label">Away Team</label>
+				              <div class="col-sm-8">
+				              	<select class="form-control" ng-model="current.awayteamid" ng-options="team.id as team.name for team in teams" id="awayteamname"></select>
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <label for="status" class="col-sm-2 control-label">Status</label>
-		              <div class="col-sm-10">
-		                <input type="text" class="form-control" id="status" placeholder="{{current.status}}">
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
+				            <div class="form-group">
+				              <label for="hometeamscore" class="col-sm-4 control-label">Home Score</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="hometeamscore" placeholder="{{current.hometeamscore}}" ng-model="current.hometeamscore">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
-		              <div class="col-sm-offset-2 col-sm-10">
-		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton">Update</button>
+				            <div class="form-group">
+				              <label for="awayteamscore" class="col-sm-4 control-label">Away Score</label>
+				              <div class="col-sm-8">
+				                <input type="text" class="form-control" id="awayteamscore" placeholder="{{current.awayteamscore}}" ng-model="current.awayteamscore">
+				              </div> <!-- end of col -->
+				            </div> <!-- end of form-group -->
+				        </div> <!-- end of col-b -->
+			        </div> <!-- end of row -->	
 
-		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="newTeamInfo()" id="newButton">New</button>
-		              
-		                <button style="width:20%;" class="btn btn-danger btn-sm" ng-click="Delete()" id="deleteButton">Delete</button>
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->
-		          </form> <!-- end of form -->
+			        <div class="row">
+			        	<div class="col-md-offset-5 col-md-6">
+			        		<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button style="width:20%;" class="btn btn-info btn-sm" ng-click="updateGameInfoRequest()" id="updateButton">Update</button>
+
+									<button style="width:20%;" class="btn btn-info btn-sm" ng-click="newGameInfo()" id="newButton">New</button>
+
+									<button style="width:20%;" class="btn btn-danger btn-sm" ng-click="Delete()" id="deleteButton">Delete</button>
+								</div> <!-- end of col -->
+							</div> <!-- end of form-group -->
+			        	</div> <!-- end of col buttons -->
+			        </div>	<!-- end of row -->          
+  		        </form> <!-- end of form -->
+
 			</div> <!-- end of panel -->
 		</div> <!-- end of width -->
 	</div> <!-- end of column -->
