@@ -1,0 +1,2651 @@
+[
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Seattle",
+    "WEEK": "01",
+    "DATE": "THU, SEP 4",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Atlanta",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "Chicago",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Kansas City",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "St. Louis",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "Miami",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "NY Jets",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Philadelphia",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Pittsburgh",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "Baltimore",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "Houston",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "Dallas",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Tampa Bay",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Denver",
+    "WEEK": "01",
+    "DATE": "SUN, SEP 7",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Detroit",
+    "WEEK": "01",
+    "DATE": "MON, SEP 8",
+    "TIME": "7:10 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Arizona",
+    "WEEK": "01",
+    "DATE": "MON, SEP 8",
+    "TIME": "10:20 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Baltimore",
+    "WEEK": "02",
+    "DATE": "THU, SEP 11",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "Buffalo",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "Cincinnati",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Cleveland",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "Tennessee",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "Minnesota",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "NY Giants",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Washington",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "Carolina",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "San Diego",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "Tampa Bay",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "Denver",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "Green Bay",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Oakland",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "San Francisco",
+    "WEEK": "02",
+    "DATE": "SUN, SEP 14",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "Indianapolis",
+    "WEEK": "02",
+    "DATE": "MON, SEP 15",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Atlanta",
+    "WEEK": "03",
+    "DATE": "THU, SEP 18",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Buffalo",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Cincinnati",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Cleveland",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Detroit",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "St. Louis",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "New England",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "New Orleans",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "NY Giants",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "Philadelphia",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Jacksonville",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "Arizona",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "Miami",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "Seattle",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Carolina",
+    "WEEK": "03",
+    "DATE": "SUN, SEP 21",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "NY Jets",
+    "WEEK": "03",
+    "DATE": "MON, SEP 22",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Washington",
+    "WEEK": "04",
+    "DATE": "THU, SEP 25",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Chicago",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Indianapolis",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "Oakland",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "NY Jets",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Pittsburgh",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Baltimore",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "Houston",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "San Diego",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "Minnesota",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "San Francisco",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Dallas",
+    "WEEK": "04",
+    "DATE": "SUN, SEP 28",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "Kansas City",
+    "WEEK": "04",
+    "DATE": "MON, SEP 29",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "04",
+    "DATE": "MON, SEP 29",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Cincinnati, Cleveland, Denver, St. Louis, Arizona, Seattle"
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "Green Bay",
+    "WEEK": "05",
+    "DATE": "THU, OCT 2",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Dallas",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "Detroit",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Tennessee",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Indianapolis",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "New Orleans",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "NY Giants",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "Philadelphia",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "Carolina",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Jacksonville",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "Denver",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "San Diego",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "San Francisco",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "New England",
+    "WEEK": "05",
+    "DATE": "SUN, OCT 5",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "Washington",
+    "WEEK": "05",
+    "DATE": "MON, OCT 6",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "05",
+    "DATE": "MON, OCT 6",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Oakland, Miami"
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Houston",
+    "WEEK": "06",
+    "DATE": "THU, OCT 9",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "Atlanta",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "Buffalo",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Cincinnati",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Cleveland",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Tennessee",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Miami",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "Minnesota",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "NY Jets",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Tampa Bay",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Oakland",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "Arizona",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "Seattle",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Philadelphia",
+    "WEEK": "06",
+    "DATE": "SUN, OCT 12",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "St. Louis",
+    "WEEK": "06",
+    "DATE": "MON, OCT 13",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "06",
+    "DATE": "MON, OCT 13",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Kansas City, New Orleans"
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "New England",
+    "WEEK": "07",
+    "DATE": "THU, OCT 16",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "Buffalo",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "Chicago",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Detroit",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Green Bay",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "Indianapolis",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "St. Louis",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Washington",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Jacksonville",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "Baltimore",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "San Diego",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Dallas",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "Oakland",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "Denver",
+    "WEEK": "07",
+    "DATE": "SUN, OCT 19",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Pittsburgh",
+    "WEEK": "07",
+    "DATE": "MON, OCT 20",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "07",
+    "DATE": "MON, OCT 20",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Philadelphia, Tampa Bay"
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Denver",
+    "WEEK": "08",
+    "DATE": "THU, OCT 23",
+    "TIME": "8:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "Atlanta",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "9:30 AM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Cincinnati",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Tennessee",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "Kansas City",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "New England",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "NY Jets",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "Tampa Bay",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "Carolina",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "Jacksonville",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "Arizona",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "Cleveland",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Pittsburgh",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "New Orleans",
+    "WEEK": "08",
+    "DATE": "SUN, OCT 26",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "Dallas",
+    "WEEK": "08",
+    "DATE": "MON, OCT 27",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "08",
+    "DATE": "MON, OCT 27",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "NY Giants, San Francisco"
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Carolina",
+    "WEEK": "09",
+    "DATE": "THU, OCT 30",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Cincinnati",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Cleveland",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "Dallas",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "Kansas City",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Miami",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "Minnesota",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "Houston",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "San Francisco",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "New England",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "Seattle",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Pittsburgh",
+    "WEEK": "09",
+    "DATE": "SUN, NOV 2",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "NY Giants",
+    "WEEK": "09",
+    "DATE": "MON, NOV 3",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "09",
+    "DATE": "MON, NOV 3",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Atlanta, Buffalo, Chicago, Detroit, Green Bay, Tennessee"
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Cincinnati",
+    "WEEK": "10",
+    "DATE": "THU, NOV 6",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "Buffalo",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "Detroit",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "New Orleans",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "NY Jets",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "Tampa Bay",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "Jacksonville",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Baltimore",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "Oakland",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "Arizona",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Seattle",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "Green Bay",
+    "WEEK": "10",
+    "DATE": "SUN, NOV 9",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Philadelphia",
+    "WEEK": "10",
+    "DATE": "MON, NOV 10",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "10",
+    "DATE": "MON, NOV 10",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Indianapolis, Minnesota, New England, San Diego, Washington, Houston"
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "Miami",
+    "WEEK": "11",
+    "DATE": "THU, NOV 13",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "Chicago",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Cleveland",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "Green Bay",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "Kansas City",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "St. Louis",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "New Orleans",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "NY Giants",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Washington",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "Carolina",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "San Diego",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "Arizona",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "Indianapolis",
+    "WEEK": "11",
+    "DATE": "SUN, NOV 16",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Tennessee",
+    "WEEK": "11",
+    "DATE": "MON, NOV 17",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "11",
+    "DATE": "MON, NOV 17",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Dallas, NY Jets, Jacksonville, Baltimore"
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "Oakland",
+    "WEEK": "12",
+    "DATE": "THU, NOV 20",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Atlanta",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "Buffalo",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Chicago",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Indianapolis",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Minnesota",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "New England",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Philadelphia",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "Houston",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "San Diego",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "Seattle",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "Denver",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "San Francisco",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "NY Giants",
+    "WEEK": "12",
+    "DATE": "SUN, NOV 23",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "New Orleans",
+    "WEEK": "12",
+    "DATE": "MON, NOV 24",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Bye",
+    "HOME": "Bye",
+    "WEEK": "12",
+    "DATE": "MON, NOV 24",
+    "TIME": "NA",
+    "TV": "NA",
+    "Bye": "Pittsburgh, Carolina"
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "Detroit",
+    "WEEK": "13",
+    "DATE": "THU, NOV 27",
+    "TIME": "12:30 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "Dallas",
+    "WEEK": "13",
+    "DATE": "THU, NOV 27",
+    "TIME": "4:30 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "San Francisco",
+    "WEEK": "13",
+    "DATE": "THU, NOV 27",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Buffalo",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "Indianapolis",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "St. Louis",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Minnesota",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Pittsburgh",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "Tampa Bay",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Jacksonville",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Baltimore",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Houston",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "Atlanta",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "Green Bay",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "Kansas City",
+    "WEEK": "13",
+    "DATE": "SUN, NOV 30",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "NY Jets",
+    "WEEK": "13",
+    "DATE": "MON, DEC 1",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "Chicago",
+    "WEEK": "14",
+    "DATE": "THU, DEC 4",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Cincinnati",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Cleveland",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Detroit",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "Tennessee",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Miami",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "Minnesota",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "New Orleans",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "Washington",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Jacksonville",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "Denver",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "Arizona",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "Oakland",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "Philadelphia",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "San Diego",
+    "WEEK": "14",
+    "DATE": "SUN, DEC 7",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "Green Bay",
+    "WEEK": "14",
+    "DATE": "MON, DEC 8",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "St. Louis",
+    "WEEK": "15",
+    "DATE": "THU, DEC 11",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Pittsburgh",
+    "HOME": "Atlanta",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Buffalo",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "Cleveland",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "Detroit",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Houston",
+    "HOME": "Indianapolis",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "Kansas City",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Miami",
+    "HOME": "New England",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Washington",
+    "HOME": "NY Giants",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tampa Bay",
+    "HOME": "Carolina",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Baltimore",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "Tennessee",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "San Diego",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "4:05 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Francisco",
+    "HOME": "Seattle",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "Philadelphia",
+    "WEEK": "15",
+    "DATE": "SUN, DEC 14",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Chicago",
+    "WEEK": "15",
+    "DATE": "MON, DEC 15",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Tennessee",
+    "HOME": "Jacksonville",
+    "WEEK": "16",
+    "DATE": "THU, DEC 18",
+    "TIME": "8:25 PM",
+    "TV": "NFL",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "San Francisco",
+    "WEEK": "16",
+    "DATE": "SAT, DEC 20",
+    "TIME": "TBD",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "Washington",
+    "WEEK": "16",
+    "DATE": "SAT, DEC 20",
+    "TIME": "TBD",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "Chicago",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Minnesota",
+    "HOME": "Miami",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Atlanta",
+    "HOME": "New Orleans",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New England",
+    "HOME": "NY Jets",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Kansas City",
+    "HOME": "Pittsburgh",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Green Bay",
+    "HOME": "Tampa Bay",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Carolina",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Baltimore",
+    "HOME": "Houston",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Giants",
+    "HOME": "St. Louis",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "4:05 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Dallas",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "Oakland",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Seattle",
+    "HOME": "Arizona",
+    "WEEK": "16",
+    "DATE": "SUN, DEC 21",
+    "TIME": "8:30 PM",
+    "TV": "NBC",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Denver",
+    "HOME": "Cincinnati",
+    "WEEK": "16",
+    "DATE": "MON, DEC 22",
+    "TIME": "8:30 PM",
+    "TV": "ESPN",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Carolina",
+    "HOME": "Atlanta",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Detroit",
+    "HOME": "Green Bay",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Indianapolis",
+    "HOME": "Tennessee",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "San Diego",
+    "HOME": "Kansas City",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "NY Jets",
+    "HOME": "Miami",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Chicago",
+    "HOME": "Minnesota",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Buffalo",
+    "HOME": "New England",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Philadelphia",
+    "HOME": "NY Giants",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cincinnati",
+    "HOME": "Pittsburgh",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "New Orleans",
+    "HOME": "Tampa Bay",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Dallas",
+    "HOME": "Washington",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Cleveland",
+    "HOME": "Baltimore",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Jacksonville",
+    "HOME": "Houston",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "1:00 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Oakland",
+    "HOME": "Denver",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "4:25 PM",
+    "TV": "CBS",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "Arizona",
+    "HOME": "San Francisco",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+,
+  {
+    "VISITING": "St. Louis",
+    "HOME": "Seattle",
+    "WEEK": "17",
+    "DATE": "SUN, DEC 28",
+    "TIME": "4:25 PM",
+    "TV": "FOX",
+    "Bye": ""
+  }
+]
