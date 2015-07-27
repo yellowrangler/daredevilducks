@@ -105,13 +105,13 @@ INSERT INTO `gametypetbl` VALUES (1,'Regular'),(2,'Playoffs'),(3,'Superbowl');
 UNLOCK TABLES;
 
 --
--- Table structure for table `teambyetbl`
+-- Table structure for table `gamebyetbl`
 --
 
-DROP TABLE IF EXISTS `teambyetbl`;
+DROP TABLE IF EXISTS `gamebyetbl`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `teambyetbl` (
+CREATE TABLE `gamebyetbl` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `season` int(11) DEFAULT NULL,
   `week` int(11) DEFAULT NULL,
@@ -125,9 +125,9 @@ CREATE TABLE `teambyetbl` (
 -- Dumping data for table `teambyetbl`
 --
 
-LOCK TABLES `teambyetbl` WRITE;
-/*!40000 ALTER TABLE `teambyetbl` DISABLE KEYS */;
-/*!40000 ALTER TABLE `teambyetbl` ENABLE KEYS */;
+LOCK TABLES `gamebyetbl` WRITE;
+/*!40000 ALTER TABLE `gamebyetbl` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gamebyetbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

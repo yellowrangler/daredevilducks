@@ -9,7 +9,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Atlanta",
@@ -20,7 +20,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "Chicago",
@@ -31,7 +31,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Kansas City",
@@ -42,7 +42,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "St. Louis",
@@ -53,7 +53,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "Miami",
@@ -64,7 +64,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "New York Jets",
@@ -75,7 +75,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Philadelphia",
@@ -86,7 +86,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Pittsburgh",
@@ -97,7 +97,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "Baltimore",
@@ -108,7 +108,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "Houston",
@@ -119,7 +119,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "Dallas",
@@ -130,7 +130,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Tampa Bay",
@@ -141,7 +141,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Denver",
@@ -152,7 +152,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Detroit",
@@ -163,7 +163,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Arizona",
@@ -174,7 +174,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Baltimore",
@@ -185,7 +185,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "Buffalo",
@@ -196,7 +196,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "Cincinnati",
@@ -207,7 +207,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Cleveland",
@@ -218,7 +218,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "Tennessee",
@@ -229,7 +229,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "Minnesota",
@@ -240,7 +240,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "New York Giants",
@@ -251,7 +251,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Washington",
@@ -262,7 +262,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "Carolina",
@@ -273,7 +273,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "San Diego",
@@ -284,7 +284,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "Tampa Bay",
@@ -295,7 +295,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "Denver",
@@ -306,7 +306,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "Green Bay",
@@ -317,7 +317,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Oakland",
@@ -328,7 +328,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "San Francisco",
@@ -339,7 +339,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "Indianapolis",
@@ -350,7 +350,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Atlanta",
@@ -361,7 +361,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Buffalo",
@@ -372,7 +372,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Cincinnati",
@@ -383,7 +383,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Cleveland",
@@ -394,7 +394,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "Detroit",
@@ -405,7 +405,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "St. Louis",
@@ -416,7 +416,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "New England",
@@ -427,7 +427,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "New Orleans",
@@ -438,7 +438,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "New York Giants",
@@ -449,7 +449,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "Philadelphia",
@@ -460,7 +460,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Jacksonville",
@@ -471,7 +471,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "Arizona",
@@ -482,7 +482,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "Miami",
@@ -493,7 +493,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "Seattle",
@@ -504,7 +504,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Carolina",
@@ -515,7 +515,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "New York Jets",
@@ -526,7 +526,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Washington",
@@ -537,7 +537,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "Chicago",
@@ -548,7 +548,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Indianapolis",
@@ -559,7 +559,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "Oakland",
@@ -570,7 +570,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "New York Jets",
@@ -581,7 +581,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Pittsburgh",
@@ -592,7 +592,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Baltimore",
@@ -603,7 +603,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "Houston",
@@ -614,7 +614,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "San Diego",
@@ -625,7 +625,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "Minnesota",
@@ -636,7 +636,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "San Francisco",
@@ -647,7 +647,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Dallas",
@@ -658,7 +658,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "Kansas City",
@@ -669,7 +669,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -680,7 +680,7 @@
     "TV": "NA",
     "Bye": "Cincinnati, Cleveland, Denver, St. Louis, Arizona, Seattle"
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "Green Bay",
@@ -691,7 +691,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Dallas",
@@ -702,7 +702,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "Detroit",
@@ -713,7 +713,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Tennessee",
@@ -724,7 +724,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Indianapolis",
@@ -735,7 +735,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "New Orleans",
@@ -746,7 +746,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "New York Giants",
@@ -757,7 +757,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "Philadelphia",
@@ -768,7 +768,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "Carolina",
@@ -779,7 +779,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Jacksonville",
@@ -790,7 +790,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "Denver",
@@ -801,7 +801,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "San Diego",
@@ -812,7 +812,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "San Francisco",
@@ -823,7 +823,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "New England",
@@ -834,7 +834,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "Washington",
@@ -845,7 +845,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -856,7 +856,7 @@
     "TV": "NA",
     "Bye": "Oakland, Miami"
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Houston",
@@ -867,7 +867,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "Atlanta",
@@ -878,7 +878,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "Buffalo",
@@ -889,7 +889,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Cincinnati",
@@ -900,7 +900,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Cleveland",
@@ -911,7 +911,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Tennessee",
@@ -922,7 +922,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "Miami",
@@ -933,7 +933,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "Minnesota",
@@ -944,7 +944,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "New York Jets",
@@ -955,7 +955,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Tampa Bay",
@@ -966,7 +966,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Oakland",
@@ -977,7 +977,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "Arizona",
@@ -988,7 +988,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "Seattle",
@@ -999,7 +999,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Philadelphia",
@@ -1010,7 +1010,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "St. Louis",
@@ -1021,7 +1021,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -1032,7 +1032,7 @@
     "TV": "NA",
     "Bye": "Kansas City, New Orleans"
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "New England",
@@ -1043,7 +1043,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "Buffalo",
@@ -1054,7 +1054,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "Chicago",
@@ -1065,7 +1065,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Detroit",
@@ -1076,7 +1076,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Green Bay",
@@ -1087,7 +1087,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "Indianapolis",
@@ -1098,7 +1098,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "St. Louis",
@@ -1109,7 +1109,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Washington",
@@ -1120,7 +1120,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Jacksonville",
@@ -1131,7 +1131,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "Baltimore",
@@ -1142,7 +1142,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "San Diego",
@@ -1153,7 +1153,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Dallas",
@@ -1164,7 +1164,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "Oakland",
@@ -1175,7 +1175,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "Denver",
@@ -1186,7 +1186,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Pittsburgh",
@@ -1197,7 +1197,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -1208,7 +1208,7 @@
     "TV": "NA",
     "Bye": "Philadelphia, Tampa Bay"
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Denver",
@@ -1219,7 +1219,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "Atlanta",
@@ -1230,7 +1230,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Cincinnati",
@@ -1241,7 +1241,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Tennessee",
@@ -1252,7 +1252,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "Kansas City",
@@ -1263,7 +1263,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "New England",
@@ -1274,7 +1274,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "New York Jets",
@@ -1285,7 +1285,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "Tampa Bay",
@@ -1296,7 +1296,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "Carolina",
@@ -1307,7 +1307,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "Jacksonville",
@@ -1318,7 +1318,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "Arizona",
@@ -1329,7 +1329,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "Cleveland",
@@ -1340,7 +1340,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Pittsburgh",
@@ -1351,7 +1351,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "New Orleans",
@@ -1362,7 +1362,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "Dallas",
@@ -1373,7 +1373,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -1384,7 +1384,7 @@
     "TV": "NA",
     "Bye": "New York Giants, San Francisco"
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Carolina",
@@ -1395,7 +1395,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Cincinnati",
@@ -1406,7 +1406,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Cleveland",
@@ -1417,7 +1417,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "Dallas",
@@ -1428,7 +1428,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "Kansas City",
@@ -1439,7 +1439,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Miami",
@@ -1450,7 +1450,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "Minnesota",
@@ -1461,7 +1461,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "Houston",
@@ -1472,7 +1472,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "San Francisco",
@@ -1483,7 +1483,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "New England",
@@ -1494,7 +1494,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "Seattle",
@@ -1505,7 +1505,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Pittsburgh",
@@ -1516,7 +1516,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "New York Giants",
@@ -1527,7 +1527,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -1538,7 +1538,7 @@
     "TV": "NA",
     "Bye": "Atlanta, Buffalo, Chicago, Detroit, Green Bay, Tennessee"
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Cincinnati",
@@ -1549,7 +1549,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "Buffalo",
@@ -1560,7 +1560,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "Detroit",
@@ -1571,7 +1571,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "New Orleans",
@@ -1582,7 +1582,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "New York Jets",
@@ -1593,7 +1593,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "Tampa Bay",
@@ -1604,7 +1604,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "Jacksonville",
@@ -1615,7 +1615,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Baltimore",
@@ -1626,7 +1626,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "Oakland",
@@ -1637,7 +1637,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "Arizona",
@@ -1648,7 +1648,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Seattle",
@@ -1659,7 +1659,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "Green Bay",
@@ -1670,7 +1670,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Philadelphia",
@@ -1681,7 +1681,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -1692,7 +1692,7 @@
     "TV": "NA",
     "Bye": "Indianapolis, Minnesota, New England, San Diego, Washington, Houston"
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "Miami",
@@ -1703,7 +1703,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "Chicago",
@@ -1714,7 +1714,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Cleveland",
@@ -1725,7 +1725,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "Green Bay",
@@ -1736,7 +1736,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "Kansas City",
@@ -1747,7 +1747,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "St. Louis",
@@ -1758,7 +1758,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "New Orleans",
@@ -1769,7 +1769,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "New York Giants",
@@ -1780,7 +1780,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Washington",
@@ -1791,7 +1791,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "Carolina",
@@ -1802,7 +1802,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "San Diego",
@@ -1813,7 +1813,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "Arizona",
@@ -1824,7 +1824,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "Indianapolis",
@@ -1835,7 +1835,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Tennessee",
@@ -1846,7 +1846,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -1857,7 +1857,7 @@
     "TV": "NA",
     "Bye": "Dallas, New York Jets, Jacksonville, Baltimore"
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "Oakland",
@@ -1868,7 +1868,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Atlanta",
@@ -1879,7 +1879,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "Buffalo",
@@ -1890,7 +1890,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Chicago",
@@ -1901,7 +1901,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Indianapolis",
@@ -1912,7 +1912,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "Minnesota",
@@ -1923,7 +1923,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "New England",
@@ -1934,7 +1934,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Philadelphia",
@@ -1945,7 +1945,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "Houston",
@@ -1956,7 +1956,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "San Diego",
@@ -1967,7 +1967,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "Seattle",
@@ -1978,7 +1978,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "Denver",
@@ -1989,7 +1989,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "San Francisco",
@@ -2000,7 +2000,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "New York Giants",
@@ -2011,7 +2011,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "New Orleans",
@@ -2022,7 +2022,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Bye",
     "HOME": "Bye",
@@ -2033,7 +2033,7 @@
     "TV": "NA",
     "Bye": "Pittsburgh, Carolina"
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "Detroit",
@@ -2044,7 +2044,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "Dallas",
@@ -2055,7 +2055,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "San Francisco",
@@ -2066,7 +2066,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Buffalo",
@@ -2077,7 +2077,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "Indianapolis",
@@ -2088,7 +2088,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "St. Louis",
@@ -2099,7 +2099,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Minnesota",
@@ -2110,7 +2110,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Pittsburgh",
@@ -2121,7 +2121,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "Tampa Bay",
@@ -2132,7 +2132,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Jacksonville",
@@ -2143,7 +2143,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Baltimore",
@@ -2154,7 +2154,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Houston",
@@ -2165,7 +2165,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "Atlanta",
@@ -2176,7 +2176,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "Green Bay",
@@ -2187,7 +2187,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "Kansas City",
@@ -2198,7 +2198,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "New York Jets",
@@ -2209,7 +2209,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "Chicago",
@@ -2220,7 +2220,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Cincinnati",
@@ -2231,7 +2231,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Cleveland",
@@ -2242,7 +2242,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Detroit",
@@ -2253,7 +2253,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "Tennessee",
@@ -2264,7 +2264,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Miami",
@@ -2275,7 +2275,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "Minnesota",
@@ -2286,7 +2286,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "New Orleans",
@@ -2297,7 +2297,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "Washington",
@@ -2308,7 +2308,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Jacksonville",
@@ -2319,7 +2319,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "Denver",
@@ -2330,7 +2330,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "Arizona",
@@ -2341,7 +2341,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "Oakland",
@@ -2352,7 +2352,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "Philadelphia",
@@ -2363,7 +2363,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "San Diego",
@@ -2374,7 +2374,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "Green Bay",
@@ -2385,7 +2385,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "St. Louis",
@@ -2396,7 +2396,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Pittsburgh",
     "HOME": "Atlanta",
@@ -2407,7 +2407,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "Buffalo",
@@ -2418,7 +2418,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "Cleveland",
@@ -2429,7 +2429,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "Detroit",
@@ -2440,7 +2440,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Houston",
     "HOME": "Indianapolis",
@@ -2451,7 +2451,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "Kansas City",
@@ -2462,7 +2462,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Miami",
     "HOME": "New England",
@@ -2473,7 +2473,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Washington",
     "HOME": "New York Giants",
@@ -2484,7 +2484,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tampa Bay",
     "HOME": "Carolina",
@@ -2495,7 +2495,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Baltimore",
@@ -2506,7 +2506,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "Tennessee",
@@ -2517,7 +2517,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "San Diego",
@@ -2528,7 +2528,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Francisco",
     "HOME": "Seattle",
@@ -2539,7 +2539,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "Philadelphia",
@@ -2550,7 +2550,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Chicago",
@@ -2561,7 +2561,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Tennessee",
     "HOME": "Jacksonville",
@@ -2572,7 +2572,7 @@
     "TV": "NFL",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "San Francisco",
@@ -2583,7 +2583,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "Washington",
@@ -2594,7 +2594,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "Chicago",
@@ -2605,7 +2605,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Minnesota",
     "HOME": "Miami",
@@ -2616,7 +2616,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Atlanta",
     "HOME": "New Orleans",
@@ -2627,7 +2627,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New England",
     "HOME": "New York Jets",
@@ -2638,7 +2638,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Kansas City",
     "HOME": "Pittsburgh",
@@ -2649,7 +2649,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Green Bay",
     "HOME": "Tampa Bay",
@@ -2660,7 +2660,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Carolina",
@@ -2671,7 +2671,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Baltimore",
     "HOME": "Houston",
@@ -2682,7 +2682,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Giants",
     "HOME": "St. Louis",
@@ -2693,7 +2693,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Dallas",
@@ -2704,7 +2704,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "Oakland",
@@ -2715,7 +2715,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Seattle",
     "HOME": "Arizona",
@@ -2726,7 +2726,7 @@
     "TV": "NBC",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Denver",
     "HOME": "Cincinnati",
@@ -2737,7 +2737,7 @@
     "TV": "ESPN",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Carolina",
     "HOME": "Atlanta",
@@ -2748,7 +2748,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Detroit",
     "HOME": "Green Bay",
@@ -2759,7 +2759,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Indianapolis",
     "HOME": "Tennessee",
@@ -2770,7 +2770,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "San Diego",
     "HOME": "Kansas City",
@@ -2781,7 +2781,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New York Jets",
     "HOME": "Miami",
@@ -2792,7 +2792,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Chicago",
     "HOME": "Minnesota",
@@ -2803,7 +2803,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Buffalo",
     "HOME": "New England",
@@ -2814,7 +2814,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Philadelphia",
     "HOME": "New York Giants",
@@ -2825,7 +2825,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cincinnati",
     "HOME": "Pittsburgh",
@@ -2836,7 +2836,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "New Orleans",
     "HOME": "Tampa Bay",
@@ -2847,7 +2847,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Dallas",
     "HOME": "Washington",
@@ -2858,7 +2858,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Cleveland",
     "HOME": "Baltimore",
@@ -2869,7 +2869,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Jacksonville",
     "HOME": "Houston",
@@ -2880,7 +2880,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Oakland",
     "HOME": "Denver",
@@ -2891,7 +2891,7 @@
     "TV": "CBS",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "Arizona",
     "HOME": "San Francisco",
@@ -2902,7 +2902,7 @@
     "TV": "FOX",
     "Bye": null
   }
-][
+,
   {
     "VISITING": "St. Louis",
     "HOME": "Seattle",
