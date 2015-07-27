@@ -26,6 +26,7 @@ class MYsqlService
 		# execute query and set instance variables
 		#
 		@results = @con.query(q) 
+		@record = @results.fetch_hash 
 		@rownbr = @results.num_rows 
 	end	# end of def 
 
@@ -40,14 +41,14 @@ class MYsqlService
 		#
 		# get record from result set
 		#
-		@record = @results.fetch_hash 
+		@record
 	end	# end of def 
 
 	def getNextRecord
 		#
 		# get next record from result set
 		#
-		getRecord
+		@record = @results.fetch_hash
 	end	# end of def
 
 	def close

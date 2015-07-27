@@ -98,7 +98,11 @@ CREATE TABLE `gametvtbl` (
 
 LOCK TABLES `gametvtbl` WRITE;
 /*!40000 ALTER TABLE `gametvtbl` DISABLE KEYS */;
-INSERT INTO `gametvtbl` VALUES (1,'FOX'),(2,'CBS'),(3,'NBC'),(4,'NFL'),(5,'ESPN');
+INSERT INTO `gametvtbl` (`id`, `tv`) VALUES (1,'FOX');
+INSERT INTO `gametvtbl` (`id`, `tv`) VALUES (2,'CBS');
+INSERT INTO `gametvtbl` (`id`, `tv`) VALUES (3,'NBC');
+INSERT INTO `gametvtbl` (`id`, `tv`) VALUES (4,'NFL');
+INSERT INTO `gametvtbl` (`id`, `tv`) VALUES (5,'ESPN');
 /*!40000 ALTER TABLE `gametvtbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +126,9 @@ CREATE TABLE `gametypetbl` (
 
 LOCK TABLES `gametypetbl` WRITE;
 /*!40000 ALTER TABLE `gametypetbl` DISABLE KEYS */;
-INSERT INTO `gametypetbl` VALUES (1,'Regular'),(2,'Playoffs'),(3,'Superbowl');
+INSERT INTO `gametypetbl` (`id`, `gametype`) VALUES (1,'Regular');
+INSERT INTO `gametypetbl` (`id`, `gametype`) VALUES (2,'Playoffs');
+INSERT INTO `gametypetbl` (`id`, `gametype`) VALUES (3,'Superbowl');
 /*!40000 ALTER TABLE `gametypetbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -151,7 +157,10 @@ CREATE TABLE `teamgamestbl` (
 
 LOCK TABLES `teamgamestbl` WRITE;
 /*!40000 ALTER TABLE `teamgamestbl` DISABLE KEYS */;
-INSERT INTO `teamgamestbl` VALUES (1,29,1,'H',36,NULL,NULL),(2,24,1,'A',16,NULL,NULL),(3,26,2,'H',37,NULL,NULL),(4,27,2,'A',34,NULL,NULL);
+INSERT INTO `teamgamestbl` (`id`, `teamid`, `gamenbr`, `location`, `teamscore`, `enterdate`, `createdate`) VALUES (1,29,1,'H',36,NULL,NULL);
+INSERT INTO `teamgamestbl` (`id`, `teamid`, `gamenbr`, `location`, `teamscore`, `enterdate`, `createdate`) VALUES (2,24,1,'A',16,NULL,NULL);
+INSERT INTO `teamgamestbl` (`id`, `teamid`, `gamenbr`, `location`, `teamscore`, `enterdate`, `createdate`) VALUES (3,26,2,'H',37,NULL,NULL);
+INSERT INTO `teamgamestbl` (`id`, `teamid`, `gamenbr`, `location`, `teamscore`, `enterdate`, `createdate`) VALUES (4,27,2,'A',34,NULL,NULL);
 /*!40000 ALTER TABLE `teamgamestbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,8 +205,6 @@ CREATE TABLE `teamstbl` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
   `league` varchar(255) DEFAULT NULL,
   `conference` varchar(255) DEFAULT NULL,
   `division` varchar(255) DEFAULT NULL,
@@ -217,7 +224,38 @@ CREATE TABLE `teamstbl` (
 
 LOCK TABLES `teamstbl` WRITE;
 /*!40000 ALTER TABLE `teamstbl` DISABLE KEYS */;
-INSERT INTO `teamstbl` VALUES (1,'Dolphins','Miami','Miami','FL','NFL','AFC','East','mia.png',1,NULL,NULL,NULL,NULL),(2,'Jets','New York','East Rutherford','NJ','NFL','AFC','East','nyj.png',2,NULL,NULL,NULL,NULL),(3,'Bills','Buffalo','Buffalo','NY','NFL','AFC','East','buf.png',3,NULL,NULL,NULL,NULL),(4,'Patriots','New England','Foxborough','MA','NFL','AFC','East','ne.png',4,NULL,NULL,NULL,NULL),(5,'Bengals','Cincinnati','Cincinnati','OH','NFL','AFC','North','cin.png',1,NULL,NULL,NULL,NULL),(6,'Steelers','Pittsburgh','Pittsburgh','PA','NFL','AFC','North','pit.png',2,NULL,NULL,NULL,NULL),(7,'Browns','Cleveland','Cleveland','OH','NFL','AFC','North','cle.png',3,NULL,NULL,NULL,NULL),(8,'Ravens','Baltimore','Baltimore','MD','NFL','AFC','North','bal.png',4,NULL,NULL,NULL,NULL),(9,'Titans','Tennessee','Nashville','TN','NFL','AFC','South','ten.png',1,NULL,NULL,NULL,NULL),(10,'Texans','Houston','Houston','TX','NFL','AFC','South','hou.png',2,NULL,NULL,NULL,NULL),(11,'Jaguars','Jacksonville','Jacksonville','FL','NFL','AFC','South','jac.png',3,NULL,NULL,NULL,NULL),(12,'Colts','Indianapolis','Indianapolis','IN','NFL','AFC','South','ind.png',4,NULL,NULL,NULL,NULL),(13,'Broncos','Denver','Denver','CO','NFL','AFC','West','den.png',1,NULL,NULL,NULL,NULL),(14,'Chargers','San Diego','San Diego','CA','NFL','AFC','West','sd.png',2,NULL,NULL,NULL,NULL),(15,'Raiders','Oakland','Oakland','CA','NFL','NFC','West','oak.png',3,NULL,NULL,NULL,NULL),(16,'Chiefs','Kansas City','Kansas City','MO','NFL','NFC','West','kc.png',4,NULL,NULL,NULL,NULL),(17,'Eagles','Philadelphia','Philadelphia','PA','NFL','NFC','East','phi.png',1,NULL,NULL,NULL,NULL),(18,'Redskins','Washington','Landover','MD','NFL','NFC','East','was.png',2,NULL,NULL,NULL,NULL),(19,'Cowboys','Dallas','Dallas','TX','NFL','NFC','East','dal.png',3,NULL,NULL,NULL,NULL),(20,'Giants','New York','East Rutherford','NJ','NFL','NFC','East','nyg.png',4,NULL,NULL,NULL,NULL),(21,'Vikings','Minnesota','Minneapolis','MN','NFL','NFC','North','min.png',1,NULL,NULL,NULL,NULL),(22,'Lions','Detroit','Detroit','MI','NFL','NFC','North','det.png',2,NULL,NULL,NULL,NULL),(23,'Bears','Chicago','Chicago','IL','NFL','NFC','North','chi.png',3,NULL,NULL,NULL,NULL),(24,'Packers','Green Bay','Green Bay','WI','NFL','NFC','North','gb.png',4,NULL,NULL,NULL,NULL),(25,'Panthers','Carolina','Charlotte','NC','NFL','NFC','South','car.png',1,NULL,NULL,NULL,NULL),(26,'Falcons','Atlanta','Atlanta','GA','NFL','NFC','South','atl.png',2,NULL,NULL,NULL,NULL),(27,'Saints','New Orleans','New Orleans','LA','NFL','NFC','South','car.png',3,NULL,NULL,NULL,NULL),(28,'Buccaneers','Tampa Bay','Tampa Bay','FL','NFL','NFC','South','tb.png',4,NULL,NULL,NULL,NULL),(29,'Seahawks','Seattle','Seattle','WA','NFL','NFC','West','sea.png',1,NULL,NULL,NULL,NULL),(30,'49ers','San Francisco','San Francisco','CA','NFL','NFC','West','sf.png',2,NULL,NULL,NULL,NULL),(31,'Cardinals','Arizona','Glendale','AZ','NFL','NFC','West','ari.png',3,NULL,NULL,NULL,NULL),(32,'Rams','St. Louis','St. Louis','MO','NFL','NFC','West','stl.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (1,'Miami Dolphins',NULL,'NFL','AFC','East','mia.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (2,'New York Jets',NULL,'NFL','AFC','East','nyj.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (3,'Buffalo Bills',NULL,'NFL','AFC','East','buf.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (4,'New England Patriots',NULL,'NFL','AFC','East','ne.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (5,'Cincinnati Bengals',NULL,'NFL','AFC','North','cin.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (6,'Pittsburgh Steelers',NULL,'NFL','AFC','North','pit.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (7,'Cleveland Browns',NULL,'NFL','AFC','North','cle.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (8,'Baltimore Ravens',NULL,'NFL','AFC','North','bal.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (9,'Tennessee Titans',NULL,'NFL','AFC','South','ten.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (10,'Houston Texans',NULL,'NFL','AFC','South','hou.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (11,'Jacksonville Jaguars',NULL,'NFL','AFC','South','jac.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (12,'Indianapolis Colts',NULL,'NFL','AFC','South','ind.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (13,'Denver Broncos',NULL,'NFL','AFC','West','den.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (14,'San Diego Chargers',NULL,'NFL','AFC','West','sd.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (15,'Oakland Raiders',NULL,'NFL','AFC','West','oak.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (16,'Kansas City Chiefs',NULL,'NFL','AFC','West','kc.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (17,'Philadelphia Eagles',NULL,'NFL','NFC','East','phi.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (18,'Washington Redskins',NULL,'NFL','NFC','East','was.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (19,'Dallas Cowboys',NULL,'NFL','NFC','East','dal.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (20,'New York Giants',NULL,'NFL','NFC','East','nyg.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (21,'Minnesota Vikings',NULL,'NFL','NFC','North','min.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (22,'Detroit Lions',NULL,'NFL','NFC','North','det.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (23,'Chicago Bears',NULL,'NFL','NFC','North','chi.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (24,'Green Bay Packers',NULL,'NFL','NFC','North','gb.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (25,'Carolina Panthers',NULL,'NFL','NFC','South','car.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (26,'Atlanta Falcons',NULL,'NFL','NFC','South','atl.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (27,'New Orleans Saints',NULL,'NFL','NFC','South','car.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (28,'Tampa Bay Buccaneers',NULL,'NFL','NFC','South','tb.png',4,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (29,'Seattle Seahawks',NULL,'NFL','NFC','West','sea.png',1,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (30,'San Francisco 49ers',NULL,'NFL','NFC','West','sf.png',2,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (31,'Arizona Cardinals',NULL,'NFL','NFC','West','ari.png',3,NULL,NULL,NULL,NULL);
+INSERT INTO `teamstbl` (`id`, `name`, `location`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (32,'St. Louis Rams',NULL,'NFL','NFC','West','stl.png',4,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `teamstbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,7 +343,7 @@ CREATE TABLE `usertbl` (
 
 LOCK TABLES `usertbl` WRITE;
 /*!40000 ALTER TABLE `usertbl` DISABLE KEYS */;
-INSERT INTO `usertbl` VALUES (1,'Tarrant Cutler','M','bluef150','admin','tarrant.cutler@gmail.com','7813420204','tarryc',NULL,NULL,NULL);
+INSERT INTO `usertbl` (`id`, `fullname`, `gender`, `username`, `role`, `email`, `phonenumber`, `passwd`, `status`, `enterdate`, `createdate`) VALUES (1,'Tarrant Cutler','M','bluef150','admin','tarrant.cutler@gmail.com','7813420204','tarryc',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `usertbl` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -318,4 +356,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-07-27 16:40:36
+-- Dump completed on 2015-07-27 13:46:51

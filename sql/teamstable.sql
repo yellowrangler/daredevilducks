@@ -1,0 +1,33 @@
+DROP TABLE IF EXISTS `teamstbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `teamstbl` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `league` varchar(255) DEFAULT NULL,
+  `conference` varchar(255) DEFAULT NULL,
+  `division` varchar(255) DEFAULT NULL,
+  `teamiconname` varchar(255) DEFAULT NULL,
+  `teamorder` int(11) DEFAULT NULL,
+  `teamurl` varchar(255) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `enterdate` datetime DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=big5;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teamstbl`
+--
+
+LOCK TABLES `teamstbl` WRITE;
+/*!40000 ALTER TABLE `teamstbl` DISABLE KEYS */;
+INSERT INTO `teamstbl` VALUES (1,'Dolphins','Miami','Miami','FL','NFL','AFC','East','mia.png',1,NULL,NULL,NULL,NULL),(2,'Jets','New York','East Rutherford','NJ','NFL','AFC','East','nyj.png',2,NULL,NULL,NULL,NULL),(3,'Bills','Buffalo','Buffalo','NY','NFL','AFC','East','buf.png',3,NULL,NULL,NULL,NULL),(4,'Patriots','New England','Foxborough','MA','NFL','AFC','East','ne.png',4,NULL,NULL,NULL,NULL),(5,'Bengals','Cincinnati','Cincinnati','OH','NFL','AFC','North','cin.png',1,NULL,NULL,NULL,NULL),(6,'Steelers','Pittsburgh','Pittsburgh','PA','NFL','AFC','North','pit.png',2,NULL,NULL,NULL,NULL),(7,'Browns','Cleveland','Cleveland','OH','NFL','AFC','North','cle.png',3,NULL,NULL,NULL,NULL),(8,'Ravens','Baltimore','Baltimore','MD','NFL','AFC','North','bal.png',4,NULL,NULL,NULL,NULL),(9,'Titans','Tennessee','Nashville','TN','NFL','AFC','South','ten.png',1,NULL,NULL,NULL,NULL),(10,'Texans','Houston','Houston','TX','NFL','AFC','South','hou.png',2,NULL,NULL,NULL,NULL),(11,'Jaguars','Jacksonville','Jacksonville','FL','NFL','AFC','South','jac.png',3,NULL,NULL,NULL,NULL),(12,'Colts','Indianapolis','Indianapolis','IN','NFL','AFC','South','ind.png',4,NULL,NULL,NULL,NULL),(13,'Broncos','Denver','Denver','CO','NFL','AFC','West','den.png',1,NULL,NULL,NULL,NULL),(14,'Chargers','San Diego','San Diego','CA','NFL','AFC','West','sd.png',2,NULL,NULL,NULL,NULL),(15,'Raiders','Oakland','Oakland','CA','NFL','NFC','West','oak.png',3,NULL,NULL,NULL,NULL),(16,'Chiefs','Kansas City','Kansas City','MO','NFL','NFC','West','kc.png',4,NULL,NULL,NULL,NULL),(17,'Eagles','Philadelphia','Philadelphia','PA','NFL','NFC','East','phi.png',1,NULL,NULL,NULL,NULL),(18,'Redskins','Washington','Landover','MD','NFL','NFC','East','was.png',2,NULL,NULL,NULL,NULL),(19,'Cowboys','Dallas','Dallas','TX','NFL','NFC','East','dal.png',3,NULL,NULL,NULL,NULL),(20,'Giants','New York','East Rutherford','NJ','NFL','NFC','East','nyg.png',4,NULL,NULL,NULL,NULL),(21,'Vikings','Minnesota','Minneapolis','MN','NFL','NFC','North','min.png',1,NULL,NULL,NULL,NULL),(22,'Lions','Detroit','Detroit','MI','NFL','NFC','North','det.png',2,NULL,NULL,NULL,NULL),(23,'Bears','Chicago','Chicago','IL','NFL','NFC','North','chi.png',3,NULL,NULL,NULL,NULL),(24,'Packers','Green Bay','Green Bay','WI','NFL','NFC','North','gb.png',4,NULL,NULL,NULL,NULL),(25,'Panthers','Carolina','Charlotte','NC','NFL','NFC','South','car.png',1,NULL,NULL,NULL,NULL),(26,'Falcons','Atlanta','Atlanta','GA','NFL','NFC','South','atl.png',2,NULL,NULL,NULL,NULL),(27,'Saints','New Orleans','New Orleans','LA','NFL','NFC','South','car.png',3,NULL,NULL,NULL,NULL),(28,'Buccaneers','Tampa Bay','Tampa Bay','FL','NFL','NFC','South','tb.png',4,NULL,NULL,NULL,NULL),(29,'Seahawks','Seattle','Seattle','WA','NFL','NFC','West','sea.png',1,NULL,NULL,NULL,NULL),(30,'49ers','San Francisco','San Francisco','CA','NFL','NFC','West','sf.png',2,NULL,NULL,NULL,NULL),(31,'Cardinals','Arizona','Glendale','AZ','NFL','NFC','West','ari.png',3,NULL,NULL,NULL,NULL),(32,'Rams','St. Louis','St. Louis','MO','NFL','NFC','West','stl.png',4,NULL,NULL,NULL,NULL);
+
+-- (1,'Miami Dolphins',NULL,'NFL','AFC','East','mia.png',1,NULL,NULL,NULL,NULL),(2,'New York Jets',NULL,'NFL','AFC','East','nyj.png',2,NULL,NULL,NULL,NULL),(3,'Buffalo Bills',NULL,'NFL','AFC','East','buf.png',3,NULL,NULL,NULL,NULL),(4,'New England Patriots',NULL,'NFL','AFC','East','ne.png',4,NULL,NULL,NULL,NULL),(5,'Cincinnati Bengals',NULL,'NFL','AFC','North','cin.png',1,NULL,NULL,NULL,NULL),(6,'Pittsburgh Steelers',NULL,'NFL','AFC','North','pit.png',2,NULL,NULL,NULL,NULL),(7,'Cleveland Browns',NULL,'NFL','AFC','North','cle.png',3,NULL,NULL,NULL,NULL),(8,'Baltimore Ravens',NULL,'NFL','AFC','North','bal.png',4,NULL,NULL,NULL,NULL),(9,'Tennessee Titans',NULL,'NFL','AFC','South','ten.png',1,NULL,NULL,NULL,NULL),(10,'Houston Texans',NULL,'NFL','AFC','South','hou.png',2,NULL,NULL,NULL,NULL),(11,'Jacksonville Jaguars',NULL,'NFL','AFC','South','jac.png',3,NULL,NULL,NULL,NULL),(12,'Indianapolis Colts',NULL,'NFL','AFC','South','ind.png',4,NULL,NULL,NULL,NULL),(13,'Denver Broncos',NULL,'NFL','AFC','West','den.png',1,NULL,NULL,NULL,NULL),(14,'San Diego Chargers',NULL,'NFL','AFC','West','sd.png',2,NULL,NULL,NULL,NULL),(15,'Oakland Raiders',NULL,'NFL','AFC','West','oak.png',3,NULL,NULL,NULL,NULL),(16,'Kansas City Chiefs',NULL,'NFL','AFC','West','kc.png',4,NULL,NULL,NULL,NULL),(17,'Philadelphia Eagles',NULL,'NFL','NFC','East','phi.png',1,NULL,NULL,NULL,NULL),(18,'Washington Redskins',NULL,'NFL','NFC','East','was.png',2,NULL,NULL,NULL,NULL),(19,'Dallas Cowboys',NULL,'NFL','NFC','East','dal.png',3,NULL,NULL,NULL,NULL),(20,'New York Giants',NULL,'NFL','NFC','East','nyg.png',4,NULL,NULL,NULL,NULL),(21,'Minnesota Vikings',NULL,'NFL','NFC','North','min.png',1,NULL,NULL,NULL,NULL),(22,'Detroit Lions',NULL,'NFL','NFC','North','det.png',2,NULL,NULL,NULL,NULL),(23,'Chicago Bears',NULL,'NFL','NFC','North','chi.png',3,NULL,NULL,NULL,NULL),(24,'Green Bay Packers',NULL,'NFL','NFC','North','gb.png',4,NULL,NULL,NULL,NULL),(25,'Carolina Panthers',NULL,'NFL','NFC','South','car.png',1,NULL,NULL,NULL,NULL),(26,'Atlanta Falcons',NULL,'NFL','NFC','South','atl.png',2,NULL,NULL,NULL,NULL),(27,'New Orleans Saints',NULL,'NFL','NFC','South','car.png',3,NULL,NULL,NULL,NULL),(28,'Tampa Bay Buccaneers',NULL,'NFL','NFC','South','tb.png',4,NULL,NULL,NULL,NULL),(29,'Seattle Seahawks',NULL,'NFL','NFC','West','sea.png',1,NULL,NULL,NULL,NULL),(30,'San Francisco 49ers',NULL,'NFL','NFC','West','sf.png',2,NULL,NULL,NULL,NULL),(31,'Arizona Cardinals',NULL,'NFL','NFC','West','ari.png',3,NULL,NULL,NULL,NULL),(32,'St. Louis Rams',NULL,'NFL','NFC','West','stl.png',4,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `teamstbl` ENABLE KEYS */;
+UNLOCK TABLES;

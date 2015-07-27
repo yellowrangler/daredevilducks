@@ -3,7 +3,7 @@ require "rubygems"
 require "json"
 require './MYsqlService'  
     
-def processPlay (games)
+def processPlay (gameSeason, gameScores)
 	#
 	# open connection for mysql db to get team id's and tv ids
 	#
@@ -17,9 +17,9 @@ def processPlay (games)
 	count = 1
 
 	#
-	# iterate through game data
+	# iterate through gameseason data
 	#
-	games.each do |game|
+	gameSeason.each do |game|
 
 		if game['HOME'] == "Bye"
 			next
@@ -48,28 +48,55 @@ def processPlay (games)
 		gametime = game["TIME"]
 
 		#
-		# get home and visiting team id from team name
+		# get home and visiting team id from team location
+		# This particular feed uses teams location vs
 		#
-		querystr = 'select * from teamstbl where name like "'+game["VISITING"]+'%"'
+		querystr = 'select * from teamstbl where location = "'+game["VISITING"]+'"'
+		# querystr = 'select * from teamstbl where name like "'+game["VISITING"]+'%"'
 		ms.query(querystr) 
 
 		if ms.getRowNbr == 1 
 			awayteamid = ms.getRecord["id"]
+			# 
+			# need team name for getting scores - dont ask
+			# 
+			awayteamname = ms.getRecord["name"]
 		else
 			awayteamid = 0
+			awayteamname = ""
 		end
 
-		querystr = 'select * from teamstbl where name like "'+game["HOME"]+'%"'
+		querystr = 'select * from teamstbl where location = "'+game["HOME"]+'"'
+		# querystr = 'select * from teamstbl where name like "'+game["HOME"]+'%"'		
 		ms.query(querystr)
 		if ms.getRowNbr == 1
 			hometeamid = ms.getRecord["id"]
+			# 
+			# need team name for getting scores - dont ask
+			# 
+			hometeamname = ms.getRecord["name"]
 		else
 			hometeamid = 0
+			hometeamname = ""
 		end
 
+		# 
+		# set scores and winners to nil then look for data
+		# 
 		hometeamscore = nil
 		awayteamscore = nil
 		winningteamid = nil
+		gameScores.each do |gamescore|
+			if hometeamname == gamescore ["home_team"]
+				hometeamscore = gamescore ["home_score"]
+				winningteamid = hometeamid
+			end
+
+			if awayteamname == gamescore ["visitors_score"]
+				awayteamscore = gamescore ["home_score"]
+				winningteamid = awayteamid
+			end
+		end
 
 		gametypeid = 1
 
@@ -100,7 +127,7 @@ def processPlay (games)
 	File.write('nfl2014-insert-play.sql', sqlStr)
 end
 
-def processBye(games)
+def processBye(gameSeason)
 	#
 	# open connection for mysql db to get team id's and tv ids
 	#
@@ -116,7 +143,7 @@ def processBye(games)
 	#
 	# iterate through game data
 	#
-	games.each do |game|
+	gameSeason.each do |game|
 
 		if game['HOME'] != "Bye"
 			next
@@ -127,17 +154,20 @@ def processBye(games)
 		gametypeid = 1
 		byeteams = game["Bye"].split(', ')
 
+		byeteamid = 0
 		byeteams.each do |bye|
 			#
 			# get bye team id from bye team name
 			#
-			querystr = 'select * from teamstbl where name like "'+bye+'%"'
+			querystr = 'select * from teamstbl where location = "'+bye+'"'
 			ms.query(querystr) 
 			if ms.getRowNbr == 1 
 				id = count
 				byeteamid = ms.getRecord["id"]
-			else
-				byeteamid = 0
+			elsif ms.getRowNbr == 2 
+				id = count
+				teamname = bye.split(', ')
+				byeteamid = ms.getRecord["id"]	
 			end
 
 			# 
@@ -173,14 +203,24 @@ begin
 	# main
 	#
 
-	#
-	# get file to parse season data from 
-	#
-	filename = ARGV[0]
-	file = File.read(filename)
-	games = JSON.parse(file) 
+	if ARGV.length != 2
+		puts "Invalid number of arguments:\n Need json file for season. And JSON file for scores"
+		exit
+	end
 
-	processPlay(games)
-	processBye(games)
+	#
+	# get file to parse season and score data
+	#
+	fnameSeason = ARGV[0]
+	fnameScore = ARGV[1]
+
+	file = File.read(fnameSeason)
+	gameSeason = JSON.parse(file) 
+
+	file = File.read(fnameScore)
+	gameScores = JSON.parse(file) 
+
+	processPlay(gameSeason, gameScores)
+	processBye(gameSeason)
 
 end
