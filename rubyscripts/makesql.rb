@@ -49,12 +49,18 @@ def processPlay (gameSeason, gameScores)
 
 		#
 		# get home and visiting team id from team location
-		# This particular feed uses teams location vs
+		# This particular feed uses teams location vs name. However 
+		# we must first check for New York as that location has two teams 
+		# and the season list has full name and not locations
 		#
-		querystr = 'select * from teamstbl where location = "'+game["VISITING"]+'"'
-		# querystr = 'select * from teamstbl where name like "'+game["VISITING"]+'%"'
-		ms.query(querystr) 
+		if game["VISITING"].include? "New York"
+			teamname = game["VISITING"].split(' ')
+			querystr = 'select * from teamstbl where location = "New York" and name="'+teamname[2]+'"'
+		else
+			querystr = 'select * from teamstbl where location = "'+game["VISITING"]+'"'
+		end
 
+		ms.query(querystr) 
 		if ms.getRowNbr == 1 
 			awayteamid = ms.getRecord["id"]
 			# 
@@ -66,8 +72,13 @@ def processPlay (gameSeason, gameScores)
 			awayteamname = ""
 		end
 
-		querystr = 'select * from teamstbl where location = "'+game["HOME"]+'"'
-		# querystr = 'select * from teamstbl where name like "'+game["HOME"]+'%"'		
+		if game["HOME"].include? "New York"
+			teamname = game["HOME"].split(' ')
+			querystr = 'select * from teamstbl where location = "New York" and name="'+teamname[2]+'"'
+		else
+			querystr = 'select * from teamstbl where location = "'+game["HOME"]+'"'
+		end		
+
 		ms.query(querystr)
 		if ms.getRowNbr == 1
 			hometeamid = ms.getRecord["id"]
@@ -86,16 +97,22 @@ def processPlay (gameSeason, gameScores)
 		hometeamscore = nil
 		awayteamscore = nil
 		winningteamid = nil
-		gameScores.each do |gamescore|
-			if hometeamname == gamescore ["home_team"]
+		gameScores.each do |gamescore|	
+			if hometeamname == gamescore ["home_team"] && week == gamescore ["week"] 
 				hometeamscore = gamescore ["home_score"]
-				winningteamid = hometeamid
 			end
 
-			if awayteamname == gamescore ["visitors_score"]
-				awayteamscore = gamescore ["home_score"]
-				winningteamid = awayteamid
+			if awayteamname == gamescore ["visiting_team"] && week == gamescore ["week"] 
+				awayteamscore = gamescore ["visitors_score"]
 			end
+		end
+
+		if hometeamscore.to_i > awayteamscore.to_i
+			winningteamid = hometeamid
+		elsif hometeamscore.to_i < awayteamscore.to_i
+			winningteamid = awayteamid
+		else
+			winningteamid = 0
 		end
 
 		gametypeid = 1
@@ -108,7 +125,7 @@ def processPlay (gameSeason, gameScores)
 			sqlStr = sqlStr + ",\n"
 		end
 
-		sqlStr = sqlStr + "("+id.to_s+","+season.to_s+","+week.to_s+","+gamenbr.to_s+",'"+gamedate+"','"+gameday+"',"+tvid.to_s+",'"+gametime+"',"+hometeamid.to_s+","+awayteamid.to_s+","+hometeamscore.to_s+","+winningteamid.to_s+","+gametypeid.to_s+")"
+		sqlStr = sqlStr + "("+id.to_s+","+season.to_s+","+week.to_s+","+gamenbr.to_s+",'"+gamedate+"','"+gameday+"',"+tvid.to_s+",'"+gametime+"',"+hometeamid.to_s+","+awayteamid.to_s+","+hometeamscore.to_s+","+awayteamscore.to_s+","+winningteamid.to_s+","+gametypeid.to_s+")"
 
 		count = count + 1
 	end
@@ -159,15 +176,17 @@ def processBye(gameSeason)
 			#
 			# get bye team id from bye team name
 			#
-			querystr = 'select * from teamstbl where location = "'+bye+'"'
+			if bye.include? "New York"
+				teamname = bye.split(' ')
+				querystr = 'select * from teamstbl where location = "New York" and name="'+teamname[2]+'"'
+			else
+				querystr = 'select * from teamstbl where location = "'+bye+'"'
+			end	
+
 			ms.query(querystr) 
 			if ms.getRowNbr == 1 
 				id = count
 				byeteamid = ms.getRecord["id"]
-			elsif ms.getRowNbr == 2 
-				id = count
-				teamname = bye.split(', ')
-				byeteamid = ms.getRecord["id"]	
 			end
 
 			# 

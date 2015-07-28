@@ -63,8 +63,6 @@ CREATE TABLE `gamestbl` (
   `awayteamscore` int(11) DEFAULT NULL,
   `winningteamid` int(11) DEFAULT NULL,
   `gametypeid` int(11) DEFAULT NULL,
-  `enterdate` datetime DEFAULT NULL,
-  `createdate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;
