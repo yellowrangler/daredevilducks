@@ -28,6 +28,30 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 alert(edata);
             });
 
+        nflteamsFactory.getNFLTeamstats()
+            .success( function(data) {
+                nflTeamsService.setNFLTeamstats(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        nflteamsFactory.getNFLTeamseasons()
+            .success( function(data) {
+                nflTeamsService.setNFLTeamseasons(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
+
+        nflteamsFactory.getNFLTeamseasonweeks()
+            .success( function(data) {
+                nflTeamsService.setNFLTeamseasonweeks(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });            
+
         checkRole();  
     };         
 
@@ -127,7 +151,8 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
 
     init();
     function init() {
-        $scope.teams = nflTeamsService.getNFLTeams(); 
+        $scope.teamstats = nflTeamsService.getNFLTeamstats(); 
+        $scope.teamseasons = nflTeamsService.getNFLTeamseasons(); 
     };
 }
 

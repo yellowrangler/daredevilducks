@@ -185,7 +185,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	// calculate percentage
 	//
 	$p = $wins / $games;
-	$percent = round($p, 2);
+	$percent = round($p, 3);
 
 	// 
 	// if data is there update otherwise insert

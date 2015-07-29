@@ -25,8 +25,8 @@ dddApp.service('msgService', function () {
 
 dddApp.service('nflTeamsService', function () {
 
-    this.setNFLTeams = function(jsonteams) {
-        nflTeams = jsonteams;
+    this.setNFLTeams = function(json) {
+        nflTeams = json;
 
         return;
     }
@@ -36,6 +36,48 @@ dddApp.service('nflTeamsService', function () {
     }
 
     var nflTeams = [
+        {  }
+    ];
+
+    this.setNFLTeamstats = function(json) {
+        nflTeamstats = json;
+
+        return;
+    }
+
+    this.getNFLTeamstats = function() {
+        return nflTeamstats;
+    }
+
+    var nflTeamstats = [
+        {  }
+    ];
+
+    this.setNFLTeamseasons = function(json) {
+        nflTeamseasons = json;
+
+        return;
+    }
+
+    this.getNFLTeamseasons = function() {
+        return nflTeamseasons;
+    }
+
+    var nflTeamseasons = [
+        {  }
+    ];
+
+    this.setNFLTeamseasonweeks = function(json) {
+        nflTeamseasonweeks = json;
+
+        return;
+    }
+
+    this.getNFLTeamseasonweeks = function() {
+        return nflTeamseasonweeks;
+    }
+
+    var nflTeamseasonweeks = [
         {  }
     ];
 

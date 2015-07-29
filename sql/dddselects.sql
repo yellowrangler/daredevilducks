@@ -9,27 +9,29 @@ from gamestbl g
 left join teamstbl th on g.hometeamid = th.id
 left join teamstbl ta on g.awayteamid = ta.id
 
-select count(*) as games
-from gamestbl g
-left join teamstbl th on g.hometeamid = th.id
-left join teamstbl ta on g.awayteamid = ta.id
-where hometeamid = 1 OR awayteamid = 1
+SELECT count(*) as ties
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where (hometeamid = ".$row['id']." and hometeamscore = awayteamscore)
+    OR 
+    (awayteamid = ".$row['id']." and awayteamscore = hometeamscore)
 
-select count(*) as wins
-from gamestbl g
-left join teamstbl th on g.hometeamid = th.id and hometeamscore > awayteamscore
-left join teamstbl ta on g.awayteamid = ta.id and awayteamscore > hometeamscore
-where th.id = 1 OR ta.id = 1
-
-select count(*) as losses
-from gamestbl g
-left join teamstbl th on g.hometeamid = th.id and hometeamscore < awayteamscore
-left join teamstbl ta on g.awayteamid = ta.id and awayteamscore < hometeamscore
-where th.id = 1 OR ta.id = 1
-
-select count(*) as ties
-from gamestbl g
-left join teamstbl th on g.hometeamid = th.id and hometeamscore = awayteamscore
-left join teamstbl ta on g.awayteamid = ta.id and awayteamscore = hometeamscore
-where th.id = 1 OR ta.id = 1
-
+    SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+WHERE ts.seasonyear = '$seasonyear'
+ORDER BY conference ASC, division ASC, teamorder ASC
