@@ -96,7 +96,7 @@ def processPlay (gameSeason, gameScores)
 		# 
 		hometeamscore = nil
 		awayteamscore = nil
-		winningteamid = nil
+		# winningteamid = nil
 		gameScores.each do |gamescore|	
 			if hometeamname == gamescore ["home_team"] && week == gamescore ["week"] 
 				hometeamscore = gamescore ["home_score"]
@@ -107,13 +107,13 @@ def processPlay (gameSeason, gameScores)
 			end
 		end
 
-		if hometeamscore.to_i > awayteamscore.to_i
-			winningteamid = hometeamid
-		elsif hometeamscore.to_i < awayteamscore.to_i
-			winningteamid = awayteamid
-		else
-			winningteamid = 0
-		end
+		# if hometeamscore.to_i > awayteamscore.to_i
+		# 	winningteamid = hometeamid
+		# elsif hometeamscore.to_i < awayteamscore.to_i
+		# 	winningteamid = awayteamid
+		# else
+		# 	winningteamid = 0
+		# end
 
 		gametypeid = 1
 
@@ -125,7 +125,7 @@ def processPlay (gameSeason, gameScores)
 			sqlStr = sqlStr + ",\n"
 		end
 
-		sqlStr = sqlStr + "("+id.to_s+","+season.to_s+","+week.to_s+","+gamenbr.to_s+",'"+gamedate+"','"+gameday+"',"+tvid.to_s+",'"+gametime+"',"+hometeamid.to_s+","+awayteamid.to_s+","+hometeamscore.to_s+","+awayteamscore.to_s+","+winningteamid.to_s+","+gametypeid.to_s+")"
+		sqlStr = sqlStr + "("+id.to_s+","+season.to_s+","+week.to_s+","+gamenbr.to_s+",'"+gamedate+"','"+gameday+"',"+tvid.to_s+",'"+gametime+"',"+hometeamid.to_s+","+awayteamid.to_s+","+hometeamscore.to_s+","+awayteamscore.to_s+","+gametypeid.to_s+")"
 
 		count = count + 1
 	end

@@ -4,7 +4,7 @@ require 'json'
 require 'csv'
 
 def is_int(str)
-return !!(str =~ /^[-+]?[1-9]([0-9]*)?$/)
+	return !!(str =~ /^[-+]?[1-9]([0-9]*)?$/)
 end
 
 if ARGV.length == 2
@@ -17,17 +17,27 @@ if File.exist?(outputfilename+'.json')
 	File.delete(outputfilename+'.json')
 end
 
-lines = CSV.open(ARGV[0],{:col_sep => ","}).readlines
+# 
+# read in file 
+# 
+lines = CSV.open(ARGV[0]).readlines
 
-# remove first entry of the lines array 
-keys = lines.shift  
+# 
+# remove first entry (header) 
+# 
+keys = lines.delete lines.first  
 
-lines.each do |values|
-     # convert the line into a hash and transform string into int
-     hash=Hash[keys.zip(values.map{|val| is_int(val) ? val.to_i : val}) ]
+# 
+# loop through csv lines and create JSON
+# 
+File.open(outputfilename+'.json', "w") do |f|
+    data = lines.map do |values|
+      is_int(values) ? values.to_i : values.to_s
+      Hash[keys.zip(values)]
+    end
 
-     # Write a file with the hash results
-     File.open(outputfilename+".json", "a") do |f|
-        f.write JSON.pretty_generate [hash]
-     end
+    tempData = JSON.pretty_generate(data)
+    jsonData = tempData.gsub('/\]\[/',",")
+
+    f.puts jsonData
 end
