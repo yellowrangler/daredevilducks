@@ -27,6 +27,13 @@
 				<form style="padding:10px;" class="form-horizontal">
 
 		            <div class="form-group">
+		              <label for="location" class="col-sm-4 control-label">Location</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="location" placeholder="{{current.location}}" ng-model="current.location">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
 		              <label for="name" class="col-sm-4 control-label">Team</label>
 		              <div class="col-sm-7">
 		                <input type="text" class="form-control" id="name" placeholder="{{current.name}}" ng-model="current.name">
@@ -51,6 +58,20 @@
 		              <label for="division" class="col-sm-4 control-label">Division</label>
 		              <div class="col-sm-7">
 		                <input type="text" class="form-control" id="division" placeholder="{{current.division}}" ng-model="current.division">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="city" class="col-sm-4 control-label">City</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="city" placeholder="{{current.city}}" ng-model="current.city">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="state" class="col-sm-4 control-label">State</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="state" placeholder="{{current.state}}" ng-model="current.state">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
@@ -83,12 +104,19 @@
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
+		              <label for="teamid" class="col-sm-4 control-label">Team ID</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="teamid" placeholder="{{current.teamid}}" ng-model="current.teamid">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
 		              <div class="col-sm-offset-2 col-sm-10">
-		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton">Update</button>
+		                <button style="width:20%;" disabled="disabled" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton">Update</button>
 
 		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="newTeamInfo()" id="newButton">New</button>
 		              
-		                <button style="width:20%;" class="btn btn-danger btn-sm" ng-click="Delete()" id="deleteButton">Delete</button>
+		                <button style="width:20%;" disabled="disabled" class="btn btn-danger btn-sm" ng-click="Delete()" id="deleteButton">Delete</button>
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 		          </form> <!-- end of form -->

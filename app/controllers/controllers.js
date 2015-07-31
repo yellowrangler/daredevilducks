@@ -202,8 +202,11 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.division = row.entity["division"];
 
                         // fill in data from hidden fields
-                        $scope.current.id = row.entity["id"];
+                        $scope.current.teamid = row.entity["id"];
                         $scope.current.league = row.entity["league"];
+                        $scope.current.location = row.entity["location"]; 
+                        $scope.current.city = row.entity["city"];
+                        $scope.current.state = row.entity["state"];                                                                                               
                         $scope.current.teamiconname = row.entity["teamiconname"];
                         $scope.current.teamorder = row.entity["teamorder"];  
                         $scope.current.teamurl = row.entity["teamurl"];   
@@ -217,8 +220,11 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.division = ""; 
 
                         // clear data from hidden fields
-                        $scope.current.id = ""; 
-                        $scope.current.league = ""; 
+                        $scope.current.teamid = ""; 
+                        $scope.current.league = "";                         
+                        $scope.current.location = ""; 
+                        $scope.current.city = "";
+                        $scope.current.state = "";                         
                         $scope.current.teamiconname = ""; 
                         $scope.current.teamorder = "";  
                         $scope.current.teamurl = "";    
@@ -229,7 +235,8 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                     // check to see if both inbox and request have been selected
                     // If yes then show link button
                     //
-                    // showLinkButtonCheck();
+                    $('#updateButton').prop('disabled', false);
+                    $('#deleteButton').prop('disabled', false);
             
                 })
             },
@@ -237,11 +244,13 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                 // default
                 { field: "teamiconname",    
                     cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
-                    displayName: "I", 
+                    displayName: " ", 
                     width: '10%',
                     headerCellClass: $scope.highlightFilteredHeader },
+                { field: "location", 
+                    displayName: "Location", width: '25%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "name", 
-                    displayName: "Team", width: '50%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Team", width: '25%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "conference", 
                     displayName: "Conf", width: '20%', headerCellClass: $scope.highlightFilteredHeader },
                 { field: "division", 
@@ -261,6 +270,9 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
     };
 
     $scope.updateTeamInfoRequest = function () {
+        $('#updateButton').prop('disabled', true);
+        $('#deleteButton').prop('disabled', true);
+
         alert("You be submitting update request");
     }
 
@@ -269,6 +281,9 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
     }
 
     $scope.Delete = function () {
+        $('#updateButton').prop('disabled', true);
+        $('#deleteButton').prop('disabled', true);
+
         alert("You be submitting delete request");
     } 
 
@@ -318,7 +333,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.type = row.entity["type"]; 
 
                         // fill in data from hidden fields
-                        $scope.current.id = row.entity["id"];   
+                        $scope.current.teamid = row.entity["id"];   
                         $scope.current.league = row.entity["league"];
                         $scope.current.division = row.entity["division"];
                         $scope.current.conference = row.entity["conference"];
@@ -341,7 +356,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.type = "";
 
                         // clear data from hidden fields
-                        $scope.current.id = "";
+                        $scope.current.teamid = "";
                         $scope.current.league = "";                        
                         $scope.current.division = "";
                         $scope.current.conference = "";   
@@ -393,7 +408,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     $scope.updateGameInfoRequest = function () {
         var i = 0;
-        alert("You be submitting update request");
+        alert("You be submitting update request");       
     }
 
     $scope.newGameInfo = function () {

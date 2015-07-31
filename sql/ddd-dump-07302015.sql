@@ -384,11 +384,11 @@ CREATE TABLE `gametvtbl` (
 
 LOCK TABLES `gametvtbl` WRITE;
 /*!40000 ALTER TABLE `gametvtbl` DISABLE KEYS */;
-INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (1,'FOX', 'fox.png');
-INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (2,'CBS', 'cbs.png');
-INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (3,'NBC', 'nbc.png');
-INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (4,'NFL', 'nfl.png');
-INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (5,'ESPN', 'espn.png');
+INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (1,'FOX','fox.png');
+INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (2,'CBS','cbs.png');
+INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (3,'NBC','nbc.png');
+INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (4,'NFL','nfl.png');
+INSERT INTO `gametvtbl` (`id`, `tv`, `tviconname`) VALUES (5,'ESPN','espn.png');
 /*!40000 ALTER TABLE `gametvtbl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,7 +403,7 @@ CREATE TABLE `gametypetbl` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `gametype` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=big5;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -680,4 +680,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-07-29 10:23:04
+-- Dump completed on 2015-07-30 19:54:28
