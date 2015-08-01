@@ -47,6 +47,15 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNFLGametypes = function () {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnflgametypes.php",
+            // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
 

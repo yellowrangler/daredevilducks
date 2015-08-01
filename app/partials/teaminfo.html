@@ -4,7 +4,6 @@
  	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
-
 <!-- Grid data -->
 <div class="pageStandardOffset row">
 	<div class="col-md-5">
@@ -12,7 +11,7 @@
 			<div class="panelCaption panel-body">NFL Team List</div>
 
 			<div class="pageStandardOffset">
-				<div id="teaminfoGrid" ui-grid="gridOptionsTeams" ui-grid-selection class="teaminfoGrid"></div>
+				<div id="teaminfoGrid" ui-grid="gridOptionsTeams" ui-grid-selection ui-grid-resize-columns class="teaminfoGrid"></div>
 			</div> 	<!-- end of offset -->
 
 		</div> <!-- end of panel -->
@@ -23,9 +22,7 @@
 		<div style="width:100%;">
 			<div class="panel panel-default">
 				<div class="subpanelCaption panel-heading">NFL Team Detail</div>
-
-				<form style="padding:10px;" class="form-horizontal">
-
+				<form id="teamForm" name="teamForm" style="padding:10px;" class="form-horizontal">
 		            <div class="form-group">
 		              <label for="location" class="col-sm-4 control-label">Location</label>
 		              <div class="col-sm-7">
@@ -110,7 +107,7 @@
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
-		            <div class="form-group">
+		            <div style="padding-top:15px;" class="form-group">
 		              <div class="col-sm-offset-2 col-sm-10">
 		                <button style="width:20%;" disabled="disabled" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton">Update</button>
 

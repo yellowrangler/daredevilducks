@@ -50,7 +50,15 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             })
             .error( function(edata) {
                 alert(edata);
-            });            
+            }); 
+
+        nflteamsFactory.getNFLGametypes()
+            .success( function(data) {
+                nflTeamsService.setNFLGametypes(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });                 
 
         checkRole();  
     };         
@@ -98,7 +106,7 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
                 }   
             })
             .error( function(edata) {
-                $('#iformationDialogModalTitle').text("Success");
+                $('#iformationDialogModalTitle').text("System Error");
                 $('#iformationDialogModalLabelBody').text("Syetem Error", edata);
                 $('#iformationDialogModal').modal();
             });
@@ -172,6 +180,14 @@ controllers.halloffameController = function ($scope, $http, $location, nflTeamsS
     };
 }
 
+controllers.addmemberController = function ($scope, $http, $location) {
+
+    init();
+    function init() {
+        
+    };
+}
+
 controllers.teaminfoController = function ($scope, $http, $log, $location, uiGridConstants, nflteamsFactory) {
     $scope.current = {};
 
@@ -182,6 +198,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
             // showColumnFooter: true,
             enableFiltering: true,
             enableRowSelection: true,
+            enableColumnResizing: true,
             enableRowHeaderSelection: false,
             multiSelect: false,
             modifierKeysToMultiSelect: false,
@@ -304,10 +321,19 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                 alert(edata);
             });
 
+        nflteamsFactory.getNFLGametypes()
+            .success( function(data) {
+                $scope.gametypes = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
+
         $scope.gridOptionsGames = {
             showGridFooter: true,
             // showColumnFooter: true,
             enableFiltering: true,
+            enableColumnResizing: true,
             enableRowSelection: true,
             enableRowHeaderSelection: false,
             multiSelect: false,
@@ -324,13 +350,13 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                     if (row.isSelected)
                     {
                         // if row is seleted ad information to current team
-                        $scope.current.seasonyear = row.entity["seasonyear"]; 
-                        $scope.current.weeknbr = row.entity["weeknbr"];                
+                        $scope.current.season = row.entity["season"]; 
+                        $scope.current.week = row.entity["week"];                
                         $scope.current.gamenbr = row.entity["gamenbr"];
                         $scope.current.gamedate = row.entity["gamedate"];  
                         $scope.current.hometeamname = row.entity["hometeamname"];   
                         $scope.current.awayteamname = row.entity["awayteamname"]; 
-                        $scope.current.type = row.entity["type"]; 
+                        $scope.current.gametype = row.entity["gametype"]; 
 
                         // fill in data from hidden fields
                         $scope.current.teamid = row.entity["id"];   
@@ -343,17 +369,18 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.awayteamscore = row.entity["awayteamscore"];   
                         $scope.current.gameday = row.entity["gameday"];  
                         $scope.current.teamiconname = row.entity["teamiconname"]; 
+                        $scope.current.gametypeid = row.entity["gametypeid"]; 
                     }
                     else
                     {
                         // if row is unseleted remove from current team
-                        $scope.current.seasonyear = ""; 
-                        $scope.current.weeknbr = "";                
+                        $scope.current.season = ""; 
+                        $scope.current.week = "";                
                         $scope.current.gamenbr = "";
                         $scope.current.gamedate = "";
                         $scope.current.hometeamname = "";
                         $scope.current.awayteamname = "";
-                        $scope.current.type = "";
+                        $scope.current.gametype = "";
 
                         // clear data from hidden fields
                         $scope.current.teamid = "";
@@ -378,20 +405,20 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             },
             columnDefs: [
                 // default
-                { field: "seasonyear", 
-                    displayName: "Year", width: '10%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: "weeknbr", 
-                    displayName: "Week", width: '10%', headerCellClass: $scope.highlightFilteredHeader },
+                { field: "season", 
+                    displayName: "Year", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "week", 
+                    displayName: "Week", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamenbr", 
-                    displayName: "Nbr", width: '10%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Nbr", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamedate", 
-                    displayName: "Date", width: '15%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Date", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "hometeamname", 
-                    displayName: "Home", width: '25%', headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Home", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "awayteamname", 
-                    displayName: "Away", width: '25%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: "type", 
-                    displayName: "Type", width: '5%', headerCellClass: $scope.highlightFilteredHeader }
+                    displayName: "Away", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "gametype", 
+                    displayName: "Type", headerCellClass: $scope.highlightFilteredHeader }
             ]
         }
 

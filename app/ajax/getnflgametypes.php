@@ -18,7 +18,6 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-$season = "2014";
 
 //
 // messaging
@@ -43,7 +42,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team information.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game types information.");
 
 	$rv = "";
 	exit($rv);
@@ -53,47 +52,16 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team information.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game types information.");
 
 	$rv = "";
 	exit($rv);
 }
 
-// create time stamp versions for insert to mysql
-$enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
-
 //---------------------------------------------------------------
-// Get nfl team information
+// get nfl game type information
 //---------------------------------------------------------------
-$sql = "SELECT
-	G.id as gameid,
-	G.season as season,
-	G.week as week,
-	G.gamenbr as gamenbr,
-	G.gamedate as gamedate,
-	G.gameday as gameday,
-	G.gametypeid as gametypeid,
-	G.hometeamid as hometeamid,
-	G.hometeamscore as hometeamscore,
-	G.awayteamid as awayteamid,
-	G.awayteamscore as awayteamscore,
-	TA.name as awayteamname,
-	TA.location as awayteamlocation,	
-	TA.conference as awayconference,
-	TA.division as awaydivision,
-	TA.teamiconname as awayteamiconname,
-	TH.name as hometeamname,
-	TH.location as hometeamlocation,	
-	TH.conference as homeconference,
-	TH.division as homedivision,
-	TH.teamiconname as hometeamiconname,
-	GT.gametype as gametype
-
-FROM gamestbl G 
-LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
-LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
-LEFT JOIN gametypetbl GT on GT.id = G.gametypeid
-WHERE G.season = '$season'";
+$sql = "SELECT *  FROM gametypetbl ORDER BY id ASC";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);
@@ -101,7 +69,7 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl game team information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl game types information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -111,9 +79,9 @@ if (!$sql_result)
 //
 // fill the array
 //
-$teams = array();
+$gametypes = array();
 while($r = mysql_fetch_assoc($sql_result)) {
-    $teams[] = $r;
+    $gametypes[] = $r;
 }
 
 //
@@ -124,6 +92,6 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($teams));
+exit(json_encode($gametypes));
 
 ?>

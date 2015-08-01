@@ -81,6 +81,20 @@ dddApp.service('nflTeamsService', function () {
         {  }
     ];
 
+    this.setNFLGametypes = function(json) {
+        nflTeamseasonweeks = json;
+
+        return;
+    }
+
+    this.getNFLGametypes = function() {
+        return nflGametypes;
+    }
+
+    var nflGametypes = [
+        {  }
+    ];
+
 });
 
 dddApp.service('loginService', function () {
