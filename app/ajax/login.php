@@ -18,7 +18,7 @@ $datetime = date("Y-m-d H:i:s");
 
 // get post values & set values for query
 $loginpasswd = $_POST["passwd"];
-$loginusername = $_POST["username"];
+$loginscreenname = $_POST["screenname"];
 $rc = 1;
 $msgtext = "";
 
@@ -29,7 +29,7 @@ $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
 //------------------------------------------------------
-// get admin user info
+// get admin member info
 //------------------------------------------------------
 // open connection to host
 $DBhost = "localhost";
@@ -45,7 +45,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to login for ddd user $loginusername.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to login for ddd membername $loginmembername.");
 
 	$rv = "";
 	exit($rv);
@@ -55,16 +55,16 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to login for ddd user $loginusername.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to login for ddd membername $loginmembername.");
 
 	$rv = "";
 	exit($rv);
 }
 
 //---------------------------------------------------------------
-// Get userid password for compare.
+// Get memberid password for compare.
 //---------------------------------------------------------------
-$sql = "SELECT id AS userid,fullname,username,passwd,role,status FROM usertbl WHERE username = '$loginusername'";
+$sql = "SELECT id AS memberid,screenname,membername,avatar,passwd,role,status FROM membertbl WHERE screenname = '$loginscreenname'";
 // print $sql;
 
 $rc = 1;
@@ -73,7 +73,7 @@ if (!$sql_result)
 {
 	$log = new ErrorLog("logs/");
 	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to login for ddd username $loginusername.");
+	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to login for ddd membername $loginmembername.");
 	$log->writeLog("SQL: $sql");
 
 	$rc = -100;
@@ -90,15 +90,16 @@ if ($rc == 1)
 	{
 		$row = mysql_fetch_assoc($sql_result);
 		$tblpassw = $row['passwd'];
-		$tbluserid = $row['userid'];
-		$tblfullname = $row['fullname'];
-		$tblusername = $row['username'];
+		$tblmemberid = $row['memberid'];
+		$tblscreenname = $row['screenname'];
+		$tblmembername = $row['membername'];
+		$tblavatar = $row['avatar'];
 		$tblrole = $row['role'];
 	}
 	else
 	{
 		$rc = -1;
-		$msgtext = "Username not registered. Please contact website administrator and register!";
+		$msgtext = "Member name not registered. Please contact website administrator and register!";
 	}
 }
 	
@@ -133,10 +134,11 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-$msg["userid"] = sprintf("%u", $tbluserid); 
-$msg["fullname"] = $tblfullname;
+$msg["memberid"] = sprintf("%u", $tblmemberid); 
+$msg["screenname"] = $tblscreenname;
+$msg["avatar"] = $tblavatar;
 $msg["role"] = $tblrole;
-$msg["username"] = $tblusername;
+$msg["membername"] = $tblmembername;
 $msg["rc"] = $rc;
 $msg["text"] = $msgtext;
 

@@ -122,7 +122,7 @@ dddApp.service('loginService', function () {
             }
             else
             {
-                $("#"+labelid).text(login.fullname+" "+logintext.logoff.text);
+                $("#"+labelid).text(login.membername+" "+logintext.logoff.text);
             }
         } 
 
@@ -143,7 +143,7 @@ dddApp.service('loginService', function () {
             return true;
     }
 
-    this.getUserRole = function() {
+    this.getMemberRole = function() {
         var role = "";
         var login = "";
 

@@ -59,6 +59,66 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
     return factory;
 });
 
+dddApp.factory('membersFactory', function($q, $http) {
+    var factory = {};
+
+    factory.getMembers = function () {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmembers.php",
+            // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.addMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/addmember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.updateMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/updatemember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.deleteMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/deletemember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.uploadMemberAvatar = function () {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/uploadmemberavatar.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    return factory;
+});
+
 dddApp.factory('loginFactory', function($q, $http) {
     var factory = {};
 

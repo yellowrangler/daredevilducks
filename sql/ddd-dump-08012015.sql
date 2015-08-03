@@ -422,6 +422,100 @@ INSERT INTO `gametypetbl` (`id`, `gametype`) VALUES (6,'Superbowl');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `memberpickstbl`
+--
+
+DROP TABLE IF EXISTS `memberpickstbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `memberpickstbl` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `memberid` int(11) DEFAULT NULL,
+  `gamesid` int(11) DEFAULT NULL,
+  `pick` int(11) DEFAULT NULL,
+  `enterdate` datetime DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=big5;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `memberpickstbl`
+--
+
+LOCK TABLES `memberpickstbl` WRITE;
+/*!40000 ALTER TABLE `memberpickstbl` DISABLE KEYS */;
+/*!40000 ALTER TABLE `memberpickstbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `memberstatstbl`
+--
+
+DROP TABLE IF EXISTS `memberstatstbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `memberstatstbl` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `memberid` int(11) DEFAULT NULL,
+  `season` int(11) DEFAULT NULL,
+  `wins` int(11) DEFAULT NULL,
+  `losses` int(11) DEFAULT NULL,
+  `enterdate` datetime DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=big5;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `memberstatstbl`
+--
+
+LOCK TABLES `memberstatstbl` WRITE;
+/*!40000 ALTER TABLE `memberstatstbl` DISABLE KEYS */;
+/*!40000 ALTER TABLE `memberstatstbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `membertbl`
+--
+
+DROP TABLE IF EXISTS `membertbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `membertbl` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `membername` varchar(255) DEFAULT NULL,
+  `screenname` varchar(255) DEFAULT NULL,
+  `gender` varchar(25) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `street` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `zip` varchar(255) DEFAULT NULL,
+  `phonenumber` varchar(255) DEFAULT NULL,
+  `passwd` varchar(255) DEFAULT NULL,
+  `status` varchar(25) DEFAULT NULL,
+  `enterdate` datetime DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=big5;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `membertbl`
+--
+
+LOCK TABLES `membertbl` WRITE;
+/*!40000 ALTER TABLE `membertbl` DISABLE KEYS */;
+INSERT INTO `membertbl` (`id`, `membername`, `screenname`, `gender`, `avatar`, `role`, `email`, `street`, `city`, `state`, `zip`, `phonenumber`, `passwd`, `status`, `enterdate`, `createdate`) VALUES (1,'Tarrant Cutler','bluef150','Male',NULL,'admin','tarrant.cutler@gmail.com',NULL,NULL,NULL,NULL,'7813420204','tarryc',NULL,NULL,NULL);
+INSERT INTO `membertbl` (`id`, `membername`, `screenname`, `gender`, `avatar`, `role`, `email`, `street`, `city`, `state`, `zip`, `phonenumber`, `passwd`, `status`, `enterdate`, `createdate`) VALUES (2,'Tammy Jamieson','ducky','Female','','admin','tzjamieson@yahoo.com','36 Pleasant Ridge','','','04843','978-239-2650','123',0,'2015-08-01 20:53:12',NULL);
+/*!40000 ALTER TABLE `membertbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `teamstatstbl`
 --
 
@@ -550,100 +644,6 @@ INSERT INTO `teamstbl` (`id`, `name`, `location`, `city`, `state`, `league`, `co
 INSERT INTO `teamstbl` (`id`, `name`, `location`, `city`, `state`, `league`, `conference`, `division`, `teamiconname`, `teamorder`, `teamurl`, `status`, `enterdate`, `createdate`) VALUES (32,'Rams','St. Louis','St. Louis','MO','NFL','NFC','West','stl.png',4,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `teamstbl` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `membertbl`
---
-
-DROP TABLE IF EXISTS `memberpickstbl`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `memberpickstbl` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `memberid` int(11) DEFAULT NULL,
-  `gamesid` int(11) DEFAULT NULL,
-  `pick` int(11) DEFAULT NULL,
-  `enterdate` datetime DEFAULT NULL,
-  `createdate` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=big5;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `memberpickstbl`
---
-
-LOCK TABLES `memberpickstbl` WRITE;
-/*!40000 ALTER TABLE `memberpickstbl` DISABLE KEYS */;
-/*!40000 ALTER TABLE `memberpickstbl` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `memberstatstbl`
---
-
-DROP TABLE IF EXISTS `memberstatstbl`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `memberstatstbl` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `memberid` int(11) DEFAULT NULL,
-  `season` int(11) DEFAULT NULL,
-  `wins` int(11) DEFAULT NULL,
-  `losses` int(11) DEFAULT NULL,
-  `enterdate` datetime DEFAULT NULL,
-  `createdate` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=big5;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `memberstatstbl`
---
-
-LOCK TABLES `memberstatstbl` WRITE;
-/*!40000 ALTER TABLE `memberstatstbl` DISABLE KEYS */;
-/*!40000 ALTER TABLE `memberstatstbl` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `membertbl`
---
-
-DROP TABLE IF EXISTS `membertbl`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `membertbl` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `membername` varchar(255) DEFAULT NULL,
-  `screenname` varchar(255) DEFAULT NULL,  
-  `gender` varchar(5) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,   
-  `role` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `street` varchar(255) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
-  `zip` varchar(255) DEFAULT NULL,      
-  `phonenumber` varchar(255) DEFAULT NULL,
-  `passwd` varchar(255) DEFAULT NULL,
-  `status` int(11) DEFAULT NULL,
-  `enterdate` datetime DEFAULT NULL,
-  `createdate` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=big5;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `membertbl`
---
-
-LOCK TABLES `membertbl` WRITE;
-/*!40000 ALTER TABLE `membertbl` DISABLE KEYS */;
-INSERT INTO `membertbl` (`id`, `membername`,  `gender`,`screenname`,`role`, `email`, `phonenumber`, `passwd`, `status`, `enterdate`, `createdate`) 
-VALUES (1,'Tarrant Cutler','M','bluef150','admin','tarrant.cutler@gmail.com','7813420204','tarryc',NULL,NULL,NULL);
-/*!40000 ALTER TABLE `membertbl` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -654,4 +654,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-07-30 19:54:28
+-- Dump completed on 2015-08-01 17:05:51

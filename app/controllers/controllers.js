@@ -4,7 +4,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     $("#adminselect").hide();
 
     function checkRole() {
-        var role = loginService.getUserRole();
+        var role = loginService.getMemberRole();
         if (role == "admin")
         {
             $("#adminselect").show();
@@ -83,7 +83,7 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
     };
 
     $scope.sendLoginForm = function() {
-        var data = "username="+$scope.login.username+"&passwd="+$scope.login.passwd;
+        var data = "screenname="+$scope.login.screenname+"&passwd="+$scope.login.passwd;
 
         loginFactory.loginPassword(data)
             .success( function(login) {
@@ -113,7 +113,7 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
     }
 
     $scope.closeModalCleanUp = function () {
-        var role = loginService.getUserRole();
+        var role = loginService.getMemberRole();
         if (role == "admin")
         {
             $("#adminselect").show();
@@ -180,12 +180,125 @@ controllers.halloffameController = function ($scope, $http, $location, nflTeamsS
     };
 }
 
-controllers.addmemberController = function ($scope, $http, $location) {
+controllers.addmemberController = function ($scope, $http, $location, membersFactory) {
+
 
     init();
     function init() {
-        
+      
     };
+
+    $scope.addnewmember = function() {
+        var val1 = $("#passwd").val();
+        var val2 = $("#vpasswd").val();
+        if (val1 !== val2)
+        {
+            alert ("Passwords do not match!")
+
+        }
+        else
+        {
+            var formstring = $("#addmemberForm").serialize();
+
+            membersFactory.addMember(formstring)
+            .success( function(data) {
+                if (data !== "ok")
+                {
+                    alert("Error adding member - "+data);
+                }
+                else
+                {
+                    alert("Member added succesfully!");
+                    // $("#addmemberForm")[0].reset();
+                }
+
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        }
+    }
+}
+
+
+controllers.updatememberController = function ($scope, $http, $location, membersFactory) {
+
+    init();
+    function init() {
+        membersFactory.getMembers()
+            .success( function(data) {
+                $scope.members = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+    };
+
+    $scope.getMember = function(data) {
+    
+        var membername = "membername="+data;
+        membersFactory.getMember(membername)
+        .success( function(data) {
+            $scope.current = data;
+
+            $scope.current.vpasswd = $scope.current.passwd;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    
+    }
+
+    $scope.updatenewmember = function() {
+        var val1 = $("#passwd").val();
+        var val2 = $("#vpasswd").val();
+        if (val1 !== val2)
+        {
+            alert ("Passwords do not match!")
+
+        }
+        else
+        {
+            var formstring = $("#updatememberForm").serialize();
+
+            membersFactory.updateMember(formstring)
+            .success( function(data) {
+                if (data !== "ok")
+                {
+                    alert("Error updating member - "+data);
+                }
+                else
+                {
+                    alert("Member updated succesfully!");
+                    // $("#addmemberForm")[0].reset();
+                }
+
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        }
+    }
+
+    $scope.deletememberbutton = function() {
+        var formstring = $("#updatememberForm").serialize();
+
+        membersFactory.deleteMember(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error deleting member - "+data);
+            }
+            else
+            {
+                alert("Member deleted succesfully!");
+                $("#updatememberForm")[0].reset();
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
 }
 
 controllers.teaminfoController = function ($scope, $http, $log, $location, uiGridConstants, nflteamsFactory) {
