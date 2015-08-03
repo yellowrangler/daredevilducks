@@ -72,6 +72,8 @@ $sql = "SELECT
 	G.gamenbr as gamenbr,
 	G.gamedate as gamedate,
 	G.gameday as gameday,
+	G.gametime as gametime,
+	G.networkid as networkid,
 	G.gametypeid as gametypeid,
 	G.hometeamid as hometeamid,
 	G.hometeamscore as hometeamscore,

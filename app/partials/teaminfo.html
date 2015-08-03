@@ -26,94 +26,90 @@
 		            <div class="form-group">
 		              <label for="location" class="col-sm-4 control-label">Location</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="location" placeholder="{{current.location}}" ng-model="current.location">
+		                <input type="text" class="form-control" id="location" name="location" placeholder="{{current.location}}" ng-model="current.location">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="name" class="col-sm-4 control-label">Team</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="name" placeholder="{{current.name}}" ng-model="current.name">
+		                <input type="text" class="form-control" id="name" name="name" placeholder="{{current.name}}" ng-model="current.name">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="league" class="col-sm-4 control-label">League</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="league" placeholder="{{current.league}}" ng-model="current.league">
+		                <input type="text" class="form-control" id="league" name="league" placeholder="{{current.league}}" ng-model="current.league">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="conference" class="col-sm-4 control-label">Conference</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="conference" placeholder="{{current.conference}}" ng-model="current.conference">
+		                <input type="text" class="form-control" id="conference" name="conference" placeholder="{{current.conference}}" ng-model="current.conference">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="division" class="col-sm-4 control-label">Division</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="division" placeholder="{{current.division}}" ng-model="current.division">
+		                <input type="text" class="form-control" id="division" name="division" placeholder="{{current.division}}" ng-model="current.division">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="city" class="col-sm-4 control-label">City</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="city" placeholder="{{current.city}}" ng-model="current.city">
+		                <input type="text" class="form-control" id="city" name="city" placeholder="{{current.city}}" ng-model="current.city">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="state" class="col-sm-4 control-label">State</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="state" placeholder="{{current.state}}" ng-model="current.state">
+		                <input type="text" class="form-control" id="state" name="state" placeholder="{{current.state}}" ng-model="current.state">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="teamiconname" class="col-sm-4 control-label">Icon Name</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="teamiconname" placeholder="{{current.teamiconname}}" ng-model="current.teamiconname">
+		                <input type="text" class="form-control" id="teamiconname" name="teamiconname" placeholder="{{current.teamiconname}}" ng-model="current.teamiconname">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="teamorder" class="col-sm-4 control-label">Display Order</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="teamorder" placeholder="{{current.teamorder}}" ng-model="current.teamorder">
+		                <input type="text" class="form-control" id="teamorder" name="teamorder" placeholder="{{current.teamorder}}" ng-model="current.teamorder">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="teamurl" class="col-sm-4 control-label">Team URL</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="teamurl" placeholder="{{current.teamurl}}" ng-model="current.teamurl">
+		                <input type="text" class="form-control" id="teamurl" name="teamurl" placeholder="{{current.teamurl}}" ng-model="current.teamurl">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="status" class="col-sm-4 control-label">Status</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="status" placeholder="{{current.status}}" ng-model="current.status">
+		                <input type="text" class="form-control" id="status" name="status" placeholder="{{current.status}}" ng-model="current.status">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="teamid" class="col-sm-4 control-label">Team ID</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="teamid" placeholder="{{current.teamid}}" ng-model="current.teamid">
+		                <input type="text" class="form-control" id="teamid" name="teamid" placeholder="{{current.teamid}}" ng-model="current.teamid">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div style="padding-top:15px;" class="form-group">
 		              <div class="col-sm-offset-2 col-sm-10">
-		                <button style="width:20%;" disabled="disabled" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton">Update</button>
-
-		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="newTeamInfo()" id="newButton">New</button>
-		              
-		                <button style="width:20%;" disabled="disabled" class="btn btn-danger btn-sm" ng-click="Delete()" id="deleteButton">Delete</button>
+		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton" name="updateButton" >Update</button>
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 		          </form> <!-- end of form -->

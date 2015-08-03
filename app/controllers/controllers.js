@@ -359,15 +359,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.teamorder = "";  
                         $scope.current.teamurl = "";    
                         $scope.current.status = "";  
-                    }
-
-                    //
-                    // check to see if both inbox and request have been selected
-                    // If yes then show link button
-                    //
-                    $('#updateButton').prop('disabled', false);
-                    $('#deleteButton').prop('disabled', false);
-            
+                    }        
                 })
             },
             columnDefs: [
@@ -400,22 +392,24 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
     };
 
     $scope.updateTeamInfoRequest = function () {
-        $('#updateButton').prop('disabled', true);
-        $('#deleteButton').prop('disabled', true);
+        var formstring = $("#teamForm").serialize();
 
-        alert("You be submitting update request");
+        nflteamsFactory.updateTeamInfo(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error updating team - "+data);
+            }
+            else
+            {
+                alert("Team updated succesfully!");
+                $("#teamForm")[0].reset();
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
     }
-
-    $scope.newTeamInfo = function () {
-        alert("You be submitting new request");
-    }
-
-    $scope.Delete = function () {
-        $('#updateButton').prop('disabled', true);
-        $('#deleteButton').prop('disabled', true);
-
-        alert("You be submitting delete request");
-    } 
 
 }
 
@@ -440,7 +434,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             })
             .error( function(edata) {
                 alert(edata);
-            });    
+            }); 
+
+        nflteamsFactory.getNFLnetworks()
+            .success( function(data) {
+                $scope.networks = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });        
 
         $scope.gridOptionsGames = {
             showGridFooter: true,
@@ -476,6 +478,8 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.league = row.entity["league"];
                         $scope.current.division = row.entity["division"];
                         $scope.current.conference = row.entity["conference"];
+                        $scope.current.networkid = row.entity["networkid"];
+                        $scope.current.gametime = row.entity["gametime"];
                         $scope.current.hometeamid = row.entity["hometeamid"];
                         $scope.current.awayteamid = row.entity["awayteamid"];
                         $scope.current.hometeamscore = row.entity["hometeamscore"];  
@@ -500,6 +504,8 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.league = "";                        
                         $scope.current.division = "";
                         $scope.current.conference = "";   
+                        $scope.current.networkid = ""; 
+                        $scope.current.gametime = "";                        
                         $scope.current.hometeamid = "";
                         $scope.current.awayteamid = "";                                             
                         $scope.current.hometeamscore = "";
@@ -547,12 +553,43 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
     };
 
     $scope.updateGameInfoRequest = function () {
-        var i = 0;
-        alert("You be submitting update request");       
-    }
+        var formstring = $("#gameForm").serialize();
 
+        nflteamsFactory.updateGameInfo(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error updating game - "+data);
+            }
+            else
+            {
+                alert("Game Info updated succesfully!");
+                // $("#gameForm")[0].reset();
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+    
     $scope.newGameInfo = function () {
-        alert("You be submitting new request");
+        var formstring = $("#gameForm").serialize();
+
+        nflteamsFactory.addGameInfo(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error adding game - "+data);
+            }
+            else
+            {
+                alert("Game Info added succesfully!");
+                // $("#gameForm")[0].reset();
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
     }
 
     $scope.Delete = function () {

@@ -11,11 +11,47 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.updateTeamInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/updateteaminfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLGamesTeams = function () {
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflgamesteams.php",
             // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getNFLnetworks = function () {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnetworks.php",
+            // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.updateGameInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/updategameinfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.addGameInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/addgameinfo.php",
+            data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

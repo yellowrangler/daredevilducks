@@ -15,3 +15,73 @@
 2014-08-25 10:14:32 : SQL: INSERT INTO regitertbl (name,email,passwd,status,comment,createdate,enterdate)VALUES ('','','bBgq*F8q',1,,'2014-08-25 10:14:32','2014-08-25 10:14:32')
 2014-08-25 16:00:39 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2014-08-25 16:00:39','2014-08-25 16:00:39')' at line 1 - Error doing insert to db Unable to resgister ICHCP client.
 2014-08-25 16:00:39 : SQL: INSERT INTO regitertbl (name,email,passwd,status,comment,createdate,enterdate)VALUES ('','','m45sH8z$',1,,'2014-08-25 16:00:39','2014-08-25 16:00:39')
+2015-08-03 16:41:14 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 - Error doing select to db Unable to get nfl team information.
+2015-08-03 16:41:14 : SQL: SELECT * FROM teamstbl ORDER BY location ASC, name ASC,
+2015-08-03 16:41:19 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 - Error doing select to db Unable to get nfl team information.
+2015-08-03 16:41:19 : SQL: SELECT * FROM teamstbl ORDER BY location ASC, name ASC,
+2015-08-03 17:06:16 : SQL error: Unknown column 'email' in 'field list' - Error doing update to db Unable to update team for ddd team .
+2015-08-03 17:06:16 : SQL: UPDATE teamstbl
+	SET name = '', 
+		location = '', 
+		league = '', 
+		conference = '', 
+		division = '', 
+		email = '', 
+		teamiconname = '',
+		city = '', 
+		state = '', 
+		teamorder = '', 
+		teamurl = '', 
+		status = '', 
+		enterdate = '2015-08-03 17:06:16'
+	WHERE id = ''
+2015-08-03 17:07:08 : SQL error: Unknown column 'email' in 'field list' - Error doing update to db Unable to update team for ddd team .
+2015-08-03 17:07:08 : SQL: UPDATE teamstbl
+	SET name = '', 
+		location = '', 
+		league = '', 
+		conference = '', 
+		division = '', 
+		email = '', 
+		teamiconname = '',
+		city = '', 
+		state = '', 
+		teamorder = '', 
+		teamurl = '', 
+		status = '', 
+		enterdate = '2015-08-03 17:07:08'
+	WHERE id = ''
+2015-08-03 18:49:25 : SQL error: Unknown column 'location' in 'field list' - Error doing update to db Unable to update game for ddd game .
+2015-08-03 18:49:25 : SQL: UPDATE gamestbl
+	SET season = '2014', 
+		location = '', 
+		week = '1', 
+		gamenbr = '3', 
+		gamedate = '', 
+		teamiconname = '',
+		gameday = 'SUN', 
+		networkid = '1', 
+		gametime = '1:00 PM', 
+		hometeamid = '23', 
+		awayteamid = '3', 
+		hometeamscore = '20', 
+		awayteamscore = '23', 
+		gametypeid = '2', 		
+		enterdate = '2015-08-03 18:49:25'
+	WHERE gamenbr = '3'
+2015-08-03 18:50:49 : SQL error: Unknown column 'enterdate' in 'field list' - Error doing update to db Unable to update game for ddd game .
+2015-08-03 18:50:49 : SQL: UPDATE gamestbl
+	SET season = '2014', 
+		week = '1', 
+		gamenbr = '3', 
+		gamedate = '', 
+		gameday = 'SUN', 
+		networkid = '1', 
+		gametime = '1:00 PM', 
+		hometeamid = '23', 
+		awayteamid = '3', 
+		hometeamscore = '20', 
+		awayteamscore = '23', 
+		gametypeid = '2', 		
+		enterdate = '2015-08-03 18:50:49'
+	WHERE gamenbr = '3'

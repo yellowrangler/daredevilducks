@@ -28,70 +28,93 @@
 		            <div class="form-group">
 		              <label for="season" class="col-sm-4 control-label">Season</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="season" placeholder="{{current.season}}" ng-model="current.season">
+		                <input type="text" class="form-control" id="season" name="season" placeholder="{{current.season}}" ng-model="current.season">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 					<div class="form-group">
-		              <label for="gametype" class="col-sm-4 control-label">Game Type</label>
-		              <div class="col-sm-7">
-		                <select class="form-control" ng-model="current.gametypeid" ng-options="gametype.id as gametype.gametype for gametype in gametypes" id="gametype"></select>
-		              </div> <!-- end of col -->
-		            </div> <!-- end of form-group -->				            
+		            	<label for="gametypeid" class="col-sm-4 control-label">Game Type</label>
+						<div class="col-sm-7">
+				            <select class="form-control" ng-model="current.gametypeid"  id="gametypeid" name="gametypeid">
+			                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+		                    </select>
+						</div> <!-- end of col -->	                    
+		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="week" class="col-sm-4 control-label">Game Week</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="week" placeholder="{{current.week}}" ng-model="current.week">
+		                <input type="text" class="form-control" id="week" name="week" placeholder="{{current.week}}" ng-model="current.week">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="gamenbr" class="col-sm-4 control-label">Game Nbr</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="gamenbr" placeholder="{{current.gamenbr}}" ng-model="current.gamenbr">
+		                <input type="text" class="form-control" id="gamenbr" name="gamenbr" placeholder="{{current.gamenbr}}" ng-model="current.gamenbr">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group --> 
 
 		            <div class="form-group">
 		              <label for="gamedate" class="col-sm-4 control-label">Game Date</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="gamedate" placeholder="{{current.gamedate}}" ng-model="current.gamedate">
+		                <input type="text" class="form-control" id="gamedate" name="gamedate" placeholder="{{current.gamedate}}" ng-model="current.gamedate">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="gameday" class="col-sm-4 control-label">Game Day</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="gameday" placeholder="{{current.gameday}}" ng-model="current.gameday">
+		                <input type="text" class="form-control" id="gameday" name="gameday" placeholder="{{current.gameday}}" ng-model="current.gameday">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
-		          	<div class="form-group">
-		              <label for="hometeamname" class="col-sm-4 control-label">Home Team</label>
+					<div class="form-group">
+		              <label for="gametime" class="col-sm-4 control-label">Game Time</label>
 		              <div class="col-sm-7">
-		                <select class="form-control" ng-model="current.hometeamid" ng-options="team.id as team.name for team in teams" id="hometeamname"></select>
+		                <input type="text" class="form-control" id="gametime" name="gametime" placeholder="{{current.gametime}}" ng-model="current.gametime">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
-		              <label for="awayteamname" class="col-sm-4 control-label">Away Team</label>
-		              <div class="col-sm-7">
-		              	<select class="form-control" ng-model="current.awayteamid" ng-options="team.id as team.name for team in teams" id="awayteamname"></select>
-		              </div> <!-- end of col -->
+		            	<label for="networkid" class="col-sm-4 control-label">Network</label>
+						<div class="col-sm-7">
+				            <select class="form-control" ng-model="current.networkid"  id="networkid" name="networkid">
+			                    <option ng-repeat="network in networks" value="{{network.id}}">{{network.network}}</option>
+		                    </select>
+						</div> <!-- end of col -->	                    
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		            	<label for="hometeamid" class="col-sm-4 control-label">Home Team</label>
+						<div class="col-sm-7">
+				            <select class="form-control" ng-model="current.hometeamid"  id="hometeamid" name="hometeamid">
+			                    <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+		                    </select>
+						</div> <!-- end of col -->	             
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="hometeamscore" class="col-sm-4 control-label">Home Score</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="hometeamscore" placeholder="{{current.hometeamscore}}" ng-model="current.hometeamscore">
+		                <input type="text" class="form-control" id="hometeamscore" name="hometeamscore" placeholder="{{current.hometeamscore}}" ng-model="current.hometeamscore">
 		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+
+		            <div class="form-group">
+		            	<label for="awayteamid" class="col-sm-4 control-label">Away Team</label>
+						<div class="col-sm-7">
+				            <select class="form-control" ng-model="current.awayteamid"  id="awayteamid" name="awayteamid">
+			                    <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+		                    </select>
+						</div> <!-- end of col -->	                    
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		              <label for="awayteamscore" class="col-sm-4 control-label">Away Score</label>
 		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="awayteamscore" placeholder="{{current.awayteamscore}}" ng-model="current.awayteamscore">
+		                <input type="text" class="form-control" id="awayteamscore" name="awayteamscore" placeholder="{{current.awayteamscore}}" ng-model="current.awayteamscore">
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group -->
 
