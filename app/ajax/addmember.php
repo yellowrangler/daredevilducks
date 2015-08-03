@@ -10,7 +10,7 @@ include_once ('../class/class.AccessLog.php');
 $membername = $_POST['membername'];
 $gender = $_POST['gender'];
 $street = $_POST['street'];
-$city =  $_POST['city '];
+$city =  $_POST['city'];
 $state = $_POST['state'];
 $zip = $_POST['zip'];
 $phonenumber = $_POST['phonenumber'];
