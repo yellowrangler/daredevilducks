@@ -8,10 +8,15 @@ dddApp.config(function ($routeProvider) {
                 controller: 'homeController',
                 templateUrl: 'app/partials/home.html'
             })  
-        .when('/choosegames',
+        .when('/pickgames',
             {
-                controller: 'choosegamesController',
-                templateUrl: 'app/partials/choosegames.html'
+                controller: 'pickgamesController',
+                templateUrl: 'app/partials/pickgames.html'
+            })   
+        .when('/viewgpicks',
+            {
+                controller: 'viewgpicksController',
+                templateUrl: 'app/partials/viewgpicks.html'
             })   
         .when('/leaderboard',
             {

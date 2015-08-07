@@ -110,6 +110,11 @@
 	padding-right:15px;
 }
 
+.horizontalFieldOffset {
+	padding-left:15px;
+	padding-right:15px;
+}
+
 .objectOffset {
 	padding-top:15px;
 	padding-bottom:15px;

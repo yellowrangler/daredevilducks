@@ -25,72 +25,137 @@ dddApp.service('msgService', function () {
 
 dddApp.service('nflTeamsService', function () {
 
+    //-------------------------------------- 
+    // teams services
+    //-------------------------------------- 
+
+    // 
+    // set teams
+    //
     this.setNFLTeams = function(json) {
         nflTeams = json;
 
         return;
     }
 
+    // 
+    // get teams
+    //
     this.getNFLTeams = function() {
         return nflTeams;
     }
 
+    // 
+    // teams object
+    //
     var nflTeams = [
         {  }
     ];
 
+    //-------------------------------------- 
+    // team stats services
+    //-------------------------------------- 
+
+    // 
+    // set team stats
+    //
     this.setNFLTeamstats = function(json) {
         nflTeamstats = json;
 
         return;
     }
 
+    // 
+    // get team stats
+    //
     this.getNFLTeamstats = function() {
         return nflTeamstats;
     }
 
+    // 
+    // team stats object
+    //
     var nflTeamstats = [
         {  }
     ];
 
+    //-------------------------------------- 
+    // team season services
+    //-------------------------------------- 
+
+    // 
+    // set team season
+    //
     this.setNFLTeamseasons = function(json) {
         nflTeamseasons = json;
 
         return;
     }
 
+    // 
+    // get team season
+    //
     this.getNFLTeamseasons = function() {
         return nflTeamseasons;
     }
 
+    // 
+    // team season object
+    //
     var nflTeamseasons = [
         {  }
     ];
 
+    //-------------------------------------- 
+    // team week services
+    //-------------------------------------- 
+
+    // 
+    // set team week
+    //
     this.setNFLTeamseasonweeks = function(json) {
         nflTeamseasonweeks = json;
 
         return;
     }
 
+    // 
+    // get team week
+    //
     this.getNFLTeamseasonweeks = function() {
         return nflTeamseasonweeks;
     }
 
+    // 
+    // team week object
+    //
     var nflTeamseasonweeks = [
         {  }
     ];
 
+    //-------------------------------------- 
+    // game types services
+    //-------------------------------------- 
+
+    // 
+    // set game types
+    //
     this.setNFLGametypes = function(json) {
-        nflTeamseasonweeks = json;
+        nflGametypes = json;
 
         return;
     }
 
+    // 
+    // get game types
+    //
     this.getNFLGametypes = function() {
         return nflGametypes;
     }
 
+    // 
+    // game type object
+    //
     var nflGametypes = [
         {  }
     ];

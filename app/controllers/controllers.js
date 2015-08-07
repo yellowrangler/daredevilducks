@@ -147,7 +147,24 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
     }
 }
 
-controllers.chooseController = function ($scope, $http, $location, nflTeamsService) {
+controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+    
+    init();
+    function init() {
+        membersFactory.getMembers()
+            .success( function(data) {
+                $scope.members = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();     
+    };
+}
+
+controllers.viewgpicksController = function ($scope, $http, $location, nflTeamsService) {
     
     init();
     function init() {
