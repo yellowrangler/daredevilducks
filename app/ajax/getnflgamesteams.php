@@ -66,36 +66,40 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 // Get nfl team information
 //---------------------------------------------------------------
 $sql = "SELECT
-	G.id as gameid,
 	G.season as season,
 	G.week as week,
+	G.id as gameid,
 	G.gamenbr as gamenbr,
 	G.gamedate as gamedate,
-	G.gameday as gameday,
 	G.gametime as gametime,
+	G.gameday as gameday,
 	G.networkid as networkid,
+	GN.network as network,
+	GN.networkiconname as networkiconname,
 	G.gametypeid as gametypeid,
 	G.hometeamid as hometeamid,
-	G.hometeamscore as hometeamscore,
-	G.awayteamid as awayteamid,
-	G.awayteamscore as awayteamscore,
-	TA.name as awayteamname,
-	TA.location as awayteamlocation,	
-	TA.conference as awayconference,
-	TA.division as awaydivision,
-	TA.teamiconname as awayteamiconname,
 	TH.name as hometeamname,
 	TH.location as hometeamlocation,	
 	TH.conference as homeconference,
 	TH.division as homedivision,
 	TH.teamiconname as hometeamiconname,
+	G.hometeamscore as hometeamscore,
+	G.awayteamid as awayteamid,
+	TA.name as awayteamname,
+	TA.location as awayteamlocation,	
+	TA.conference as awayconference,
+	TA.division as awaydivision,
+	TA.teamiconname as awayteamiconname,
+	G.awayteamscore as awayteamscore,
 	GT.gametype as gametype
 
 FROM gamestbl G 
 LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
 LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
-LEFT JOIN gametypetbl GT on GT.id = G.gametypeid
-WHERE G.season = '$season'";
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = '$season'
+ORDER BY gamedatetime, G.id;";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);

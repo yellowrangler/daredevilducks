@@ -29,6 +29,15 @@
 		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
 		            </select>
 				</div> <!-- end of form-group -->
+
+				<div class="form-group horizontalFieldOffset">
+	                <button  class="btn btn-info btn-sm" ng-click="getGames()" id="getGames" name="getGames" >Get Games</button>
+				</div> <!-- end of form-group -->    
+
+				<div class="form-group horizontalFieldOffset">
+	                <button  class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Changes</button>
+				</div> <!-- end of form-group -->    
+
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
 	</div> <!-- end of col 12 -->
@@ -44,27 +53,25 @@
 			<th>Network</th>
 			<th>&nbsp;</th>
 			<th>Home Team</th>
-			<th>Record</th>
 			<th>Score</th>
 			<th>Pick</th>
+			<th>&nbsp;</th>
 			<th>Away Team</th>
-			<th>Record</th>
 			<th>Score</th>
 			<th>Pick</th>
 		</tr>
 		<tr ng-repeat="game in games" >
-			<td>{{game.day}}</th>
-			<td>{{game.time}}</th>
-			<td>{{game.network}}</th>
-			<td>{{game.hometeamicon}}</th>
-			<td>{{game.homelocation}} {{game.name}}</th>
-			<td>{{game.wins}}</th>
-			<td>{{game.day}}</th>
-			<td>{{game.day}}</th>
-			<td>{{game.day}}</th>
-			<td>{{game.day}}</th>
-			<td>{{game.day}}</th>
-			<td>{{game.day}}</th>
+			<td>{{game.gameday}}</td>
+			<td>{{game.gametime}}</td>
+			<td>{{game.network}}</td>
+			<td>{{game.hometeamicon}}</td>
+			<td>{{game.homelocation}} {{game.hometeamname}}</td>
+			<td>{{game.hometeamscore}}</td>
+			<td>pick</td>
+			<td>{{game.awayteamicon}}</td>
+			<td>{{game.awaylocation}} {{game.awayteamname}}</td>
+			<td>{{game.awayteamscore}}</td>
+			<td>pick</td>
 		</tr>
 
 	</table>

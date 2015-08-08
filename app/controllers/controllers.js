@@ -147,7 +147,7 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
     }
 }
 
-controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService) {
     
     init();
     function init() {
@@ -158,6 +158,14 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             .error( function(edata) {
                 alert(edata);
             });
+
+        nflteamsFactory.getNFLGamesTeams()
+            .success( function(data) {
+                $scope.games = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
 
         $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
         $scope.seasons = nflTeamsService.getNFLTeamseasons();     
@@ -198,8 +206,6 @@ controllers.halloffameController = function ($scope, $http, $location, nflTeamsS
 }
 
 controllers.addmemberController = function ($scope, $http, $location, membersFactory) {
-
-
     init();
     function init() {
       
