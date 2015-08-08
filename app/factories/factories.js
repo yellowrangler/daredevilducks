@@ -143,10 +143,10 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
-    factory.uploadMemberAvatar = function () {
+    factory.saveMemberAvatar = function (data) {
         return $http({ 
             method: 'POST', 
-            url: "app/ajax/uploadmemberavatar.php",
+            url: "app/ajax/savememberavatar.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })

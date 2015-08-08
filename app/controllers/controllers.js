@@ -237,8 +237,7 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
     }
 }
 
-
-controllers.updatememberController = function ($scope, $http, $location, membersFactory) {
+controllers.addavatarController = function ($scope, $http, $location, membersFactory) {
 
     init();
     function init() {
@@ -249,6 +248,44 @@ controllers.updatememberController = function ($scope, $http, $location, members
             .error( function(edata) {
                 alert(edata);
             });
+
+         $scope.dropzoneConfig = {
+            'options': { // passed into the Dropzone constructor
+              'url': 'app/ajax/uploadavatar.php'
+            },
+            'eventHandlers': {
+                  'sending': function (file, xhr, formData) {
+                    // alert("sending");
+                  },
+                  'success': function (file, response) {
+                    if (response == "ok")
+                    {
+                        $scope.current.avatar = file.name;
+                        
+                        var data = 'avatar='+file.name+'&memberid='+$scope.current.id;
+                        membersFactory.saveMemberAvatar(data)
+                            .success( function(data) {
+                            alert("Avatar sucessfully added.")
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });
+                    }
+                    else if (response == "toolarge")
+                    {
+                        alert("Avatar "+file.name+" is too large. Try again.");
+                    }
+                    else if (response == "notimg")
+                    {
+                        alert("Avatar "+file.name+" must be JPG, JPEG, PNG & GIF. Try again.");
+                    }
+                    else 
+                    {
+                        alert("Avatar System error: "+response);
+                    }
+                  }
+            }
+          };   
     };
 
     $scope.getMember = function(data) {
@@ -257,6 +294,46 @@ controllers.updatememberController = function ($scope, $http, $location, members
         membersFactory.getMember(membername)
         .success( function(data) {
             $scope.current = data;
+
+            if ($scope.current.avatar == "")
+            {
+                $scope.current.avatar = "default.png";
+            }
+
+            $scope.current.vpasswd = $scope.current.passwd;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    
+    }
+}
+
+controllers.updatememberController = function ($scope, $http, $location, membersFactory) {
+    $scope.current = {};
+
+    init();
+    function init() {
+        membersFactory.getMembers()
+            .success( function(data) {
+                $scope.members = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });   
+    };
+
+    $scope.getMember = function(data) {
+    
+        var membername = "membername="+data;
+        membersFactory.getMember(membername)
+        .success( function(data) {
+            $scope.current = data;
+
+            if ($scope.current.avatar == "")
+            {
+                $scope.current.avatar = "default.png";
+            }
 
             $scope.current.vpasswd = $scope.current.passwd;
         })

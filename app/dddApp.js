@@ -1,4 +1,4 @@
-var dddApp = angular.module ('dddApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.grid', 'ui.grid.selection']);
+var dddApp = angular.module ('dddApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.grid', 'ui.grid.selection', 'dropzone']);
 
 // define routes for app
 dddApp.config(function ($routeProvider) {
@@ -51,6 +51,12 @@ dddApp.config(function ($routeProvider) {
                 controller: 'addmemberController',
                 templateUrl: 'app/partials/addmember.html'
             })
+
+       .when('/addavatar',
+            {
+                controller: 'addavatarController',
+                templateUrl: 'app/partials/addavatar.html'
+            }) 
 
         .when('/updatemember',
             {

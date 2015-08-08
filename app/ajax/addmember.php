@@ -20,8 +20,8 @@ $screenname = $_POST['screenname'];
 $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
 $role = $_POST['role'];
-$avatar = $_POST['avatar'];    
-$avatarselect = $_POST['avatarselect'];     
+// $avatar = $_POST['avatar'];    
+$avatar = "";      
 
 //
 //  set global values

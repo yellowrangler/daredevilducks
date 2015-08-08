@@ -6,23 +6,35 @@
 
 <div class="pageStandardOffset row">
     <div class="col-md-12">
-      <div style="width:100%;">
+      <div style="padding-left:5%;padding-right:5%;" style="width:90%;">
         <div class="panel panel-default">
           <div class="subpanelCaption panel-heading">Member Information</div>
           <form id="addmemberForm" name="addmemberForm" style="padding:10px;" class="form-horizontal">
-          <div class="row">
-            <div class="col-md-7">
               <div class="form-group" >
-                <label for="membername" class="col-md-1 control-label">Name</label>
-                <div class="col-md-10">
+                <label for="membername" class="col-md-2 control-label">Name</label>
+                <div class="col-md-7">
                     <input tabindex="1" type="text" class="form-control" id="membername" name="membername" placeholder="Member name">
                 </div>
               </div> <!-- end of form-group -->
 
+              <div class="form-group">
+                  <label for="screenname" class="col-md-2 control-label">Screen Name</label>
+                  <div class="col-md-7">
+                      <input tabindex="2" type="text" class="form-control" id="screenname" name="screenname" placeholder="Screen Name">
+                  </div>
+              </div> <!-- end of form-group -->
+
+              <div class="form-group">
+                  <label for="role" class="col-md-2 control-label">Role</label>
+                  <div class="col-md-7">
+                      <input tabindex="3" type="text" class="form-control" id="role" name="role" placeholder="role">
+                  </div>
+              </div> <!-- end of form-group -->
+
               <div class="form-group" >
-                <label for="gender" class="col-md-1 control-label">Gender</label>
+                <label for="gender" class="col-md-2 control-label">Gender</label>
                 <div class="col-md-5">
-                  <select tabindex="2" class="form-control" id="gender" name="gender" >
+                  <select tabindex="4" class="form-control" id="gender" name="gender" >
                     <option value="Not Selected">Not Selected</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -32,21 +44,23 @@
               </div> <!-- end of form-group -->
 
               <div class="form-group">
-                  <label for="street" class="col-md-1 control-label">Street</label>
-                  <div class="col-md-10">
-                      <input tabindex="3" type="text" class="form-control" id="street" name="street"placeholder="Street">
+                  <label for="street" class="col-md-2 control-label">Street</label>
+                  <div class="col-md-7">
+                      <input tabindex="5" type="text" class="form-control" id="street" name="street"placeholder="Street">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
-                  <label for="city" class="col-md-1 control-label">City</label>
+                  <label for="city" class="col-md-2 control-label">City</label>
                   <div class="col-md-4">
-                      <input tabindex="4" type="text" class="form-control" id="city" name="city" placeholder="City">
+                      <input tabindex="7" type="text" class="form-control" id="city" name="city" placeholder="City">
                   </div>
-
-                  <label for="state" class="col-md-1 control-label">State</label>
-                  <div class="col-md-2">
-                      <select class="form-control" tabindex="5" name="state" id="state">
+              </div> <!-- end of form-group -->  
+              
+              <div class="form-group">  
+                  <label for="state" class="col-md-2 control-label">State</label>
+                  <div class="col-md-4">
+                      <select class="form-control" tabindex="8" name="state" id="state">
                         <option value="">Not Selected</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -104,85 +118,52 @@
 
                   <label for="zip" class="col-md-1 control-label">Zip</label>
                   <div class="col-md-2">
-                      <input tabindex="6" type="text" class="form-control" id="zip" name="zip" placeholder="Zip">
+                      <input tabindex="9" type="text" class="form-control" id="zip" name="zip" placeholder="Zip">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
-                  <label for="phonenumber" class="col-md-1 control-label">Phone</label>
+                  <label for="phonenumber" class="col-md-2 control-label">Phone</label>
                   <div class="col-md-5">
-                      <input tabindex="7" type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone">
+                      <input tabindex="10" type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
-                  <label for="email" class="col-md-1 control-label">eMail</label>
-                  <div class="col-md-10">
-                      <input tabindex="8" type="email" class="form-control" id="email" name="email" placeholder="eMail">
+                  <label for="email" class="col-md-2 control-label">eMail</label>
+                  <div class="col-md-7">
+                      <input tabindex="11" type="email" class="form-control" id="email" name="email" placeholder="eMail">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
-                  <label for="status" class="col-md-1 control-label">Status</label>
+                  <label for="status" class="col-md-2 control-label">Status</label>
                   <div class="col-md-5">
-                      <input tabindex="9" type="text" class="form-control" id="status" name="status" placeholder="Status">
+                      <input tabindex="12" type="text" class="form-control" id="status" name="status" placeholder="Status">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
+                  <label for="passwd" class="col-md-2 control-label">Password</label>
+                  <div class="col-md-5">
+                      <input tabindex="13" type="password" class="form-control" id="passwd" name="passwd" placeholder="Password">
+                  </div>
+              </div> <!-- end of form-group -->
+
+              <div class="form-group">
+                  <label for="vpasswd" class="col-md-2 control-label">Verify</label>
+                  <div class="col-md-5">
+                      <input tabindex="14" type="password" class="form-control" id="vpasswd" name="vpasswd" placeholder="Password">
+                  </div>
+              </div> <!-- end of form-group -->
+
+              <div style="padding-top:25px;" class="form-group">
                 <div class="col-md-offset-1 col-md-5">
                   <button tabindex="15" id="addnewmemberbutton" data-ng-click="addnewmember()" type="button" class="btn btn-primary">Add Member</button>
                  </div>
               </div> <!-- end of form-group -->
-            </div>  <!-- end of col 7 -->
-
-            <div class="col-md-5">
-              <div class="form-group">
-                  <label for="screenname" class="col-md-3 control-label">Screen Name</label>
-                  <div class="col-md-7">
-                      <input tabindex="10" type="text" class="form-control" id="screenname" name="screenname" placeholder="Screen Name">
-                  </div>
-              </div> <!-- end of form-group -->
-
-              <div class="form-group">
-                  <label for="passwd" class="col-md-3 control-label">Password</label>
-                  <div class="col-md-7">
-                      <input tabindex="11" type="password" class="form-control" id="passwd" name="passwd" placeholder="Password">
-                  </div>
-              </div> <!-- end of form-group -->
-
-              <div class="form-group">
-                  <label for="vpasswd" class="col-md-3 control-label">Verify Password</label>
-                  <div class="col-md-6">
-                      <input tabindex="12" type="password" class="form-control" id="vpasswd" name="vpasswd" placeholder="Password">
-                  </div>
-              </div> <!-- end of form-group -->
-
-
-              <div class="form-group">
-                  <label for="role" class="col-md-3 control-label">Role</label>
-                  <div class="col-md-7">
-                      <input tabindex="13" type="text" class="form-control" id="role" name="role" placeholder="role">
-                  </div>
-              </div> <!-- end of form-group -->
-
-              <div class="form-group">
-                  <label for="avatarselect" class="col-md-3 control-label">Choose Avatar</label>
-                  <div class="col-md-7">
-                      <input tabindex="14" type="file" class="form-control" id="avatarselect" name="avatarselect">
-                  </div>
-              </div> <!-- end of form-group -->
-
-              <div class="form-group">
-                <label for="avatar" class="col-md-3 control-label">Member Avatar</label>
-                  <div class="col-md-7">
-                      <img style="max-width:100px;" src="img/DonaldDuckFlying.png" alt="avatar" name="avatar" id="avatar" class="img-rounded">
-                  </div>
-              </div> <!-- end of form-group -->
-
             </div>  <!-- end of col 6 -->  
           </form>
-          </div> <!-- end of row -->
         </div> <!-- end of panel panel -->
       </div> <!-- end of div style 100% -->
     </div> <!-- end of div col md 12 -->
