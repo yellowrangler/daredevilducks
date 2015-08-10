@@ -147,10 +147,13 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
     }
 }
 
-controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService) {
-    
+controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
+    $scope.current = {};
+
     init();
     function init() {
+        $scope.current.memberlogin = loginService.getLogin();
+
         membersFactory.getMembers()
             .success( function(data) {
                 $scope.members = data; 

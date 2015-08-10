@@ -38,6 +38,22 @@ $datetime = date("Y-m-d H:i:s");
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 
+//
+// build gamedatetime
+//
+$datetime = $gamedate . " " . $season . " " .$gametime;
+$unixTS = strtotime($datetime);
+$mysqlTS = date("Y-m-d H:i:s", $unixTS);
+$gamedatetime = $mysqlTS;
+
+//
+// convert date components to be consistent
+//
+$datetimestr = strtotime($gamedatetime);
+$gameday = date("D",$datetimestr); 
+$gametime = date("g:i a",$datetimestr); 
+$gamedate = date("M j",$datetimestr);
+
 // print_r($_POST);
 // die();
 
@@ -96,7 +112,8 @@ $sql = "UPDATE gamestbl
 		awayteamid = '$awayteamid', 
 		hometeamscore = '$hometeamscore', 
 		awayteamscore = '$awayteamscore', 
-		gametypeid = '$gametypeid'		
+		gametypeid = '$gametypeid',
+		gamedatetime = '$gamedatetime',		
 		enterdate = '$enterdateTS'
 	WHERE gamenbr = '$gamenbr'"; 
 

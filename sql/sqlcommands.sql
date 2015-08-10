@@ -4,4 +4,5 @@ GRANT ALL PRIVILEGES ON ddd.* TO 'tarryc'@'localhost';
 FLUSH PRIVILEGES;
 mysqldump --extended-insert=FALSE -u tarryc -p ddd > ddd-dump-08082015.sql
 mysqldump --complete-insert -u tarryc -p ddd > ddd-dump-08082015.sql
+mysqldump --complete-insert --skip-extended-insert -u tarryc -p ddd > ddd-dump-08092015.sql
 
