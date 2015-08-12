@@ -85,7 +85,7 @@ $win = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-$seasonyear = 2014;
+$season = 2014;
 
 while($row = mysql_fetch_assoc($sql_result_prime)) {
 
@@ -211,7 +211,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// do update
 		// 
 		$sql = "UPDATE teamstatstbl 
-			SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, seasonyear = $seasonyear, enterdate = '$enterdateTS' 
+			SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
 			WHERE teamid = ".$row['id'];
 
 		$sql_result = @mysql_query($sql, $dbConn);
@@ -233,8 +233,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// do insert
 		// 
 		$sql = "INSERT INTO teamstatstbl 
-			(totalgames, wins, losses, ties, percent, seasonyear, enterdate, teamid) 
-			VALUES ($games, $wins, $losses, $ties, $percent, $seasonyear, '$enterdateTS', ".$row['id'].")";
+			(totalgames, wins, losses, ties, percent, season, enterdate, teamid) 
+			VALUES ($games, $wins, $losses, $ties, $percent, $season, '$enterdateTS', ".$row['id'].")";
 
 		$sql_result = @mysql_query($sql, $dbConn);
 		if (!$sql_result)

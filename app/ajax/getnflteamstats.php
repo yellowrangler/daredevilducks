@@ -18,7 +18,7 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-$seasonyear = 2014;
+$season = 2014;
 
 //
 // messaging
@@ -82,7 +82,7 @@ percent as teampercent,
 ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay
 FROM teamstbl tt
 LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
-WHERE ts.seasonyear = '$seasonyear'
+WHERE ts.season = '$season'
 ORDER BY conference ASC, division ASC, percent DESC";
 // print $sql;
 

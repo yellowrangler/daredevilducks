@@ -49,6 +49,7 @@ if ($uploadOk == 0) {
         $msg = "ok";
     } else {
         // echo "Sorry, there was an error uploading your file.";
+        print_r($_FILES);
         $msg = "Sorry, there was an error uploading your file.";
     }
 }
