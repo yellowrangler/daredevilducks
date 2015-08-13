@@ -174,9 +174,71 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             })
             .error( function(edata) {
                 alert(edata);
-            });
+            });      
 
-            
+        $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
+        $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+        // start
+        $scope.gridOptionsMemberpick = {
+            showGridFooter: false,
+            showColumnFooter: false,
+            enableFiltering: false,
+            enableSorting: false,
+            enableRowSelection: false,
+            enableColumnResizing: true,
+            enableRowHeaderSelection: false,
+            multiSelect: false,
+            modifierKeysToMultiSelect: false,
+            noUnselect: false,
+            // minRowsToShow: 3,
+            onRegisterApi: function( gridApi ) {
+                $scope.gridApi = gridApi;
+
+            },
+            columnDefs: [
+                // default
+                { field: "gameday", 
+                    displayName: "Day", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "gametime", 
+                    displayName: "Time",  headerCellClass: $scope.highlightFilteredHeader },
+                { field: "networkiconname",    
+                    cellTemplate: '<img height="25" ng-src="img/tvicons/{{ COL_FIELD }}" >',
+                    displayName: " ", 
+                    headerCellClass: $scope.highlightFilteredHeader },
+                { field: "hometeamiconname",    
+                    cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
+                    displayName: " ", 
+                    headerCellClass: $scope.highlightFilteredHeader },
+                { field: "hometeamlocation", 
+                    displayName: "Home", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "hometeamname", 
+                    displayName: "Team", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "hometeamscore", 
+                    displayName: "Score", headerCellClass: $scope.highlightFilteredHeader },
+                { name: 'hometeamid',
+                    displayName: " ",
+                    width: 20, 
+                    cellTemplate: '<div class=""><input name="homepick_{{ COL_FIELD }}" tabindex="-1" type="radio" /></div>'                    
+                },
+                { field: "awayteamiconname",    
+                    cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
+                    displayName: " ", 
+                    headerCellClass: $scope.highlightFilteredHeader },
+                { field: "awayteamlocation", 
+                    displayName: "away", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "awayteamname", 
+                    displayName: "Team", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "awayteamscore", 
+                    displayName: "Score", headerCellClass: $scope.highlightFilteredHeader },
+                { field: 'awayteamid',
+                    displayName: " ", 
+                    width: 20,
+                    cellTemplate: '<div  class=""><input tabindex="-1" name="awaypick_{{ COL_FIELD }}" type="radio" /></div>'
+                }
+            ]
+        }
+
         nflteamsFactory.getSeasonCurrentWeek()
             .success( function(data) {
                 $scope.current.season = data.season; 
@@ -187,6 +249,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                 nflteamsFactory.getNFLGamesWeekMemberTeams(q)
                     .success( function(data) {
                         $scope.games = data; 
+                        $scope.gridOptionsMemberpick.data = data;
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -194,22 +257,9 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             })
             .error( function(edata) {
                 alert(edata);
-            });       
+            });     
 
-        $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
-        $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
-
-        $( "#memberid" ).change(function() {
-          selectChange();
-        }); 
-
-        $( "#season" ).change(function() {
-          selectChange();
-        }); 
-
-        $( "#week" ).change(function() {
-          selectChange();
-        });    
+        // end    
     };
 
     $scope.getMemberWeekPicks = function() {

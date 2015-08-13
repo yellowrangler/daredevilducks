@@ -41,38 +41,7 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-
-	<table width="100%">
-		<tr>
-			<th>Day</th>
-			<th>Time</th>
-			<th>Network</th>
-			<th>&nbsp;</th>
-			<th>Home Team</th>
-			<th>Score</th>
-			<th>Pick</th>
-			<th>&nbsp;</th>
-			<th>Away Team</th>
-			<th>Score</th>
-			<th>Pick</th>
-		</tr>
-		<tr ng-repeat="game in games" >
-			<td>{{game.gameday}}</td>
-			<td>{{game.gametime}}</td>
-			<td>{{game.network}}</td>
-			<td>{{game.hometeamicon}}</td>
-			<td>{{game.homelocation}} {{game.hometeamname}}</td>
-			<td>{{game.hometeamscore}}</td>
-			<td>pick</td>
-			<td>{{game.awayteamicon}}</td>
-			<td>{{game.awaylocation}} {{game.awayteamname}}</td>
-			<td>{{game.awayteamscore}}</td>
-			<td>pick</td>
-		</tr>
-
-	</table>
-
-
+		<div id="memberpickGrid" ui-grid="gridOptionsMemberpick" ui-grid-selection ui-grid-resize-columns class="memberpickGrid"></div>
 	</div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>
