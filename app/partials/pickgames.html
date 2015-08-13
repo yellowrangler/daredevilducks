@@ -11,7 +11,7 @@
 			<div class="panel-body">
 				<div class="form-group horizontalFieldOffset">
 					<label for="memberid" class="control-label">Screen Name</label>
-			        <select class="form-control" ng-model="current.memberid"  id="memberid" name="memberid">
+			        <select class="form-control" ng-model="current.memberid" id="memberid" name="memberid">
 			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
 			        </select>
 				</div> <!-- end of form-group -->
@@ -25,7 +25,7 @@
 
 				<div class="form-group horizontalFieldOffset">
 			    	<label for="gametypeid" class="control-label">Week</label>
-		            <select class="form-control" ng-model="current.week"  id="week" name="week">
+		            <select class="form-control" ng-model="current.week" id="week" name="week">
 		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
 		            </select>
 				</div> <!-- end of form-group -->   

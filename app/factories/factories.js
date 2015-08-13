@@ -83,10 +83,28 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNFLGamesWeekMemberTeams = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnflgameweekmemberteams.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLGametypes = function () {
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflgametypes.php",
+            // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getSeasonCurrentWeek = function () {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getcurrentseasonweek.php",
             // data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })

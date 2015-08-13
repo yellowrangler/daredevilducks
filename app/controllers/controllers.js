@@ -150,6 +150,20 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
 controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
 
+    function selectChange()
+    {
+        var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+
+        nflteamsFactory.getNFLGamesWeekMemberTeams(data)
+            .success( function(data) {
+                $scope.games = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+
+    }
+
     init();
     function init() {
         $scope.current.memberlogin = loginService.getLogin();
@@ -162,17 +176,45 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                 alert(edata);
             });
 
-        nflteamsFactory.getNFLGamesTeams()
+            
+        nflteamsFactory.getSeasonCurrentWeek()
             .success( function(data) {
-                $scope.games = data; 
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;  
+
+                $scope.current.memberid = $scope.current.memberlogin.memberid;
+                var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                    .success( function(data) {
+                        $scope.games = data; 
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });                
             })
             .error( function(edata) {
                 alert(edata);
-            });    
+            });       
 
         $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
-        $scope.seasons = nflTeamsService.getNFLTeamseasons();     
+        $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+        $( "#memberid" ).change(function() {
+          selectChange();
+        }); 
+
+        $( "#season" ).change(function() {
+          selectChange();
+        }); 
+
+        $( "#week" ).change(function() {
+          selectChange();
+        });    
     };
+
+    $scope.getMemberWeekPicks = function() {
+        selectChange();
+    }
 }
 
 controllers.viewgpicksController = function ($scope, $http, $location, nflTeamsService) {
