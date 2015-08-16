@@ -43,6 +43,7 @@ $losses = 0;
 $ties = 0;
 $percentage = 0;
 $season = 2014;
+$gamesInRegularSeason = 17;
 
 //
 // connect to db
@@ -69,7 +70,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 // create time stamp versions for insert to mysql
-$enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
+$enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));		
 
 //
 // get total weeks to date
@@ -238,7 +239,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// 
 		// if data is there update otherwise insert
 		// 
-		$sql = "SELECT * from teamweekstatstbl where teamid = $teamid and week = $week";
+		$sql = "SELECT * from teamweekstatstbl where teamid = $teamid and week = $week and season = $season";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -260,7 +261,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// 
 			$sql = "UPDATE teamweekstatstbl 
 				SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
-				WHERE teamid = $team";
+				WHERE teamid = $teamid";
 
 			$sql_r = @mysql_query($sql, $dbConn);
 			if (!$sql_r)
@@ -280,6 +281,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// 
 			// do insert
 			// 
+
+			// This should never happen as we now initialize week stats table
+
 			$sql = "INSERT INTO teamweekstatstbl 
 				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
 				VALUES ($games, $week, $wins, $losses, $ties, $percent, $season, '$enterdateTS', $teamid)";
@@ -299,6 +303,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		}
 
 	}  // end of for
+
 
 } // end of looping through teams
 

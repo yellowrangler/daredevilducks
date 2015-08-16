@@ -179,65 +179,102 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
         $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
 
-        // start
-        $scope.gridOptionsMemberpick = {
-            showGridFooter: false,
-            showColumnFooter: false,
-            enableFiltering: false,
-            enableSorting: false,
-            enableRowSelection: false,
-            enableColumnResizing: true,
-            enableRowHeaderSelection: false,
-            multiSelect: false,
-            modifierKeysToMultiSelect: false,
-            noUnselect: false,
-            // minRowsToShow: 3,
-            onRegisterApi: function( gridApi ) {
-                $scope.gridApi = gridApi;
+        var columnDefs = [ 
+            {
+                headerName: "Game Day", 
+                cellRenderer: function(params) {
+                    var str = params.data.gameday + ' ' + params.data.gametime;
+                    str = str + "<img style='height:25px;padding-left:35px;' src='img/tvicons/"+params.data.networkiconname +"'>";
+                    return str;
+                    },
+                width: 200
+            }, 
 
+            {
+                headerName: "Home Team", 
+                cellRenderer: function(params) {
+                    var str = "<img height='25' src='img/nflicons/"+params.data.hometeamiconname +"'>";
+                    var str = str +" "+params.data.hometeamlocation + ' ' + params.data.hometeamname;
+
+                    return str;
+                    },
+                width: 180
             },
-            columnDefs: [
-                // default
-                { field: "gameday", 
-                    displayName: "Day", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "gametime", 
-                    displayName: "Time",  headerCellClass: $scope.highlightFilteredHeader },
-                { field: "networkiconname",    
-                    cellTemplate: '<img height="25" ng-src="img/tvicons/{{ COL_FIELD }}" >',
-                    displayName: " ", 
-                    headerCellClass: $scope.highlightFilteredHeader },
-                { field: "hometeamiconname",    
-                    cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
-                    displayName: " ", 
-                    headerCellClass: $scope.highlightFilteredHeader },
-                { field: "hometeamlocation", 
-                    displayName: "Home", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "hometeamname", 
-                    displayName: "Team", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "hometeamscore", 
-                    displayName: "Score", headerCellClass: $scope.highlightFilteredHeader },
-                { name: 'hometeamid',
-                    displayName: " ",
-                    width: 20, 
-                    cellTemplate: '<div class=""><input name="homepick_{{ COL_FIELD }}" tabindex="-1" type="radio" /></div>'                    
-                },
-                { field: "awayteamiconname",    
-                    cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
-                    displayName: " ", 
-                    headerCellClass: $scope.highlightFilteredHeader },
-                { field: "awayteamlocation", 
-                    displayName: "away", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "awayteamname", 
-                    displayName: "Team", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "awayteamscore", 
-                    displayName: "Score", headerCellClass: $scope.highlightFilteredHeader },
-                { field: 'awayteamid',
-                    displayName: " ", 
-                    width: 20,
-                    cellTemplate: '<div  class=""><input tabindex="-1" name="awaypick_{{ COL_FIELD }}" type="radio" /></div>'
-                }
-            ]
-        }
+
+            {
+                headerName: "Record", 
+                cellRenderer: function(params) {
+                    var str = params.data.homewins + ' - ' + params.data.homelosses + ' - ' + params.data.hometies;
+
+                    return str;
+                    },
+                width: 75
+            },
+
+            {
+                headerName: "Pick", 
+                cellRenderer: function(params) {
+                    var str = "<input name='pick_"+params.data.gamenbr+"' id='pick_"+params.data.gamenbr+"' value='"+params.data.hometeamid+"' type='radio' />";
+
+                    return str;
+                    },
+                width: 40,
+                cellClass: 'center-column-text'
+            },
+            {
+                headerName: "Score", 
+                field: "hometeamscore", 
+                width: 60,
+                cellClass: 'center-column-text'
+            },
+            {
+                headerName: "Away Team", 
+                cellRenderer: function(params) {
+                    var str = "<img height='25' src='img/nflicons/"+params.data.awayteamiconname +"'>";
+                    var str = str +" "+params.data.awayteamlocation + ' ' + params.data.awayteamname;
+
+                    return str;
+                    },
+                width: 180
+            },
+
+            {
+                headerName: "Record", 
+                cellRenderer: function(params) {
+                    var str = params.data.awaywins + ' - ' + params.data.awaylosses + ' - ' + params.data.awayties;
+
+                    return str;
+                    },
+                width: 75
+            },
+
+            {
+                headerName: "Pick", 
+                cellRenderer: function(params) {
+                    var str = "<input name='pick_"+params.data.gamenbr+"' id='pick_"+params.data.gamenbr+"' value='"+params.data.awayteamid+"' type='radio' />";
+
+                    return str;
+                    },
+                width: 40,
+                cellClass: 'center-column-text'
+            },
+
+            {
+                headerName: "Score", 
+                field: "awayteamscore", 
+                width: 60,
+                cellClass: 'center-column-text'
+            }
+        ];
+
+        $scope.gridOptions = {
+            columnDefs: columnDefs,
+            // rowHeight: 45px,
+            enableSorting: false,
+            enableFilter: false,
+            enableColResize: true,
+            rowData: null
+        };
 
         nflteamsFactory.getSeasonCurrentWeek()
             .success( function(data) {
@@ -249,7 +286,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                 nflteamsFactory.getNFLGamesWeekMemberTeams(q)
                     .success( function(data) {
                         $scope.games = data; 
-                        $scope.gridOptionsMemberpick.data = data;
+                        $scope.gridOptions.rowData = data;
+                        $scope.gridOptions.api.onNewRows();
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -257,9 +295,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             })
             .error( function(edata) {
                 alert(edata);
-            });     
+            }); 
 
-        // end    
     };
 
     $scope.getMemberWeekPicks = function() {
