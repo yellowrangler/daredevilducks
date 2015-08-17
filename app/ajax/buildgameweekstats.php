@@ -70,13 +70,17 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 // create time stamp versions for insert to mysql
-$enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));		
+$enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));	
+
+// debug
+// $enterdateTS = "2014-10-15";	
 
 //
 // get total weeks to date
 //
-$sql = "SELECT max(week) as weeks
-FROM gamestbl where season = $season";
+$sql = "SELECT MAX(week) as weeks
+FROM gameweekstbl where season = $season
+AND weekend <= '$enterdateTS'";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
@@ -235,75 +239,58 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		//
 		$p = $wins / $games;
 		$percent = round($p, 3);
-
+		
 		// 
-		// if data is there update otherwise insert
+		// do update
 		// 
-		$sql = "SELECT * from teamweekstatstbl where teamid = $teamid and week = $week and season = $season";
+		$sql = "UPDATE teamweekstatstbl 
+			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
+			WHERE teamid = $teamid
+			AND week = $week
+			AND season = $season";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
 		{
 		    $log = new ErrorLog("logs/");
 		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats - count team id in stats table.");
+		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update team week stats.");
 		    $log->writeLog("SQL: $sql");
 
-		    $status = -240;
+		    $status = -250;
 		    $msgtext = "System Error: $sqlerr";
-		}	
-
-		$count = mysql_num_rows($sql_r);
-		if ($count > 0)
-		{
-			// 
-			// do update
-			// 
-			$sql = "UPDATE teamweekstatstbl 
-				SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
-				WHERE teamid = $teamid";
-
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update team week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -250;
-			    $msgtext = "System Error: $sqlerr";
-			}	
-
-		}
-		else
-		{
-			// 
-			// do insert
-			// 
-
-			// This should never happen as we now initialize week stats table
-
-			$sql = "INSERT INTO teamweekstatstbl 
-				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
-				VALUES ($games, $week, $wins, $losses, $ties, $percent, $season, '$enterdateTS', $teamid)";
-
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert team week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -260;
-			    $msgtext = "System Error: $sqlerr";
-			}
-
 		}
 
-	}  // end of for
+	}  // end of for weeks
 
+	//
+	// loop through rest of weeks
+	//
+	$start = $week;
+	for ($week = $start; $week <= $gamesInRegularSeason; $week++)
+	{
+		// 
+		// do update
+		// 
+		$sql = "UPDATE teamweekstatstbl 
+			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
+			WHERE teamid = $teamid
+			AND week = $week
+			AND season = $season";
+
+		$sql_r = @mysql_query($sql, $dbConn);
+		if (!$sql_r)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing update extending to db Unable to update team week stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -27750;
+		    $msgtext = "System Error: $sqlerr";
+		}
+
+	}
 
 } // end of looping through teams
 

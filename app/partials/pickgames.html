@@ -25,7 +25,7 @@
 
 				<div class="form-group horizontalFieldOffset">
 			    	<label for="gametypeid" class="control-label">Week</label>
-		            <select class="form-control" ng-model="current.week" id="week" name="week">
+		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
 		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
 		            </select>
 				</div> <!-- end of form-group -->   
@@ -41,7 +41,61 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-		<div ag-grid="gridOptions" class="ag-fresh" style="height:500px; width:910px;"></div>
+		<table class="pickGameTable" >
+			<tr>
+				<th>Game Day</th>
+				<th>Pick</th>				
+				<th>Home Team</th>
+				<th>W - L - T</th>
+				<th>Score</th>
+				<th>Pick</th>				
+				<th>Away Team</th>
+				<th>W - L - T</th>
+				<th>Score</th>
+			</tr>
+
+			<tr ng-repeat="game in games">
+				<td>
+					{{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
+					<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
+				</td>
+
+				<td class="center-column-text">
+				    <input ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' />
+				</td>
+
+				<td>
+					<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+				</td>
+				
+				<td>
+					   {{game.homewins}} &nbsp; - &nbsp;
+					   {{game.homelosses}} &nbsp; - &nbsp;
+					   {{game.hometies}}
+				</td>
+
+				<td class="center-column-text">{{game.hometeamscore}}</td>
+
+				<td class="center-column-text">
+				    <input ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' />
+				</td>
+
+				<td>
+					<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+				</td>
+
+				<td class="center-column-text">
+					   {{game.homewins}} &nbsp; - &nbsp;
+					   {{game.homelosses}} &nbsp; - &nbsp;
+					   {{game.hometies}}
+				</td>
+
+				<td class="center-column-text">{{game.awayteamscore}}</td>
+			</tr>
+
+		</table>
 	</div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>

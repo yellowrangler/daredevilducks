@@ -10,9 +10,27 @@
 	vertical-align: middle;
 }
 
-.gridText  {
-	font-size: 20px;
-	font-family: "Balthazar", Arial, Helvetica, sans-serif;
+.pickGameTable  {
+	width: 100%; 
+}
+
+.pickGameTable  th {
+	text-align: center; 
+	vertical-align: middle;
+	color: red;
+	font-size: 16px;
+	font-style: bold;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+}
+
+.pickGameTable td  {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.pickGameTable tr  {
+	line-height: 35px;
 }
 
 .menuItems {

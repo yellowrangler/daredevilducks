@@ -476,11 +476,12 @@ DROP TABLE IF EXISTS `memberpickstbl`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `memberpickstbl` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `memberid` int(11) DEFAULT NULL,
-  `gamesid` int(11) DEFAULT NULL,
-  `pick` int(11) DEFAULT NULL,
+  `season` int(11) DEFAULT NULL,
+  `week` int(11) DEFAULT NULL,  
+  `memberid` int(11) DEFAULT NULL,  
+  `gamenbr` int(11) DEFAULT NULL,
+  `teamid` int(11) DEFAULT NULL,
   `enterdate` datetime DEFAULT NULL,
-  `createdate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;

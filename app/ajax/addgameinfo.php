@@ -101,7 +101,7 @@ $sql = "INSERT INTO gamestbl
 	'$awayteamid', 
 	'$hometeamscore', 
 	'$awayteamscore', 
-	'$gametypeid'		
+	'$gametypeid',		
 	'$enterdateTS' )"; 
 
 $sql_result = @mysql_query($sql, $dbConn);

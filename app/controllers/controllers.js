@@ -164,6 +164,22 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
     }
 
+    function saveGames() {
+        var x = 1;
+
+        var data = $("#pickweekForm").serialize();
+
+        membersFactory.addMemberGameTeamPick(data)
+            .success( function(data) {
+                $scope.msg = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+
+        var y = 1;
+    }
+
     init();
     function init() {
         $scope.current.memberlogin = loginService.getLogin();
@@ -171,137 +187,43 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         membersFactory.getMembers()
             .success( function(data) {
                 $scope.members = data; 
+
+                $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
+                $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+                nflteamsFactory.getSeasonCurrentWeek()
+                    .success( function(data) {
+                        $scope.current.season = data.season; 
+                        $scope.current.week = data.week;  
+
+                        $scope.current.memberid = $scope.current.memberlogin.memberid;
+                        var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                        nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                            .success( function(data) {
+                                $scope.games = data; 
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });                
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    }); 
             })
             .error( function(edata) {
                 alert(edata);
             });      
-
-        $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
-        $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
-
-        var columnDefs = [ 
-            {
-                headerName: "Game Day", 
-                cellRenderer: function(params) {
-                    var str = params.data.gameday + ' ' + params.data.gametime;
-                    str = str + "<img style='height:25px;padding-left:35px;' src='img/tvicons/"+params.data.networkiconname +"'>";
-                    return str;
-                    },
-                width: 200
-            }, 
-
-            {
-                headerName: "Home Team", 
-                cellRenderer: function(params) {
-                    var str = "<img height='25' src='img/nflicons/"+params.data.hometeamiconname +"'>";
-                    var str = str +" "+params.data.hometeamlocation + ' ' + params.data.hometeamname;
-
-                    return str;
-                    },
-                width: 180
-            },
-
-            {
-                headerName: "Record", 
-                cellRenderer: function(params) {
-                    var str = params.data.homewins + ' - ' + params.data.homelosses + ' - ' + params.data.hometies;
-
-                    return str;
-                    },
-                width: 75
-            },
-
-            {
-                headerName: "Pick", 
-                cellRenderer: function(params) {
-                    var str = "<input name='pick_"+params.data.gamenbr+"' id='pick_"+params.data.gamenbr+"' value='"+params.data.hometeamid+"' type='radio' />";
-
-                    return str;
-                    },
-                width: 40,
-                cellClass: 'center-column-text'
-            },
-            {
-                headerName: "Score", 
-                field: "hometeamscore", 
-                width: 60,
-                cellClass: 'center-column-text'
-            },
-            {
-                headerName: "Away Team", 
-                cellRenderer: function(params) {
-                    var str = "<img height='25' src='img/nflicons/"+params.data.awayteamiconname +"'>";
-                    var str = str +" "+params.data.awayteamlocation + ' ' + params.data.awayteamname;
-
-                    return str;
-                    },
-                width: 180
-            },
-
-            {
-                headerName: "Record", 
-                cellRenderer: function(params) {
-                    var str = params.data.awaywins + ' - ' + params.data.awaylosses + ' - ' + params.data.awayties;
-
-                    return str;
-                    },
-                width: 75
-            },
-
-            {
-                headerName: "Pick", 
-                cellRenderer: function(params) {
-                    var str = "<input name='pick_"+params.data.gamenbr+"' id='pick_"+params.data.gamenbr+"' value='"+params.data.awayteamid+"' type='radio' />";
-
-                    return str;
-                    },
-                width: 40,
-                cellClass: 'center-column-text'
-            },
-
-            {
-                headerName: "Score", 
-                field: "awayteamscore", 
-                width: 60,
-                cellClass: 'center-column-text'
-            }
-        ];
-
-        $scope.gridOptions = {
-            columnDefs: columnDefs,
-            // rowHeight: 45px,
-            enableSorting: false,
-            enableFilter: false,
-            enableColResize: true,
-            rowData: null
-        };
-
-        nflteamsFactory.getSeasonCurrentWeek()
-            .success( function(data) {
-                $scope.current.season = data.season; 
-                $scope.current.week = data.week;  
-
-                $scope.current.memberid = $scope.current.memberlogin.memberid;
-                var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-                nflteamsFactory.getNFLGamesWeekMemberTeams(q)
-                    .success( function(data) {
-                        $scope.games = data; 
-                        $scope.gridOptions.rowData = data;
-                        $scope.gridOptions.api.onNewRows();
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    });                
-            })
-            .error( function(edata) {
-                alert(edata);
-            }); 
-
     };
 
     $scope.getMemberWeekPicks = function() {
         selectChange();
     }
+
+    $scope.saveGames = function() {
+        saveGames();
+    }
+
+
 }
 
 controllers.viewgpicksController = function ($scope, $http, $location, nflTeamsService) {

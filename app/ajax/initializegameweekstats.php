@@ -83,44 +83,40 @@ $percentage = 0.0;
 $week = 0;
 
 
-//
-// loop through all weeks
-//
-for ($week = 1; $week <= $gamesInRegularSeason; $week++)
+//---------------------------------------------------------------
+// Get list of all nfl teams
+//---------------------------------------------------------------
+$sql = "SELECT id as teamid 
+FROM  teamstbl 
+ORDER BY 'teamid'";
+
+$sql_result_prime = @mysql_query($sql, $dbConn);
+if (!$sql_result_prime)
 {
+    $log = new ErrorLog("logs/");
+    $sqlerr = mysql_error();
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize team week stats.");
+    $log->writeLog("SQL: $sql");
 
-	//---------------------------------------------------------------
-	// Get list of all nfl teams
-	//---------------------------------------------------------------
-	$sql = "SELECT season ,  week ,  
-	hometeamid ,  awayteamid 
-	FROM  gamestbl 
-	WHERE season = $season AND week = $week
-	ORDER BY 'gamedatetime'";
+    $status = -100;
+    $msgtext = "System Error: $sqlerr";
+}
 
-	$sql_result_prime = @mysql_query($sql, $dbConn);
-	if (!$sql_result_prime)
+while($row = mysql_fetch_assoc($sql_result_prime)) {
+	$teamid = $row[teamid];
+
+	//
+	// loop through all weeks
+	//
+	for ($week = 1; $week <= $gamesInRegularSeason; $week++)
 	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize team week stats.");
-	    $log->writeLog("SQL: $sql");
-
-	    $status = -100;
-	    $msgtext = "System Error: $sqlerr";
-	}
-
-	while($row = mysql_fetch_assoc($sql_result_prime)) {
-	// print_r($row['id']);
-
-		$hometeamid = $row['hometeamid'];
 
 		// 
-		// do insert home team
+		// do insert team
 		// 
 		$sql = "INSERT INTO teamweekstatstbl 
 			(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
-			VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $hometeamid)";
+			VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -134,31 +130,9 @@ for ($week = 1; $week <= $gamesInRegularSeason; $week++)
 		    $msgtext = "System Error: $sqlerr";
 		}
 
+	}  // end of looping through weeks
 
-		$awayteamid = $row['awayteamid'];
-
-		// 
-		// do insert away team
-		// 
-		$sql = "INSERT INTO teamweekstatstbl 
-			(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
-			VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $awayteamid)";
-
-		$sql_r = @mysql_query($sql, $dbConn);
-		if (!$sql_r)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert away team week stats.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -260;
-		    $msgtext = "System Error: $sqlerr";
-		}
-
-	}  // end of looping through games
-
-} // end of for 
+} // end of for ooping through games
 
 //
 // close db connection

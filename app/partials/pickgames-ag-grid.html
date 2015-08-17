@@ -1,0 +1,48 @@
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2>Pick Games for Week</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<form id="pickweekForm" name="pickweekForm" style="padding:10px;" class="form-inline">
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="form-group horizontalFieldOffset">
+					<label for="memberid" class="control-label">Screen Name</label>
+			        <select class="form-control" ng-model="current.memberid" id="memberid" name="memberid">
+			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+			        </select>
+				</div> <!-- end of form-group -->
+
+				<div class="form-group horizontalFieldOffset">
+			    	<label for="season" class="control-label">Season</label>
+		            <select class="form-control" ng-model="current.season"  id="season" name="season">
+		                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+		            </select>
+				</div> <!-- end of form-group -->
+
+				<div class="form-group horizontalFieldOffset">
+			    	<label for="gametypeid" class="control-label">Week</label>
+		            <select class="form-control" ng-model="current.week" id="week" name="week">
+		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
+		            </select>
+				</div> <!-- end of form-group -->   
+
+				<div class="form-group horizontalFieldOffset">
+	                <button  class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Changes</button>
+				</div> <!-- end of form-group -->    
+
+			</div> <!-- end of panel body -->				
+		</div> <!-- end of panel -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div ag-grid="gridOptions" class="ag-fresh" style="height:500px; width:910px;"></div>
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->
