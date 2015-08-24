@@ -184,6 +184,78 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     function init() {
         $scope.current.memberlogin = loginService.getLogin();
 
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+        var q = "memberid="+$scope.current.memberid;
+        membersFactory.getMember(q)
+        .success( function(data) {
+            $scope.member = data; 
+
+            $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
+            $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+            nflteamsFactory.getSeasonCurrentWeek()
+                .success( function(data) {
+                    $scope.current.season = data.season; 
+                    $scope.current.week = data.week;  
+
+                    var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                    nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                        .success( function(data) {
+                            $scope.games = data; 
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });                
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+
+
+        membersFactory.getMembers()
+            .success( function(data) {
+                
+            })
+            .error( function(edata) {
+                alert(edata);
+            });      
+    };
+
+    $scope.getMemberWeekPicks = function() {
+        selectChange();
+    }
+
+    $scope.saveGames = function() {
+        saveGames();
+    }
+}
+
+controllers.viewselectpickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
+    
+    $scope.current = {};
+
+    function selectChange()
+    {
+        var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+
+        nflteamsFactory.getNFLGamesWeekMemberTeams(data)
+            .success( function(data) {
+                $scope.games = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+
+    }
+
+    init();
+    function init() {
+        $scope.current.memberlogin = loginService.getLogin();
+
         membersFactory.getMembers()
             .success( function(data) {
                 $scope.members = data; 
@@ -223,10 +295,9 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         saveGames();
     }
 
-
 }
 
-controllers.viewgpicksController = function ($scope, $http, $location, nflTeamsService) {
+controllers.viewallpicksController = function ($scope, $http, $location, nflTeamsService) {
     
     init();
     function init() {
@@ -243,11 +314,21 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
     };
 }
 
-controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService) {
+controllers.leaderyearController = function ($scope, $http, $location, nflTeamsService) {
 
     init();
     function init() {
-        $scope.teams = nflTeamsService.getNFLTeams(); 
+         $scope.teamstats = nflTeamsService.getNFLTeamstats(); 
+        $scope.teamseasons = nflTeamsService.getNFLTeamseasons(); 
+    };
+}
+
+controllers.leaderweekController = function ($scope, $http, $location, nflTeamsService) {
+
+    init();
+    function init() {
+        $scope.teamstats = nflTeamsService.getNFLTeamstats(); 
+        $scope.teamseasons = nflTeamsService.getNFLTeamseasons(); 
     };
 }
 
@@ -298,9 +379,12 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
 }
 
 controllers.addavatarController = function ($scope, $http, $location, membersFactory) {
+    $scope.current = {};
 
     init();
     function init() {
+        $scope.current.avatar = "default.png";
+
         membersFactory.getMembers()
             .success( function(data) {
                 $scope.members = data; 

@@ -11,13 +11,14 @@
 			<div class="panel-body">
 				<div class="form-group horizontalFieldOffset">
 					<label for="memberid" class="control-label">Screen Name</label>
-					<input type="text" class="form-control" ng-model="member.screenname" id="screenname" readonly name="screenname" value="{{member.screenname}}">
-			        <input type="hidden" ng-model="current.memberid" value="{{current.memberid}}" id="memberid" name="memberid">
+			        <select class="form-control" ng-model="current.memberid" id="memberid" name="memberid">
+			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+			        </select>
 				</div> <!-- end of form-group -->
 
 				<div class="form-group horizontalFieldOffset">
 			    	<label for="season" class="control-label">Season</label>
-		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.season" id="season" name="season">
+		            <select class="form-control" ng-model="current.season"  id="season" name="season">
 		                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
 		            </select>
 				</div> <!-- end of form-group -->

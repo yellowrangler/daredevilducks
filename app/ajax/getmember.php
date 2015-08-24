@@ -7,7 +7,17 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$membername = $_POST['membername'];
+$membername = "";
+$memberid = "";
+
+if( isset($_POST['membername']) )
+{
+     $membername = $_POST['membername'];
+}
+if( isset($_POST['memberid']) )
+{
+     $memberid = $_POST['memberid'];
+}
 
 //
 // get date time for this transaction
@@ -62,7 +72,15 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 // get nfl game type information
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM membertbl WHERE membername = '$membername'";
+if ($memberid != "")
+{
+	$sql = "SELECT *  FROM membertbl WHERE id = '$memberid'";
+}
+else
+{
+	$sql = "SELECT *  FROM membertbl WHERE membername = '$membername'";
+}
+
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);

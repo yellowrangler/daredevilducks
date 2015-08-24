@@ -13,15 +13,25 @@ dddApp.config(function ($routeProvider) {
                 controller: 'pickgamesController',
                 templateUrl: 'app/partials/pickgames.html'
             })   
-        .when('/viewgpicks',
+        .when('/viewselectpickgames',
             {
-                controller: 'viewgpicksController',
-                templateUrl: 'app/partials/viewgpicks.html'
-            })   
-        .when('/leaderboard',
+                controller: 'viewselectpickgamesController',
+                templateUrl: 'app/partials/viewselectpickgames.html'
+            })
+        .when('/viewallpicks',
             {
-                controller: 'leaderboardController',
-                templateUrl: 'app/partials/leaderboard.html'
+                controller: 'viewallpicksController',
+                templateUrl: 'app/partials/viewallpicks.html'
+            })       
+        .when('/leaderyear',
+            {
+                controller: 'leaderyearController',
+                templateUrl: 'app/partials/leaderyear.html'
+            }) 
+        .when('/leaderweek',
+            {
+                controller: 'leaderweekController',
+                templateUrl: 'app/partials/leaderweek.html'
             }) 
         .when('/teamstandings',
             {

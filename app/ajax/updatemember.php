@@ -22,7 +22,6 @@ $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
 $role = $_POST['role'];
 $avatar = $_POST['avatar'];    
-$avatarselect = $_POST['avatarselect'];     
 
 //
 //  set global values
