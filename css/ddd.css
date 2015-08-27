@@ -14,6 +14,16 @@
 	width: 100%; 
 }
 
+.teamSelected  {
+	background-color: maroon;
+	color:white; 
+}
+
+.teamNotSelected  {
+	background-color: white;
+	color:black; 
+}
+
 .pickGameTable  th {
 	text-align: center; 
 	vertical-align: middle;

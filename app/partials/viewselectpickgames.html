@@ -39,33 +39,31 @@
 	<div class="col-md-12">
 		<table class="pickGameTable" >
 			<tr>
-				<th>Game Day</th>
-				<th>Pick</th>				
+				<th>Game Day</th>			
 				<th>Home Team</th>
 				<th>W-L-T</th>
-				<th>Score</th>
-				<th>Pick</th>				
+				<th>Score</th>			
 				<th>Away Team</th>
 				<th>W-L-T</th>
 				<th>Score</th>
 			</tr>
 
 			<tr ng-repeat="game in games">
-				<td>
+				<td class="center-column-text">
 					{{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
 					<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
 				</td>
 
-				<td class="center-column-text">
+				<!-- <td class="center-column-text">
 				    <input ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' />
-				</td>
+				</td> -->
 
-				<td>
+				<td  ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
 					<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
                     {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 				</td>
 				
-				<td>
+				<td class="center-column-text">
 					   {{game.homewins}}-
 					   {{game.homelosses}}-
 					   {{game.hometies}}
@@ -73,11 +71,11 @@
 
 				<td class="center-column-text">{{game.hometeamscore}}</td>
 
-				<td class="center-column-text">
+				<!-- <td class="center-column-text">
 				    <input ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' />
-				</td>
+				</td> -->
 
-				<td>
+				<td ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
 					<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
                     {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 				</td>
