@@ -42,7 +42,7 @@ $win = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-$season = 2014;
+$season = 2015;
 $gamesInRegularSeason = 17;
 
 //
@@ -213,11 +213,15 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// ties
 		//
 		$sql = "SELECT count(*) as ties
-		FROM gamestbl where season = $season and week <= $week 
-		and (
-		(hometeamid = $teamid and awayteamscore = hometeamscore)
-		or (awayteamid = $teamid and hometeamscore = awayteamscore)
-		);";
+		FROM gamestbl 
+		WHERE (season = $season AND week <= $week)
+		AND 
+		(
+			(hometeamid = $teamid AND awayteamscore = hometeamscore)
+			OR 
+			(awayteamid = $teamid AND hometeamscore = awayteamscore)
+		) 
+		AND (awayteamscore != 0 AND hometeamscore != 0);";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)

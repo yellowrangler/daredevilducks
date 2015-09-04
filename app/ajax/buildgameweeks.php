@@ -15,62 +15,62 @@ $enterdate = $datetime;
 //
 // build array of games
 //
-$season = 2014;
+$season = 2015;
 $week = 0;
 
 $weekstart = array();
 $weekend = array();
 
-$weekstart[1] = "Sep 4 2014";
-$weekend[1] = "Sep 8 2014";
+$weekstart[1] = "Sep 10 2015";
+$weekend[1] = "Sep 14 2015";
 
-$weekstart[2] = "Sep 11 2014";
-$weekend[2] = "Sep 15 2014";
+$weekstart[2] = "Sep 17 2015";
+$weekend[2] = "Sep 21 2015";
 
-$weekstart[3] = "Sep 18 2014";
-$weekend[3] = "Sep 22 2014";
+$weekstart[3] = "Sep 24 2015";
+$weekend[3] = "Sep 28 2015";
 
-$weekstart[4] = "Sep 25 2014";
-$weekend[4] = "Sep 29 2014";
+$weekstart[4] = "Oct 1 2015";
+$weekend[4] = "Oct 5 2015";
 
-$weekstart[5] = "Oct 2 2014";
-$weekend[5] = "Oct 6 2014";
+$weekstart[5] = "Oct 8 2015";
+$weekend[5] = "Oct 12 2015";
 
-$weekstart[6] = "Oct 9 2014";
-$weekend[6] = "Oct 13 2014";
+$weekstart[6] = "Oct 15 2015";
+$weekend[6] = "Oct 19 2015";
 
-$weekstart[7] = "Oct 16 2014";
-$weekend[7] = "Oct 20 2014";
+$weekstart[7] = "Oct 22 2015";
+$weekend[7] = "Oct 26 2015";
 
-$weekstart[8] = "Oct 23 2014";
-$weekend[8] = "Oct 27 2014";
+$weekstart[8] = "Oct 29 2015";
+$weekend[8] = "Nov 2 2015";
 
-$weekstart[9] = "Oct 30 2014";
-$weekend[9] = "Nov 3 2014";
+$weekstart[9] = "Nov 5 2015";
+$weekend[9] = "Nov 9 2015";
 
-$weekstart[10] = "Nov 6 2014";
-$weekend[10] = "Nov 10 2014";
+$weekstart[10] = "Nov 12 2015";
+$weekend[10] = "Nov 16 2015";
 
-$weekstart[11] = "Nov 13 2014";
-$weekend[11] = "Nov 17 2014";
+$weekstart[11] = "Nov 19 2015";
+$weekend[11] = "Nov 23 2015";
 
-$weekstart[12] = "Nov 20 2014";
-$weekend[12] = "Nov 24 2014";
+$weekstart[12] = "Nov 26 2015";
+$weekend[12] = "Nov 30 2015";
 
-$weekstart[13] = "Nov 27 2014";
-$weekend[13] = "Dec 1 2014";
+$weekstart[13] = "Dec 3 2015";
+$weekend[13] = "Dec 7 2015";
 
-$weekstart[14] = "Dec 4 2014";
-$weekend[14] = "Dec 8 2014";
+$weekstart[14] = "Dec 10 2015";
+$weekend[14] = "Dec 14 2015";
 
-$weekstart[15] = "Dec 11 2014";
-$weekend[15] = "Dec 15 2014";
+$weekstart[15] = "Dec 17 2015";
+$weekend[15] = "Dec 21 2015";
 
-$weekstart[16] = "Dec 20 2014";
-$weekend[16] = "Dec 22 2014";
+$weekstart[16] = "Dec 24 2015";
+$weekend[16] = "Dec 28 2015";
 
-$weekstart[17] = "Dec 28 2014";
-$weekend[17] = "Dec 28 2014";
+$weekstart[17] = "Jan 3 2015";
+$weekend[17] = "Jan 7 2015";
 
 //
 // get todays date and build mysql timestamp

@@ -653,6 +653,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
 
 controllers.gameinfoController = function ($scope, $http, $log, $location, uiGridConstants, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
     $scope.teams = {};
 
     init();
@@ -779,7 +780,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             ]
         }
 
-        nflteamsFactory.getNFLGamesTeams()
+        nflteamsFactory.getNFLGamesTeams($scope.current.season)
             .success( function(data) {
                 $scope.nflgames = data; 
                 $scope.gridOptionsGames.data = data;

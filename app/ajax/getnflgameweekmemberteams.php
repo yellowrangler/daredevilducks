@@ -7,12 +7,12 @@ include_once ('../class/class.AccessLog.php');
 //
 // get post variables
 //
-// $season = $_POST['season'];
+$season = $_POST['season'];
 $week = $_POST['week'];
 $memberid = $_POST['memberid'];
 
 // debug
-$season = 2014;
+// $season = 2014;
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");

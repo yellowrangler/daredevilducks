@@ -20,11 +20,12 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
-    factory.getNFLGamesTeams = function () {
+    factory.getNFLGamesTeams = function (data) {
+        var dataSeason = "season="+data;
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflgamesteams.php",
-            // data: data,
+            data: dataSeason,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

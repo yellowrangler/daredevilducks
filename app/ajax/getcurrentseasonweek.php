@@ -21,7 +21,7 @@ $mysqlTS = date("Y-m-d", $unixTS);
 $weekTS = $mysqlTS;
 
 // debug
-$weekTS = "2014-09-12";
+// $weekTS = "2014-09-12";
 
 //
 // messaging

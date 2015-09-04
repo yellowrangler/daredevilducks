@@ -42,7 +42,7 @@ $win = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-$season = 2014;
+$season = 2015;
 $gamesInRegularSeason = 17;
 
 //
@@ -114,7 +114,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// 
 		// do insert team
 		// 
-		$sql = "INSERT INTO teamweekstatstbl 
+		$sql = "INSERT INTO teamweekstatstbl remove this to make ths work
 			(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
 			VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
 
@@ -132,7 +132,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	}  // end of looping through weeks
 
-} // end of for ooping through games
+} // end of for looping through games
 
 //
 // close db connection

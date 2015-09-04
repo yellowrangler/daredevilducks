@@ -160,6 +160,46 @@ dddApp.service('nflTeamsService', function () {
         {  }
     ];
 
+    //
+    // selected choice values
+    //
+    this.getCurrentSeason = function() {
+        var currentSeasonStr = this.retreiveCurrentSeason();
+
+        return currentSeasonStr;
+    }
+
+    this.addCurrentSeason = function(currentSeason) {
+        var currentSeasonStr = currentSeason;
+
+        this.saveCurrentSeason(currentSeasonStr);
+
+        return currentSeasonStr;
+    }
+
+    this.saveCurrentSeason = function (currentSeasonStr) {
+        localStorage.removeItem("dddCurrentSeason");
+        localStorage.setItem("dddCurrentSeason", currentSeasonStr);
+    }
+
+    this.retreiveCurrentSeason = function () {
+        var currentSeasonStr = localStorage.getItem("dddCurrentSeason");
+
+        if (currentSeasonStr == null)
+        {
+            var dt = new Date();
+            var currentSeasonStr = dt.getFullYear();
+
+            this.addCurrentSeason(currentSeasonStr);
+        }
+
+        return currentSeasonStr;
+    }
+
+    this.removeCurrentSeason = function () {
+        localStorage.removeItem("dddCurrentSeason");
+    }
+
 });
 
 dddApp.service('loginService', function () {
