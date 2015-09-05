@@ -85,17 +85,22 @@ $win = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-$season = 2014;
+$season = 2015;
 
 while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	// print_r($row['id']);
 
-	$sql = "SELECT count(*) as games
+	$sql = "SELECT count(*) as gamesToPlay
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id
 	left join teamstbl ta on g.awayteamid = ta.id
-	where hometeamid = ".$row['id']." OR awayteamid = ".$row['id'];
+	where
+	season = ".$season."
+	AND 
+	(
+		hometeamid = ".$row['id']." OR awayteamid = ".$row['id']." 
+	)";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -110,15 +115,20 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	}	
 
 	$r = mysql_fetch_assoc($sql_result);
-	$games = $r['games'];
+	$gamesToPlay = $r['gamesToPlay'];
 
 	$sql = "SELECT count(*) as wins
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
-	where (hometeamid = ".$row['id']." and hometeamscore > awayteamscore)
-    OR 
-    (awayteamid = ".$row['id']." and awayteamscore > hometeamscore)";
+	where
+	season = ".$season."
+	AND 
+	(
+		(hometeamid = ".$row['id']." and hometeamscore > awayteamscore)
+    	OR 
+		(awayteamid = ".$row['id']." and awayteamscore > hometeamscore)
+	)";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -139,9 +149,14 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
-	where (hometeamid = ".$row['id']." and hometeamscore < awayteamscore)
-    OR 
-    (awayteamid = ".$row['id']." and awayteamscore < hometeamscore)";
+	where 
+	season = ".$season." 
+	AND
+	(
+		(hometeamid = ".$row['id']." AND hometeamscore < awayteamscore)
+    	OR 
+    	(awayteamid = ".$row['id']." AND awayteamscore < hometeamscore)
+	)";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -162,9 +177,19 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
-	where (hometeamid = ".$row['id']." and hometeamscore = awayteamscore)
-    OR 
-    (awayteamid = ".$row['id']." and awayteamscore = hometeamscore)";
+	where 
+	season = ".$season."
+	AND
+	(
+		(hometeamid = ".$row['id']." AND hometeamscore = awayteamscore)
+    	OR 
+    	(awayteamid = ".$row['id']." AND awayteamscore = hometeamscore)
+	)
+	AND
+	(
+		(hometeamscore != 0 AND awayteamscore != 0)
+	)";
+
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -182,6 +207,11 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$ties = $r['ties'];
 
 	//
+	// calculate games from totals played
+	//
+	$games = $wins + $losses + $ties;
+
+	//
 	// calculate percentage
 	//
 	$p = $wins / $games;
@@ -190,7 +220,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	// 
 	// if data is there update otherwise insert
 	// 
-	$sql = "SELECT * from teamstatstbl where teamid = ".$row['id'];
+	$sql = "SELECT * from teamstatstbl where teamid = ".$row['id']." AND season = ".$season;
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -212,7 +242,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// 
 		$sql = "UPDATE teamstatstbl 
 			SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
-			WHERE teamid = ".$row['id'];
+			WHERE teamid = ".$row['id']." AND season = ".$season;;
 
 		$sql_result = @mysql_query($sql, $dbConn);
 		if (!$sql_result)

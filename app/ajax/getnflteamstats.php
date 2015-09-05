@@ -18,7 +18,7 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-$season = 2014;
+$season = $_POST['season'];
 
 //
 // messaging

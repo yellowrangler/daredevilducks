@@ -93,7 +93,7 @@ if ($count > 0)
 else
 {
 	$week = 1;
-	$season = 2014;
+	$season = date("Y");
 }
 
 $data = array('season' => $season, 'week' => $week);

@@ -57,29 +57,35 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
-    factory.getNFLTeamstats = function () {
+    factory.getNFLTeamstats = function (data) {
+        var dataSeason = "season="+data;
+
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflteamstats.php",
-            // data: data,
+            data: dataSeason,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
 
-    factory.getNFLTeamseasons = function () {
+    factory.getNFLTeamseasons = function (data) {
+        var dataSeason = "season="+data;
+
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflseasons.php",
-            // data: data,
+            data: dataSeason,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
 
-    factory.getNFLTeamseasonweeks = function () {
+    factory.getNFLTeamseasonweeks = function (data) {
+        var dataSeason = "season="+data;
+        
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflseasonweeks.php",
-            // data: data,
+            data: dataSeason,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
