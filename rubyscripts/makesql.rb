@@ -115,7 +115,7 @@ def processPlay (gameSeason, gameScores)
 		# 	winningteamid = 0
 		# end
 
-		gametypeid = 1
+		gametypeid = 2
 
 		# 
 		# Now bring all items into insert statement

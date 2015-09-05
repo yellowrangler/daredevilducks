@@ -64,7 +64,23 @@ while($r = mysql_fetch_assoc($sql_result)) {
 		$gametime = $r['gametime'];
 	}
 
-	$datetime = $r['gamedate'] . " " . $r['season'] . " " .$gametime;
+	$gamedate = $r['gamedate'];
+	$season = $r['season'];	
+	$dateYearArray = explode(" ", $gamedate);
+	if ($dateYearArray[0] == "Jan")
+	{
+		$year = $season + 1;
+	}
+	else
+	{
+		$year = $season;
+	}
+
+	// echo "gamedate:".$gamedate."</br>";
+	// echo "dateYearArray:".$dateYearArray."</br>";
+	// echo "year:".$year."</br>";
+	
+	$datetime = $r['gamedate'] . " " . $year . " " .$gametime;
 	echo $datetime; echo " string<br/>"; 
 	$unixTS = strtotime($datetime);
 	echo $unixTS; echo " unix<br/>"; 

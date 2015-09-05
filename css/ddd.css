@@ -10,6 +10,16 @@
 	vertical-align: middle;
 }
 
+.left-column-text {
+	text-align: left; 
+	vertical-align: middle;
+}
+
+.right-column-text {
+	text-align: right; 
+	vertical-align: middle;
+}
+
 .pickGameTable  {
 	width: 100%; 
 }

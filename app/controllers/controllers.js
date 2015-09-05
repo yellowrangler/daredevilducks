@@ -36,21 +36,13 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         //         alert(edata);
         //     });
 
-        // nflteamsFactory.getNFLTeamseasons()
-        //     .success( function(data) {
-        //         nflTeamsService.setNFLTeamseasons(data); 
-        //     })
-        //     .error( function(edata) {
-        //         alert(edata);
-        //     });    
-
-        // nflteamsFactory.getNFLTeamseasonweeks()
-        //     .success( function(data) {
-        //         nflTeamsService.setNFLTeamseasonweeks(data); 
-        //     })
-        //     .error( function(edata) {
-        //         alert(edata);
-        //     }); 
+        nflteamsFactory.getNFLTeamseasons()
+            .success( function(data) {
+                nflTeamsService.setNFLTeamseasons(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
 
         nflteamsFactory.getNFLGametypes()
             .success( function(data) {
@@ -166,13 +158,49 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     }
 
     function saveGames() {
-        var x = 1;
+        //
+        // validate the selections
+        //
+        var count = 0;
+        var picked = 0;
+        var remaining = 0;
+        var fieldname = "";
+
+        //
+        // loop through all radio fields and count 
+        //
+        $("[id^=pick_]").each(function() {
+            if (fieldname != this.name)
+            {
+                count = count + 1;
+                fieldname = this.name;
+            }
+
+            if (this.checked)
+            {
+                picked = picked + 1;
+            }
+        });
+
+        if (picked == count)
+        {
+            $scope.msg = "All "+picked+" Picks for Week have been completed!";
+        }
+        else
+        {
+            remaining = count - picked;
+            $scope.msg = "You have picked "+picked+" Teams. You have "+remaining+" remaining to complete this week.";
+        }
 
         var data = $("#pickweekForm").serialize();
 
         membersFactory.addMemberGameTeamPick(data)
             .success( function(data) {
-                $scope.msg = data; 
+                $('#gamesSavedDialogModalTitle').text("Picks Saved");
+                $('#gamesSavedDialogModalLabelBody').text($scope.msg);
+                $('#gamesSavedDialogModal').modal();
+
+                // alert(msg+$scope.msg);
             })
             .error( function(edata) {
                 alert(edata);
@@ -191,31 +219,41 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         .success( function(data) {
             $scope.member = data; 
 
-            $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
-            $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+            $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
-            nflteamsFactory.getSeasonCurrentWeek()
-                .success( function(data) {
-                    $scope.current.season = data.season; 
-                    $scope.current.week = data.week;  
+            nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+            .success( function(data) {
+                $scope.weeks = data; 
 
-                    var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-                    nflteamsFactory.getNFLGamesWeekMemberTeams(q)
-                        .success( function(data) {
-                            $scope.games = data; 
-                        })
-                        .error( function(edata) {
-                            alert(edata);
-                        });                
-                })
-                .error( function(edata) {
-                    alert(edata);
-                }); 
+                nflteamsFactory.getSeasonCurrentWeek()
+                    .success( function(data) {
+                        $scope.current.season = data.season; 
+                        $scope.current.week = data.week;
+
+                        nflTeamsService.addCurrentWeek($scope.current.week);
+                        nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                        var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                        nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                            .success( function(data) {
+                                $scope.games = data; 
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });                
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    }); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
         })
         .error( function(edata) {
             alert(edata);
-        });
-
+        });  
 
         membersFactory.getMembers()
             .success( function(data) {
@@ -236,7 +274,6 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 }
 
 controllers.viewselectpickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
-    
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -262,13 +299,21 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .success( function(data) {
                 $scope.members = data; 
 
-                $scope.weeks = nflTeamsService.getNFLTeamseasonweeks();
                 $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                .success( function(data) {
+                    $scope.weeks = data; 
+
+                nflteamsFactory.getSeasonCurrentWeek()
 
                 nflteamsFactory.getSeasonCurrentWeek()
                     .success( function(data) {
                         $scope.current.season = data.season; 
                         $scope.current.week = data.week;  
+
+                        nflTeamsService.addCurrentWeek($scope.current.week);
+                        nflTeamsService.addCurrentSeason($scope.current.season);  
 
                         $scope.current.memberid = $scope.current.memberlogin.memberid;
                         var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
@@ -286,7 +331,12 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             })
             .error( function(edata) {
                 alert(edata);
-            });      
+            });  
+
+        })
+        .error( function(edata) {
+            alert(edata);
+        });      
     };
 
     $scope.getMemberWeekPicks = function() {

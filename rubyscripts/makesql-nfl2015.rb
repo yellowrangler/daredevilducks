@@ -76,7 +76,7 @@ def processPlay (gameSeason)
 		awayteamscore = 0
 		hometeamscore = 0
 
-		gametypeid = 1
+		gametypeid = 2
 
 		# 
 		# Now bring all items into insert statement

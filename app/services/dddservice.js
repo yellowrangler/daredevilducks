@@ -160,8 +160,12 @@ dddApp.service('nflTeamsService', function () {
         {  }
     ];
 
-    //
+    //---------------------------------------------------
     // selected choice values
+    //---------------------------------------------------
+
+    //
+    // current season
     //
     this.getCurrentSeason = function() {
         var currentSeasonStr = this.retreiveCurrentSeason();
@@ -198,6 +202,45 @@ dddApp.service('nflTeamsService', function () {
 
     this.removeCurrentSeason = function () {
         localStorage.removeItem("dddCurrentSeason");
+    }
+
+    //
+    // current week
+    //
+    this.getCurrentWeek = function() {
+        var currentWeekStr = this.retreiveCurrentWeek();
+
+        return currentWeekStr;
+    }
+
+    this.addCurrentWeek = function(currentWeek) {
+        var currentWeekStr = currentWeek;
+
+        this.saveCurrentWeek(currentWeekStr);
+
+        return currentWeekStr;
+    }
+
+    this.saveCurrentWeek = function (currentWeekStr) {
+        localStorage.removeItem("dddCurrentWeek");
+        localStorage.setItem("dddCurrentWeek", currentWeekStr);
+    }
+
+    this.retreiveCurrentWeek = function () {
+        var currentWeekStr = localStorage.getItem("dddCurrentWeek");
+
+        if (currentWeekStr == null)
+        {
+            var currentWeekStr = "1";
+
+            this.addCurrentWeek(currentWeekStr);
+        }
+
+        return currentWeekStr;
+    }
+
+    this.removeCurrentWeek = function () {
+        localStorage.removeItem("dddCurrentWeek");
     }
 
 });
