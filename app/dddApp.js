@@ -17,21 +17,16 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'viewselectpickgamesController',
                 templateUrl: 'app/partials/viewselectpickgames.html'
-            })
-        .when('/viewallpicks',
-            {
-                controller: 'viewallpicksController',
-                templateUrl: 'app/partials/viewallpicks.html'
-            })       
+            }) 
         .when('/leaderyear',
             {
                 controller: 'leaderyearController',
                 templateUrl: 'app/partials/leaderyear.html'
             }) 
-        .when('/leaderweek',
+        .when('/memberweekly',
             {
-                controller: 'leaderweekController',
-                templateUrl: 'app/partials/leaderweek.html'
+                controller: 'memberweeklyController',
+                templateUrl: 'app/partials/memberweekly.html'
             }) 
         .when('/teamstandings',
             {

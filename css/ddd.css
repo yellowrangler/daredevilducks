@@ -24,6 +24,16 @@
 	width: 100%; 
 }
 
+.MemberWeeklyTable  {
+	width: 100%; 
+}
+
+.MemberWeeklyTable th {
+	text-align: center; 
+	vertical-align: middle;
+	color: red;
+}
+
 .leaderBoardTable  {
 	width: 100%; 
 }
@@ -35,6 +45,17 @@
 .teamSelected  {
 	background-color: maroon;
 	color:white; 
+	border:1px solid white;
+}
+
+.teamWon  {
+	background-color: #006600;
+	color:white; 	
+	border:1px solid white;
+}
+
+.teamLost  {
+	color:black; 
 }
 
 .teamNotSelected  {
@@ -48,7 +69,7 @@
 	color: red;
 	font-size: 16px;
 	font-style: bold;
-	border-top: 1px solid red;
+	/*border-top: 1px solid red;*/
 	border-bottom: 1px solid red;
 }
 

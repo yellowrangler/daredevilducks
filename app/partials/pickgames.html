@@ -40,61 +40,66 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-		<table class="pickGameTable" >
-			<tr>
-				<th>Game Day</th>
-				<th>Pick</th>				
-				<th>Home Team</th>
-				<th>W-L-T</th>
-				<th>Score</th>
-				<th>Pick</th>				
-				<th>Away Team</th>
-				<th>W-L-T</th>
-				<th>Score</th>
-			</tr>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<table class="pickGameTable" >
+					<tr>
+						<th>Game Day</th>
+						<th>Pick</th>				
+						<th>Home Team</th>
+						<th>Score</th>						
+						<th>W-L-T</th>
+						<th>Pick</th>				
+						<th>Away Team</th>
+						<th>Score</th>
+						<th>W-L-T</th>						
+					</tr>
 
-			<tr ng-repeat="game in games">
-				<td class="left-column-text">
-					{{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
-					<img height='25' style='padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
-				</td>
+					<tr ng-repeat="game in games">
+						<td class="left-column-text">
+							{{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
+							<img height='25' style='padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
+						</td>
 
-				<td class="center-column-text">
-				    <input ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' />
-				</td>
+						<td class="center-column-text">
+						    <input ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' />
+						</td>
 
-				<td>
-					<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
-                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
-				</td>
-				
-				<td>
-					   {{game.homewins}} -
-					   {{game.homelosses}} -
-					   {{game.hometies}}
-				</td>
+						<td>
+							<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+						</td>
+						
+						<td class="center-column-text">{{game.hometeamscore}}</td>
 
-				<td class="center-column-text">{{game.hometeamscore}}</td>
+						<td>
+							   {{game.homewins}} -
+							   {{game.homelosses}} -
+							   {{game.hometies}}
+						</td>
 
-				<td class="center-column-text">
-				    <input ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' />
-				</td>
 
-				<td>
-					<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
-                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
-				</td>
+						<td class="center-column-text">
+						    <input ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' />
+						</td>
 
-				<td class="center-column-text">
-					   {{game.homewins}} -
-					   {{game.homelosses}} -
-					   {{game.hometies}}
-				</td>
+						<td>
+							<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+						</td>
 
-				<td class="center-column-text">{{game.awayteamscore}}</td>
-			</tr>
+						<td class="center-column-text">{{game.awayteamscore}}</td>
 
-		</table>
+						<td class="center-column-text">
+							   {{game.homewins}} -
+							   {{game.homelosses}} -
+							   {{game.hometies}}
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
 	</div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>

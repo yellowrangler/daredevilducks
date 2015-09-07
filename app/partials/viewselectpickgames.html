@@ -30,6 +30,12 @@
 		            </select>
 				</div> <!-- end of form-group -->   
 
+				<div style="float:right; padding-right:45px; display:inline;" class="form-group horizontalFieldOffset">
+		            <span class="teamSelected">Selected</span>
+		            <span style="width:15px;">&nbsp;</span>
+		            <span class="teamWon">Winer</span>
+				</div> <!-- end of form-group -->   
+
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
 	</div> <!-- end of col 12 -->
@@ -37,51 +43,54 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-		<table class="pickGameTable" >
-			<tr>
-				<th>Game Day</th>			
-				<th>Home Team</th>
-				<th>W-L-T</th>
-				<th>Score</th>			
-				<th>Away Team</th>
-				<th>W-L-T</th>
-				<th>Score</th>
-			</tr>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<table class="pickGameTable" >
+					<tr>
+						<th>Game Day</th>			
+						<th>Home Team</th>
+						<th>Score</th>	
+						<th>W-L-T</th>								
+						<th>Away Team</th>
+						<th>Score</th>
+						<th>W-L-T</th>						
+					</tr>
 
-			<tr ng-repeat="game in games">
-				<td class="left-column-text">
-					{{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
-					<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
-				</td>
+					<tr ng-repeat="game in games">
+						<td class="left-column-text">
+							{{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
+							<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
+						</td>
 
-				<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-					<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
-                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
-				</td>
-				
-				<td class="center-column-text">
-					   {{game.homewins}}-
-					   {{game.homelosses}}-
-					   {{game.hometies}}
-				</td>
+						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+						</td>
+						
+						<td class="center-column-text" ng-class="{{game.hometeamscore > game.awayteamscore}} ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
 
-				<td class="center-column-text">{{game.hometeamscore}}</td>
+						<td class="center-column-text">
+							   {{game.homewins}}-
+							   {{game.homelosses}}-
+							   {{game.hometies}}
+						</td>
 
-				<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-					<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
-                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
-				</td>
+						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+						</td>
 
-				<td class="center-column-text">
-					   {{game.homewins}}-
-					   {{game.homelosses}}-
-					   {{game.hometies}}
-				</td>
+						<td class="center-column-text" ng-class="{{game.awayteamscore > game.hometeamscore}} ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
 
-				<td class="center-column-text">{{game.awayteamscore}}</td>
-			</tr>
-
-		</table>
+						<td class="center-column-text">
+							   {{game.homewins}}-
+							   {{game.homelosses}}-
+							   {{game.hometies}}
+						</td>
+					</tr>
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->				
 	</div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>
