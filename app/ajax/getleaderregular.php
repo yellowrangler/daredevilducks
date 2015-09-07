@@ -64,55 +64,6 @@ if (!mysql_select_db($DBschema, $dbConn))
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
-//---------------------------------------------------------------
-// Get nfl team information
-//---------------------------------------------------------------
-// $sql = "SELECT
-//   G.season as season,
-//   G.week as week,
-//   G.id as gameid,
-//   G.gamenbr as gamenbr,
-//   G.gamedate as gamedate,
-//   G.gametime as gametime,
-//   G.gameday as gameday,
-//   G.networkid as networkid,
-//   GN.network as network,
-//   GN.networkiconname as networkiconname,
-//   G.gametypeid as gametypeid,
-//   G.hometeamid as hometeamid,
-//   TH.name as hometeamname,
-//   TH.location as hometeamlocation,  
-//   TH.conference as homeconference,
-//   TH.division as homedivision,
-//   TH.teamiconname as hometeamiconname,
-//   G.hometeamscore as hometeamscore,
-//   G.awayteamid as awayteamid,
-//   TA.name as awayteamname,
-//   TA.location as awayteamlocation,  
-//   TA.conference as awayconference,
-//   TA.division as awaydivision,
-//   TA.teamiconname as awayteamiconname,
-//   G.awayteamscore as awayteamscore,
-//     TSH.wins as homewins,
-//     TSH.losses as homelosses,
-//     TSH.ties as hometies,
-//     TSA.wins as awaywins,
-//     TSA.losses as awaylosses,
-//     TSA.ties as awayties,
-//   GT.gametype as gametype
-
-// FROM gamestbl G 
-// LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
-// LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
-// LEFT JOIN teamweekstatstbl TSH ON TSH.teamid = G.hometeamid AND TSH.week = G.week
-// LEFT JOIN teamweekstatstbl TSA ON TSA.teamid = G.awayteamid AND TSA.week = G.week
-// LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
-// LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
-// WHERE G.season = '$season'
-// AND G.week ='$week'
-// ORDER BY G.gamedatetime";
-// echo $sql;
-
 $sql = "SELECT
   G.season as season,
   G.week as week,

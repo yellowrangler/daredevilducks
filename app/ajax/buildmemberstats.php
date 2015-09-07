@@ -19,7 +19,7 @@ $enterdate = $datetime;
 //
 // messaging
 //
-$returnArrayLog = new AccessLog("logs/");
+// $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Build Team Stats tables started" );
 
 //------------------------------------------------------
