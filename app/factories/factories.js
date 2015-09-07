@@ -81,7 +81,7 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
 
     factory.getNFLTeamseasonweeks = function (data) {
         var dataSeason = "season="+data;
-        
+
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflseasonweeks.php",
@@ -113,6 +113,17 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
             method: 'POST', 
             url: "app/ajax/getcurrentseasonweek.php",
             // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getLeaderRegular = function (data) {
+        var dataRegular = "season="+data;
+
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getleaderregular.php",
+            data: dataRegular,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

@@ -400,6 +400,7 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
 controllers.leaderyearController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
+    $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
     init();
     function init() {

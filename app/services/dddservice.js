@@ -270,7 +270,7 @@ dddApp.service('loginService', function () {
             }
             else
             {
-                $("#"+labelid).text(login.membername+" "+logintext.logoff.text);
+                $("#"+labelid).text(login.screenname+" "+logintext.logoff.text);
             }
         } 
 
