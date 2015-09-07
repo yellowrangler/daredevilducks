@@ -117,13 +117,11 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
-    factory.getLeaderRegular = function (data) {
-        var dataRegular = "season="+data;
-
+    factory.getLeaderMembers = function (data) {
         return $http({ 
             method: 'POST', 
-            url: "app/ajax/getleaderregular.php",
-            data: dataRegular,
+            url: "app/ajax/getleadermembers.php",
+            data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

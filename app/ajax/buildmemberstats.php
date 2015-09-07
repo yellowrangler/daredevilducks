@@ -202,7 +202,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	//
 	// calculate percentage
 	//
-	$p = $wins / $totalgames;
+	$tiesadjust = $ties * 0.5;
+	$p = ($wins + $tiesadjust) / $totalgames;
 	$percent = round($p, 3);
 
 	echo "memberid:$memberid</br>wins:$wins losses:$losses ties:$ties total:$totalgames percent:$percent</br>";	
@@ -231,7 +232,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// do update
 		// 
 		$sql = "UPDATE memberstatstbl 
-			SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
+			SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
 			WHERE memberid = $memberid AND season = $season";
 
 		$sql_result_update = @mysql_query($sql, $dbConn);
@@ -252,8 +253,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// do insert
 		// 
 		$sql = "INSERT INTO memberstatstbl 
-			(totalgames, wins, losses, ties, percent, season, enterdate, memberid) 
-			VALUES ($games, $wins, $losses, $ties, $percent, $season, '$enterdateTS', $memberid)";
+			(totalgames, wins, losses, ties, percent, season, enterdate, gametypeid, memberid) 
+			VALUES ($totalgames, $wins, $losses, $ties, $percent, $season, '$enterdateTS', $gametypeid, $memberid)";
 			
 		$sql_result_insert = @mysql_query($sql, $dbConn);
 		if (!$sql_result_insert)

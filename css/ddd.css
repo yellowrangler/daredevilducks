@@ -28,6 +28,10 @@
 	width: 100%; 
 }
 
+.leaderBoardTable th {
+	text-align: center; 
+}
+
 .teamSelected  {
 	background-color: maroon;
 	color:white; 

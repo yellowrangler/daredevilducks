@@ -288,7 +288,6 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .error( function(edata) {
                 alert(edata);
             });  
-
     }
 
     init();
@@ -398,28 +397,103 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
 }
 
 controllers.leaderyearController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
-    $scope.current = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
-    $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
-    init();
-    function init() {
-        nflteamsFactory.getNFLTeamstats($scope.current.season)
+    function getGameTypeName() 
+    {
+        $.each($scope.gametypes, function (index,value) {
+            if ($scope.gametypes[index].id == $scope.current.gametypeid)
+            {
+                $scope.current.gametype = $scope.gametypes[index].gametype;
+            }
+        });
+    }
+
+    function getYearlyLeaderBoard() 
+    {
+        //
+        // get regular season leaders
+        //
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
-                $scope.teamstats = data; 
+                data.position = {};
+                $.each(data, function (index,value) {
+                    data[index].position = index+1;
+                });
+
+                getGameTypeName();
+
+                $scope.memberregularstats = data; 
             })
             .error( function(edata) {
                 alert(edata);
             });
 
-        nflteamsFactory.getNFLTeamseasons()
+        //
+        // get total season leaders
+        //
+        var qStr = "season="+$scope.current.season;
+        nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
-                $scope.teamseasons = data; 
+                data.position = {};
+                $.each(data, function (index,value) {
+                    data[index].position = index+1;
+                });
+
+                $scope.membertotalstats = data; 
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });      
+    }
+
+    init();
+    function init() {
+        $scope.current = {};
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+        $scope.gametypes = nflTeamsService.getNFLGametypes();
+        $scope.current.gametypeid = 2;
+        getGameTypeName();
+        
+        //
+        // get regular season leaders
+        //
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getLeaderMembers(qStr)
+            .success( function(data) {
+                data.position = {};
+                $.each(data, function (index,value) {
+                    data[index].position = index+1;
+                });
+
+                $scope.memberregularstats = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        //
+        // get total season leaders
+        //
+        var qStr = "season="+$scope.current.season;
+        nflteamsFactory.getLeaderMembers(qStr)
+            .success( function(data) {
+                data.position = {};
+                $.each(data, function (index,value) {
+                    data[index].position = index+1;
+                });
+
+                $scope.membertotalstats = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
     };
+
+    $scope.getYearlyLeaderBoard = function() {
+        getYearlyLeaderBoard();
+    }
 }
 
 controllers.leaderweekController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
