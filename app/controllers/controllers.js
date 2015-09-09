@@ -561,11 +561,19 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
     }
 }
 
-controllers.halloffameController = function ($scope, $http, $location, nflTeamsService) {
+controllers.halloffameController = function ($scope, $http, $location) {
 
     init();
     function init() {
-        $scope.teams = nflTeamsService.getNFLTeams(); 
+        
+    };
+}
+
+controllers.teamstatsController = function ($scope, $http, $location, nflTeamsService) {
+
+    init();
+    function init() {
+        
     };
 }
 
@@ -1031,6 +1039,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             }
             else
             {
+                nflteamsFactory.getNFLGamesTeams($scope.current.season)
+                .success( function(data) {
+                    $scope.nflgames = data; 
+                    $scope.gridOptionsGames.data = data;
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
+
                 alert("Game Info updated succesfully!");
                 // $("#gameForm")[0].reset();
             }
@@ -1064,6 +1081,14 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
         alert("You be submitting delete request");
     } 
 
+}
+
+controllers.weeklybuildsController = function ($scope, $http, $location, nflTeamsService) {
+
+    init();
+    function init() {
+        
+    };
 }
 
 dddApp.controller(controllers); 

@@ -115,7 +115,8 @@ $sql = "UPDATE gamestbl
 		gametypeid = '$gametypeid',
 		gamedatetime = '$gamedatetime',		
 		enterdate = '$enterdateTS'
-	WHERE gamenbr = '$gamenbr'"; 
+	WHERE gamenbr = '$gamenbr'
+	AND season = '$season'"; 
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

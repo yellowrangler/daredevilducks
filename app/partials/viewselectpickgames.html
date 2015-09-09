@@ -33,7 +33,7 @@
 				<div style="float:right; padding-right:45px; display:inline;" class="form-group horizontalFieldOffset">
 		            <span class="teamSelected">Selected</span>
 		            <span style="width:15px;">&nbsp;</span>
-		            <span class="teamWon">Winer</span>
+		            <span class="teamWon">Winner</span>
 				</div> <!-- end of form-group -->   
 
 			</div> <!-- end of panel body -->				
@@ -58,8 +58,8 @@
 
 					<tr ng-repeat="game in games">
 						<td class="left-column-text">
-							{{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}} &nbsp; 
-							<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'>
+							<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'> &nbsp; {{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}}
+							
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">

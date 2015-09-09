@@ -13,9 +13,6 @@ include_once ('../class/class.AccessLog.php');
 //
 $datetime = date("Y-m-d H:i:s");
 
-// print_r($_POST);
-// die();
-
 // set variables
 $enterdate = $datetime;
 
@@ -23,7 +20,6 @@ $enterdate = $datetime;
 // messaging
 //
 $returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Build Team Stats tables started" );
 
 //------------------------------------------------------
 // db admin user info
@@ -37,6 +33,7 @@ $DBpassword = "tarryc";
 //
 // set variables
 //
+$gametypeid = 0;
 $totalgames = 0;
 $wins = 0;
 $losses = 0;
@@ -55,7 +52,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to initialize team week stats.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to initialize member week stats.");
 
 	$rv = "";
 	exit($rv);
@@ -65,7 +62,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to initialize team week stats.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to initialize member week stats.");
 
 	$rv = "";
 	exit($rv);
@@ -75,18 +72,18 @@ if (!mysql_select_db($DBschema, $dbConn))
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));		
 
 //---------------------------------------------------------------
-// Get list of all nfl teams
+// Get list of all dare devile ducks members
 //---------------------------------------------------------------
-$sql = "SELECT id as teamid 
-FROM  teamstbl 
-ORDER BY 'teamid'";
+$sql = "SELECT id as memberid 
+FROM  membertbl 
+ORDER BY 'memberid'";
 
 $sql_result_prime = @mysql_query($sql, $dbConn);
 if (!$sql_result_prime)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize team week stats.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize member week stats.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -94,7 +91,7 @@ if (!$sql_result_prime)
 }
 
 while($row = mysql_fetch_assoc($sql_result_prime)) {
-	$teamid = $row[teamid];
+	$memberid = $row[memberid];
 
 	//
 	// loop through all weeks
@@ -104,9 +101,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		//---------------------------------------------------------------
 		// Get list of all dare devile ducks members
 		//---------------------------------------------------------------
-		$sql = "SELECT teamid 
-		FROM  teamweekstatstbl 
-		WHERE teamid = $teamid and season = $season and week = $week";
+		$sql = "SELECT memberid 
+		FROM  memberweekstatstbl 
+		WHERE memberid = $memberid and season = $season and week = $week";
 
 		$sql_result_check = @mysql_query($sql, $dbConn);
 		if (!$sql_result_check)
@@ -127,9 +124,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// 
 			// do insert team
 			// 
-			$sql = "INSERT INTO teamweekstatstbl 
-				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
-				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
+			$sql = "INSERT INTO memberweekstatstbl 
+				(totalgames, week, wins, losses, ties, percent, season, enterdate, memberid, gametypeid) 
+				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $memberid, $gametypeid)";
 
 			$sql_r = @mysql_query($sql, $dbConn);
 			if (!$sql_r)

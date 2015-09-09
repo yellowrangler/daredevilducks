@@ -18,10 +18,10 @@ dddApp.config(function ($routeProvider) {
                 controller: 'viewselectpickgamesController',
                 templateUrl: 'app/partials/viewselectpickgames.html'
             }) 
-        .when('/leaderyear',
+        .when('/leaderboard',
             {
                 controller: 'leaderyearController',
-                templateUrl: 'app/partials/leaderyear.html'
+                templateUrl: 'app/partials/leaderboard.html'
             }) 
         .when('/memberweekly',
             {
@@ -32,7 +32,12 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'teamstandingsController',
                 templateUrl: 'app/partials/teamstandings.html'
-            })    
+            })
+        .when('/teamstats',
+            {
+                controller: 'teamstatsController',
+                templateUrl: 'app/partials/teamstats.html'
+            })        
         .when('/halloffame',
             {
                 controller: 'halloffameController',
@@ -67,6 +72,12 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'updatememberController',
                 templateUrl: 'app/partials/updatemember.html'
+            })
+
+        .when('/weeklybuilds',
+            {
+                controller: 'weeklybuildsController',
+                templateUrl: 'app/partials/weeklybuilds.html'
             })
 
         .when('/login',

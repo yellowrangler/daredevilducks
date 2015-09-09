@@ -129,7 +129,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	}	
 
 	//
-	// We now have all the games for the seans for the member. 
+	// We now have all the games for the season for the member. 
 	// Lets loop through and do the math.
 	//
 	$totalgames = 0;
@@ -189,8 +189,6 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				die("Switch default seleted:$teamselected hometeamid:$hometeamid awayteamid:$awayteamid");
 				break;
 		}  // end of switch
-
-		// echo "memberid:$memberid</br>$wins - $losses - $ties</br>home:$hometeam score:$hometeamscore</br>away:$awayteam score:$awayteamscore</br>";	
 		
 	}  // end of while member game
 		
