@@ -15,12 +15,12 @@
 		                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
 		            </select>
 
-		            <label style="padding-left:50px;" for="gametype" class="control-label">Game Type </label>
+		           <!--  <label style="padding-left:50px;" for="gametype" class="control-label">Game Type </label>
 		            <select class="form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.gametypeid" id="gametype" name="gametype">
 		                <option ng-repeat="gametype in gametypes" 
 		                		ng-selected="{{current.gametypeid == gametype.id}}" 
 		                		value="{{gametype.id}}">{{gametype.gametype}}</option>
-		            </select>
+		            </select> -->
 				</div> <!-- end of form-group -->
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
@@ -32,7 +32,7 @@
 	<div class="col-md-5">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 id="seasontypetitle" class="panel-title">{{current.gametype}} Season</h3>
+				<h3 class="panel-title">Total Percentage Leader</h3>
 			</div>
 			<div class="panel-body">
 				<table class="leaderBoardTable" >
@@ -46,20 +46,20 @@
 						<th>Percent</th>				
 					</tr>
 
-					<tr ng-repeat="memberregularstat in memberregularstats">
-						<td class="center-column-text">{{memberregularstat.position}}</td>
+					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
+						<td class="center-column-text">{{memberseasonpercentstat.position}}</td>
 
-						<td class="left-column-text">{{memberregularstat.screenname}}</td>
+						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
 
-						<td  class="center-column-text">{{memberregularstat.wins}}</td>
+						<td  class="center-column-text">{{memberseasonpercentstat.wins}}</td>
 						
-						<td  class="center-column-text">{{memberregularstat.losses}}</td>
+						<td  class="center-column-text">{{memberseasonpercentstat.losses}}</td>
 
-						<td class="center-column-text">{{memberregularstat.ties}}</td>
+						<td class="center-column-text">{{memberseasonpercentstat.ties}}</td>
 
-						<td class="center-column-text">{{memberregularstat.totalgames}}</td>
+						<td class="center-column-text">{{memberseasonpercentstat.totalgames}}</td>
 
-						<td class="center-column-text">{{memberregularstat.showpercent}}</td>
+						<td class="center-column-text">{{memberseasonpercentstat.showpercent}}</td>
 					</tr>
 				</table>
 			</div>
@@ -83,7 +83,7 @@
 	<div class="col-md-5">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Total Season</h3>
+				<h3 class="panel-title">Total Games Won Leader</h3>
 			</div>
 			<div class="panel-body">
 				<table class="leaderBoardTable" >
@@ -97,20 +97,20 @@
 						<th>Percent</th>				
 					</tr>
 
-					<tr ng-repeat="membertotalstat in membertotalstats">
-						<td class="center-column-text">{{membertotalstat.position}}</td>
+					<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
+						<td class="center-column-text">{{memberseasonwinstats.position}}</td>
 
-						<td class="left-column-text">{{membertotalstat.screenname}}</td>
+						<td class="left-column-text">{{memberseasonwinstats.screenname}}</td>
 
-						<td  class="center-column-text">{{membertotalstat.wins}}</td>
+						<td  class="center-column-text">{{memberseasonwinstats.wins}}</td>
 						
-						<td  class="center-column-text">{{membertotalstat.losses}}</td>
+						<td  class="center-column-text">{{memberseasonwinstats.losses}}</td>
 
-						<td class="center-column-text">{{membertotalstat.ties}}</td>
+						<td class="center-column-text">{{memberseasonwinstats.ties}}</td>
 
-						<td class="center-column-text">{{membertotalstat.totalgames}}</td>
+						<td class="center-column-text">{{memberseasonwinstats.totalgames}}</td>
 
-						<td class="center-column-text">{{membertotalstat.showpercent}}</td>
+						<td class="center-column-text">{{memberseasonwinstats.showpercent}}</td>
 					</tr>
 				</table>
 			</div>

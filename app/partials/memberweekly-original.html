@@ -1,0 +1,59 @@
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2>Member Weekly Totals</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<form id="pickweekForm" name="pickweekForm" style="padding:10px;" class="form-inline">
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="form-group horizontalFieldOffset">
+			    	<label for="season" class="control-label">Season</label>
+		            <select class="form-control" ng-change="getMemberWeekStats()" ng-model="current.season"  id="season" name="season">
+		                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+		            </select>
+				</div> <!-- end of form-group -->
+			</div> <!-- end of panel body -->				
+		</div> <!-- end of panel -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-5">
+		<div class="panel panel-default">
+			
+			<table class="MemberWeeklyTable" >
+				<tr>
+					<th>Week</th>
+					<th>Dates</th>
+					<th>Member</th>			
+					<th>W - L - T</th>
+				</tr>
+
+				<tr ng-repeat="memberweekstat in memberweekstats">
+					<td class="center-column-text">
+						{{memberweekstat.week}}
+					</td>
+
+
+					<td class="left-column-text">
+	                    {{memberweekstat.weekstart}} thru {{memberweekstat.weekend}}
+					</td>
+
+					<td class="left-column-text" >
+	                    {{memberweekstat.screenname}}
+					</td>
+
+					<td class="center-column-text">
+						{{memberweekstat.wins}} - {{memberweekstat.losses}} - {{memberweekstat.ties}}
+					</td>
+				</tr>
+			</table>
+
+		</div> 	<!-- end of panel -->				
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

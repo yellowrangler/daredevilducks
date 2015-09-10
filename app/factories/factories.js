@@ -126,6 +126,16 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getMemberWeekStats = function (data) {
+        var dataSeason = "season="+data;
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmemberweekstats.php",
+            data: dataSeason,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
 

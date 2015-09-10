@@ -24,14 +24,28 @@
 	width: 100%; 
 }
 
-.MemberWeeklyTable  {
-	width: 100%; 
+.scrollClass {
+	overflow: auto;
+	height: 480px;
 }
 
-.MemberWeeklyTable th {
-	text-align: center; 
+.MemberWeeklyTableHdr {
+
+}
+
+.MemberWeeklyTableHdr th {
 	vertical-align: middle;
+	text-align: center; 
 	color: red;
+	padding:5px;
+}
+
+.MemberWeeklyTable {
+	border-spacing: 15px; 
+}
+
+.MemberWeeklyTable td {
+	padding:5px;
 }
 
 .leaderBoardTable  {

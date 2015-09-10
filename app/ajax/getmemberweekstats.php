@@ -8,8 +8,7 @@ include_once ('../class/class.AccessLog.php');
 // get post variables
 //
 $season = $_POST['season'];
-$leaderType = $_POST['leaderType'];
-
+// $season = 2014;
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");
@@ -24,7 +23,6 @@ $enterdate = $datetime;
 // messaging
 //
 $returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Client List request started" );
 
 //------------------------------------------------------
 // get admin user info
@@ -43,7 +41,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team information.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get member weekly stat information.");
 
 	$rv = "";
 	exit($rv);
@@ -53,46 +51,28 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team information.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to get member weekly stat information.");
 
 	$rv = "";
 	exit($rv);
 }
 
-// create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
-$sql = "SELECT
-  MS.season as season,
-  MS.memberid as week,
-  MS.id as id,
-  MS.wins as wins,
-  MS.losses as losses,
-  MS.ties as ties,
-  MS.totalgames as totalgames,
-  MS.percent as percent,
-  CONCAT( ROUND( ( MS.percent * 100 ), 1 ),  '%' ) as showpercent,
-  MS.gametypeid as gametypeid,
-  M.membername as membername,
-  M.screenname as screenname
-FROM memberstatstbl MS 
-LEFT JOIN membertbl M ON M.id = MS.memberid
-WHERE MS.season = '$season' ";
-
-if ($leaderType == 'percent')
-{
-  $sql = $sql . " ORDER BY MS.percent DESC, M.membername ASC ";
-}
-elseif ($leaderType == 'wins')
-{
-  $sql = $sql . " ORDER BY MS.wins DESC, M.membername ASC ";
-}
-else
-{
-  $sql = $sql . " wrong argument passed ";
-}
-
-
+$sql = "SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season = $season
+ORDER BY week ASC, screenname ASC";
 
 // echo $sql;
 
@@ -101,7 +81,7 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl game team information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get member weekly stat information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -111,9 +91,9 @@ if (!$sql_result)
 //
 // fill the array
 //
-$memberstats = array();
+$memberweekstats = array();
 while($r = mysql_fetch_assoc($sql_result)) {
-    $memberstats[] = $r;
+    $memberweekstats[] = $r;
 }
 
 //
@@ -124,6 +104,6 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($memberstats));
+exit(json_encode($memberweekstats));
 
 ?>

@@ -20,7 +20,7 @@ dddApp.config(function ($routeProvider) {
             }) 
         .when('/leaderboard',
             {
-                controller: 'leaderyearController',
+                controller: 'leaderboardController',
                 templateUrl: 'app/partials/leaderboard.html'
             }) 
         .when('/memberweekly',
