@@ -257,6 +257,7 @@ dddApp.service('loginService', function () {
         if (login == null)
         {
             $("#"+labelid).text(logintext.login.text);
+            // $("#"+avatarlabelid).text("");
             if (action)
                 location = "/login";
         }
@@ -275,6 +276,26 @@ dddApp.service('loginService', function () {
         } 
 
         return location;
+    }
+
+    this.setAvatarLabel = function(labelid, action) {
+        var login = this.getLogin();
+
+        if (login == null)
+        {
+            $("#"+labelid).text("");
+        }
+        else
+        {
+            if (action)
+            {
+                $("#"+labelid).text("");
+            }
+            else
+            {
+                $("#"+labelid).text(login.screenname);
+            }
+        } 
     }
 
     this.getLoginLogoffLabels = function() {
@@ -303,6 +324,20 @@ dddApp.service('loginService', function () {
         
 
         return role;
+    }
+
+    this.getMemberAvatar= function() {
+        var memberavatar = "";
+        var login = "";
+
+        var login = this.getLogin();
+        if (login != null)
+        {
+            var memberavatar = login.avatar;
+        }
+        
+
+        return memberavatar;
     }
 
     this.getEmptyLogin = function() {

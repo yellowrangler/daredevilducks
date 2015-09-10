@@ -5,6 +5,27 @@
 	height: 50px;
 }
 
+.loginLink {
+	float:right;
+	color: #F5F38E;
+	font-size: 16px;
+	padding-top:10px;
+	padding-right:15%;
+	cursor: pointer;
+}
+
+.loginLink a {
+	color: #F5F38E;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.emailLink {
+	color:NavajoWhite;
+	font-size:15px;
+	cursor: pointer;
+}
+
 .center-column-text {
 	text-align: center; 
 	vertical-align: middle;
@@ -171,7 +192,7 @@
 }
 
 .pageCaption {
-	padding-left:15px;
+	padding-left:35px;
 	padding-bottom:25px;
 	/*height: 35px;*/
 	/*padding-top:5px;*/
@@ -197,7 +218,7 @@
 }
 
 .pageStandardOffset {
-	padding-left:15px;
+	padding-left:35px;
 	padding-right:15px;
 }
 
@@ -269,11 +290,6 @@
 	font-size:15px;
 	text-decoration: none;
 	font-family:"Lusitana", Arial, Helvetica, sans-serif;
-}
-
-.ddd-footer a {
-	color:NavajoWhite;
-	font-size:15px;
 }
 
 /* ddd paragraph text large */

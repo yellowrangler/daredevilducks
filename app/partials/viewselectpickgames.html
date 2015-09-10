@@ -1,6 +1,6 @@
 <div class="pageCaption row">
 	<div class="col-md-12">
-		<h2>View Member Selected Games for Week</h2>
+		<h2>View Player Selected Games for Week</h2>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
@@ -10,7 +10,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="form-group horizontalFieldOffset">
-					<label for="memberid" class="control-label">Screen Name</label>
+					<label for="memberid" class="control-label">Player</label>
 			        <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
 			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
 			        </select>

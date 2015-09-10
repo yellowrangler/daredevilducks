@@ -2,6 +2,8 @@
 var controllers = {};
 controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, nflteamsFactory, nflTeamsService) {
     $("#adminselect").hide();
+    
+    $scope.memberavatar = "";
 
     function checkRole() {
         var role = loginService.getMemberRole();
@@ -15,8 +17,15 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         }  
     }
 
+    function getAvatar()
+    {
+        $scope.memberavatar = loginService.getMemberAvatar();
+    }
+
     init();
     function init() {
+        getAvatar();
+        loginService.setAvatarLabel("menubaravatar",0);
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);
 
         // preload nfl team data
@@ -57,11 +66,18 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     $scope.loginlogoff = function () {
         var route = loginService.setLoginLogoffLabel("menubarlogin",1);
+        getAvatar();
+        loginService.setAvatarLabel("menubaravatar",0);
+
         checkRole();
         if (route != "")
         {
             $location.path(route);
         }
+    }
+
+    $scope.showMemberAvatar = function () {
+        getAvatar();
     }
 }
 
@@ -83,8 +99,12 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
                 {
                     loginService.addLogin(login);
 
+                    // get avatar
+                    $scope.$parent.showMemberAvatar();
+
                     // flip the label
                     var route = loginService.setLoginLogoffLabel("menubarlogin",0);
+                    loginService.setAvatarLabel("menubaravatar",0);
                     
                     $('#iformationDialogModalTitle').text("Success");
                     $('#iformationDialogModalLabelBody').text(login.text);

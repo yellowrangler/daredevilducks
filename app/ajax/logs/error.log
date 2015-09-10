@@ -133,3 +133,18 @@ LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
 LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
 WHERE MS.season = 
 ORDER BY week ASC, screenname ASC
+2015-09-10 15:27:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC, screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-10 15:27:15 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season = 
+ORDER BY week ASC, screenname ASC

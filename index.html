@@ -80,7 +80,7 @@
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/pickgames">Pick games for week</a></li>
-                        <li><a href="#/viewselectpickgames">View Select Member picks for week</a></li>
+                        <li><a href="#/viewselectpickgames">View Select Player picks for week</a></li>
                     </ul>
                 </li>
             </ul>
@@ -111,7 +111,7 @@
 
             <ul class="nav navbar-nav">
                 <li class="menuItems"><a href="#/halloffame">
-                <img style="height:130px;" class="" src="img/buttons/halloffame.png">
+                <img style="height:130px;" src="img/buttons/halloffame.png">
                 </a></li>
             </ul>
 
@@ -125,11 +125,11 @@
                         <li><a href="#/teaminfo">Team Information</a></li>
                         <li><a href="#/gameinfo">Game Informtion</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation" class="disabled"><a style="color:teal;" href="">Member Information</a></li>
+                        <li role="presentation" class="disabled"><a style="color:teal;" href="">Player Information</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a href="#/addmember">Add New Member</a></li>
-                        <li><a href="#/updatemember">Manage Member Information</a></li>
-                        <li><a href="#/addavatar">Manage Member Avatar</a></li>
+                        <li><a href="#/addmember">Add New Player</a></li>
+                        <li><a href="#/updatemember">Manage Player Information</a></li>
+                        <li><a href="#/addavatar">Manage Player Avatar</a></li>
 
                         <li role="presentation" class="divider"></li>
                         <li role="presentation" class="disabled"><a style="color:teal;" href="">System</a></li>
@@ -140,46 +140,59 @@
             </ul>
 
             <ul style="float:right;padding-top:10px;" class="nav navbar-nav showPointer">
-                <li><a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a></li>
+                <li>
+                    <div style="padding-top:30px;">
+                    <a id="menubaravatarimage" name="menubaravatarimage" ng-click="">
+                    <img style="height:85px;" class="img-circle" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
+
+             <!--            <img style="height:85px;" class="img-circle"  ng-src="img/avatars/{{memberavatar}}"> -->
+                    </a>
+                    <br />
+                    <span style="text-align:center;" id="menubaravatar" name="menubaravatar"></span>
+                    </div>
+                </li>
             </ul>
+
+            <!-- <ul style="float:right;padding-top:10px;" class="nav navbar-nav showPointer">
+                <li><a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a></li>
+            </ul> -->
         </div> <!-- end of collaps  -->
     </div> <!-- end of container fluid -->            
 </nav>
 
-<div style="padding-top:200px;" background:white;" data-ng-view="" class="topPagePosition"></div>
+<div style="padding-top:180px;" background:white;" data-ng-view="" class="topPagePosition"></div>
 
 <div class="ddd-footer">
 	<div class="container-fluid" style="padding-top:15px;">
         <div class="row">
-            <div class="col-md-1">
-                &nbsp;
-            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img style="height:125px;" src="img/ddd-small-footer.png" alt="Girls just want to have fun!" class="img-circle">
+                    </div>
+
+                    <div class="col-md-10">
+                        <h3>We subscribe to the following addadge:</h3>
+                        <h3>Enjoy Life and Have Fun!</h3>
+                    </div>
+                </div> <!-- end of row -->
+            </div> <!-- end of col 5 -->
+        
             <div class="col-md-4">
                 <h3>Contact Information</h3>
                 <br />
                 Tarry Cutler
                 <br />
-                <a href="mailto:tarrant.cutler@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">tarrant.cutler@gmail.com</a>
+                <a class="emailLink" href="mailto:tarrant.cutler@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">tarrant.cutler@gmail.com</a>
                 <br />
                 Phone: 781-342-0204
             </div>
 
-
             <div class="col-md-2">
-                &nbsp;
-            </div>
-
-            <div class="col-md-5">
-                <div style="padding-top:25px;" class="row">
-                    <div class="col-md-3">
-                        <img style="height:125px;" src="img/ddd-small-footer.png" alt="Girls just want to have fun!" class="img-circle">
-                    </div>
-
-                    <div class="col-md-9">
-                        <h3>We subscribe to the following addadge:</h3>
-                        <h3>Enjoy Life and Have Fun!</h3>
-                    </div>
+                <div class="loginLink row">
+                    <a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
                 </div> <!-- end of row -->
+                
             </div>
         </div> <!-- end of row -->
         
