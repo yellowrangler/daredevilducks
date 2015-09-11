@@ -43,7 +43,7 @@ $losses = 0;
 $ties = 0;
 $percentage = 0;
 $season = 2015;
-$gamesInRegularSeason = 17;
+$weeksInRegularSeason = 17;
 
 //
 // connect to db
@@ -271,7 +271,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	// loop through rest of weeks
 	//
 	$start = $week;
-	for ($week = $start; $week <= $gamesInRegularSeason; $week++)
+	for ($week = $start; $week <= $weeksInRegularSeason; $week++)
 	{
 		// 
 		// do update

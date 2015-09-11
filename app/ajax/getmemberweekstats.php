@@ -62,6 +62,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 $sql = "SELECT M.screenname as screenname,
    M.id as memberid,
    M.membername as membername,
+   M.avatar as memberavatar,   
    MS.losses as losses,
    MS.wins as wins,
    MS.ties as ties,

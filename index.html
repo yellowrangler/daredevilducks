@@ -76,7 +76,7 @@
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    Games
+                    <img style="height:130px;" class="" src="img/buttons/game.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/pickgames">Pick games for week</a></li>
@@ -117,7 +117,9 @@
 
             <ul id="adminselect" class="nav navbar-nav">
                 <li class="menuItems dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle">Admin<b class="caret"></b></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                    <img style="height:130px;" class="" src="img/buttons/admin.png">
+                    <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li role="presentation" class="divider"></li>
                         <li role="presentation" class="disabled"><a style="color:teal;" href="">NFL Content</a></li>
@@ -141,14 +143,12 @@
 
             <ul style="float:right;padding-top:10px;" class="nav navbar-nav showPointer">
                 <li>
-                    <div style="padding-top:30px;">
+                    <div style="text-align:center;padding-top:30px;">
                     <a id="menubaravatarimage" name="menubaravatarimage" ng-click="">
                     <img style="height:85px;" class="img-circle" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
-
-             <!--            <img style="height:85px;" class="img-circle"  ng-src="img/avatars/{{memberavatar}}"> -->
                     </a>
                     <br />
-                    <span style="text-align:center;" id="menubaravatar" name="menubaravatar"></span>
+                    <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
                     </div>
                 </li>
             </ul>

@@ -51,12 +51,12 @@
 }
 
 .MemberWeeklyTableHdr {
+	width:65%;
 
 }
 
 .MemberWeeklyTableHdr th {
 	vertical-align: middle;
-	text-align: center; 
 	color: red;
 	padding:5px;
 }

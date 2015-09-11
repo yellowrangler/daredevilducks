@@ -73,6 +73,7 @@ $sql = "SELECT
   MS.percent as percent,
   CONCAT( ROUND( ( MS.percent * 100 ), 1 ),  '%' ) as showpercent,
   MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
   M.membername as membername,
   M.screenname as screenname
 FROM memberstatstbl MS 

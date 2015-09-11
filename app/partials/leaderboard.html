@@ -49,7 +49,7 @@
 					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
 						<td class="center-column-text">{{memberseasonpercentstat.position}}</td>
 
-						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
+						<td class="left-column-text"><img style="height:40px;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"> {{memberseasonpercentstat.screenname}}</td>
 
 						<td  class="center-column-text">{{memberseasonpercentstat.wins}}</td>
 						
@@ -100,7 +100,7 @@
 					<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
 						<td class="center-column-text">{{memberseasonwinstats.position}}</td>
 
-						<td class="left-column-text">{{memberseasonwinstats.screenname}}</td>
+						<td class="left-column-text"><img style="height:40px;" ng-show="memberseasonwinstats.memberavatar != ''" ng-src="img/avatars/{{memberseasonwinstats.memberavatar}}"> {{memberseasonwinstats.screenname}}</td>
 
 						<td  class="center-column-text">{{memberseasonwinstats.wins}}</td>
 						
