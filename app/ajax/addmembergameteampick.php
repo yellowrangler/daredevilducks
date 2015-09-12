@@ -64,14 +64,6 @@ if (!mysql_select_db($DBschema, $dbConn))
 	exit($rv);
 }
 
-//-----------------------------------------------------------------
-// remove all games picks for this week that are for this memberid
-//-----------------------------------------------------------------
-$sql = "DELETE FROM memberpickstbl WHERE memberid = $memberid AND season = $season AND week = $week";
-
-$sql_result = @mysql_query($sql, $dbConn);
-
-
 $post = $_POST;  
 foreach ( $post as $key=>$value )
 {
@@ -85,32 +77,81 @@ foreach ( $post as $key=>$value )
 	$gamenbr = str_replace($strCut, "", $key);
 	$teamid = $value;
 
-	//-----------------------------------------------------------------
-	// add games picks for this week that are for this memberid
-	//-----------------------------------------------------------------
-	$sql = "INSERT INTO memberpickstbl
-		(
-		 season, week, gamenbr, memberid, teamid, enterdate
-		 ) VALUES (
-		'$season', 
-		'$week', 
-		'$gamenbr', 
-		'$memberid', 
-		'$teamid', 		
-		'$enterdateTS' )"; 
+	//---------------------------------------------------------------
+	// if we have this already then update else insert
+	//---------------------------------------------------------------
+	$sql = "SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid = $memberid and season = $season and week = $week and gamenbr = $gamenbr";
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
+	$sql_result_check = @mysql_query($sql, $dbConn);
+	if (!$sql_result_check)
 	{
-		$log = new ErrorLog("logs/");
-		$sqlerr = mysql_error();
-		$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add member game pick for ddd member $memberid.");
-		$log->writeLog("SQL: $sql");
+	    $log = new ErrorLog("logs/");
+	    $sqlerr = mysql_error();
+	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to add member game pick.");
+	    $log->writeLog("SQL: $sql");
 
-		$rc = -100;
-		$msgtext = "System Error: $sqlerr. sql = $sql";
+	    $status = -110;
+	    $msgtext = "System Error: $sqlerr";
+	}
 
-		exit($msgtext);
+	$num_rows = mysql_num_rows($sql_result_check);
+
+	if ($num_rows == 0)
+	{
+		//-----------------------------------------------------------------
+		// add games picks for this week that are for this memberid
+		//-----------------------------------------------------------------
+		$sql = "INSERT INTO memberpickstbl
+			(
+			 season, week, gamenbr, memberid, teamid, enterdate
+			 ) VALUES (
+			'$season', 
+			'$week', 
+			'$gamenbr', 
+			'$memberid', 
+			'$teamid', 		
+			'$enterdateTS' )"; 
+
+		$sql_result = @mysql_query($sql, $dbConn);
+		if (!$sql_result)
+		{
+			$log = new ErrorLog("logs/");
+			$sqlerr = mysql_error();
+			$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add member game pick for ddd member $memberid.");
+			$log->writeLog("SQL: $sql");
+
+			$rc = -100;
+			$msgtext = "System Error: $sqlerr. sql = $sql";
+
+			exit($msgtext);
+		}
+	}
+	else
+	{
+		//-----------------------------------------------------------------
+		// add games picks for this week that are for this memberid
+		//-----------------------------------------------------------------
+		$sql = "UPDATE memberpickstbl
+			 SET season='$season', week='$week', 
+			 gamenbr='$gamenbr', memberid='$memberid', 
+			 teamid='$teamid', enterdate='$enterdateTS'
+			 WHERE memberid = $memberid AND season = $season AND week = $week AND gamenbr = $gamenbr";
+
+		$sql_result = @mysql_query($sql, $dbConn);
+		if (!$sql_result)
+		{
+			$log = new ErrorLog("logs/");
+			$sqlerr = mysql_error();
+			$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to add member game pick for ddd member $memberid.");
+			$log->writeLog("SQL: $sql");
+
+			$rc = -100;
+			$msgtext = "System Error: $sqlerr. sql = $sql";
+
+			exit($msgtext);
+		}
 	}
 } 
 

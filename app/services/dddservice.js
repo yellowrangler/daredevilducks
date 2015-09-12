@@ -268,10 +268,11 @@ dddApp.service('loginService', function () {
             {
                 this.removeLogin();
                 $("#"+labelid).text(logintext.login.text);
+                location = "/home";
             }
             else
             {
-                $("#"+labelid).text(login.screenname+" "+logintext.logoff.text);
+                $("#"+labelid).html(login.screenname+"<br /> "+logintext.logoff.text);
             }
         } 
 

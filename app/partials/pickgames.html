@@ -70,7 +70,7 @@
 		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 						
-						<td class="center-column-text">{{game.hometeamscore}}</td>
+						<td class="center-column-text" ng-class="{{game.hometeamscore > game.awayteamscore}} ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
 
 						<td>
 							   {{game.homewins}} -
@@ -88,7 +88,7 @@
 		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
-						<td class="center-column-text">{{game.awayteamscore}}</td>
+						<td class="center-column-text" ng-class="{{game.awayteamscore > game.hometeamscore}} ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
 
 						<td class="center-column-text">
 							   {{game.homewins}} -

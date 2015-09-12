@@ -2,28 +2,48 @@
 
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
-include_once ('../class/class.AccessLog.php');
-
-//
-// functions
-//
 
 //
 // get date time for this transaction
 //
 $datetime = date("Y-m-d H:i:s");
 
-// print_r($_POST);
-// die();
-
 // set variables
 $enterdate = $datetime;
 
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Build Team Stats tables started" );
+$msg = "Buildmemberweekstats Started <br />";
+
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	$msg = $msg . "No season passed - Buildmemberweekstats terminated";
+	exit($msg);
+}
+
+if (isset($_POST["gametypeid"]))
+{
+	$gametypeid = $_POST["gametypeid"];
+}
+else
+{
+	$msg = $msg . "No gametypeid passed - Buildmemberweekstats terminated";
+	exit($msg);
+}
+
+// if (isset($_POST["weeksinseason"]))
+// {
+// 	$weeksinseason = $_POST["weeksinseason"];
+// }
+// else
+// {
+// 	$msg = $msg . "No weeksinseason passed - Buildmemberweekstats terminated";
+// 	exit($msg);
+// }
+
+$msg = $msg . "Input variables: Season:$season gametypeid:$gametypeid<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -37,9 +57,9 @@ $DBpassword = "tarryc";
 //
 // set variables
 //
-$gametypeid = 2;
-$season = 2014;
-$gamesInRegularSeason = 17;
+// $gametypeid = 2;
+// $season = 2014;
+// $gamesInRegularSeason = 17;
 
 //
 // connect to db
@@ -51,8 +71,8 @@ if (!$dbConn)
 	$dberr = mysql_error();
 	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update member week stats.");
 
-	$rv = "";
-	exit($rv);
+	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to update member week stats.";
+	exit($msg);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
@@ -61,15 +81,12 @@ if (!mysql_select_db($DBschema, $dbConn))
 	$dberr = mysql_error();
 	$log->writeLog("DB error: $dberr - Error selecting db Unable to update member week stats.");
 
-	$rv = "";
-	exit($rv);
+	$msg = $msg . "DB error: $dberr - Error selecting db Unable to update member week stats.";
+	exit($msg);
 }
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));	
-
-// debug
-// $enterdateTS = "2014-10-15";	
 
 //
 // get total weeks to date
@@ -87,7 +104,8 @@ if (!$sql_result)
     $log->writeLog("SQL: $sql");
 
     $status = -200;
-    $msgtext = "System Error: $sqlerr";
+    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - total weeks.<br /> SQL: $sql";
+	exit($msg);
 }	
 
 $r = mysql_fetch_assoc($sql_result);
@@ -106,15 +124,24 @@ if (!$sql_result_prime)
     $log->writeLog("SQL: $sql");
 
     $status = -100;
-    $msgtext = "System Error: $sqlerr";
+    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats.<br /> SQL: $sql";
+	exit($msg);
 }
 
 //
 // loop through all members
 //
+
+//
+// display variables
+//
+$membercount = 0;
+
 while($row = mysql_fetch_assoc($sql_result_prime)) 
 {
-	// print_r($row['id']);
+
+	// count members
+	$membercount = $membercount + 1;
 
 	//
 	// reset values
@@ -164,7 +191,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		WHERE (G.season = '$season' AND G.week = $week)  
 		AND G.gametypeid ='$gametypeid'
 		AND MP.memberid = $memberid 
-	    AND NOT (G.hometeamscore = G.awayteamscore = 0 AND G.hometeamscore = 0 AND G.awayteamscore = 0)
+	    AND NOT (G.hometeamscore = G.awayteamscore AND G.hometeamscore = 0 AND G.awayteamscore = 0)
 		ORDER BY G.gamedatetime";
 
 		$sql_result_week = @mysql_query($sql, $dbConn);
@@ -176,7 +203,8 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -200;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - count all.<br /> SQL: $sql";
+			exit($msg);
 		}	
 
 		//
@@ -234,7 +262,8 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 					break;	
 				
 				default:
-					die("Switch default seleted:$teamselected hometeamid:$hometeamid awayteamid:$awayteamid");
+					$msg = $msg . "Switch default seleted:$teamselected hometeamid:$hometeamid awayteamid:$awayteamid";
+					exit($msg);
 					break;
 			}  // end of switch
 			
@@ -252,7 +281,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		$p = ($wins + $tiesadjust) / $totalgames;
 		$percent = round($p, 3);
 
-		echo "Week totals memberid:$memberid</br>wins:$wins losses:$losses ties:$ties total:$totalgames percent:$percent week:$week</br>";	
+		$msg = $msg . "Week totals memberid:$memberid</br>wins:$wins losses:$losses ties:$ties total:$totalgames percent:$percent week:$week</br>";	
 		
 		// 
 		// if data is there update otherwise insert
@@ -269,7 +298,8 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -240;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member wek stats - count team id in stats table.<br />SQL: $sql";
+			exit($msg);
 		}	
 
 		$count = mysql_num_rows($sql_result_check_week);
@@ -292,7 +322,8 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			    $log->writeLog("SQL: $sql");
 
 			    $status = -250;
-			    $msgtext = "System Error: $sqlerr";
+			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats.<br />SQL: $sql";
+				exit($msg);
 			}	
 		}
 		else
@@ -313,7 +344,8 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			    $log->writeLog("SQL: $sql");
 
 			    $status = -260;
-			    $msgtext = "System Error: $sqlerr";
+			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert member week stats.<br />SQL: $sql";
+				exit($msg);
 			}
 		}  
 	} // end of outer week loop
@@ -344,9 +376,16 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 
 } // end of looping through members
 
+$msg = $msg . "Totals Members:$membercount. <br /> Buildmemberweekstats Finished.";
+
 //
 // close db connection
 //
 mysql_close($dbConn);
+
+//
+// pass back info
+//
+exit($msg);
 
 ?>

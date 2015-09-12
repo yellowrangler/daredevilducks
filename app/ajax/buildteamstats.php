@@ -2,28 +2,28 @@
 
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
-include_once ('../class/class.AccessLog.php');
-
-//
-// functions
-//
 
 //
 // get date time for this transaction
 //
 $datetime = date("Y-m-d H:i:s");
 
-// print_r($_POST);
-// die();
-
 // set variables
 $enterdate = $datetime;
 
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Build Team Stats tables started" );
+$msg = "Buildteamstats Started <br />";
+
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	$msg = "No season passed - builteamstats terminated";
+	exit($msg);
+}
+
+$msg = $msg . "Input variables: Season:$season<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -42,20 +42,20 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update team stats.");
+	$msg = $msg .  "DB error: $dberr - Error mysql connect. Unable to update team stats.";
+	$log->writeLog($msg);
 
-	$rv = "";
-	exit($rv);
+	exit($msg);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update team stats.");
+	$msg = $msg .  "DB error: $dberr - Error selecting db Unable to update team stats.";
+	$log->writeLog($msg);
 
-	$rv = "";
-	exit($rv);
+	exit($msg);
 }
 
 // create time stamp versions for insert to mysql
@@ -74,7 +74,9 @@ if (!$sql_result_prime)
     $log->writeLog("SQL: $sql");
 
     $status = -100;
-    $msgtext = "System Error: $sqlerr";
+    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats.<br /> SQL: $sql";
+
+    exit($msg);
 }
 
 //
@@ -85,11 +87,16 @@ $win = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-$season = 2015;
+
+//
+// display variables
+//
+$teamcount = 0;
 
 while($row = mysql_fetch_assoc($sql_result_prime)) {
 
-	// print_r($row['id']);
+	// count teams
+	$teamcount = $teamcount + 1;
 
 	$sql = "SELECT count(*) as gamesToPlay
 	from gamestbl g
@@ -111,7 +118,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	    $log->writeLog("SQL: $sql");
 
 	    $status = -200;
-	    $msgtext = "System Error: $sqlerr";
+        $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count all.<br /> SQL: $sql";
+
+	    exit($msg);
 	}	
 
 	$r = mysql_fetch_assoc($sql_result);
@@ -139,7 +148,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	    $log->writeLog("SQL: $sql");
 
 	    $status = -210;
-	    $msgtext = "System Error: $sqlerr";
+	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count wins.<br /> SQL: $sql";
+
+	    exit($msg);
 	}	
 
 	$r = mysql_fetch_assoc($sql_result);
@@ -167,7 +178,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	    $log->writeLog("SQL: $sql");
 
 	    $status = -220;
-	    $msgtext = "System Error: $sqlerr";
+	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count losses.<br /> SQL: $sql";
+
+	    exit($msg);
 	}	
 
 	$r = mysql_fetch_assoc($sql_result);
@@ -200,7 +213,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	    $log->writeLog("SQL: $sql");
 
 	    $status = -230;
-	    $msgtext = "System Error: $sqlerr";
+	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count ties.<br /> SQL: $sql";
+
+	    exit($msg);
 	}	
 
 	$r = mysql_fetch_assoc($sql_result);
@@ -231,7 +246,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	    $log->writeLog("SQL: $sql");
 
 	    $status = -240;
-	    $msgtext = "System Error: $sqlerr";
+	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count team id in stats table.<br /> SQL: $sql";
+
+	    exit($msg);
 	}	
 
 	$count = mysql_num_rows($sql_result);
@@ -253,7 +270,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -250;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr - Error doing update to db Unable to update team stats.<br /> SQL: $sql";
+
+		    exit($msg);
 		}	
 
 	}
@@ -275,14 +294,16 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -260;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr - Error doing update to db Unable to insert team stats.<br /> SQL: $sql";
+
+		    exit($msg);
 		}
 
 	}
 
 } // end of looping through teams
 
-
+$msg = $msg . "Totals Teams:$teamcount. <br /> Buildteamstats Finished.";
 //
 // close db connection
 //
@@ -291,6 +312,6 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-
+exit($msg);
 
 ?>

@@ -2,32 +2,11 @@
 
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
-include_once ('../class/class.AccessLog.php');
-
-//
-// functions
-//
 
 //
 // get date time for this transaction
 //
 $datetime = date("Y-m-d H:i:s");
-
-// print_r($_POST);
-// die();
-
-$unixTS = strtotime($datetime);
-$mysqlTS = date("Y-m-d", $unixTS);
-$weekTS = $mysqlTS;
-
-// debug
-// $weekTS = "2014-09-12";
-
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Member List request started" );
 
 //------------------------------------------------------
 // get admin user info
@@ -66,7 +45,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 // get nfl game type information
 //---------------------------------------------------------------
 $sql = "SELECT season, week from gameweekstbl 
-WHERE '$weekTS' >= weekstart AND '$weekTS' <= weekend";
+WWHERE weekstart <= now() AND weekend >= now()";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

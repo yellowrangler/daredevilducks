@@ -50,27 +50,27 @@
 	height: 480px;
 }
 
-.MemberWeeklyTableHdr {
-	width:65%;
-
-}
-
-.MemberWeeklyTableHdr th {
-	vertical-align: middle;
-	color: red;
-	padding:5px;
-}
-
 .MemberWeeklyTable {
-	border-spacing: 15px; 
+	padding-top:20px;
+	padding: 3px;  
+	width:90%;
 }
 
-.MemberWeeklyTable td {
-	padding:5px;
+.MemberWeeklyTable img {
+	padding:3px;
+}
+
+.MemberWeeklyTable th {
+	text-align: center; 
+	color: teal;
 }
 
 .leaderBoardTable  {
 	width: 100%; 
+}
+
+.leaderBoardTable img {
+	padding:3px;
 }
 
 .leaderBoardTable th {

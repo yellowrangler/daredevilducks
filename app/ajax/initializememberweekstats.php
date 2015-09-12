@@ -2,11 +2,6 @@
 
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
-include_once ('../class/class.AccessLog.php');
-
-//
-// functions
-//
 
 //
 // get date time for this transaction
@@ -16,10 +11,29 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $enterdate = $datetime;
 
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
+$msg = "Initializememberweekstats Started <br />";
+
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	$msg = $msg . "No season passed - Initializememberweekstats terminated";
+	exit($msg);
+}
+
+if (isset($_POST["weeksinseason"]))
+{
+	$weeksinseason = $_POST["weeksinseason"];
+}
+else
+{
+	$msg = $msg . "No weeksinseason passed - Initializememberweekstats terminated";
+	exit($msg);
+}
+
+$msg = $msg . "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -41,8 +55,8 @@ $ties = 0;
 $percentage = 0.0;
 $week = 0;
 $games = 0;
-$season = 2015;
-$gamesInRegularSeason = 17;
+// $season = 2015;
+// $weeksinseason = 17;
 
 //
 // connect to db
@@ -54,8 +68,8 @@ if (!$dbConn)
 	$dberr = mysql_error();
 	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to initialize member week stats.");
 
-	$rv = "";
-	exit($rv);
+	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to initialize member week stats.";
+	exit($msg);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
@@ -64,8 +78,8 @@ if (!mysql_select_db($DBschema, $dbConn))
 	$dberr = mysql_error();
 	$log->writeLog("DB error: $dberr - Error selecting db Unable to initialize member week stats.");
 
-	$rv = "";
-	exit($rv);
+	$msg = $msg . "DB error: $dberr - Error selecting db Unable to initialize member week stats.";
+	exit($msg);
 }
 
 // create time stamp versions for insert to mysql
@@ -87,16 +101,27 @@ if (!$sql_result_prime)
     $log->writeLog("SQL: $sql");
 
     $status = -100;
-    $msgtext = "System Error: $sqlerr";
+    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize member week stats.<br /> SQL: $sql";
+	exit($msg);
 }
 
+//
+// display variables
+//
+$membercount = 0;
+$memberinsertedcount = 0;
+
 while($row = mysql_fetch_assoc($sql_result_prime)) {
+
+	// count membercount
+	$membercount = $membercount + 1;
+
 	$memberid = $row[memberid];
 
 	//
 	// loop through all weeks
 	//
-	for ($week = 1; $week <= $gamesInRegularSeason; $week++)
+	for ($week = 1; $week <= $weeksinseason; $week++)
 	{
 		//---------------------------------------------------------------
 		// Get list of all dare devile ducks members
@@ -114,7 +139,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -110;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize member week stats.<br /> SQL: $sql";
+			exit($msg);
 		}
 
 		$num_rows = mysql_num_rows($sql_result_check);
@@ -133,17 +159,22 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			{
 			    $log = new ErrorLog("logs/");
 			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert home team week stats.");
+			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert member week stats.");
 			    $log->writeLog("SQL: $sql");
 
 			    $status = -260;
-			    $msgtext = "System Error: $sqlerr";
+			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize insert member week stats.<br /> SQL: $sql";
+				exit($msg);
 			}
+
+			$memberinsertedcount = $memberinsertedcount + 1;
 		}
 
 	}  // end of looping through weeks
 
 } // end of for looping through games
+
+$msg = $msg . "Totals Members:$membercount Members Weeks Inserted:$memberinsertedcount. <br /> Initializememberweekstats Finished.";
 
 //
 // close db connection
@@ -153,5 +184,5 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-
+exit($msg);
 ?>

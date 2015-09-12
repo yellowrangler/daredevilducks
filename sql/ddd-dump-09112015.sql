@@ -413,7 +413,7 @@ INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`
 INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (254,2014,17,254,'Dec 28','Sun',2,'4:25 pm',13,15,47,14,2,'2014-12-28 16:25:00','2015-09-07 13:54:41');
 INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (255,2014,17,255,'Dec 28','Sun',1,'4:25 pm',30,31,20,17,2,'2014-12-28 16:25:00','2015-09-07 13:54:41');
 INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (256,2014,17,256,'Dec 28','Sun',1,'4:25 pm',29,32,20,6,2,'2014-12-28 16:25:00','2015-09-07 13:54:41');
-INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (513,2015,1,1,'Sep 10','Thu',3,'8:30 pm',4,6,0,0,2,'2015-09-10 20:30:00','2015-09-08 18:56:48');
+INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (513,2015,1,1,'Sep 10','Thu',3,'8:30 pm',4,6,28,21,2,'2015-09-10 20:30:00','2015-09-11 04:22:28');
 INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (514,2015,1,2,'Sep 13','Sun',1,'1:00 pm',23,24,0,0,2,'2015-09-13 13:00:00','2015-09-08 19:00:38');
 INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (515,2015,1,3,'Sep 13','Sun',2,'1:00 pm',10,16,0,0,2,'2015-09-13 13:00:00','2015-09-08 19:01:29');
 INSERT INTO `gamestbl` (`id`, `season`, `week`, `gamenbr`, `gamedate`, `gameday`, `networkid`, `gametime`, `hometeamid`, `awayteamid`, `hometeamscore`, `awayteamscore`, `gametypeid`, `gamedatetime`, `enterdate`) VALUES (516,2015,1,4,'Sep 13','Sun',2,'1:00 pm',2,7,0,0,2,'2015-09-13 13:00:00','2015-09-08 19:01:44');
@@ -1907,16 +1907,9 @@ INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `te
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2068,2015,1,1,1,4,'2015-09-10 23:36:29');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2069,2015,1,6,1,4,'2015-09-10 23:36:31');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2102,2015,1,7,1,4,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2103,2015,1,7,1,4,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2104,2015,1,7,6,1,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2105,2015,1,7,6,1,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2106,2015,1,7,8,29,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2107,2015,1,7,5,12,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2108,2015,1,7,8,29,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2109,2015,1,7,3,10,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2110,2015,1,7,2,24,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2111,2015,1,7,5,12,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2112,2015,1,7,4,7,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2113,2015,1,7,7,25,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2114,2015,1,7,3,10,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2115,2015,1,7,9,31,'2015-09-11 00:50:40');
@@ -1926,18 +1919,9 @@ INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `te
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2119,2015,1,7,11,9,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2120,2015,1,7,4,7,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2121,2015,1,7,12,5,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2122,2015,1,7,14,19,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2123,2015,1,7,7,25,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2124,2015,1,7,15,17,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2125,2015,1,7,16,30,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2126,2015,1,7,9,31,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2127,2015,1,7,10,14,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2128,2015,1,7,13,8,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2129,2015,1,7,11,9,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2130,2015,1,7,12,5,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2131,2015,1,7,14,19,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2132,2015,1,7,15,17,'2015-09-11 00:50:40');
-INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2133,2015,1,7,16,30,'2015-09-11 00:50:40');
 INSERT INTO `memberpickstbl` (`id`, `season`, `week`, `memberid`, `gamenbr`, `teamid`, `enterdate`) VALUES (2134,2015,1,11,1,4,'2015-09-11 02:45:17');
 /*!40000 ALTER TABLE `memberpickstbl` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -3557,4 +3541,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-11  0:19:30
+-- Dump completed on 2015-09-11 13:24:59

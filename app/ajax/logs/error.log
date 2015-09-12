@@ -148,3 +148,326 @@ LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
 LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
 WHERE MS.season = 
 ORDER BY week ASC, screenname ASC
+2015-09-11 17:25:28 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(
+			 SET season='2015', week='1', 
+			 gamenbr='1', memberid='1', 
+			 teamid='' at line 2 - Error doing update to db Unable to add member game pick for ddd member 1.
+2015-09-11 17:25:28 : SQL: UPDATE memberpickstbl
+			(
+			 SET season='2015', week='1', 
+			 gamenbr='1', memberid='1', 
+			 teamid='4', enterdate='2015-09-11 17:25:28'
+			 )
+			 WHERE memberid = 1 AND season = 2015 AND week = 1 AND gamenbr = 1
+2015-09-11 17:27:31 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(
+			 SET season='2015', week='1', 
+			 gamenbr='1', memberid='1', 
+			 teamid='' at line 2 - Error doing update to db Unable to add member game pick for ddd member 1.
+2015-09-11 17:27:31 : SQL: UPDATE memberpickstbl
+			(
+			 SET season='2015', week='1', 
+			 gamenbr='1', memberid='1', 
+			 teamid='4', enterdate='2015-09-11 17:27:31'
+			 )
+			 WHERE memberid = 1 AND season = 2015 AND week = 1 AND gamenbr = 1
+2015-09-11 17:29:19 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(
+			 SET season='2015', week='1', 
+			 gamenbr='1', memberid='1', 
+			 teamid='' at line 2 - Error doing update to db Unable to add member game pick for ddd member 1.
+2015-09-11 17:29:19 : SQL: UPDATE memberpickstbl
+			(
+			 SET season='2015', week='1', 
+			 gamenbr='1', memberid='1', 
+			 teamid='4', enterdate='2015-09-11 17:29:19'
+			 )
+			 WHERE memberid = 1 AND season = 2015 AND week = 1 AND gamenbr = 1
+2015-09-11 23:21:24 : SQL error: Column 'week' in where clause is ambiguous - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:21:24 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season = 2015 AND week = 1
+ORDER BY screenname ASC
+2015-09-11 23:21:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:21:43 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND week = 
+ORDER BY screenname ASC
+2015-09-11 23:21:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:21:46 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND week = 
+ORDER BY screenname ASC
+2015-09-11 23:27:27 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:27:27 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND week = 
+ORDER BY screenname ASC
+2015-09-11 23:30:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:30:44 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:30:48 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:30:48 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:30:52 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:30:52 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:31:01 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:31:01 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:31:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:31:03 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:39:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:39:10 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:39:13 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:39:13 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-11 23:39:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-09-11 23:39:15 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY screenname ASC
+2015-09-12 01:20:22 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:20:22 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:20:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:20:35 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:21:19 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:21:19 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:21:28 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:21:28 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:21:38 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:21:38 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:27:08 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:27:08 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:27:39 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:27:39 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:28:16 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:28:16 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:39:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:39:04 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:39:17 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:39:17 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:40:31 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:40:31 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:51:30 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:51:30 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:54:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:54:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:54:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:54:51 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:55:08 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:55:08 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:58:12 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:58:12 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 01:59:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 01:59:37 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 02:49:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 02:49:51 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 02:49:56 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 02:49:56 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 02:52:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 02:52:46 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 02:59:40 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 02:59:40 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 02:59:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 02:59:51 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:00:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:00:03 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:06:40 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:06:40 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:06:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:06:43 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:07:16 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:07:16 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:08:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:08:04 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:08:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:08:44 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:09:27 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:09:27 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()

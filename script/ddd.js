@@ -26,3 +26,31 @@ function convertMySQLdate2mdy(mysqlDate)
 
 	return dateStr;
 }
+
+function getCurrentDateTimeStr()
+{
+	//
+	// get current date
+	//
+	var today = new Date();
+
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+
+	var ss = today.getSeconds();
+	var min = today.getMinutes();
+	var hh = today.getHours();
+
+	if(dd<10) {
+	    dd='0'+dd
+	} 
+
+	if(mm<10) {
+	    mm='0'+mm
+	} 
+
+	var todayStr = mm+dd+yyyy+hh+min+ss;
+
+	return todayStr;
+}

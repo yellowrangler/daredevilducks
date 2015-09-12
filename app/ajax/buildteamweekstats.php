@@ -2,28 +2,38 @@
 
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
-include_once ('../class/class.AccessLog.php');
-
-//
-// functions
-//
 
 //
 // get date time for this transaction
 //
 $datetime = date("Y-m-d H:i:s");
 
-// print_r($_POST);
-// die();
-
 // set variables
 $enterdate = $datetime;
 
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Build Team Stats tables started" );
+$msg = "Buildteamweekstats Started <br />";
+
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	$msg = $msg . "No season passed - Buildteamweekstats terminated";
+	exit($msg);
+}
+
+if (isset($_POST["weeksinseason"]))
+{
+	$weeksinseason = $_POST["weeksinseason"];
+}
+else
+{
+	$msg = $msg . "No weeksinseason passed - Buildteamweekstats terminated";
+	exit($msg);
+}
+
+$msg = $msg . "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -42,8 +52,8 @@ $win = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-$season = 2015;
-$weeksInRegularSeason = 17;
+// $season = 2015;
+// $weeksinseason = 17;
 
 //
 // connect to db
@@ -55,8 +65,8 @@ if (!$dbConn)
 	$dberr = mysql_error();
 	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update team week stats.");
 
-	$rv = "";
-	exit($rv);
+	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to update team week stats.";
+	exit($msg);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
@@ -65,15 +75,12 @@ if (!mysql_select_db($DBschema, $dbConn))
 	$dberr = mysql_error();
 	$log->writeLog("DB error: $dberr - Error selecting db Unable to update team week stats.");
 
-	$rv = "";
-	exit($rv);
+	$msg = $msg . "DB error: $dberr - Error selecting db Unable to update team week stats.";
+	exit($msg);
 }
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));	
-
-// debug
-// $enterdateTS = "2014-10-15";	
 
 //
 // get total weeks to date
@@ -91,7 +98,8 @@ if (!$sql_result)
     $log->writeLog("SQL: $sql");
 
     $status = -200;
-    $msgtext = "System Error: $sqlerr";
+    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total weeks. <br /> $sqlerr <br /> SQL: $sql";
+    exit($msg);
 }	
 
 $r = mysql_fetch_assoc($sql_result);
@@ -110,14 +118,22 @@ if (!$sql_result_prime)
     $log->writeLog("SQL: $sql");
 
     $status = -100;
-    $msgtext = "System Error: $sqlerr";
+    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update team week stats. <br /> SQL: $sql";
+    exit($msg);
 }
+
+//
+// display variables
+//
+$teamcount = 0;
 
 //
 // loop through all teams
 //
 while($row = mysql_fetch_assoc($sql_result_prime)) {
-	// print_r($row['id']);
+
+	// count teams
+	$teamcount = $teamcount + 1;
 
 	//
 	// reset values
@@ -153,7 +169,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -200;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total games. <br /> $sqlerr <br /> SQL: $sql";
+    		exit($msg);
 		}	
 
 		$r = mysql_fetch_assoc($sql_r);
@@ -178,7 +195,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -200;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total wins. <br /> $sqlerr <br /> SQL: $sql";
+    		exit($msg);
 		}	
 
 		$r = mysql_fetch_assoc($sql_r);
@@ -203,7 +221,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -200;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total losses. <br /> $sqlerr <br /> SQL: $sql";
+    		exit($msg);
 		}	
 
 		$r = mysql_fetch_assoc($sql_r);
@@ -232,7 +251,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -200;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total ties. <br /> $sqlerr <br /> SQL: $sql";
+    		exit($msg);
 		}	
 
 		$r = mysql_fetch_assoc($sql_r);
@@ -262,7 +282,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -250;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats. <br /> $sqlerr <br /> SQL: $sql";
+    		exit($msg);
 		}
 
 	}  // end of for weeks
@@ -271,7 +292,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	// loop through rest of weeks
 	//
 	$start = $week;
-	for ($week = $start; $week <= $weeksInRegularSeason; $week++)
+	for ($week = $start; $week <= $weeksinseason; $week++)
 	{
 		// 
 		// do update
@@ -291,12 +312,15 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -27750;
-		    $msgtext = "System Error: $sqlerr";
+		    $msg = $msg . "System Error: $sqlerr <br /> Error doing update extending to db Unable to update team week stats . <br /> $sqlerr <br /> SQL: $sql";
+    		exit($msg);
 		}
 
 	}
 
 } // end of looping through teams
+
+$msg = $msg . "Totals Teams:$teamcount. <br /> Buildteamweekstats Finished.";
 
 //
 // close db connection
@@ -306,6 +330,6 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-
+exit($msg);
 
 ?>

@@ -2,27 +2,19 @@
 
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
-include_once ('../class/class.AccessLog.php');
 
 //
 // get post variables
 //
 $season = $_POST['season'];
-// $season = 2014;
+$week = $_POST['week'];
+
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");
 
-// print_r($_POST);
-// die();
-
 // set variables
 $enterdate = $datetime;
-
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
 
 //------------------------------------------------------
 // get admin user info
@@ -72,8 +64,8 @@ $sql = "SELECT M.screenname as screenname,
 FROM membertbl M
 LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
 LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
-WHERE MS.season = $season
-ORDER BY week ASC, screenname ASC";
+WHERE MS.season = $season AND MS.week = $week
+ORDER BY screenname ASC";
 
 // echo $sql;
 

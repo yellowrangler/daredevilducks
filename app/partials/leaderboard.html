@@ -38,10 +38,10 @@
 				<table class="leaderBoardTable" >
 					<tr>
 						<th>Nbr</th>
-						<th>Leader</th>				
-						<th>Wins</th>
-						<th>Losses</th>
-						<th>Ties</th>
+						<th colspan="2">Leader</th>				
+						<th>W -</th>
+						<th>L -</th>
+						<th>T</th>
 						<th>Totals</th>
 						<th>Percent</th>				
 					</tr>
@@ -49,11 +49,13 @@
 					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
 						<td class="center-column-text">{{memberseasonpercentstat.position}}</td>
 
-						<td class="left-column-text"><img style="height:40px;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"> {{memberseasonpercentstat.screenname}}</td>
+						<td class="left-column-text"><img style="height:70px;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
 
-						<td  class="center-column-text">{{memberseasonpercentstat.wins}}</td>
+						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
+
+						<td  class="center-column-text">{{memberseasonpercentstat.wins}} -</td>
 						
-						<td  class="center-column-text">{{memberseasonpercentstat.losses}}</td>
+						<td  class="center-column-text">{{memberseasonpercentstat.losses}} -</td>
 
 						<td class="center-column-text">{{memberseasonpercentstat.ties}}</td>
 
@@ -89,10 +91,10 @@
 				<table class="leaderBoardTable" >
 					<tr>
 						<th>Nbr</th>
-						<th>Leader</th>				
-						<th>Wins</th>
-						<th>Losses</th>
-						<th>Ties</th>
+						<th colspan="2">Leader</th>				
+						<th>W -</th>
+						<th>L -</th>
+						<th>T</th>
 						<th>Totals</th>
 						<th>Percent</th>				
 					</tr>
@@ -100,11 +102,13 @@
 					<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
 						<td class="center-column-text">{{memberseasonwinstats.position}}</td>
 
-						<td class="left-column-text"><img style="height:40px;" ng-show="memberseasonwinstats.memberavatar != ''" ng-src="img/avatars/{{memberseasonwinstats.memberavatar}}"> {{memberseasonwinstats.screenname}}</td>
+						<td class="left-column-text"><img style="height:70px;" ng-show="memberseasonwinstats.memberavatar != ''" ng-src="img/avatars/{{memberseasonwinstats.memberavatar}}"></td>
 
-						<td  class="center-column-text">{{memberseasonwinstats.wins}}</td>
+						<td class="left-column-text">{{memberseasonwinstats.screenname}}</td>
+
+						<td  class="center-column-text">{{memberseasonwinstats.wins}} -</td>
 						
-						<td  class="center-column-text">{{memberseasonwinstats.losses}}</td>
+						<td  class="center-column-text">{{memberseasonwinstats.losses}} -</td>
 
 						<td class="center-column-text">{{memberseasonwinstats.ties}}</td>
 

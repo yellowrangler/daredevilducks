@@ -220,9 +220,20 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
         membersFactory.addMemberGameTeamPick(data)
             .success( function(data) {
-                $('#gamesSavedDialogModalTitle').text("Picks Saved");
-                $('#gamesSavedDialogModalLabelBody').text($scope.msg);
-                $('#gamesSavedDialogModal').modal();
+                if (data == "ok")
+                {
+                    $('#gamesSavedDialogModalTitle').text("Picks Saved");
+                    $('#gamesSavedDialogModalLabelBody').text($scope.msg);
+                    $('#gamesSavedDialogModal').modal();
+                }
+                else
+                {
+                    $('#gamesSavedDialogModalTitle').text("Picks Error");
+                    $('#gamesSavedDialogModalLabelBody').text(data);
+                    $('#gamesSavedDialogModal').modal();
+                }
+
+                    
 
                 // alert(msg+$scope.msg);
             })
@@ -249,7 +260,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             .success( function(data) {
                 $scope.weeks = data; 
 
-                nflteamsFactory.getSeasonCurrentWeek()
+                nflteamsFactory.getCurrentSeasonWeek()
                     .success( function(data) {
                         $scope.current.season = data.season; 
                         $scope.current.week = data.week;
@@ -333,7 +344,7 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
                 .success( function(data) {
                     $scope.weeks = data; 
 
-                nflteamsFactory.getSeasonCurrentWeek()
+                nflteamsFactory.getCurrentSeasonWeek()
                     .success( function(data) {
                         $scope.current.season = data.season; 
                         $scope.current.week = data.week;  
@@ -527,7 +538,9 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 
     function selectChange()
     {
-        nflteamsFactory.getMemberWeekStats($scope.current.season)
+        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
+
+        nflteamsFactory.getMemberWeekStats(requestStr)
             .success( function(data) {
                 $scope.memberweekstats = data; 
 
@@ -540,27 +553,44 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
     init();
     function init() {
         $scope.current.memberlogin = loginService.getLogin();
-        $scope.current.season = nflTeamsService.getCurrentSeason();
-
-        nflteamsFactory.getNFLTeamseasons()
+        nflteamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                nflTeamsService.setNFLTeamseasons(data); 
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
 
-                $scope.seasons = nflTeamsService.getNFLTeamseasons();
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);  
 
-                nflteamsFactory.getMemberWeekStats($scope.current.season)
+                nflteamsFactory.getNFLTeamseasons()
                     .success( function(data) {
-                        $scope.memberweekstats = data; 
+                        $scope.seasons = data; 
+
+                        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                            .success( function(data) {
+                                $scope.weeks = data;
+
+                                var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
+                                nflteamsFactory.getMemberWeekStats(requestStr)
+                                    .success( function(data) {
+                                        $scope.memberweekstats = data; 
+
+                                    })
+                                    .error( function(edata) {
+                                        alert(edata);
+                                    });  
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            }); 
 
                     })
                     .error( function(edata) {
                         alert(edata);
-                    });  
+                    });    
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
-                    
+            });              
     }
 
     $scope.getMemberWeekStats = function() {
@@ -898,6 +928,15 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
 
 }
 
+teamdiscoveryController = function ($scope, $http, $log, $location) {
+
+    init();
+    function init() {
+
+  }
+
+}
+
 controllers.gameinfoController = function ($scope, $http, $log, $location, uiGridConstants, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
@@ -1093,12 +1132,151 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
 }
 
-controllers.weeklybuildsController = function ($scope, $http, $location, nflTeamsService) {
+controllers.weeklybuildsController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, scriptsFactory) {
+    $scope.current = {};
+
+    function initializeTeamWeekStats() 
+    {
+        var scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+
+        scriptsFactory.initializeTeamWeekStats(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function initializeMemberWeekStats() 
+    {
+        var scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+
+        scriptsFactory.initializeMemberWeekStats(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function buildTeamStats() 
+    {
+        var scriptData = "season="+$scope.current.season;
+
+        scriptsFactory.buildTeamStats(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function buildTeamWeekStats() 
+    {
+        var scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+
+        scriptsFactory.buildTeamWeekStats(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function buildMemberStats() 
+    {
+        var scriptData = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+
+        scriptsFactory.buildMemberStats(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function buildMemberWeekStats() 
+    {
+        var scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason+"&gametypeid="+$scope.current.gametypeid;
+
+        scriptsFactory.buildMemberWeekStats(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function buildMySqlDump() 
+    {
+        var scriptData = "dumpdatabaselabel="+$scope.current.dumpdatabaselabel;
+
+        scriptsFactory.buildMySqlDump(scriptData)
+        .success( function(data) {
+            $('#weeklyBuildsDialogModalBody').html(data);
+            $('#weeklyBuildsDialogModal').modal();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
 
     init();
     function init() {
-        
+        $scope.current.gametypeid = 2;
+        $scope.current.weeksinseason = 17;
+        $scope.current.season = nflTeamsService.getCurrentSeason();   
+        $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();     
+
+        nflteamsFactory.getNFLGametypes()
+            .success( function(data) {
+                $scope.gametypes = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+
     };
+
+    $scope.initializeTeamWeekStats = function () {
+        initializeTeamWeekStats();
+    }
+
+    $scope.initializeMemberWeekStats = function () {
+        initializeMemberWeekStats();
+    }
+
+    $scope.buildTeamStats = function () {
+        buildTeamStats();
+    }
+
+    $scope.buildTeamWeekStats = function () {
+        buildTeamWeekStats();
+    }
+
+    $scope.buildMemberStats = function () {
+        buildMemberStats();
+    }
+
+    $scope.buildMemberWeekStats = function () {
+        buildMemberWeekStats();
+    }
+
+    $scope.buildMySqlDump = function () {
+        buildMySqlDump();
+    }
 }
 
 dddApp.controller(controllers); 
