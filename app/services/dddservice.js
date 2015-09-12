@@ -28,12 +28,18 @@ dddApp.service('nflTeamsService', function () {
     //-------------------------------------- 
     // teams services
     //-------------------------------------- 
+    var dataKeyTeams = "nflteams";
+    var dataKeySeasons = "nflseasons";
+    var dataKeyWeeks = "nflweeks";  
+    var dataKeyGameTypes = "gametypes";  
+    var dataKeyNetworks = "nflnetworks";         
 
     // 
     // set teams
     //
     this.setNFLTeams = function(json) {
-        nflTeams = json;
+
+        this.addLocalNFLdata(json, dataKeyTeams, "json");
 
         return;
     }
@@ -42,96 +48,49 @@ dddApp.service('nflTeamsService', function () {
     // get teams
     //
     this.getNFLTeams = function() {
-        return nflTeams;
+
+        var nflteams = this.getLocalNFLdata(dataKeyTeams, "json");
+
+        return nflteams;
     }
 
     // 
-    // teams object
+    // remove teams
     //
-    var nflTeams = [
-        {  }
-    ];
-
-    //-------------------------------------- 
-    // team stats services
-    //-------------------------------------- 
-
-    // 
-    // set team stats
-    //
-    this.setNFLTeamstats = function(json) {
-        nflTeamstats = json;
-
-        return;
+    this.removeNFLTeams = function() {
+        var nflteams = this.removeLocalNFLdata(dataKeyTeams);
     }
-
-    // 
-    // get team stats
-    //
-    this.getNFLTeamstats = function() {
-        return nflTeamstats;
-    }
-
-    // 
-    // team stats object
-    //
-    var nflTeamstats = [
-        {  }
-    ];
 
     //-------------------------------------- 
     // team season services
     //-------------------------------------- 
 
     // 
-    // set team season
+    // set team seasons
     //
     this.setNFLTeamseasons = function(json) {
-        nflTeamseasons = json;
+
+        this.addLocalNFLdata(json, dataKeySeasons, "json");
 
         return;
     }
 
     // 
-    // get team season
+    // remove team seasons
     //
     this.getNFLTeamseasons = function() {
-        return nflTeamseasons;
+        
+        var nflseasons = this.getLocalNFLdata(dataKeySeasons, "json");
+
+        return nflseasons;
     }
 
     // 
-    // team season object
+    // remove team seasons
     //
-    var nflTeamseasons = [
-        {  }
-    ];
-
-    //-------------------------------------- 
-    // team week services
-    //-------------------------------------- 
-
-    // 
-    // set team week
-    //
-    this.setNFLTeamseasonweeks = function(json) {
-        nflTeamseasonweeks = json;
-
-        return;
+    this.removeNFLTeamseasons = function() {
+        var nflseasons = this.removeLocalNFLdata(dataKeySeasons);
     }
-
-    // 
-    // get team week
-    //
-    this.getNFLTeamseasonweeks = function() {
-        return nflTeamseasonweeks;
-    }
-
-    // 
-    // team week object
-    //
-    var nflTeamseasonweeks = [
-        {  }
-    ];
 
     //-------------------------------------- 
     // game types services
@@ -141,7 +100,7 @@ dddApp.service('nflTeamsService', function () {
     // set game types
     //
     this.setNFLGametypes = function(json) {
-        nflGametypes = json;
+        this.addLocalNFLdata(json, dataKeyGameTypes, "json");
 
         return;
     }
@@ -150,15 +109,46 @@ dddApp.service('nflTeamsService', function () {
     // get game types
     //
     this.getNFLGametypes = function() {
+        var nflGametypes = this.getLocalNFLdata(dataKeyGameTypes, "json");
+
         return nflGametypes;
     }
 
     // 
-    // game type object
+    // remove game types
     //
-    var nflGametypes = [
-        {  }
-    ];
+    this.removeNFLTeamseasons = function() {
+        var nflGametypes = this.removeLocalNFLdata(dataKeyGameTypes);
+    }
+
+    //-------------------------------------- 
+    // nfl networks services
+    //-------------------------------------- 
+
+    // 
+    // set nfl networks
+    //
+    this.setNFLnetworks = function(json) {
+        this.addLocalNFLdata(json, dataKeyNetworks, "json");
+
+        return;
+    }
+
+    // 
+    // get nfl networks
+    //
+    this.getNFLnetworks = function() {
+        var nflnetworks = this.getLocalNFLdata(dataKeyNetworks, "json");
+
+        return nflnetworks;
+    }
+
+    // 
+    // remove nfl networks
+    //
+    this.removeNFLnetworks = function() {
+        var nflnetworks = this.removeLocalNFLdata(dataKeyNetworks);
+    }
 
     //---------------------------------------------------
     // selected choice values
@@ -241,6 +231,50 @@ dddApp.service('nflTeamsService', function () {
 
     this.removeCurrentWeek = function () {
         localStorage.removeItem("dddCurrentWeek");
+    }
+
+    //---------------------------------------------------
+    // nfl team service local data functions
+    //---------------------------------------------------
+    this.getLocalNFLdata = function(dataKey, dataType) {
+        var dataStr = this.retreiveLocalNFLdata(dataKey);
+
+        if (dataType == "json")
+        {
+            dataStr = JSON.parse(dataStr);
+        }
+
+        return dataStr;
+    }
+
+    this.addLocalNFLdata = function(dataAddStr, dataKey, dataType) {
+        var dataStr = "";
+
+        if (dataType == "json")
+        {
+            dataStr = JSON.stringify(dataAddStr);
+        }
+        else
+        {
+            dataStr = dataAddStr;
+        } 
+
+        this.saveLocalNFLdata(dataStr, dataKey);
+    }
+
+    this.saveLocalNFLdata = function (dataAddStr, dataKey) {
+        localStorage.removeItem(dataKey);
+        localStorage.setItem(dataKey, dataAddStr);
+    }
+
+    this.retreiveLocalNFLdata = function (dataKey) {
+        var dataAddStr = localStorage.getItem(dataKey);
+
+        return dataAddStr;
+    }
+
+    this.removeLocalNFLdata = function (dataKey) {
+        localStorage.removeItem(dataKey);
     }
 
 });

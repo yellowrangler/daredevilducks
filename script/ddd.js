@@ -1,6 +1,18 @@
 $(document).ready( function(){
-    
+
+	$( window ).resize(function() {
+	  setviewpadding()
+	});
+
+	setviewpadding();
 });  
+
+function setviewpadding()
+{
+	var viewoffset = $("#navbarCollapse").height() + 10;
+
+  $("#ddd-view").css("padding-top", viewoffset);
+}
 
 function convertMySQLdate2mdy(mysqlDate)
 {

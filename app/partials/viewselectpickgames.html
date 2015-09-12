@@ -28,12 +28,15 @@
 		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
 		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
 		            </select>
-				</div> <!-- end of form-group -->   
+				</div> <!-- end of form-group --> 
 
-				<div style="float:right; padding-right:45px; display:inline;" class="form-group horizontalFieldOffset">
-		            <span style="padding:5px;" class="teamSelected">Selected</span>
-		            <span style="width:15px;">&nbsp;</span>
-		            <span style="padding:5px;" class="teamWon">Winner</span>
+				<div style="padding-left:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
+		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+				</div> <!-- end of form-group -->     
+
+				<div style="float:right; padding-right:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
+		            <div style="width:115px;text-align: enter;padding:5px;" class="teamSelected">Player Selected</div>
+		            <div style="width:115px;text-align:center;padding:5px;" class="teamWon">Winner</div>
 				</div> <!-- end of form-group -->   
 
 			</div> <!-- end of panel body -->				

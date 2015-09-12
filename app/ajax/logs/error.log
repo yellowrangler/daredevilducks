@@ -471,3 +471,300 @@ WWHERE weekstart <= now() AND weekend >= now()
 2015-09-12 03:09:27 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
 2015-09-12 03:09:27 : SQL: SELECT season, week from gameweekstbl 
 WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:37:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:37:20 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:37:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:37:35 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:40:26 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:40:26 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:41:54 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:41:54 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:41:59 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:41:59 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:42:16 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:42:16 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:44:28 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:44:28 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:46:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:46:43 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 03:54:30 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 03:54:30 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 07:36:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 07:36:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 10:24:09 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 10:24:09 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 10:33:55 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 10:33:55 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:34:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:34:20 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:39:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:39:37 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:41:54 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:41:54 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:45:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:45:37 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:47:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:47:03 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:47:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:47:04 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 12:47:05 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 12:47:05 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 14:23:06 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 14:23:06 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 16:32:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 16:32:46 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 16:49:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 16:49:36 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 16:50:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 16:50:04 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 16:54:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 16:54:36 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 17:00:26 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 17:00:26 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 17:02:23 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 17:02:23 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 17:13:25 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 17:13:25 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 17:17:21 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 17:17:21 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 17:59:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 17:59:20 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:03:24 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:03:24 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:14:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:14:47 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:14:52 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:14:52 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:14:57 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:14:57 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:16:11 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:16:11 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:29:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:29:51 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:30:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:30:49 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:48:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:48:44 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:48:50 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:48:50 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:48:54 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:48:54 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:49:21 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:49:21 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:54:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:54:33 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 18:57:09 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 18:57:09 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:05:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:05:15 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:15:38 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:15:38 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:37:55 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:37:55 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:41:12 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:41:12 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:43:22 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:43:22 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:43:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:43:42 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:43:59 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:43:59 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:45:07 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:45:07 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:49:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:49:49 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:49:52 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:49:52 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 19:52:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 19:52:51 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:01:55 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:01:55 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:03:25 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:03:25 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:03:30 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:03:30 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:04:12 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:04:12 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:05:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:05:47 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:06:13 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:06:13 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:06:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:06:33 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:06:48 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:06:48 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:07:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:07:36 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:07:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:07:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:07:53 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:07:53 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:08:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:08:10 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:11:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:11:03 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:11:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:11:15 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:11:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:11:36 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:12:17 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:12:17 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:14:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:14:46 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:15:06 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:15:06 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:15:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:15:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:16:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:16:15 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:16:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:16:43 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:16:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:16:47 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:17:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:17:37 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:17:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:17:42 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:22:02 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:22:02 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:22:09 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:22:09 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:22:48 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:22:48 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:23:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:23:33 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:24:07 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:24:07 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:24:28 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:24:28 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:24:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:24:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:25:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:25:20 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:33:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:33:36 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:40:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:40:47 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 20:43:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 20:43:10 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 21:00:17 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 21:00:17 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 21:01:38 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 21:01:38 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 21:01:50 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 21:01:50 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 21:21:06 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 21:21:06 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 21:34:21 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 21:34:21 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 22:38:22 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 22:38:22 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 22:48:01 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 22:48:01 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 22:54:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 22:54:15 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 22:55:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 22:55:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 23:07:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 23:07:45 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
+2015-09-12 23:10:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
+2015-09-12 23:10:34 : SQL: SELECT season, week from gameweekstbl 
+WWHERE weekstart <= now() AND weekend >= now()
