@@ -122,6 +122,7 @@ $sql = "SELECT
   G.gamedate as gamedate,
   G.gametime as gametime,
   G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
   G.networkid as networkid,
   GN.network as network,
   GN.networkiconname as networkiconname,
@@ -149,7 +150,11 @@ $sql = "SELECT
   GT.gametype as gametype,
   MP.teamid as teamselected,
   GW.weekstart as weekstart,
-  GW.weekend as weekend
+  GW.weekend as weekend,
+  CASE 
+  WHEN G.gamedatetime < NOW() THEN 'expired'
+  ELSE 'ok'
+  END AS gamestatus
 FROM gamestbl G 
 LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
 LEFT JOIN teamstbl TH ON TH.id = G.hometeamid

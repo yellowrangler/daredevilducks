@@ -301,7 +301,7 @@ dddApp.service('loginService', function () {
             if (action)
             {
                 this.removeLogin();
-                $("#"+labelid).text(logintext.login.text);
+                $("#"+labelid).html(logintext.login.text);
                 location = "/home";
             }
             else

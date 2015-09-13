@@ -67,7 +67,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     $scope.loginlogoff = function () {
         var route = loginService.setLoginLogoffLabel("menubarlogin",1);
         getAvatar();
-        loginService.setAvatarLabel("menubaravatar",1);
+        loginService.setAvatarLabel("menubaravr",0);
 
         checkRole();
         if (route != "")
@@ -167,78 +167,26 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
-    //
-    // this returnd false if admin true if other
-    // for ng-disbled
-    //
-    function checkRole()
-    {
-        var role = loginService.getMemberRole();
-        var status = "";
-
-        if (role == "admin")
-        {
-            status = false;
-        }
-        else
-        {
-            status = true;
-        }  
-
-        return status;
-    }
-
-    //
-    // this returnd false always if admin 
-    // otherwise if expired true other false
-    // for ng-disbled
-    //
-    function check4ExpiredGameSelections(gamestatus)
-    {
-        var role = loginService.getMemberRole();
-        var status = "";
-
-        if (role == "admin")
-        {
-            status = false;
-        }
-        else
-        {
-            if (gamestatus == "expired")
-            {
-                status = true;
-            }
-            else
-            {
-                status = false;
-            }
-        }  
-
-        return status;
-
-    }
-
     function selectChange()
     {
-        var memberid = "memberid="+$scope.current.memberid;
+        var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
 
-        membersFactory.getMember(memberid)
+        nflteamsFactory.getNFLGamesWeekMemberTeams(data)
             .success( function(data) {
-                $scope.current.memberavatar = data.avatar;
-
-                var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-
-                nflteamsFactory.getNFLGamesWeekMemberTeams(data)
-                    .success( function(data) {
-                        $scope.games = data; 
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    }); 
+                $scope.games = data; 
             })
             .error( function(edata) {
                 alert(edata);
-            });
+            });  
+
+    }
+
+    function check4ExpiredGameSelections(gamestatus)
+    {
+        var i = 1;
+
+        return false;
+
     }
 
     function saveGames() {
@@ -292,6 +240,10 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                     $('#gamesSavedDialogModalLabelBody').text(data);
                     $('#gamesSavedDialogModal').modal();
                 }
+
+                    
+
+                // alert(msg+$scope.msg);
             })
             .error( function(edata) {
                 alert(edata);
@@ -304,80 +256,78 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     function init() {
         $scope.current.memberlogin = loginService.getLogin();
 
-        membersFactory.getMembers()
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+        var q = "memberid="+$scope.current.memberid;
+        membersFactory.getMember(q)
+        .success( function(data) {
+            $scope.member = data; 
+
+            $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+            nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
             .success( function(data) {
-                $scope.members = data; 
-            
-                $scope.seasons = nflTeamsService.getNFLTeamseasons();
+                $scope.weeks = data; 
 
-                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
-                .success( function(data) {
-                    $scope.weeks = data; 
+                nflteamsFactory.getCurrentSeasonWeek()
+                    .success( function(data) {
+                        $scope.current.season = data.season; 
+                        $scope.current.week = data.week;
 
-                    nflteamsFactory.getCurrentSeasonWeek()
-                        .success( function(data) {
-                            $scope.current.season = data.season; 
-                            $scope.current.week = data.week;
+                        nflTeamsService.addCurrentWeek($scope.current.week);
+                        nflTeamsService.addCurrentSeason($scope.current.season);
 
-                            nflTeamsService.addCurrentWeek($scope.current.week);
-                            nflTeamsService.addCurrentSeason($scope.current.season);
+                        var memberid = "memberid="+$scope.current.memberid;
+                        membersFactory.getMember(memberid)
+                            .success( function(data) {
+                                $scope.current.memberavatar = data.avatar;  
 
-                            $scope.current.memberid = $scope.current.memberlogin.memberid;
-                            var memberid = "memberid="+$scope.current.memberid;
-                            membersFactory.getMember(memberid)
-                                .success( function(data) {
-                                    $scope.current.memberavatar = data.avatar;  
-
-                                    var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-                                    nflteamsFactory.getNFLGamesWeekMemberTeams(q)
-                                        .success( function(data) {
-                                            $scope.games = data; 
-                                        })
-                                        .error( function(edata) {
-                                            alert(edata);
-                                        });      
-                                })
-                                .error( function(edata) {
-                                    alert(edata);
-                                });                   
-                        })
-                        .error( function(edata) {
-                            alert(edata);
-                        }); 
-                })
-                .error( function(edata) {
-                    alert(edata);
-                });
+                                var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                                nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                                    .success( function(data) {
+                                        $scope.games = data; 
+                                    })
+                                    .error( function(edata) {
+                                        alert(edata);
+                                    });      
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });                   
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    }); 
             })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        })
         .error( function(edata) {
             alert(edata);
-        }); 
-     
+        });  
+
+        membersFactory.getMembers()
+            .success( function(data) {
+                
+            })
+            .error( function(edata) {
+                alert(edata);
+            });      
     };
 
-    $scope.check4ExpiredGameSelections = function(data) 
-    {   
-        var status = "";
-
-        status = check4ExpiredGameSelections(data);
-
-        return status;
+    $scope.check4ExpiredGameSelections = function() 
+    {
+        check4ExpiredGameSelections();
     }
 
-    $scope.checkRole = function() 
-    {   
-        var status = "";
-
-        status = checkRole();
-
-        return status;
-    }
-
-    $scope.getMemberWeekPicks = function() {
+    $scope.getMemberWeekPicks = function() 
+    {
         selectChange();
     }
 
-    $scope.saveGames = function() {
+    $scope.saveGames = function() 
+    {
         saveGames();
     }
 }
@@ -389,24 +339,23 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
     function selectChange()
     {
         var memberid = "memberid="+$scope.current.memberid;
-        
         membersFactory.getMember(memberid)
             .success( function(data) {
                 $scope.current.memberavatar = data.avatar;
-
-                var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-
-                nflteamsFactory.getNFLGamesWeekMemberTeams(data)
-                    .success( function(data) {
-                        $scope.games = data; 
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    }); 
             })
             .error( function(edata) {
                 alert(edata);
             });
+        
+        var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+
+        nflteamsFactory.getNFLGamesWeekMemberTeams(data)
+            .success( function(data) {
+                $scope.games = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
     }
 
     init();
@@ -415,6 +364,7 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         if (!loggedIn)
             $location.path("#home");
         
+
         $scope.current.memberlogin = loginService.getLogin();
 
         membersFactory.getMembers()
@@ -1324,11 +1274,6 @@ controllers.weeklybuildsController = function ($scope, $http, $location, nflteam
     $scope.buildMySqlDump = function () {
         buildMySqlDump();
     }
-}
-
-controllers.sendplayeremailController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, scriptsFactory) {
-    $scope.current = {};
-
 }
 
 dddApp.controller(controllers); 

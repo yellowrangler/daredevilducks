@@ -11,8 +11,9 @@
 			<div class="panel-body">
 				<div class="form-group horizontalFieldOffset">
 					<label for="memberid" class="control-label">Player</label>
-					<input type="text" class="form-control" ng-model="member.screenname" id="screenname" readonly name="screenname" value="{{member.screenname}}">
-			        <input type="hidden" ng-model="current.memberid" value="{{current.memberid}}" id="memberid" name="memberid">
+			        <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
+			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+			        </select>
 				</div> <!-- end of form-group -->
 
 				<div class="form-group horizontalFieldOffset">
@@ -37,7 +38,7 @@
 	                <button  class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Picks</button>
 				</div> <!-- end of form-group --> 
 
-				<div style="float:right; padding-right:45px; padding-top:30px; display:inline;" class="form-group horizontalFieldOffset">
+				<div style="float:right; padding-right:45px; padding-top:30px;" class="form-group horizontalFieldOffset">
 		            <div style="width:115px;text-align:center;padding:5px;" class="teamWon">Winner</div>
 				</div> <!-- end of form-group -->      
 
@@ -70,7 +71,7 @@
 						</td>
 
 						<td class="center-column-text">
-						    <input ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' />
+						    <input ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
 						<td>
@@ -88,7 +89,7 @@
 
 
 						<td class="center-column-text">
-						    <input ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' />
+						    <input ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pick_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
 						<td>
@@ -99,9 +100,9 @@
 						<td class="center-column-text" ng-class="{{game.awayteamscore > game.hometeamscore}} ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
 
 						<td class="center-column-text">
-							   {{game.homewins}} -
-							   {{game.homelosses}} -
-							   {{game.hometies}}
+							   {{game.awaywins}} - 
+							   {{game.awaylosses}} -
+							   {{game.awayties}}
 						</td>
 					</tr>
 

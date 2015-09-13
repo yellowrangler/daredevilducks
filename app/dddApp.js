@@ -74,6 +74,12 @@ dddApp.config(function ($routeProvider) {
                 templateUrl: 'app/partials/addavatar.html'
             }) 
 
+       .when('/sendplayeremail',
+            {
+                controller: 'sendplayeremailController',
+                templateUrl: 'app/partials/sendplayeremail.html'
+            }) 
+
         .when('/updatemember',
             {
                 controller: 'updatememberController',

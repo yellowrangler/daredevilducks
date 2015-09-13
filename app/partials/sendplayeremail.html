@@ -3,7 +3,7 @@
 
 <div style="color:maroon;font-weight:600;padding-bottom:25px; " class="row">
   <div class="col-md-3">&nbsp;</div>
-  <div class="col-md-5"><h2>Login</h2></div>
+  <div class="col-md-5"><h2>Send Player eMail</h2></div>
   <div class="col-md-4">&nbsp;</div>
 </div> <!-- end of row -->
 
@@ -12,28 +12,24 @@
 
   <div class="col-md-5">
     <div style="padding-bottom:10px;">
-      <span style="padding-bottom:10px;font-size:14px; font-weight:800; color:grey;"> If you have forgotten your password send me an email and I will set it to your screen name. If you forgot you screen name, send me a new one. My contact information is displayed below.</span>
-    </div>
-
-    <div style="padding:15px;">&nbsp;</div>
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Dare Devil Ducks Login</h3>
+        <h3 class="panel-title">Srnd eMail</h3>
       </div>
       <div class="panel-body">
-        <form role="form" id="dddLoginForm" name="dddLoginForm">
+        <form role="form" id="dddeMailForm" name="dddeMailForm">
           <div class="form-group">
-            <label for="screenname" class="col-md-12 control-label">Screen Name</label>
+            <label for="screenname" class="col-md-12 control-label">From</label>
             <div class="col-md-12">
-                <input type="text" class="form-control" ng-model="login.screenname" id="screenname" name="screenname" placeholder="Your Screen Name">
+                <input type="text" class="form-control" ng-model="email.from" id="from" name="from" placeholder="">
             </div>
           </div> <!-- end of form-group -->
 
           <div style="padding:15px;">&nbsp;</div>
 
           <div class="form-group">
-            <label for="passwd" class="col-md-12 control-label">Password</label>
+            <label for="passwd" class="col-md-12 control-label">To</label>
             <div class="col-md-12">
                 <input type="password" class="form-control" ng-model="login.passwd" id="passwd" name="passwd">
             </div>

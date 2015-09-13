@@ -135,6 +135,15 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNow = function () {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnow.php",
+            // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
 
