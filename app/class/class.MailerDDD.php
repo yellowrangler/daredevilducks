@@ -2,9 +2,8 @@
 require_once "Mail.php";
 require_once "Mail/mime.php";
 
-include_once ('class.Log.php');
-include_once ('class.ErrorLog.php');
-include_once ('class.AccessLog.php');
+// ini_set('display_errors','on');
+// error_reporting(E_ALL);
 
 class MailerDDD
 {
@@ -18,12 +17,15 @@ class MailerDDD
     private $body;
 
     private $host = "smtp.gmail.com";   
-    // private $port = "465";
     private $port = "587";    
     private $username = "daredevilducks.xyz@gmail.com";
     private $password = "ddd-02653$";    
-    private $status = "";   
-    
+    private $msg = "";   
+    private $result = "";
+    private $logoimage = 'img/DonaldDuckFlying-small.png';
+    private $logoimagefullpath = "/var/www/html/daredevilducks/img/DonaldDuckFlying-small.png";
+    private $logoimagemimetype = "image/png";
+        
      
     private function setFrom($from)
     {
@@ -40,29 +42,27 @@ class MailerDDD
         $this->subject = $subject;
     }
 
-    private function setBody($body)
+    private function setMessage($msg)
     {
-        $this->body = $body;
+        $this->msg = $msg;
     }
 
-    private function setStatus($status)
+    private function setResult($result)
     {
-        $this->status = $status;
+        $this->result = $result;
     }
-   
     
     //-------------------------------------------------------------
     // Public 
     //-------------------------------------------------------------
     
     // Constructor    
-    public function __construct ($from, $to, $subject, $body)
+    public function __construct ($from, $to, $subject, $msg)
     {
         $this->setFrom($from);
         $this->setTo($to);
         $this->setSubject($subject);
-        $this->setBody($body);
-        // print_r($this);
+        $this->setMessage($msg);
     }
     
     public function sendMail()
@@ -82,33 +82,39 @@ class MailerDDD
                 'password' => $this->password
             ));
 
+        $mailbody = "<html>
+                    <body>
+                    <div style='display:block;' id='headerlogo'>
+                    <img style='float:left;' src='$this->logoimage' />
+                    <h2 style='float:left; padding-left:20px;'>Dare Devil Ducks Player Coorespondence</h2>
+                    </div>
+                    <div style='padding-top:75px;clear:all;' id='messagebody'>
+                    <div>$this->msg</div>
+                    </div>
+                    </body>
+                    </html>";
+
+        $mime = new Mail_mime();
+        $mime->setHTMLBody($mailbody);
+        $mime->addHTMLImage(file_get_contents($this->logoimagefullpath),$this->logoimagemimetype,$this->logoimage,false);
+        $body = $mime->get();
+        $mimeheaders = $mime->headers($headers);
+
         try {
-            $mail = $smtp->send($this->to, $headers, $this->body);
+
+            $mail = $smtp->send($this->to, $mimeheaders, $body);
          
             if (PEAR::isError($mail)) {
-                $errlog = new ErrorLog("logs/");
-                $msg = '<p>Error:' . $mail->getMessage() . '</p>';
-                $errlog->writeLog($msg);
-                $this->setStatus(0);
+                $this->setResult('<p>Error:' . $mail->getMessage() . '</p>');
             } else {
-                $msg = '<p>Message successfully sent to $this->to!</p>';
-                $msgLog = new AccessLog("logs/");
-                $msgLog->writeLog($msg);
-                $this->setStatus(1);
+                $this->setResult('<p>Message successfully sent to <br /><br />' . $this->to .'!</p>');
             }
         } catch (Exception $e) {
-            $errlog = new ErrorLog("logs/");
-            $msg = "Exception: " . $e->getMessage();
-            $errlog->writeLog($msg);
-            $this->setStatus(0);
+            $this->setResult("Exception: " . $e->getMessage());
         }
-    }
 
-    function getStatus()
-    {
-        return $this->status;
+        return ($this->result);
     }
-    
     
 }  // end of class
 

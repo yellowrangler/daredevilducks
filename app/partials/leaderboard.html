@@ -39,10 +39,10 @@
 					<tr>
 						<th style="padding-right:15px;">Nbr</th>
 						<th colspan="2">Leader</th>				
-						<th>W -</th>
+						<!-- <th>W -</th>
 						<th>L -</th>
-						<th style="padding-right:15px;">T </th>
-						<th>Totals</th>
+						<th style="padding-right:15px;">T </th> -->
+						<!-- <th>Totals</th> -->
 						<th>Percent</th>				
 					</tr>
 
@@ -53,13 +53,13 @@
 
 						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
 
-						<td class="center-column-text">{{memberseasonpercentstat.wins}} -</td>
+						<!-- <td class="center-column-text">{{memberseasonpercentstat.wins}} -</td>
 						
 						<td class="center-column-text">{{memberseasonpercentstat.losses}} -</td>
 
-						<td style="padding-right:15px;" class="center-column-text">{{memberseasonpercentstat.ties}}</td>
+						<td style="padding-right:15px;" class="center-column-text">{{memberseasonpercentstat.ties}}</td> -->
 
-						<td class="center-column-text">{{memberseasonpercentstat.totalgames}}</td>
+						<!-- <td class="center-column-text">{{memberseasonpercentstat.totalgames}}</td> -->
 
 						<td class="center-column-text">{{memberseasonpercentstat.showpercent}}</td>
 					</tr>
@@ -68,8 +68,8 @@
 		</div>
 	</div> <!-- end of col-5 -->
 
-	<div class="col-md-2">
-		<!-- <div class="row">
+	<!-- <div class="col-md-2">
+		<div class="row">
 			<div style='padding-top:5px;'  class="col-offset-md-1 col-md-10">
 				<img align="center" src='img/ddd_lb_top.png'>
 			</div>	
@@ -79,10 +79,10 @@
 			<div class="col-offset-md-1 col-md-10">
 				<img align="center" src='img/ddd_lb_bot.png'>
 			</div>	
-		</div> -->
-	</div> <!-- end of col-2 -->
+		</div>
+	</div>  --><!-- end of col-2 -->
 
-	<div class="col-md-5">
+	<div class="col-md-6">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">Total Games Won Leader</h3>
@@ -96,7 +96,7 @@
 						<th>L -</th>
 						<th style="padding-right:15px;">T </th>
 						<th>Totals</th>
-						<th>Percent</th>				
+					<!-- 	<th>Percent</th>		 -->		
 					</tr>
 
 					<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
@@ -114,7 +114,7 @@
 
 						<td class="center-column-text">{{memberseasonwinstats.totalgames}}</td>
 
-						<td class="center-column-text">{{memberseasonwinstats.showpercent}}</td>
+						<!-- <td class="center-column-text">{{memberseasonwinstats.showpercent}}</td> -->
 					</tr>
 				</table>
 			</div>

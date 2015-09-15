@@ -1435,7 +1435,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         
         membersFactory.sendeMail2Members(data)
             .success( function(rv) {
-                var textStr = "eMail sent with return code</br>"+rv;
+                var textStr = "<center>eMail sent with return code</center></br></br>"+rv;
                 $('#eMailDialogModalTitle').text("eMail Sent");
                 $('#eMailDialogModalLabelBody').html(textStr);
                 $('#eMailDialogModal').modal();
