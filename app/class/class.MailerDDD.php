@@ -1,10 +1,12 @@
 <?php
-include_once "Mail.php";
+require_once "Mail.php";
+require_once "Mail/mime.php";
+
 include_once ('class.Log.php');
 include_once ('class.ErrorLog.php');
 include_once ('class.AccessLog.php');
 
-class MailerHA
+class MailerDDD
 {
     
     //-------------------------------------------------------------
@@ -16,7 +18,8 @@ class MailerHA
     private $body;
 
     private $host = "smtp.gmail.com";   
-    private $port = "587";
+    // private $port = "465";
+    private $port = "587";    
     private $username = "daredevilducks.xyz@gmail.com";
     private $password = "ddd-02653$";    
     private $status = "";   
@@ -59,6 +62,7 @@ class MailerHA
         $this->setTo($to);
         $this->setSubject($subject);
         $this->setBody($body);
+        // print_r($this);
     }
     
     public function sendMail()

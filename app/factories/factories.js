@@ -213,6 +213,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.sendeMail2Members = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/sendemail2members.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
 

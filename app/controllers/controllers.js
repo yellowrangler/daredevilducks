@@ -188,6 +188,36 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         return status;
     }
 
+    function compareScores(venue, homescore, awayscore)
+    {
+        var result = false;
+
+        var homescoreNbr = parseInt(homescore);
+        var awayscoreNbr = parseInt(awayscore);
+
+        if (venue == "home")
+        {
+            if (homescoreNbr > awayscoreNbr)
+            {
+                result = true;
+            }
+        }
+        else if (venue == "away")
+        {
+            if (awayscoreNbr > homescoreNbr)
+            {
+                result = true;
+            }
+
+        }
+        else
+        {
+            alert ("No venue");
+        }
+
+        return result;
+    }
+
     //
     // this returnd false always if admin 
     // otherwise if expired true other false
@@ -380,6 +410,14 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     $scope.saveGames = function() {
         saveGames();
     }
+
+    $scope.compareScores = function (venue, homescore, awayscore) {
+        var status = "";
+
+        status = compareScores(venue, homescore, awayscore);
+
+        return status;
+    }
 }
 
 controllers.viewselectpickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
@@ -407,6 +445,36 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .error( function(edata) {
                 alert(edata);
             });
+    }
+
+    function compareScores(venue, homescore, awayscore)
+    {
+        var result = false;
+
+        var homescoreNbr = parseInt(homescore);
+        var awayscoreNbr = parseInt(awayscore);
+
+        if (venue == "home")
+        {
+            if (homescoreNbr > awayscoreNbr)
+            {
+                result = true;
+            }
+        }
+        else if (venue == "away")
+        {
+            if (awayscoreNbr > homescoreNbr)
+            {
+                result = true;
+            }
+
+        }
+        else
+        {
+            alert ("No venue");
+        }
+
+        return result;
     }
 
     init();
@@ -470,6 +538,14 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
 
     $scope.getMemberWeekPicks = function() {
         selectChange();
+    }
+
+    $scope.compareScores = function (venue, homescore, awayscore) {
+        var status = "";
+
+        status = compareScores(venue, homescore, awayscore);
+
+        return status;
     }
 }
 
@@ -1326,8 +1402,71 @@ controllers.weeklybuildsController = function ($scope, $http, $location, nflteam
     }
 }
 
-controllers.sendplayeremailController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, scriptsFactory) {
+controllers.sendplayeremailController = function ($scope, $http, $location, membersFactory) {
     $scope.current = {};
+    $scope.current.emailto = "";
+    $scope.current.emailfrom = "daredevilducks.xyz@gmail.com";
+
+    function setMembereMail (email)
+    {
+        if ($scope.current.emailto == "")
+        {
+            $scope.current.emailto = email;
+        }
+        else
+        {
+            if (email != "")
+            {
+                $scope.current.emailto = $scope.current.emailto + ", " + email;
+            }
+        }
+    }
+
+    function addAll2MailForm () {
+
+        $.each($scope.members, function (key, value) {
+            setMembereMail(value.email);
+        });
+
+    }
+
+    function sendeMailForm() {
+        var data = $("#dddeMailForm").serialize();
+        
+        membersFactory.sendeMail2Members(data)
+            .success( function(rv) {
+                var textStr = "eMail sent with return code</br>"+rv;
+                $('#eMailDialogModalTitle').text("eMail Sent");
+                $('#eMailDialogModalLabelBody').html(textStr);
+                $('#eMailDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
+
+    init();
+    function init() {
+        membersFactory.getMembers()
+            .success( function(data) {
+                $scope.members = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
+
+    $scope.setMembereMail = function (email) {
+        setMembereMail(email);
+    }
+
+    $scope.addAll2MailForm = function () {
+        addAll2MailForm();
+    }
+
+    $scope.sendeMailForm = function () {
+        sendeMailForm();
+    }
 
 }
 

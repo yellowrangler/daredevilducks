@@ -1,13 +1,12 @@
-Welcome to our Dare Devil Ducks NFL Football Website!
-
-Hi Leah & Don,
+Hi Jessie,
 
 Congratulations! You are now setup for our Dare Devil Ducks NFL website! Remember your password is same as your screen name and is Case sensitive.
 
-Leah: Screen name (and login) and password is "ANTIC"
-Don: Screen name (and login) and password is "4Horsemen"
+Screen name (and login) and password is "NFL Amateur"
 
-To choose first game you must first login. You will see your avatar on the top right of the screen(send me one I hav set a default for you). Choose "Games" button (donald duck with football) and select "Pick games for week".  Have fun playing around. Remember that we are still a work in process.
+To choose a game you must first login. You will see your avatar on the top right of the screen. Choose "Games" button (donald duck with football) and select "Pick games for week".  Have fun playing around. Remember that we are still a work in process.
+
+If you need to see what you have picked choose "View Select Player picks for week". It will default to you and show you in bright red what you picked. Teams that have already played and won have their score in green. I disable game selection once the game starts so looking at picks during game time on the "pick games for week" may be confusing as it may look as if you did not pick at all.
 
 Some people have reported that the website does not do well on an ipad or other small mobile device. So I suggest using a laptop or desktop.
 
@@ -16,13 +15,3 @@ Click on http://daredevilducks.xyz to get started!
 May the force be with you!
 
 Tarry
-
--- 
-Tarry Cutler
-
-Cell: 781-342-0204
-
--- 
-Tarry Cutler
-
-Cell: 781-342-0204

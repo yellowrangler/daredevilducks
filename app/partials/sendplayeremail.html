@@ -1,62 +1,101 @@
 
-<div class="container-fluid">
+<div class="container">
 
 <div style="color:maroon;font-weight:600;padding-bottom:25px; " class="row">
-  <div class="col-md-3">&nbsp;</div>
   <div class="col-md-5"><h2>Send Player eMail</h2></div>
-  <div class="col-md-4">&nbsp;</div>
+  <div class="col-md-7">&nbsp;</div>
 </div> <!-- end of row -->
 
 <div class="pageStandardOffset row">
-  <div class="col-md-3">&nbsp;</div>
 
-  <div class="col-md-5">
-    <div style="padding-bottom:10px;">
+  <div class="col-md-7">
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Srnd eMail</h3>
+        <h3 class="panel-title">Send eMail</h3>
       </div>
+
       <div class="panel-body">
-        <form role="form" id="dddeMailForm" name="dddeMailForm">
+        <form id="dddeMailForm" name="dddeMailForm" class="form-horizontal">
+
           <div class="form-group">
-            <label for="screenname" class="col-md-12 control-label">From</label>
-            <div class="col-md-12">
-                <input type="text" class="form-control" ng-model="email.from" id="from" name="from" placeholder="">
+            <label for="emailfrom" class="col-md-2 control-label">From</label>
+            <div class="col-md-9">
+                <input type="email" class="form-control" ng-model="current.emailfrom" id="emailfrom" name="emailfrom" placeholder="">
             </div>
           </div> <!-- end of form-group -->
 
-          <div style="padding:15px;">&nbsp;</div>
-
           <div class="form-group">
-            <label for="passwd" class="col-md-12 control-label">To</label>
-            <div class="col-md-12">
-                <input type="password" class="form-control" ng-model="login.passwd" id="passwd" name="passwd">
+            <label for="emailto" class="col-md-2 control-label">To</label>
+            <div class="col-md-9">
+              <textarea class="form-control" rows="3" ng-model="current.emailto" id="emailto" name="emailto"></textarea> 
             </div>
           </div> <!-- end of form-group -->
-          
+
+          <div class="form-group">
+            <label for="emailsubject" class="col-md-2 control-label">Subject</label>
+            <div class="col-md-9">
+                <input type="email" class="form-control" ng-model="current.emailsubject" id="emailsubject" name="emailsubject" placeholder="">
+            </div>
+          </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="emailmessage" class="col-md-2 control-label">Message</label>
+            <div class="col-md-9">
+              <textarea class="form-control" rows="10" ng-model="current.emailmessage" id="emailmessage" name="emailmessage"></textarea> 
+            </div>
+          </div> <!-- end of form-group -->
+
           <div style="padding:15px;">&nbsp;</div>
 
           <div style="padding-left:15px;" class="form-group">
-            <button id="sendEnrollmentLogin" data-ng-click="sendLoginForm()" type="button" class="btn btn-primary">Login</button>
+            <div class="col-md-offset-2 col-md-3">
+              <button id="sendeMail" data-ng-click="sendeMailForm()" type="button" class="btn btn-primary">Send eMail</button>
+            </div>
           </div> <!-- end of form-group -->
+
         </form>  
       </div> <!-- end of panel body -->
     </div> <!-- end of panel -->
+  </div> <!-- end of col 7 -->
+
+  <div class="col-md-5">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Select Recipients</h3>
+      </div>
+
+      <div class="panel-body">
+        <form id="updateeMailForm" name="updatememberForm" style="padding:10px;" class="form">
+          <div class="form-group" >
+            <label for="membername" class="control-label">Name</label>
+              <select tabindex="1"  class="form-control" ng-change="setMembereMail(current.email)" ng-model="current.email" id="membername" name="membername">
+                <option ng-repeat="member in members" value="{{member.email}}">{{member.membername}} - {{member.email}}</option>
+              </select>
+              <input type="hidden" value="{{current.id}}" id="id" name="id">
+          </div> <!-- end of form-group -->
+
+          <div style="padding-left:15px;" class="form-group">
+              <button id="addAll2Mailbutton" data-ng-click="addAll2MailForm()" type="button" class="btn btn-primary">Add All</button>
+          </div> <!-- end of form-group -->
+        </form>  
+      </div> <!-- end of panel body -->
+    </div> <!-- end of panel -->  
+
   </div> <!-- end of col 5 -->
-  <div class="col-md-4">&nbsp;</div>
-  </div> <!-- end of row -->  
+
+</div> <!-- end of row -->  
 
   <!-- dialogs -->
-<div class="modal fade" id="iformationDialogModal" tabindex="-1" role="dialog" aria-labelledby="iformationDialogModalTitle" aria-hidden="true">
+<div class="modal fade" id="eMailDialogModal" tabindex="-1" role="dialog" aria-labelledby="eMailDialogModalTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="iformationDialogModalTitle"></h4>
+        <h4 class="modal-title" id="eMailDialogModalTitle"></h4>
       </div>
       <div class="modal-body">
-        <p id="iformationDialogModalLabelBody"></p>
+        <p id="eMailDialogModalLabelBody"></p>
       </div>
       <div class="modal-footer">
         <button type="button" ng-click="closeModalCleanUp()" class="btn btn-default" data-dismiss="modal">Close</button>
