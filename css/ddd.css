@@ -1,6 +1,31 @@
 /* create sticky menu bar */
 .fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
 
+.mainTitle {
+	color:#6C0000;
+	font-family: 'Magneto', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+}
+
+.headerTitle {
+	color:#6C0000;
+	font-family: 'Magneto', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+}
+
+.jumbotronOverride {
+	background:white;
+	border:2px solid #055659;
+}
+
+.panelOverride {
+	background:white;
+	border:2px solid #055659;
+}
+
+.panelTitleOverride {
+	background-color:#058689;border:2px;solid #055659;color:white;text-align:center;
+}
+
+
 .iconImage {
 	height: 50px;
 }
@@ -101,11 +126,11 @@
 .pickGameTable  th {
 	text-align: center; 
 	vertical-align: middle;
-	color: red;
+	color: #6C0000;
 	font-size: 16px;
 	font-style: bold;
 	/*border-top: 1px solid red;*/
-	border-bottom: 1px solid red;
+	border-bottom: 2px solid #6C0000;
 }
 
 .pickGameTable td  {

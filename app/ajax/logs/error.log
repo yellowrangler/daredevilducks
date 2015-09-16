@@ -1449,3 +1449,343 @@ WWHERE weekstart <= now() AND weekend >= now()
 2015-09-14 19:57:52 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'weekstart <= now() AND weekend >= now()' at line 2 - Error doing select to db Unable to get current season week.
 2015-09-14 19:57:52 : SQL: SELECT season, week from gameweekstbl 
 WWHERE weekstart <= now() AND weekend >= now()
+2015-09-15 18:46:38 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-15 18:46:38 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-15 18:47:48 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-15 18:47:48 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 19' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 19
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 21' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 21
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 18' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 18
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 22' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 22
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 26' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 26
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 23' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 23
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 27' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 27
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 20' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 20
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 24' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 24
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 25' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 25
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 29' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 29
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 28' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 28
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 30' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 30
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 31' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 31
+2015-09-16 01:09:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 32' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:20 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 32
+2015-09-16 01:09:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 01:09:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 19' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 19
+2015-09-16 01:09:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 21' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 21
+2015-09-16 01:09:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 18' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 18
+2015-09-16 01:09:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 22' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 22
+2015-09-16 01:09:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 26' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 26
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 23' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 23
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 27' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 27
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 20' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 20
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 24' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 24
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 25' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 25
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 29' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 29
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 28' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 28
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 30' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 30
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 31' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 31
+2015-09-16 01:09:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 32' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:35 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 32
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 19' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 19
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 21' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 21
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 18' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 18
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 22' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 22
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 26' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 26
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 23' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 23
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 27' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 27
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 20' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 20
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 24' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 24
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 25' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 25
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 29' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 29
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 28' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 28
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 30' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 30
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 31' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 31
+2015-09-16 01:09:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 32' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 01:09:42 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 32
+2015-09-16 16:18:34 : SQL error: Table 'ddd.gameweeksstbl' doesn't exist - Error doing select to db Unable to get nfl season week information.
+2015-09-16 16:18:34 : SQL: SELECT DISTINCT week, weekstart, weekend FROM gameweeksstbl WHERE season = 2015 ORDER BY week ASC
+2015-09-16 16:18:40 : SQL error: Table 'ddd.gameweeksstbl' doesn't exist - Error doing select to db Unable to get nfl season week information.
+2015-09-16 16:18:40 : SQL: SELECT DISTINCT week, weekstart, weekend FROM gameweeksstbl WHERE season = 2015 ORDER BY week ASC
+2015-09-16 16:20:12 : SQL error: Table 'ddd.gameweeksstbl' doesn't exist - Error doing select to db Unable to get nfl season week information.
+2015-09-16 16:20:12 : SQL: SELECT DISTINCT week, weekstart, weekend FROM gameweeksstbl WHERE season = 2015 ORDER BY week ASC
+2015-09-16 16:30:02 : SQL error: Table 'ddd.gameweeksstbl' doesn't exist - Error doing select to db Unable to get nfl season week information.
+2015-09-16 16:30:02 : SQL: SELECT week, weekstart, weekend FROM gameweeksstbl WHERE season = 2015 ORDER BY week ASC
+2015-09-16 17:08:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 17:08:49 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 19' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 19
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 21' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 21
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 18' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 18
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 22' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 22
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 26' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 26
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 23' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 23
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 27' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 27
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 20' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 20
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 24' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 24
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 25' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 25
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 29' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 29
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 28' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 28
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 30' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 30
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 31' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 31
+2015-09-16 23:52:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 32' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:03 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 32
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 19' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 19
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 21' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 21
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 18' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 18
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 22' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 22
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 26' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 26
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 23' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 23
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 27' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 27
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 20' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 20
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 24' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 24
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 25' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 25
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 29' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 29
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 28' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 28
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 30' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 30
+2015-09-16 23:52:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 31' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:43 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 31
+2015-09-16 23:52:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 32' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-16 23:52:44 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 32

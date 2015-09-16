@@ -1,13 +1,17 @@
 <div class="pageCaption row">
-	<div class="col-md-12">
-		<h2>View Player Selected Games for Week</h2>
+	<div style="display:inline;" class="col-md-6">
+		<div style="display:inline;">
+			<h2 style="display:inline;" class="headerTitle">View Player Selected Games for Week</h2>
+			<img style="display:inline; height:100px; float:right;"  src="img/viewselectpicks.png">
+			<div style="display:inline;float:right;font-style:italic;padding-right:25px;padding-top:45px;">Who's calculations paid off !</div>
+		</div>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
-<form id="pickweekForm" name="pickweekForm" style="padding:10px;" class="form-inline">
+<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-		<div class="panel panel-default">
+		<div class="panel panel-default panelOverride">
 			<div class="panel-body">
 				<div class="form-group horizontalFieldOffset">
 					<label for="memberid" class="control-label">Player</label>
@@ -26,7 +30,7 @@
 				<div class="form-group horizontalFieldOffset">
 			    	<label for="gametypeid" class="control-label">Week</label>
 		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
-		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
+			            <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 		            </select>
 				</div> <!-- end of form-group --> 
 
@@ -46,7 +50,7 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-		<div class="panel panel-default">
+		<div class="panel panel-default panelOverride">
 			<div class="panel-body">
 				<table class="pickGameTable" >
 					<tr>
@@ -61,7 +65,7 @@
 
 					<tr ng-repeat="game in games">
 						<td class="left-column-text">
-							<img style='height:25px;padding-left:5px;' src='img/tvicons/{{game.networkiconname}}'> &nbsp; {{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}}
+							{{game.gamedate}} &nbsp; {{game.gameday}}
 							
 						</td>
 

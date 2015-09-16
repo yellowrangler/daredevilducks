@@ -44,8 +44,10 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 // get nfl game type information
 //---------------------------------------------------------------
-$sql = "SELECT season, week from gameweekstbl 
-WHERE weekstart <= now() AND weekend >= now()";
+$sql = "SELECT season, week 
+FROM gameweekstbl 
+WHERE weekend >= now() 
+ORDER BY season, week ASC LIMIT 1";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

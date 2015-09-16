@@ -65,7 +65,12 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //---------------------------------------------------------------
 // get nfl week information
 //---------------------------------------------------------------
-$sql = "SELECT DISTINCT week FROM gamestbl WHERE season = $season ORDER BY week ASC";
+$sql = "SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season = $season 
+ORDER BY week ASC";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);

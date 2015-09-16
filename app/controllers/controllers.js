@@ -219,6 +219,14 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     }
 
     //
+    // if checked turn this red
+    //
+    function checkPick(gameid, location)
+    {
+        var i = 0;
+    }
+
+    //
     // this returnd false always if admin 
     // otherwise if expired true other false
     // for ng-disbled
@@ -417,6 +425,10 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         status = compareScores(venue, homescore, awayscore);
 
         return status;
+    }
+
+    $scope.checkPick = function (gameid, location) {
+        checkPick(gameid, location);
     }
 }
 
