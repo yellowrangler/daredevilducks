@@ -1789,3 +1789,23 @@ WWHERE weekstart <= now() AND weekend >= now()
 2015-09-16 23:52:44 : SQL: SELECT memberid 
 	FROM  memberpickstbl 
 	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 32
+2015-09-17 01:19:50 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-17 01:19:50 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-17 02:43:29 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-17 02:43:29 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-17 02:43:50 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-17 02:43:50 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-17 02:43:59 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-17 02:43:59 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-17 02:44:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and season = 2015 and week = 2 and gamenbr = 17' at line 3 - Error doing select to db Unable to add member game pick.
+2015-09-17 02:44:34 : SQL: SELECT memberid 
+	FROM  memberpickstbl 
+	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17

@@ -291,7 +291,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         //
         // loop through all radio fields and count 
         //
-        $("[id^=pick_]").each(function() {
+        $("[name^=pick_]").each(function() {
             if (fieldname != this.name)
             {
                 count = count + 1;
@@ -314,7 +314,16 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             $scope.msg = "You have picked "+picked+" Teams. You have "+remaining+" remaining to complete this week.";
         }
 
+        //
+        // admins can choose any player. I disable memberid when not admin. Must therefore
+        // check for memberid in seriaze string and if not there add it
+        //
         var data = $("#pickweekForm").serialize();
+        var n = data.indexOf("memberid");
+        if (n == -1)
+        {
+            data = data + "&memberid="$scope.current.memberid;
+        }
 
         membersFactory.addMemberGameTeamPick(data)
             .success( function(data) {
@@ -340,6 +349,10 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
     init();
     function init() {
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+            $location.path("#home");
+
         $scope.current.memberlogin = loginService.getLogin();
 
         membersFactory.getMembers()
