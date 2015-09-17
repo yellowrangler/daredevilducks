@@ -322,7 +322,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         var n = data.indexOf("memberid");
         if (n == -1)
         {
-            data = data + "&memberid="$scope.current.memberid;
+            data = data + "&memberid="+$scope.current.memberid;
         }
 
         membersFactory.addMemberGameTeamPick(data)
