@@ -637,8 +637,25 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 data.position = {};
+
+                var prev = 0;
                 $.each(data, function (index,value) {
-                    data[index].position = index+1;
+                    if (index == 0)
+                    {
+                        value.position = index+1;
+                    }
+                    else
+                    {
+                        prev = index - 1;
+                        if (value.percent == data[prev].percent)
+                        {
+                            value.position = data[prev].position;
+                        }
+                        else
+                        {
+                            value.position = data[prev].position +1;
+                        }
+                    }
                 });
 
                 $scope.memberseasonpercentstats = data; 
@@ -654,8 +671,25 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 data.position = {};
+
+                var prev = 0;
                 $.each(data, function (index,value) {
-                    data[index].position = index+1;
+                    if (index == 0)
+                    {
+                        value.position = index+1;
+                    }
+                    else
+                    {
+                        prev = index - 1;
+                        if (value.wins == data[prev].wins)
+                        {
+                            value.position = data[prev].position;
+                        }
+                        else
+                        {
+                            value.position = data[prev].position +1;
+                        }
+                    }
                 });
 
                 $scope.memberseasonwinstats = data; 
@@ -683,8 +717,25 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 data.position = {};
+                
+                var prev = 0;
                 $.each(data, function (index,value) {
-                    data[index].position = index+1;
+                    if (index == 0)
+                    {
+                        value.position = index+1;
+                    }
+                    else
+                    {
+                        prev = index - 1;
+                        if (value.percent == data[prev].percent)
+                        {
+                            value.position = data[prev].position;
+                        }
+                        else
+                        {
+                            value.position = data[prev].position +1;
+                        }
+                    }
                 });
 
                 $scope.memberseasonpercentstats = data; 
@@ -700,8 +751,25 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 data.position = {};
+
+                var prev = 0;
                 $.each(data, function (index,value) {
-                    data[index].position = index+1;
+                    if (index == 0)
+                    {
+                        value.position = index+1;
+                    }
+                    else
+                    {
+                        prev = index - 1;
+                        if (value.wins == data[prev].wins)
+                        {
+                            value.position = data[prev].position;
+                        }
+                        else
+                        {
+                            value.position = data[prev].position +1;
+                        }
+                    }
                 });
 
                 $scope.memberseasonwinstats = data; 
