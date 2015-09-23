@@ -70,8 +70,11 @@ $sql = "SELECT
   MS.losses as losses,
   MS.ties as ties,
   MS.totalgames as totalgames,
-  MS.percent as percent,
-  CONCAT( ROUND( ( MS.percent * 100 ), 1 ),  '%' ) as showpercent,
+  MS.playerpickedgames as playerpickedgames,
+  MS.totalgamespercent as totalgamespercent,
+  MS.playerpickedpercent as playerpickedpercent,
+  CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
   MS.gametypeid as gametypeid,
   M.avatar as memberavatar,
   M.membername as membername,
@@ -82,7 +85,7 @@ WHERE MS.season = '$season' ";
 
 if ($leaderType == 'percent')
 {
-  $sql = $sql . " ORDER BY MS.percent DESC, M.membername ASC ";
+  $sql = $sql . " ORDER BY MS.totalgamespercent DESC, M.membername ASC ";
 }
 elseif ($leaderType == 'wins')
 {

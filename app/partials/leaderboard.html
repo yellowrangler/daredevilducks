@@ -32,51 +32,6 @@
 	<div class="col-md-5">
 		<div class="panel panel-default panelOverride">
 			<div style="background-color:#058689;border:2px;solid #055659;color:white;text-align:center;" class="panel-heading">
-				<h3 class="panel-title">Total Percentage Leader</h3>
-			</div>
-			<div id="percentPanelBody" class="panel-body">
-				<table class="leaderBoardTable" >
-					<tr>
-						<th style="padding-right:15px;">Position</th>
-						<th colspan="2">Leader</th>				
-						<th>Percent</th>				
-					</tr>
-
-					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
-						<td style="padding-right:15px;" class="center-column-text">{{memberseasonpercentstat.position}}</td>
-
-						<td class="left-column-text"><img style="height:70px;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
-
-						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
-
-						<td class="center-column-text">{{memberseasonpercentstat.showpercent}}</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div> <!-- end of col-5 -->
-
-	<div class="col-md-2">
-		<div style='padding-top:5px;' class="row">
-			<div class="col-md-12">
-				<div >
-					<img style="height:160px;" align="center" src='img/lb-top.png'>
-				</div>	
-			</div>	
-		</div>
-		
-		<div style='padding-top:1220px;' class="row">
-			<div class="col-md-12">
-				<div>
-					<img style="height:90px;" align="center" src='img/lb-bottom.png'>
-				</div>	
-			</div>				
-		</div>
-	</div> <!-- end of col-2 -->
-
-	<div style="float:right; padding-right:15px;" class="col-md-5">
-		<div class="panel panel-default panelOverride">
-			<div style="background-color:#058689;border:2px;solid #055659;color:white;text-align:center;" class="panel-heading">
 				<h3 class="panel-title">Total Games Won Leader</h3>
 			</div>
 			<div class="panel-body">
@@ -107,6 +62,51 @@
 						<td class="center-column-text">{{memberseasonwinstats.totalgames}}</td>
 
 						<!-- <td class="center-column-text">{{memberseasonwinstats.showpercent}}</td> -->
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div> <!-- end of col-5 -->
+
+	<div class="col-md-2">
+		<div style='padding-top:5px;' class="row">
+			<div class="col-md-12">
+				<div >
+					<img style="height:160px;" align="center" src='img/lb-top.png'>
+				</div>	
+			</div>	
+		</div>
+		
+		<div style='padding-top:1220px;' class="row">
+			<div class="col-md-12">
+				<div>
+					<img style="height:160px;" align="center" src='img/lb-bottom.png'>
+				</div>	
+			</div>				
+		</div>
+	</div> <!-- end of col-2 -->
+
+	<div style="float:right; padding-right:15px;" class="col-md-5">
+		<div class="panel panel-default panelOverride">
+			<div style="background-color:#058689;border:2px;solid #055659;color:white;text-align:center;" class="panel-heading">
+				<h3 class="panel-title">Total Percentage Leader</h3>
+			</div>
+			<div id="percentPanelBody" class="panel-body">
+				<table class="leaderBoardTable" >
+					<tr>
+						<th style="padding-right:15px;">Position</th>
+						<th colspan="2">Leader</th>				
+						<th>Percent</th>				
+					</tr>
+
+					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
+						<td style="padding-right:15px;" class="center-column-text">{{memberseasonpercentstat.position}}</td>
+
+						<td class="left-column-text"><img style="height:70px;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
+
+						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
+
+						<td class="center-column-text">{{memberseasonpercentstat.showtotalgamespercent}}</td>
 					</tr>
 				</table>
 			</div>

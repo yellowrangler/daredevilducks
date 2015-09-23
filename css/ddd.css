@@ -3,12 +3,14 @@
 
 .mainTitle {
 	color:#6C0000;
-	font-family: 'Magneto', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-weight: 700;
 }
 
 .headerTitle {
 	color:#6C0000;
-	font-family: 'Magneto', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-weight: 700;
 }
 
 .jumbotronOverride {

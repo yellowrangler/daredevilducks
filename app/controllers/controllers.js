@@ -134,6 +134,8 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
         {
             $("#adminselect").hide();
         }
+
+        $('#iformationDialogModal').modal('hide');
         
         $location.path("/home");
     }
@@ -160,10 +162,6 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
 }
 
 controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
-    var loggedIn = loginService.isLoggedIn();
-    if (!loggedIn)
-        $location.path("#home");
-
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -647,7 +645,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
                     else
                     {
                         prev = index - 1;
-                        if (value.percent == data[prev].percent)
+                        if (value.totalgamespercent == data[prev].totalgamespercent)
                         {
                             value.position = data[prev].position;
                         }
@@ -727,7 +725,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
                     else
                     {
                         prev = index - 1;
-                        if (value.percent == data[prev].percent)
+                        if (value.totalgamespercent == data[prev].totalgamespercent)
                         {
                             value.position = data[prev].position;
                         }
@@ -785,11 +783,8 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
 }
 
 controllers.memberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, nflteamsFactory, loginService) {
-    var loggedIn = loginService.isLoggedIn();
-    if (!loggedIn)
-        $location.path("#home");
-
     $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
 
     function selectChange()
     {
@@ -807,19 +802,25 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 
     init();
     function init() {
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+            $location.path("#home");
+
         $scope.current.memberlogin = loginService.getLogin();
-        nflteamsFactory.getCurrentSeasonWeek()
+        
+        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
             .success( function(data) {
-                $scope.current.season = data.season; 
-                $scope.current.week = data.week;
+                $scope.weeks = data;
 
-                nflTeamsService.addCurrentWeek($scope.current.week);
-                nflTeamsService.addCurrentSeason($scope.current.season);  
-
-                $scope.seasons = nflTeamsService.getNFLTeamseasons();
-                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                nflteamsFactory.getCurrentSeasonWeek()
                     .success( function(data) {
-                        $scope.weeks = data;
+                        $scope.current.season = data.season; 
+                        $scope.current.week = data.week;
+
+                        nflTeamsService.addCurrentWeek($scope.current.week);
+                        nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                        $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
                         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
                         nflteamsFactory.getMemberWeekStats(requestStr)
@@ -830,15 +831,15 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
                             .error( function(edata) {
                                 alert(edata);
                             });  
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    }); 
-   
-            })
-            .error( function(edata) {
-                alert(edata);
-            });              
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+
+        })
+        .error( function(edata) {
+            alert(edata);
+        });                  
     }
 
     $scope.getMemberWeekStats = function() {

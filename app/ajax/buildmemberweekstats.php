@@ -11,6 +11,10 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $enterdate = $datetime;
 
+//debug
+// $season = 2015;
+// $gametypeid = 2;
+
 $msg = "Buildmemberweekstats Started <br />";
 
 if (isset($_POST["season"]))
@@ -55,13 +59,6 @@ $DBuser = "tarryc";
 $DBpassword = "tarryc";
 
 //
-// set variables
-//
-// $gametypeid = 2;
-// $season = 2014;
-// $gamesInRegularSeason = 17;
-
-//
 // connect to db
 //
 $dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
@@ -87,6 +84,12 @@ if (!mysql_select_db($DBschema, $dbConn))
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));	
+
+//
+// display variables
+//
+$membercount = 0;
+$totalgames = 0;
 
 //
 // get total weeks to date
@@ -131,12 +134,6 @@ if (!$sql_result_prime)
 //
 // loop through all members
 //
-
-//
-// display variables
-//
-$membercount = 0;
-
 while($row = mysql_fetch_assoc($sql_result_prime)) 
 {
 
@@ -164,7 +161,11 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		$wins = 0;
 		$losses = 0;
 		$ties = 0;
-		$percentage = 0;
+
+		$playerpickedgames = 0;
+		$playerpickedpercent = 0;
+		$totalgames = 0;
+		$totalgamespercent = 0;
 
 		$sql = "SELECT
 		  G.season as season,
@@ -206,6 +207,42 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - count all.<br /> SQL: $sql";
 			exit($msg);
 		}	
+
+		//
+		// get games in week
+		//
+		$sql = "SELECT count(week) as gamesplayed
+		FROM gamestbl 
+		WHERE season = $season and week = $week";
+
+		$sql_result_games = @mysql_query($sql, $dbConn);
+		if (!$sql_result_games)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - get games for week.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -200;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - get games for week.<br /> SQL: $sql";
+			exit($msg);
+		}	
+
+		//
+		// get total games played to date
+		// 
+		$totalgames = 0;
+		$count = mysql_num_rows($sql_result_games);
+		if ($count > 0)
+		{
+			$r = mysql_fetch_assoc($sql_result_games);
+			$totalgames = $r['gamesplayed'];
+		}
+		else
+		{
+		    $msg = $msg . "No games played this week! week:$week totalgames:$totalgames";
+			exit($msg);
+		}
 
 		//
 		// We now have all the games for the season week for the member. 
@@ -272,17 +309,25 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		//
 		// totals games is done outside the loop because some people join later
 		//
-		$totalgames = $wins + $losses + $ties;
-		
+		$playerpickedgames = $wins + $losses + $ties;
+
+		//
+		// calculate percentage for players picked
+		//
+		$tiesadjust = $ties * 0.5;
+		$p = ($wins + $tiesadjust) / $playerpickedgames;
+		$playerpickedpercent = round($p, 3);
+
 		//
 		// calculate percentage
 		//
 		$tiesadjust = $ties * 0.5;
 		$p = ($wins + $tiesadjust) / $totalgames;
-		$percent = round($p, 3);
+		$totalgamespercent = round($p, 3);
 
-		$msg = $msg . "Week totals memberid:$memberid</br>wins:$wins losses:$losses ties:$ties total:$totalgames percent:$percent week:$week</br>";	
-		
+		// debug
+		// $msg = $msg .  "</br>memberid:$memberid wins:$wins losses:$losses ties:$ties totalgames:$totalgames totalgamespercent:$totalgamespercent </br> playerpickedgames:$playerpickedgames playerpickedpercent:$playerpickedpercent</br>";	
+			
 		// 
 		// if data is there update otherwise insert
 		// 
@@ -310,8 +355,16 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			// do update
 			// 
 			$sql = "UPDATE memberweekstatstbl 
-				SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
-				WHERE memberid = $memberid AND season = $season AND week = $week";
+				SET totalgames = $totalgames, playerpickedgames = $playerpickedgames, 
+				wins = $wins, losses = $losses, ties = $ties, 
+				totalgamespercent = $totalgamespercent, playerpickedpercent = $playerpickedpercent, 
+				season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
+				WHERE memberid = $memberid 
+				AND season = $season 
+				AND week = $week";
+
+			// debug
+			// $msg = $msg .  "</br>sql update:$sql</br>";	
 
 			$sql_result_update = @mysql_query($sql, $dbConn);
 			if (!$sql_result_update)
@@ -332,9 +385,12 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			// do insert
 			// 
 			$sql = "INSERT INTO memberweekstatstbl 
-				(totalgames, wins, losses, ties, percent, season, enterdate, gametypeid, memberid) 
-				VALUES ($totalgames, $wins, $losses, $ties, $percent, $season, '$enterdateTS', $gametypeid, $memberid)";
+				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, gametypeid, memberid) 
+				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
 				
+			// debug	
+			// $msg = $msg .  "</br>sql insert:$sql</br>";	
+
 			$sql_result_insert = @mysql_query($sql, $dbConn);
 			if (!$sql_result_insert)
 			{
@@ -376,7 +432,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 
 } // end of looping through members
 
-$msg = $msg . "Totals Members:$membercount. <br /> Buildmemberweekstats Finished.";
+$msg = $msg . "Totals Members:$membercount. Weeks:$weekstotal<br /> Buildmemberweekstats Finished.";
 
 //
 // close db connection

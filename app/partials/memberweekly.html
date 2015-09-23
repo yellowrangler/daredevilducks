@@ -1,6 +1,6 @@
 <div class="pageCaption row">
 	<div class="col-md-12">
-		<h2 class="headerTitle">Member Weekly Totals</h2>
+		<h2 class="headerTitle">Player Weekly Totals</h2>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
@@ -17,9 +17,9 @@
 				</div> <!-- end of form-group -->
  
 				<div class="form-group horizontalFieldOffset">
-			    	<label for="gametypeid" class="control-label">Week</label>
+			    	<label for="week" class="control-label">Week</label>
 		            <select class="form-control" ng-change="getMemberWeekStats()" ng-model="current.week" id="week" name="week">
-		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}}</option>
+		                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 		            </select>
 				</div> <!-- end of form-group -->
 			</div> <!-- end of panel body -->				
@@ -33,19 +33,13 @@
 			
 			<table class="MemberWeeklyTable" >
 				<tr>
-					<th>Week</th>
 					<th>Dates</th>
 					<th colspan="2">Player</th>			
 					<th>W - L - T</th>
 				</tr>
 
 				<tr ng-repeat="memberweekstat in memberweekstats">
-					<td class="center-column-text">
-						{{memberweekstat.week}}
-					</td>
-
-
-					<td class="left-column-text">
+					<td style="padding-left:15px;" class="left-column-text">
 	                    {{memberweekstat.weekstart}} - {{memberweekstat.weekend}}
 					</td>
 

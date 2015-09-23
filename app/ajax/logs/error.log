@@ -1809,3 +1809,43 @@ WWHERE weekstart <= now() AND weekend >= now()
 2015-09-17 02:44:34 : SQL: SELECT memberid 
 	FROM  memberpickstbl 
 	WHERE memberid =  and season = 2015 and week = 2 and gamenbr = 17
+2015-09-22 23:33:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 3 - Error doing select to db Unable to update member stats - get games for up to week.
+2015-09-22 23:33:51 : SQL: SELECT count(season) 
+FROM gamestbl 
+WHERE season = 2015 and week  < 
+2015-09-23 01:37:35 : SQL error: Unknown column 'MS.percent' in 'field list' - Error doing select to db Unable to get nfl game team information.
+2015-09-23 01:37:35 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as week,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.percent as percent,
+  CONCAT( ROUND( ( MS.percent * 100 ), 1 ),  '%' ) as showpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = '2015'  ORDER BY MS.percent DESC, M.membername ASC 
+2015-09-23 01:37:35 : SQL error: Unknown column 'MS.percent' in 'field list' - Error doing select to db Unable to get nfl game team information.
+2015-09-23 01:37:35 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as week,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.percent as percent,
+  CONCAT( ROUND( ( MS.percent * 100 ), 1 ),  '%' ) as showpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = '2015'  ORDER BY MS.wins DESC, M.membername ASC 

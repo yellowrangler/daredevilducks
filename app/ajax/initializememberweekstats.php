@@ -48,13 +48,15 @@ $DBpassword = "tarryc";
 // set variables
 //
 $gametypeid = 0;
-$totalgames = 0;
 $wins = 0;
 $losses = 0;
 $ties = 0;
-$percentage = 0.0;
 $week = 0;
-$games = 0;
+$playerpickedgames = 0;
+$playerpickedpercent = 0;
+$totalgames = 0;
+$totalgamespercent = 0;
+
 // $season = 2015;
 // $weeksinseason = 17;
 
@@ -151,8 +153,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// do insert team
 			// 
 			$sql = "INSERT INTO memberweekstatstbl 
-				(totalgames, week, wins, losses, ties, percent, season, enterdate, memberid, gametypeid) 
-				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $memberid, $gametypeid)";
+				(totalgames, playerpickedgames, week, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, memberid, gametypeid) 
+				VALUES ($totalgames, $playerpickedgames, $week, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $memberid, $gametypeid)";
 
 			$sql_r = @mysql_query($sql, $dbConn);
 			if (!$sql_r)

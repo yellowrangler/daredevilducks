@@ -27,9 +27,9 @@
 				</div> <!-- end of form-group -->
 
 				<div class="form-group horizontalFieldOffset">
-			    	<label for="gametypeid" class="control-label">Week</label>
+			    	<label for="week" class="control-label">Week</label>
 		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
-		                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} =		                 {{week.weekstart}} - {{week.weekend}}</option>
+		                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 		            </select>
 				</div> <!-- end of form-group -->  
 
