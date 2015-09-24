@@ -626,37 +626,70 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
     //     });
     // }
 
+    function workWinsTableData(data)
+    {
+        data.position = {};
+
+        var prev = 0;
+        $.each(data, function (index,value) {
+            if (index == 0)
+            {
+                value.position = index+1;
+            }
+            else
+            {
+                prev = index - 1;
+                if (value.wins == data[prev].wins)
+                {
+                    value.position = data[prev].position;
+                }
+                else
+                {
+                    value.position = data[prev].position +1;
+                }
+            }
+        });
+
+        return data;
+    }
+
+    function workPercentTableData(data)
+    {
+        data.position = {};
+
+        var prev = 0;
+        $.each(data, function (index,value) {
+            if (index == 0)
+            {
+                value.position = index+1;
+            }
+            else
+            {
+                prev = index - 1;
+                if (value.totalgamespercent == data[prev].totalgamespercent)
+                {
+                    value.position = data[prev].position;
+                }
+                else
+                {
+                    value.position = data[prev].position +1;
+                }
+            }
+        });
+
+        return data;
+
+    }
+
     function getYearlyLeaderBoard() 
     {
         //
         // get total season percent leaders
         //
-        var qStr = "season="+$scope.current.season+"&leaderType=percent";
+        var qStr = "season="+$scope.current.season+"&leaderType=pickingpercent";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
-                data.position = {};
-
-                var prev = 0;
-                $.each(data, function (index,value) {
-                    if (index == 0)
-                    {
-                        value.position = index+1;
-                    }
-                    else
-                    {
-                        prev = index - 1;
-                        if (value.totalgamespercent == data[prev].totalgamespercent)
-                        {
-                            value.position = data[prev].position;
-                        }
-                        else
-                        {
-                            value.position = data[prev].position +1;
-                        }
-                    }
-                });
-
-                $scope.memberseasonpercentstats = data; 
+                $scope.memberseasonpercentstats = workPercentTableData(data); 
             })
             .error( function(edata) {
                 alert(edata);
@@ -668,29 +701,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         var qStr = "season="+$scope.current.season+"&leaderType=wins";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
-                data.position = {};
-
-                var prev = 0;
-                $.each(data, function (index,value) {
-                    if (index == 0)
-                    {
-                        value.position = index+1;
-                    }
-                    else
-                    {
-                        prev = index - 1;
-                        if (value.wins == data[prev].wins)
-                        {
-                            value.position = data[prev].position;
-                        }
-                        else
-                        {
-                            value.position = data[prev].position +1;
-                        }
-                    }
-                });
-
-                $scope.memberseasonwinstats = data; 
+                $scope.memberseasonwinstats = workWinsTableData(data); 
             })
             .error( function(edata) {
                 alert(edata);
@@ -711,32 +722,10 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         //
         // get percent season leaders
         //
-        var qStr = "season="+$scope.current.season+"&leaderType=percent"
+        var qStr = "season="+$scope.current.season+"&leaderType=pickingpercent"
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
-                data.position = {};
-                
-                var prev = 0;
-                $.each(data, function (index,value) {
-                    if (index == 0)
-                    {
-                        value.position = index+1;
-                    }
-                    else
-                    {
-                        prev = index - 1;
-                        if (value.totalgamespercent == data[prev].totalgamespercent)
-                        {
-                            value.position = data[prev].position;
-                        }
-                        else
-                        {
-                            value.position = data[prev].position +1;
-                        }
-                    }
-                });
-
-                $scope.memberseasonpercentstats = data; 
+                $scope.memberseasonpercentstats = workPercentTableData(data); 
             })
             .error( function(edata) {
                 alert(edata);
@@ -748,29 +737,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         var qStr = "season="+$scope.current.season+"&leaderType=wins";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
-                data.position = {};
-
-                var prev = 0;
-                $.each(data, function (index,value) {
-                    if (index == 0)
-                    {
-                        value.position = index+1;
-                    }
-                    else
-                    {
-                        prev = index - 1;
-                        if (value.wins == data[prev].wins)
-                        {
-                            value.position = data[prev].position;
-                        }
-                        else
-                        {
-                            value.position = data[prev].position +1;
-                        }
-                    }
-                });
-
-                $scope.memberseasonwinstats = data; 
+                $scope.memberseasonwinstats = workWinsTableData(data);  
             })
             .error( function(edata) {
                 alert(edata);

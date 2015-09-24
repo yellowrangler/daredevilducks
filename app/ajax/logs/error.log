@@ -1849,3 +1849,24 @@ WHERE MS.season = '2015'  ORDER BY MS.percent DESC, M.membername ASC
 FROM memberstatstbl MS 
 LEFT JOIN membertbl M ON M.id = MS.memberid
 WHERE MS.season = '2015'  ORDER BY MS.wins DESC, M.membername ASC 
+2015-09-24 01:30:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'wrong argument passed' at line 20 - Error doing select to db Unable to get nfl game team information.
+2015-09-24 01:30:10 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as week,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.playerpickedgames as playerpickedgames,
+  MS.totalgamespercent as totalgamespercent,
+  MS.playerpickedpercent as playerpickedpercent,
+  CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = '2015'  wrong argument passed 

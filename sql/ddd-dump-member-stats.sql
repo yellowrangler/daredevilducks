@@ -83,3 +83,10 @@ CREATE TABLE `memberweekstatstbl` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2015-09-22 14:40:24
+
+//
+	// get games in week
+	//
+	$sql = "SELECT count(week) 
+	FROM gamestbl 
+	WHERE season = $season and week = $week";
