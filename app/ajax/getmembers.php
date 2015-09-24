@@ -4,6 +4,17 @@ include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
+
+//
+// post input
+//
+$orderby = "membername";
+
+if( isset($_POST['orderby']) )
+{
+     $orderby = $_POST['orderby'];
+}
+
 //
 // functions
 //
@@ -61,7 +72,8 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 // get nfl game type information
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM membertbl ORDER BY membername ASC";
+$sql = "SELECT *  FROM membertbl 
+ORDER BY $orderby ASC";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);

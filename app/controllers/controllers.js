@@ -353,7 +353,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
         $scope.current.memberlogin = loginService.getLogin();
 
-        membersFactory.getMembers()
+        var orderby = "orderby=screenname";
+        membersFactory.getMembers(orderby)
             .success( function(data) {
                 $scope.members = data; 
             
@@ -508,7 +509,8 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         
         $scope.current.memberlogin = loginService.getLogin();
 
-        membersFactory.getMembers()
+        var orderby = "orderby=screenname";
+        membersFactory.getMembers(orderby)
             .success( function(data) {
                 $scope.members = data; 
 

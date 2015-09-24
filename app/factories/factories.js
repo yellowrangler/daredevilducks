@@ -150,11 +150,11 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
 dddApp.factory('membersFactory', function($q, $http) {
     var factory = {};
 
-    factory.getMembers = function () {
+    factory.getMembers = function (data) {
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getmembers.php",
-            // data: data,
+            data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

@@ -18,6 +18,12 @@
 	font-weight: 700;
 }
 
+.tableTitle {
+	background-color:#058689;
+	border:2px solid #058689;
+	color:white;
+}
+
 .jumbotronOverride {
 	background:white;
 	border:2px solid #055659;
@@ -29,7 +35,10 @@
 }
 
 .panelTitleOverride {
-	background-color:#058689;border:2px;solid #055659;color:white;text-align:center;
+	background-color:#058689;
+	border:2px solid #055659;
+	color:white;
+	text-align:center;
 }
 
 
@@ -85,7 +94,7 @@
 .MemberWeeklyTable {
 	padding-top:20px;
 	padding: 3px;  
-	width:90%;
+	width:100%;
 }
 
 .MemberWeeklyTable img {
@@ -94,7 +103,6 @@
 
 .MemberWeeklyTable th {
 	text-align: center; 
-	color: teal;
 }
 
 .leaderBoardTable  {
@@ -133,11 +141,11 @@
 .pickGameTable  th {
 	text-align: center; 
 	vertical-align: middle;
-	color: #6C0000;
+	/*color: #6C0000;*/
 	font-size: 16px;
 	font-style: bold;
 	/*border-top: 1px solid red;*/
-	border-bottom: 2px solid #6C0000;
+	/*border-bottom: 2px solid #6C0000;*/
 }
 
 .pickGameTable td  {
@@ -227,7 +235,7 @@
 	padding-left:35px;
 	padding-bottom:25px;
 	/*height: 35px;*/
-	/*padding-top:5px;*/
+/*	padding-top:50px;*/
 	color:maroon;
 	font-weight:600; 
 }

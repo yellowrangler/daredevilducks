@@ -14,6 +14,7 @@ if( isset($_POST['membername']) )
 {
      $membername = $_POST['membername'];
 }
+
 if( isset($_POST['memberid']) )
 {
      $memberid = $_POST['memberid'];

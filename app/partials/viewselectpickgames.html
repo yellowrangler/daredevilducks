@@ -1,10 +1,6 @@
 <div class="pageCaption row">
-	<div style="display:inline;" class="col-md-6">
-		<div style="display:inline;">
-			<h2 style="display:inline;" class="headerTitle">View Player Selected Games for Week</h2>
-			<img style="display:inline; height:100px; float:right;"  src="img/viewselectpicks.png">
-			<div style="display:inline;float:right;font-style:italic;padding-right:25px;padding-top:45px;">Who's calculations paid off !</div>
-		</div>
+	<div class="col-md-6">
+		<h2 class="headerTitle">View Player Selected Games for Week</h2>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
@@ -49,11 +45,11 @@
 </div> <!-- end of row -->
 
 <div class="pageStandardOffset row">
-	<div class="col-md-12">
+	<div class="col-md-10">
 		<div class="panel panel-default panelOverride">
 			<div class="panel-body">
 				<table class="pickGameTable" >
-					<tr>
+					<tr class="tableTitle">
 						<th>Game Day</th>			
 						<th>Home Team</th>
 						<th>Score</th>	
@@ -70,7 +66,7 @@
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img height='25' src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+							<img height='25' ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
 		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 
@@ -83,7 +79,7 @@
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img height='25' src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+							<img height='25' ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
 		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
@@ -98,7 +94,11 @@
 				</table>
 			</div> <!-- end of panel body -->
 		</div> 	<!-- end of panel -->				
-	</div> <!-- end of col 12 -->
+	</div> <!-- end of col 10 -->
+
+	<div style="display:inline;" class="col-md-2">
+		<img style="height:235px;"  ng-src="img/viewselectpicks.png">
+	</div> <!-- end of column -->
 </div> <!-- end of row -->
 </form>
 <!-- <div style="padding-bottom:350px;">&nbsp;</div> -->
