@@ -6,6 +6,8 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="short icon" href="img/ddd-url-img.ico" /> 
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/ui-grid-stable.css" rel="stylesheet">
@@ -15,7 +17,7 @@
 <link rel="stylesheet" href="app/dist/theme-fresh.css"> -->
 
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
-<link href="http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT|PT+Sans|Lusitana|Balthazar|Josefin+Sans" type="text/css" rel="stylesheet" >
+<link href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700'|Damion|Pacifico|Lusitana|Balthazar|Josefin+Sans" type="text/css" rel="stylesheet" >
 <link href="css/ddd.css" rel="stylesheet" />
 
 <!-- Vendor Libs -->
@@ -49,7 +51,6 @@
 <script src="script/ddd.js"></script>
 
 </head>
-
 <body style="background:white;" data-ng-controller="dddParentController" >
 
 <nav id="nav-bar-menu-bar" role="navigation" class="navbar navbar-default fixed">
@@ -67,20 +68,21 @@
         </div> -->
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
-    		<ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
                 <li class="menuItems"><a href="#/home">
-                <img style="height:130px;" class="" src="img/buttons/home.png">
+                <img style="vertical-align:middleheight:130px;" class="" src="img/buttons/home.png">
                 </a></li>
             </ul>
 
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img style="height:130px;" class="" src="img/buttons/game.png">
+                    <img class="img-responsive imgButtonNav" src="img/buttons/games.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="#/pickgames">Pick games for week</a></li>
-                        <li><a href="#/viewselectpickgames">View Select Player picks for week</a></li>
+                        <li><a href="#/pickgames">Pick your Winner for the Week's Games</a></li>
+                        <li><a href="#/viewselectpickgames">Each Player's picks for week</a></li>
+                        <li><a href="#/viewtotalpickgames">Total picks for week by Team</a></li>
                     </ul>
                 </li>
             </ul>
@@ -88,7 +90,7 @@
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img style="height:130px;" class="" src="img/buttons/memberstats.png">
+                    <img class="img-responsive imgButtonNav" src="img/buttons/memberstats.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/leaderboard">Leader Board</a></li>
@@ -100,7 +102,7 @@
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img style="height:130px;" class="" src="img/buttons/team.png">
+                    <img class="img-responsive imgButtonNav" src="img/buttons/team.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/teamstandings">Team Standings</a></li>
@@ -112,32 +114,33 @@
 
             <ul class="nav navbar-nav">
                 <li class="menuItems"><a href="#/halloffame">
-                <img style="height:130px;" src="img/buttons/halloffame.png">
+                <img class="img-responsive imgButtonNav" src="img/buttons/halloffame.png">
                 </a></li>
             </ul>
 
             <ul id="adminselect" class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img style="height:130px;" class="" src="img/buttons/admin.png">
+                    <img class="img-responsive imgButtonNav" src="img/buttons/admin.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation" class="disabled"><a style="color:teal;" href="">NFL Content</a></li>
+                        <li role="presentation" class="disabled"><a style="color:teal;" href="">NFL Content Services</a></li>
                         <li role="presentation" class="divider"></li>
                         <li><a href="#/teaminfo">Team Information</a></li>
                         <li><a href="#/gameinfo">Game Informtion</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation" class="disabled"><a style="color:teal;" href="">Player Information</a></li>
+                        <li role="presentation" class="disabled"><a style="color:teal;" href="">Player Services</a></li>
                         <li role="presentation" class="divider"></li>
                         <li><a href="#/addmember">Add New Player</a></li>
                         <li><a href="#/updatemember">Manage Player Information</a></li>
                         <li><a href="#/addavatar">Manage Player Avatar</a></li>
+                        <li><a href="#/sendplayeremail">Send Player eMail</a></li>
 
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation" class="disabled"><a style="color:teal;" href="">System</a></li>
+                        <li role="presentation" class="disabled"><a style="color:teal;" href="">System Services</a></li>
                          <li role="presentation" class="divider"></li>                        
-                        <li><a href="#/weeklybuilds">Weekly Builds</a></li>
+                        <li><a href="#/weeklybuilds">System Scripts</a></li>
                     </ul>
                 </li>
             </ul>
@@ -146,7 +149,7 @@
                 <li>
                     <div style="text-align:center;padding-top:30px;">
                     <a id="menubaravatarimage" name="menubaravatarimage" ng-click="">
-                    <img style="height:85px;" class="img-circle" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
+                    <img style="height:75px;" class="img-circle" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
                     </a>
                     <br />
                     <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
@@ -161,10 +164,10 @@
     </div> <!-- end of container fluid -->            
 </nav>
 
-<div style="padding-top:180px;" background:white;" data-ng-view="" class="topPagePosition"></div>
+<div id="ddd-view" style="padding-top:180px;" background:white;" data-ng-view="" class="topPagePosition"></div>
 
 <div class="ddd-footer">
-	<div class="container-fluid" style="padding-top:15px;">
+    <div class="container-fluid" style="padding-top:15px;">
         <div class="row">
             <div style="padding-left:15px;" class="col-md-6">
                 <div class="row">
@@ -184,7 +187,7 @@
                 <br />
                 Tarry Cutler
                 <br />
-                <a class="emailLink" href="mailto:tarrant.cutler@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">tarrant.cutler@gmail.com</a>
+                <a class="emailLink" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">daredevilducks.xyz@gmail.com</a>
                 <br />
                 Phone: 781-342-0204
             </div>
@@ -205,7 +208,7 @@
                 &nbsp;
             </div>
         </div> <!-- end of row -->
-	</div><!-- end of container top -->
+    </div><!-- end of container top -->
 </div> <!-- end of footer -->
 
 </body>

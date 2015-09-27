@@ -1870,3 +1870,255 @@ WHERE MS.season = '2015'  ORDER BY MS.wins DESC, M.membername ASC
 FROM memberstatstbl MS 
 LEFT JOIN membertbl M ON M.id = MS.memberid
 WHERE MS.season = '2015'  wrong argument passed 
+2015-09-26 23:02:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcoun' at line 35 - Error doing select to db Unable to get nfl game team picked information.
+2015-09-26 23:02:51 : SQL: SELECT
+  G.season as season,
+  G.week as week,
+  G.id as gameid,
+  G.gamenbr as gamenbr,
+  G.gamedate as gamedate,
+  G.gametime as gametime,
+  G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
+  G.networkid as networkid,
+  GN.network as network,
+  GN.networkiconname as networkiconname,
+  G.gametypeid as gametypeid,
+  G.hometeamid as hometeamid,
+  TH.name as hometeamname,
+  TH.location as hometeamlocation,  
+  TH.conference as homeconference,
+  TH.division as homedivision,
+  TH.teamiconname as hometeamiconname,
+  G.hometeamscore as hometeamscore,
+  G.awayteamid as awayteamid,
+  TA.name as awayteamname,
+  TA.location as awayteamlocation,  
+  TA.conference as awayconference,
+  TA.division as awaydivision,
+  TA.teamiconname as awayteamiconname,
+  G.awayteamscore as awayteamscore,
+  GT.gametype as gametype,
+  GW.weekstart as weekstart,
+  GW.weekend as weekend,
+  CASE 
+  WHEN GTH.teamcount IS NULL THEN 0
+  ELSE GTH.teamcount
+  END AS teamcounthome
+  CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcountaway
+FROM gamestbl G 
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTA ON G.awayteamid = GT.teamid
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTH ON G.awayteamid = GT.teamid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = 2015
+AND G.week = 3
+ORDER BY G.gamedatetime
+2015-09-26 23:03:56 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcoun' at line 35 - Error doing select to db Unable to get nfl game team picked information.
+2015-09-26 23:03:56 : SQL: SELECT
+  G.season as season,
+  G.week as week,
+  G.id as gameid,
+  G.gamenbr as gamenbr,
+  G.gamedate as gamedate,
+  G.gametime as gametime,
+  G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
+  G.networkid as networkid,
+  GN.network as network,
+  GN.networkiconname as networkiconname,
+  G.gametypeid as gametypeid,
+  G.hometeamid as hometeamid,
+  TH.name as hometeamname,
+  TH.location as hometeamlocation,  
+  TH.conference as homeconference,
+  TH.division as homedivision,
+  TH.teamiconname as hometeamiconname,
+  G.hometeamscore as hometeamscore,
+  G.awayteamid as awayteamid,
+  TA.name as awayteamname,
+  TA.location as awayteamlocation,  
+  TA.conference as awayconference,
+  TA.division as awaydivision,
+  TA.teamiconname as awayteamiconname,
+  G.awayteamscore as awayteamscore,
+  GT.gametype as gametype,
+  GW.weekstart as weekstart,
+  GW.weekend as weekend,
+  CASE 
+  WHEN GTH.teamcount IS NULL THEN 0
+  ELSE GTH.teamcount
+  END AS teamcounthome
+  CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcountaway
+FROM gamestbl G 
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTH ON G.awayteamid = GTH.teamid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = 2015
+AND G.week = 3
+ORDER BY G.gamedatetime
+2015-09-26 23:05:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcoun' at line 35 - Error doing select to db Unable to get nfl game team picked information.
+2015-09-26 23:05:36 : SQL: SELECT
+  G.season as season,
+  G.week as week,
+  G.id as gameid,
+  G.gamenbr as gamenbr,
+  G.gamedate as gamedate,
+  G.gametime as gametime,
+  G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
+  G.networkid as networkid,
+  GN.network as network,
+  GN.networkiconname as networkiconname,
+  G.gametypeid as gametypeid,
+  G.hometeamid as hometeamid,
+  TH.name as hometeamname,
+  TH.location as hometeamlocation,  
+  TH.conference as homeconference,
+  TH.division as homedivision,
+  TH.teamiconname as hometeamiconname,
+  G.hometeamscore as hometeamscore,
+  G.awayteamid as awayteamid,
+  TA.name as awayteamname,
+  TA.location as awayteamlocation,  
+  TA.conference as awayconference,
+  TA.division as awaydivision,
+  TA.teamiconname as awayteamiconname,
+  G.awayteamscore as awayteamscore,
+  GT.gametype as gametype,
+  GW.weekstart as weekstart,
+  GW.weekend as weekend,
+  CASE 
+  WHEN GTH.teamcount IS NULL THEN 0
+  ELSE GTH.teamcount
+  END AS teamcounthome
+  CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcountaway
+FROM gamestbl G 
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTH ON G.awayteamid = GTH.teamid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = 2015
+AND G.week = 3
+ORDER BY G.gamedatetime
+2015-09-26 23:05:52 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcoun' at line 35 - Error doing select to db Unable to get nfl game team picked information.
+2015-09-26 23:05:52 : SQL: SELECT
+  G.season as season,
+  G.week as week,
+  G.id as gameid,
+  G.gamenbr as gamenbr,
+  G.gamedate as gamedate,
+  G.gametime as gametime,
+  G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
+  G.networkid as networkid,
+  GN.network as network,
+  GN.networkiconname as networkiconname,
+  G.gametypeid as gametypeid,
+  G.hometeamid as hometeamid,
+  TH.name as hometeamname,
+  TH.location as hometeamlocation,  
+  TH.conference as homeconference,
+  TH.division as homedivision,
+  TH.teamiconname as hometeamiconname,
+  G.hometeamscore as hometeamscore,
+  G.awayteamid as awayteamid,
+  TA.name as awayteamname,
+  TA.location as awayteamlocation,  
+  TA.conference as awayconference,
+  TA.division as awaydivision,
+  TA.teamiconname as awayteamiconname,
+  G.awayteamscore as awayteamscore,
+  GT.gametype as gametype,
+  GW.weekstart as weekstart,
+  GW.weekend as weekend,
+  CASE 
+  WHEN GTH.teamcount IS NULL THEN 0
+  ELSE GTH.teamcount
+  END AS teamcounthome
+  CASE 
+  WHEN GTA.teamcount IS NULL THEN 0
+  ELSE GTA.teamcount
+  END AS teamcountaway
+FROM gamestbl G 
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 2015
+AND week = 3
+GROUP BY teamid) GTH ON G.awayteamid = GTH.teamid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = 2015
+AND G.week = 3
+ORDER BY G.gamedatetime

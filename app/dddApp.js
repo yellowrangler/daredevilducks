@@ -18,6 +18,12 @@ dddApp.config(function ($routeProvider) {
                 controller: 'viewselectpickgamesController',
                 templateUrl: 'app/partials/viewselectpickgames.html'
             }) 
+
+        .when('/viewtotalpickgames',
+            {
+                controller: 'viewtotalpickgamesController',
+                templateUrl: 'app/partials/viewtotalpickgames.html'
+            }) 
         .when('/leaderboard',
             {
                 controller: 'leaderboardController',

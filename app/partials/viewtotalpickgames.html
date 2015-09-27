@@ -1,6 +1,6 @@
 <div class="pageCaption row">
 	<div class="col-md-6">
-		<h2 class="headerTitle">Each Player's picks for week</h2>
+		<h2 class="headerTitle">Total picks for week by Team</h2>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
@@ -9,12 +9,6 @@
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
 			<div class="panel-body">
-				<div class="form-group horizontalFieldOffset">
-					<label for="memberid" class="control-label">Player</label>
-			        <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
-			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
-			        </select>
-				</div> <!-- end of form-group -->
 
 				<div class="form-group horizontalFieldOffset">
 			    	<label for="season" class="control-label">Season</label>
@@ -30,15 +24,6 @@
 		            </select>
 				</div> <!-- end of form-group --> 
 
-				<div style="padding-left:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
-		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
-				</div> <!-- end of form-group -->     
-
-				<div style="float:right; padding-right:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
-		            <div style="width:115px;text-align: enter;padding:5px;" class="teamSelected">Player Selected</div>
-		            <div style="width:115px;text-align:center;padding:5px;" class="teamWon">Winner</div>
-				</div> <!-- end of form-group -->   
-
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
 	</div> <!-- end of col 12 -->
@@ -52,11 +37,9 @@
 					<tr class="tableTitle">
 						<th>Game Day</th>			
 						<th>Home Team</th>
-						<th>Score</th>	
-						<th>W-L-T</th>								
+						<th>Picks</th>								
 						<th>Away Team</th>
-						<th>Score</th>
-						<th>W-L-T</th>						
+						<th>Picks</th>						
 					</tr>
 
 					<tr ng-repeat="game in games">
@@ -65,31 +48,19 @@
 							
 						</td>
 
-						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+						<td class="left-column-text">
 							<img height='25' ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
 		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 
-						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
+						<td class="center-column-text" >{{game.teamcounthome}}</td>
 
-						<td class="center-column-text">
-							   {{game.homewins}}-
-							   {{game.homelosses}}-
-							   {{game.hometies}}
-						</td>
-
-						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+						<td class="left-column-text">
 							<img height='25' ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
 		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
-						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
-
-						<td class="center-column-text">
-							   {{game.awaywins}}-
-							   {{game.awaylosses}}-
-							   {{game.awayties}}
-						</td>
+						<td class="center-column-text">{{game.teamcountaway}}</td>
 					</tr>
 				</table>
 			</div> <!-- end of panel body -->
@@ -97,7 +68,7 @@
 	</div> <!-- end of col 10 -->
 
 	<div style="display:inline;" class="col-md-2">
-		<img style="height:235px;"  ng-src="img/viewselectpicks.png">
+		<img style="height:125px;"  ng-src="img/ddd-totalpicks.png">
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 </form>

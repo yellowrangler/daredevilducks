@@ -827,13 +827,78 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
     };
 }
 
-controllers.teamstatsController = function ($scope, $http, $location, nflTeamsService) {
+controllers.viewtotalpickgamesController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
+
+    $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
+
+    function selectChange()
+    {
+        var data = "&week="+$scope.current.week+"&season="+$scope.current.season;
+
+        nflteamsFactory.getNFLGamesWeekMemberTeamPicks(data)
+            .success( function(data) {
+                $scope.games = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
 
     init();
     function init() {
-        
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+            $location.path("#home");
+    
+        $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+            .success( function(data) {
+                $scope.weeks = data; 
+
+                nflteamsFactory.getCurrentSeasonWeek()
+                    .success( function(data) {
+                        $scope.current.season = data.season; 
+                        $scope.current.week = data.week;  
+
+                        nflTeamsService.addCurrentWeek($scope.current.week);
+                        nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                        var q = "&week="+$scope.current.week+"&season="+$scope.current.season;
+                        nflteamsFactory.getNFLGamesWeekMemberTeamPicks(q)
+                            .success( function(data) {
+                                $scope.games = data; 
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });        
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });  
+            })
+            .error( function(edata) {
+                alert(edata);
+            });      
     };
+
+    $scope.getMemberWeekPicks = function() {
+        selectChange();
+    }
+
 }
+
+controllers.teamstatsController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
+
+
+    init();
+    function init() {
+           
+    };
+
+}
+
 
 controllers.addmemberController = function ($scope, $http, $location, membersFactory) {
     init();

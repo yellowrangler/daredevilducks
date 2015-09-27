@@ -99,6 +99,15 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNFLGamesWeekMemberTeamPicks = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnflgameweekmemberteampicks.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLGametypes = function () {
         return $http({ 
             method: 'POST', 
