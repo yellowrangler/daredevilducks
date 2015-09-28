@@ -186,36 +186,6 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         return status;
     }
 
-    function compareScores(venue, homescore, awayscore)
-    {
-        var result = false;
-
-        var homescoreNbr = parseInt(homescore);
-        var awayscoreNbr = parseInt(awayscore);
-
-        if (venue == "home")
-        {
-            if (homescoreNbr > awayscoreNbr)
-            {
-                result = true;
-            }
-        }
-        else if (venue == "away")
-        {
-            if (awayscoreNbr > homescoreNbr)
-            {
-                result = true;
-            }
-
-        }
-        else
-        {
-            alert ("No venue");
-        }
-
-        return result;
-    }
-
     //
     // if checked turn this red
     //
@@ -469,36 +439,6 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .error( function(edata) {
                 alert(edata);
             });
-    }
-
-    function compareScores(venue, homescore, awayscore)
-    {
-        var result = false;
-
-        var homescoreNbr = parseInt(homescore);
-        var awayscoreNbr = parseInt(awayscore);
-
-        if (venue == "home")
-        {
-            if (homescoreNbr > awayscoreNbr)
-            {
-                result = true;
-            }
-        }
-        else if (venue == "away")
-        {
-            if (awayscoreNbr > homescoreNbr)
-            {
-                result = true;
-            }
-
-        }
-        else
-        {
-            alert ("No venue");
-        }
-
-        return result;
     }
 
     init();
@@ -885,6 +825,14 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
 
     $scope.getMemberWeekPicks = function() {
         selectChange();
+    }
+
+    $scope.compareScores = function (venue, homescore, awayscore) {
+        var status = "";
+
+        status = compareScores(venue, homescore, awayscore);
+
+        return status;
     }
 
 }

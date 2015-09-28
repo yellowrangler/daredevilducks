@@ -66,3 +66,33 @@ function getCurrentDateTimeStr()
 
 	return todayStr;
 }
+
+function compareScores(venue, homescore, awayscore)
+{
+    var result = false;
+
+    var homescoreNbr = parseInt(homescore);
+    var awayscoreNbr = parseInt(awayscore);
+
+    if (venue == "home")
+    {
+        if (homescoreNbr > awayscoreNbr)
+        {
+            result = true;
+        }
+    }
+    else if (venue == "away")
+    {
+        if (awayscoreNbr > homescoreNbr)
+        {
+            result = true;
+        }
+
+    }
+    else
+    {
+        alert ("No venue");
+    }
+
+    return result;
+}
