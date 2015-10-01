@@ -79,7 +79,25 @@ losses as teamlosses,
 ties as teamties,
 totalgames as teamtotalgames,
 percent as teampercent,
-ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
 FROM teamstbl tt
 LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 WHERE ts.season = '$season'

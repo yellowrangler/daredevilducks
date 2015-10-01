@@ -2126,3 +2126,71 @@ ORDER BY G.gamedatetime
 2015-09-27 19:43:10 : SQL: SELECT id AS memberid,screenname,membername,avatar,passwd,role,status FROM membertbl WHERE screenname = 'Àlaskan fisherman'
 2015-09-27 19:47:04 : SQL error: Illegal mix of collations (big5_chinese_ci,IMPLICIT) and (latin1_swedish_ci,COERCIBLE) for operation '=' - Error doing select to db Unable to login for ddd membername .
 2015-09-27 19:47:04 : SQL: SELECT id AS memberid,screenname,membername,avatar,passwd,role,status FROM membertbl WHERE screenname = 'Àlaskan fisherman'
+2015-09-30 23:45:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'screenname ASC' at line 15 - Error doing select to db Unable to get member weekly stat information.
+2015-09-30 23:45:42 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season = 2015 AND MS.week = 4
+ORDER BY wins DESC screenname ASC
+2015-10-01 03:59:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-10-01 03:59:36 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-10-01 03:59:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-10-01 03:59:36 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-10-01 04:03:03 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'wrong argument passed' at line 20 - Error doing select to db Unable to get nfl game team information.
+2015-10-01 04:03:03 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as week,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.playerpickedgames as playerpickedgames,
+  MS.totalgamespercent as totalgamespercent,
+  MS.playerpickedpercent as playerpickedpercent,
+  CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = ''  wrong argument passed 
+2015-10-01 04:10:23 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY MS.wins DESC, M.screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-10-01 04:10:23 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY MS.wins DESC, M.screenname ASC

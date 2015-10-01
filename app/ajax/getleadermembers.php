@@ -85,15 +85,15 @@ WHERE MS.season = '$season' ";
 
 if ($leaderType == 'pickingpercent')
 {
-  $sql = $sql . " ORDER BY MS.playerpickedpercent DESC, M.membername ASC ";
+  $sql = $sql . " ORDER BY MS.playerpickedpercent DESC, M.screenname ASC ";
 }
 elseif ($leaderType == 'totalpercent')
 {
-  $sql = $sql . " ORDER BY MS.totalgamespercent DESC, M.membername ASC ";
+  $sql = $sql . " ORDER BY MS.totalgamespercent DESC, M.screenname ASC ";
 }
 elseif ($leaderType == 'wins')
 {
-  $sql = $sql . " ORDER BY MS.wins DESC, M.membername ASC ";
+  $sql = $sql . " ORDER BY MS.wins DESC, M.screenname ASC ";
 }
 else
 {

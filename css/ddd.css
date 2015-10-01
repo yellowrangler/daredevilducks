@@ -163,9 +163,13 @@
 	font-size: 17px;
 }
 
-.tableItems tr {
-	border-bottom: 1px solid lightgrey;
+.tableItems {
+	width:100%;
 }
+
+/*.tableItems tr {
+	border-bottom: 1px solid lightgrey;
+}*/
 
 .tableItems tr td {
 	padding:3px;
@@ -175,8 +179,33 @@
 .tableItems tr th {
 	padding:3px;
 	font-size: 14px;
-	color:white;
+	color:black;
 	text-align: center;
+	border-bottom: 1px solid lightgrey;
+}
+
+.teamTitleSpacing {
+	height:10px;
+	width:100%;
+	background:white;
+}
+
+.teamTitleConf {
+	color:white;
+	padding-left:10px;
+	font-size: 24px;
+	font-style: italic;
+	font-variant: small-caps;
+	letter-spacing: 3px;
+}
+
+.teamTitleDiv {
+	color:white;
+	padding-left:10px;
+	font-size: 18px;
+	font-style: italic;
+	font-variant: small-caps;
+	letter-spacing: 2px;
 }
 
 .afctitle  {

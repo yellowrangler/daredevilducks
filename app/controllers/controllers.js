@@ -24,6 +24,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
         getAvatar();
         loginService.setAvatarLabel("menubaravatar",0);
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);
