@@ -34,16 +34,15 @@
 			<div style="background-color:#058689;border:2px;solid #055659;color:white;text-align:center;" class="panel-heading">
 				<h3 class="panel-title">Total Games Won Leader</h3>
 			</div>
-			<div class="panel-body">
-				<table class="leaderBoardTable" >
+			<div class="panel-body table-responsive">
+				<table class="table leaderBoardTable">
 					<tr>
-						<th style="padding-right:15px;">Position</th>
+						<th style="padding-right:15px;">Rank</th>
 						<th colspan="2">Leader</th>				
-						<th>W -</th>
-						<th>L -</th>
-						<th style="padding-right:15px;">T </th>
-						<th>Totals</th>
-					<!-- 	<th>Percent</th>		 -->		
+						<th style="width:25px;">W</th>
+						<th style="width:25px;">L</th>
+						<th style="width:25px;">T</th>
+						<th>Totals</th>	
 					</tr>
 
 					<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
@@ -53,15 +52,14 @@
 
 						<td class="left-column-text">{{memberseasonwinstats.screenname}}</td>
 
-						<td class="center-column-text">{{memberseasonwinstats.wins}} -</td>
+						<td class="center-column-text">{{memberseasonwinstats.wins}} </td>
 						
-						<td class="center-column-text">{{memberseasonwinstats.losses}} -</td>
+						<td class="center-column-text">{{memberseasonwinstats.losses}} </td>
 
-						<td style="padding-right:15px;" class="center-column-text">{{memberseasonwinstats.ties}}</td>
+						<td class="center-column-text">{{memberseasonwinstats.ties}}</td>
 
 						<td class="center-column-text">{{memberseasonwinstats.totalgames}}</td>
 
-						<!-- <td class="center-column-text">{{memberseasonwinstats.showpercent}}</td> -->
 					</tr>
 				</table>
 			</div>
@@ -77,7 +75,7 @@
 			</div>	
 		</div>
 		
-		<div style='padding-top:1220px;' class="row">
+		<div style='padding-top:1700px;' class="row">
 			<div class="col-md-12">
 				<div>
 					<img style="height:160px;" align="center" src='img/lb-bottom.png'>
@@ -91,12 +89,13 @@
 			<div style="background-color:#058689;border:2px solid #055659;color:white;text-align:center;" class="panel-heading">
 				<h3 class="panel-title">Total Percentage Leader</h3>
 			</div>
-			<div id="percentPanelBody" class="panel-body">
-				<table class="leaderBoardTable" >
+			<div id="percentPanelBody" class="panel-body table-responsive">
+				<table class="table leaderBoardTable" >
 					<tr>
-						<th style="padding-right:15px;">Position</th>
+						<th style="padding-right:15px;">Rank</th>
 						<th colspan="2">Leader</th>				
-						<th>Percent</th>				
+						<th>Percent</th>
+						<th>Games</th>				
 					</tr>
 
 					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
@@ -107,6 +106,8 @@
 						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
 
 						<td class="center-column-text">{{memberseasonpercentstat.showplayerpickedpercent}}</td>
+
+						<td class="center-column-text">{{memberseasonpercentstat.playerpickedgames}}</td>
 					</tr>
 				</table>
 			</div>

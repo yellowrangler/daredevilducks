@@ -36,8 +36,8 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-8">
 		<div class="panel panel-default panelOverride">
-			<div class="panel-body">
-				<table class="pickGameTable" >
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
 					<tr class="tableTitle">
 						<th>Game Day</th>			
 						<th>Home Team</th>
@@ -53,14 +53,14 @@
 						</td>
 
 						<td class="left-column-text">
-							<img height='25' ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
 		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 
 						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcounthome}}</td>
 
 						<td class="left-column-text">
-							<img height='25' ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
 		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 

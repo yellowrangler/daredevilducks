@@ -93,6 +93,11 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
      
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
         
     };
 
@@ -152,6 +157,12 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
         var loggedIn = loginService.isLoggedIn();
         if (loggedIn)
             $("#loginHomeButton").hide();
@@ -323,6 +334,12 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
             $location.path("#home");
@@ -449,6 +466,12 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
             $location.path("#home");
@@ -524,6 +547,12 @@ controllers.viewallpicksController = function ($scope, $http, $location, nflTeam
     
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         $scope.teams = nflTeamsService.getNFLTeams(); 
     };
 }
@@ -546,6 +575,12 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         nflteamsFactory.getNFLTeamstats($scope.current.season)
             .success( function(data) {
                 $scope.teamstats = data; 
@@ -658,6 +693,12 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
             $location.path("#home");
@@ -717,6 +758,12 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
             $location.path("#home");
@@ -769,6 +816,11 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
         
     };
 }
@@ -793,6 +845,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
             $location.path("#home");
@@ -848,6 +906,11 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
            
     };
 
@@ -857,7 +920,12 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 controllers.addmemberController = function ($scope, $http, $location, membersFactory) {
     init();
     function init() {
-      
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
     };
 
     $scope.addnewmember = function() {
@@ -897,6 +965,12 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         $scope.current.avatar = "default.png";
 
         membersFactory.getMembers()
@@ -972,6 +1046,12 @@ controllers.updatememberController = function ($scope, $http, $location, members
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         membersFactory.getMembers()
             .success( function(data) {
                 $scope.members = data; 
@@ -1058,6 +1138,12 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
        $scope.gridOptionsTeams = {
             showGridFooter: true,
             // showColumnFooter: true,
@@ -1163,6 +1249,11 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location) 
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
 
   }
 
@@ -1175,6 +1266,12 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         // get nfl team data
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
@@ -1446,6 +1543,12 @@ controllers.weeklybuildsController = function ($scope, $http, $location, nflteam
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
         $scope.current.gametypeid = 2;
         $scope.current.weeksinseason = 17;
         $scope.current.season = nflTeamsService.getCurrentSeason();   
@@ -1529,6 +1632,12 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
         membersFactory.getMembers()
             .success( function(data) {
                 $scope.members = data; 

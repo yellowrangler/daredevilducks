@@ -2,9 +2,6 @@
 	<div class="col-md-6">
 		<h2 class="headerTitle">Pick Your Teams for the Week's Games</h2>
 
-	<!-- 	<div style="padding-top:60px;; ">
-			<img style="display:inline; height:100px; float:right;"  src="img/dddpickteams.png">
-		</div> -->
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
@@ -13,6 +10,7 @@
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
 			<div class="panel-body">
+
 				<div class="form-group horizontalFieldOffset">
 					<label for="memberid" class="control-label">Player</label>
 			        <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
@@ -33,19 +31,19 @@
 		                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 		            </select>
 				</div> <!-- end of form-group -->  
-
-				<div style="padding-left:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
-		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
-				</div> <!-- end of form-group -->      
-
-				<div style="padding-left:50px;"class="form-group">
+			
+				<div style="padding-left:50px;"class="form-group horizontalFieldOffset">
 	                <button  class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Picks</button>
 				</div> <!-- end of form-group --> 
 
-				<div style="float:right; padding-right:45px; padding-top:15px;" class="form-group horizontalFieldOffset">
+				<div style="padding-left:45px;" class="form-group horizontalFieldOffset">
 		            <div style="width:80px;text-align:center;padding:5px;" class="teamWon">Winner</div>
 				</div> <!-- end of form-group -->      
-
+					
+				<div style="float:right; padding-right:15px; display:inline;" class="form-group">
+		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+				</div> <!-- end of form-group -->      
+	
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
 	</div> <!-- end of col 12 -->
@@ -54,24 +52,31 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
-			<div class="panel-body">
-				<table class="pickGameTable" >
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
 					<tr class="tableTitle">
-						<th>Game Day</th>
+						<th colspan=2>Game Day</th>
 						<th>Pick</th>				
 						<th>Home Team</th>
 						<th>Score</th>						
-						<th>W-L-T</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>
 						<th>Pick</th>				
 						<th>Away Team</th>
 						<th>Score</th>
-						<th>W-L-T</th>						
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>						
 					</tr>
 
 					<tr ng-repeat="game in games">
 						<td class="left-column-text">
-							<img height='25' style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'> &nbsp; {{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}}
-							
+							<img height="45" style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'>
+						</td>
+
+						<td class="left-column-text">
+							 {{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}}
 						</td>
 
 						<td class="center-column-text">
@@ -79,33 +84,44 @@
 						</td>
 
 						<td>
-							<img height='25' ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
 		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 						
 						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
 
-						<td>
-							   {{game.homewins}} -
-							   {{game.homelosses}} -
-							   {{game.hometies}}
+						<td class="center-column-text">
+							   {{game.homewins}}
 						</td>
 
+						<td class="center-column-text">
+							   {{game.homelosses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.hometies}}
+						</td>
 
 						<td class="center-column-text">
 						    <input  ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
 						<td>
-							<img height='25' ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
 		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
 						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
 
 						<td class="center-column-text">
-							   {{game.awaywins}} - 
-							   {{game.awaylosses}} -
+							   {{game.awaywins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.awaylosses}}
+						</td>
+
+						<td class="center-column-text">
 							   {{game.awayties}}
 						</td>
 					</tr>

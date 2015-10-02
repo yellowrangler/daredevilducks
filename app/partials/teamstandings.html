@@ -42,48 +42,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'East'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 
 			<tr>
@@ -106,48 +106,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'North'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 
 			<tr>
@@ -170,48 +170,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'South'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 
 			<tr>
@@ -234,48 +234,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'West'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 		</table>
 
@@ -283,8 +283,8 @@
 </div> <!-- end of row -->
 
 <div style="padding-top:25px;" class="col-md-12"> 
-  <div class="col-md-12">
-		<table class="tableItems">
+  <div class="col-md-12 table-responsive">
+		<table class="table tableItems">
 			<tr>
 				<td colspan=17>
 					<div class="nfctitle teamTitleConf">
@@ -309,48 +309,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'East'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 
 			<tr>
@@ -373,48 +373,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'North'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 
 			<tr>
@@ -437,48 +437,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'South'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 
 			<tr>
@@ -501,48 +501,48 @@
 
 			<tr>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Ties</th>
+				<th>W</th>
+				<th>L</th>
+				<th>T</th>
 				<th>Percent</th>
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'West'}" >
-				<td><img height="25" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
-				<td style="text-align: right;">{{teamstat.teamwins}}</td>
-				<td style="text-align: right;">{{teamstat.teamlosses}}</td>
-				<td style="text-align: right;">{{teamstat.teamties}}</td>		
-				<td style="text-align: right;">{{teamstat.percentdisplay}}%</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td class="center-column-text">{{teamstat.teamwins}}</td>
+				<td class="center-column-text">{{teamstat.teamlosses}}</td>
+				<td class="center-column-text">{{teamstat.teamties}}</td>		
+				<td class="right-column-text">{{teamstat.percentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.homewins}}</td>
-				<td style="text-align: right;">{{teamstat.homelosses}}</td>
-				<td style="text-align: right;">{{teamstat.hometies}}</td>
-				<td style="text-align: right;">{{teamstat.homepercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.homewins}}</td>
+				<td class="center-column-text">{{teamstat.homelosses}}</td>
+				<td class="center-column-text">{{teamstat.hometies}}</td>
+				<td class="right-column-text">{{teamstat.homepercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.awaywins}}</td>
-				<td style="text-align: right;">{{teamstat.awaylosses}}</td>
-				<td style="text-align: right;">{{teamstat.awayties}}</td>
-				<td style="text-align: right;">{{teamstat.awaypercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.awaywins}}</td>
+				<td class="center-column-text">{{teamstat.awaylosses}}</td>
+				<td class="center-column-text">{{teamstat.awayties}}</td>
+				<td class="right-column-text">{{teamstat.awaypercentdisplay}}%</td>
 
-				<td style="text-align: right;">{{teamstat.confwins}}</td>
-				<td style="text-align: right;">{{teamstat.conflosses}}</td>
-				<td style="text-align: right;">{{teamstat.confties}}</td>
-				<td style="text-align: right;">{{teamstat.confpercentdisplay}}%</td>
+				<td class="center-column-text">{{teamstat.confwins}}</td>
+				<td class="center-column-text">{{teamstat.conflosses}}</td>
+				<td class="center-column-text">{{teamstat.confties}}</td>
+				<td class="right-column-text">{{teamstat.confpercentdisplay}}%</td>
 			</tr>
 		</table>
 

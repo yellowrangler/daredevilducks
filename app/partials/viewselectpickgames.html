@@ -4,11 +4,12 @@
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
-<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">
+<form id="pickweekForm" name="pickweekForm" class="form-inline">
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
 			<div class="panel-body">
+
 				<div class="form-group horizontalFieldOffset">
 					<label for="memberid" class="control-label">Player</label>
 			        <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
@@ -30,14 +31,14 @@
 		            </select>
 				</div> <!-- end of form-group --> 
 
-				<div style="padding-left:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
-		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
-				</div> <!-- end of form-group -->     
-
-				<div style="float:right; padding-right:45px; padding-top:5px; display:inline;" class="form-group horizontalFieldOffset">
+				<div style="padding-left:45px;" class="form-group horizontalFieldOffset">
 		            <div style="width:115px;text-align: enter;padding:5px;" class="teamSelected">Player Selected</div>
 		            <div style="width:115px;text-align:center;padding:5px;" class="teamWon">Winner</div>
 				</div> <!-- end of form-group -->   
+
+				<div style="float:right; padding-right:15px; display:inline;" class="form-group">
+		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+				</div> <!-- end of form-group -->     
 
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
@@ -47,8 +48,8 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-10">
 		<div class="panel panel-default panelOverride">
-			<div class="panel-body">
-				<table class="pickGameTable" >
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
 					<tr class="tableTitle">
 						<th>Game Day</th>			
 						<th>Home Team</th>
@@ -66,7 +67,7 @@
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img height='25' ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
+							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
 		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 
@@ -79,7 +80,7 @@
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img height='25' ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
+							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
 		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 

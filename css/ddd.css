@@ -69,17 +69,17 @@
 
 .center-column-text {
 	text-align: center; 
-	vertical-align: middle;
+	vertical-align:middle;
 }
 
 .left-column-text {
 	text-align: left; 
-	vertical-align: middle;
+	vertical-align:middle;
 }
 
 .right-column-text {
 	text-align: right; 
-	vertical-align: middle;
+	vertical-align:middle;
 }
 
 .pickGameTable  {
@@ -95,6 +95,7 @@
 	padding-top:20px;
 	padding: 3px;  
 	width:100%;
+	font-size: 18px;
 }
 
 .MemberWeeklyTable img {
@@ -107,6 +108,7 @@
 
 .leaderBoardTable  {
 	width: 100%; 
+	font-size: 16px;
 }
 
 .leaderBoardTable img {
@@ -115,6 +117,10 @@
 
 .leaderBoardTable th {
 	text-align: center; 
+}
+
+.leaderBoardTable tr {
+	border-top: none !important;
 }
 
 .teamSelected  {
@@ -173,12 +179,12 @@
 
 .tableItems tr td {
 	padding:3px;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .tableItems tr th {
 	padding:3px;
-	font-size: 14px;
+	font-size: 18px;
 	color:black;
 	text-align: center;
 	border-bottom: 1px solid lightgrey;
@@ -232,6 +238,9 @@
 	width:20%;
 }
 
+.hallFameParagraph {
+	font-size: 18px;
+}
 
 /*banner stuff*/
 .bannerText  {
