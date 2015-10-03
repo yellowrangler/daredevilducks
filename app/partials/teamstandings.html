@@ -19,7 +19,7 @@
 	<div class="col-md-12">
 		<table class="tableItems">
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="afctitle teamTitleConf">
 						<span>American Football Conference</span>
 					</div>
@@ -41,7 +41,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -64,7 +64,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'East'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -87,7 +88,7 @@
 			</tr>
 
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="teamTitleSpacing"></div>
 
 					<div class="afctitle teamTitleDiv">
@@ -105,7 +106,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -128,7 +129,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'North'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -151,7 +153,7 @@
 			</tr>
 
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="teamTitleSpacing"></div>
 
 					<div class="afctitle teamTitleDiv">
@@ -169,7 +171,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -192,7 +194,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'South'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -215,7 +218,7 @@
 			</tr>
 
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="teamTitleSpacing"></div>
 
 					<div class="afctitle teamTitleDiv">
@@ -233,7 +236,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -256,7 +259,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'West'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -286,7 +290,7 @@
   <div class="col-md-12 table-responsive">
 		<table class="table tableItems">
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="nfctitle teamTitleConf">
 						<span>National Football Conference</span>
 					</div>
@@ -308,7 +312,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -331,7 +335,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'East'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -354,7 +359,7 @@
 			</tr>
 
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="teamTitleSpacing"></div>
 
 					<div class="nfctitle teamTitleDiv">
@@ -372,7 +377,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -395,7 +400,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'North'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -418,7 +424,7 @@
 			</tr>
 
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="teamTitleSpacing"></div>
 
 					<div class="nfctitle teamTitleDiv">
@@ -436,7 +442,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -459,7 +465,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'South'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		
@@ -482,7 +489,7 @@
 			</tr>
 
 			<tr>
-				<td colspan=17>
+				<td colspan=18>
 					<div class="teamTitleSpacing"></div>
 
 					<div class="nfctitle teamTitleDiv">
@@ -500,7 +507,7 @@
 			</tr>
 
 			<tr>
-				<th>Team</th>
+				<th colspan=2>Team</th>
 				<th>W</th>
 				<th>L</th>
 				<th>T</th>
@@ -523,7 +530,8 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'West'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"> {{teamstat.teamlocation}} {{teamstat.teamname}}</td>
+				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
 				<td class="center-column-text">{{teamstat.teamties}}</td>		

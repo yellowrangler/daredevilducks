@@ -57,13 +57,13 @@
 					<tr class="tableTitle">
 						<th colspan=2>Game Day</th>
 						<th>Pick</th>				
-						<th>Home Team</th>
+						<th colspan=2>Home Team</th>
 						<th>Score</th>						
 						<th>W</th>
 						<th>L</th>
 						<th>T</th>
 						<th>Pick</th>				
-						<th>Away Team</th>
+						<th colspan=2>Away Team</th>
 						<th>Score</th>
 						<th>W</th>
 						<th>L</th>
@@ -84,8 +84,11 @@
 						</td>
 
 						<td>
-							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
-		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+						</td>
+
+						<td>
+							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 						
 						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
@@ -107,8 +110,11 @@
 						</td>
 
 						<td>
-							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
-		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+						</td>
+
+						<td>
+							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
 						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>

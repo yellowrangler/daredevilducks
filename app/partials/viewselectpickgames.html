@@ -52,43 +52,64 @@
 				<table class="table pickGameTable" >
 					<tr class="tableTitle">
 						<th>Game Day</th>			
-						<th>Home Team</th>
+						<th colspan=2>Home Team</th>
 						<th>Score</th>	
-						<th>W-L-T</th>								
-						<th>Away Team</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>								
+						<th colspan=2>Away Team</th>
 						<th>Score</th>
-						<th>W-L-T</th>						
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>						
 					</tr>
 
 					<tr ng-repeat="game in games">
 						<td class="left-column-text">
 							{{game.gamedate}} &nbsp; {{game.gameday}}
-							
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'> &nbsp; 
-		                    {{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+						</td>
+
+						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 
 						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
 
 						<td class="center-column-text">
-							   {{game.homewins}}-
-							   {{game.homelosses}}-
+							   {{game.homewins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.homelosses}}
+						</td>
+
+						<td class="center-column-text">
 							   {{game.hometies}}
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'> &nbsp; 
-		                    {{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+						</td>
+
+						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
 						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
 
 						<td class="center-column-text">
-							   {{game.awaywins}}-
-							   {{game.awaylosses}}-
+							   {{game.awaywins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.awaylosses}}
+						</td>
+
+						<td class="center-column-text">
 							   {{game.awayties}}
 						</td>
 					</tr>

@@ -1,5 +1,5 @@
 <div class="pageCaption row">
-	<div class="col-md-3">
+	<div class="col-md-12">
 		<h2 class="headerTitle">Leader Board</h2> 
 	</div> <!-- end of col -->
 </div> <!-- end of row -->
@@ -14,13 +14,6 @@
 		            <select class="form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.season" id="season" name="season">
 		                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
 		            </select>
-
-		           <!--  <label style="padding-left:50px;" for="gametype" class="control-label">Game Type </label>
-		            <select class="form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.gametypeid" id="gametype" name="gametype">
-		                <option ng-repeat="gametype in gametypes" 
-		                		ng-selected="{{current.gametypeid == gametype.id}}" 
-		                		value="{{gametype.id}}">{{gametype.gametype}}</option>
-		            </select> -->
 				</div> <!-- end of form-group -->
 			</div> <!-- end of panel body -->				
 		</div> <!-- end of panel -->
@@ -30,14 +23,15 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-5">
-		<div class="panel panel-default panelOverride">
+		<div class="panel panel-default">
 			<div style="background-color:#058689;border:2px;solid #055659;color:white;text-align:center;" class="panel-heading">
 				<h3 class="panel-title">Total Games Won Leader</h3>
 			</div>
-			<div class="panel-body table-responsive">
+			<div class="panel-body">
+				<div class="table-responsive">
 				<table class="table leaderBoardTable">
 					<tr>
-						<th style="padding-right:15px;">Rank</th>
+						<th>Rank</th>
 						<th colspan="2">Leader</th>				
 						<th style="width:25px;">W</th>
 						<th style="width:25px;">L</th>
@@ -62,8 +56,9 @@
 
 					</tr>
 				</table>
-			</div>
-		</div>
+				</div> <!-- end of responsive -->
+			</div> <!-- end of panel body -->
+		</div> <!-- end of panel -->
 	</div> <!-- end of col-5 -->
 
 	<div class="col-md-2">
@@ -84,12 +79,13 @@
 		</div>
 	</div> <!-- end of col-2 -->
 
-	<div style="float:right; padding-right:15px;" class="col-md-5">
-		<div class="panel panel-default panelOverride">
+	<div style="float:right;" class="col-md-5">
+		<div class="panel panel-default ">
 			<div style="background-color:#058689;border:2px solid #055659;color:white;text-align:center;" class="panel-heading">
 				<h3 class="panel-title">Total Percentage Leader</h3>
 			</div>
-			<div id="percentPanelBody" class="panel-body table-responsive">
+			<div id="percentPanelBody" class="panel-body">
+				<div class=" table-responsive">
 				<table class="table leaderBoardTable" >
 					<tr>
 						<th style="padding-right:15px;">Rank</th>
@@ -110,8 +106,9 @@
 						<td class="center-column-text">{{memberseasonpercentstat.playerpickedgames}}</td>
 					</tr>
 				</table>
-			</div>
-		</div>
+				</div> <!-- end of responsive -->
+			</div> <!-- end of panel body -->
+		</div> <!-- end of panel -->
 	</div> <!-- end of col-5 -->
 </div> <!-- end of row -->
 

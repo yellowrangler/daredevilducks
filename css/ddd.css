@@ -111,6 +111,11 @@
 	font-size: 16px;
 }
 
+/* this is a hack fix to bootstrap table responsive issue */
+.table-responsive {
+	overflow-x: auto;
+}
+
 .leaderBoardTable img {
 	padding:3px;
 }
@@ -120,13 +125,13 @@
 }
 
 .leaderBoardTable tr {
-	border-top: none !important;
+	border-top: none;
 }
 
 .teamSelected  {
 	background-color: maroon;
 	color:white; 
-	border:1px solid white;
+	border:1px solid maroon;
 }
 
 .teamWon  {
