@@ -80,14 +80,14 @@
 						</td>
 
 						<td class="center-column-text">
-						    <input  ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
+						    <input ng-model="game.teamselected" ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
-						<td>
+						<td ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'>
 						</td>
 
-						<td>
+						<td ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 						
@@ -106,14 +106,14 @@
 						</td>
 
 						<td class="center-column-text">
-						    <input  ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
+						    <input ng-model="game.teamselected" ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
-						<td>
+						<td ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'>
 						</td>
 
-						<td>
+						<td ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 

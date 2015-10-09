@@ -2302,3 +2302,10 @@ LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
 WHERE G.season = 
 AND G.week = 
 ORDER BY G.gamedatetime
+2015-10-09 11:11:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-10-09 11:11:33 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC

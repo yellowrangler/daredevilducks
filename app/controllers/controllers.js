@@ -435,6 +435,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     $scope.checkPick = function (gameid, location) {
         checkPick(gameid, location);
     }
+    
 }
 
 controllers.viewselectpickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
