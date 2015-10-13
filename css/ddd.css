@@ -143,6 +143,15 @@
 	border-top: none;
 }
 
+.leaderBoardPanelTitle {
+	color:white;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-weight: 700;
+	text-align:center; 
+	font-size: 26px;
+}
+
+
 .teamSelected  {
 	background-color: maroon;
 	color:white; 
