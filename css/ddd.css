@@ -7,6 +7,21 @@
 	font-weight: 700;
 }
 
+.siteDownTitle {
+	color:#6C0000;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-weight: 700;
+	text-align:center; 
+}
+
+.siteDownText p {
+	color:#6C0000;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-weight: 700;
+	text-align:center; 
+	font-size:18px;
+}
+
 .imgButtonNav {
 	width:80%; 
 	height:80%;

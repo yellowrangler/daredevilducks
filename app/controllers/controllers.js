@@ -307,6 +307,18 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
             .error( function(edata) {
                 alert(edata);
             });
+
+        //
+        // get bye teams
+        //
+        var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+        nflteamsFactory.getNFLByeWeekMemberTeams(q)
+            .success( function(data) {
+                $scope.byegames = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });       
     }
 
     function saveGames() {
@@ -374,7 +386,6 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                 alert(edata);
             }); 
 
-        var y = 1;
     }
 
     init();
@@ -410,6 +421,18 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                             nflTeamsService.addCurrentWeek($scope.current.week);
                             nflTeamsService.addCurrentSeason($scope.current.season);
 
+                            //
+                            // get bye teams
+                            //
+                            var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                            nflteamsFactory.getNFLByeWeekMemberTeams(q)
+                                .success( function(data) {
+                                    $scope.byegames = data; 
+                                })
+                                .error( function(edata) {
+                                    alert(edata);
+                                });       
+
                             $scope.current.memberid = $scope.current.memberlogin.memberid;
                             var memberid = "memberid="+$scope.current.memberid;
                             membersFactory.getMember(memberid)
@@ -423,11 +446,12 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                                         })
                                         .error( function(edata) {
                                             alert(edata);
-                                        });      
+                                        });   
                                 })
                                 .error( function(edata) {
                                     alert(edata);
-                                });                   
+                                });  
+
                         })
                         .error( function(edata) {
                             alert(edata);
@@ -508,6 +532,18 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .error( function(edata) {
                 alert(edata);
             });
+
+        //
+        // get bye teams
+        //
+        var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+        nflteamsFactory.getNFLByeWeekMemberTeams(q)
+            .success( function(data) {
+                $scope.byegames = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
     }
 
     init();
@@ -542,6 +578,18 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
 
                         nflTeamsService.addCurrentWeek($scope.current.week);
                         nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                        //
+                        // get bye teams
+                        //
+                        var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                        nflteamsFactory.getNFLByeWeekMemberTeams(q)
+                            .success( function(data) {
+                                $scope.byegames = data; 
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            }); 
 
                         $scope.current.memberid = $scope.current.memberlogin.memberid;
                         var memberid = "memberid="+$scope.current.memberid;

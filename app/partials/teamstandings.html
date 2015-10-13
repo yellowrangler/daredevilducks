@@ -34,7 +34,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -64,7 +64,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'East'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -99,7 +103,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -129,7 +133,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'North'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -164,7 +172,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -194,7 +202,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'South'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -229,7 +241,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -259,7 +271,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'AFC', division: 'West'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -305,7 +321,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -335,7 +351,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'East'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -370,7 +390,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -400,7 +420,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'North'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -435,7 +459,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -465,7 +489,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'South'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -500,7 +528,7 @@
 
 			<tr>
 				<th>&nbsp;</th>
-				<th colspan=4>Overall Record</th>
+				<th colspan=5>Overall Record</th>
 				<th colspan=4>Home Record</th>
 				<th colspan=4>Away Record</th>
 				<th colspan=4>Conference Record</th>
@@ -530,7 +558,11 @@
 			</tr>
 
 			<tr data-ng-repeat="teamstat in teamstats | filter: {conference: 'NFC', division: 'West'}" >
-				<td><img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}"></td>
+				<td>
+					<a ng-href="{{teamstat.teamurl}}" target="_blank">
+					<img height="45" ng-src="img/nflicons/{{teamstat.teamiconname}}">
+					</a>
+				</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>

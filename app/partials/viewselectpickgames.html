@@ -70,7 +70,9 @@
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							<a ng-href="{{game.hometeamurl}}" target="_blank">
 							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+							</a>
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
@@ -92,7 +94,9 @@
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							<a ng-href="{{game.awayteamurl}}" target="_blank">
 							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+							</a>
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
@@ -121,6 +125,56 @@
 	<div style="display:inline;" class="col-md-2">
 		<img style="height:235px;" class="center-block img-rounded" ng-src="img/viewselectpicks.png">
 	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-4">
+		<img style="height:200px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
+	</div> <!-- end of col 4 -->
+
+	<div class="col-md-6">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th colspan=5>Bye Teams for Week</th>
+					</tr>
+
+					<tr>
+						<th colspan=2>Bye Team</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>		
+					</tr>
+
+					<tr ng-repeat="byegame in byegames">
+						<td class="left-column-text">
+							<a ng-href="{{byegame.teamurl}}" target="_blank">
+							<img height="45" ng-src='img/nflicons/{{byegame.teamiconname}}'>
+							</a>
+						</td>
+
+						<td class="left-column-text">
+							{{byegame.teamlocation}} &nbsp; {{byegame.teamname}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.wins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.losses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.ties}}
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
+	</div> <!-- end of col 6 -->
 </div> <!-- end of row -->
 </form>
 <!-- <div style="padding-bottom:350px;">&nbsp;</div> -->
