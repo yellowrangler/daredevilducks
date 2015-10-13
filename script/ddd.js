@@ -62,7 +62,7 @@ function getCurrentDateTimeStr()
 	    mm='0'+mm
 	} 
 
-	var todayStr = mm+dd+yyyy+hh+min+ss;
+	var todayStr = mm.toString()+dd.toString()+yyyy.toString()+hh.toString()+min.toString()+ss.toString();
 
 	return todayStr;
 }

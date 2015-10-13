@@ -206,9 +206,54 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     //
     // if checked turn this red
     //
-    function checkPick(gameid, location)
+    function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamseletedid)
     {
-        var i = 0;
+        var hometeamicon = "pickh_"+gamenbr+"_icon"; 
+        var hometeamname = "pickh_"+gamenbr+"_teamname"; 
+
+        var awayteamicon = "picka_"+gamenbr+"_icon"; 
+        var awayteamname = "picka_"+gamenbr+"_teamname"; 
+
+        if (teamtype =='home')
+        {
+            if (hometeamid == teamseletedid)
+            {
+                $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
+                $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
+
+    
+                $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
+                $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
+            }
+            else
+            {
+                $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
+                $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
+
+    
+                $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
+                $("#"+awayteamname).addClass("teamSelected").removeClass("teamNotSelected");
+            }
+        }
+        else if (awayteamid == teamseletedid)
+        {
+            $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
+
+
+            $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
+            $("#"+awayteamname).addClass("teamSelected").removeClass("teamNotSelected");
+        }
+        else
+        {
+
+            $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
+            $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
+
+
+            $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
+        }
     }
 
     //
@@ -432,8 +477,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         return status;
     }
 
-    $scope.checkPick = function (gameid, location) {
-        checkPick(gameid, location);
+    $scope.setSelectTeam = function (teamtype, gamenbr, awayteamid, hometeamid, teamseletedid) {
+        setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamseletedid);
     }
     
 }

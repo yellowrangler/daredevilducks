@@ -80,55 +80,62 @@
 						</td>
 
 						<td class="center-column-text">
-						    <input ng-model="game.teamselected" ng-checked="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
+						    <input 
+						    ng-model="game.teamselected"
+						    ng-change="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.teamselected)" 
+						    ng-checked="{{game.hometeamid == game.teamselected}}"
+						    name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
-						<td ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'>
 						</td>
 
-						<td ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						<td id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 						
 						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
 
 						<td class="center-column-text">
-							   {{game.homewins}}
+						   {{game.homewins}}
 						</td>
 
 						<td class="center-column-text">
-							   {{game.homelosses}}
+						   {{game.homelosses}}
 						</td>
 
 						<td class="center-column-text">
-							   {{game.hometies}}
+						   {{game.hometies}}
 						</td>
 
 						<td class="center-column-text">
-						    <input ng-model="game.teamselected" ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
+						    <input  
+						    ng-model="game.teamselected"
+						    ng-change="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.teamselected)" 
+						    ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
 						</td>
 
-						<td ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						<td id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'>
 						</td>
 
-						<td ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						<td id='picka_{{game.gamenbr}}_teamname' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
 						</td>
 
 						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
 
 						<td class="center-column-text">
-							   {{game.awaywins}}
+						   {{game.awaywins}}
 						</td>
 
 						<td class="center-column-text">
-							   {{game.awaylosses}}
+						   {{game.awaylosses}}
 						</td>
 
 						<td class="center-column-text">
-							   {{game.awayties}}
+						   {{game.awayties}}
 						</td>
 					</tr>
 
