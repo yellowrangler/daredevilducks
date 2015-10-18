@@ -1,52 +1,54 @@
 <div class="pageCaption row">
-	<div class="col-md-6">
-		<h2 class="headerTitle">Pick Your Teams for the Week's Games</h2>
+	<div style="padding-top:15px;display:inline;" class="col-md-3">
+		<h2 style="display:inline;" class="headerTitle">Pick Your Teams</h2>
 
+		<div style="padding-left:10px;display:inline;" class="form-group">
+            <img style="height:45px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+		</div> <!-- end of form-group -->  
 	</div> <!-- end of column -->
-</div> <!-- end of row -->
 
 <form id="pickweekForm" name="pickweekForm" class="form-inline">
-<div class="pageStandardOffset row">
-	<div class="col-md-12">
-		<div class="panel panel-default panelOverride">
-			<div class="panel-body">
+	<div class="col-md-9">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+						<label for="memberid" class="control-label">Player</label>
+				        <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
+				            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
 
-				<div class="form-group horizontalFieldOffset">
-					<label for="memberid" class="control-label">Player</label>
-			        <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
-			            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
-			        </select>
-				</div> <!-- end of form-group -->
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
 
-				<div class="form-group horizontalFieldOffset">
-			    	<label for="season" class="control-label">Season</label>
-		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.season" id="season" name="season">
-		                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
-		            </select>
-				</div> <!-- end of form-group -->
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="week" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
+			                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->  
+				
+					<div style="padding-left:30px;"class="form-group horizontalFieldOffset">
+		                <button  style="font-weight:bold;" class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Picks</button>
+					</div> <!-- end of form-group --> 
 
-				<div class="form-group horizontalFieldOffset">
-			    	<label for="week" class="control-label">Week</label>
-		            <select class="form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
-		                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
-		            </select>
-				</div> <!-- end of form-group -->  
-			
-				<div style="padding-left:50px;"class="form-group horizontalFieldOffset">
-	                <button  class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Picks</button>
-				</div> <!-- end of form-group --> 
-
-				<div style="padding-left:45px;" class="form-group horizontalFieldOffset">
-		            <div style="width:80px;text-align:center;padding:5px;" class="teamWon">Winner</div>
-				</div> <!-- end of form-group -->      
-					
-				<div style="float:right; padding-right:15px; display:inline;" class="form-group">
-		            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
-				</div> <!-- end of form-group -->      
-	
-			</div> <!-- end of panel body -->				
-		</div> <!-- end of panel -->
-	</div> <!-- end of col 12 -->
+					<!-- <div style="padding-left:45px;" class="form-group horizontalFieldOffset">
+			            <div style="width:80px;text-align:center;padding:5px;font-weight:bold;" class="teamWon">Winner</div>
+					</div>  --><!-- end of form-group -->      
+						
+					<!-- <div style="float:right; padding-right:15px; display:inline;" class="form-group">
+			            <img style="height:70px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+					</div> --> <!-- end of form-group -->  
+		
+				</div> <!-- end of panel body -->		
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 9 -->
 </div> <!-- end of row -->
 
 <div class="pageStandardOffset row">

@@ -65,7 +65,7 @@ FROM membertbl M
 LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
 LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
 WHERE MS.season = $season AND MS.week = $week
-ORDER BY MS.wins DESC, M.screenname ASC";
+ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
 // echo $sql;
 

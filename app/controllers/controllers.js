@@ -842,12 +842,39 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 
         nflteamsFactory.getMemberWeekStats(requestStr)
             .success( function(data) {
-                $scope.memberweekstats = data; 
+                $scope.memberweekstats = workWinsTableData(data); 
 
             })
             .error( function(edata) {
                 alert(edata);
             });
+    }
+
+    function workWinsTableData(data)
+    {
+        data.position = {};
+
+        var prev = 0;
+        $.each(data, function (index,value) {
+            if (index == 0)
+            {
+                value.position = index+1;
+            }
+            else
+            {
+                prev = index - 1;
+                if (value.wins == data[prev].wins)
+                {
+                    value.position = data[prev].position;
+                }
+                else
+                {
+                    value.position = data[prev].position +1;
+                }
+            }
+        });
+
+        return data;
     }
 
     init();
@@ -881,7 +908,7 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
                         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
                         nflteamsFactory.getMemberWeekStats(requestStr)
                             .success( function(data) {
-                                $scope.memberweekstats = data; 
+                                $scope.memberweekstats = workWinsTableData(data); 
 
                             })
                             .error( function(edata) {
