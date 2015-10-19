@@ -4,8 +4,18 @@
 .customSelect {
    background: #d7fbfd;
    color:#000;
-   /*text-shadow:0 1px 0 rgba(0, 0, 0, 0.4);*/
+   /*text-shadow:0 1px 0 rgba(240, 255, 255, 0.4);*/
 }
+
+.customNavbar {
+  /* background-color: transparent;
+   background: transparent;
+   border-color: transparent;*/
+   opacity: .99;
+   /*background: rgba(240, 255, 255, 0.2);*/
+}
+
+
 .mainTitle {
 	color:#6C0000;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
