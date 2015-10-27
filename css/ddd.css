@@ -126,6 +126,13 @@
 	height: 480px;
 }
 
+.ScriptscrollClass {
+	overflow: auto;
+	height: 480px;
+	padding:15px;
+	width:99%;
+}
+
 .MemberWeeklyTable {
 	padding-top:20px;
 	padding: 3px;  

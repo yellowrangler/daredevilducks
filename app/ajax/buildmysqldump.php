@@ -25,10 +25,8 @@ else
 
 $execStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE  -u tarryc -ptarryc ddd > dbsql/ddd-dump-$dumpdatabaselabel.sql";
 
-$msg = "BuildMySqlDump Started <br /> Input variables:dumpdatabaselabel: $dumpdatabaselabel <br />Run string:$execStr<br />";
+$msg = "Input variables:dumpdatabaselabel: $dumpdatabaselabel <br />Run string:$execStr";
 $msg = $msg . exec($execStr);
-
-$msg = $msg . "<br /> BuildMySqlDump Finished.";
 
 //
 // pass back info

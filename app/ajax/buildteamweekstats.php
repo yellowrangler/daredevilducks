@@ -7,11 +7,10 @@ include_once ('../class/class.ErrorLog.php');
 // get date time for this transaction
 //
 $datetime = date("Y-m-d H:i:s");
+$msg = "";
 
 // set variables
 $enterdate = $datetime;
-
-$msg = "Buildteamweekstats Started <br />";
 
 if (isset($_POST["season"]))
 {
@@ -29,11 +28,11 @@ if (isset($_POST["weeksinseason"]))
 }
 else
 {
-	$msg = $msg . "No weeksinseason passed - Buildteamweekstats terminated";
+	$msg = "No weeksinseason passed - Buildteamweekstats terminated";
 	exit($msg);
 }
 
-$msg = $msg . "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
+$msg = "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -320,7 +319,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 } // end of looping through teams
 
-$msg = $msg . "Totals Teams:$teamcount. <br /> Buildteamweekstats Finished.";
+$msg = $msg . "Totals Teams:$teamcount.";
 
 //
 // close db connection

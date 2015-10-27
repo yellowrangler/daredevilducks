@@ -64,7 +64,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
 $sql = "SELECT
   MS.season as season,
-  MS.memberid as week,
+  MS.memberid as memberid,
   MS.id as id,
   MS.wins as wins,
   MS.losses as losses,

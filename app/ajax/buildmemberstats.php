@@ -14,8 +14,7 @@ $enterdate = $datetime;
 //debug
 // $season = 2015;
 // $gametypeid = 2;
-
-$msg = "Buildmemberstats Started <br />";
+$msg = "";
 
 if (isset($_POST["season"]))
 {
@@ -37,7 +36,7 @@ else
 	exit($msg);
 }
 
-$msg = $msg . "Input variables: Season:$season gametypeid:$gametypeid<br />";
+$msg = "Input variables: Season:$season gametypeid:$gametypeid<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -423,7 +422,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 } // end of looping through member
 
-$msg = $msg . "Totals Members:$membercount. <br /> Totals Games:$totalgames. <br />Current week:$currentweek. <br />Buildmemberstats Finished.";
+$msg = $msg . "Totals Members:$membercount. <br /> Totals Games:$totalgames. <br />Current week:$currentweek.";
 //
 // close db connection
 //

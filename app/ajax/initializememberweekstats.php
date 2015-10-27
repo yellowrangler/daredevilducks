@@ -10,8 +10,7 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-
-$msg = "Initializememberweekstats Started <br />";
+$msg = "";
 
 if (isset($_POST["season"]))
 {
@@ -33,7 +32,7 @@ else
 	exit($msg);
 }
 
-$msg = $msg . "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
+$msg = "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -176,7 +175,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 } // end of for looping through games
 
-$msg = $msg . "Totals Members:$membercount Members Weeks Inserted:$memberinsertedcount. <br /> Initializememberweekstats Finished.";
+$msg = $msg . "Totals Members:$membercount Members Weeks Inserted:$memberinsertedcount.";
 
 //
 // close db connection

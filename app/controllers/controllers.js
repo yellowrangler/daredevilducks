@@ -1708,6 +1708,162 @@ controllers.weeklybuildsController = function ($scope, $http, $location, nflteam
     }
 }
 
+controllers.weeklyscriptsController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, scriptsFactory) {
+    $scope.current = {};
+
+    function runGameScripts() 
+    {
+        //
+        // initialize message variables and html space
+        //
+        var data = "";
+        var scriptData = "";
+
+        $("#scriptMessagesDisplay").html("");
+
+        //
+        // run initialize team week stats
+        //
+        $("#scriptMessagesDisplay").append("Start of Intialize Team Week Stats<br />");
+
+        scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+        scriptsFactory.initializeTeamWeekStats(scriptData)
+        .success( function(data) {
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Intialize Team Week Stats");
+
+            //
+            // run initialize member week stats
+            //
+            $("#scriptMessagesDisplay").append("<br /><br />Start of Intialize Member Week Stats<br />");
+
+            scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+            scriptsFactory.initializeMemberWeekStats(scriptData)
+            .success( function(data) {
+                $("#scriptMessagesDisplay").append(data);
+                $("#scriptMessagesDisplay").append("<br />End of Intialize Member Week Stats");
+
+                //
+                // run build team stats
+                //
+                $("#scriptMessagesDisplay").append("<br /><br />Start of Build Team Stats<br />");
+
+                scriptData = "season="+$scope.current.season;
+                scriptsFactory.buildTeamStats(scriptData)
+                .success( function(data) {
+                    $("#scriptMessagesDisplay").append(data);
+                    $("#scriptMessagesDisplay").append("<br />End of Build Team Stats");
+
+                    //
+                    // run build team stats
+                    //
+                    $("#scriptMessagesDisplay").append("<br /><br />Start of Build Team Weekly Stats<br />");
+
+                    var scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+                    scriptsFactory.buildTeamWeekStats(scriptData)
+                    .success( function(data) {
+                        $("#scriptMessagesDisplay").append(data);
+                        $("#scriptMessagesDisplay").append("<br />End of Build Team Weekly Stats");
+
+                        //
+                        // run build team stats
+                        //
+                        $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Stats<br />");
+
+                        scriptData = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+                        scriptsFactory.buildMemberStats(scriptData)
+                        .success( function(data) {
+                            $("#scriptMessagesDisplay").append(data);
+                            $("#scriptMessagesDisplay").append("<br />End of Build Player Stats");
+
+                            //
+                            // run build team stats
+                            //
+                            $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Weekly Stats<br />");
+
+                            scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason+"&gametypeid="+$scope.current.gametypeid;
+                            scriptsFactory.buildMemberWeekStats(scriptData)
+                            .success( function(data) {
+                                $("#scriptMessagesDisplay").append(data);
+                                $("#scriptMessagesDisplay").append("<br />End of Build Player Weekly Stats");
+
+                                $("#scriptMessagesDisplay").append("<br /><br />End of Game Scripts<br />");
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+
+    function buildMySqlDump() 
+    {
+        var data = "";
+        var scriptData = "";
+
+        $("#scriptMessagesDisplay").html("");
+
+        //
+        // run dump sql table
+        //
+        $("#scriptMessagesDisplay").append("Start of Dump SQL Tables<br />");
+        var scriptData = "dumpdatabaselabel="+$scope.current.dumpdatabaselabel;
+
+        scriptsFactory.buildMySqlDump(scriptData)
+        .success( function(data) {
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Dump SQL Tables");
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
+        $scope.current.gametypeid = 2;
+        $scope.current.weeksinseason = 17;
+        $scope.current.season = nflTeamsService.getCurrentSeason();   
+        $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();     
+
+        $scope.gametypes = nflTeamsService.getNFLGametypes();
+
+    };
+
+    $scope.runGameScripts = function () {
+        runGameScripts();
+    }
+
+    $scope.buildMySqlDump = function () {
+        buildMySqlDump();
+    }
+}
+
 controllers.sendplayeremailController = function ($scope, $http, $location, membersFactory) {
     $scope.current = {};
     $scope.current.emailto = "";
