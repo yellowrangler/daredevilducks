@@ -1755,7 +1755,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                     $("#scriptMessagesDisplay").append("<br />End of Build Team Stats");
 
                     //
-                    // run build team stats
+                    // run build team weekly stats
                     //
                     $("#scriptMessagesDisplay").append("<br /><br />Start of Build Team Weekly Stats<br />");
 
@@ -1766,7 +1766,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                         $("#scriptMessagesDisplay").append("<br />End of Build Team Weekly Stats");
 
                         //
-                        // run build team stats
+                        // run build player stats
                         //
                         $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Stats<br />");
 
@@ -1777,7 +1777,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                             $("#scriptMessagesDisplay").append("<br />End of Build Player Stats");
 
                             //
-                            // run build team stats
+                            // run build player weekly stats
                             //
                             $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Weekly Stats<br />");
 
