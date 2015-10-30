@@ -1866,6 +1866,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
 
 controllers.sendplayeremailController = function ($scope, $http, $location, membersFactory) {
     $scope.current = {};
+    $scope.emailtemplates = {};
     $scope.current.emailto = "";
     $scope.current.emailfrom = "daredevilducks.xyz@gmail.com";
 
@@ -1907,6 +1908,33 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             }); 
     }
 
+    function geteMailTemplate(template) {
+        var i = 0;
+    }
+
+    function getLatePickMembersbutton() {
+
+        nflteamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
+
+                var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                membersFactory.getLatePickMembers(q)
+                    .success( function(data) {
+                        $.each(data, function (key, value) {
+                            setMembereMail(value.email);
+                        }); 
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });
+                })
+            .error( function(edata) {
+                alert(edata);
+            });                     
+    }
+
     init();
     function init() {
         //
@@ -1934,6 +1962,14 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     $scope.sendeMailForm = function () {
         sendeMailForm();
+    }
+
+    $scope.geteMailTemplate = function(template) {
+        geteMailTemplate();
+    }
+
+    $scope.getLatePickMembersbutton = function() {
+        getLatePickMembersbutton();
     }
 
 }

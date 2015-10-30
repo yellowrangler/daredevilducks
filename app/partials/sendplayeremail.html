@@ -62,7 +62,7 @@
   <div class="col-md-5">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Select Recipients</h3>
+        <h3 class="panel-title">Recipients</h3>
       </div>
 
       <div class="panel-body">
@@ -75,8 +75,27 @@
               <input type="hidden" value="{{current.id}}" id="id" name="id">
           </div> <!-- end of form-group -->
 
-          <div style="padding-left:15px;" class="form-group">
+          <div style="padding-left:15px;" class="form-group   form-inline">
               <button id="addAll2Mailbutton" data-ng-click="addAll2MailForm()" type="button" class="btn btn-primary">Add All</button>
+         
+              <button style="margin-left:25px;" id="getLatePickMembersbutton" data-ng-click="getLatePickMembersbutton()" type="button" class="btn btn-primary">Get Late Pick Members</button>
+          </div> <!-- end of form-group -->
+        </form>  
+      </div> <!-- end of panel body -->
+    </div> <!-- end of panel -->  
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Templates</h3>
+      </div>
+
+      <div class="panel-body">
+        <form id="getTemplateForm" name="getTemplateForm" style="padding:10px;" class="form">
+          <div class="form-group" >
+            <label for="templatename" class="control-label">Name</label>
+              <select tabindex="1"  class="form-control" ng-change="geteMailTemplate(current.emailtemplate)" ng-model="current.emailtemplate" id="templatename" name="templatename">
+                <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate.template}}">{{emailtemplate.template}}</option>
+              </select>
           </div> <!-- end of form-group -->
         </form>  
       </div> <!-- end of panel body -->
