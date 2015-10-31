@@ -42,11 +42,11 @@
           <div class="form-group">
             <label for="emailmessage" class="col-md-2 control-label">Message</label>
             <div class="col-md-9">
-              <textarea class="form-control" rows="10" ng-model="current.emailmessage" id="emailmessage" name="emailmessage"></textarea> 
+              <textarea class="form-control" rows="15" ng-model="current.emailmessage" id="emailmessage" name="emailmessage"></textarea> 
             </div>
           </div> <!-- end of form-group -->
 
-          <div style="padding:15px;">&nbsp;</div>
+          <div style="padding:5px;">&nbsp;</div>
 
           <div style="padding-left:15px;" class="form-group">
             <div class="col-md-offset-2 col-md-3">
@@ -93,8 +93,8 @@
         <form id="getTemplateForm" name="getTemplateForm" style="padding:10px;" class="form">
           <div class="form-group" >
             <label for="templatename" class="control-label">Name</label>
-              <select tabindex="1"  class="form-control" ng-change="geteMailTemplate(current.emailtemplate)" ng-model="current.emailtemplate" id="templatename" name="templatename">
-                <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate.template}}">{{emailtemplate.template}}</option>
+              <select tabindex="1"  class="form-control" ng-change="geteMailTemplate()" ng-model="current.emailtemplate" id="templatename" name="templatename">
+                <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate.url}}">{{emailtemplate.title}}</option>
               </select>
           </div> <!-- end of form-group -->
         </form>  

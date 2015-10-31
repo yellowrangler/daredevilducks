@@ -2,6 +2,52 @@ dddApp.service('dddAppService', function () {
 
 });
 
+dddApp.service('selectListService', function () {
+
+    this.getList = function(listName) {
+        var thisList = emptyList;
+
+        switch (listName) 
+        {
+            case 'emt':
+                thisList = emtList;
+                break;
+
+        }
+
+        return thisList;
+    }
+
+    var emptyList = [
+        {   }
+    ];
+
+    var emtList = [ 
+        {  
+            title :  "Welcome",
+            url : "welcome-email.html"
+        },
+        {  
+            title :  "Game week",
+            url : "gameweek-email.html"
+        },
+        {  
+            title :  "Late Picks",
+            url : "latepicks-email.html"
+        }, 
+        {  
+            title :  "Site Problems",
+            url : "siteproblems-email.html"
+        },  
+        {  
+            title :  "Site Down",
+            url : "sitedown-email.html"
+        }
+    ];
+
+});
+
+
 dddApp.service('msgService', function () {
 
     this.getEmptyMsg = function() {

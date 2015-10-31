@@ -41,6 +41,7 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
+$gamesleftinweek = "";
 
 //
 // messaging
@@ -82,10 +83,15 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 //---------------------------------------------------------------
-// get late member picks information
+// get total picks left for season week
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM membertbl 
-ORDER BY $orderby ASC";
+$sql = "SELECT COUNT(1) AS gamesleftinweek
+	FROM gamestbl G 
+	LEFT JOIN gameweekstbl GW ON GW.season = G.season AND GW.week = G.week
+	AND G.gamedatetime >= GW.weekstart AND G.gamedatetime <= GW.weekend
+	AND GW.week = '8' AND GW.season = '2015'
+	WHERE G.week = '8' AND G.season = '2015'
+	AND G.gamedatetime > NOW()";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);
@@ -93,7 +99,62 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get late pick member information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select gmesleftinweek to db Unable to get late pick member information.");
+    $log->writeLog("SQL: $sql");
+
+    $status = -100;
+    $msgtext = "System Error: $sqlerr";
+}
+
+//
+// get gamesleftinweek
+//
+$r = mysql_fetch_assoc($sql_result);
+$gamesleftinweek = $r['gamesleftinweek'];
+
+//---------------------------------------------------------------
+// get all member picks for week going forward with member list
+//---------------------------------------------------------------
+$sql = "SELECT memberid, membername, screenname, email 
+	FROM
+	(
+		SELECT id as memberid, membername, screenname, email,
+		CASE WHEN MSEL.memberpicks IS NULL
+		THEN 0
+		ELSE MSEL.memberpicks
+		END AS memberpicks,
+		CASE WHEN MSEL.memberpicks = $gamesleftinweek
+		THEN 'Ok'
+		ELSE 'Lackard' 
+		END AS memberpickstatus
+		FROM membertbl M
+		LEFT JOIN (
+			SELECT memberid, COUNT(1) as memberpicks
+			FROM memberpickstbl MP 
+			WHERE MP.week = '$week' AND MP.season = '$season'
+			AND gamenbr IN 
+			(
+				SELECT G.gamenbr 
+				FROM gamestbl G 
+				LEFT JOIN gameweekstbl GW ON GW.season = G.season AND GW.week = G.week
+				AND G.gamedatetime >= GW.weekstart AND G.gamedatetime <= GW.weekend
+				WHERE G.week = '$week' AND G.season = '$season'
+				AND G.gamedatetime > NOW()
+			)
+			GROUP BY memberid
+		) MSEL ON MSEL.memberid = M.id
+		GROUP BY M.id
+	) MSEL2
+	WHERE MSEL2.memberpickstatus = 'Lackard'
+	ORDER BY $orderby ASC";
+// print $sql;
+
+$sql_result = @mysql_query($sql, $dbConn);
+if (!$sql_result)
+{
+    $log = new ErrorLog("logs/");
+    $sqlerr = mysql_error();
+    $log->writeLog("SQL error: $sqlerr - Error doing select get latepicks to db Unable to get late pick member information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;

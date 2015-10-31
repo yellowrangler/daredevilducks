@@ -1864,7 +1864,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
     }
 }
 
-controllers.sendplayeremailController = function ($scope, $http, $location, membersFactory) {
+controllers.sendplayeremailController = function ($scope, $http, $location, membersFactory, nflteamsFactory, selectListService) {
     $scope.current = {};
     $scope.emailtemplates = {};
     $scope.current.emailto = "";
@@ -1886,11 +1886,9 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
     }
 
     function addAll2MailForm () {
-
         $.each($scope.members, function (key, value) {
             setMembereMail(value.email);
         });
-
     }
 
     function sendeMailForm() {
@@ -1898,7 +1896,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         
         membersFactory.sendeMail2Members(data)
             .success( function(rv) {
-                var textStr = "<center>eMail sent with return code</center></br></br>"+rv;
+                var textStr = "<center>eMail sent</center></br></br>"+rv;
                 $('#eMailDialogModalTitle').text("eMail Sent");
                 $('#eMailDialogModalLabelBody').html(textStr);
                 $('#eMailDialogModal').modal();
@@ -1908,8 +1906,18 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             }); 
     }
 
-    function geteMailTemplate(template) {
-        var i = 0;
+    function geteMailTemplate() {
+        var url = "";
+
+        $("#emailmessage").html("");
+
+        //
+        // add template to area
+        //
+        url = "emailforms/" + $scope.current.emailtemplate;
+        $.get(url, null, function (data) {
+            $("#emailmessage").val(data)
+        })
     }
 
     function getLatePickMembersbutton() {
@@ -1942,6 +1950,8 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        $scope.emailtemplates = selectListService.getList('emt');
 
         membersFactory.getMembers()
             .success( function(data) {
