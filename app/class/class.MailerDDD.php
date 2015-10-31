@@ -13,6 +13,8 @@ class MailerDDD
     //------------------------------------------------------------- 
     private $from;
     private $to;
+    private $cc;
+    private $recipients;
     private $subject;
     private $body;
 
@@ -36,6 +38,11 @@ class MailerDDD
     {
         $this->to = $to;
     }
+
+    private function setCc($cc)
+    {
+        $this->cc = $cc;
+    }
        
     private function setSubject($subject)
     {
@@ -57,10 +64,11 @@ class MailerDDD
     //-------------------------------------------------------------
     
     // Constructor    
-    public function __construct ($from, $to, $subject, $msg)
+    public function __construct ($from, $to, $cc, $subject, $msg)
     {
         $this->setFrom($from);
         $this->setTo($to);
+        $this->setCc($cc);        
         $this->setSubject($subject);
         $this->setMessage($msg);
     }
@@ -70,6 +78,7 @@ class MailerDDD
         $headers = array(
             'From' => $this->from,
             'To' => $this->to,
+            'Cc' => $this->cc,
             'Subject' => $this->subject
         );
 
@@ -99,10 +108,11 @@ class MailerDDD
         $mime->addHTMLImage(file_get_contents($this->logoimagefullpath),$this->logoimagemimetype,$this->logoimage,false);
         $body = $mime->get();
         $mimeheaders = $mime->headers($headers);
+        $this->recipients = $this->to.", ".$this->cc;
 
         try {
 
-            $mail = $smtp->send($this->to, $mimeheaders, $body);
+            $mail = $smtp->send($this->recipients, $mimeheaders, $body);
          
             if (PEAR::isError($mail)) {
                 $this->setResult('<p>Error:' . $mail->getMessage() . '</p>');

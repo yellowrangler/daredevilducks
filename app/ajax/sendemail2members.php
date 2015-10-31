@@ -11,13 +11,14 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $from = $_POST['emailfrom'];
 $to = $_POST['emailto'];
+$cc = "tarrant.cutler@gmail.com, tjamieson@healthallianze.com";
 $message = $_POST['emailmessage'];
 $subject = $_POST['emailsubject'];
 
 //
 // create mail object
 //
-$mail = new MailerDDD($from,$to,$subject,$message);
+$mail = new MailerDDD($from,$to,$cc,$subject,$message);
 
 // send email
 $rv = $mail->sendMail();
