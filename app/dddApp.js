@@ -43,6 +43,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'teamstatsController',
                 templateUrl: 'app/partials/teamstats.html'
             })        
+        .when('/teamweeklyranking',
+            {
+                controller: 'teamweeklyrankingController',
+                templateUrl: 'app/partials/teamweeklyranking.html'
+            })        
         .when('/halloffame',
             {
                 controller: 'halloffameController',

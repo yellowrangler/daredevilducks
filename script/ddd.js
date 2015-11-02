@@ -1,17 +1,52 @@
 $(document).ready( function(){
 
 	$( window ).resize(function() {
-	  setviewpadding()
+		setviewpadding();	
+
+		adjustNavbarImages();
+	 
 	});
 
 	setviewpadding();
+	adjustNavbarImages();
 });  
 
 function setviewpadding()
 {
-	var viewoffset = $("#navbarCollapse").height() + 10;
+	setTimeout(function(){ 
+		var viewoffset = $("#navBarHeader").height() + 10;
 
-  $("#ddd-view").css("padding-top", viewoffset);
+  		$("#ddd-view").css("padding-top", viewoffset);
+	}, 3000);
+}
+
+function adjustNavbarImages() 
+{
+ 	var w = window.innerWidth;
+	// alert(w);
+	if (w > 750)
+	{
+		$("#nav-bar-menu-bar").addClass("fixed");
+
+		$("#teamnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	    $("#playernavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	    $("#gamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	    $("#halloffamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	    $("#adminnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	    $("#avatarnavimg").addClass("imgAvatarNav").removeClass("imgAvatarNavSmall");
+	}
+	else
+	{
+		$("#nav-bar-menu-bar").removeClass("fixed");
+
+		$("#teamnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		$("#playernavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		$("#gamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		$("#halloffamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		$("#adminnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		$("#avatarnavimg").addClass("imgAvatarNavSmall").removeClass("imgAvatarNav");
+
+	}
 }
 
 function convertMySQLdate2mdy(mysqlDate)

@@ -1,0 +1,114 @@
+<div class="pageCaption row">
+	<div class="col-md-4">
+		<h2 class="headerTitle">Team Weekly Ranking</h2>
+	</div> <!-- end of column -->
+
+	<form id="teamweeklyrankForm" name="teamweeklyrankForm" class="form-inline">
+	<div class="col-md-8">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+
+					<div class="form-group horizontalFieldOffset">
+						<label for="memberid" class="control-label">Team</label>
+				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
+				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+				        </select>
+					</div> <!-- end of form-group --> 
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of col 7 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th>Week</th>			
+						<th>Team Name</th>
+						<th>Score</th>	
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>								
+						<th>PW</th>
+						<th>Off</th>
+						<th>T</th>
+						<th>S</th>
+						<th>P</th>
+						<th>R</th>
+						<th>Def</th>
+						<th>T</th>
+						<th>S</th>
+						<th>P</th>
+						<th>R</th>						
+					</tr>
+
+					<tr ng-repeat="teamweekrank in teamweekranks">
+						<td class="left-column-text">
+							{{teamweekrank.week}}
+						</td>
+
+						<td class="left-column-text" ng-class="{{teamweekrank.teamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.teamlocation}} &nbsp; {{teamweekrank.teamname}}
+						</td>
+
+						<td class="center-column-text" ng-class="{{teamweekrank.won == teamweekrank.teamid}} ? 'teamWon' : 'teamLost' ">{{teamweekrank.teamscore}}</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.wins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.losses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.ties}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.powerrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.offencetotalrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.offencescoringrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.offencepassingrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.offencerushingrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.defencetotalrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.defencescoringrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.defencepassingrank}}
+						</td>
+
+						<td class="center-column-text">
+							   {{teamweekrank.defencerushingrank}}
+						</td>
+					</tr>
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->				
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

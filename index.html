@@ -77,7 +77,7 @@
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img class="img-responsive imgButtonNav" src="img/buttons/games.png">
+                    <img id="gamenavimg" class="img-responsive imgButtonNav" src="img/buttons/games.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/pickgames">Pick Your Teams</a></li>
@@ -90,7 +90,7 @@
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img class="img-responsive imgButtonNav" src="img/buttons/memberstats.png">
+                    <img id="playernavimg" class="img-responsive imgButtonNav" src="img/buttons/memberstats.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/leaderboard">Leader Board</a></li>
@@ -102,11 +102,12 @@
             <ul class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img class="img-responsive imgButtonNav" src="img/buttons/team.png">
+                    <img id="teamnavimg" class="img-responsive imgButtonNav" src="img/buttons/team.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="#/teamstandings">Team Standings</a></li>
                         <li><a href="#/teamstats">Team Stats</a></li>
+                        <li><a href="#/teamweeklyranking">Team Weekly Ranking</a></li>                        
                         <li><a href="#/teamdiscovery">External Team Information</a></li>
                     </ul>
                 </li>
@@ -114,14 +115,14 @@
 
             <ul class="nav navbar-nav">
                 <li class="menuItems"><a href="#/halloffame">
-                <img class="img-responsive imgButtonNav" src="img/buttons/halloffame.png">
+                <img id="halloffamenavimg" class="img-responsive imgButtonNav" src="img/buttons/halloffame.png">
                 </a></li>
             </ul>
 
             <ul id="adminselect" class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
-                    <img class="img-responsive imgButtonNav" src="img/buttons/admin.png">
+                    <img id="adminnavimg" class="img-responsive imgButtonNav" src="img/buttons/admin.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li role="presentation" class="divider"></li>
@@ -149,7 +150,7 @@
                 <li>
                     <div style="text-align:center;padding-top:30px;">
                     <a id="menubaravatarimage" name="menubaravatarimage" ng-click="">
-                    <img style="height:75px;" class="img-circle" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
+                    <img id="avatarnavimg" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
                     </a>
                     <br />
                     <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
@@ -160,7 +161,7 @@
             <!-- <ul style="float:right;padding-top:10px;" class="nav navbar-nav showPointer">
                 <li><a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a></li>
             </ul> -->
-        </div> <!-- end of collaps  -->
+        </div> <!-- end of navbar  -->
     </div> <!-- end of container fluid -->            
 </nav>
 

@@ -30,6 +30,25 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         //
         setviewpadding();
 
+        // $('#navbarCollapse').on('hidden.bs.collapse', function () {
+        //     $("#teamnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+        //     $("#playernavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+        //     $("#gamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+        //     $("#halloffamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+        //     $("#adminnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+        //     $("#avatarnavimg").addClass("imgAvatarNav").removeClass("imgAvatarNavSmall");
+        // });
+
+
+        // $('#navbarCollapse').on('show.bs.collapse', function () {
+        //    $("#teamnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+        //    $("#playernavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+        //    $("#gamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+        //    $("#halloffamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+        //    $("#adminnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+        //    $("#avatarnavimg").addClass("imgAvatarNavSmall").removeClass("imgAvatarNav");
+        // });
+
         getAvatar();
         loginService.setAvatarLabel("menubaravatar",0);
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);
@@ -1037,6 +1056,21 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 
 }
 
+controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
+    $scope.current = {};
+
+    init();
+    function init() {
+        $scope.teams = nflTeamsService.getNFLTeams();
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+           
+    };
+
+}
 
 controllers.addmemberController = function ($scope, $http, $location, membersFactory) {
     init();
