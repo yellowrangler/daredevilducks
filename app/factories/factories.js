@@ -364,5 +364,14 @@ dddApp.factory('scriptsFactory', function($q, $http) {
         })
     }
 
+    factory.importTeamWeeklyRankFile = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/importteamweeklyrankfile.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });

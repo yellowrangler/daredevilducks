@@ -1,22 +1,4 @@
-Week  3  Offensive  Scoring  Points per Game  Team  Statistics  Screen,,,,,,,,,,
-,,,,,,,,,,
-No.,,Week 3,,,,,,,,
-,Team City,"Power
-Rank","Offense
-Scoring
-Ranking","Offense
-Passing
-Ranking","Offense
-Rushing
-Ranking","Overall
-Offense","Defense
-Scoring
-Ranking","Defense
-Passing
-Ranking","Defense
-Rushing
-Ranking","Overall
-Defense"
+nbr,Season,Week,team,powerrank,offencescoringrank,offencepassingrank,offencerushingrank,offencetotalrank,defencescoringrank,defencepassingrank,defencerushingrank,defencetotalrank
 1,Arizona,3,1,11,11,6,11,10,11,5
 2,Atlanta,11,5,2,13,3,14,24,15,23
 3,Baltimore,17,16,8,28,15,28,29,7,22
@@ -49,5 +31,3 @@ Defense"
 30,Tampa Bay,29,29,28,20,26,24,9,30,15
 31,Tennessee,27,6,15,10,10,13,5,22,6
 32,Washington,23,26,21,4,12,18,7,3,2
-,,,,,,,,,,
-Weekly Team Stats From:,,,,,,,,,,

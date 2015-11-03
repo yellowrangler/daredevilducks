@@ -1872,6 +1872,29 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         });
     }
 
+    function importTeamWeeklyRank() 
+    {
+        var data = "";
+        var scriptData = "";
+
+        $("#scriptMessagesDisplay").html("");
+
+        //
+        // run dump sql table
+        //
+        $("#scriptMessagesDisplay").append("Start of Import Team Weekly Ranking<br />");
+        var scriptData = "importteamweeklyrankfile="+$scope.current.importteamweeklyrankfile;
+
+        scriptsFactory.importTeamWeeklyRankFile(scriptData)
+        .success( function(data) {
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />Import Team Weekly Ranking");
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
     init();
     function init() {
         //
@@ -1895,6 +1918,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
 
     $scope.buildMySqlDump = function () {
         buildMySqlDump();
+    }
+
+    $scope.importTeamWeeklyRank = function () {
+        importTeamWeeklyRank();
     }
 }
 
