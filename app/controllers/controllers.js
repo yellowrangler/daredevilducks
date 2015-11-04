@@ -1077,6 +1077,15 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
         $scope.current.season = nflTeamsService.getCurrentSeason();
         $scope.current.teamid = 0;
 
+        // $(window).scroll(function() {
+        // if ($(this).scrollTop() > 100){  
+        //     $('#TeamWeeklyRankings').addClass("sticky");
+        //   }
+        //   else{
+        //     $('#TeamWeeklyRankings').removeClass("sticky");
+        //   }
+        // });
+
         getTeamWeekRank();
 
         //

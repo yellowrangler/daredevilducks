@@ -29,7 +29,7 @@
 					<div style="background-color:#DBF0EF;" class="panel-heading" id="weeklydefinitionsheading">
 						<h3 class="panel-title">
 							<a style="text-align:center;vertical-align:middle;text-decoration:none;" data-toggle="collapse" data-parent="#weeklydefinitionsgroup" data-target="#weeklydefinitions">
-							Click me to toggle Information for Weekly Ranking
+							Click me to Toggle Information for Weekly Ranking
 							</a>
 						</h3>
 					</div> <!-- end of panel header -->
@@ -45,7 +45,7 @@
 							</div>
 
 							<div style="padding-top:30px;" >
-								<table  class="table TeamWeeklyRankingsInfoTable">
+								<table class="table TeamWeeklyRankingsInfoTable">
 
 									<tr>
 										<td class="miscText">Week</td>
@@ -78,7 +78,7 @@
 									</tr>
 
 									<tr>
-										<td class="miscText">PR</td>
+										<td class="powerRankingText" >PR</td>
 										<td class="miscData">The Power Ranking for the team at the time the game was played. 
 									</tr>
 
@@ -136,9 +136,10 @@
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
 			<div class="panel-body table-responsive">
-				<table class="table pickGameTable" >
+				<table id="TeamWeeklyRankings" class="table pickGameTable" >
 					<tr class="tableTitle">
-						<th colspan=7>&nbsp</th>			
+						<th colspan=6>&nbsp</th>
+						<th class="powerRankingTitle">&nbsp</th>			
 						<th class="offenceTitle" colspan=4>Offensive Stats</th>
 						<th class="defenceTitle" colspan=4>Defensive Stats</th>					
 					</tr>
@@ -150,7 +151,7 @@
 						<th>W</th>
 						<th>L</th>
 						<th>T</th>								
-						<th>PR</th>
+						<th class="powerRankingTitle">PR</th>
 						<th class="offenceTitle">T</th>
 						<th class="offenceTitle">S</th>
 						<th class="offenceTitle">P</th>
@@ -217,91 +218,91 @@
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
+						<div class="powerRankingText" id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
 							{{teamweekrank.hometeampowerranking}}
 						</div>
 
-						<div id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
+						<div class="powerRankingText" id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
 							{{teamweekrank.awayteampowerranking}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
+						<div class="offenceText" id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
 							{{teamweekrank.hometeamoffencetotal}}
 						</div>
 
-						<div id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
+						<div class="offenceText" id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
 							{{teamweekrank.awayteamoffencetotal}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
+						<div class="offenceText" id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
 							{{teamweekrank.hometeamoffencescoring}}
 						</div>
 
-						<div id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
+						<div class="offenceText" id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
 							{{teamweekrank.awayteamoffencescoring}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
+						<div class="offenceText" id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
 							{{teamweekrank.hometeamoffencepassing}}
 						</div>
 
-						<div id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
+						<div class="offenceText" id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
 							{{teamweekrank.awayteamoffencepassing}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
+						<div class="offenceText" id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
 							{{teamweekrank.hometeamoffencerushing}}
 						</div>
 
-						<div id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
+						<div class="offenceText" id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
 							{{teamweekrank.awayteamoffencerushing}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
+						<div class="defenceText" id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
 							{{teamweekrank.hometeamdefencetotal}}
 						</div>
 
-						<div id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
+						<div class="defenceText" id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
 							{{teamweekrank.awayteamdefencetotal}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
+						<div class="defenceText" id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
 							{{teamweekrank.hometeamdefencescoring}}
 						</div>
 
-						<div id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
+						<div class="defenceText" id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
 							{{teamweekrank.awayteamdefencescoring}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
+						<div class="defenceText" id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
 							{{teamweekrank.hometeamdefencepassing}}
 						</div>
 
-						<div id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
+						<div class="defenceText" id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
 							{{teamweekrank.awayteamdefencepassing}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
+						<div class="defenceText" id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
 							{{teamweekrank.hometeamdefencerushing}}
 						</div>
 
-						<div id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
+						<div class="defenceText" id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
 							{{teamweekrank.awayteamdefencerushing}}
 						</div>
 						</td>
