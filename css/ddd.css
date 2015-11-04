@@ -66,6 +66,42 @@
 	color:white;
 }
 
+.tableTitleHeader {
+	background-color:white;
+	border:2px solid #058689;
+	color:red;
+}
+
+.offenceTitle {
+	background-color:#51B961;
+	border:2px solid #51B961;
+	color:white;
+}
+
+.defenceTitle {
+	background-color:#D32C4A;
+	border:2px solid #D32C4A;
+	color:white;
+}
+
+.offenceText {
+	color:#51B961;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:white;
+	border:2px solid white;
+
+}
+
+.defenceText {
+	color:#D32C4A;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:white;
+	border:2px solid white;
+
+}
+
 .jumbotronOverride {
 	background:white;
 	border:2px solid #055659;
@@ -131,6 +167,67 @@
 
 .pickGameTable  {
 	width: 100%; 
+}
+
+.pickGameTable  th {
+	text-align: center; 
+	vertical-align: middle;
+	/*color: #6C0000;*/
+	font-size: 16px;
+	font-style: bold;
+	/*border-top: 1px solid red;*/
+	/*border-bottom: 2px solid #6C0000;*/
+}
+
+.pickGameTable td  {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.pickGameTable tr  {
+	line-height: 35px;
+}
+
+.TeamWeeklyRankingsInfoTable  {
+	width: 100%; 
+	background-color:white;
+	border:2px solid white;
+}
+
+.TeamWeeklyRankingsTableItemsCenter   {
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 16px;
+	font-style: bold;
+}
+
+.TeamWeeklyRankingsTable tr  {
+	line-height: 35px;
+}
+
+.miscTitle {
+	background-color:#058689;
+	border:2px solid #058689;
+	color:white;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.miscText {
+	color:#058689;
+	background-color:white;
+	border:2px solid white;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.miscData {
+	background-color:white;
+	border:2px solid white;
+	color:black;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .scrollClass {
@@ -210,25 +307,6 @@
 .teamNotSelected  {
 	background-color: white;
 	color:black; 
-}
-
-.pickGameTable  th {
-	text-align: center; 
-	vertical-align: middle;
-	/*color: #6C0000;*/
-	font-size: 16px;
-	font-style: bold;
-	/*border-top: 1px solid red;*/
-	/*border-bottom: 2px solid #6C0000;*/
-}
-
-.pickGameTable td  {
-	font-size: 16px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.pickGameTable tr  {
-	line-height: 35px;
 }
 
 .menuItems {

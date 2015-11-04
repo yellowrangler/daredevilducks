@@ -10,7 +10,7 @@
 				<div class="panel-body">
 
 					<div class="form-group horizontalFieldOffset">
-						<label for="memberid" class="control-label">Team</label>
+						<label for="teamid" class="control-label">Team</label>
 				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
 				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
@@ -18,7 +18,118 @@
 				</div> <!-- end of panel body -->				
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->	
-	</div> <!-- end of col 7 -->
+	</div> <!-- end of col 8 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel-body">
+			<div class="panel-group" id="weeklydefinitionsgroup">
+				<div class="panel panel-default">
+					<div style="background-color:#DBF0EF;" class="panel-heading" id="weeklydefinitionsheading">
+						<h3 class="panel-title">
+							<a style="text-align:center;vertical-align:middle;text-decoration:none;" data-toggle="collapse" data-parent="#weeklydefinitionsgroup" data-target="#weeklydefinitions">
+							Click me to toggle Information for Weekly Ranking
+							</a>
+						</h3>
+					</div> <!-- end of panel header -->
+
+					<div id="weeklydefinitions" class="panel-collapse collapse">
+
+						<div class="panel-body">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <p>This Information displays the Ranking for the team selected for each week that has been played and the ranking of the Team the selected team played against. The idea is to give you a idea of how the seleted team is progressing and how they may play against similar teams.</p>
+								<p>The last entry will be for the current week which be a regurgitation of the previous weeks stats for each team. The purpose being to show you the rankings for the teams that are playing for the current week!</p>
+							  </div>
+							</div>
+
+							<div style="padding-top:30px;" >
+								<table  class="table TeamWeeklyRankingsInfoTable">
+
+									<tr>
+										<td class="miscText">Week</td>
+										<td class="miscData">The week that these statistics are created from.</td>
+									</tr>
+
+									<tr>
+										<td class="miscText">Team Name</td>
+										<td class="miscData">The Name of the Teams which played. The Team in red is the team you seleted.</td>
+									</tr>
+
+									<tr>
+										<td class="miscText">Score</td>
+										<td class="miscData">The Score of that particular Game. The score in green is the winnig score.</td>
+									</tr>
+
+									<tr>
+										<td class="miscText">W</td>
+										<td class="miscData">The Wins for that Team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="miscText">L</td>
+										<td class="miscData">The Losses for that Team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="miscText">T</td>
+										<td class="miscData">The Ties for that Team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="miscText">PR</td>
+										<td class="miscData">The Power Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">T</td>
+										<td class="miscData">The Total Offensive Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">S</td>
+										<td class="miscData">The Offensive Scoring Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">P</td>
+										<td class="miscData">The Offensive Passing Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">R</td>
+										<td class="miscData">The Offensive Rushing Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">T</td>
+										<td class="miscData">The Total Defensive Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">S</td>
+										<td class="miscData">The Defensive Scoring Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">P</td>
+										<td class="miscData">The Defensive Passing Ranking for the team at the time the game was played. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">R</td>
+										<td class="miscData">The Defensive Rushing Ranking for the team at the time the game was played. 
+									</tr>
+								</table>							
+							</div> <!-- end of padding -->
+
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel collapse -->
+				</div> <!-- end of panel panel -->
+			</div> <!-- end of panel group -->
+		</div> <!-- end of panel body -->
+	</div> <!-- end of col -->
 </div> <!-- end of row -->
 
 <div class="pageStandardOffset row">
@@ -27,82 +138,172 @@
 			<div class="panel-body table-responsive">
 				<table class="table pickGameTable" >
 					<tr class="tableTitle">
+						<th colspan=7>&nbsp</th>			
+						<th class="offenceTitle" colspan=4>Offensive Stats</th>
+						<th class="defenceTitle" colspan=4>Defensive Stats</th>					
+					</tr>
+
+					<tr class="tableTitle">
 						<th>Week</th>			
 						<th>Team Name</th>
 						<th>Score</th>	
 						<th>W</th>
 						<th>L</th>
 						<th>T</th>								
-						<th>PW</th>
-						<th>Off</th>
-						<th>T</th>
-						<th>S</th>
-						<th>P</th>
-						<th>R</th>
-						<th>Def</th>
-						<th>T</th>
-						<th>S</th>
-						<th>P</th>
-						<th>R</th>						
+						<th>PR</th>
+						<th class="offenceTitle">T</th>
+						<th class="offenceTitle">S</th>
+						<th class="offenceTitle">P</th>
+						<th class="offenceTitle">R</th>
+						<th class="defenceTitle">T</th>
+						<th class="defenceTitle">S</th>
+						<th class="defenceTitle">P</th>
+						<th class="defenceTitle">R</th>						
 					</tr>
 
 					<tr ng-repeat="teamweekrank in teamweekranks">
-						<td class="left-column-text">
+						<td style="font-size:25px;font-weight: bold;"class="center-column-text">
 							{{teamweekrank.week}}
 						</td>
 
-						<td class="left-column-text" ng-class="{{teamweekrank.teamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
-							{{teamweekrank.teamlocation}} &nbsp; {{teamweekrank.teamname}}
+						<td class="left-column-text" >
+						<div id="hometeamlocationnamediv" name="hometeamlocationnamediv" ng-class="{{teamweekrank.hometeamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.hometeamlocation}} &nbsp; {{teamweekrank.hometeamname}}
+						</div>
+
+						<div id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-class="{{teamweekrank.awayteamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.awayteamlocation}} &nbsp; {{teamweekrank.awayteamname}}
+						</div>
 						</td>
 
-						<td class="center-column-text" ng-class="{{teamweekrank.won == teamweekrank.teamid}} ? 'teamWon' : 'teamLost' ">{{teamweekrank.teamscore}}</td>
+						<td class="center-column-text" >
+						<div id="hometeamscorediv" name="hometeamscorediv" ng-class="compareScores( 'home', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+							{{teamweekrank.hometeamscore}}
+						</div>
 
-						<td class="center-column-text">
-							   {{teamweekrank.wins}}
+						<div id="awayteamscorediv" name="awayteamscorediv" ng-class="compareScores( 'away', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+							{{teamweekrank.awayteamscore}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.losses}}
+						<td class="center-column-text" >
+						<div id="hometeamwinsdiv" name="hometeamwinsdiv" >
+							{{teamweekrank.hometeamwins}}
+						</div>
+
+						<div id="awayteamwinsdiv" name="awayteamwinsdiv">
+							{{teamweekrank.awayteamwins}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.ties}}
+						<td class="center-column-text" >
+						<div id="hometeamlossesdiv" name="hometeamlossesdiv" >
+							{{teamweekrank.hometeamlosses}}
+						</div>
+
+						<div id="awayteamlossesdiv" name="awayteamlossesdiv">
+							{{teamweekrank.awayteamlosses}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.powerrank}}
+						<td class="center-column-text" >
+						<div id="hometeamtiesdiv" name="hometeamtiesdiv" >
+							{{teamweekrank.hometeamties}}
+						</div>
+
+						<div id="awayteamtiesdiv" name="awayteamtiesdiv">
+							{{teamweekrank.awayteamties}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.offencetotalrank}}
+						<td class="center-column-text" >
+						<div id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
+							{{teamweekrank.hometeampowerranking}}
+						</div>
+
+						<div id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
+							{{teamweekrank.awayteampowerranking}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.offencescoringrank}}
+						<td class="center-column-text" >
+						<div id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
+							{{teamweekrank.hometeamoffencetotal}}
+						</div>
+
+						<div id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
+							{{teamweekrank.awayteamoffencetotal}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.offencepassingrank}}
+						<td class="center-column-text" >
+						<div id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
+							{{teamweekrank.hometeamoffencescoring}}
+						</div>
+
+						<div id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
+							{{teamweekrank.awayteamoffencescoring}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.offencerushingrank}}
+						<td class="center-column-text" >
+						<div id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
+							{{teamweekrank.hometeamoffencepassing}}
+						</div>
+
+						<div id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
+							{{teamweekrank.awayteamoffencepassing}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.defencetotalrank}}
+						<td class="center-column-text" >
+						<div id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
+							{{teamweekrank.hometeamoffencerushing}}
+						</div>
+
+						<div id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
+							{{teamweekrank.awayteamoffencerushing}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.defencescoringrank}}
+						<td class="center-column-text" >
+						<div id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
+							{{teamweekrank.hometeamdefencetotal}}
+						</div>
+
+						<div id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
+							{{teamweekrank.awayteamdefencetotal}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.defencepassingrank}}
+						<td class="center-column-text" >
+						<div id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
+							{{teamweekrank.hometeamdefencescoring}}
+						</div>
+
+						<div id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
+							{{teamweekrank.awayteamdefencescoring}}
+						</div>
 						</td>
 
-						<td class="center-column-text">
-							   {{teamweekrank.defencerushingrank}}
+						<td class="center-column-text" >
+						<div id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
+							{{teamweekrank.hometeamdefencepassing}}
+						</div>
+
+						<div id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
+							{{teamweekrank.awayteamdefencepassing}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
+							{{teamweekrank.hometeamdefencerushing}}
+						</div>
+
+						<div id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
+							{{teamweekrank.awayteamdefencerushing}}
+						</div>
 						</td>
 					</tr>
 				</table>

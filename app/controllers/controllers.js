@@ -1059,9 +1059,26 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
 
+    function getTeamWeekRank ()
+    {
+        var q = "&teamid="+$scope.current.teamid+"&season="+$scope.current.season;
+        nflteamsFactory.getTeamWeekyRanking(q)
+            .success( function(data) {
+                $scope.teamweekranks = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+    }
+
     init();
     function init() {
         $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.current.teamid = 0;
+
+        getTeamWeekRank();
+
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -1069,6 +1086,18 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
         setviewpadding();
            
     };
+
+    $scope.compareScores = function (venue, homescore, awayscore) {
+        var status = "";
+
+        status = compareScores(venue, homescore, awayscore);
+
+        return status;
+    }
+
+    $scope.getTeamWeekRank = function() {
+        getTeamWeekRank();
+    }
 
 }
 
