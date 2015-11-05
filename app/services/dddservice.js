@@ -36,6 +36,10 @@ dddApp.service('selectListService', function () {
             url : "latepicks-email.html"
         }, 
         {  
+            title :  "Late Picks Day Of",
+            url : "latepicksdayof-email.html"
+        }, 
+        {  
             title :  "Site Problems",
             url : "siteproblems-email.html"
         },  

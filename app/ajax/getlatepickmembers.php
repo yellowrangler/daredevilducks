@@ -89,8 +89,8 @@ $sql = "SELECT COUNT(1) AS gamesleftinweek
 	FROM gamestbl G 
 	LEFT JOIN gameweekstbl GW ON GW.season = G.season AND GW.week = G.week
 	AND G.gamedatetime >= GW.weekstart AND G.gamedatetime <= GW.weekend
-	AND GW.week = '8' AND GW.season = '2015'
-	WHERE G.week = '8' AND G.season = '2015'
+	AND GW.week = '$week' AND GW.season = '$season'
+	WHERE G.week = '$week' AND G.season = '$season'
 	AND G.gamedatetime > NOW()";
 // print $sql;
 

@@ -267,6 +267,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.getLatePickDayOfMembers = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getlatepickdayofmembers.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
 

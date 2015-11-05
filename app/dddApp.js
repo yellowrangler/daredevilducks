@@ -91,12 +91,6 @@ dddApp.config(function ($routeProvider) {
                 templateUrl: 'app/partials/updatemember.html'
             })
 
-        .when('/weeklybuilds',
-            {
-                controller: 'weeklybuildsController',
-                templateUrl: 'app/partials/weeklybuilds.html'
-            })
-
         .when('/weeklyscripts',
             {
                 controller: 'weeklyscriptsController',
