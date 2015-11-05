@@ -142,8 +142,6 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     //
     if ($filerow == 1)
     {
-
-
     	continue;
     }
 
@@ -243,7 +241,7 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 			SET season = $season, week = $week, teamid = $teamid, powerranking = $powerranking,
 			offencetotal = $offencetotal, offencepassing = $offencepassing, offencerushing = $offencerushing, 
 			offencescoring = $offencescoring, defencetotal = $defencetotal, defencepassing = $defencepassing, 
-			defencerushing = $defencerushing, defencerushing = $defencescoring, 
+			defencerushing = $defencerushing, defencescoring = $defencescoring, 
 			enterdate = '$enterdateTS' 
 			WHERE season = $season AND week = $week and teamid = $teamid";
 

@@ -70,6 +70,12 @@
 	color:white;
 }
 
+.tableTitleNoBorder {
+	background-color:#058689;
+/*	border:2px solid white;*/
+	color:white;
+}
+
 .tableTitleHeader {
 	background-color:white;
 	border:2px solid #058689;
@@ -77,25 +83,25 @@
 }
 
 .powerRankingTitle {
-	background-color:#EB984E;
-	border:2px solid #EB984E;
+	background-color:#0ABEC7;
+	border:2px solid #0ABEC7;
 	color:white;
 }
 
 .offenceTitle {
-	background-color:#51B961;
-	border:2px solid #51B961;
+	background-color:#006600;
+	border:2px solid #006600;
 	color:white;
 }
 
 .defenceTitle {
-	background-color:#D32C4A;
-	border:2px solid #D32C4A;
+	background-color:#CC0000;
+	border:2px solid #CC0000;
 	color:white;
 }
 
 .powerRankingText {
-	color:#EB984E;
+	color:#0ABEC7;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color:white;
@@ -103,7 +109,7 @@
 }
 
 .offenceText {
-	color:#51B961;
+	color:#006600;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color:white;
@@ -111,7 +117,7 @@
 }
 
 .defenceText {
-	color:#D32C4A;
+	color:#CC0000;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color:white;
@@ -190,7 +196,7 @@
 	vertical-align: middle;
 	/*color: #6C0000;*/
 	font-size: 16px;
-	font-style: bold;
+	font-weight: bold;
 	/*border-top: 1px solid red;*/
 	/*border-bottom: 2px solid #6C0000;*/
 }
@@ -204,6 +210,31 @@
 	line-height: 35px;
 }
 
+.teamWeeklyRankings  {
+	width: 100%; 
+}
+
+.teamWeeklyRankings  th {
+	text-align: center; 
+	vertical-align: middle;
+	/*color: #6C0000;*/
+	font-size: 16px;
+	font-weight: bold;
+	/*border-top: 1px solid red;*/
+	/*border-bottom: 2px solid #6C0000;*/
+}
+
+.teamWeeklyRankings td  {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.teamWeeklyRankings tr  {
+	line-height: 35px;
+}
+
+
 .TeamWeeklyRankingsInfoTable  {
 	width: 100%; 
 	background-color:white;
@@ -215,7 +246,7 @@
 	text-align: center; 
 	vertical-align: middle;
 	font-size: 16px;
-	font-style: bold;
+	font-weight: bold;
 }
 
 .TeamWeeklyRankingsTable tr  {

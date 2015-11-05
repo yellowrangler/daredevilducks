@@ -1058,6 +1058,12 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 
 controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
+    $scope.current.team = {};
+    $scope.current.toggletextShow = "Click ME to Show Information for Weekly Ranking";
+    $scope.current.toggletextHide = "Click ME to Hide Information for Weekly Ranking";
+
+    $scope.current.teamid = 0;
+    $scope.current.toggletext = $scope.current.toggletextShow;
 
     function getTeamWeekRank ()
     {
@@ -1065,7 +1071,16 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
         nflteamsFactory.getTeamWeekyRanking(q)
             .success( function(data) {
                 $scope.teamweekranks = data; 
-            })
+
+                var q = "&teamid="+$scope.current.teamid;
+                nflteamsFactory.getNflTeam(q)
+                    .success( function(data) {
+                        $scope.current.team = data; 
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });  
+                })
             .error( function(edata) {
                 alert(edata);
             });  
@@ -1075,18 +1090,17 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
     function init() {
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
-        $scope.current.teamid = 0;
 
-        // $(window).scroll(function() {
-        // if ($(this).scrollTop() > 100){  
-        //     $('#TeamWeeklyRankings').addClass("sticky");
-        //   }
-        //   else{
-        //     $('#TeamWeeklyRankings').removeClass("sticky");
-        //   }
-        // });
+        $('#weeklydefinitions').on('hide.bs.collapse', function () {
+            $("#toggletext").text($scope.current.toggletextShow);
+        });
 
-        getTeamWeekRank();
+
+        $('#weeklydefinitions').on('show.bs.collapse', function () {
+           $("#toggletext").text($scope.current.toggletextHide);
+        });
+
+        // getTeamWeekRank();
 
         //
         // this is not getting called at right time for definig top offset 
@@ -1926,7 +1940,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         scriptsFactory.importTeamWeeklyRankFile(scriptData)
         .success( function(data) {
             $("#scriptMessagesDisplay").append(data);
-            $("#scriptMessagesDisplay").append("<br />Import Team Weekly Ranking");
+            $("#scriptMessagesDisplay").append("<br />End of Import Team Weekly Ranking");
         })
         .error( function(edata) {
             alert(edata);
