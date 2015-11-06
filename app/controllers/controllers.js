@@ -1977,4 +1977,82 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
 }
 
+
+controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService) {
+    $scope.current = {};
+
+    function getMember() 
+    {
+        var q = "memberid="+$scope.current.memberid;
+        membersFactory.getMember(q)
+        .success( function(data) {
+            $scope.current = data;
+
+            if ($scope.current.avatar == "")
+            {
+                $scope.current.avatar = "default.png";
+            }
+
+            $scope.current.vpasswd = $scope.current.passwd;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
+        $scope.current.memberlogin = loginService.getLogin();  
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        getMember();
+    };
+
+    $scope.updatemember = function() {
+        var val1 = $("#passwd").val();
+        var val2 = $("#vpasswd").val();
+        if (val1 !== val2)
+        {
+            alert ("Passwords do not match!")
+
+        }
+        else
+        {
+            var formstring = $("#memberupdatememberForm").serialize();
+
+            membersFactory.memberUpdateMember(formstring)
+            .success( function(data) {
+                if (data == "ok")
+                {
+                    $('#meberUpdateMemberDialogModalTitle').text("Member Update Success");
+                    $('#meberUpdateMemberDialogModalBody').text("Member "+$scope.current.membername+" updated succesfully!");
+                    $('#meberUpdateMemberDialogModal').modal();
+                }
+                else
+                {
+                    $('#meberUpdateMemberDialogModalTitle').text("Member Update Error");
+                    $('#meberUpdateMemberDialogModalBody').text("Error updating member - "+data);
+                    $('#meberUpdateMemberDialogModal').modal();
+                }
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        }
+    }
+
+    $scope.updateAvatar = function() {
+        $('#meberUpdateMemberDialogModalTitle').text("Update Avatar Information");
+        $('#meberUpdateMemberDialogModalBody').html("<center>At this time please send me your Avatar via eMail! <BR />We will open this up some day.</center>");
+        $('#meberUpdateMemberDialogModal').modal();
+    }
+}
+
 dddApp.controller(controllers); 

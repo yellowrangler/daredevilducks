@@ -222,6 +222,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.memberUpdateMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/memberupdatemember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.deleteMember = function (data) {
         return $http({ 
             method: 'POST', 

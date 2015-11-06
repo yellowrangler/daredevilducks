@@ -97,6 +97,12 @@ dddApp.config(function ($routeProvider) {
                 templateUrl: 'app/partials/weeklyscripts.html'
             })
 
+        .when('/memberupdatemember',
+            {
+                controller: 'memberupdatememberController',
+                templateUrl: 'app/partials/memberupdatemember.html'
+            })
+
         .when('/login',
             {
                 controller: 'loginController',
