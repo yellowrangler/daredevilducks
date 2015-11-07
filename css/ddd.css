@@ -20,6 +20,16 @@
 	 width: 100%;
 }*/
 
+.hrBreak {
+width: 85%;
+height: 5px;
+margin-left: auto;
+margin-right: auto;
+background-color:#058689;
+color:#058689;
+border: 0 none;
+}
+
 .mainTitle {
 	color:#6C0000;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
@@ -72,7 +82,7 @@
 
 .tableTitleNoBorder {
 	background-color:#058689;
-/*	border:2px solid white;*/
+	/*border-top:2px solid #055659;*/
 	color:white;
 }
 
@@ -132,6 +142,11 @@
 .panelOverride {
 	background:white;
 	border:4px solid #055659;
+}
+
+.panelBodyOverride {
+	padding:0px;
+	margin:0px;
 }
 
 .panelOverrideNoBorder {

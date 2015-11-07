@@ -37,7 +37,7 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
-			<div class="panel-body table-responsive">
+			<div class="panelBodyOverride table-responsive">
 				<table id="TeamWeeklyRankings" class="table teamWeeklyRankings" >
 					<tr class="tableTitleNoBorder">
 						<th class="tableTitle">Week</th>
@@ -50,7 +50,11 @@
 					</tr>
 
 					<tr class="tableTitleNoBorder">
-						<th class="tableTitle" >&nbsp;</th>			
+						<th class="tableTitle" >
+							<button id="teamRankSortButton" type="button" class="btn btn-default" ng-click="toggleSort()" aria-label="Left Align">
+							  <span class="glyphicon" id="teamRankSort"></span>
+							</button>
+						</th>			
 						<th class="tableTitle" >
 							<div>Top - Home</div> 
 							<div>Bottom - Away</div>

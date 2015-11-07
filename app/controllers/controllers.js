@@ -972,7 +972,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
 
     function selectChange()
     {
-        var data = "&week="+$scope.current.week+"&season="+$scope.current.season;
+        var data = "week="+$scope.current.week+"&season="+$scope.current.season;
 
         nflteamsFactory.getNFLGamesWeekMemberTeamPicks(data)
             .success( function(data) {
@@ -1009,7 +1009,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
                         nflTeamsService.addCurrentWeek($scope.current.week);
                         nflTeamsService.addCurrentSeason($scope.current.season);  
 
-                        var q = "&week="+$scope.current.week+"&season="+$scope.current.season;
+                        var q = "week="+$scope.current.week+"&season="+$scope.current.season;
                         nflteamsFactory.getNFLGamesWeekMemberTeamPicks(q)
                             .success( function(data) {
                                 $scope.games = data; 
@@ -1059,20 +1059,28 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
     $scope.current.team = {};
-    $scope.current.toggletextShow = "Click ME to Show Information for Weekly Ranking";
-    $scope.current.toggletextHide = "Click ME to Hide Information for Weekly Ranking";
+    $scope.current.toggletextShow = "Click ME to SHOW Information for Weekly Ranking";
+    $scope.current.toggletextHide = "Click ME to HIDE Information for Weekly Ranking";
 
     $scope.current.teamid = 0;
+    $scope.current.toggleSort = "ASC";
     $scope.current.toggletext = $scope.current.toggletextShow;
 
     function getTeamWeekRank ()
     {
-        var q = "&teamid="+$scope.current.teamid+"&season="+$scope.current.season;
+        if ($("#teamRankSortButton").is(':hidden'))
+        {
+            $("#teamRankSort").addClass("glyphicon-sort-by-attributes");
+            $("#teamRankSortButton").show(400);
+        }
+        
+
+        var q = "teamid="+$scope.current.teamid+"&season="+$scope.current.season+"&orderbydirection="+$scope.current.toggleSort;
         nflteamsFactory.getTeamWeekyRanking(q)
             .success( function(data) {
                 $scope.teamweekranks = data; 
 
-                var q = "&teamid="+$scope.current.teamid;
+                var q = "teamid="+$scope.current.teamid;
                 nflteamsFactory.getNflTeam(q)
                     .success( function(data) {
                         $scope.current.team = data; 
@@ -1086,10 +1094,32 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
             });  
     }
 
+    function toggleSort () 
+    {
+        if ($scope.current.toggleSort == "DESC")
+        {
+            $("#teamRankSort").addClass("glyphicon-sort-by-attributes").removeClass("glyphicon-sort-by-attributes-alt");
+
+            $scope.current.toggleSort = "ASC";
+
+        }
+        else if ($scope.current.toggleSort == "ASC")
+        {
+            $("#teamRankSort").addClass("glyphicon-sort-by-attributes-alt").removeClass("glyphicon-sort-by-attributes");
+
+            $scope.current.toggleSort = "DESC";
+        }
+
+        getTeamWeekRank();
+       
+    }
+
     init();
     function init() {
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
+
+        $("#teamRankSortButton").hide();
 
         $('#weeklydefinitions').on('hide.bs.collapse', function () {
             $("#toggletext").text($scope.current.toggletextShow);
@@ -1120,6 +1150,10 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
 
     $scope.getTeamWeekRank = function() {
         getTeamWeekRank();
+    }
+
+    $scope.toggleSort = function () {
+        toggleSort();
     }
 
 }

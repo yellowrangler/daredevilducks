@@ -20,6 +20,7 @@ $datetime = date("Y-m-d H:i:s");
 $enterdate = $datetime;
 $season = $_POST['season'];
 $teamid = $_POST['teamid'];
+$orderbydirection = $_POST['orderbydirection'];
 $maxrankweek = 0;
 
 //
@@ -176,7 +177,7 @@ FROM gamebyetbl GB
 LEFT JOIN teamstbl T ON GB.teamid = T.id
 WHERE GB.season = $season  AND GB.week <= $maxrankweek AND GB.teamid = $teamid
 
-ORDER BY week";
+ORDER BY week $orderbydirection";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);
