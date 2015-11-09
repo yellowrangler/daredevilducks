@@ -1056,7 +1056,7 @@ controllers.teamstatsController = function ($scope, $http, $location, nflteamsFa
 
 }
 
-controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
+controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, membersFactory, nflTeamsService, loginService) {
     $scope.current = {};
     $scope.current.team = {};
     $scope.current.toggletextShow = "Click ME to SHOW Information for Weekly Ranking";
@@ -1119,6 +1119,22 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
 
+        $scope.current.memberlogin = loginService.getLogin();  
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        var q = "memberid="+$scope.current.memberid;
+        membersFactory.getMember(q)
+        .success( function(data) {
+            $scope.membember = data;
+
+            $scope.current.teamid = $scope.membember.favoriteteamid;
+
+            getTeamWeekRank();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+
         $("#teamRankSortButton").hide();
 
         $('#weeklydefinitions').on('hide.bs.collapse', function () {
@@ -1158,13 +1174,16 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
 
 }
 
-controllers.addmemberController = function ($scope, $http, $location, membersFactory) {
+controllers.addmemberController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
     init();
     function init() {
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+
+        $scope.teams = nflTeamsService.getNFLTeams(); 
+        
         setviewpadding();
         
     };
@@ -1211,7 +1230,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
         // in jquery ready. So adding it here
         //
         setviewpadding();
-        
+
         $scope.current.avatar = "default.png";
 
         membersFactory.getMembers()
@@ -1282,7 +1301,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
     }
 }
 
-controllers.updatememberController = function ($scope, $http, $location, membersFactory) {
+controllers.updatememberController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
     $scope.current = {};
 
     init();
@@ -1292,6 +1311,8 @@ controllers.updatememberController = function ($scope, $http, $location, members
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        $scope.teams = nflTeamsService.getNFLTeams(); 
         
         membersFactory.getMembers()
             .success( function(data) {
@@ -1486,7 +1507,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
 
 }
 
-controllers.teamdiscoveryController = function ($scope, $http, $log, $location) {
+controllers.teamdiscoveryController = function ($scope, $http, $log, $location, nflTeamsService) {
 
     init();
     function init() {
@@ -1494,6 +1515,10 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location) 
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+
+        $scope.teams = nflTeamsService.getNFLTeams(); 
+
+
         setviewpadding();
 
   }
@@ -2012,7 +2037,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 }
 
 
-controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService) {
+controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService, nflTeamsService) {
     $scope.current = {};
 
     function getMember() 
@@ -2042,6 +2067,8 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        $scope.teams = nflTeamsService.getNFLTeams(); 
         
         $scope.current.memberlogin = loginService.getLogin();  
         $scope.current.memberid = $scope.current.memberlogin.memberid;

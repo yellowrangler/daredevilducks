@@ -12,28 +12,28 @@
           <form id="addmemberForm" name="addmemberForm" style="padding:10px;" class="form-horizontal">
               <div class="form-group" >
                 <label for="membername" class="col-md-2 control-label">Name</label>
-                <div class="col-md-7">
+                <div class="col-md-5">
                     <input tabindex="1" type="text" class="form-control" id="membername" name="membername" placeholder="Member name">
                 </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="screenname" class="col-md-2 control-label">Screen Name</label>
-                  <div class="col-md-7">
+                  <div class="col-md-3">
                       <input tabindex="2" type="text" class="form-control" id="screenname" name="screenname" placeholder="Screen Name">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="role" class="col-md-2 control-label">Role</label>
-                  <div class="col-md-7">
+                  <div class="col-md-3">
                       <input tabindex="3" type="text" class="form-control" id="role" name="role" placeholder="role">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group" >
                 <label for="gender" class="col-md-2 control-label">Gender</label>
-                <div class="col-md-5">
+                <div class="col-md-2">
                   <select tabindex="4" class="form-control" id="gender" name="gender" >
                     <option value="Not Selected">Not Selected</option>
                     <option value="Male">Male</option>
@@ -45,7 +45,7 @@
 
               <div class="form-group">
                   <label for="street" class="col-md-2 control-label">Street</label>
-                  <div class="col-md-7">
+                  <div class="col-md-5">
                       <input tabindex="5" type="text" class="form-control" id="street" name="street"placeholder="Street">
                   </div>
               </div> <!-- end of form-group -->
@@ -131,8 +131,28 @@
 
               <div class="form-group">
                   <label for="email" class="col-md-2 control-label">eMail</label>
-                  <div class="col-md-7">
+                  <div class="col-md-5">
                       <input tabindex="11" type="email" class="form-control" id="email" name="email" placeholder="eMail">
+                  </div>
+
+                  &nbsp; 
+
+                  <input tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please don't Send eMail's
+              </div> <!-- end of form-group -->
+
+              <div class="form-group">
+                <label for="favoriteteamid" class="col-md-2 control-label">Favorite Team</label>
+                <div class="col-md-5">
+                  <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                      <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+                  </select>
+                </div>
+              </div> <!-- end of form-group --> 
+
+              <div class="form-group">
+                  <label for="biography" class="col-md-2 control-label">Biography</label>
+                  <div class="col-md-5">
+                      <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
                   </div>
               </div> <!-- end of form-group -->
 

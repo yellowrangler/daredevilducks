@@ -21,7 +21,25 @@ $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
 $role = $_POST['role'];
 // $avatar = $_POST['avatar'];    
-$avatar = "";      
+$avatar = "";    
+$noemail = 0;
+$biography = $_POST['biography'];
+$favoriteteamid = 0;
+
+if( isset($_POST['noemail']) )
+{
+     $noemail = 1;
+}  
+
+if( isset($_POST['favoriteteamid']) )
+{
+
+	$favoriteteamid = $_POST['favoriteteamid'];
+	if (is_numeric($favoriteteamid) == false)
+	{
+		$favoriteteamid = 0;
+	}
+}
 
 //
 //  set global values
@@ -132,6 +150,9 @@ $sql = "INSERT INTO membertbl
 	state, 
 	zip, 
 	phonenumber, 
+	noemail,
+	biography,
+	favoriteteamid,
 	passwd, 
 	status, 
 	enterdate) 
@@ -141,6 +162,9 @@ $sql = "INSERT INTO membertbl
 	'$avatar',
 	'$role',
 	'$email',
+	$noemail,
+	'$biography',
+	$favoriteteamid,
 	'$street',
 	'$city',
 	'$state',

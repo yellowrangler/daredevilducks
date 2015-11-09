@@ -38,6 +38,25 @@
 	      </div>
 	    </div>
 	  </div>
+	</div> <!-- end of row -->
+
+	<div class="row">
+
+		<div ng-repeat="team in teams" >
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a ng-href="{{team.teamurl}}" target="_blank">
+					<img width="95%" ng-src="img/nflicons/{{team.teamiconname}}">
+					</a>
+
+					<div class="caption">
+					<h3>{{team.location}} {{team.name}}</h3>
+					<p>A website where you can gather information about the {{team.location}} {{team.name}}.</p>
+					<p><a ng-href="{{team.teamurl}}" target="_blank" class="btn btn-primary" role="button">Go There</a></p>
+					</div> <!-- end of caption -->
+				</div> <!-- end of thumbnail -->
+			</div> <!-- end of col -->
+		</div> <!-- end of repeat -->
 
 	</div> <!-- end of row -->
 </div> <!-- end of container 	 -->

@@ -154,27 +154,52 @@
                   <div class="col-md-5">
                       <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
                   </div>
+
+                  &nbsp; 
+
+                  <input tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please don't Send eMail's
               </div> <!-- end of form-group -->
-            </div> <!-- end of col-7 -->
+
+                <div class="form-group">
+                  <label for="favoriteteamid" class="col-md-3 control-label">Favorite Team</label>
+                  <div class="col-md-5">
+                    <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                        <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+                    </select>
+                  </div>
+                </div> <!-- end of form-group --> 
+
+                <div class="form-group">
+                    <label for="biography" class="col-md-3 control-label">Biography</label>
+                    <div class="col-md-7">
+                        <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
+                    </div>
+                </div> <!-- end of form-group -->
+
+              </div> <!-- end of col-7 -->
           </div> <!-- end of row -->
+
+          <hr class="hrBreak">
 
           <div class="row" style="padding-top:35px;">
             <div class="col-md-7">
               <div class="form-group">
                   <label for="passwd" class="col-md-3 control-label">Password</label>
                   <div class="col-md-4">
-                      <input tabindex="13" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
+                      <input tabindex="15" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="vpasswd" class="col-md-3 control-label">Verify</label>
                   <div class="col-md-4">
-                      <input tabindex="14" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
+                      <input tabindex="16" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
                   </div>
               </div> <!-- end of form-group -->
             </div> <!-- end of col-7 -->
           </div> <!-- end of row -->
+
+          <hr class="hrBreak">
 
           <div class="row" style="padding-top:35px;">
             <div class="col-md-7">
@@ -192,7 +217,7 @@
             <div class="col-md-7">
               <div class="form-group">
                 <div class="col-md-offset-2 col-md-3">
-                  <button tabindex="15" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
+                  <button tabindex="17" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
                  </div>
               </div> <!-- end of form-group -->
             </div> <!-- end of col-7 -->

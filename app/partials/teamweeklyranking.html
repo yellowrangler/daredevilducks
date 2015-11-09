@@ -17,7 +17,7 @@
 		<div class="pageStandardOffset">
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
-					<div class="form-group horizontalFieldOffset">
+					<div style="padding-top:120px;" class="form-group horizontalFieldOffset">
 						<label for="teamid" class="control-label">Team</label>
 				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
 				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>

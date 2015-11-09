@@ -22,6 +22,24 @@ $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
 $role = $_POST['role'];
 $avatar = $_POST['avatar'];    
+$noemail = 0;
+$biography = $_POST['biography'];
+$favoriteteamid = 0;
+
+if( isset($_POST['noemail']) )
+{
+     $noemail = 1;
+}
+
+if( isset($_POST['favoriteteamid']) )
+{
+
+	$favoriteteamid = $_POST['favoriteteamid'];
+	if (is_numeric($favoriteteamid) == false)
+	{
+		$favoriteteamid = 0;
+	}
+}
 
 //
 //  set global values
@@ -29,7 +47,7 @@ $avatar = $_POST['avatar'];
 $msgtext = "ok";
 
 // print_r($_POST);
-// die()
+// die();
 
 //
 // get date time for this transaction
@@ -97,6 +115,9 @@ $sql = "UPDATE membertbl
 		state = '$state', 
 		zip = '$zip', 
 		phonenumber = '$phonenumber', 
+		noemail = $noemail,
+		biography = '$biography',
+		favoriteteamid = $favoriteteamid,
 		passwd = '$passwd', 
 		status = '$status', 
 		enterdate = '$enterdateTS'

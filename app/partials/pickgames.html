@@ -1,14 +1,16 @@
 <form id="pickweekForm" name="pickweekForm">
 <div class="pageCaption row">
-	<div style="padding-top:15px;display:inline;" class="col-md-3">
+	<div style="padding-top:15px;display:inline;" class="col-md-12">
 		<h2 style="display:inline;" class="headerTitle">Pick Your Teams</h2>
 
 		<div style="padding-left:10px;display:inline;" class="form-group">
             <img style="height:45px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
 		</div> <!-- end of form-group -->  
 	</div> <!-- end of column -->
+</div> <!-- end of row -->	
 
-	<div class="col-md-9 form-inline">
+<div class="row">
+	<div class="col-md-12 form-inline">
 		<div class="pageStandardOffset">
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
@@ -144,11 +146,11 @@
 </div> <!-- end of row -->
 
 <div class="pageStandardOffset row">
-	<div class="col-md-4">
-		<img style="height:200px;margin:15px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
-	</div> <!-- end of col 4 -->
+	<div class="col-md-6">
+		<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
+	</div> <!-- end of col 5 -->
 
-	<div class="col-md-8">
+	<div class="col-md-6">
 		<div class="panel panel-default panelOverride">
 			<div class="panel-body table-responsive">
 				<table class="table pickGameTable" >
