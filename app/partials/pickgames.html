@@ -66,7 +66,7 @@
 
 					<tr ng-repeat="game in games">
 						<td class="left-column-text">
-							<img height="45" style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'>
+							<img height="50" style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'>
 						</td>
 
 						<td class="left-column-text">
@@ -83,7 +83,7 @@
 
 						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							<a ng-href="{{game.hometeamurl}}" target="_blank">
-							<img height="45" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+							<img height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
 							</a>
 						</td>
 
@@ -114,7 +114,7 @@
 
 						<td id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 							<a ng-href="{{game.awayteamurl}}" target="_blank">
-							<img height="45" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+							<img height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
 							</a>
 						</td>
 
@@ -145,7 +145,7 @@
 
 <div class="pageStandardOffset row">
 	<div class="col-md-4">
-		<img style="height:200px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
+		<img style="height:200px;margin:15px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
 	</div> <!-- end of col 4 -->
 
 	<div class="col-md-8">
@@ -166,7 +166,7 @@
 					<tr ng-repeat="byegame in byegames">
 						<td class="left-column-text">
 							<a ng-href="{{byegame.teamurl}}" target="_blank">
-							<img height="45" ng-src='img/nflicons/{{byegame.teamiconname}}'>
+							<img height="50" ng-src='img/nflicons/{{byegame.teamiconname}}'>
 							</a>
 						</td>
 
