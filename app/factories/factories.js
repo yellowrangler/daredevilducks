@@ -171,6 +171,24 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getAdminTeamWeeklyRanking = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getadminteamweeklyranking.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.saveAdminTeamWeeklyRanking = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/saveadminteamweeklyranking.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNflTeam = function (data) {
         return $http({ 
             method: 'POST', 

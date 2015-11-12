@@ -67,6 +67,12 @@ dddApp.config(function ($routeProvider) {
                 templateUrl: 'app/partials/gameinfo.html'
             })
 
+        .when('/gameranking',
+            {
+                controller: 'gamerankingController',
+                templateUrl: 'app/partials/gameranking.html'
+            })
+
         .when('/addmember',
             {
                 controller: 'addmemberController',

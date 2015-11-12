@@ -32,6 +32,10 @@ dddApp.service('selectListService', function () {
             url : "gameweek-email.html"
         },
         {  
+            title :  "Team Weekly Rankings",
+            url : "teamweeklyrankings-email.html"
+        },
+        {  
             title :  "Late Picks",
             url : "latepicks-email.html"
         }, 

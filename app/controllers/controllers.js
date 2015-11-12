@@ -1116,6 +1116,10 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
 
     init();
     function init() {
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+            $location.path("#home");
+
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -1704,6 +1708,80 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
         alert("You be submitting delete request");
     } 
 
+}
+
+controllers.gamerankingController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
+    $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
+
+
+    function saveWeeklyRankings() {
+        var sdata = $("#adminteamweeklyrankForm").serialize();
+        // var sdata = $("#adminteamweeklyrankForm").serializeArray();        // var jsdata = JSON.stringify(sdata);
+        // var jpdata = JSON.parse(jsdata);
+        nflteamsFactory.saveAdminTeamWeeklyRanking(sdata)
+            .success( function(data) {
+                $('#gameWeeklyRankingsSavedDialogModalTitle').text("Success");
+                $('#gameWeeklyRankingsSavedDialogModalBody').html(data);
+                $('#gameWeeklyRankingsSavedDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+    }
+
+    function getAdminTeamWeeklyRanking () {
+        var q = "season="+$scope.current.season+"&week="+$scope.current.week;
+        nflteamsFactory.getAdminTeamWeeklyRanking(q)
+            .success( function(data) {
+                $scope.gameweeklyranks = data;
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+            
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+        .success( function(data) {
+            $scope.weeks = data; 
+
+            nflteamsFactory.getCurrentSeasonWeek()
+                .success( function(data) {
+                    $scope.current.season = data.season; 
+                    $scope.current.week = data.week;
+
+                    getAdminTeamWeeklyRanking ();
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+     
+    };
+
+    
+    $scope.saveWeeklyRankings = function() {
+        saveWeeklyRankings();
+    }
+
+    $scope.getAdminTeamWeeklyRanking = function () {
+        getAdminTeamWeeklyRanking();
+    }
+    
 }
 
 controllers.weeklyscriptsController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, scriptsFactory) {
