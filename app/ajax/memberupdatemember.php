@@ -19,7 +19,24 @@ $email = $_POST['email'];
 $screenname = $_POST['screenname']; 
 $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
-$avatar = $_POST['avatar'];    
+$noemail = 0;
+$biography = $_POST['biography'];
+$favoriteteamid = 0;
+
+if( isset($_POST['noemail']) )
+{
+     $noemail = 1;
+}
+
+if( isset($_POST['favoriteteamid']) )
+{
+
+	$favoriteteamid = $_POST['favoriteteamid'];
+	if (is_numeric($favoriteteamid) == false)
+	{
+		$favoriteteamid = 0;
+	}
+}  
 
 //
 //  set global values
@@ -82,18 +99,20 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 // update membername 
 //---------------------------------------------------------------
-
 $sql = "UPDATE membertbl
 	SET membername = '$membername', 
 		screenname = '$screenname', 
-		gender = '$gender',  
+		gender = '$gender', 
 		email = '$email', 
 		street = '$street',
 		city = '$city', 
 		state = '$state', 
 		zip = '$zip', 
 		phonenumber = '$phonenumber', 
-		passwd = '$passwd',
+		noemail = $noemail,
+		biography = '$biography',
+		favoriteteamid = $favoriteteamid,
+		passwd = '$passwd', 
 		enterdate = '$enterdateTS'
 	WHERE id = '$memberid'"; 
 
