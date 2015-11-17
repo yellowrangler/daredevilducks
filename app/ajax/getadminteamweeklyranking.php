@@ -66,6 +66,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //---------------------------------------------------------------
 // get admin team weekly rankings information
 //---------------------------------------------------------------
+
 $sql = "SELECT 
 TWR.season as season,
 TWR.week as week,
@@ -83,10 +84,31 @@ TWR.defencetotal AS defencetotal,
 TWR.defencepassing AS defencepassing,
 TWR.defencerushing AS defencerushing,
 TWR.defencescoring AS defencescoring
-FROM teamweekranktbl TWR
-LEFT JOIN teamstbl T ON T.id = TWR.teamid
-WHERE season = $season AND week = $week
-ORDER BY T.location, T.name";
+FROM teamstbl T 
+LEFT JOIN teamweekranktbl TWR ON TWR.teamid = T.id AND TWR.season = $season AND TWR.week = $week
+ORDER BY location, name";
+
+// $sql = "SELECT 
+// TWR.season as season,
+// TWR.week as week,
+// TWR.teamid AS teamid, 
+// T.location AS location,
+// T.teamurl AS teamurl,
+// T.teamiconname AS teamiconname,
+// T.name AS name,
+// TWR.powerranking AS powerranking,
+// TWR.offencetotal AS offencetotal,
+// TWR.offencepassing AS offencepassing,
+// TWR.offencerushing AS offencerushing,
+// TWR.offencescoring AS offencescoring,
+// TWR.defencetotal AS defencetotal,
+// TWR.defencepassing AS defencepassing,
+// TWR.defencerushing AS defencerushing,
+// TWR.defencescoring AS defencescoring
+// FROM teamweekranktbl TWR
+// LEFT JOIN teamstbl T ON T.id = TWR.teamid
+// WHERE season = $season AND week = $week
+// ORDER BY T.location, T.name";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

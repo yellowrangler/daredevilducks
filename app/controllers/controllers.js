@@ -197,6 +197,15 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
     }
 }
 
+controllers.editorialController = function ($scope, $http, $location, loginService) {
+    $scope.current = {};
+
+    init();
+    function init() {
+
+    }
+}
+
 controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();

@@ -27,8 +27,7 @@ class MailerDDD
     private $logoimage = 'img/DonaldDuckFlying-small.png';
     private $logoimagefullpath = "/var/www/html/daredevilducks/img/DonaldDuckFlying-small.png";
     private $logoimagemimetype = "image/png";
-        
-     
+
     private function setFrom($from)
     {
         $this->from = $from;
@@ -95,7 +94,7 @@ class MailerDDD
                     <body>
                     <div style='display:block;' id='headerlogo'>
                     <img style='float:left;' src='$this->logoimage' />
-                    <h2 style='float:left; padding-left:20px;'>Dare Devil Ducks Player News</h2>
+                    <h2 style='float:left; padding-left:20px;'>Dare Devil Ducks League News</h2>
                     </div>
                     <div style='padding-top:75px;clear:all;' id='messagebody'>
                     <div>$this->msg</div>

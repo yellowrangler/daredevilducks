@@ -7,7 +7,12 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'homeController',
                 templateUrl: 'app/partials/home.html'
-            })  
+            }) 
+        .when('/editorial',
+            {
+                controller: 'editorialController',
+                templateUrl: 'app/partials/editorial.html'
+            })      
         .when('/pickgames',
             {
                 controller: 'pickgamesController',

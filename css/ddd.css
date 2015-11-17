@@ -139,6 +139,11 @@ border: 0 none;
 	border:2px solid #055659;
 }
 
+.jumbotronOverrideEditorial {
+	background:white;
+	border:1px solid grey;
+}
+
 .panelOverride {
 	background:white;
 	border:4px solid #055659;
@@ -597,6 +602,21 @@ border: 0 none;
 .showPointer :hover {
     cursor: pointer;
 }
+
+#anchorMessage {
+    text-decoration:none; 
+    font-style:italic; 
+    color:black;
+    font-weight:bold;
+}
+
+#anchorMessage :hover {
+    text-decoration:none; 
+    font-style:italic; 
+    color:red;
+    font-weight:bold;
+}
+
 
 /*ddd footer*/
 .ddd-footer {

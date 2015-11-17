@@ -83,6 +83,32 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 //---------------------------------------------------------------
+// First check to see if there is a game today
+//---------------------------------------------------------------
+$sql = "SELECT count(id) as gamecount    
+FROM gamestbl 
+WHERE DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(NOW(),'%m-%d-%Y')";
+// print $sql;
+
+$sql_check = @mysql_query($sql, $dbConn);
+if (!$sql_check)
+{
+    $log = new ErrorLog("logs/");
+    $sqlerr = mysql_error();
+    $log->writeLog("SQL error: $sqlerr - Error doing select get check latepicks to db Unable to get late day of pick member information.");
+    $log->writeLog("SQL: $sql");
+
+    $status = -100;
+    $msgtext = "System Error: $sqlerr";
+}
+
+$r = mysql_fetch_assoc($sql_check);
+if ($r['gamecount'] == 0)
+{
+	exit(json_encode(""));
+}
+
+//---------------------------------------------------------------
 // get all member picks for today going forward with member list
 //---------------------------------------------------------------
 $sql = "SELECT id as memberid, membername, screenname, email   
