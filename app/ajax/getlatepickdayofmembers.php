@@ -121,6 +121,19 @@ WHERE DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(NOW(),'%m-%d-%Y')
 AND DATE_FORMAT(gamedatetime,'%T') > DATE_FORMAT(NOW(),'%T'))";
 // print $sql;
 
+// $sql = "SELECT 
+// id as memberid, membername, screenname, email   
+// FROM membertbl M
+// LEFT JOIN ( 
+//     SELECT memberid
+//     FROM memberpickstbl MP
+//     LEFT JOIN gamestbl G ON G.gamenbr = MP.gamenbr AND G.season = MP.season
+//     WHERE DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(NOW(),'%m-%d-%Y')
+//     AND DATE_FORMAT(gamedatetime,'%T') > DATE_FORMAT(NOW(),'%T')
+//     ) MPG ON MPG.memberid = M.id
+// WHERE id IS NULL ";
+// print $sql;
+
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {

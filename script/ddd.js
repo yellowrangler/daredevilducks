@@ -131,3 +131,52 @@ function compareScores(venue, homescore, awayscore)
 
     return result;
 }
+
+
+//
+// prototypes
+//
+function stopWatch() {
+	this.startdate = "";
+	this.stopdate = "";
+	this.diffdate = "";
+
+	function setdatediff (start, stop) {
+		return stop - start;
+	}
+
+	this.start = function () {
+		this.startdate = new Date();
+
+		this.stopdate = "";
+		this.diffdate = "";
+	}
+
+	this.stop = function () {
+		this.stopdate = new Date();
+		this.diffdate = setdatediff(this.startdate, this.stopdate);
+	}
+
+	this.getLocalTimeStart = function() {
+		return this.startdate.toLocaleTimeString();
+	};
+
+	this.getLocalTimeStop = function() {
+		return this.stopdate.toLocaleTimeString();
+	};
+
+	this.getMinutesDiff = function() {
+		return Math.round(((this.diffdate % 86400000) % 3600000) / 60000); // minutes
+	};
+
+	this.getSecondsDiff = function() {
+		return Math.round(this.diffdate / 1000); // seconds
+	};
+
+}
+
+
+
+
+
+

@@ -74,6 +74,7 @@ foreach ( $post as $key=>$value )
 	{
 		continue;
 	}
+	
 	$gamenbr = str_replace($strCut, "", $key);
 	$teamid = $value;
 
