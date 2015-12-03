@@ -539,6 +539,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
 controllers.pickgames2Controller = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
+    $scope.teamstat = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
     //
@@ -562,13 +563,33 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         return status;
     }
 
+    function getTeamStats (hometeamid,awayteamid,gamenbr)
+    {
+        var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
+        nflteamsFactory.getTeamStandingsDialog(q)
+            .success( function(data) {
+                $scope.teamstat = data; 
+
+                $('#teamStatsDialogModalTitle').text("Team Stats");
+                $('#teamStatsDialogModalBody').html(data);
+                $('#teamStatsDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+    }
+
     //
     // if checked turn this red
     //
     function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
     {
         var hometeamname = "pickh_"+gamenbr+"_teamname"; 
+        var hometeamicon = "pickh_"+gamenbr+"_icon"; 
+
         var awayteamname = "picka_"+gamenbr+"_teamname"; 
+        var awayteamicon = "picka_"+gamenbr+"_icon"; 
+
         var hometeamfieldid = "pickh_"+gamenbr; 
         var awayteamfieldid = "picka_"+gamenbr;    
 
@@ -584,8 +605,11 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
             
         if (teamtype =='home')
         {
-            $("#"+hometeamname).addClass("teamSelected2").removeClass("teamNotSelected2");
-            $("#"+awayteamname).addClass("teamNotSelected2").removeClass("teamSelected2");
+            $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
+            $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
+
+            $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");            
 
             $("#"+hometeamfieldid).val(hometeamid);
             $("#"+hometeamfieldid).prop("disabled", false);
@@ -595,8 +619,12 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         }
         else if (teamtype =='away')
         {
-            $("#"+hometeamname).addClass("teamNotSelected2").removeClass("teamSelected2");
-            $("#"+awayteamname).addClass("teamSelected2").removeClass("teamNotSelected2");
+            $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
+
+            $("#"+awayteamname).addClass("teamSelected").removeClass("teamNotSelected");
+            $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
+
 
             $("#"+hometeamfieldid).val(0);
             $("#"+hometeamfieldid).prop("disabled", true);
@@ -607,8 +635,11 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         }
         else
         {
-            $("#"+hometeamname).addClass("teamNotSelected2").removeClass("teamSelected2");
-            $("#"+awayteamname).addClass("teamNotSelected2").removeClass("teamSelected2");
+            $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
+
+            $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
         }
     }
 
@@ -696,7 +727,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                 fieldname = this.name;
             }
 
-            if (this.checked)
+            if (this.disabled != true)
             {
                 picked = picked + 1;
             }
@@ -723,24 +754,27 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
             data = data + "&memberid="+$scope.current.memberid;
         }
 
-        // membersFactory.addMemberGameTeamPick(data)
-        //     .success( function(data) {
-        //         if (data == "ok")
-        //         {
-        //             $('#gamesSavedDialogModalTitle').text("Picks Saved");
-        //             $('#gamesSavedDialogModalLabelBody').text($scope.msg);
-        //             $('#gamesSavedDialogModal').modal();
-        //         }
-        //         else
-        //         {
-        //             $('#gamesSavedDialogModalTitle').text("Picks Error");
-        //             $('#gamesSavedDialogModalLabelBody').text(data);
-        //             $('#gamesSavedDialogModal').modal();
-        //         }
-        //     })
-        //     .error( function(edata) {
-        //         alert(edata);
-        //     }); 
+        if (picked > 0)
+        {
+            // membersFactory.addMemberGameTeamPick(data)
+            //     .success( function(data) {
+            //         if (data == "ok")
+            //         {
+            //             $('#gamesSavedDialogModalTitle').text("Picks Saved");
+            //             $('#gamesSavedDialogModalLabelBody').text($scope.msg);
+            //             $('#gamesSavedDialogModal').modal();
+            //         }
+            //         else
+            //         {
+            //             $('#gamesSavedDialogModalTitle').text("Picks Error");
+            //             $('#gamesSavedDialogModalLabelBody').text(data);
+            //             $('#gamesSavedDialogModal').modal();
+            //         }
+            //     })
+            //     .error( function(edata) {
+            //         alert(edata);
+            //     });
+        } 
 
     }
 
@@ -859,6 +893,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
     $scope.setSelectTeam = function (teamtype, gamenbr, awayteamid, hometeamid, teamselected) {
         setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamselected);
+    }
+
+    $scope.getTeamStats = function (hometeamid,awayteamid,gamenbr) {
+        getTeamStats(hometeamid,awayteamid,gamenbr);
     }
     
 }

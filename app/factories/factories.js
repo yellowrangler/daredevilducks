@@ -189,6 +189,15 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getTeamStandingsDialog = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getteamstatsdialog.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNflTeam = function (data) {
         return $http({ 
             method: 'POST', 

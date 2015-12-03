@@ -12,7 +12,7 @@
 				<div class="panel-body">
 					<div style="padding-left:10px;display:inline;" class="form-group">
 			            <img style="height:45px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
-					</div> <!-- end of form-group -->  
+					</div> <!-- end of form-group --> 
 
 					<div class="form-group horizontalFieldOffset">
 						<label for="memberid" class="control-label">Player</label>
@@ -48,69 +48,83 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
-			<div class="panel-body">
-				<div name="pickGameLine" class="row" ng-repeat="game in games">
-					<div class="col-md-2" name="gamedayinfo">
-						<div style="display:inline-block;">
-							<img height="50" ng-src='img/tvicons/{{game.networkiconname}}'>
-						</div>
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th colspan=2>Game Day</th>			
+						<th colspan=2>Home Team</th>
+						<th>Score</th>						
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>				
+						<th colspan=2>Away Team</th>
+						<th>Score</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>						
+					</tr>
 
-						<div style="display:inline-block;">
-							{{game.gameday}} {{game.gametime}}
-						</div>
-					</div> <!-- end of gamedayinfo -->		
+					<tr ng-repeat="game in games">
+						<td class="left-column-text">
+							<img height="50" style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'>
+						</td>
+
+						<td class="left-column-text">
+							 {{game.gameday}} &nbsp; {{game.gametime}}
+						</td>
+
+						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
 						
-					<div class="col-md-4" name="hometeam">
-						<div style="float:right;">
-							<div class="inlineDiv" >
-							    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
-							</div>
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+						</td>
 
-							<div style="width:170px;cursor:pointer;" name='pickh_div' class="inlineDiv" id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected2' : 'teamNotSelected2'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
-								{{game.hometeamlocation}} {{game.hometeamname}}
-							</div>
+						<td style="cursor:pointer;" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
+							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+						</td>
+						
+						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}
+						</td>
 
-							<div class="inlineDiv" id='pickh_{{game.gamenbr}}_icon' >
-								<a ng-href="{{game.hometeamurl}}" target="_blank">
-								<img height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
-								</a>
-							</div>
-							
-							<div style="width:50px;" class="inlineDiv" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon2' : 'teamLost' ">{{game.hometeamscore}}
-							</div>
-						</div><!-- end of floatright -->	
-					</div> <!-- end of hometeam -->	
+						<td class="center-column-text">
+						   {{game.homewins}}
+						</td>
 
-					<div class="col-md-4" name="awayteam">
-						<div style="float:left;">
-							<div style="width:50px;" class="inlineDiv" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon2' : 'teamLost' ">{{game.awayteamscore}}
-							</div>
+						<td class="center-column-text">
+						   {{game.homelosses}}
+						</td>
 
-							<div class="inlineDiv">
-							    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
-							</div>
+						<td class="center-column-text">
+						   {{game.hometies}}
+						</td>
 
-							<div class="inlineDiv" id='picka_{{game.gamenbr}}_icon' >
-								<a ng-href="{{game.awayteamurl}}" target="_blank">
-								<img height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
-								</a>
-							</div>
+						<td id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
+						
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+						</td>
 
-							<div style="width:170px;cursor:pointer;" name='picka_div' class="inlineDiv" id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected2' : 'teamNotSelected2' " >
-								{{game.awayteamlocation}} {{game.awayteamname}}
-							</div>
-						</div>	<!-- end of floatleft -->	
-					</div> <!-- end of awayteam -->	
+						<td style="cursor:pointer;" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+						</td>
 
-					<div class="col-md-1" name="selectinfo">
-						<div class="floatRightDiv">
-							<!-- <div style="font-size:17px;text-align:center;cursor:pointer;" class="inlineDiv">
-							  <span class="glyphicon glyphicon-eye-open" ></span>
-							</div> -->
-						</div>
-					</div> <!-- end of gamedayinfo -->	
+						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}
+						</td>
 
-				</div>
+						<td class="center-column-text">
+						   {{game.awaywins}}
+						</td>
+
+						<td class="center-column-text">
+						   {{game.awaylosses}}
+						</td>
+
+						<td class="center-column-text">
+						   {{game.awayties}}
+						</td>
+					</tr>
+
+				</table>
 			</div> <!-- end of panel body -->
 		</div> 	<!-- end of panel -->
 	</div> <!-- end of col 12 -->
@@ -177,6 +191,22 @@
       </div>
       <div class="modal-body">
         <p id="gamesSavedDialogModalLabelBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="modal fade" id="teamStatsDialogModal" tabindex="-1" role="dialog" aria-labelledby="teamStatsDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="teamStatsDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="teamStatsDialogModalBody">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
