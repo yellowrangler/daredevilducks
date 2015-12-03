@@ -95,9 +95,11 @@ TA.id as awayteamid,
 TH.location as hometeamlocation, 
 TH.name as hometeamname, 
 TH.teamiconname as hometeamiconname, 
+TH.teamurl as hometeamurl, 
 TA.location as awayteamlocation, 
 TA.name as awayteamname, 
 TA.teamiconname as awayteamiconname, 
+TA.teamurl as awayteamurl, 
 G.hometeamscore as hometeamscore, 
 G.awayteamscore as awayteamscore, 
 
@@ -189,9 +191,11 @@ $awayteamid = $teamstat['awayteamid'];
 $hometeamlocation = $teamstat['hometeamlocation'];  
 $hometeamname = $teamstat['hometeamname']; 
 $hometeamiconname = $teamstat['hometeamiconname']; 
+$hometeamurl = $teamstat['hometeamurl']; 
 $awayteamlocation = $teamstat['awayteamlocation'];  
 $awayteamname = $teamstat['awayteamname'];  
 $awayteamiconname = $teamstat['awayteamiconname']; 
+$awayteamurl = $teamstat['awayteamurl']; 
 $hometeamscore = $teamstat['hometeamscore'];  
 $awayteamscore = $teamstat['awayteamscore'];  
 
@@ -236,12 +240,20 @@ $awayteamdefencerushing = $teamstat['awayteamdefencerushing'];
 $returnStr = "
 <table style='width:95%;' class='table' >
 	<tr >
-		<td>&nbsp;</td>			
+		<td style='font-weight:bold;padding-top:20px;'>$hometeamname (H) VS $awayteamname (A)</td>			
 		<td>
-			<img height='50' src='img/nflicons/$hometeamiconname'> $hometeamname
+			<div style='text-align:center;'>
+				<a href='$hometeamurl' target='_blank'>
+					<img style='text-align:center;' height='50' src='img/nflicons/$hometeamiconname'> 
+				</a> 
+			</div>
 		</td>
 		<td>
-			<img height='50' src='img/nflicons/$awayteamiconname'> $awayteamname
+			<div style='text-align:center;'>
+				<a href='$awayteamurl' target='_blank'>
+					<img style='text-align:center;' height='50' src='img/nflicons/$awayteamiconname'>
+				</a> 
+			</div>
 		</td>											
 	</tr>
 
@@ -302,7 +314,7 @@ $returnStr = "
 	</tr>
 
 	<tr style='background:#006600;color:white;font-weight:bold;'>
-		<td colspan=3>Offence Power Rankings</td>								
+		<td colspan=3>Offencive Game Statistics</td>								
 	</tr>
 
 	<tr >
@@ -354,7 +366,7 @@ $returnStr = "
 	</tr>
 
 	<tr style='background:#CC0000;color:white;font-weight:bold;'>
-		<td colspan=3>Defence Power Rankings</td>								
+		<td colspan=3>Deffencive Game Statistics</td>								
 	</tr>
 
 	<tr >

@@ -10,12 +10,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if (role == "admin")
         {
             $("#adminselect").show();
-            $("#admintestpickgames").show();
+            // $("#admintestpickgames").show();
         }
         else
         {
             $("#adminselect").hide();
-            $("#admintestpickgames").hide();
+            // $("#admintestpickgames").hide();
         }  
     }
 
@@ -756,24 +756,24 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
         if (picked > 0)
         {
-            // membersFactory.addMemberGameTeamPick(data)
-            //     .success( function(data) {
-            //         if (data == "ok")
-            //         {
-            //             $('#gamesSavedDialogModalTitle').text("Picks Saved");
-            //             $('#gamesSavedDialogModalLabelBody').text($scope.msg);
-            //             $('#gamesSavedDialogModal').modal();
-            //         }
-            //         else
-            //         {
-            //             $('#gamesSavedDialogModalTitle').text("Picks Error");
-            //             $('#gamesSavedDialogModalLabelBody').text(data);
-            //             $('#gamesSavedDialogModal').modal();
-            //         }
-            //     })
-            //     .error( function(edata) {
-            //         alert(edata);
-            //     });
+            membersFactory.addMemberGameTeamPick(data)
+                .success( function(data) {
+                    if (data == "ok")
+                    {
+                        $('#gamesSavedDialogModalTitle').text("Picks Saved");
+                        $('#gamesSavedDialogModalLabelBody').text($scope.msg);
+                        $('#gamesSavedDialogModal').modal();
+                    }
+                    else
+                    {
+                        $('#gamesSavedDialogModalTitle').text("Picks Error");
+                        $('#gamesSavedDialogModalLabelBody').text(data);
+                        $('#gamesSavedDialogModal').modal();
+                    }
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
         } 
 
     }
