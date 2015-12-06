@@ -107,6 +107,13 @@ $conflosses = 0;
 $confties = 0;
 $confpercentage = 0;
 
+$divgames = 0;
+$divwins = 0;
+$divlosses = 0;
+$divties = 0;
+$divpercentage = 0;
+
+
 //
 // display variables
 //
@@ -169,7 +176,25 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		(awayteamid = $teamid and awayteamscore > hometeamscore)
 	)
 	AND
-	(th.conference = ta.conference)";
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT count(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = $season
+	AND 
+	( 	(hometeamid = $teamid and hometeamscore > awayteamscore)  
+		OR 
+		(awayteamid = $teamid and awayteamscore > hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -186,7 +211,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	}	
 
 	//
-	// union 4 selects to get total, home, away and conf wins
+	// union 5 selects to get total, home, away, conf and div wins
 	//
 	$idx = 0;
 	$winsArray = array();
@@ -199,6 +224,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$homewins = $winsArray[1];
 	$awaywins = $winsArray[2];
 	$confwins = $winsArray[3];
+	$divwins = $winsArray[4];	
 
 	//
 	// start sql to get losses
@@ -250,7 +276,25 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		(awayteamid = $teamid and awayteamscore < hometeamscore)
 	)
 	AND
-	(th.conference = ta.conference)";
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT count(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = $season
+	AND 
+	( 	(hometeamid = $teamid and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = $teamid and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -267,7 +311,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	}	
 
 	//
-	// union 4 selects to get total, home, away and conf losses
+	// union 5 selects to get total, home, away, conf and div losses
 	//
 	$idx = 0;
 	$lossesArray = array();
@@ -280,6 +324,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$homelosses = $lossesArray[1];
 	$awaylosses = $lossesArray[2];
 	$conflosses = $lossesArray[3];
+	$divlosses = $lossesArray[4];
 
 
 	//
@@ -348,7 +393,29 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		(hometeamscore != 0 AND awayteamscore != 0)
 	)
 	AND
-	(th.conference = ta.conference)";
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT count(*) as ties
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = $season
+	AND 
+	( 	(hometeamid = $teamid and hometeamscore = awayteamscore)  
+		OR 
+		(awayteamid = $teamid and awayteamscore = hometeamscore)
+	)
+	AND
+	(
+		(hometeamscore != 0 AND awayteamscore != 0)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -365,7 +432,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	}	
 
 	//
-	// union 4 selects to get total, home, away and conf ties
+	// union 5 selects to get total, home, away, conf and div ties
 	//
 	$idx = 0;
 	$tiesArray = array();
@@ -378,6 +445,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$hometies = $tiesArray[1];
 	$awayties = $tiesArray[2];
 	$confties = $tiesArray[3];
+	$divties = $tiesArray[4];
 
 
 	//
@@ -387,6 +455,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$homegames = $homewins + $homelosses + $hometies;
 	$awaygames = $awaywins + $awaylosses + $awayties;
 	$confgames = $confwins + $conflosses + $confties;
+	$divgames = $divwins + $divlosses + $divties;
 
 	//
 	// calculate percentage
@@ -402,6 +471,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	$p = $confwins / $confgames;
 	$confpercent = round($p, 3);
+
+	$p = $divwins / $divgames;
+	$divpercent = round($p, 3);
 
 	// 
 	// if data is there update otherwise insert
@@ -433,6 +505,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
 			awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,
 			conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
+			divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
 			season = $season, enterdate = '$enterdateTS' 
 			WHERE teamid = $teamid AND season = ".$season;;
 
@@ -461,11 +534,13 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			hometotalgames, homewins, homelosses, hometies, homepercent,
 			awaytotalgames, awaywins, awaylosses, awayties, awaypercent,
 			conftotalgames, confwins, conflosses, confties, confpercent,
+			divtotalgames, divwins, divlosses, divties, divpercent,
 			season, enterdate, teamid) 
 			VALUES ($games, $wins, $losses, $ties, $percent, 
 				$homegames, $homewins, $homelosses, $hometies, $homepercent,
 				$awaygames, $awaywins, $awaylosses, $awayties, $awaypercent,
-				$confgames, $confwins, c$onflosses, $confties, $confpercent,
+				$confgames, $confwins, $conflosses, $confties, $confpercent,
+				$divgames, $divwins, $divlosses, $divties, $divpercent,
 				$season, '$enterdateTS', $teamid)";
 
 		$sql_result = @mysql_query($sql, $dbConn);

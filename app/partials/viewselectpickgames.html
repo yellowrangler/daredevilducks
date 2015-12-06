@@ -58,7 +58,8 @@
 
 					<tr ng-repeat="game in games">
 						<td class="left-column-text">
-							{{game.gamedate}} &nbsp; {{game.gameday}}
+							<div>{{game.gameday}}</div>
+							<div>{{game.gametime}}</div>
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">

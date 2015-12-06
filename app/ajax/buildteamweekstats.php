@@ -47,12 +47,34 @@ $DBpassword = "tarryc";
 // set variables
 //
 $games = 0;
-$win = 0;
+$wins = 0;
 $losses = 0;
 $ties = 0;
 $percentage = 0;
-// $season = 2015;
-// $weeksinseason = 17;
+
+$homegames = 0;
+$homewins = 0;
+$homelosses = 0;
+$hometies = 0;
+$homepercentage = 0;
+
+$awaygames = 0;
+$awaywins = 0;
+$awaylosses = 0;
+$awayties = 0;
+$awaypercentage = 0;
+
+$confgames = 0;
+$confwins = 0;
+$conflosses = 0;
+$confties = 0;
+$confpercentage = 0;
+
+$divgames = 0;
+$divwins = 0;
+$divlosses = 0;
+$divties = 0;
+$divpercentage = 0;
 
 //
 // connect to db
@@ -137,10 +159,35 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	//
 	// reset values
 	//
-	$win = 0;
+	$games = 0;
+	$wins = 0;
 	$losses = 0;
 	$ties = 0;
 	$percentage = 0;
+
+	$homegames = 0;
+	$homewins = 0;
+	$homelosses = 0;
+	$hometies = 0;
+	$homepercentage = 0;
+
+	$awaygames = 0;
+	$awaywins = 0;
+	$awaylosses = 0;
+	$awayties = 0;
+	$awaypercentage = 0;
+
+	$confgames = 0;
+	$confwins = 0;
+	$conflosses = 0;
+	$confties = 0;
+	$confpercentage = 0;
+
+	$divgames = 0;
+	$divwins = 0;
+	$divlosses = 0;
+	$divties = 0;
+	$divpercentage = 0;
 
 	$teamid = $row['id'];
 
@@ -149,41 +196,71 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	//
 	for ($week = 1; $week <= $weekstotal; $week++)
 	{
-		//
-		// total games
-		//
-		$sql = "SELECT count(*) as games
-		FROM gamestbl where season = $season and week <= $week 
-		and (
-		(hometeamid = $teamid)
-		or (awayteamid = $teamid)
-		);";
-
-		$sql_r = @mysql_query($sql, $dbConn);
-		if (!$sql_r)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats - total games.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -200;
-		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total games. <br /> $sqlerr <br /> SQL: $sql";
-    		exit($msg);
-		}	
-
-		$r = mysql_fetch_assoc($sql_r);
-		$games = $r[games];
 
 		//
 		// wins
 		//
 		$sql = "SELECT count(*) as wins
-		FROM gamestbl where season = $season and week <= $week 
-		and (
-		(hometeamid = $teamid and hometeamscore > awayteamscore)
-		or (awayteamid = $teamid and awayteamscore > hometeamscore)
-		);";
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		(
+			(hometeamid = $teamid and hometeamscore > awayteamscore)
+	    	OR 
+			(awayteamid = $teamid and awayteamscore > hometeamscore)
+		)
+	    
+	    UNION ALL
+	    
+	    SELECT count(*) as wins
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		where season = $season and week <= $week 
+		AND 
+		( hometeamid = $teamid and hometeamscore > awayteamscore )
+
+		UNION ALL
+	    
+	    SELECT count(*) as wins
+		from gamestbl g
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( awayteamid = $teamid and awayteamscore > hometeamscore )
+
+		UNION ALL
+
+		SELECT count(*) as wins
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( 	(hometeamid = $teamid and hometeamscore > awayteamscore)  
+			OR 
+			(awayteamid = $teamid and awayteamscore > hometeamscore)
+		)
+		AND
+		(th.conference = ta.conference)
+
+		UNION ALL
+
+		SELECT count(*) as wins
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( 	(hometeamid = $teamid and hometeamscore > awayteamscore)  
+			OR 
+			(awayteamid = $teamid and awayteamscore > hometeamscore)
+		)
+		AND
+		(th.conference = ta.conference)
+		AND
+		(th.division = ta.division)";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -198,18 +275,86 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     		exit($msg);
 		}	
 
-		$r = mysql_fetch_assoc($sql_r);
-		$wins = $r[wins];
+		//
+		// union 5 selects to get total, home, away, conf and div wins
+		//
+		$idx = 0;
+		$winsArray = array();
+		while($row = mysql_fetch_assoc($sql_r)) {
+			$winsArray[$idx] = $row['wins'];
+			$idx = $idx + 1;
+		}
+
+		$wins = $winsArray[0];
+		$homewins = $winsArray[1];
+		$awaywins = $winsArray[2];
+		$confwins = $winsArray[3];
+		$divwins = $winsArray[4];
 
 		//
 		// losses
 		//
 		$sql = "SELECT count(*) as losses
-		FROM gamestbl where season = $season and week <= $week 
-		and (
-		(hometeamid = $teamid and awayteamscore > hometeamscore)
-		or (awayteamid = $teamid and hometeamscore > awayteamscore)
-		);";
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		(
+			(hometeamid = $teamid and hometeamscore < awayteamscore)
+	    	OR 
+			(awayteamid = $teamid and awayteamscore < hometeamscore)
+		)
+	    
+	    UNION ALL
+	    
+	    SELECT count(*) as losses
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		where season = $season and week <= $week 
+		AND 
+		( hometeamid = $teamid and hometeamscore < awayteamscore )
+
+		UNION ALL
+	    
+	    SELECT count(*) as losses
+		from gamestbl g
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( awayteamid = $teamid and awayteamscore < hometeamscore )
+
+		UNION ALL
+
+		SELECT count(*) as losses
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( 	(hometeamid = $teamid and hometeamscore < awayteamscore)  
+			OR 
+			(awayteamid = $teamid and awayteamscore < hometeamscore)
+		)
+		AND
+		(th.conference = ta.conference)
+
+		UNION ALL
+
+		SELECT count(*) as losses
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( 	(hometeamid = $teamid and hometeamscore < awayteamscore)  
+			OR 
+			(awayteamid = $teamid and awayteamscore < hometeamscore)
+		)
+		AND
+		(th.conference = ta.conference)
+		AND
+		(th.division = ta.division)";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -224,22 +369,106 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     		exit($msg);
 		}	
 
-		$r = mysql_fetch_assoc($sql_r);
-		$losses = $r[losses];
+		//
+		// union 5 selects to get total, home, away, conf and div losses
+		//
+		$idx = 0;
+		$lossesArray = array();
+		while($row = mysql_fetch_assoc($sql_r)) {
+			$lossesArray[$idx] = $row['losses'];
+			$idx = $idx + 1;
+		}
+
+		$losses = $lossesArray[0];
+		$homelosses = $lossesArray[1];
+		$awaylosses = $lossesArray[2];
+		$conflosses = $lossesArray[3];
+		$divlosses = $lossesArray[4];
 
 		//
 		// ties
 		//
 		$sql = "SELECT count(*) as ties
-		FROM gamestbl 
-		WHERE (season = $season AND week <= $week)
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
 		AND 
 		(
-			(hometeamid = $teamid AND awayteamscore = hometeamscore)
+			(hometeamid = $teamid and hometeamscore = awayteamscore)
+	    	OR 
+			(awayteamid = $teamid and awayteamscore = hometeamscore)
+		)
+		AND
+		(
+			(hometeamscore != 0 AND awayteamscore != 0)
+		)
+	    
+	    UNION ALL
+	    
+	    SELECT count(*) as ties
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		where season = $season and week <= $week 
+		AND 
+		( hometeamid = $teamid and hometeamscore = awayteamscore )
+		AND
+		(
+			(hometeamscore != 0 AND awayteamscore != 0)
+		)
+
+		UNION ALL
+	    
+	    SELECT count(*) as ties
+		from gamestbl g
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( awayteamid = $teamid and awayteamscore = hometeamscore )
+		AND
+		(
+			(hometeamscore != 0 AND awayteamscore != 0)
+		)
+
+		UNION ALL
+
+		SELECT count(*) as ties
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( 	(hometeamid = $teamid and hometeamscore = awayteamscore)  
 			OR 
-			(awayteamid = $teamid AND hometeamscore = awayteamscore)
-		) 
-		AND (awayteamscore != 0 AND hometeamscore != 0);";
+			(awayteamid = $teamid and awayteamscore = hometeamscore)
+		)
+		AND
+		(
+			(hometeamscore != 0 AND awayteamscore != 0)
+		)
+		AND
+		(th.conference = ta.conference)
+
+		UNION ALL
+
+		SELECT count(*) as ties
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where season = $season and week <= $week 
+		AND 
+		( 	(hometeamid = $teamid and hometeamscore = awayteamscore)  
+			OR 
+			(awayteamid = $teamid and awayteamscore = hometeamscore)
+		)
+		AND
+		(
+			(hometeamscore != 0 AND awayteamscore != 0)
+		)
+		AND
+		(th.conference = ta.conference)
+		AND
+		(th.division = ta.division)";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -254,23 +483,63 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     		exit($msg);
 		}	
 
-		$r = mysql_fetch_assoc($sql_r);
-		$ties = $r[ties];
+			//
+		// union 5 selects to get total, home, away, conf and div ties
+		//
+		$idx = 0;
+		$tiesArray = array();
+		while($row = mysql_fetch_assoc($sql_r)) {
+			$tiesArray[$idx] = $row['ties'];
+			$idx = $idx + 1;
+		}
+
+		$ties = $tiesArray[0];
+		$hometies = $tiesArray[1];
+		$awayties = $tiesArray[2];
+		$confties = $tiesArray[3];
+		$divties = $tiesArray[4];
+
 
 		//
-		// percent
+		// calculate games from totals played 
+		//
+		$games = $wins + $losses + $ties;
+		$homegames = $homewins + $homelosses + $hometies;
+		$awaygames = $awaywins + $awaylosses + $awayties;
+		$confgames = $confwins + $conflosses + $confties;
+		$divgames = $divwins + $divlosses + $divties;
+
+		//
+		// calculate percentage
 		//
 		$p = $wins / $games;
 		$percent = round($p, 3);
+
+		$p = $homewins / $homegames;
+		$homepercent = round($p, 3);
+
+		$p = $awaywins / $awaygames;
+		$awaypercent = round($p, 3);
+
+		$p = $confwins / $confgames;
+		$confpercent = round($p, 3);
+
+		$p = $divwins / $divgames;
+		$divpercent = round($p, 3);
 		
 		// 
 		// do update
 		// 
 		$sql = "UPDATE teamweekstatstbl 
-			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
+			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, 
+			conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
+			divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
+			season = $season, enterdate = '$enterdateTS' 
 			WHERE teamid = $teamid
 			AND week = $week
 			AND season = $season";
+
+		// echo "sql = $sql<br />";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -297,10 +566,13 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// do update
 		// 
 		$sql = "UPDATE teamweekstatstbl 
-			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, enterdate = '$enterdateTS' 
-			WHERE teamid = $teamid
-			AND week = $week
-			AND season = $season";
+			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent,
+			conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
+			divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
+			season = $season, enterdate = '$enterdateTS' 
+			WHERE teamid = $teamid AND week = $week AND season = $season";
+
+			// echo "sql = $sql<br />";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)

@@ -5898,3 +5898,538 @@ LEFT JOIN teamstbl TH ON G.hometeamid = TH.id AND TH.ID = 11
 LEFT JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 9gamenbr=147	
 LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week	
 WHERE G.season = 2015 AND G.gamenbr = 
+2015-12-04 05:44:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-12-04 05:44:34 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-12-05 06:14:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-12-05 06:14:46 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-12-05 06:14:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-12-05 06:14:47 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC
+2015-12-05 06:15:27 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'wrong argument passed' at line 20 - Error doing select to db Unable to get nfl game team information.
+2015-12-05 06:15:27 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as memberid,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.playerpickedgames as playerpickedgames,
+  MS.totalgamespercent as totalgamespercent,
+  MS.playerpickedpercent as playerpickedpercent,
+  CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = ''  wrong argument passed 
+2015-12-06 00:57:32 : SQL error: Unknown column 'TSH.confwins' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-06 00:57:32 : SQL: SELECT DISTINCT
+G.week as week,
+TH.id as hometeamid,
+TA.id as awayteamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamiconname as hometeamiconname, 
+TH.teamurl as hometeamurl, 
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamiconname as awayteamiconname, 
+TA.teamurl as awayteamurl, 
+G.hometeamscore as hometeamscore, 
+G.awayteamscore as awayteamscore, 
+
+'Standings' as standingsheader,
+'Overall' as overallstandingstitle,
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+
+'Conference' as confstandingstitle,
+TSH.confwins as confhometeamwins, 
+TSH.conflosses as confhometeamlosses, 
+TSH.confties as confhometeamties,
+TSA.confwins as confawayteamwins, 
+TSA.conflosses as confawayteamlosses, 
+TSA.confties as confawayteamties,
+
+'Division' as divstandingstitle,
+TSH.divwins as divhometeamwins, 
+TSH.divlosses as divhometeamlosses, 
+TSH.divties as divhometeamties,
+TSA.divwins as divawayteamwins, 
+TSA.divlosses as divawayteamlosses, 
+TSA.divties as divawayteamties,
+
+'Power Rankings' as powerrankingsheader,
+'Overall' as overallrankingstitle,
+TRH.powerranking as hometeampowerranking, 
+TRA.powerranking as awayteampowerranking, 
+
+'Offence Rankings' as offencerankingsheader,
+'Overall' as offenceoverallrankingstitle,
+TRH.offencetotal as hometeamoffencetotal, 
+TRA.offencetotal as awayteamoffencetotal, 
+'Scoring' as offencescoringrankingstitle,
+TRH.offencescoring as hometeamoffencescoring, 
+TRA.offencescoring as awayteamoffencescoring, 
+'Passing' as offencepassingrankingstitle,
+TRH.offencepassing as hometeamoffencepassing, 
+TRA.offencepassing as awayteamoffencepassing, 
+'Rushing' as offencerushingeamoffencerushing,
+TRH.offencerushing as hometeamoffencerushing, 
+TRA.offencerushing as awayteamoffencerushing, 
+
+'Defence Rankings' as defencerankingsheader,
+'Overall' as defenceoverallrankingstitle,
+TRH.defencetotal as hometeamdefencetotal, 
+TRA.defencetotal as awayteamdefencetotal, 
+'Scoring' as defencescoringrankingstitle,
+TRH.defencescoring as hometeamdefencescoring, 
+TRA.defencescoring as awayteamdefencescoring, 
+'Passing' as defencepassingrankingstitle,
+TRH.defencepassing as hometeamdefencepassing, 
+TRA.defencepassing as awayteamdefencepassing, 
+'Rushing' as defencerushingeamdefencerushing,
+TRH.defencerushing as hometeamdefencerushing, 
+TRA.defencerushing as awayteamdefencerushing
+
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id AND TH.ID = 9	
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 11	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week	
+WHERE G.season = 2015 AND G.gamenbr = 186
+2015-12-06 00:57:51 : SQL error: Unknown column 'TSH.confwins' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-06 00:57:51 : SQL: SELECT DISTINCT
+G.week as week,
+TH.id as hometeamid,
+TA.id as awayteamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamiconname as hometeamiconname, 
+TH.teamurl as hometeamurl, 
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamiconname as awayteamiconname, 
+TA.teamurl as awayteamurl, 
+G.hometeamscore as hometeamscore, 
+G.awayteamscore as awayteamscore, 
+
+'Standings' as standingsheader,
+'Overall' as overallstandingstitle,
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+
+'Conference' as confstandingstitle,
+TSH.confwins as confhometeamwins, 
+TSH.conflosses as confhometeamlosses, 
+TSH.confties as confhometeamties,
+TSA.confwins as confawayteamwins, 
+TSA.conflosses as confawayteamlosses, 
+TSA.confties as confawayteamties,
+
+'Division' as divstandingstitle,
+TSH.divwins as divhometeamwins, 
+TSH.divlosses as divhometeamlosses, 
+TSH.divties as divhometeamties,
+TSA.divwins as divawayteamwins, 
+TSA.divlosses as divawayteamlosses, 
+TSA.divties as divawayteamties,
+
+'Power Rankings' as powerrankingsheader,
+'Overall' as overallrankingstitle,
+TRH.powerranking as hometeampowerranking, 
+TRA.powerranking as awayteampowerranking, 
+
+'Offence Rankings' as offencerankingsheader,
+'Overall' as offenceoverallrankingstitle,
+TRH.offencetotal as hometeamoffencetotal, 
+TRA.offencetotal as awayteamoffencetotal, 
+'Scoring' as offencescoringrankingstitle,
+TRH.offencescoring as hometeamoffencescoring, 
+TRA.offencescoring as awayteamoffencescoring, 
+'Passing' as offencepassingrankingstitle,
+TRH.offencepassing as hometeamoffencepassing, 
+TRA.offencepassing as awayteamoffencepassing, 
+'Rushing' as offencerushingeamoffencerushing,
+TRH.offencerushing as hometeamoffencerushing, 
+TRA.offencerushing as awayteamoffencerushing, 
+
+'Defence Rankings' as defencerankingsheader,
+'Overall' as defenceoverallrankingstitle,
+TRH.defencetotal as hometeamdefencetotal, 
+TRA.defencetotal as awayteamdefencetotal, 
+'Scoring' as defencescoringrankingstitle,
+TRH.defencescoring as hometeamdefencescoring, 
+TRA.defencescoring as awayteamdefencescoring, 
+'Passing' as defencepassingrankingstitle,
+TRH.defencepassing as hometeamdefencepassing, 
+TRA.defencepassing as awayteamdefencepassing, 
+'Rushing' as defencerushingeamdefencerushing,
+TRH.defencerushing as hometeamdefencerushing, 
+TRA.defencerushing as awayteamdefencerushing
+
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id AND TH.ID = 22	
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 24	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week	
+WHERE G.season = 2015 AND G.gamenbr = 177
+2015-12-06 00:58:22 : SQL error: Unknown column 'TSH.confwins' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-06 00:58:22 : SQL: SELECT DISTINCT
+G.week as week,
+TH.id as hometeamid,
+TA.id as awayteamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamiconname as hometeamiconname, 
+TH.teamurl as hometeamurl, 
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamiconname as awayteamiconname, 
+TA.teamurl as awayteamurl, 
+G.hometeamscore as hometeamscore, 
+G.awayteamscore as awayteamscore, 
+
+'Standings' as standingsheader,
+'Overall' as overallstandingstitle,
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+
+'Conference' as confstandingstitle,
+TSH.confwins as confhometeamwins, 
+TSH.conflosses as confhometeamlosses, 
+TSH.confties as confhometeamties,
+TSA.confwins as confawayteamwins, 
+TSA.conflosses as confawayteamlosses, 
+TSA.confties as confawayteamties,
+
+'Division' as divstandingstitle,
+TSH.divwins as divhometeamwins, 
+TSH.divlosses as divhometeamlosses, 
+TSH.divties as divhometeamties,
+TSA.divwins as divawayteamwins, 
+TSA.divlosses as divawayteamlosses, 
+TSA.divties as divawayteamties,
+
+'Power Rankings' as powerrankingsheader,
+'Overall' as overallrankingstitle,
+TRH.powerranking as hometeampowerranking, 
+TRA.powerranking as awayteampowerranking, 
+
+'Offence Rankings' as offencerankingsheader,
+'Overall' as offenceoverallrankingstitle,
+TRH.offencetotal as hometeamoffencetotal, 
+TRA.offencetotal as awayteamoffencetotal, 
+'Scoring' as offencescoringrankingstitle,
+TRH.offencescoring as hometeamoffencescoring, 
+TRA.offencescoring as awayteamoffencescoring, 
+'Passing' as offencepassingrankingstitle,
+TRH.offencepassing as hometeamoffencepassing, 
+TRA.offencepassing as awayteamoffencepassing, 
+'Rushing' as offencerushingeamoffencerushing,
+TRH.offencerushing as hometeamoffencerushing, 
+TRA.offencerushing as awayteamoffencerushing, 
+
+'Defence Rankings' as defencerankingsheader,
+'Overall' as defenceoverallrankingstitle,
+TRH.defencetotal as hometeamdefencetotal, 
+TRA.defencetotal as awayteamdefencetotal, 
+'Scoring' as defencescoringrankingstitle,
+TRH.defencescoring as hometeamdefencescoring, 
+TRA.defencescoring as awayteamdefencescoring, 
+'Passing' as defencepassingrankingstitle,
+TRH.defencepassing as hometeamdefencepassing, 
+TRA.defencepassing as awayteamdefencepassing, 
+'Rushing' as defencerushingeamdefencerushing,
+TRH.defencerushing as hometeamdefencerushing, 
+TRA.defencerushing as awayteamdefencerushing
+
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id AND TH.ID = 22	
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 24	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week	
+WHERE G.season = 2015 AND G.gamenbr = 177
+2015-12-06 01:00:11 : SQL error: Unknown column 'TSH.confwins' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-06 01:00:11 : SQL: SELECT DISTINCT
+G.week as week,
+TH.id as hometeamid,
+TA.id as awayteamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamiconname as hometeamiconname, 
+TH.teamurl as hometeamurl, 
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamiconname as awayteamiconname, 
+TA.teamurl as awayteamurl, 
+G.hometeamscore as hometeamscore, 
+G.awayteamscore as awayteamscore, 
+
+'Standings' as standingsheader,
+'Overall' as overallstandingstitle,
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+
+'Conference' as confstandingstitle,
+TSH.confwins as confhometeamwins, 
+TSH.conflosses as confhometeamlosses, 
+TSH.confties as confhometeamties,
+TSA.confwins as confawayteamwins, 
+TSA.conflosses as confawayteamlosses, 
+TSA.confties as confawayteamties,
+
+'Division' as divstandingstitle,
+TSH.divwins as divhometeamwins, 
+TSH.divlosses as divhometeamlosses, 
+TSH.divties as divhometeamties,
+TSA.divwins as divawayteamwins, 
+TSA.divlosses as divawayteamlosses, 
+TSA.divties as divawayteamties,
+
+'Power Rankings' as powerrankingsheader,
+'Overall' as overallrankingstitle,
+TRH.powerranking as hometeampowerranking, 
+TRA.powerranking as awayteampowerranking, 
+
+'Offence Rankings' as offencerankingsheader,
+'Overall' as offenceoverallrankingstitle,
+TRH.offencetotal as hometeamoffencetotal, 
+TRA.offencetotal as awayteamoffencetotal, 
+'Scoring' as offencescoringrankingstitle,
+TRH.offencescoring as hometeamoffencescoring, 
+TRA.offencescoring as awayteamoffencescoring, 
+'Passing' as offencepassingrankingstitle,
+TRH.offencepassing as hometeamoffencepassing, 
+TRA.offencepassing as awayteamoffencepassing, 
+'Rushing' as offencerushingeamoffencerushing,
+TRH.offencerushing as hometeamoffencerushing, 
+TRA.offencerushing as awayteamoffencerushing, 
+
+'Defence Rankings' as defencerankingsheader,
+'Overall' as defenceoverallrankingstitle,
+TRH.defencetotal as hometeamdefencetotal, 
+TRA.defencetotal as awayteamdefencetotal, 
+'Scoring' as defencescoringrankingstitle,
+TRH.defencescoring as hometeamdefencescoring, 
+TRA.defencescoring as awayteamdefencescoring, 
+'Passing' as defencepassingrankingstitle,
+TRH.defencepassing as hometeamdefencepassing, 
+TRA.defencepassing as awayteamdefencepassing, 
+'Rushing' as defencerushingeamdefencerushing,
+TRH.defencerushing as hometeamdefencerushing, 
+TRA.defencerushing as awayteamdefencerushing
+
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id AND TH.ID = 22	
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 24	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week	
+WHERE G.season = 2015 AND G.gamenbr = 177
+2015-12-06 17:00:38 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 	
+LEFT JOIN gamebyetbl GB O' at line 84 - Error doing select to db Unable to get team weekly rankings information.
+2015-12-06 17:00:38 : SQL: SELECT DISTINCT
+G.week as week,
+TH.id as hometeamid,
+TA.id as awayteamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamiconname as hometeamiconname, 
+TH.teamurl as hometeamurl, 
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamiconname as awayteamiconname, 
+TA.teamurl as awayteamurl, 
+G.hometeamscore as hometeamscore, 
+G.awayteamscore as awayteamscore, 
+
+'Standings' as standingsheader,
+'Overall' as overallstandingstitle,
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+
+'Conference' as confstandingstitle,
+TSH.confwins as confhometeamwins, 
+TSH.conflosses as confhometeamlosses, 
+TSH.confties as confhometeamties,
+TSA.confwins as confawayteamwins, 
+TSA.conflosses as confawayteamlosses, 
+TSA.confties as confawayteamties,
+
+'Division' as divstandingstitle,
+TSH.divwins as divhometeamwins, 
+TSH.divlosses as divhometeamlosses, 
+TSH.divties as divhometeamties,
+TSA.divwins as divawayteamwins, 
+TSA.divlosses as divawayteamlosses, 
+TSA.divties as divawayteamties,
+
+'Power Rankings' as powerrankingsheader,
+'Overall' as overallrankingstitle,
+TRH.powerranking as hometeampowerranking, 
+TRA.powerranking as awayteampowerranking, 
+
+'Offence Rankings' as offencerankingsheader,
+'Overall' as offenceoverallrankingstitle,
+TRH.offencetotal as hometeamoffencetotal, 
+TRA.offencetotal as awayteamoffencetotal, 
+'Scoring' as offencescoringrankingstitle,
+TRH.offencescoring as hometeamoffencescoring, 
+TRA.offencescoring as awayteamoffencescoring, 
+'Passing' as offencepassingrankingstitle,
+TRH.offencepassing as hometeamoffencepassing, 
+TRA.offencepassing as awayteamoffencepassing, 
+'Rushing' as offencerushingeamoffencerushing,
+TRH.offencerushing as hometeamoffencerushing, 
+TRA.offencerushing as awayteamoffencerushing, 
+
+'Defence Rankings' as defencerankingsheader,
+'Overall' as defenceoverallrankingstitle,
+TRH.defencetotal as hometeamdefencetotal, 
+TRA.defencetotal as awayteamdefencetotal, 
+'Scoring' as defencescoringrankingstitle,
+TRH.defencescoring as hometeamdefencescoring, 
+TRA.defencescoring as awayteamdefencescoring, 
+'Passing' as defencepassingrankingstitle,
+TRH.defencepassing as hometeamdefencepassing, 
+TRA.defencepassing as awayteamdefencepassing, 
+'Rushing' as defencerushingeamdefencerushing,
+TRH.defencerushing as hometeamdefencerushing, 
+TRA.defencerushing as awayteamdefencerushing
+
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id AND TH.ID = 	
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id AND TA.ID = 	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week	
+WHERE G.season = 2015 AND G.gamenbr = 
+2015-12-06 23:00:01 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' losses = , ties = , percent = 0, 
+			hometotalgames = 0, homewins = , homelosse' at line 2 - Error doing update to db Unable to update team week stats.
+2015-12-06 23:00:01 : SQL: UPDATE teamweekstatstbl 
+			SET totalgames = 0, week = 1, wins = , losses = , ties = , percent = 0, 
+			hometotalgames = 0, homewins = , homelosses = , hometies = , homepercent = 0,
+			awaytotalgames = 0, awaywins = , awaylosses = , awayties = , awaypercent = 0,
+			conftotalgames = 0, confwins = , conflosses = , confties = , confpercent = 0,
+			divtotalgames = 0, divwins = , divlosses = , divties = , divpercent = 0,
+			season = 2015, enterdate = '2015-12-06 23:00:01' 
+			WHERE teamid = 1
+			AND week = 1
+			AND season = 2015
+2015-12-06 23:07:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' losses = , ties = , percent = 0, 
+			hometotalgames = 0, homewins = , homelosse' at line 2 - Error doing update to db Unable to update team week stats.
+2015-12-06 23:07:44 : SQL: UPDATE teamweekstatstbl 
+			SET totalgames = 0, week = 1, wins = , losses = , ties = , percent = 0, 
+			hometotalgames = 0, homewins = , homelosses = , hometies = , homepercent = 0,
+			awaytotalgames = 0, awaywins = , awaylosses = , awayties = , awaypercent = 0,
+			conftotalgames = 0, confwins = , conflosses = , confties = , confpercent = 0,
+			divtotalgames = 0, divwins = , divlosses = , divties = , divpercent = 0,
+			season = 2015, enterdate = '2015-12-06 23:07:44' 
+			WHERE teamid = 1
+			AND week = 1
+			AND season = 2015
+2015-12-06 23:08:18 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' losses = , ties = , percent = 0, 
+			hometotalgames = 0, homewins = , homelosse' at line 2 - Error doing update to db Unable to update team week stats.
+2015-12-06 23:08:18 : SQL: UPDATE teamweekstatstbl 
+			SET totalgames = 0, week = 1, wins = , losses = , ties = , percent = 0, 
+			hometotalgames = 0, homewins = , homelosses = , hometies = , homepercent = 0,
+			awaytotalgames = 0, awaywins = , awaylosses = , awayties = , awaypercent = 0,
+			conftotalgames = 0, confwins = , conflosses = , confties = , confpercent = 0,
+			divtotalgames = 0, divwins = , divlosses = , divties = , divpercent = 0,
+			season = 2015, enterdate = '2015-12-06 23:08:18' 
+			WHERE teamid = 1
+			AND week = 1
+			AND season = 2015
+2015-12-06 23:19:57 : SQL error: Unknown column 'hometotalgames' in 'field list' - Error doing update to db Unable to update team week stats.
+2015-12-06 23:19:57 : SQL: UPDATE teamweekstatstbl 
+			SET totalgames = 1, week = 1, wins = 1, losses = 0, ties = 0, percent = 1, 
+			hometotalgames = 0, homewins = 0, homelosses = 0, hometies = 0, homepercent = 0,
+			awaytotalgames = 1, awaywins = 1, awaylosses = 0, awayties = 0, awaypercent = 1,
+			conftotalgames = 0, confwins = 0, conflosses = 0, confties = 0, confpercent = 0,
+			divtotalgames = 0, divwins = 0, divlosses = 0, divties = 0, divpercent = 0,
+			season = 2015, enterdate = '2015-12-06 23:19:57' 
+			WHERE teamid = 1
+			AND week = 1
+			AND season = 2015

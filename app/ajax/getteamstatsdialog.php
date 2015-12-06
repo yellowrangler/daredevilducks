@@ -22,7 +22,6 @@ $season = $_POST['season'];
 $gamenbr = $_POST['gamenbr'];
 $hometeamid = $_POST['hometeamid'];
 $awayteamid = $_POST['awayteamid'];
-$maxrankweek = 0;
 
 //
 // messaging
@@ -67,25 +66,6 @@ if (!mysql_select_db($DBschema, $dbConn))
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
 //---------------------------------------------------------------
-// Get max week from team rank table
-//---------------------------------------------------------------
-$sql = "SELECT MAX(week) AS maxrankweek FROM teamweekranktbl";
-$sql_result_check = @mysql_query($sql, $dbConn);
-if (!$sql_result_check)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly rankings information for max week.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -100;
-    $msgtext = "System Error: $sqlerr";
-}
-
-$row = mysql_fetch_assoc($sql_result_check);
-$maxrankweek = $row['maxrankweek'];
-
-//---------------------------------------------------------------
 // Get team weekly rankings information
 //---------------------------------------------------------------
 $sql = "SELECT DISTINCT
@@ -111,6 +91,22 @@ TSH.ties as hometeamties,
 TSA.wins as awayteamwins, 
 TSA.losses as awayteamlosses, 
 TSA.ties as awayteamties,
+
+'Conference' as confstandingstitle,
+TSH.confwins as confhometeamwins, 
+TSH.conflosses as confhometeamlosses, 
+TSH.confties as confhometeamties,
+TSA.confwins as confawayteamwins, 
+TSA.conflosses as confawayteamlosses, 
+TSA.confties as confawayteamties,
+
+'Division' as divstandingstitle,
+TSH.divwins as divhometeamwins, 
+TSH.divlosses as divhometeamlosses, 
+TSH.divties as divhometeamties,
+TSA.divwins as divawayteamwins, 
+TSA.divlosses as divawayteamlosses, 
+TSA.divties as divawayteamties,
 
 'Power Rankings' as powerrankingsheader,
 'Overall' as overallrankingstitle,
@@ -206,6 +202,20 @@ $awayteamwins = $teamstat['awayteamwins'];
 $awayteamlosses = $teamstat['awayteamlosses'];  
 $awayteamties = $teamstat['awayteamties']; 
 
+$confhometeamwins = $teamstat['confhometeamwins'];  
+$confhometeamlosses = $teamstat['confhometeamlosses'];  
+$confhometeamties = $teamstat['confhometeamties']; 
+$confawayteamwins = $teamstat['confawayteamwins'];  
+$confawayteamlosses = $teamstat['confawayteamlosses'];  
+$confawayteamties = $teamstat['confawayteamties']; 
+
+$divhometeamwins = $teamstat['divhometeamwins'];  
+$divhometeamlosses = $teamstat['divhometeamlosses'];  
+$divhometeamties = $teamstat['divhometeamties']; 
+$divawayteamwins = $teamstat['divawayteamwins'];  
+$divawayteamlosses = $teamstat['divawayteamlosses'];  
+$divawayteamties = $teamstat['divawayteamties']; 
+
 $hometeampowerranking = $teamstat['hometeampowerranking'];  
 $awayteampowerranking = $teamstat['awayteampowerranking'];  
 
@@ -277,11 +287,11 @@ $returnStr = "
 		<td>Conference W-L-T</td>
 
 		<td class='center-column-text'>
-		   TBD
+		   $confhometeamwins - $confhometeamlosses - $confhometeamties
 		</td>
 		
 		<td class='center-column-text'>
-		   TBD
+		   $confawayteamwins - $confawayteamlosses - $confawayteamties
 		</td>												
 	</tr>
 
@@ -289,16 +299,16 @@ $returnStr = "
 		<td>Division W-L-T</td>
 
 		<td class='center-column-text'>
-		   TBD
+		   $divhometeamwins - $divhometeamlosses - $divhometeamties
 		</td>
 		
 		<td class='center-column-text'>
-		   TBD
+		   $divawayteamwins - $divawayteamlosses - $divawayteamties
 		</td>												
 	</tr>
 
 	<tr style='background:#0ABEC7;color:white;font-weight:bold;'>
-		<td colspan=3>Power Rankings</td>										
+		<td colspan=3>Power Rankings (Lower number is better)</td>										
 	</tr>
 
 	<tr >
@@ -314,7 +324,7 @@ $returnStr = "
 	</tr>
 
 	<tr style='background:#006600;color:white;font-weight:bold;'>
-		<td colspan=3>Offencive Game Statistics</td>								
+		<td colspan=3>Offencive Rankings (Lower number is better)</td>								
 	</tr>
 
 	<tr >
@@ -366,7 +376,7 @@ $returnStr = "
 	</tr>
 
 	<tr style='background:#CC0000;color:white;font-weight:bold;'>
-		<td colspan=3>Deffencive Game Statistics</td>								
+		<td colspan=3>Deffencive Rankings (Lower number is better)</td>								
 	</tr>
 
 	<tr >
