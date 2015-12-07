@@ -532,6 +532,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// 
 		$sql = "UPDATE teamweekstatstbl 
 			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent, 
+			hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
+			awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,			
 			conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
 			divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
 			season = $season, enterdate = '$enterdateTS' 
@@ -567,6 +569,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		// 
 		$sql = "UPDATE teamweekstatstbl 
 			SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent,
+			hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
+			awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,			
 			conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
 			divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
 			season = $season, enterdate = '$enterdateTS' 

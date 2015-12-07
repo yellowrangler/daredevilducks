@@ -17,6 +17,8 @@ function setviewpadding()
 		var viewoffset = $("#navBarHeader").height() + 10;
 
   		$("#ddd-view").css("padding-top", viewoffset);
+  		// $( "#ddd-view" ).animate({padding-top: "100px;"}, 1500);
+
 	}, 3000);
 }
 

@@ -92,6 +92,22 @@ TSA.wins as awayteamwins,
 TSA.losses as awayteamlosses, 
 TSA.ties as awayteamties,
 
+'Home' as homestandingstitle,
+TSH.homewins as homehomewins, 
+TSH.homelosses as homehomelosses, 
+TSH.hometies as homehometies,
+TSA.homewins as homeawaywins, 
+TSA.homelosses as homeawaylosses, 
+TSA.hometies as homeawayties,
+
+'Away' as awaystandingstitle,
+TSH.awaywins as awayhomewins, 
+TSH.awaylosses as awayhomelosses, 
+TSH.awayties as awayhometies,
+TSA.awaywins as awayawaywins, 
+TSA.awaylosses as awayawaylosses, 
+TSA.awayties as awayawayties,
+
 'Conference' as confstandingstitle,
 TSH.confwins as confhometeamwins, 
 TSH.conflosses as confhometeamlosses, 
@@ -202,6 +218,20 @@ $awayteamwins = $teamstat['awayteamwins'];
 $awayteamlosses = $teamstat['awayteamlosses'];  
 $awayteamties = $teamstat['awayteamties']; 
 
+$homehomewins = $teamstat['homehomewins'];  
+$homehomelosses = $teamstat['homehomelosses'];  
+$homehometies = $teamstat['homehometies']; 
+$homeawaywins = $teamstat['homeawaywins'];  
+$homeawaylosses = $teamstat['homeawaylosses'];  
+$homeawayties = $teamstat['homeawayties']; 
+
+$awayhomewins = $teamstat['awayhomewins'];  
+$awayhomelosses = $teamstat['awayhomelosses'];  
+$awayhometies = $teamstat['awayhometies']; 
+$awayawaywins = $teamstat['awayawaywins'];  
+$awayawaylosses = $teamstat['awayawaylosses'];  
+$awayawayties = $teamstat['awayawayties']; 
+
 $confhometeamwins = $teamstat['confhometeamwins'];  
 $confhometeamlosses = $teamstat['confhometeamlosses'];  
 $confhometeamties = $teamstat['confhometeamties']; 
@@ -280,6 +310,30 @@ $returnStr = "
 
 		<td class='center-column-text'>
 		   $awayteamwins - $awayteamlosses - $awayteamties
+		</td>												
+	</tr>
+
+	<tr >
+		<td>Home W-L-T</td>
+
+		<td class='center-column-text'>
+		   $homehomewins - $homehomelosses - $homehometies
+		</td>
+
+		<td class='center-column-text'>
+		   $homeawaywins - $homeawaylosses - $homeawayties
+		</td>												
+	</tr>
+
+	<tr >
+		<td>Away W-L-T</td>
+
+		<td class='center-column-text'>
+		   $awayhomewins - $awayhomelosses - $awayhometies
+		</td>
+
+		<td class='center-column-text'>
+		   $awayawaywins - $awayawaylosses - $awayawayties
 		</td>												
 	</tr>
 
