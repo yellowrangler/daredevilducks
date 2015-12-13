@@ -16,10 +16,10 @@ function setviewpadding()
 	setTimeout(function(){ 
 		var viewoffset = $("#navBarHeader").height() + 10;
 
-  		$("#ddd-view").css("padding-top", viewoffset);
-  		// $( "#ddd-view" ).animate({padding-top: "100px;"}, 1500);
+  		// $("#ddd-view").css("padding-top", viewoffset);
+  		$( "#ddd-view" ).animate({paddingTop: viewoffset}, 1500);
 
-	}, 3000);
+	}, 1000);
 }
 
 function adjustNavbarImages() 
