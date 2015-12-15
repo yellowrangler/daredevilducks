@@ -7,8 +7,6 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$id = $_POST['gameid'];
-$gameid = $_POST['gameid'];
 $season = $_POST['season'];
 $week = $_POST['week'];
 $gamenbr = $_POST['gamenbr'];
@@ -41,7 +39,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 //
 // build gamedatetime
 //
-$datetime = $gamedate . " " . $season . " " .$gametime;
+$datetime = $gameday . " " . $gamedate . " " . $season . " " .$gametime;
 $unixTS = strtotime($datetime);
 $mysqlTS = date("Y-m-d H:i:s", $unixTS);
 $gamedatetime = $mysqlTS;
@@ -97,10 +95,32 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 //---------------------------------------------------------------
-// update game 
+// see if game exists. if so update otherwise insert 
 //---------------------------------------------------------------
+$sql = "SELECT * FROM  gamestbl WHERE gamenbr = '$gamenbr' AND season = '$season'"; 
 
-$sql = "UPDATE gamestbl
+$sql_result_check = @mysql_query($sql, $dbConn);
+if (!$sql_result_check)
+{
+	$log = new ErrorLog("logs/");
+	$sqlerr = mysql_error();
+	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update game for ddd game $gameid.");
+	$log->writeLog("SQL: $sql");
+
+	$rc = -120;
+	$msgtext = "System Error: $sqlerr. sql = $sql";
+
+	exit($msgtext);
+}
+
+$count = mysql_num_rows($sql_result_check);
+if ($count > 0)
+{
+	// 
+	// do update
+	// 
+
+	$sql = "UPDATE gamestbl
 	SET season = '$season', 
 		week = '$week', 
 		gamenbr = '$gamenbr', 
@@ -117,13 +137,28 @@ $sql = "UPDATE gamestbl
 		enterdate = '$enterdateTS'
 	WHERE gamenbr = '$gamenbr'
 	AND season = '$season'"; 
+}
+else
+{
+	// 
+	// do insert
+	// 
+	$sql = "INSERT INTO gamestbl ( season, week, 
+	gamenbr, gamedate, gameday, gametime, gametypeid,
+ 	networkid, hometeamid, awayteamid, hometeamscore, awayteamscore,
+	gamedatetime, enterdate )
+	VALUES ( '$season', '$week', 
+		'$gamenbr', '$gamedate', '$gameday', '$gametime', '$gametypeid',
+		'$networkid', '$hometeamid', '$awayteamid', '$hometeamscore', '$awayteamscore', 
+		'$gamedatetime', '$enterdateTS'	)";
+}
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {
 	$log = new ErrorLog("logs/");
 	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update game for ddd game $gameid.");
+	$log->writeLog("SQL error: $sqlerr - Error doing update or insert to db Unable or insert to update game for ddd game $gameid.");
 	$log->writeLog("SQL: $sql");
 
 	$rc = -100;

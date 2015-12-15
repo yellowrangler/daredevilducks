@@ -10,12 +10,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if (role == "admin")
         {
             $("#adminselect").show();
-            // $("#admintestpickgames").show();
+            $("#adminplayoffstandings").show();
         }
         else
         {
             $("#adminselect").hide();
-            // $("#admintestpickgames").hide();
+            $("#adminplayoffstandings").hide();
         }  
     }
 
@@ -208,335 +208,6 @@ controllers.editorialController = function ($scope, $http, $location, loginServi
     }
 }
 
-controllers.pickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
-    $scope.current = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
-
-    //
-    // this returnd false if admin true if other
-    // for ng-disbled
-    //
-    function checkRole()
-    {
-        var role = loginService.getMemberRole();
-        var status = "";
-
-        if (role == "admin")
-        {
-            status = false;
-        }
-        else
-        {
-            status = true;
-        }  
-
-        return status;
-    }
-
-    //
-    // if checked turn this red
-    //
-    function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamselected)
-    {
-        var hometeamicon = "pickh_"+gamenbr+"_icon"; 
-        var hometeamname = "pickh_"+gamenbr+"_teamname"; 
-
-        var awayteamicon = "picka_"+gamenbr+"_icon"; 
-        var awayteamname = "picka_"+gamenbr+"_teamname"; 
-
-        if (teamtype =='home')
-        {
-            if (hometeamid == teamselected)
-            {
-                $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
-                $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
-
-    
-                $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
-                $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
-            }
-            else
-            {
-                $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
-                $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
-
-    
-                $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
-                $("#"+awayteamname).addClass("teamSelected").removeClass("teamNotSelected");
-            }
-        }
-        else if (awayteamid == teamselected)
-        {
-            $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
-            $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
-
-
-            $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
-            $("#"+awayteamname).addClass("teamSelected").removeClass("teamNotSelected");
-        }
-        else
-        {
-
-            $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
-            $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
-
-
-            $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
-            $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
-        }
-    }
-
-    //
-    // this returnd false always if admin 
-    // otherwise if expired true other false
-    // for ng-disbled
-    //
-    function check4ExpiredGameSelections(gamestatus)
-    {
-        var role = loginService.getMemberRole();
-        var status = "";
-
-        if (role == "admin")
-        {
-            status = false;
-        }
-        else
-        {
-            if (gamestatus == "expired")
-            {
-                status = true;
-            }
-            else
-            {
-                status = false;
-            }
-        }  
-
-        return status;
-
-    }
-
-    function selectChange()
-    {
-        var memberid = "memberid="+$scope.current.memberid;
-
-        membersFactory.getMember(memberid)
-            .success( function(data) {
-                $scope.current.memberavatar = data.avatar;
-
-                var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-
-                nflteamsFactory.getNFLGamesWeekMemberTeams(data)
-                    .success( function(data) {
-                        $scope.games = data; 
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    }); 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });
-
-        //
-        // get bye teams
-        //
-        var q = "week="+$scope.current.week+"&season="+$scope.current.season;
-        nflteamsFactory.getNFLByeWeekMemberTeams(q)
-            .success( function(data) {
-                $scope.byegames = data; 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });       
-    }
-
-    function saveGames() {
-        //
-        // validate the selections
-        //
-        var count = 0;
-        var picked = 0;
-        var remaining = 0;
-        var fieldname = "";
-
-        //
-        // loop through all radio fields and count 
-        //
-        $("[name^=pick_]").each(function() {
-            if (fieldname != this.name)
-            {
-                count = count + 1;
-                fieldname = this.name;
-            }
-
-            if (this.checked)
-            {
-                picked = picked + 1;
-            }
-        });
-
-        if (picked == count)
-        {
-            $scope.msg = "All "+picked+" Picks for Week have been completed!";
-        }
-        else
-        {
-            remaining = count - picked;
-            $scope.msg = "You have picked "+picked+" Teams. You have "+remaining+" remaining to complete this week.";
-        }
-
-        //
-        // admins can choose any player. I disable memberid when not admin. Must therefore
-        // check for memberid in seriaze string and if not there add it
-        //
-        var data = $("#pickweekForm").serialize();
-        var n = data.indexOf("memberid");
-        if (n == -1)
-        {
-            data = data + "&memberid="+$scope.current.memberid;
-        }
-
-        membersFactory.addMemberGameTeamPick(data)
-            .success( function(data) {
-                if (data == "ok")
-                {
-                    $('#gamesSavedDialogModalTitle').text("Picks Saved");
-                    $('#gamesSavedDialogModalLabelBody').text($scope.msg);
-                    $('#gamesSavedDialogModal').modal();
-                }
-                else
-                {
-                    $('#gamesSavedDialogModalTitle').text("Picks Error");
-                    $('#gamesSavedDialogModalLabelBody').text(data);
-                    $('#gamesSavedDialogModal').modal();
-                }
-            })
-            .error( function(edata) {
-                alert(edata);
-            }); 
-
-    }
-
-    init();
-    function init() {
-        //
-        // this is not getting called at right time for definig top offset 
-        // in jquery ready. So adding it here
-        //
-        setviewpadding();
-        
-        var loggedIn = loginService.isLoggedIn();
-        if (!loggedIn)
-            $location.path("#home");
-
-        $scope.current.memberlogin = loginService.getLogin();
-
-        var orderby = "orderby=screenname";
-        membersFactory.getMembers(orderby)
-            .success( function(data) {
-                $scope.members = data; 
-            
-                $scope.seasons = nflTeamsService.getNFLTeamseasons();
-
-                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
-                .success( function(data) {
-                    $scope.weeks = data; 
-
-                    nflteamsFactory.getCurrentSeasonWeek()
-                        .success( function(data) {
-                            $scope.current.season = data.season; 
-                            $scope.current.week = data.week;
-
-                            nflTeamsService.addCurrentWeek($scope.current.week);
-                            nflTeamsService.addCurrentSeason($scope.current.season);
-
-                            //
-                            // get bye teams
-                            //
-                            var q = "week="+$scope.current.week+"&season="+$scope.current.season;
-                            nflteamsFactory.getNFLByeWeekMemberTeams(q)
-                                .success( function(data) {
-                                    $scope.byegames = data; 
-                                })
-                                .error( function(edata) {
-                                    alert(edata);
-                                });       
-
-                            $scope.current.memberid = $scope.current.memberlogin.memberid;
-                            var memberid = "memberid="+$scope.current.memberid;
-                            membersFactory.getMember(memberid)
-                                .success( function(data) {
-                                    $scope.current.memberavatar = data.avatar;  
-
-                                    var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-                                    nflteamsFactory.getNFLGamesWeekMemberTeams(q)
-                                        .success( function(data) {
-                                            $scope.games = data; 
-                                        })
-                                        .error( function(edata) {
-                                            alert(edata);
-                                        });   
-                                })
-                                .error( function(edata) {
-                                    alert(edata);
-                                });  
-
-                        })
-                        .error( function(edata) {
-                            alert(edata);
-                        }); 
-                })
-                .error( function(edata) {
-                    alert(edata);
-                });
-            })
-        .error( function(edata) {
-            alert(edata);
-        }); 
-     
-    };
-
-    $scope.check4ExpiredGameSelections = function(data) 
-    {   
-        var status = "";
-
-        status = check4ExpiredGameSelections(data);
-
-        return status;
-    }
-
-    $scope.checkRole = function() 
-    {   
-        var status = "";
-
-        status = checkRole();
-
-        return status;
-    }
-
-    $scope.getMemberWeekPicks = function() {
-        selectChange();
-    }
-
-    $scope.saveGames = function() {
-        saveGames();
-    }
-
-    $scope.compareScores = function (venue, homescore, awayscore) {
-        var status = "";
-
-        status = compareScores(venue, homescore, awayscore);
-
-        return status;
-    }
-
-    $scope.setSelectTeam = function (teamtype, gamenbr, awayteamid, hometeamid, teamselected) {
-        setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamselected);
-    }
-    
-}
-
 controllers.pickgames2Controller = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
     $scope.current = {};
     $scope.teamstat = {};
@@ -673,39 +344,89 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
     }
 
-    function selectChange()
+    function selectChange(itemChanged)
     {
         var memberid = "memberid="+$scope.current.memberid;
 
-        membersFactory.getMember(memberid)
-            .success( function(data) {
-                $scope.current.memberavatar = data.avatar;
+        if (itemChanged == 'season')
+        {
+            nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                .success( function(data) {
+                    $scope.weeks = data; 
 
-                var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                    $scope.current.week = 1;
 
-                nflteamsFactory.getNFLGamesWeekMemberTeams(data)
-                    .success( function(data) {
-                        $scope.games = data; 
+                    nflTeamsService.addCurrentWeek($scope.current.week);
+                    nflTeamsService.addCurrentSeason($scope.current.season);
+
+                    //
+                    // get bye teams
+                    //
+                    var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                    nflteamsFactory.getNFLByeWeekMemberTeams(q)
+                        .success( function(data) {
+                            $scope.byegames = data; 
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });       
+
+                    var memberid = "memberid="+$scope.current.memberid;
+                    membersFactory.getMember(memberid)
+                        .success( function(data) {
+                            $scope.current.memberavatar = data.avatar;  
+
+                            var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                            nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                                .success( function(data) {
+                                    $scope.games = data; 
+                                })
+                                .error( function(edata) {
+                                    alert(edata);
+                                });   
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });  
+
                     })
                     .error( function(edata) {
                         alert(edata);
-                    }); 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });
+                    });
+        }
+        else
+        {
+            membersFactory.getMember(memberid)
+                .success( function(data) {
+                    $scope.current.memberavatar = data.avatar;
 
-        //
-        // get bye teams
-        //
-        var q = "week="+$scope.current.week+"&season="+$scope.current.season;
-        nflteamsFactory.getNFLByeWeekMemberTeams(q)
-            .success( function(data) {
-                $scope.byegames = data; 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });       
+                    var data = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+
+                    nflteamsFactory.getNFLGamesWeekMemberTeams(data)
+                        .success( function(data) {
+                            $scope.games = data; 
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        }); 
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
+
+            //
+            // get bye teams
+            //
+            var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+            nflteamsFactory.getNFLByeWeekMemberTeams(q)
+                .success( function(data) {
+                    $scope.byegames = data; 
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+
+        }      
     }
 
     function saveGames() {
@@ -875,8 +596,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         return status;
     }
 
-    $scope.getMemberWeekPicks = function() {
-        selectChange();
+    $scope.getMemberWeekPicks = function(itemChanged) {
+        selectChange(itemChanged);
     }
 
     $scope.saveGames = function() {
@@ -1046,6 +767,46 @@ controllers.viewallpicksController = function ($scope, $http, $location, nflTeam
 }
 
 controllers.teamstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
+    $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
+
+    function selectChange()
+    {
+        nflteamsFactory.getNFLTeamstats($scope.current.season)
+            .success( function(data) {
+                $scope.teamstats = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
+        nflteamsFactory.getNFLTeamstats($scope.current.season)
+            .success( function(data) {
+                $scope.teamstats = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+    };
+
+    $scope.getSeasons = function() {
+        selectChange();
+    }
+}
+
+controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -2369,6 +2130,36 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         });
     }
 
+    function runPhpModule() 
+    {
+        var data = "";
+        var moduleData = "";
+
+        $("#scriptMessagesDisplay").html("");
+
+        //
+        // run php 
+        //
+        sw.start();
+        startTime = sw.getLocalTimeStart();
+
+        $("#scriptMessagesDisplay").append("Start of PHP Modulel. Time:"+startTime+"<br />");
+        moduleData = "runphpmodule="+$scope.current.runphpmodule;
+
+        scriptsFactory.runPhpModule(moduleData)
+        .success( function(data) {
+            sw.stop();
+            stopTime = sw.getLocalTimeStop();
+            timeDiff = sw.getSecondsDiff();
+
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Run PHP Modulel. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
     init();
     function init() {
         //
@@ -2396,6 +2187,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
 
     $scope.importTeamWeeklyRank = function () {
         importTeamWeeklyRank();
+    }
+
+    $scope.runPhpModule = function () {
+        runPhpModule();
     }
 }
 

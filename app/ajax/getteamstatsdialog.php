@@ -378,7 +378,7 @@ $returnStr = "
 	</tr>
 
 	<tr style='background:#006600;color:white;font-weight:bold;'>
-		<td colspan=3>Offencive Rankings (Lower number is better)</td>								
+		<td colspan=3>Offensive Rankings (Lower number is better)</td>								
 	</tr>
 
 	<tr >
@@ -430,7 +430,7 @@ $returnStr = "
 	</tr>
 
 	<tr style='background:#CC0000;color:white;font-weight:bold;'>
-		<td colspan=3>Deffencive Rankings (Lower number is better)</td>								
+		<td colspan=3>Defensive Rankings (Lower number is better)</td>								
 	</tr>
 
 	<tr >

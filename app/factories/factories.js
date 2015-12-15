@@ -436,5 +436,14 @@ dddApp.factory('scriptsFactory', function($q, $http) {
         })
     }
 
+    factory.runPhpModule = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/runphpmodule.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });

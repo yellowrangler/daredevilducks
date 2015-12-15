@@ -115,6 +115,43 @@
 						</div> <!-- end of panel collapse -->	
 					</form> <!-- end of form default -->
 					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="runphpmoduleForm" name="runphpmoduleForm" class="form-horizontal">
+						<div style="background-color:#ADDDCF;" class="panel-heading" id="runphpmoduleheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#runphpmodulegroup" data-target="#runphpmodule">
+								Run PHP Module
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="runphpmodule" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="runphpmodule">PHP Module</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.runphpmodule" class="form-control" id="runphpmodule" name="runphpmodule" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<!-- <div class="form-group">
+									<label class="col-md-4 control-label" for="runphpmoduleparm">Parm</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.runphpmoduleparm" class="form-control" id="runphpmoduleparm" placeholder="">
+									</div>
+								</div> --> <!-- end of form group -->						
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="runPhpModule()" id="runphpmodulebutton" class="btn btn-primary">Run PHP</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->	
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
 				</div> <!-- end of panel group -->
 			</div> <!-- end of panel body -->
 		</div> <!-- end of panel primary -->						
