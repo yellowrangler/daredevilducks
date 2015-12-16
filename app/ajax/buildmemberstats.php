@@ -22,21 +22,19 @@ if (isset($_POST["season"]))
 }
 else
 {
-	$msg = $msg . "No season passed - Buildmemberstats terminated";
-	exit($msg);
+	if (isset($_GET["season"]))
+	{
+		$season = $_GET["season"];
+	}
+	else
+	{
+		$msg = $msg . "No season passed - Buildmemberstats terminated";
+		exit($msg);
+
+	}
 }
 
-if (isset($_POST["gametypeid"]))
-{
-	$gametypeid = $_POST["gametypeid"];
-}
-else
-{
-	$msg = $msg . "No gametypeid passed - Buildmemberstats terminated";
-	exit($msg);
-}
-
-$msg = "Input variables: Season:$season gametypeid:$gametypeid<br />";
+$msg = "Input variables: Season:$season <br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -78,8 +76,11 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 // display variables
 //
 $membercount = 0;
-$totalgames = 0;
 $currentweek = 0;
+
+$totalgames = 0;
+$regularseasontotalgames = 0;
+$postseasontotalgames = 0;
 
 //---------------------------------------------------------------
 // Get list of all members 
@@ -169,8 +170,11 @@ else
 //---------------------------------------------------------------
 // Get games played to date
 //---------------------------------------------------------------
-$sql = "SELECT count(season) as gamesplayed
-FROM gamestbl 
+$sql = "SELECT 
+COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasontotalgames,
+COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasontotalgames,
+COALESCE(COUNT(gamenbr),0) as totalgames
+FROM gamestbl  
 WHERE season = $season and week  < $currentweek";
 
 $sql_result_games = @mysql_query($sql, $dbConn);
@@ -194,7 +198,9 @@ $count = mysql_num_rows($sql_result_games);
 if ($count > 0)
 {
 	$r = mysql_fetch_assoc($sql_result_games);
-	$totalgames = $r['gamesplayed'];
+	$totalgames = $r['totalgames'];
+	$regularseasontotalgames = $r['regularseasontotalgames'];
+	$postseasontotalgames = $r['postseasontotalgames'];
 }
 else
 {
@@ -227,7 +233,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	  G.hometeamscore as hometeamscore,
 	  G.awayteamid as awayteamid,
   	  G.awayteamscore as awayteamscore,
-	  GT.gametype as gametypeid,
+	  GT.gametype as gametype,
 	  TH.name as hometeamname,
 	  TA.name as awayteamname,	  
 	  MP.teamid as teamselected
@@ -237,7 +243,6 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
 	LEFT JOIN memberpickstbl MP ON (MP.teamid = G.hometeamid OR MP.teamid = G.awayteamid) AND MP.week = G.week AND MP.season = G.season AND MP.memberid ='$memberid'
 	WHERE G.season = '$season'
-	AND G.gametypeid ='$gametypeid'
 	AND MP.memberid = $memberid 
     AND NOT (G.hometeamscore = G.awayteamscore AND G.hometeamscore = 0 AND G.awayteamscore = 0)
 	ORDER BY G.gamedatetime";
@@ -263,9 +268,25 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$losses = 0;
 	$ties = 0;
 
+	$regularseasonwins = 0;
+	$regularseasonlosses = 0;
+	$regularseasonties = 0;
+
+	$postseasonwins = 0;
+	$postseasonlosses = 0;
+	$postseasonties = 0;
+
 	$playerpickedgames = 0;
 	$playerpickedpercent = 0;
 	$totalgamespercent = 0;
+
+	$regularseasonplayerpickedgames = 0;
+	$regularseasonplayerpickedpercent = 0;
+	$regularseasontotalgamespercent = 0;
+
+	$postseasonplayerpickedgames = 0;
+	$postseasonplayerpickedpercent = 0;
+	$postseasontotalgamespercent = 0;
 
 	while ($r = mysql_fetch_assoc($sql_result))
 	{
@@ -282,6 +303,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		$awayteam = $r['awayteamname'];	
 		$hometeam = $r['hometeamname'];	
 
+		$gametypeid = $r['gametypeid'];
+
 		//
 		// determine win/loss/ties
 		//
@@ -290,14 +313,41 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				if ($hometeamscore > $awayteamscore)
 				{
 					$wins = $wins + 1;
+
+					if ($gametypeid == 2)
+					{
+						$regularseasonwins = $regularseasonwins + 1;
+					}
+					elseif ($gametypeid == 3)
+					{
+						$postseasonwins = $postseasonwins + 1;
+					}
 				}
 				elseif ($hometeamscore < $awayteamscore)
 				{
 					$losses = $losses + 1;
+
+					if ($gametypeid == 2)
+					{
+						$regularseasonlosses = $regularseasonlosses + 1;
+					}
+					elseif ($gametypeid == 3)
+					{
+						$postseasonlosses = $postseasonlosses + 1;
+					}
 				}
 				else 
 				{
 					$ties = $ties + 1;
+
+					if ($gametypeid == 2)
+					{
+						$regularseasonties = $regularseasonties + 1;
+					}
+					elseif ($gametypeid == 3)
+					{
+						$postseasonties = $postseasonties + 1;
+					}
 				}
 				break;
 
@@ -305,14 +355,41 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				if ($awayteamscore > $hometeamscore)
 				{
 					$wins = $wins + 1;
+
+					if ($gametypeid == 2)
+					{
+						$regularseasonwins = $regularseasonwins + 1;
+					}
+					elseif ($gametypeid == 3)
+					{
+						$postseasonwins = $postseasonwins + 1;
+					}
 				}
 				elseif ($awayteamscore < $hometeamscore)
 				{
 					$losses = $losses + 1;
+
+					if ($gametypeid == 2)
+					{
+						$regularseasonlosses = $regularseasonlosses + 1;
+					}
+					elseif ($gametypeid == 3)
+					{
+						$postseasonlosses = $postseasonlosses + 1;
+					}
 				}
 				else
 				{
 					$ties = $ties + 1;
+
+					if ($gametypeid == 2)
+					{
+						$regularseasonties = $regularseasonties + 1;
+					}
+					elseif ($gametypeid == 3)
+					{
+						$postseasonties = $postseasonties + 1;
+					}
 				}
 				break;	
 			
@@ -328,101 +405,260 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	// player picked games is done outside the loop because some people join later
 	//
 	$playerpickedgames = $wins + $losses + $ties;
+	$regularseasonplayerpickedgames = $regularseasonwins + $regularseasonlosses + $regularseasonties;
+	$postseasonplayerpickedgames = $postseasonwins + $postseasonlosses + $postseasonties;
 
 	//
 	// calculate percentage for players picked
 	//
-	$tiesadjust = $ties * 0.5;
-	$p = ($wins + $tiesadjust) / $playerpickedgames;
-	$playerpickedpercent = round($p, 3);
+	if ($playerpickedgames > 0)
+	{
+		$tiesadjust = $ties * 0.5;
+		$p = ($wins + $tiesadjust) / $playerpickedgames;
+		$playerpickedpercent = round($p, 3);
+	}
+
+	if ($regularseasonplayerpickedgames > 0)
+	{
+		$tiesadjust = $regularseasonties * 0.5;
+		$p = ($regularseasonwins + $tiesadjust) / $regularseasonplayerpickedgames;
+		$regularseasonplayerpickedpercent = round($p, 3);
+	}
+
+	if ($postseasonplayerpickedgames > 0)
+	{
+		$tiesadjust = $postseasonties * 0.5;
+		$p = ($postseasonwins + $tiesadjust) / $postseasonplayerpickedgames;
+		$postseasonplayerpickedpercent = round($p, 3);
+	}
 
 	//
 	// calculate percentage
 	//
-	$tiesadjust = $ties * 0.5;
-	$p = ($wins + $tiesadjust) / $totalgames;
-	$totalgamespercent = round($p, 3);
+	if ($totalgames > 0)
+	{
+		$tiesadjust = $ties * 0.5;
+		$p = ($wins + $tiesadjust) / $totalgames;
+		$totalgamespercent = round($p, 3);
+	}
+
+	if ($regularseasontotalgames > 0)
+	{
+		$tiesadjust = $regularseasonties * 0.5;
+		$p = ($regularseasonwins + $tiesadjust) / $regularseasontotalgames;
+		$regularseasontotalgamespercent = round($p, 3);
+	}
+
+	if ($postseasontotalgames > 0)
+	{
+		$tiesadjust = $postseasonties * 0.5;
+		$p = ($postseasonwins + $tiesadjust) / $postseasontotalgames;
+		$postseasontotalgamespercent = round($p, 3);
+	}
 
 	// debug
 	// $msg = $msg .  "<br/>memberid:$memberid</br>wins:$wins losses:$losses ties:$ties total:$totalgames totalgamespercent:$totalgamespercent</br>playerpickedgames:$playerpickedgames playerpickedpercent:$playerpickedpercent</br>";	
 	
-	// 
+	//--------------------------------------------------------------------------------------- 
+	//
 	// if data is there update otherwise insert
-	// 
-	$sql = "SELECT * from memberstatstbl where memberid = $memberid AND season = $season";
+	//
+	//---------------------------------------------------------------------------------------
 
-	$sql_result_check = @mysql_query($sql, $dbConn);
-	if (!$sql_result_check)
+	if ($totalgames > 0)
 	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member stats - count team id in stats table.");
-	    $log->writeLog("SQL: $sql");
+		//
+		// total season games 
+		//
+		$gametypeid = 1;
+		$sql = "SELECT * from memberstatstbl 
+		where memberid = $memberid AND season = $season and gametypeid = $gametypeid";
 
-	    $status = -240;
-	    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member stats - count team id in stats table.<br />SQL: $sql";
-		exit($msg);
-	}	
-
-	$count = mysql_num_rows($sql_result_check);
-	if ($count > 0)
-	{
-		// 
-		// do update
-		// 
-		$sql = "UPDATE memberstatstbl 
-			SET totalgames = $totalgames, playerpickedgames = $playerpickedgames,
-			wins = $wins, losses = $losses, ties = $ties, 
-			totalgamespercent = $totalgamespercent, playerpickedpercent = $playerpickedpercent,
-			season = $season, gametypeid = $gametypeid,  
-			enterdate = '$enterdateTS' 
-			WHERE memberid = $memberid AND season = $season";
-
-		// debug
-		// $msg = $msg .  "<br/> sql update:$sql<br/> ";
-
-		$sql_result_update = @mysql_query($sql, $dbConn);
-		if (!$sql_result_update)
+		$sql_result_check = @mysql_query($sql, $dbConn);
+		if (!$sql_result_check)
 		{
 		    $log = new ErrorLog("logs/");
 		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update member stats.");
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member stats total - count member stats in stats table.");
 		    $log->writeLog("SQL: $sql");
 
-		    $status = -250;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member stats.<br />SQL: $sql";
+		    $status = -240;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member stats total - count member stats in stats table.<br />SQL: $sql";
 			exit($msg);
 		}	
-	}
-	else
-	{
-		// 
-		// do insert
-		// 
-		$sql = "INSERT INTO memberstatstbl 
-			(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, gametypeid, memberid) 
-			VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
-			
-		// debug
-		// $msg = $msg .  "sql insert:$sql<br/>";
 
-		$sql_result_insert = @mysql_query($sql, $dbConn);
-		if (!$sql_result_insert)
+		$count = mysql_num_rows($sql_result_check);
+		if ($count > 0)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE memberstatstbl 
+				SET totalgames = $totalgames, playerpickedgames = $playerpickedgames,
+				wins = $wins, losses = $losses, ties = $ties, 
+				totalgamespercent = $totalgamespercent, playerpickedpercent = $playerpickedpercent,
+				season = $season, gametypeid = $gametypeid,  
+				enterdate = '$enterdateTS' 
+				WHERE memberid = $memberid AND season = $season and gametypeid = $gametypeid";
+		}
+		else
+		{
+			// 
+			// do insert
+			// 
+			$sql = "INSERT INTO memberstatstbl 
+				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, 
+					playerpickedpercent, season, enterdate, gametypeid, memberid) 
+				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, 
+					$totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
+		}
+
+		$sql_result_insert_update = @mysql_query($sql, $dbConn);
+		if (!$sql_result_insert_update)
 		{
 		    $log = new ErrorLog("logs/");
 		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert team stats.");
+		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert or update member stats.");
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -260;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert member stats.<br />SQL: $sql";
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert or update member stats.<br />SQL: $sql";
+			exit($msg);
+		}
+
+	}
+
+	if ($regularseasontotalgames > 0)
+	{
+		//
+		// regular season games 
+		//
+		$gametypeid = 2;
+		$sql = "SELECT * from memberstatstbl where memberid = $memberid AND season = $season and gametypeid = $gametypeid";
+
+		$sql_result_check = @mysql_query($sql, $dbConn);
+		if (!$sql_result_check)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member stats regular - count member stats in stats table.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -240;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member stats regular - count member stats in stats table.<br />SQL: $sql";
+			exit($msg);
+		}	
+
+		$count = mysql_num_rows($sql_result_check);
+		if ($count > 0)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE memberstatstbl 
+				SET totalgames = $regularseasontotalgames, playerpickedgames = $regularseasonplayerpickedgames,
+				wins = $regularseasonwins, losses = $regularseasonlosses, ties = $regularseasonties, 
+				totalgamespercent = $regularseasontotalgamespercent, 
+				playerpickedpercent = $regularseasonplayerpickedpercent,
+				season = $season, gametypeid = $gametypeid,  
+				enterdate = '$enterdateTS' 
+				WHERE memberid = $memberid AND season = $season and gametypeid = $gametypeid";
+		}
+		else
+		{
+			// 
+			// do insert
+			// 
+			$sql = "INSERT INTO memberstatstbl 
+				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, 
+					playerpickedpercent, season, enterdate, gametypeid, memberid) 
+				VALUES ($regularseasontotalgames, $regularseasonplayerpickedgames, $regularseasonwins, 
+					$regularseasonlosses, $regularseasonties, 
+					$regularseasontotalgamespercent, $regularseasonplayerpickedpercent, 
+					$season, '$enterdateTS', $gametypeid, $memberid)";
+		}
+
+		$sql_result_insert_update = @mysql_query($sql, $dbConn);
+		if (!$sql_result_insert_update)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert or update member stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -260;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert or update member stats.<br />SQL: $sql";
+			exit($msg);
+		}
+	}
+
+	if ($postseasontotalgames > 0)
+	{
+		//
+		// post season games 
+		//
+		$gametypeid = 3;
+		$sql = "SELECT * from memberstatstbl where memberid = $memberid AND season = $season and gametypeid = $gametypeid";
+
+		$sql_result_check = @mysql_query($sql, $dbConn);
+		if (!$sql_result_check)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member stats post - count member stats in stats table.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -240;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member stats post - count member stats in stats table.<br />SQL: $sql";
+			exit($msg);
+		}	
+
+		$count = mysql_num_rows($sql_result_check);
+		if ($count > 0)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE memberstatstbl 
+				SET totalgames = $postseasontotalgames, playerpickedgames = $postseasonplayerpickedgames,
+				wins = $postseasonwins, losses = $postseasonlosses, ties = $postseasonties, 
+				totalgamespercent = $postseasontotalgamespercent, 
+				playerpickedpercent = $postseasonplayerpickedpercent,
+				season = $season, gametypeid = $gametypeid,  
+				enterdate = '$enterdateTS' 
+				WHERE memberid = $memberid AND season = $season and gametypeid = $gametypeid";
+		}
+		else
+		{
+			// 
+			// do insert
+			// 
+			$sql = "INSERT INTO memberstatstbl 
+				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, 
+					season, enterdate, gametypeid, memberid) 
+				VALUES ($postseasontotalgames, $postseasonplayerpickedgames, $postseasonwins, 
+					$postseasonlosses, $postseasonties, 
+					$postseasontotalgamespercent, $postseasonplayerpickedpercent, 
+					$season, '$enterdateTS', $gametypeid, $memberid)";
+		}
+
+		$sql_result_insert_update = @mysql_query($sql, $dbConn);
+		if (!$sql_result_insert_update)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert or update member stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -260;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert or update member stats.<br />SQL: $sql";
 			exit($msg);
 		}
 	}
 
 } // end of looping through member
 
-$msg = $msg . "Totals Members:$membercount. <br /> Totals Games:$totalgames. <br />Current week:$currentweek.";
+$msg = $msg . "Totals Members: $membercount. <br /> Totals Games: $totalgames. <br />Regular Games: $regularseasontotalgames. <br />Post Games: $postseasontotalgames. <br />Current week:$currentweek.";
 //
 // close db connection
 //

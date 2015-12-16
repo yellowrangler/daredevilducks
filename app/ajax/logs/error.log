@@ -1,3 +1,1052 @@
 
 2015-12-14 23:45:52 : SQL error:  - Error doing select to db Unable to update game for ddd game .
 2015-12-14 23:45:52 : SQL: SELECT * FROM  gamestbl WHERE gamenbr = '257' AND season = '2014'
+2015-12-15 16:56:53 : System error: No gametypeid passed - getnflteamstats terminated
+2015-12-15 22:53:39 : System error: No gametypeid passed - getnflteamstats terminated
+2015-12-15 22:53:42 : System error: No gametypeid passed - getnflteamstats terminated
+2015-12-15 22:53:44 : System error: No gametypeid passed - getnflteamstats terminated
+2015-12-16 00:46:01 : System error: No gametypeid passed - getnflteamstats terminated
+2015-12-16 02:28:20 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonwins,
+	SU' at line 18 - Error doing select to db Unable to update team stats - count wins.
+2015-12-16 02:28:20 : SQL: SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonwins,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore > awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore > hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonwins,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014
+	AND 
+	( hometeamid = 1 and hometeamscore > awayteamscore )
+
+	UNION ALL
+    
+    SELECT SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonwins,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( awayteamid = 1 and awayteamscore > hometeamscore )
+
+	UNION ALL
+
+	SELECT SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonwins,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore > awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore > hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonwins,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore > awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore > hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 02:30:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awaytea' at line 9 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 02:30:42 : SQL: SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 02:33:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awaytea' at line 9 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 02:33:44 : SQL: SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 02:33:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awaytea' at line 9 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 02:33:49 : SQL: SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 02:34:57 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awaytea' at line 9 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 02:34:57 : SQL: SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 02:35:24 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awaytea' at line 9 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 02:35:24 : SQL: SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014 AND gametypeid = 
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 03:14:28 : SQL error: Unknown column 'gametypei' in 'field list' - Error doing select to db Unable to update team stats - count wins.
+2015-12-16 03:14:28 : SQL: SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore > awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore > hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypei = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014
+	AND 
+	( hometeamid = 1 and hometeamscore > awayteamscore )
+
+	UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypei = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( awayteamid = 1 and awayteamscore > hometeamscore )
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypei = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore > awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore > hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypei = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore > awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore > hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 03:19:06 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ' at line 19 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 03:19:06 : SQL: SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 03:20:12 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ' at line 19 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 03:20:12 : SQL: SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 03:22:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ' at line 19 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 03:22:36 : SQL: SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 03:24:09 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ' at line 19 - Error doing select to db Unable to update team stats - count losses.
+2015-12-16 03:24:09 : SQL: SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	(
+		(hometeamid = 1 and hometeamscore < awayteamscore)
+    	OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+    
+    UNION ALL
+    
+    SELECT COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	where
+	season = 2014
+	AND 
+	( hometeamid = 1 and hometeamscore < awayteamscore )
+
+	UNION ALL
+    
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( awayteamid = 1 and awayteamscore < hometeamscore )
+
+	UNION ALL
+
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+
+	UNION ALL
+
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
+	from gamestbl g
+	left join teamstbl th on g.hometeamid = th.id 
+	left join teamstbl ta on g.awayteamid = ta.id 
+	where
+	season = 2014
+	AND 
+	( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+		OR 
+		(awayteamid = 1 and awayteamscore < hometeamscore)
+	)
+	AND
+	(th.conference = ta.conference)
+	AND
+	(th.division = ta.division)
+2015-12-16 03:29:32 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 
+					3, 3, 
+					0, 0, 
+					1,
+					0, 0, 
+					0, 0, 
+					0,
+					2, 2, 
+		' at line 9 - Error doing insert or update to db Unable to insert post team stats.
+2015-12-16 03:29:32 : SQL: INSERT INTO teamstatstbl 
+				(totalgames, wins, losses, ties, percent, 
+				hometotalgames, homewins, homelosses, hometies, homepercent,
+				awaytotalgames, awaywins, awaylosses, awayties, awaypercent,
+				conftotalgames, confwins, conflosses, confties, confpercent,
+				divtotalgames, divwins, divlosses, divties, divpercent,
+				season, gametypeid, enterdate, teamid) 
+				VALUES (3, 3, 0, 
+					0, , 
+					3, 3, 
+					0, 0, 
+					1,
+					0, 0, 
+					0, 0, 
+					0,
+					2, 2, 
+					0, 0, 
+					1,
+					0, 0, 
+					0, 0, 
+					0,
+					2014, 3, '2015-12-16 03:29:31', 4)
+2015-12-16 05:31:59 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join tea' at line 5 - Error doing select to db Unable to update team week stats - total losses.
+2015-12-16 05:31:59 : SQL: SELECT 
+		COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+		COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+		COALESCE(COUNT(*),0) as losses,
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where
+		season = 2014 AND week <= 1
+		AND 
+		(
+			(hometeamid = 1 and hometeamscore < awayteamscore)
+	    	OR 
+			(awayteamid = 1 and awayteamscore < hometeamscore)
+		)
+	    
+	    UNION ALL
+	    
+	    SELECT 
+	    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+		COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+		COALESCE(COUNT(*),0) as losses,
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		where
+		season = 2014 AND week <= 1
+		AND 
+		( hometeamid = 1 and hometeamscore < awayteamscore )
+
+		UNION ALL
+	    
+	    SELECT 
+	    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+		COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+		COALESCE(COUNT(*),0) as losses,
+		from gamestbl g
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where
+		season = 2014 AND week <= 1
+		AND 
+		( awayteamid = 1 and awayteamscore < hometeamscore )
+
+		UNION ALL
+
+		SELECT 
+		COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+		COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+		COALESCE(COUNT(*),0) as losses,
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where
+		season = 2014 AND week <= 1
+		AND 
+		( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+			OR 
+			(awayteamid = 1 and awayteamscore < hometeamscore)
+		)
+		AND
+		(th.conference = ta.conference)
+
+		UNION ALL
+
+		SELECT 
+		COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+		COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+		COALESCE(COUNT(*),0) as losses,
+		from gamestbl g
+		left join teamstbl th on g.hometeamid = th.id 
+		left join teamstbl ta on g.awayteamid = ta.id 
+		where
+		season = 2014 AND week <= 1
+		AND 
+		( 	(hometeamid = 1 and hometeamscore < awayteamscore)  
+			OR 
+			(awayteamid = 1 and awayteamscore < hometeamscore)
+		)
+		AND
+		(th.conference = ta.conference)
+		AND
+		(th.division = ta.division)
+2015-12-16 05:56:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'wrong argument passed' at line 20 - Error doing select to db Unable to get nfl game team information.
+2015-12-16 05:56:37 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as memberid,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.playerpickedgames as playerpickedgames,
+  MS.totalgamespercent as totalgamespercent,
+  MS.playerpickedpercent as playerpickedpercent,
+  CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = ''  wrong argument passed 
+2015-12-16 05:59:05 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-12-16 05:59:05 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-12-16 05:59:06 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC' at line 14 - Error doing select to db Unable to get member weekly stat information.
+2015-12-16 05:59:06 : SQL: SELECT M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+FROM membertbl M
+LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+WHERE MS.season =  AND MS.week = 
+ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC

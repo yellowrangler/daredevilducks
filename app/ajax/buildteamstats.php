@@ -18,8 +18,16 @@ if (isset($_POST["season"]))
 }
 else
 {
-	$msg = "No season passed - builteamstats terminated";
-	exit($msg);
+	if (isset($_GET["season"]))
+	{
+		$season = $_GET["season"];
+	}
+	else
+	{
+		$msg = "No season passed - builteamstats terminated";
+		exit($msg);
+
+	}
 }
 
 $msg = "Input variables: Season:$season<br />";
@@ -87,7 +95,6 @@ $games = 0;
 $wins = 0;
 $losses = 0;
 $ties = 0;
-$percentage = 0;
 
 $homegames = 0;
 $homewins = 0;
@@ -129,7 +136,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	//
 	// start sql to get wins
 	//
-	$sql = "SELECT count(*) as wins
+	$sql = "SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -144,7 +154,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     
     UNION ALL
     
-    SELECT count(*) as wins
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	where
@@ -154,7 +167,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
     
-    SELECT count(*) as wins
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
 	from gamestbl g
 	left join teamstbl ta on g.awayteamid = ta.id 
 	where
@@ -164,7 +180,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
 
-	SELECT count(*) as wins
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -180,7 +199,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
 
-	SELECT count(*) as wins
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonwins,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonwins,
+	COUNT(*) as wins
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -195,6 +217,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	(th.conference = ta.conference)
 	AND
 	(th.division = ta.division)";
+
+	// echo "<br />Wins select sql: $sql<br /><br /><br />";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -217,6 +241,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$winsArray = array();
 	while($row = mysql_fetch_assoc($sql_result)) {
 		$winsArray[$idx] = $row['wins'];
+		$regularseasonwinsArray[$idx] = $row['regularseasonwins'];
+		$postseasonwinsArray[$idx] = $row['postseasonwins'];
+
 		$idx = $idx + 1;
 	}
 
@@ -226,10 +253,25 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$confwins = $winsArray[3];
 	$divwins = $winsArray[4];	
 
+	$regularseasonwins = $regularseasonwinsArray[0];
+	$regularseasonhomewins = $regularseasonwinsArray[1];
+	$regularseasonawaywins = $regularseasonwinsArray[2];
+	$regularseasonconfwins = $regularseasonwinsArray[3];
+	$regularseasondivwins = $regularseasonwinsArray[4];	
+
+	$postseasonwins = $postseasonwinsArray[0];
+	$postseasonhomewins = $postseasonwinsArray[1];
+	$postseasonawaywins = $postseasonwinsArray[2];
+	$postseasonconfwins = $postseasonwinsArray[3];
+	$postseasondivwins = $postseasonwinsArray[4];	
+
 	//
 	// start sql to get losses
 	//
-	$sql = "SELECT count(*) as losses
+	$sql = "SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -244,7 +286,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     
     UNION ALL
     
-    SELECT count(*) as losses
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	where
@@ -254,7 +299,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
     
-    SELECT count(*) as losses
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
 	from gamestbl g
 	left join teamstbl ta on g.awayteamid = ta.id 
 	where
@@ -264,7 +312,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
 
-	SELECT count(*) as losses
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -280,7 +331,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
 
-	SELECT count(*) as losses
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonlosses,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonlosses,
+	COUNT(*) as losses
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -295,6 +349,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	(th.conference = ta.conference)
 	AND
 	(th.division = ta.division)";
+
+	// echo "<br />losses select sql: $sql<br /><br /><br />";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -317,6 +373,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$lossesArray = array();
 	while($row = mysql_fetch_assoc($sql_result)) {
 		$lossesArray[$idx] = $row['losses'];
+		$regularseasonlossesArray[$idx] = $row['regularseasonlosses'];
+		$postseasonlossesArray[$idx] = $row['postseasonlosses'];
+
 		$idx = $idx + 1;
 	}
 
@@ -326,11 +385,25 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$conflosses = $lossesArray[3];
 	$divlosses = $lossesArray[4];
 
+	$regularseasonlosses = $regularseasonlossesArray[0];
+	$regularseasonhomelosses = $regularseasonlossesArray[1];
+	$regularseasonawaylosses = $regularseasonlossesArray[2];
+	$regularseasonconflosses = $regularseasonlossesArray[3];
+	$regularseasondivlosses = $regularseasonlossesArray[4];	
+
+	$postseasonlosses = $postseasonlossesArray[0];
+	$postseasonhomelosses = $postseasonlossesArray[1];
+	$postseasonawaylosses = $postseasonlossesArray[2];
+	$postseasonconflosses = $postseasonlossesArray[3];
+	$postseasondivlosses = $postseasonlossesArray[4];	
 
 	//
 	// start sql to get ties
 	//
-	$sql = "SELECT count(*) as ties
+	$sql = "SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonties,
+	COUNT(*) as ties
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -349,7 +422,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     
     UNION ALL
     
-    SELECT count(*) as ties
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END), 0) AS postseasonties,
+	COUNT(*) as ties
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	where
@@ -363,7 +439,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
     
-    SELECT count(*) as ties
+    SELECT 
+    COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonties,
+	COUNT(*) as ties
 	from gamestbl g
 	left join teamstbl ta on g.awayteamid = ta.id 
 	where
@@ -377,7 +456,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
 
-	SELECT count(*) as ties
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonties,
+	COUNT(*) as ties
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -397,7 +479,10 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	UNION ALL
 
-	SELECT count(*) as ties
+	SELECT 
+	COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
+	COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonties,
+	COUNT(*) as ties
 	from gamestbl g
 	left join teamstbl th on g.hometeamid = th.id 
 	left join teamstbl ta on g.awayteamid = ta.id 
@@ -416,6 +501,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	(th.conference = ta.conference)
 	AND
 	(th.division = ta.division)";
+
+	// echo "<br /><br />ties select sql: $sql<br /><br /><br />";
 
 	$sql_result = @mysql_query($sql, $dbConn);
 	if (!$sql_result)
@@ -438,6 +525,9 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$tiesArray = array();
 	while($row = mysql_fetch_assoc($sql_result)) {
 		$tiesArray[$idx] = $row['ties'];
+		$regularseasontiesArray[$idx] = $row['regularseasonties'];
+		$postseasontiesArray[$idx] = $row['postseasonties'];
+
 		$idx = $idx + 1;
 	}
 
@@ -447,6 +537,17 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$confties = $tiesArray[3];
 	$divties = $tiesArray[4];
 
+	$regularseasonties = $regularseasontiesArray[0];
+	$regularseasonhometies = $regularseasontiesArray[1];
+	$regularseasonawayties = $regularseasontiesArray[2];
+	$regularseasonconfties = $regularseasontiesArray[3];
+	$regularseasondivties = $regularseasontiesArray[4];	
+
+	$postseasonties = $postseasontiesArray[0];
+	$postseasonhometies = $postseasontiesArray[1];
+	$postseasonawayties = $postseasontiesArray[2];
+	$postseasonconfties = $postseasontiesArray[3];
+	$postseasondivties = $postseasontiesArray[4];	
 
 	//
 	// calculate games from totals played 
@@ -457,106 +558,336 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$confgames = $confwins + $conflosses + $confties;
 	$divgames = $divwins + $divlosses + $divties;
 
+	$regularseasongames = $regularseasonwins + $regularseasonlosses + $regularseasonties;
+	$regularseasonhomegames = $regularseasonhomewins + $regularseasonhomelosses + $regularseasonhometies;
+	$regularseasonawaygames = $regularseasonawaywins + $regularseasonawaylosses + $regularseasonawayties;
+	$regularseasonconfgames = $regularseasonconfwins + $regularseasonconflosses + $regularseasonconfties;
+	$regularseasondivgames = $regularseasondivwins + $regularseasondivlosses + $regularseasondivties;
+
+	$postseasongames = $postseasonwins + $postseasonlosses + $postseasonties;
+	$postseasonhomegames = $postseasonhomewins + $postseasonhomelosses + $postseasonhometies;
+	$postseasonawaygames = $postseasonawaywins + $postseasonawaylosses + $postseasonawayties;
+	$postseasonconfgames = $postseasonconfwins + $postseasonconflosses + $postseasonconfties;
+	$postseasondivgames = $postseasondivwins + $postseasondivlosses + $postseasondivties;
+
 	//
 	// calculate percentage
 	//
-	$p = $wins / $games;
-	$percent = round($p, 3);
-
-	$p = $homewins / $homegames;
-	$homepercent = round($p, 3);
-
-	$p = $awaywins / $awaygames;
-	$awaypercent = round($p, 3);
-
-	$p = $confwins / $confgames;
-	$confpercent = round($p, 3);
-
-	$p = $divwins / $divgames;
-	$divpercent = round($p, 3);
-
-	// 
-	// if data is there update otherwise insert
-	// 
-	$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = ".$season;
-
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
+	$percent = 0;
+	
+	if ($games > 0)
 	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team stats - count team id in stats table.");
-	    $log->writeLog("SQL: $sql");
+		$p = $wins / $games;
+		$percent = round($p, 3);
 
-	    $status = -240;
-	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count team id in stats table.<br /> SQL: $sql";
+		$p = $homewins / $homegames;
+		$homepercent = round($p, 3);
 
-	    exit($msg);
-	}	
+		$p = $awaywins / $awaygames;
+		$awaypercent = round($p, 3);
 
-	$count = mysql_num_rows($sql_result);
-	if ($count > 0)
+		$p = $confwins / $confgames;
+		$confpercent = round($p, 3);
+
+		$p = $divwins / $divgames;
+		$divpercent = round($p, 3);
+	}
+		
+
+	if ($regularseasongames > 0)
 	{
-		// 
-		// do update
-		// 
-		$sql = "UPDATE teamstatstbl 
-			SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, 
-			hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
-			awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,
-			conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
-			divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
-			season = $season, enterdate = '$enterdateTS' 
-			WHERE teamid = $teamid AND season = ".$season;;
+		$p = $regularseasonwins / $regularseasongames;
+		$regularseasonpercent = round($p, 3);
+
+		$p = $regularseasonhomewins / $regularseasonhomegames;
+		$regularseasonhomepercent = round($p, 3);
+
+		$p = $regularseasonawaywins / $regularseasonawaygames;
+		$regularseasonawaypercent = round($p, 3);
+
+		$p = $regularseasonconfwins / $regularseasonconfgames;
+		$regularseasonconfpercent = round($p, 3);
+
+		$p = $regularseasondivwins / $regularseasondivgames;
+		$regularseasondivpercent = round($p, 3);
+	}
+
+	if ($postseasongames > 0)
+	{
+		$p = $postseasonwins / $postseasongames;
+		$postseasonpercent = round($p, 3);
+
+		$p = $postseasonhomewins / $postseasonhomegames;
+		$postseasonhomepercent = round($p, 3);
+
+		$p = $postseasonawaywins / $postseasonawaygames;
+		$postseasonawaypercent = round($p, 3);
+
+		$p = $postseasonconfwins / $postseasonconfgames;
+		$postseasonconfpercent = round($p, 3);
+
+		$p = $postseasondivwins / $postseasondivgames;
+		$postseasondivpercent = round($p, 3);
+	}
+
+	//
+	// total season games 
+	// 
+	if ($games > 0)
+	{
+		$gametypeid = 1;
+		$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
 
 		$sql_result = @mysql_query($sql, $dbConn);
 		if (!$sql_result)
 		{
 		    $log = new ErrorLog("logs/");
 		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update team stats.");
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team total stats - count team id in stats table.");
 		    $log->writeLog("SQL: $sql");
 
-		    $status = -250;
-		    $msg = $msg . "System Error: $sqlerr - Error doing update to db Unable to update team stats.<br /> SQL: $sql";
+		    $status = -240;
+		    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team total stats - count team id in stats table.<br /> SQL: $sql";
 
 		    exit($msg);
 		}	
 
-	}
-	else
-	{
-		// 
-		// do insert
-		// 
-		$sql = "INSERT INTO teamstatstbl 
-			(totalgames, wins, losses, ties, percent, 
-			hometotalgames, homewins, homelosses, hometies, homepercent,
-			awaytotalgames, awaywins, awaylosses, awayties, awaypercent,
-			conftotalgames, confwins, conflosses, confties, confpercent,
-			divtotalgames, divwins, divlosses, divties, divpercent,
-			season, enterdate, teamid) 
-			VALUES ($games, $wins, $losses, $ties, $percent, 
-				$homegames, $homewins, $homelosses, $hometies, $homepercent,
-				$awaygames, $awaywins, $awaylosses, $awayties, $awaypercent,
-				$confgames, $confwins, $conflosses, $confties, $confpercent,
-				$divgames, $divwins, $divlosses, $divties, $divpercent,
-				$season, '$enterdateTS', $teamid)";
+		$count = mysql_num_rows($sql_result);
+		if ($count > 0)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE teamstatstbl 
+				SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, 
+				hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
+				awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,
+				conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
+				divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
+				season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
+				WHERE teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
+		}
+		else
+		{
+			// 
+			// do insert
+			// 
+			$sql = "INSERT INTO teamstatstbl 
+				(totalgames, wins, losses, ties, percent, 
+				hometotalgames, homewins, homelosses, hometies, homepercent,
+				awaytotalgames, awaywins, awaylosses, awayties, awaypercent,
+				conftotalgames, confwins, conflosses, confties, confpercent,
+				divtotalgames, divwins, divlosses, divties, divpercent,
+				season, gametypeid, enterdate, teamid) 
+				VALUES ($games, $wins, $losses, $ties, $percent, 
+					$homegames, $homewins, $homelosses, $hometies, $homepercent,
+					$awaygames, $awaywins, $awaylosses, $awayties, $awaypercent,
+					$confgames, $confwins, $conflosses, $confties, $confpercent,
+					$divgames, $divwins, $divlosses, $divties, $divpercent,
+					$season, $gametypeid, '$enterdateTS', $teamid)";
+		}
+
+		// echo "<br />sql for total: $sql <br />";
 
 		$sql_result = @mysql_query($sql, $dbConn);
 		if (!$sql_result)
 		{
 		    $log = new ErrorLog("logs/");
 		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert team stats.");
+		    $log->writeLog("SQL error: $sqlerr - Error doing insert or update to db Unable to insert total team stats.");
 		    $log->writeLog("SQL: $sql");
 
 		    $status = -260;
-		    $msg = $msg . "System Error: $sqlerr - Error doing update to db Unable to insert team stats.<br /> SQL: $sql";
+		    $msg = $msg . "System Error: $sqlerr - Error doing insert or update to db Unable to insert total team stats.<br /> SQL: $sql";
 
 		    exit($msg);
 		}
+	}
 
+	//
+	// regular season games 
+	// 
+	if ($regularseasongames > 0)
+	{
+		$gametypeid = 2;
+		$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
+
+		$sql_result = @mysql_query($sql, $dbConn);
+		if (!$sql_result)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team regular stats - count team id in stats table.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -240;
+		    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team regular stats - count team id in stats table.<br /> SQL: $sql";
+
+		    exit($msg);
+		}	
+
+		$count = mysql_num_rows($sql_result);
+		if ($count > 0)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE teamstatstbl 
+				SET totalgames = $regularseasongames, 
+				wins = $regularseasonwins, losses = $regularseasonlosses, ties = $regularseasonties, 
+				percent = $regularseasonpercent, 
+				hometotalgames = $regularseasonhomegames, homewins = $regularseasonhomewins, 
+				homelosses = $regularseasonhomelosses, hometies = $regularseasonhometies, 
+				homepercent = $regularseasonhomepercent,
+				awaytotalgames = $regularseasonawaygames, awaywins = $regularseasonawaywins, 
+				awaylosses = $regularseasonawaylosses, awayties = $regularseasonawayties, 
+				awaypercent = $regularseasonawaypercent,
+				conftotalgames = $regularseasonconfgames, confwins = $regularseasonconfwins, 
+				conflosses = $regularseasonconflosses, confties = $regularseasonconfties, 
+				confpercent = $regularseasonconfpercent,
+				divtotalgames = $regularseasondivgames, divwins = $regularseasondivwins, 
+				divlosses = $regularseasondivlosses, divties = $regularseasondivties, 
+				divpercent = $regularseasondivpercent,
+				season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
+				WHERE teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
+		}
+		else
+		{
+			// 
+			// do insert
+			// 
+			$sql = "INSERT INTO teamstatstbl 
+				(totalgames, wins, losses, ties, percent, 
+				hometotalgames, homewins, homelosses, hometies, homepercent,
+				awaytotalgames, awaywins, awaylosses, awayties, awaypercent,
+				conftotalgames, confwins, conflosses, confties, confpercent,
+				divtotalgames, divwins, divlosses, divties, divpercent,
+				season, gametypeid, enterdate, teamid) 
+				VALUES ($regularseasongames, $regularseasonwins, $regularseasonlosses, 
+					$regularseasonties, $regularseasonpercent, 
+					$regularseasonhomegames, $regularseasonhomewins, 
+					$regularseasonhomelosses, $regularseasonhometies, 
+					$regularseasonhomepercent,
+					$regularseasonawaygames, $regularseasonawaywins, 
+					$regularseasonawaylosses, $regularseasonawayties, 
+					$regularseasonawaypercent,
+					$regularseasonconfgames, $regularseasonconfwins, 
+					$regularseasonconflosses, $regularseasonconfties, 
+					$regularseasonconfpercent,
+					$regularseasondivgames, $regularseasondivwins, 
+					$regularseasondivlosses, $regularseasondivties, 
+					$regularseasondivpercent,
+					$season, $gametypeid, '$enterdateTS', $teamid)";
+		}
+
+		// echo "<br />sql for regular: $sql <br />";
+
+		$sql_result = @mysql_query($sql, $dbConn);
+		if (!$sql_result)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing insert or update to db Unable to insert regular team stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -260;
+		    $msg = $msg . "System Error: $sqlerr - Error doing insert or update to db Unable to insert regular team stats.<br /> SQL: $sql";
+
+		    exit($msg);
+		}
+	}
+
+	//
+	// post season games 
+	// 
+	if ($postseasongames > 0)
+	{
+		$gametypeid = 3;
+		$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
+
+		$sql_result = @mysql_query($sql, $dbConn);
+		if (!$sql_result)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team post stats - count team id in stats table.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -240;
+		    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team post stats - count team id in stats table.<br /> SQL: $sql";
+
+		    exit($msg);
+		}	
+
+		$count = mysql_num_rows($sql_result);
+		if ($count > 0)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE teamstatstbl 
+				SET totalgames = $postseasongames, 
+				wins = $postseasonwins, losses = $postseasonlosses, ties = $postseasonties, 
+				percent = $postseasonpercent, 
+				hometotalgames = $postseasonhomegames, homewins = $postseasonhomewins, 
+				homelosses = $postseasonhomelosses, hometies = $postseasonhometies, 
+				homepercent = $postseasonhomepercent,
+				awaytotalgames = $postseasonawaygames, awaywins = $postseasonawaywins, 
+				awaylosses = $postseasonawaylosses, awayties = $postseasonawayties, 
+				awaypercent = $postseasonawaypercent,
+				conftotalgames = $postseasonconfgames, confwins = $postseasonconfwins, 
+				conflosses = $postseasonconflosses, confties = $postseasonconfties, 
+				confpercent = $postseasonconfpercent,
+				divtotalgames = $postseasondivgames, divwins = $postseasondivwins, 
+				divlosses = $postseasondivlosses, divties = $postseasondivties, 
+				divpercent = $postseasondivpercent,
+				season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
+				WHERE teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
+		}
+		else
+		{
+			// 
+			// do insert
+			// 
+			$sql = "INSERT INTO teamstatstbl 
+				(totalgames, wins, losses, ties, percent, 
+				hometotalgames, homewins, homelosses, hometies, homepercent,
+				awaytotalgames, awaywins, awaylosses, awayties, awaypercent,
+				conftotalgames, confwins, conflosses, confties, confpercent,
+				divtotalgames, divwins, divlosses, divties, divpercent,
+				season, gametypeid, enterdate, teamid) 
+				VALUES ($postseasongames, $postseasonwins, $postseasonlosses, 
+					$postseasonties, $postseasonpercent, 
+					$postseasonhomegames, $postseasonhomewins, 
+					$postseasonhomelosses, $postseasonhometies, 
+					$postseasonhomepercent,
+					$postseasonawaygames, $postseasonawaywins, 
+					$postseasonawaylosses, $postseasonawayties, 
+					$postseasonawaypercent,
+					$postseasonconfgames, $postseasonconfwins, 
+					$postseasonconflosses, $postseasonconfties, 
+					$postseasonconfpercent,
+					$postseasondivgames, $postseasondivwins, 
+					$postseasondivlosses, $postseasondivties, 
+					$postseasondivpercent,
+					$season, $gametypeid, '$enterdateTS', $teamid)";
+		}
+
+		// echo "<br />sql for post: $sql <br />";
+
+		$sql_result = @mysql_query($sql, $dbConn);
+		if (!$sql_result)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing insert or update to db Unable to insert post team stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -260;
+		    $msg = $msg . "System Error: $sqlerr - Error doing insert or update to db Unable to insert post team stats.<br /> SQL: $sql";
+
+		    exit($msg);
+		}
 	}
 
 } // end of looping through teams

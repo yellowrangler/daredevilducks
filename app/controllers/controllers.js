@@ -1948,7 +1948,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         startTime = sw.getLocalTimeStart();
         $("#scriptMessagesDisplay").append("Start of Intialize Team Week Stats. Time:"+startTime+"<br />");
 
-        scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+        scriptData = "season="+$scope.current.season+"&weeksinregularseason="+weeksinregularseason+"&weeksinplayoffseason="+weeksinplayoffseason;
         scriptsFactory.initializeTeamWeekStats(scriptData)
         .success( function(data) {
             sw.stop();
@@ -1965,7 +1965,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
             startTime = sw.getLocalTimeStart();
             $("#scriptMessagesDisplay").append("<br /><br />Start of Intialize Member Week Stats. Time:"+startTime+"<br />");
 
-            scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+            scriptData = "season="+$scope.current.season+"&weeksinregularseason="+weeksinregularseason+"&weeksinplayoffseason="+weeksinplayoffseason;
             scriptsFactory.initializeMemberWeekStats(scriptData)
             .success( function(data) {
                 sw.stop();
@@ -1997,7 +1997,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                     startTime = sw.getLocalTimeStart();
                     $("#scriptMessagesDisplay").append("<br /><br />Start of Build Team Weekly Stats. Time:"+startTime+"<br />");
 
-                    var scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason;
+                    var scriptData = "season="+$scope.current.season+"&weeksinregularseason="+weeksinregularseason+"&weeksinplayoffseason="+weeksinplayoffseason;
                     scriptsFactory.buildTeamWeekStats(scriptData)
                     .success( function(data) {
                         sw.stop();
@@ -2013,7 +2013,8 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                         startTime = sw.getLocalTimeStart();
                         $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Stats. Time:"+startTime+"<br />");
 
-                        scriptData = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+                        // scriptData = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+                        scriptData = "season="+$scope.current.season;
                         scriptsFactory.buildMemberStats(scriptData)
                         .success( function(data) {
                             sw.stop();
@@ -2029,7 +2030,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                             startTime = sw.getLocalTimeStart();
                             $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Weekly Stats. Time:"+startTime+"<br />");
 
-                            scriptData = "season="+$scope.current.season+"&weeksinseason="+$scope.current.weeksinseason+"&gametypeid="+$scope.current.gametypeid;
+                            scriptData = "season="+$scope.current.season;
                             scriptsFactory.buildMemberWeekStats(scriptData)
                             .success( function(data) {
                                 sw.stop();

@@ -23,31 +23,55 @@ if (isset($_POST["season"]))
 }
 else
 {
-	$msg = $msg . "No season passed - Buildmemberweekstats terminated";
-	exit($msg);
+	if (isset($_GET["season"]))
+	{
+		$season = $_GET["season"];
+	}
+	else
+	{
+		$msg = $msg . "No season passed - Buildmemberweekstats terminated";
+		exit($msg);
+
+	}
 }
 
-if (isset($_POST["gametypeid"]))
+if (isset($_POST["weeksinregularseason"]))
 {
-	$gametypeid = $_POST["gametypeid"];
+	$weeksinregularseason = $_POST["weeksinregularseason"];
 }
 else
 {
-	$msg = $msg . "No gametypeid passed - Buildmemberweekstats terminated";
-	exit($msg);
+	if (isset($_GET["weeksinregularseason"]))
+	{
+		$weeksinregularseason = $_GET["weeksinregularseason"];
+	}
+	else
+	{
+		$msg = $msg . "No weeksinregularseason passed - Buildmemberweekstats terminated";
+		exit($msg);
+
+	}
 }
 
-// if (isset($_POST["weeksinseason"]))
-// {
-// 	$weeksinseason = $_POST["weeksinseason"];
-// }
-// else
-// {
-// 	$msg = $msg . "No weeksinseason passed - Buildmemberweekstats terminated";
-// 	exit($msg);
-// }
+if (isset($_POST["weeksinplayoffseason"]))
+{
+	$weeksinplayoffseason = $_POST["weeksinplayoffseason"];
+}
+else
+{
+	if (isset($_GET["weeksinplayoffseason"]))
+	{
+		$weeksinplayoffseason = $_GET["weeksinplayoffseason"];
+	}
+	else
+	{
+		$msg = $msg . "No weeksinplayoffseason passed - Buildmemberweekstats terminated";
+		exit($msg);
 
-$msg = "Input variables: Season:$season gametypeid:$gametypeid<br />";
+	}
+}
+
+$msg = "Input variables: Season:$season <br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -90,29 +114,8 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //
 $membercount = 0;
 $totalgames = 0;
-
-//
-// get total weeks to date
-//
-$sql = "SELECT MAX(week) as weeks
-FROM gameweekstbl where season = $season
-AND weekend <= '$enterdateTS'";
-
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - total weeks.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -200;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - total weeks.<br /> SQL: $sql";
-	exit($msg);
-}	
-
-$r = mysql_fetch_assoc($sql_result);
-$weekstotal = $r[weeks];
+$regularseasontotalgames = 0;
+$postseasontotalgames = 0;
 
 //---------------------------------------------------------------
 // Get list of all dare devil ducks members
@@ -130,6 +133,32 @@ if (!$sql_result_prime)
     $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats.<br /> SQL: $sql";
 	exit($msg);
 }
+
+//---------------------------------------------------------------
+// get total weeks to date
+//---------------------------------------------------------------
+$sql = "SELECT MAX(week) as weeks
+FROM gameweekstbl where season = $season
+AND weekend <= '$enterdateTS'";
+
+$sql_result = @mysql_query($sql, $dbConn);
+if (!$sql_result)
+{
+    $log = new ErrorLog("logs/");
+    $sqlerr = mysql_error();
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - total weeks.");
+    $log->writeLog("SQL: $sql");
+
+    $status = -200;
+    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - total weeks.<br /> SQL: $sql";
+	exit($msg);
+}	
+
+//
+// get total weeks
+// 
+$r = mysql_fetch_assoc($sql_result);
+$weekstotal = $r[weeks];
 
 //
 // loop through all members
@@ -164,8 +193,12 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 
 		$playerpickedgames = 0;
 		$playerpickedpercent = 0;
-		$totalgames = 0;
 		$totalgamespercent = 0;
+
+		$totalgames = 0;
+
+
+		$gametypeid = 0;
 
 		$sql = "SELECT
 		  G.season as season,
@@ -180,7 +213,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		  G.hometeamscore as hometeamscore,
 		  G.awayteamid as awayteamid,
 	  	  G.awayteamscore as awayteamscore,
-		  GT.gametype as gametypeid,
+		  GT.gametype as gametype,
 		  TH.name as hometeamname,
 		  TA.name as awayteamname,	  
 		  MP.teamid as teamselected
@@ -190,7 +223,6 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
 		LEFT JOIN memberpickstbl MP ON (MP.teamid = G.hometeamid OR MP.teamid = G.awayteamid) AND MP.week = G.week AND MP.season = G.season AND MP.memberid ='$memberid'
 		WHERE (G.season = '$season' AND G.week = $week)  
-		AND G.gametypeid ='$gametypeid'
 		AND MP.memberid = $memberid 
 	    AND NOT (G.hometeamscore = G.awayteamscore AND G.hometeamscore = 0 AND G.awayteamscore = 0)
 		ORDER BY G.gamedatetime";
@@ -211,8 +243,11 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		//
 		// get games in week
 		//
-		$sql = "SELECT count(week) as gamesplayed
-		FROM gamestbl 
+		$sql = "SELECT 
+		SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END) AS regularseasontotalgames,
+		SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END) AS postseasontotalgames,
+		COUNT(gamenbr) as totalgames
+		FROM gamestbl  		
 		WHERE season = $season and week = $week";
 
 		$sql_result_games = @mysql_query($sql, $dbConn);
@@ -236,7 +271,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		if ($count > 0)
 		{
 			$r = mysql_fetch_assoc($sql_result_games);
-			$totalgames = $r['gamesplayed'];
+			$totalgames = $r['totalgames'];
 		}
 		else
 		{
@@ -258,10 +293,8 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			$awayteamid = $r['awayteamid'];
 			$hometeamscore = $r['hometeamscore'];
 			$awayteamscore = $r['awayteamscore'];	
-
-			// debug
 			$awayteam = $r['awayteamname'];	
-			$hometeam = $r['hometeamname'];	
+			$hometeam = $r['hometeamname'];
 
 			//
 			// determine win/loss/ties
@@ -303,6 +336,11 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 					exit($msg);
 					break;
 			}  // end of switch
+
+			// 
+			// all games for week will have the same gametypeid
+			//
+			$gametypeid = $r['gametypeid'];
 			
 		}  // end of while member games for week
 
@@ -314,25 +352,44 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		//
 		// calculate percentage for players picked
 		//
-		$tiesadjust = $ties * 0.5;
-		$p = ($wins + $tiesadjust) / $playerpickedgames;
-		$playerpickedpercent = round($p, 3);
+		if ($playerpickedgames > 0)
+		{
+			$tiesadjust = $ties * 0.5;
+			$p = ($wins + $tiesadjust) / $playerpickedgames;
+			$playerpickedpercent = round($p, 3);
+		}
 
 		//
 		// calculate percentage
 		//
-		$tiesadjust = $ties * 0.5;
-		$p = ($wins + $tiesadjust) / $totalgames;
-		$totalgamespercent = round($p, 3);
+		if ($totalgames > 0)
+		{
+			$tiesadjust = $ties * 0.5;
+			$p = ($wins + $tiesadjust) / $totalgames;
+			$totalgamespercent = round($p, 3);
+		}
 
-		// debug
-		// $msg = $msg .  "</br>memberid:$memberid wins:$wins losses:$losses ties:$ties totalgames:$totalgames totalgamespercent:$totalgamespercent </br> playerpickedgames:$playerpickedgames playerpickedpercent:$playerpickedpercent</br>";	
-			
-		// 
+		if ($week < $weeksinregularseason)
+		{
+			$gametypeid = 2;
+		}
+		elseif ($week > $weeksinregularseason)
+		{
+			$gametypeid = 3;
+		}
+
+		//--------------------------------------------------------------------------------------- 
+		//
 		// if data is there update otherwise insert
-		// 
-		$sql = "SELECT * from memberweekstatstbl where memberid = $memberid 
-		AND season = $season AND week = $week";
+		//
+		//---------------------------------------------------------------------------------------
+
+		//
+		// season week games 
+		//
+		$sql = "SELECT * from memberweekstatstbl 
+		where memberid = $memberid AND season = $season 
+		AND week = $week";
 
 		$sql_result_check_week = @mysql_query($sql, $dbConn);
 		if (!$sql_result_check_week)
@@ -362,22 +419,6 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 				WHERE memberid = $memberid 
 				AND season = $season 
 				AND week = $week";
-
-			// debug
-			// $msg = $msg .  "</br>sql update:$sql</br>";	
-
-			$sql_result_update = @mysql_query($sql, $dbConn);
-			if (!$sql_result_update)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update member week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -250;
-			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats.<br />SQL: $sql";
-				exit($msg);
-			}	
 		}
 		else
 		{
@@ -387,23 +428,20 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			$sql = "INSERT INTO memberweekstatstbl 
 				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, gametypeid, memberid) 
 				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
-				
-			// debug	
-			// $msg = $msg .  "</br>sql insert:$sql</br>";	
-
-			$sql_result_insert = @mysql_query($sql, $dbConn);
-			if (!$sql_result_insert)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert member week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -260;
-			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert member week stats.<br />SQL: $sql";
-				exit($msg);
-			}
 		}  
+
+		$sql_result_insert_update = @mysql_query($sql, $dbConn);
+		if (!$sql_result_insert_update)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert or update member week stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -260;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert or update member week stats.<br />SQL: $sql";
+			exit($msg);
+		}
 	} // end of outer week loop
 
 	//

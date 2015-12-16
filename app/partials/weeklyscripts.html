@@ -33,20 +33,27 @@
 								</div> <!-- end of form group -->
 
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="systemscriptsweeks">Weeks in Season</label>
+									<label class="col-md-4 control-label" for="systemscriptsweeksinregularseason">Regular Season Weeks</label>
 									<div class="col-md-5">
-										<input type="text" ng-model="current.weeksinseason" class="form-control" id="systemscriptsweeks" name="systemscriptsweeks" placeholder="">
+										<input type="text" ng-model="current.weeksinregularseason" class="form-control" id="systemscriptsweeksinregularseason" name="systemscriptsweeksinregularseason" placeholder="">
 									</div>
 								</div> <!-- end of form group -->
 
 								<div class="form-group">
+									<label class="col-md-4 control-label" for="systemscriptsweeksinplayoffseason">Playoff Season Weeks</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.weeksinplayoffseason" class="form-control" id="systemscriptsweeksinplayoffseason" name="systemscriptsweeksinplayoffseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<!-- <div class="form-group">
 									<label class="col-md-4 control-label" for="systemscriptsgametype">Game Type</label>
 									<div class="col-md-5">
 										<select class="form-control" ng-model="current.gametypeid"  id="systemscriptsgametype" name="systemscriptsgametype">
 						                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
 					                    </select>
 									</div>
-								</div> <!-- end of form group -->
+								</div> --> <!-- end of form group -->
 								
 								<div class="form-group">
 									<div class="col-md-offset-4 col-md-5">

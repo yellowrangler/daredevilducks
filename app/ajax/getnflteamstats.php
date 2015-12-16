@@ -18,7 +18,37 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-$season = $_POST['season'];
+
+//
+// get post variables passed in
+//
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	$log = new ErrorLog("logs/");
+	$dberr = mysql_error();
+	$log->writeLog("System error: No season passed - getnflteamstats terminated");
+
+	$rv = "";
+	exit($rv);
+}
+
+if (isset($_POST["gametypeid"]))
+{
+	$gametypeid = $_POST["gametypeid"];
+}
+else
+{
+	$log = new ErrorLog("logs/");
+	$dberr = mysql_error();
+	$log->writeLog("System error: No gametypeid passed - getnflteamstats terminated");
+
+	$rv = "";
+	exit($rv);
+}
 
 //
 // messaging
@@ -100,7 +130,7 @@ ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
 ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
 FROM teamstbl tt
 LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
-WHERE ts.season = '$season'
+WHERE ts.season = '$season' and ts.gametypeid = $gametypeid
 ORDER BY conference ASC, division ASC, percent DESC";
 // print $sql;
 

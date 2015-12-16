@@ -22,17 +22,27 @@ else
 	exit($msg);
 }
 
-if (isset($_POST["weeksinseason"]))
+if (isset($_POST["weeksinregularseason"]))
 {
-	$weeksinseason = $_POST["weeksinseason"];
+	$weeksinregularseason = $_POST["weeksinregularseason"];
 }
 else
 {
-	$msg = $msg . "No weeksinseason passed - Initializememberweekstats terminated";
+	$msg = $msg . "No weeksinregularseason passed - Initializememberweekstats terminated";
 	exit($msg);
 }
 
-$msg = "Input variables: Season:$season weeksinseason:$weeksinseason<br />";
+if (isset($_POST["weeksinplayoffseason"]))
+{
+	$weeksinplayoffseason = $_POST["weeksinplayoffseason"];
+}
+else
+{
+	$msg = $msg . "No weeksinplayoffseason passed - Initializememberweekstats terminated";
+	exit($msg);
+}
+
+$msg = "Input variables: Season:$season weeksinregularseason:$weeksinregularseason weeksinplayoffseason:$weeksinplayoffseason<br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -120,16 +130,74 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$memberid = $row[memberid];
 
 	//
-	// loop through all weeks
+	// loop through all regular season weeks
 	//
-	for ($week = 1; $week <= $weeksinseason; $week++)
+	$gametypeid = 2;
+	for ($week = 1; $week <= $weeksinregularseason; $week++)
 	{
 		//---------------------------------------------------------------
 		// Get list of all dare devile ducks members
 		//---------------------------------------------------------------
 		$sql = "SELECT memberid 
 		FROM  memberweekstatstbl 
-		WHERE memberid = $memberid and season = $season and week = $week";
+		WHERE memberid = $memberid and season = $season and week = $week and gametypeid = $gametypeid";
+
+		$sql_result_check = @mysql_query($sql, $dbConn);
+		if (!$sql_result_check)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize member week stats.");
+		    $log->writeLog("SQL: $sql");
+
+		    $status = -110;
+		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize member week stats.<br /> SQL: $sql";
+			exit($msg);
+		}
+
+		$num_rows = mysql_num_rows($sql_result_check);
+
+		if ($num_rows == 0)
+		{
+			// 
+			// do insert team
+			// 
+			$sql = "INSERT INTO memberweekstatstbl 
+				(totalgames, playerpickedgames, week, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, memberid, gametypeid) 
+				VALUES ($totalgames, $playerpickedgames, $week, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $memberid, $gametypeid)";
+
+			$sql_r = @mysql_query($sql, $dbConn);
+			if (!$sql_r)
+			{
+			    $log = new ErrorLog("logs/");
+			    $sqlerr = mysql_error();
+			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert member week stats.");
+			    $log->writeLog("SQL: $sql");
+
+			    $status = -260;
+			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize insert member week stats.<br /> SQL: $sql";
+				exit($msg);
+			}
+
+			$memberinsertedcount = $memberinsertedcount + 1;
+		}
+
+	}  // end of looping through regular season weeks
+
+
+	//
+	// loop through all post season weeks
+	//
+	$gametypeid = 3;
+	for ($playoffweek = 1; $playoffweek <= $weeksinplayoffseason; $playoffweek++)
+	{
+		$week = $weeksinregularseason + $playoffweek;
+		//---------------------------------------------------------------
+		// Get list of all dare devile ducks members
+		//---------------------------------------------------------------
+		$sql = "SELECT memberid 
+		FROM  memberweekstatstbl 
+		WHERE memberid = $memberid and season = $season and week = $week and gametypeid = $gametypeid";
 
 		$sql_result_check = @mysql_query($sql, $dbConn);
 		if (!$sql_result_check)
