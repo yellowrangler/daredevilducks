@@ -36,19 +36,21 @@ else
 	exit($rv);
 }
 
-if (isset($_POST["gametypeid"]))
-{
-	$gametypeid = $_POST["gametypeid"];
-}
-else
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("System error: No gametypeid passed - getnflteamstats terminated");
+// if (isset($_POST["gametypeid"]))
+// {
+// 	$gametypeid = $_POST["gametypeid"];
+// }
+// else
+// {
+// 	$log = new ErrorLog("logs/");
+// 	$dberr = mysql_error();
+// 	$log->writeLog("System error: No gametypeid passed - getnflteamstats terminated");
 
-	$rv = "";
-	exit($rv);
-}
+// 	$rv = "";
+// 	exit($rv);
+// }
+
+$gametypeid = 1;
 
 //
 // messaging

@@ -447,26 +447,26 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 	//
 	// loop through rest of weeks - uncomment to get cumulative rolled up results
 	//
-	// $start = $week;
-	// for ($week = $start; $week <= $gamesInRegularSeason; $week++)
-	// {
-	// 	$sql = "UPDATE memberweekstatstbl 
-	// 		SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
-	// 		WHERE memberid = $memberid AND season = $season AND week = $week";
+	$start = $week;
+	for ($week = $start; $week <= $gamesInRegularSeason; $week++)
+	{
+		$sql = "UPDATE memberweekstatstbl 
+			SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
+			WHERE memberid = $memberid AND season = $season AND week = $week";
 
-	// 	$sql_result_update = @mysql_query($sql, $dbConn);
-	// 	if (!$sql_result_update)
-	// 	{
-	// 	    $log = new ErrorLog("logs/");
-	// 	    $sqlerr = mysql_error();
-	// 	    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update member week stats.");
-	// 	    $log->writeLog("SQL: $sql");
+		$sql_result_update = @mysql_query($sql, $dbConn);
+		if (!$sql_result_update)
+		{
+		    $log = new ErrorLog("logs/");
+		    $sqlerr = mysql_error();
+		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update member week stats.");
+		    $log->writeLog("SQL: $sql");
 
-	// 	    $status = -250;
-	// 	    $msgtext = "System Error: $sqlerr";
-	// 	}
+		    $status = -250;
+		    $msgtext = "System Error: $sqlerr";
+		}
 
-	// } // end of for week loop 
+	} // end of for week loop 
 
 } // end of looping through members
 

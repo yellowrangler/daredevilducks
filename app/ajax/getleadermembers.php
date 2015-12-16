@@ -9,6 +9,7 @@ include_once ('../class/class.AccessLog.php');
 //
 $season = $_POST['season'];
 $leaderType = $_POST['leaderType'];
+$gametypeid = $_POST['gametypeid'];
 
 
 // get date time for this transaction
@@ -81,7 +82,7 @@ $sql = "SELECT
   M.screenname as screenname
 FROM memberstatstbl MS 
 LEFT JOIN membertbl M ON M.id = MS.memberid
-WHERE MS.season = '$season' ";
+WHERE MS.season = '$season' AND gametypeid = $gametypeid";
 
 if ($leaderType == 'pickingpercent')
 {

@@ -918,7 +918,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         //
         // get total season percent leaders
         //
-        var qStr = "season="+$scope.current.season+"&leaderType=pickingpercent";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonpercentstats = workPercentTableData(data); 
@@ -930,7 +930,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         //
         // get total season win leaders
         //
-        var qStr = "season="+$scope.current.season+"&leaderType=wins";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonwinstats = workWinsTableData(data); 
@@ -954,13 +954,14 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
 
         $scope.current = {};
         $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.current.gametypeid = 2;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
 
         //
         // get percent season leaders
         //
-        var qStr = "season="+$scope.current.season+"&leaderType=pickingpercent"
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent"
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonpercentstats = workPercentTableData(data); 
@@ -972,7 +973,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         //
         // get wins season leaders
         //
-        var qStr = "season="+$scope.current.season+"&leaderType=wins";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonwinstats = workWinsTableData(data);  
@@ -1948,7 +1949,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         startTime = sw.getLocalTimeStart();
         $("#scriptMessagesDisplay").append("Start of Intialize Team Week Stats. Time:"+startTime+"<br />");
 
-        scriptData = "season="+$scope.current.season+"&weeksinregularseason="+weeksinregularseason+"&weeksinplayoffseason="+weeksinplayoffseason;
+        scriptData = "season="+$scope.current.season+"&weeksinregularseason="+$scope.current.weeksinregularseason+"&weeksinplayoffseason="+$scope.current.weeksinplayoffseason;
         scriptsFactory.initializeTeamWeekStats(scriptData)
         .success( function(data) {
             sw.stop();
@@ -1965,7 +1966,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
             startTime = sw.getLocalTimeStart();
             $("#scriptMessagesDisplay").append("<br /><br />Start of Intialize Member Week Stats. Time:"+startTime+"<br />");
 
-            scriptData = "season="+$scope.current.season+"&weeksinregularseason="+weeksinregularseason+"&weeksinplayoffseason="+weeksinplayoffseason;
+            scriptData = "season="+$scope.current.season+"&weeksinregularseason="+$scope.current.weeksinregularseason+"&weeksinplayoffseason="+$scope.current.weeksinplayoffseason;
             scriptsFactory.initializeMemberWeekStats(scriptData)
             .success( function(data) {
                 sw.stop();
@@ -1997,7 +1998,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                     startTime = sw.getLocalTimeStart();
                     $("#scriptMessagesDisplay").append("<br /><br />Start of Build Team Weekly Stats. Time:"+startTime+"<br />");
 
-                    var scriptData = "season="+$scope.current.season+"&weeksinregularseason="+weeksinregularseason+"&weeksinplayoffseason="+weeksinplayoffseason;
+                    var scriptData = "season="+$scope.current.season+"&weeksinregularseason="+$scope.current.weeksinregularseason+"&weeksinplayoffseason="+$scope.current.weeksinplayoffseason;
                     scriptsFactory.buildTeamWeekStats(scriptData)
                     .success( function(data) {
                         sw.stop();
@@ -2030,7 +2031,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
                             startTime = sw.getLocalTimeStart();
                             $("#scriptMessagesDisplay").append("<br /><br />Start of Build Player Weekly Stats. Time:"+startTime+"<br />");
 
-                            scriptData = "season="+$scope.current.season;
+                            scriptData = "season="+$scope.current.season+"&weeksinregularseason="+$scope.current.weeksinregularseason+"&weeksinplayoffseason="+$scope.current.weeksinplayoffseason;
                             scriptsFactory.buildMemberWeekStats(scriptData)
                             .success( function(data) {
                                 sw.stop();
@@ -2169,8 +2170,8 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         //
         setviewpadding();
         
-        $scope.current.gametypeid = 2;
-        $scope.current.weeksinseason = 17;
+        $scope.current.weeksinregularseason = 17;
+        $scope.current.weeksinplayoffseason = 4;
         $scope.current.season = nflTeamsService.getCurrentSeason();   
         $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();     
 

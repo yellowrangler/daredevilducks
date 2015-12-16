@@ -8,7 +8,7 @@ include_once ('../class/class.ErrorLog.php');
 //
 $season = $_POST['season'];
 $week = $_POST['week'];
-
+$gametypeid = 1;
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");
@@ -51,7 +51,8 @@ if (!mysql_select_db($DBschema, $dbConn))
 
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
-$sql = "SELECT M.screenname as screenname,
+$sql = "SELECT 
+   M.screenname as screenname,
    M.id as memberid,
    M.membername as membername,
    M.avatar as memberavatar,   
@@ -61,11 +62,11 @@ $sql = "SELECT M.screenname as screenname,
    MS.week as week,
    DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
    DATE_FORMAT(GW.weekend,'%b %D') as weekend
-FROM membertbl M
-LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
-LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
-WHERE MS.season = $season AND MS.week = $week
-ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
+  FROM membertbl M
+  LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+  LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+  WHERE MS.season = $season AND MS.week = $week
+  ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
 // echo $sql;
 

@@ -10,7 +10,7 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-
+$msg = "";
 
 //
 // build array of games
@@ -18,59 +18,93 @@ $enterdate = $datetime;
 $season = 2015;
 $week = 0;
 
-$weekstart = array();
-$weekend = array();
+$weekstart = array(21);
+$weekend = array(21);
+$weekgametypeid = array(21);
 
-$weekstart[1] = "Sep 10 2015";
-$weekend[1] = "Sep 15 2015";
+$weekstart[0] = "Sep 10 2015";
+$weekend[0] = "Sep 15 2015";
+$weekgametypeid[0] = 2;
 
-$weekstart[2] = "Sep 17 2015";
-$weekend[2] = "Sep 22 2015";
+$weekstart[1] = "Sep 17 2015";
+$weekend[1] = "Sep 22 2015";
+$weekgametypeid[1] = 2;
 
-$weekstart[3] = "Sep 24 2015";
-$weekend[3] = "Sep 29 2015";
+$weekstart[2] = "Sep 24 2015";
+$weekend[2] = "Sep 29 2015";
+$weekgametypeid[2] = 2;
 
-$weekstart[4] = "Oct 1 2015";
-$weekend[4] = "Oct 6 2015";
+$weekstart[3] = "Oct 1 2015";
+$weekend[3] = "Oct 6 2015";
+$weekgametypeid[3] = 2;
 
-$weekstart[5] = "Oct 8 2015";
-$weekend[5] = "Oct 13 2015";
+$weekstart[4] = "Oct 8 2015";
+$weekend[4] = "Oct 13 2015";
+$weekgametypeid[4] = 2;
 
-$weekstart[6] = "Oct 15 2015";
-$weekend[6] = "Oct 20 2015";
+$weekstart[5] = "Oct 15 2015";
+$weekend[5] = "Oct 20 2015";
+$weekgametypeid[5] = 2;
 
-$weekstart[7] = "Oct 22 2015";
-$weekend[7] = "Oct 27 2015";
+$weekstart[6] = "Oct 22 2015";
+$weekend[6] = "Oct 27 2015";
+$weekgametypeid[6] = 2;
 
-$weekstart[8] = "Oct 29 2015";
-$weekend[8] = "Nov 3 2015";
+$weekstart[7] = "Oct 29 2015";
+$weekend[7] = "Nov 3 2015";
+$weekgametypeid[7] = 2;
 
-$weekstart[9] = "Nov 5 2015";
-$weekend[9] = "Nov 10 2015";
+$weekstart[8] = "Nov 5 2015";
+$weekend[8] = "Nov 10 2015";
+$weekgametypeid[8] = 2;
 
-$weekstart[10] = "Nov 12 2015";
-$weekend[10] = "Nov 17 2015";
+$weekstart[9] = "Nov 12 2015";
+$weekend[9] = "Nov 17 2015";
+$weekgametypeid[9] = 2;
 
-$weekstart[11] = "Nov 19 2015";
-$weekend[11] = "Nov 24 2015";
+$weekstart[10] = "Nov 19 2015";
+$weekend[10] = "Nov 24 2015";
+$weekgametypeid[10] = 2;
 
-$weekstart[12] = "Nov 26 2015";
-$weekend[12] = "Dec 1 2015";
+$weekstart[11] = "Nov 26 2015";
+$weekend[11] = "Dec 1 2015";
+$weekgametypeid[11] = 2;
 
-$weekstart[13] = "Dec 3 2015";
-$weekend[13] = "Dec 8 2015";
+$weekstart[12] = "Dec 3 2015";
+$weekend[12] = "Dec 8 2015";
+$weekgametypeid[12] = 2;
 
-$weekstart[14] = "Dec 10 2015";
-$weekend[14] = "Dec 15 2015";
+$weekstart[13] = "Dec 10 2015";
+$weekend[13] = "Dec 15 2015";
+$weekgametypeid[13] = 2;
 
-$weekstart[15] = "Dec 17 2015";
-$weekend[15] = "Dec 22 2015";
+$weekstart[14] = "Dec 17 2015";
+$weekend[14] = "Dec 22 2015";
+$weekgametypeid[14] = 2;
 
-$weekstart[16] = "Dec 24 2015";
-$weekend[16] = "Dec 29 2015";
+$weekstart[15] = "Dec 24 2015";
+$weekend[15] = "Dec 29 2015";
+$weekgametypeid[15] = 2;
 
-$weekstart[17] = "Jan 3 2015";
-$weekend[17] = "Jan 5 2015";
+$weekstart[16] = "Jan 3 2015";
+$weekend[16] = "Jan 5 2015";
+$weekgametypeid[16] = 2;
+
+$weekstart[17] = "Jan 9 2015";
+$weekend[17] = "Jan 10 2015";
+$weekgametypeid[17] = 3;
+
+$weekstart[18] = "Jan 16 2015";
+$weekend[18] = "Jan 17 2015";
+$weekgametypeid[18] = 3;
+
+$weekstart[19] = "Jan 24 2015";
+$weekend[19] = "Jan 24 2015";
+$weekgametypeid[19] = 3;
+
+$weekstart[20] = "Feb 7 2015";
+$weekend[20] = "Feb 7 2015";
+$weekgametypeid[20] = 3;
 
 //
 // get todays date and build mysql timestamp
@@ -108,17 +142,22 @@ if (!mysql_select_db($DBschema, $dbConn))
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
+$weekcount = 0;
 //---------------------------------------------------------------
 // loop through array and create gameweektbl
 //---------------------------------------------------------------
-foreach ($weekstart as $week => $weekvalue) {
+foreach ($weekstart as $idx => $weekvalue) {
 	$unixTS = strtotime($weekvalue);
 	$mysqlTS = date("Y-m-d H:i:s", $unixTS);
 	$startdateTS = $mysqlTS;
 
-	$unixTS = strtotime($weekend[$week]);
+	$unixTS = strtotime($weekend[$idx]);
 	$mysqlTS = date("Y-m-d H:i:s", $unixTS);
 	$enddateTS = $mysqlTS;
+
+	$gametypeid = $weekgametypeid[$week];
+
+	$week = $idx + 1;
 
 	// 
 	// if data is there update otherwise insert
@@ -128,7 +167,7 @@ foreach ($weekstart as $week => $weekvalue) {
 	$sql_result_check = @mysql_query($sql, $dbConn);
 	if (!$sql_result_check)
 	{
-	    echo sql_result_check();
+	    echo mysql_error();
 		exit();	
 	}	
 
@@ -140,20 +179,12 @@ foreach ($weekstart as $week => $weekvalue) {
 		// 
 		$sql = "UPDATE gameweekstbl 
 			SET season = $season, 
+			gametypeid = $gametypeid, 
 			week = $week, 
 			weekstart = '$startdateTS', 
 			weekend = '$enddateTS', 
 			enterdate = '$enterdateTS' 
 			WHERE season = $season AND week = $week";
-
-		echo "sql => " . $sql . "<br />";
-
-		$sql_result_update = @mysql_query($sql, $dbConn);
-		if (!$sql_result_update)
-		{
-		    echo sql_result_insert();
-			exit();	
-		}	
 	}
 	else
 	{
@@ -161,22 +192,25 @@ foreach ($weekstart as $week => $weekvalue) {
 		// do insert
 		// 
 		$sql = "INSERT INTO gameweekstbl 
-		(season, week, weekstart, weekend, enterdate)  
-		VALUES ( $season, 
+		(season, gametypeid, week, weekstart, weekend, enterdate)  
+		VALUES ( $season, $gametypeid,
 		$week, 
 		'$startdateTS', 
 		'$enddateTS',
 		'$enterdateTS' )";
-
-		echo "sql => " . $sql . "<br />";
-		
-		$sql_result_insert = @mysql_query($sql, $dbConn);
-		if (!$sql_result_insert)
-		{
-			echo sql_result_insert();
-			exit();	
-		}
 	}
+
+	echo "sql => " . $sql . "<br />";
+
+	$sql_result_insert_update = @mysql_query($sql, $dbConn);
+	if (!$sql_result_insert_update)
+	{
+		echo mysql_error();
+		exit();	
+	}
+
+	$weekcount = $weekcount + 1;
+
 }  // end of for
 
 //
@@ -184,9 +218,12 @@ foreach ($weekstart as $week => $weekvalue) {
 //
 mysql_close($dbConn);
 
+
+$msg = $msg . "For season: $season added $weekcount game weeks";
+
 //
 // pass back info
 //
-exit();
+exit($msg);
 
 ?>

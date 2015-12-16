@@ -66,7 +66,7 @@ else
 	}
 }
 
-$msg = "Input variables: Season:$season weeksinseason:$weeksinseason gametypeid: $gametypeid<br />";
+$msg = "Input variables: Season:$season weeksinregularseason:$weeksinregularseason weeksinplayoffseason: $weeksinplayoffseason<br />";
 
 //------------------------------------------------------
 // db admin user info
