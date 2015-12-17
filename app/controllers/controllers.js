@@ -772,7 +772,8 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
 
     function selectChange()
     {
-        nflteamsFactory.getNFLTeamstats($scope.current.season)
+        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getNFLTeamstats(data)
             .success( function(data) {
                 $scope.teamstats = data; 
             })
@@ -789,8 +790,12 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        $scope.current.gametypeid = 1;
+        $scope.gametypes = nflTeamsService.getNFLGametypes();
         
-        nflteamsFactory.getNFLTeamstats($scope.current.season)
+        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getNFLTeamstats(data)
             .success( function(data) {
                 $scope.teamstats = data; 
             })
@@ -801,7 +806,7 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
     };
 
-    $scope.getSeasons = function() {
+    $scope.selectChange = function() {
         selectChange();
     }
 }
@@ -812,7 +817,8 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
     function selectChange()
     {
-        nflteamsFactory.getNFLTeamstats($scope.current.season)
+        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getNFLTeamstats(data)
             .success( function(data) {
                 $scope.teamstats = data; 
             })
@@ -830,7 +836,8 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         //
         setviewpadding();
         
-        nflteamsFactory.getNFLTeamstats($scope.current.season)
+        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getNFLTeamstats(data)
             .success( function(data) {
                 $scope.teamstats = data; 
             })
@@ -841,7 +848,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
     };
 
-    $scope.getSeasons = function() {
+    $scope.selectChange = function() {
         selectChange();
     }
 }
@@ -954,7 +961,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
 
         $scope.current = {};
         $scope.current.season = nflTeamsService.getCurrentSeason();
-        $scope.current.gametypeid = 2;
+        $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
 

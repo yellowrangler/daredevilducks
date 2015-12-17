@@ -173,6 +173,10 @@ border: 0 none;
 	color:red;
 }
 
+.divRankingTableRow {
+	height:45px;
+}
+
 .powerRankingTitle {
 	background-color:#0ABEC7;
 	border:2px solid #0ABEC7;

@@ -58,12 +58,12 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
     }
 
     factory.getNFLTeamstats = function (data) {
-        var dataSeason = "season="+data;
+        
 
         return $http({ 
             method: 'POST', 
             url: "app/ajax/getnflteamstats.php",
-            data: dataSeason,
+            data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

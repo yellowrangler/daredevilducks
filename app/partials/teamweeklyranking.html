@@ -41,7 +41,7 @@
 				<table id="TeamWeeklyRankings" class="table teamWeeklyRankings" >
 					<tr class="tableTitleNoBorder">
 						<th class="tableTitle">Week</th>
-						<th class="tableTitle">Team's</th>
+						<th class="tableTitle" colspan=2>Team's</th>
 						<th class="tableTitle">Score</th>
 						<th class="tableTitle" colspan=3>&nbsp;</th>						
 						<th class="powerRankingTitle">&nbsp;</th>			
@@ -54,7 +54,7 @@
 							  <span class="glyphicon" id="teamRankSort"></span>
 							</button>
 						</th>			
-						<th class="tableTitle" >
+						<th class="tableTitle" colspan=2>
 							<div>Top - Home</div> 
 							<div>Bottom - Away</div>
 						</th>
@@ -73,146 +73,160 @@
 						<th class="defenceTitle">DR</th>						
 					</tr>
 					<tr ng-repeat="teamweekrank in teamweekranks">
-						<td style="font-size:25px;font-weight: bold;"class="center-column-text">
+						<td style="font-size:25px;font-weight: bold;padding-top:55px;"class="center-column-text">
 							{{teamweekrank.week}}
 						</td>
 
 						<td class="left-column-text" >
-						<div id="hometeamlocationnamediv" name="hometeamlocationnamediv" ng-class="{{teamweekrank.hometeamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+						<div style="padding:5px;height:60px;width:76px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv">
+							<a ng-href="{{teamweekrank.hometeamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{teamweekrank.hometeamiconname}}'>
+							</a>
+						</div>
+
+						<div style="padding:5px;height:60px;width:76px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-if="teamweekrank.awayteamiconname != 'B' ">
+							<a ng-href="{{teamweekrank.awayteamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{teamweekrank.awayteamiconname}}'>
+							</a>
+						</div>
+						</td>
+
+						<td class="left-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv" ng-class="{{teamweekrank.hometeamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
 							{{teamweekrank.hometeamlocation}} &nbsp; {{teamweekrank.hometeamname}}
 						</div>
 
-						<div id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-class="{{teamweekrank.awayteamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+						<div style="padding:5px;height:60px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-class="{{teamweekrank.awayteamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
 							{{teamweekrank.awayteamlocation}} &nbsp; {{teamweekrank.awayteamname}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamscorediv" name="hometeamscorediv" ng-class="compareScores( 'home', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+						<div style="padding:5px;height:60px;" id="hometeamscorediv" name="hometeamscorediv" ng-class="compareScores( 'home', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
 							{{teamweekrank.hometeamscore}}
 						</div>
 
-						<div id="awayteamscorediv" name="awayteamscorediv" ng-class="compareScores( 'away', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+						<div style="padding:5px;height:60px;" id="awayteamscorediv" name="awayteamscorediv" ng-class="compareScores( 'away', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
 							{{teamweekrank.awayteamscore}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamwinsdiv" name="hometeamwinsdiv" >
+						<div style="padding:5px;height:60px;" id="hometeamwinsdiv" name="hometeamwinsdiv" >
 							{{teamweekrank.hometeamwins}}
 						</div>
 
-						<div id="awayteamwinsdiv" name="awayteamwinsdiv">
+						<div style="padding:5px;height:60px;" id="awayteamwinsdiv" name="awayteamwinsdiv">
 							{{teamweekrank.awayteamwins}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamlossesdiv" name="hometeamlossesdiv" >
+						<div style="padding:5px;height:60px;" id="hometeamlossesdiv" name="hometeamlossesdiv" >
 							{{teamweekrank.hometeamlosses}}
 						</div>
 
-						<div id="awayteamlossesdiv" name="awayteamlossesdiv">
+						<div style="padding:5px;height:60px;" id="awayteamlossesdiv" name="awayteamlossesdiv">
 							{{teamweekrank.awayteamlosses}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div id="hometeamtiesdiv" name="hometeamtiesdiv" >
+						<div style="padding:5px;height:60px;" id="hometeamtiesdiv" name="hometeamtiesdiv" >
 							{{teamweekrank.hometeamties}}
 						</div>
 
-						<div id="awayteamtiesdiv" name="awayteamtiesdiv">
+						<div style="padding:5px;height:60px;" id="awayteamtiesdiv" name="awayteamtiesdiv">
 							{{teamweekrank.awayteamties}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="powerRankingText" id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
+						<div style="padding:5px;height:60px;" class="powerRankingText" id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
 							{{teamweekrank.hometeampowerranking}}
 						</div>
 
-						<div class="powerRankingText" id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
+						<div style="padding:5px;height:60px;" class="powerRankingText" id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
 							{{teamweekrank.awayteampowerranking}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="offenceText" id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
 							{{teamweekrank.hometeamoffencetotal}}
 						</div>
 
-						<div class="offenceText" id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
 							{{teamweekrank.awayteamoffencetotal}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="offenceText" id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
 							{{teamweekrank.hometeamoffencescoring}}
 						</div>
 
-						<div class="offenceText" id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
 							{{teamweekrank.awayteamoffencescoring}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="offenceText" id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
 							{{teamweekrank.hometeamoffencepassing}}
 						</div>
 
-						<div class="offenceText" id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
 							{{teamweekrank.awayteamoffencepassing}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="offenceText" id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
 							{{teamweekrank.hometeamoffencerushing}}
 						</div>
 
-						<div class="offenceText" id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
 							{{teamweekrank.awayteamoffencerushing}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="defenceText" id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
 							{{teamweekrank.hometeamdefencetotal}}
 						</div>
 
-						<div class="defenceText" id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
 							{{teamweekrank.awayteamdefencetotal}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="defenceText" id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
 							{{teamweekrank.hometeamdefencescoring}}
 						</div>
 
-						<div class="defenceText" id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
 							{{teamweekrank.awayteamdefencescoring}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="defenceText" id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
 							{{teamweekrank.hometeamdefencepassing}}
 						</div>
 
-						<div class="defenceText" id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
 							{{teamweekrank.awayteamdefencepassing}}
 						</div>
 						</td>
 
 						<td class="center-column-text" >
-						<div class="defenceText" id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
 							{{teamweekrank.hometeamdefencerushing}}
 						</div>
 
-						<div class="defenceText" id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
 							{{teamweekrank.awayteamdefencerushing}}
 						</div>
 						</td>

@@ -1557,3 +1557,1483 @@ WHERE MS.season = '2015' AND gametypeid =  ORDER BY MS.wins DESC, M.screenname A
 FROM memberstatstbl MS 
 LEFT JOIN membertbl M ON M.id = MS.memberid
 WHERE MS.season = '2015' AND gametypeid =  ORDER BY MS.playerpickedpercent DESC, M.screenname ASC 
+2015-12-17 22:00:17 : SQL error: The used SELECT statements have a different number of columns - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:00:17 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+
+ORDER BY week ASC
+2015-12-17 22:01:47 : SQL error: The used SELECT statements have a different number of columns - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:01:47 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+
+ORDER BY week ASC
+2015-12-17 22:03:32 : SQL error: The used SELECT statements have a different number of columns - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:03:32 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+
+ORDER BY week ASC
+2015-12-17 22:29:37 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:29:37 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON G.teamid = TH.id
+LEFT JOIN teamstbl TA ON G.teamid = TA.id
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+
+ORDER BY week ASC
+2015-12-17 22:30:27 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:30:27 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = TH.id
+LEFT JOIN teamstbl TA ON GB.teamid = TA.id
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:31:05 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:31:05 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = TH.id
+LEFT JOIN teamstbl TA ON GB.teamid = TA.id
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:34:32 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:34:32 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+T.teamurl as awayteamurl, 
+T.teamiconname as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:34:45 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:34:45 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+T.teamurl as awayteamurl, 
+T.teamiconname as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:35:14 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:35:14 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:35:19 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:35:19 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:35:44 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:35:44 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:35:55 : SQL error: Unknown column 'T.location' in 'field list' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:35:55 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl TH ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:37:43 : SQL error: Unknown column 'T.teamid' in 'on clause' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:37:43 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:39:25 : SQL error: Unknown column 'T.teamid' in 'on clause' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:39:25 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
+2015-12-17 22:39:56 : SQL error: Unknown column 'T.teamid' in 'on clause' - Error doing select to db Unable to get team weekly rankings information.
+2015-12-17 22:39:56 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 4	
+WHERE (G.hometeamid = 4 OR G.awayteamid = 4)
+AND G.season = 2015 
+AND G.week <= 15
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteamurl, 
+' ' as awayteamiconname, 
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.teamid
+WHERE GB.season = 2015  AND GB.week <= 15 AND GB.teamid = 4
+ORDER BY week ASC
