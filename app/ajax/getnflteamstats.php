@@ -98,6 +98,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 $sql = "SELECT tt.id as teamid, 
 location as teamlocation, 
 name as teamname, 
+postseasonstatus,
 league, 
 conference, 
 division,

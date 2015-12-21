@@ -90,7 +90,8 @@ dddApp.service('nflTeamsService', function () {
     var dataKeySeasons = "nflseasons";
     var dataKeyWeeks = "nflweeks";  
     var dataKeyGameTypes = "gametypes";  
-    var dataKeyNetworks = "nflnetworks";         
+    var dataKeyNetworks = "nflnetworks";    
+    var dataKeypostseasonstatus = "nflpostseasonstatus";       
 
     // 
     // set teams
@@ -206,6 +207,35 @@ dddApp.service('nflTeamsService', function () {
     //
     this.removeNFLnetworks = function() {
         var nflnetworks = this.removeLocalNFLdata(dataKeyNetworks);
+    }
+
+    //-------------------------------------- 
+    // nfl postseasonstatus services
+    //-------------------------------------- 
+
+    // 
+    // set nfl postseasonstatus
+    //
+    this.setNFLpostseasonstatus = function(json) {
+        this.addLocalNFLdata(json, dataKeypostseasonstatus, "json");
+
+        return;
+    }
+
+    // 
+    // get nfl postseasonstatus
+    //
+    this.getNFLpostseasonstatus = function() {
+        var nflpostseasonstatus = this.getLocalNFLdata(dataKeypostseasonstatus, "json");
+
+        return nflpostseasonstatus;
+    }
+
+    // 
+    // remove nfl postseasonstatus
+    //
+    this.removeNFLpostseasonstatus = function() {
+        var nflpostseasonstatus = this.removeLocalNFLdata(dataKeypostseasonstatus);
     }
 
     //---------------------------------------------------

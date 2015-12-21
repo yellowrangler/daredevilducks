@@ -86,7 +86,17 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             })
             .error( function(edata) {
                 alert(edata);
-            });                        
+            });
+
+        nflteamsFactory.getNFLpostseasonstatus()
+            .success( function(data) {
+                nflTeamsService.setNFLpostseasonstatus(data);
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
+
+                                    
 
         checkRole();  
     };         
@@ -1553,6 +1563,9 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
+        $scope.postseasonstatuses = postseasonstatuses; 
         
        $scope.gridOptionsTeams = {
             showGridFooter: true,
@@ -1588,7 +1601,8 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.teamiconname = row.entity["teamiconname"];
                         $scope.current.teamorder = row.entity["teamorder"];  
                         $scope.current.teamurl = row.entity["teamurl"];   
-                        $scope.current.status = row.entity["status"];  
+                        $scope.current.status = row.entity["status"]; 
+                        $scope.current.postseasonstatus = row.entity["postseasonstatus"];                         
                     }
                     else
                     {
@@ -1607,6 +1621,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.teamorder = "";  
                         $scope.current.teamurl = "";    
                         $scope.current.status = "";  
+                        $scope.current.postseasonstatus = "";  
                     }        
                 })
             },
@@ -1646,6 +1661,14 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
             {
                 alert("Team updated succesfully!");
                 $("#teamForm")[0].reset();
+
+                nflteamsFactory.getNFLpostseasonstatus()
+                .success( function(data) {
+                    nflTeamsService.setNFLpostseasonstatus(data);
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });  
             }
         })
         .error( function(edata) {

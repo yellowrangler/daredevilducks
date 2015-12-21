@@ -18,8 +18,9 @@ $state = $_POST['state'];
 $teamiconname = $_POST['teamiconname'];
 $teamorder = $_POST['teamorder'];
 $teamurl = $_POST['teamurl'];
-$status = $_POST['status'];     
-
+$status = $_POST['status'];  
+$postseasonstatus = $_POST['postseasonstatus'];  
+   
 //
 //  set global values
 //
@@ -94,6 +95,7 @@ $sql = "UPDATE teamstbl
 		teamorder = '$teamorder', 
 		teamurl = '$teamurl', 
 		status = '$status', 
+		postseasonstatus = '$postseasonstatus', 		
 		enterdate = '$enterdateTS'
 	WHERE id = '$teamid'"; 
 

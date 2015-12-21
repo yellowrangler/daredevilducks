@@ -207,6 +207,15 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNFLpostseasonstatus = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getNFLpostseasonstatus.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
 
