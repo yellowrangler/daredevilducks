@@ -10,12 +10,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if (role == "admin")
         {
             $("#adminselect").show();
-            $("#adminplayoffstandings").show();
+            // $("#adminplayoffstandings").show();
         }
         else
         {
             $("#adminselect").hide();
-            $("#adminplayoffstandings").hide();
+            // $("#adminplayoffstandings").hide();
         }  
     }
 
@@ -830,15 +830,26 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
     function selectChange()
     {
-        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
-        nflteamsFactory.getNFLTeamstats(data)
-            .success( function(data) {
-                $scope.teamstats = data; 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });  
+        
+        setBracketImage();
+    }
 
+    function setBracketImage ()
+    {
+        switch ($scope.current.season)
+        {
+            case "2014":
+                $scope.bracketimg = "NFPlayOffBracket2014B.png";
+                break;
+
+            case "2015":
+                $scope.bracketimg = "";
+                break;  
+                
+
+            default:
+                $scope.bracketimg = ""; 
+        }
     }
 
     init();
@@ -848,6 +859,8 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        setBracketImage();
         
         var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
         nflteamsFactory.getNFLTeamstats(data)
