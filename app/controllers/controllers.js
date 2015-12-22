@@ -801,6 +801,9 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
         //
         setviewpadding();
 
+        var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
+        $scope.postseasonstatuses = postseasonstatuses;
+
         $scope.current.gametypeid = 1;
         $scope.gametypes = nflTeamsService.getNFLGametypes();
         
@@ -2258,8 +2261,8 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         
         membersFactory.sendeMail2Members(data)
             .success( function(rv) {
-                var textStr = "<center>eMail sent</center></br></br>"+rv;
-                $('#eMailDialogModalTitle').text("eMail Sent");
+                var textStr = rv;
+                $('#eMailDialogModalTitle').text("eMail Status");
                 $('#eMailDialogModalLabelBody').html(textStr);
                 $('#eMailDialogModal').modal();
             })

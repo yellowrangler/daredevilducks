@@ -85,7 +85,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -155,7 +155,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -295,7 +295,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -376,7 +376,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -446,7 +446,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -516,7 +516,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -586,7 +586,7 @@
 					<img height="50" ng-src="img/nflicons/{{teamstat.teamiconname}}">
 					</a>
 				</td>
-				<td style="width:15px;font-weight:bold;text-align:right;">{{teamstat.postseasonstatus}}</td>
+				<td style="width:15px;font-weight:bold;text-align:right;color:#8A0022;">{{teamstat.postseasonstatus}}</td>
 				<td>{{teamstat.teamlocation}} {{teamstat.teamname}}</td>
 				<td class="center-column-text">{{teamstat.teamwins}}</td>
 				<td class="center-column-text">{{teamstat.teamlosses}}</td>
@@ -610,6 +610,22 @@
 			</tr>
 		</table>
   	</div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<div style="padding-top:25px;" ng-if="postseasonstatuses.length" class="pageStandardOffset row">
+	<!-- <div class="col-md-5">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body">
+				<div style="padding:15px; font-weight:bold; color:#8A0022;" ng-repeat="postseasonstatus in postseasonstatuses">
+				{{postseasonstatus.title}}
+				</div>
+			</div> 
+		</div> 	
+	</div>  -->
+
+	<div class="col-md-12">
+		<img style="width:50%;padding:5px;" class="center-block img-rounded" ng-src="img/teamstandingspostseasonkey.png">
+	</div> <!-- end of col 5 -->
 </div> <!-- end of row -->
 
 <div style="padding-bottom:50px;">&nbsp;</div>
