@@ -10,12 +10,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if (role == "admin")
         {
             $("#adminselect").show();
-            $("#adminnflnews").show();
+            // $("#adminnflnews").show();
         }
         else
         {
             $("#adminselect").hide();
-            $("#adminnflnews").hide();
+            // $("#adminnflnews").hide();
         }  
     }
 
@@ -824,20 +824,10 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
     }
 }
 
-controllers.nflnewsController = function ($scope, $http, $location, nflteamsFactory) {
+controllers.nflnewsController = function ($scope, $sce, $http, $location, nflteamsFactory) {
     
     function refreshNflNews()
     {
-        // data = $scope.newsurl;
-
-        // nflteamsFactory.getNflNews(data)
-        //     .success( function(data) {
-        //         $scope.nflnews = data; 
-        //     })
-        //     .error( function(edata) {
-        //         alert('Unable to load feed, Incorrect path or invalid feed. '+edata);
-        //     });
-
         url = $scope.newsurl;
         $.ajax({
             type: "GET",
@@ -848,13 +838,17 @@ controllers.nflnewsController = function ($scope, $http, $location, nflteamsFact
             },
             success: function(xml){
                 $scope.nflnews = xml.responseData.feed.entries; 
+
+                $scope.$digest();
             }
         });
     }
 
     function loadNewsDetail(url)
     {
-        $("#nflnewsdetail").load(url); 
+        $scope.newsdetail = url;
+
+        // $scope.newsdetail = "http://www.boston.com";
     }
 
     init();
@@ -863,12 +857,14 @@ controllers.nflnewsController = function ($scope, $http, $location, nflteamsFact
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+        $scope.newsdetail = "";
+        $scope.newsurl = "";
 
-        $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
+        // $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
+        $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
+        refreshNflNews();
 
         setviewpadding();
-
-        refreshNflNews();
     };
 
     $scope.refreshNflNews = function (){
@@ -878,6 +874,12 @@ controllers.nflnewsController = function ($scope, $http, $location, nflteamsFact
     $scope.loadNewsDetail = function (url) {
         loadNewsDetail(url); 
     }
+
+    $scope.trustSrc = function(src) {
+        var x = $sce.trustAsResourceUrl(src);
+
+        return x;
+  }
 }
 
 controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
