@@ -98,7 +98,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 $sql = "SELECT tt.id as teamid, 
 location as teamlocation, 
 name as teamname, 
-postseasonstatus,
+tss.postseasonstatus as postseasonstatus,
 league, 
 conference, 
 division,
@@ -131,6 +131,7 @@ ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
 ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
 FROM teamstbl tt
 LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = $season
 WHERE ts.season = '$season' and ts.gametypeid = $gametypeid
 ORDER BY conference ASC, division ASC, percent DESC";
 // print $sql;

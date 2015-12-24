@@ -7,23 +7,46 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$teamid = $_POST['teamid'];
-$name = $_POST['name'];
-$location = $_POST['location'];
-$league = $_POST['league'];
-$conference = $_POST['conference'];
-$division =  $_POST['division'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$teamiconname = $_POST['teamiconname'];
-$teamorder = $_POST['teamorder'];
-$teamurl = $_POST['teamurl'];
-$status = $_POST['status'];  
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	if (isset($_GET["season"]))
+	{
+		$season = $_GET["season"];
+	}
+	else
+	{
+		$msg = $msg . "No season passed";
+		exit($msg);
+
+	}
+}
+
+if (isset($_POST["teamid"]))
+{
+	$teamid = $_POST["teamid"];
+}
+else
+{
+	if (isset($_GET["teamid"]))
+	{
+		$teamid = $_GET["teamid"];
+	}
+	else
+	{
+		$msg = $msg . "No teamid passed";
+		exit($msg);
+
+	}
+}
    
 //
 //  set global values
 //
-$msgtext = "ok";
+$msgtext = "";
 
 // print_r($_POST);
 // die()
@@ -62,7 +85,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update team for ddd team $name.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to select team for ddd team $name.");
 
 	$rv = "";
 	exit($rv);
@@ -72,37 +95,26 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update team for ddd team $name.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to select team for ddd team $name.");
 
 	$rv = "";
 	exit($rv);
 }
 
 //---------------------------------------------------------------
-// update team info 
+// update team season info 
 //---------------------------------------------------------------
 
-$sql = "UPDATE teamstbl
-	SET name = '$name', 
-		location = '$location', 
-		league = '$league', 
-		conference = '$conference', 
-		division = '$division', 
-		teamiconname = '$teamiconname',
-		city = '$city', 
-		state = '$state', 
-		teamorder = '$teamorder', 
-		teamurl = '$teamurl', 
-		status = '$status', 		
-		enterdate = '$enterdateTS'
-	WHERE id = '$teamid'"; 
+$sql = "SELECT postseasonstatus	
+FROM teamseasontbl 
+WHERE season = $season AND teamid = $teamid";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {
 	$log = new ErrorLog("logs/");
 	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update team for ddd team $name.");
+	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to select team for ddd teamseasontbl $teamid.");
 	$log->writeLog("SQL: $sql");
 
 	$rc = -100;
@@ -110,6 +122,23 @@ if (!$sql_result)
 
 	exit($msgtext);
 }
+
+//
+// get season week
+// 
+$count = mysql_num_rows($sql_result);
+if ($count > 0)
+{
+	$r = mysql_fetch_assoc($sql_result);
+
+	$postseasonstatus = $r['postseasonstatus'];	
+}
+else
+{
+	$postseasonstatus = "";
+}
+
+$data = array('postseasonstatus' => $postseasonstatus);
 
 // 
 // close db connection
@@ -119,6 +148,5 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-
-exit($msgtext);
+exit(json_encode($data));
 ?>

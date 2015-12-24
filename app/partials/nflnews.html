@@ -1,0 +1,48 @@
+<div class="pageCaption row">
+  <div class="col-md-12">
+    <h2 class="headerTitle">NFL Headlines</h2>
+  </div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+
+  <div style="padding-left:15px;" class="form-group horizontalFieldOffset">
+    <button  style="font-weight:bold;" class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Get / Refresh</button>
+  </div> <!-- end of form-group --> 
+</div> <!-- end of row -->     
+
+ <div style="padding-top:35px;" class="pageStandardOffset row">
+  <div class="col-md-5">
+    <div class="pageStandardOffset row">
+      <div ng-repeat="nflnew in nflnews" class="panel panel-default">
+        <div class="panel-body">
+          <div >
+            <span style="padding:15px;font-weight:bold; color:maroon;" >Headline:</span>
+            <span style="padding:15px;color:teal;" >{{nflnew.title}}</span>
+          </div>
+          <div >
+            <span style="padding:15px;font-weight:bold; color:maroon;" >Published:</span>
+            <span style="padding:15px; color:teal;" >{{nflnew.publishedDate}}</span>
+          </div>
+          <div style="padding-top:20px;">
+             <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="newsdetail=nflnew.link"  >Read More</a>
+           <!--  <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="{{nflnew.link}}" onclick="window.open(this.href, 'mywin',
+'left=50,top=40,width=680,height=600,toolbar=1,resizable=0'); return false;"  >Read More</a> -->
+          </div>
+        </div> <!-- end of body -->
+      </div> <!-- end of panel -->
+    </div> <!-- end of row -->
+  </div> <!-- end of col 5 -->
+
+  <div class="col-md-6">
+    <div class="pageStandardOffset row">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div >
+            <iframe ng-if="newsdetail" src="{{newsdetail}}"></iframe>
+        </div> <!-- end of body -->
+      </div> <!-- end of panel -->
+    </div> <!-- end of row -->
+  </div> <!-- end of col 6 -->          
+
+<div style="padding-bottom:70px;">&nbsp;</div>

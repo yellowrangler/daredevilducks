@@ -48,6 +48,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'playoffstandingsController',
                 templateUrl: 'app/partials/playoffstandings.html'
             })
+        .when('/nflnews',
+            {
+                controller: 'nflnewsController',
+                templateUrl: 'app/partials/nflnews.html'
+            })
         .when('/teamweeklyranking',
             {
                 controller: 'teamweeklyrankingController',
@@ -63,6 +68,12 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'teaminfoController',
                 templateUrl: 'app/partials/teaminfo.html'
+            })
+
+        .when('/teamseasoninfo',
+            {
+                controller: 'teamseasoninfoController',
+                templateUrl: 'app/partials/teamseasoninfo.html'
             })
 
         .when('/teamdiscovery',

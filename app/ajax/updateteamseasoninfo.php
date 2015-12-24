@@ -7,18 +7,59 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$teamid = $_POST['teamid'];
-$name = $_POST['name'];
-$location = $_POST['location'];
-$league = $_POST['league'];
-$conference = $_POST['conference'];
-$division =  $_POST['division'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$teamiconname = $_POST['teamiconname'];
-$teamorder = $_POST['teamorder'];
-$teamurl = $_POST['teamurl'];
-$status = $_POST['status'];  
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	if (isset($_GET["season"]))
+	{
+		$season = $_GET["season"];
+	}
+	else
+	{
+		$msg = $msg . "No season passed - Buildmemberweekstats terminated";
+		exit($msg);
+
+	}
+}
+
+if (isset($_POST["teamid"]))
+{
+	$teamid = $_POST["teamid"];
+}
+else
+{
+	if (isset($_GET["teamid"]))
+	{
+		$teamid = $_GET["teamid"];
+	}
+	else
+	{
+		$msg = $msg . "No teamid passed";
+		exit($msg);
+
+	}
+}
+
+if (isset($_POST["postseasonstatus"]))
+{
+	$postseasonstatus = $_POST["postseasonstatus"];
+}
+else
+{
+	if (isset($_GET["postseasonstatus"]))
+	{
+		$postseasonstatus = $_GET["postseasonstatus"];
+	}
+	else
+	{
+		$msg = $msg . "No postseasonstatus passed";
+		exit($msg);
+
+	}
+} 
    
 //
 //  set global values
@@ -79,30 +120,19 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 //---------------------------------------------------------------
-// update team info 
+// update team season info 
 //---------------------------------------------------------------
 
-$sql = "UPDATE teamstbl
-	SET name = '$name', 
-		location = '$location', 
-		league = '$league', 
-		conference = '$conference', 
-		division = '$division', 
-		teamiconname = '$teamiconname',
-		city = '$city', 
-		state = '$state', 
-		teamorder = '$teamorder', 
-		teamurl = '$teamurl', 
-		status = '$status', 		
-		enterdate = '$enterdateTS'
-	WHERE id = '$teamid'"; 
+$sql = "SELECT teamid
+	FROM teamseasontbl 
+	WHERE season = $season AND teamid = $teamid";
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
+$sql_check_result = @mysql_query($sql, $dbConn);
+if (!$sql_check_result)
 {
 	$log = new ErrorLog("logs/");
 	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update team for ddd team $name.");
+	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to select team for ddd teamseasontbl $teamid.");
 	$log->writeLog("SQL: $sql");
 
 	$rc = -100;
@@ -111,6 +141,45 @@ if (!$sql_result)
 	exit($msgtext);
 }
 
+$count = mysql_num_rows($sql_check_result);
+if ($count > 0)
+{
+	// 
+	// do update
+	// 
+	$sql = "UPDATE teamseasontbl 
+		SET season = $season, 
+		teamid = $teamid, 
+		postseasonstatus = '$postseasonstatus', 
+		enterdate = '$enterdateTS' 
+		WHERE season = $season AND teamid = $teamid";
+}
+else
+{
+	// 
+	// do insert
+	// 
+	$sql = "INSERT INTO teamseasontbl 
+	(season, teamid, postseasonstatus, enterdate)  
+	VALUES ( $season, 
+	$teamid, 
+	'$postseasonstatus', 
+	'$enterdateTS' )";
+}
+
+$sql_result = @mysql_query($sql, $dbConn);
+if (!$sql_result)
+{
+	$log = new ErrorLog("logs/");
+	$sqlerr = mysql_error();
+	$log->writeLog("SQL error: $sqlerr - Error doing update or insert to db Unable to update teamseasontbl for ddd team $teamid.");
+	$log->writeLog("SQL: $sql");
+
+	$rc = -100;
+	$msgtext = "System Error: $sqlerr. sql = $sql";
+
+	exit($msgtext);
+}
 // 
 // close db connection
 // 

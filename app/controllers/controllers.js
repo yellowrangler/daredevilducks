@@ -10,12 +10,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if (role == "admin")
         {
             $("#adminselect").show();
-            // $("#adminplayoffstandings").show();
+            $("#adminnflnews").show();
         }
         else
         {
             $("#adminselect").hide();
-            // $("#adminplayoffstandings").hide();
+            $("#adminnflnews").hide();
         }  
     }
 
@@ -824,6 +824,62 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
     }
 }
 
+controllers.nflnewsController = function ($scope, $http, $location, nflteamsFactory) {
+    
+    function refreshNflNews()
+    {
+        // data = $scope.newsurl;
+
+        // nflteamsFactory.getNflNews(data)
+        //     .success( function(data) {
+        //         $scope.nflnews = data; 
+        //     })
+        //     .error( function(edata) {
+        //         alert('Unable to load feed, Incorrect path or invalid feed. '+edata);
+        //     });
+
+        url = $scope.newsurl;
+        $.ajax({
+            type: "GET",
+            url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' + encodeURIComponent(url),
+            dataType: 'json',
+            error: function(){
+                alert('Unable to load feed, Incorrect path or invalid feed');
+            },
+            success: function(xml){
+                $scope.nflnews = xml.responseData.feed.entries; 
+            }
+        });
+    }
+
+    function loadNewsDetail(url)
+    {
+        $("#nflnewsdetail").load(url); 
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+
+        $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
+
+        setviewpadding();
+
+        refreshNflNews();
+    };
+
+    $scope.refreshNflNews = function (){
+        refreshNflNews();
+    }
+
+    $scope.loadNewsDetail = function (url) {
+        loadNewsDetail(url); 
+    }
+}
+
 controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
@@ -1617,8 +1673,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.teamiconname = row.entity["teamiconname"];
                         $scope.current.teamorder = row.entity["teamorder"];  
                         $scope.current.teamurl = row.entity["teamurl"];   
-                        $scope.current.status = row.entity["status"]; 
-                        $scope.current.postseasonstatus = row.entity["postseasonstatus"];                         
+                        $scope.current.status = row.entity["status"];                         
                     }
                     else
                     {
@@ -1637,7 +1692,6 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.teamorder = "";  
                         $scope.current.teamurl = "";    
                         $scope.current.status = "";  
-                        $scope.current.postseasonstatus = "";  
                     }        
                 })
             },
@@ -1692,6 +1746,71 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
         });
     }
 
+}
+
+controllers.teamseasoninfoController  = function ($scope, $http, $log, $location, uiGridConstants, nflTeamsService, nflteamsFactory) {
+     $scope.current = {};
+
+     function updateTeamSeasonInfoRequest() {
+        var formstring = $("#teamSeasonForm").serialize();
+
+        nflteamsFactory.updateTeamSeasonInfo(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error updating team - "+data);
+            }
+            else
+            {
+                alert("Team updated succesfully!");
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+     }
+
+     function showTeamSeasonInfoRequest() {
+        var data = "season="+$scope.current.season+"&teamid="+$scope.current.teamid+"&postseasonstatus="+$scope.current.postseasonstatus;
+        nflteamsFactory.getTeamSeasonInfo(data)
+        .success( function(data) {
+            $scope.current.postseasonstatus = data.postseasonstatus;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
+        $scope.postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
+        $scope.teams = nflTeamsService.getNFLTeams(); 
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+        nflteamsFactory.getCurrentSeasonWeek()
+        .success( function(data) {
+            $scope.current.season = data.season; 
+        })
+
+        .error( function(edata) {
+            alert(edata);
+        });   
+
+    }
+
+    $scope.updateTeamSeasonInfoRequest = function () {
+        updateTeamSeasonInfoRequest(); 
+    }
+
+    $scope.showTeamSeasonInfoRequest = function () {
+        showTeamSeasonInfoRequest(); 
+    }
 }
 
 controllers.teamdiscoveryController = function ($scope, $http, $log, $location, nflTeamsService) {

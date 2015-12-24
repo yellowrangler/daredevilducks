@@ -216,6 +216,32 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
+    factory.getTeamSeasonInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getteamseasoninfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.updateTeamSeasonInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/updateteamseasoninfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getNflNews = function (data) {
+        return $http({ 
+            type: 'GET', 
+            url: '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&q=' + encodeURIComponent(data),
+            dataType: 'json'
+        })
+    }
+
     return factory;
 });
 
