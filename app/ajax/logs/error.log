@@ -4683,3 +4683,10 @@ LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
 WHERE ts.season = '2015' and ts.gametypeid = undefined
 ORDER BY conference ASC, division ASC, percent DESC
+2015-12-24 22:06:21 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-12-24 22:06:21 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC

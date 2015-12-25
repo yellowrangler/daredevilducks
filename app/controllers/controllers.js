@@ -848,6 +848,10 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nfltea
     {
         $scope.newsdetail = url;
 
+        x = windowDimentions();
+        $scope.divheight = x.height / 1.80;
+        $scope.divwidth = x.width / 1.9;
+
         // $scope.newsdetail = "http://www.boston.com";
     }
 

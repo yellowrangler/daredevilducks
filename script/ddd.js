@@ -22,6 +22,13 @@ function setviewpadding()
 	}, 1000);
 }
 
+function windowDimentions() {
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+
+	return { width: w, height: h };
+}
+
 function adjustNavbarImages() 
 {
  	var w = window.innerWidth;
