@@ -9,7 +9,7 @@
 </div> <!-- end of row -->   
 
  <div style="padding-top:25px;" class="row">
-  <div class="col-md-5">
+  <div class="col-md-11">
     <div class="pageStandardOffset row">
       <div ng-repeat="nflnew in nflnews" class="panel panel-default">
         <div class="panel-body table-responsive">
@@ -43,22 +43,19 @@
             <tr >  
               <td >  
                 <div style="padding-top:25px;">
-                   <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link)"  >Read More</a>
+                   <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link,$index)"  >Read More</a>
                 </div>
               </td>
             </tr>
           </table>
+
+          <div id="newsdetailDiv-{{$index}}" class="hideme" style="padding-top:30px;height:{{divheight}}px;width:{{divwidth}}px;">
+              <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>
+          </div> <!-- end of div frame -->
         </div> <!-- end of body -->
       </div> <!-- end of panel -->
     </div> <!-- end of row -->
-  </div> <!-- end of col 5 -->
-
-  <div class="col-md-6">
-    <div class="pageStandardOffset row">
-        <div id="newsdetailDiv" ng-if="newsdetail" style="position: fixed; height:{{divheight}}px;width:{{divwidth}}px;">
-          <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>
-    </div> <!-- end of row -->
-  </div> <!-- end of col 6 -->  
+  </div> <!-- end of col 10 -->
 </div> <!-- end of row -->   
 
 <div class="row" style="padding-bottom:300px;">&nbsp;</div><!-- end of row -->  

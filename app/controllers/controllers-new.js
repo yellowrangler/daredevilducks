@@ -845,15 +845,34 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nfltea
         });
     }
 
-    function loadNewsDetail(url)
+    function loadNewsDetail(url, idx)
     {
         x = windowDimentions();
         $scope.divheight = x.height / 1.80;
         $scope.divwidth = x.width / 1.9;
 
+        $scope.current.newsidx = idx;
+
+        $(".hideme").hide();
+
+        $("#newsdetailDiv-"+idx).show();
+
         $scope.newsdetail = url;
+
+        // $scope.newsdetail = "http://www.boston.com";
     }
 
+    // function showiFrameYes(idx)
+    // {
+    //     if ($scope.current.newsidx == idx)
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
 
     init();
     function init() {
@@ -863,6 +882,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nfltea
         //
         $scope.newsdetail = "";
         $scope.newsurl = "";
+        $scope.current.newsidx = -1;
 
         // $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
         $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
@@ -875,9 +895,13 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nfltea
         refreshNflNews();
     }
 
-    $scope.loadNewsDetail = function (url) {
-        loadNewsDetail(url); 
+    $scope.loadNewsDetail = function (url, idx) {
+        loadNewsDetail(url, idx); 
     }
+
+    // $scope.showiFrameYes = function (idx) {
+    //     showiFrameYes(idx);
+    // }
 
     $scope.trustSrc = function(src) {
         var x = $sce.trustAsResourceUrl(src);
@@ -904,7 +928,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
                 break;
 
             case "2015":
-                $scope.bracketimg = "NFPlayOffBracket2015B.png";
+                $scope.bracketimg = "";
                 break;  
                 
 
