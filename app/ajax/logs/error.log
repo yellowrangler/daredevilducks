@@ -5218,3 +5218,823 @@ LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
 WHERE ts.season = '2015' and ts.gametypeid = undefined
 ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 05:16:39 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 05:16:39 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 05:26:17 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 05:26:17 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 05:28:59 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 05:28:59 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 05:30:46 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 05:30:46 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 07:00:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-12-27 07:00:44 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-12-27 07:02:53 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND week = 
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT ' at line 46 - Error doing select to db Unable to get nfl game team picked information.
+2015-12-27 07:02:53 : SQL: SELECT
+  G.season as season,
+  G.week as week,
+  G.id as gameid,
+  G.gamenbr as gamenbr,
+  G.gamedate as gamedate,
+  G.gametime as gametime,
+  G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
+  G.networkid as networkid,
+  GN.network as network,
+  GN.networkiconname as networkiconname,
+  G.gametypeid as gametypeid,
+  G.hometeamid as hometeamid,
+  TH.name as hometeamname,
+  TH.location as hometeamlocation,  
+  TH.conference as homeconference,
+  TH.division as homedivision,
+  TH.teamiconname as hometeamiconname,
+  TH.teamurl as hometeamurl,  
+  G.hometeamscore as hometeamscore,
+  G.awayteamid as awayteamid,
+  TA.name as awayteamname,
+  TA.location as awayteamlocation,  
+  TA.conference as awayconference,
+  TA.division as awaydivision,
+  TA.teamiconname as awayteamiconname,
+  TA.teamurl as awayteamurl,  
+  G.awayteamscore as awayteamscore,
+  GT.gametype as gametype,
+  GW.weekstart as weekstart,
+  GW.weekend as weekend,
+  CASE 
+    WHEN GTH.teamcount IS NULL THEN 0
+    ELSE GTH.teamcount
+  END AS teamcounthome,
+  CASE 
+    WHEN GTA.teamcount IS NULL THEN 0
+    ELSE GTA.teamcount
+  END AS teamcountaway
+FROM gamestbl G 
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 
+AND week = 
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 
+AND week = 
+GROUP BY teamid) GTH ON G.hometeamid = GTH.teamid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = 
+AND G.week = 
+ORDER BY G.gamedatetime
+2015-12-27 07:07:05 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'argument passed' at line 20 - Error doing select to db Unable to get nfl game team information.
+2015-12-27 07:07:05 : SQL: SELECT
+  MS.season as season,
+  MS.memberid as memberid,
+  MS.id as id,
+  MS.wins as wins,
+  MS.losses as losses,
+  MS.ties as ties,
+  MS.totalgames as totalgames,
+  MS.playerpickedgames as playerpickedgames,
+  MS.totalgamespercent as totalgamespercent,
+  MS.playerpickedpercent as playerpickedpercent,
+  CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
+  MS.gametypeid as gametypeid,
+  M.avatar as memberavatar,
+  M.membername as membername,
+  M.screenname as screenname
+FROM memberstatstbl MS 
+LEFT JOIN membertbl M ON M.id = MS.memberid
+WHERE MS.season = '' AND gametypeid =  wrong argument passed 
+2015-12-27 07:08:03 : System error: No season passed - getnflteamstats terminated
+2015-12-27 07:08:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE (G.hometeamid =  OR G.awayteamid = )
+AND G.season =  
+AND G.week <= 16
+
+UN' at line 51 - Error doing select to db Unable to get team weekly rankings information.
+2015-12-27 07:08:15 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 	
+WHERE (G.hometeamid =  OR G.awayteamid = )
+AND G.season =  
+AND G.week <= 16
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamurl, 
+'B' as awayteamiconname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season =   AND GB.week <= 16 AND GB.teamid = 
+ORDER BY week 
+2015-12-27 07:08:16 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 - Error doing select to db Unable to get nfl single team information.
+2015-12-27 07:08:16 : SQL: SELECT * FROM teamstbl WHERE id = 
+2015-12-27 07:09:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND MS.week = 
+  ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC' at line 15 - Error doing select to db Unable to get member weekly stat information.
+2015-12-27 07:09:41 : SQL: SELECT 
+   M.screenname as screenname,
+   M.id as memberid,
+   M.membername as membername,
+   M.avatar as memberavatar,   
+   MS.losses as losses,
+   MS.wins as wins,
+   MS.ties as ties,
+   MS.week as week,
+   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+   DATE_FORMAT(GW.weekend,'%b %D') as weekend
+  FROM membertbl M
+  LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+  LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+  WHERE MS.season =  AND MS.week = 
+  ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC
+2015-12-27 07:39:37 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 07:39:37 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 07:40:26 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 07:40:26 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 07:40:50 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 07:40:50 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2015-12-27 08:08:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE (G.hometeamid =  OR G.awayteamid = )
+AND G.season =  
+AND G.week <= 16
+
+UN' at line 51 - Error doing select to db Unable to get team weekly rankings information.
+2015-12-27 08:08:51 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 	
+WHERE (G.hometeamid =  OR G.awayteamid = )
+AND G.season =  
+AND G.week <= 16
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamurl, 
+'B' as awayteamiconname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season =   AND GB.week <= 16 AND GB.teamid = 
+ORDER BY week 
+2015-12-27 08:08:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 - Error doing select to db Unable to get nfl single team information.
+2015-12-27 08:08:51 : SQL: SELECT * FROM teamstbl WHERE id = 
+2015-12-27 09:14:22 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE (G.hometeamid =  OR G.awayteamid = )
+AND G.season =  
+AND G.week <= 16
+
+UN' at line 51 - Error doing select to db Unable to get team weekly rankings information.
+2015-12-27 09:14:22 : SQL: SELECT 
+G.week as week,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = 	
+WHERE (G.hometeamid =  OR G.awayteamid = )
+AND G.season =  
+AND G.week <= 16
+
+UNION
+
+SELECT 
+GB.week as week,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamurl, 
+'B' as awayteamiconname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season =   AND GB.week <= 16 AND GB.teamid = 
+ORDER BY week 
+2015-12-27 09:14:22 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 - Error doing select to db Unable to get nfl single team information.
+2015-12-27 09:14:22 : SQL: SELECT * FROM teamstbl WHERE id = 
+2015-12-27 09:15:57 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY week ASC' at line 6 - Error doing select to db Unable to get nfl season week information.
+2015-12-27 09:15:57 : SQL: SELECT week, 
+DATE_FORMAT(weekstart,'%b %D') as weekstart,
+DATE_FORMAT(weekend,'%b %D') as weekend
+FROM gameweekstbl 
+WHERE season =  
+ORDER BY week ASC
+2015-12-27 09:18:10 : System error: No season passed - getnflteamstats terminated
+2015-12-27 09:40:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND week = 
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT ' at line 46 - Error doing select to db Unable to get nfl game team picked information.
+2015-12-27 09:40:47 : SQL: SELECT
+  G.season as season,
+  G.week as week,
+  G.id as gameid,
+  G.gamenbr as gamenbr,
+  G.gamedate as gamedate,
+  G.gametime as gametime,
+  G.gameday as gameday,
+  G.gamedatetime as gamedatetime,  
+  G.networkid as networkid,
+  GN.network as network,
+  GN.networkiconname as networkiconname,
+  G.gametypeid as gametypeid,
+  G.hometeamid as hometeamid,
+  TH.name as hometeamname,
+  TH.location as hometeamlocation,  
+  TH.conference as homeconference,
+  TH.division as homedivision,
+  TH.teamiconname as hometeamiconname,
+  TH.teamurl as hometeamurl,  
+  G.hometeamscore as hometeamscore,
+  G.awayteamid as awayteamid,
+  TA.name as awayteamname,
+  TA.location as awayteamlocation,  
+  TA.conference as awayconference,
+  TA.division as awaydivision,
+  TA.teamiconname as awayteamiconname,
+  TA.teamurl as awayteamurl,  
+  G.awayteamscore as awayteamscore,
+  GT.gametype as gametype,
+  GW.weekstart as weekstart,
+  GW.weekend as weekend,
+  CASE 
+    WHEN GTH.teamcount IS NULL THEN 0
+    ELSE GTH.teamcount
+  END AS teamcounthome,
+  CASE 
+    WHEN GTA.teamcount IS NULL THEN 0
+    ELSE GTA.teamcount
+  END AS teamcountaway
+FROM gamestbl G 
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 
+AND week = 
+GROUP BY teamid) GTA ON G.awayteamid = GTA.teamid
+LEFT JOIN
+(SELECT COUNT(teamid) AS teamcount, season, week, teamid
+FROM memberpickstbl
+WHERE season = 
+AND week = 
+GROUP BY teamid) GTH ON G.hometeamid = GTH.teamid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
+LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
+LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
+WHERE G.season = 
+AND G.week = 
+ORDER BY G.gamedatetime
+2015-12-27 20:06:44 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-27 20:06:44 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC

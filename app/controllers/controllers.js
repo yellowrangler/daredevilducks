@@ -94,9 +94,15 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             })
             .error( function(edata) {
                 alert(edata);
-            });    
+            }); 
 
-                                    
+        nflteamsFactory.getNFLrss()
+            .success( function(data) {
+                nflTeamsService.setNFLrss(data);
+            })
+            .error( function(edata) {
+                alert(edata);
+            });        
 
         checkRole();  
     };         
@@ -824,8 +830,30 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
     }
 }
 
-controllers.nflnewsController = function ($scope, $sce, $http, $location, nflteamsFactory) {
+controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
+
+    function getNFLrssFeed() 
+    {
+        $scope.newsurl = getNFLrssLink($scope.current.rsslinkid);
+
+        refreshNflNews();
+    }
+
+    function getNFLrssLink(id) 
+    { 
+        var newsurl = "";
+        $.each($scope.nflrsss, function(idx, val) {
+           if (val.id == id)
+           {
+                newsurl = val.rsslink;
+
+                // return false;
+           }
+        });
+
+        return newsurl;
+    }
 
     function refreshNflNews()
     {
@@ -848,7 +876,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nfltea
     function loadNewsDetail(url, idx)
     {
         x = windowDimentions();
-        $scope.divheight = x.height / 1.80;
+        $scope.divheight = x.height / 1.40;
         $scope.divwidth = x.width / 1.9;
 
         $scope.current.newsidx = idx;
@@ -871,20 +899,26 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nfltea
 
     init();
     function init() {
-        //
-        // this is not getting called at right time for definig top offset 
-        // in jquery ready. So adding it here
-        //
+        $scope.nflrsss = nflTeamsService.getNFLrss();
+
         $scope.newsdetail = "";
         $scope.newsurl = "";
         $scope.current.newsidx = -1;
+        $scope.current.rsslinkid = 8;
 
         // $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
-        $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
-        refreshNflNews();
+        // $scope.newsurl = 'http://www.nfl.com/rss/rsslanding?searchString=home';
+        // $scope.newsurl = 'http://sports.espn.go.com/espn/rss/nfl/news';
+        // $scope.newsurl = 'http://www.rotowire.com/rss/news.htm?sport=nfl';
+        // $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
+        getNFLrssFeed() 
 
         setviewpadding();
     };
+
+    $scope.getNFLrssFeed = function () {
+        getNFLrssFeed();
+    }
 
     $scope.refreshNflNews = function (){
         refreshNflNews();
@@ -919,7 +953,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         switch ($scope.current.season)
         {
             case "2014":
-                $scope.bracketimg = "NFPlayOffBracket2014B.png";
+                $scope.bracketimg = "NFLPlayOffBracket2014C.png";
                 break;
 
             case "2015":

@@ -91,7 +91,8 @@ dddApp.service('nflTeamsService', function () {
     var dataKeyWeeks = "nflweeks";  
     var dataKeyGameTypes = "gametypes";  
     var dataKeyNetworks = "nflnetworks";    
-    var dataKeypostseasonstatus = "nflpostseasonstatus";       
+    var dataKeypostseasonstatus = "nflpostseasonstatus";  
+    var dataKeynflrss = "nflrss";       
 
     // 
     // set teams
@@ -236,6 +237,35 @@ dddApp.service('nflTeamsService', function () {
     //
     this.removeNFLpostseasonstatus = function() {
         var nflpostseasonstatus = this.removeLocalNFLdata(dataKeypostseasonstatus);
+    }
+
+    //-------------------------------------- 
+    // nfl rss services
+    //-------------------------------------- 
+
+    // 
+    // set nfl rss
+    //
+    this.setNFLrss = function(json) {
+        this.addLocalNFLdata(json, dataKeynflrss, "json");
+
+        return;
+    }
+
+    // 
+    // get nfl rss
+    //
+    this.getNFLrss = function() {
+        var nflrss = this.getLocalNFLdata(dataKeynflrss, "json");
+
+        return nflrss;
+    }
+
+    // 
+    // remove nfl rss
+    //
+    this.removeNFLrss = function() {
+        var nflrss = this.removeLocalNFLdata(dataKeynflrss);
     }
 
     //---------------------------------------------------

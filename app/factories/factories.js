@@ -234,11 +234,12 @@ dddApp.factory('nflteamsFactory', function($q, $http) {
         })
     }
 
-    factory.getNflNews = function (data) {
+    factory.getNFLrss = function () {
         return $http({ 
-            type: 'GET', 
-            url: '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&q=' + encodeURIComponent(data),
-            dataType: 'json'
+            type: 'POST', 
+            url: "app/ajax/getnflrss.php",
+            // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
 
