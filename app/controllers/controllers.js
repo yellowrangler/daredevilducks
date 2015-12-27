@@ -936,7 +936,11 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         var x = $sce.trustAsResourceUrl(src);
 
         return x;
-  }
+    }
+
+    $scope.decodeRssString = function (str) {
+        return decodeHtmlString(str);
+    }
 }
 
 controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {

@@ -22,6 +22,12 @@ function setviewpadding()
 	}, 1000);
 }
 
+function decodeHtmlString(str) {
+	var decodedStr = $("<div/>").html(str).text();
+
+	return decodedStr;
+}
+
 function windowDimentions() {
 	var w = window.innerWidth;
 	var h = window.innerHeight;
