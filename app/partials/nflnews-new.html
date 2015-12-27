@@ -43,15 +43,16 @@
             <tr >  
               <td >  
                 <div style="padding-top:25px;">
-                   <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link,$index)"  >Read More</a>
+                   <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link,$index)">Read More</a>
                 </div>
               </td>
             </tr>
           </table>
 
-          <div id="newsdetailDiv-{{$index}}" class="hideme" style="padding-top:30px;height:{{divheight}}px;width:{{divwidth}}px;">
+          <div id="newsdetailDiv-{{$index}}" ng-if="showiFrameYes($index) == 1" style="padding-top:30px;height:{{divheight}}px;width:{{divwidth}}px;">
               <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>
           </div> <!-- end of div frame -->
+        
         </div> <!-- end of body -->
       </div> <!-- end of panel -->
     </div> <!-- end of row -->

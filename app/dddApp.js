@@ -53,6 +53,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'nflnewsController',
                 templateUrl: 'app/partials/nflnews.html'
             })
+        .when('/nflnews-test',
+            {
+                controller: 'nflnewsController',
+                templateUrl: 'app/partials/nflnews-new.html'
+            })
         .when('/teamweeklyranking',
             {
                 controller: 'teamweeklyrankingController',
