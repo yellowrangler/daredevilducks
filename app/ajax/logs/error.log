@@ -6284,3 +6284,43 @@ LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
 WHERE ts.season = '2015' and ts.gametypeid = undefined
 ORDER BY conference ASC, division ASC, percent DESC
+2015-12-30 06:31:24 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2015-12-30 06:31:24 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
