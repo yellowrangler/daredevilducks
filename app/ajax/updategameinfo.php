@@ -12,6 +12,7 @@ $week = $_POST['week'];
 $gamenbr = $_POST['gamenbr'];
 $gameday = $_POST['gameday'];
 $gamedate = $_POST['gamedate'];
+$gameyear = $_POST['gameyear'];
 $networkid = $_POST['networkid'];
 $gametime = $_POST['gametime'];
 $hometeamid = $_POST['hometeamid'];
@@ -39,7 +40,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 //
 // build gamedatetime
 //
-$datetime = $gameday . " " . $gamedate . " " . $season . " " .$gametime;
+$datetime = $gameday . " " . $gamedate . " " . $gameyear . " " .$gametime;
 $unixTS = strtotime($datetime);
 $mysqlTS = date("Y-m-d H:i:s", $unixTS);
 $gamedatetime = $mysqlTS;
@@ -124,7 +125,8 @@ if ($count > 0)
 	SET season = '$season', 
 		week = '$week', 
 		gamenbr = '$gamenbr', 
-		gamedate = '$gamedate', 
+		gamedate = '$gamedate',
+		gameyear = '$gameyear',
 		gameday = '$gameday', 
 		networkid = '$networkid', 
 		gametime = '$gametime', 
@@ -144,11 +146,11 @@ else
 	// do insert
 	// 
 	$sql = "INSERT INTO gamestbl ( season, week, 
-	gamenbr, gamedate, gameday, gametime, gametypeid,
+	gamenbr, gamedate, gameyear, gameday, gametime, gametypeid,
  	networkid, hometeamid, awayteamid, hometeamscore, awayteamscore,
 	gamedatetime, enterdate )
 	VALUES ( '$season', '$week', 
-		'$gamenbr', '$gamedate', '$gameday', '$gametime', '$gametypeid',
+		'$gamenbr', '$gamedate', '$gameyear', $gameday', '$gametime', '$gametypeid',
 		'$networkid', '$hometeamid', '$awayteamid', '$hometeamscore', '$awayteamscore', 
 		'$gamedatetime', '$enterdateTS'	)";
 }

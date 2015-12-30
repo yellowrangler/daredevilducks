@@ -1944,6 +1944,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.week = row.entity["week"];                
                         $scope.current.gamenbr = row.entity["gamenbr"];
                         $scope.current.gamedate = row.entity["gamedate"];  
+                        $scope.current.gameyear = row.entity["gameyear"];  
                         $scope.current.hometeamname = row.entity["hometeamname"];   
                         $scope.current.awayteamname = row.entity["awayteamname"]; 
                         $scope.current.gametype = row.entity["gametype"]; 
@@ -1970,6 +1971,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.week = "";                
                         $scope.current.gamenbr = "";
                         $scope.current.gamedate = "";
+                        $scope.current.gameyear = "";
                         $scope.current.hometeamname = "";
                         $scope.current.awayteamname = "";
                         $scope.current.gametype = "";
@@ -2000,13 +2002,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             columnDefs: [
                 // default
                 { field: "season", 
-                    displayName: "Year", headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Season", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "week", 
                     displayName: "Week", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamenbr", 
                     displayName: "Nbr", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamedate", 
                     displayName: "Date", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "gameyear", 
+                    displayName: "Year", headerCellClass: $scope.highlightFilteredHeader },    
                 { field: "hometeamname", 
                     displayName: "Home", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "awayteamname", 
