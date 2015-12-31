@@ -26,30 +26,23 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     init();
     function init() {
+        $scope.current = {};
+
+        var ua = getUserAgent();
+        $scope.current.devicename = ua.deviceName;
+        $scope.current.devicetype = ua.deviceType;
+
+        if (ua.deviceType == "Mobile")
+        {
+            $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav");
+            $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
+        }
+       
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
         setviewpadding();
-
-        // $('#navbarCollapse').on('hidden.bs.collapse', function () {
-        //     $("#teamnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-        //     $("#playernavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-        //     $("#gamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-        //     $("#halloffamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-        //     $("#adminnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-        //     $("#avatarnavimg").addClass("imgAvatarNav").removeClass("imgAvatarNavSmall");
-        // });
-
-
-        // $('#navbarCollapse').on('show.bs.collapse', function () {
-        //    $("#teamnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-        //    $("#playernavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-        //    $("#gamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-        //    $("#halloffamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-        //    $("#adminnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-        //    $("#avatarnavimg").addClass("imgAvatarNavSmall").removeClass("imgAvatarNav");
-        // });
 
         getAvatar();
         loginService.setAvatarLabel("menubaravatar",0);
@@ -153,22 +146,57 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
                     // flip the label
                     var route = loginService.setLoginLogoffLabel("menubarlogin",0);
                     loginService.setAvatarLabel("menubaravatar",0);
-                    
-                    $('#iformationDialogModalTitle').text("Success");
-                    $('#iformationDialogModalLabelBody').text(login.text);
-                    $('#iformationDialogModal').modal();
+
+                    var ua = getUserAgent();
+
+                    if (ua.deviceType == "Mobile")
+                    {
+                        alert("Success\n"+login.text);
+
+                        var role = loginService.getMemberRole();
+                        if (role == "admin")
+                        {
+                            $("#adminselect").show();
+                        }
+                        else
+                        {
+                            $("#adminselect").hide();
+                        }
+
+                        $location.path("#home");
+                    }
+                    else
+                    {
+                        $('#iformationDialogModalTitle').text("Success");
+                        $('#iformationDialogModalLabelBody').text(login.text);
+                        $('#iformationDialogModal').modal();
+                    }
                 }
                 else
                 {
-                    $('#iformationDialogModalTitle').text("Error");
-                    $('#iformationDialogModalLabelBody').text(login.text);
-                    $('#iformationDialogModal').modal();
+                    if (ua.deviceType == "Mobile")
+                    {
+                        alert("Error\n"+login.text);
+                    }
+                    else
+                    {
+                        $('#iformationDialogModalTitle').text("Error");
+                        $('#iformationDialogModalLabelBody').text(login.text);
+                        $('#iformationDialogModal').modal();
+                    }
                 }   
             })
             .error( function(edata) {
-                $('#iformationDialogModalTitle').text("System Error");
-                $('#iformationDialogModalLabelBody').text("Syetem Error", edata);
-                $('#iformationDialogModal').modal();
+                if (ua.deviceType == "Mobile")
+                {
+                    alert("System Error\n"+edata);
+                }
+                else
+                {
+                    $('#iformationDialogModalTitle').text("System Error");
+                    $('#iformationDialogModalLabelBody').text("Syetem Error", edata);
+                    $('#iformationDialogModal').modal();
+                }
             });
     }
 
@@ -497,15 +525,34 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                 .success( function(data) {
                     if (data == "ok")
                     {
-                        $('#gamesSavedDialogModalTitle').text("Picks Saved");
-                        $('#gamesSavedDialogModalLabelBody').text($scope.msg);
-                        $('#gamesSavedDialogModal').modal();
+                        var ua = getUserAgent();
+
+                        if (ua.deviceType == "Mobile")
+                        {
+                            alert("Picks Saved\n"+$scope.msg);
+                        }
+                        else
+                        {
+                            $('#gamesSavedDialogModalTitle').text("Picks Saved");
+                            $('#gamesSavedDialogModalLabelBody').text($scope.msg);
+                            $('#gamesSavedDialogModal').modal();
+
+                        }
                     }
                     else
                     {
-                        $('#gamesSavedDialogModalTitle').text("Picks Error");
-                        $('#gamesSavedDialogModalLabelBody').text(data);
-                        $('#gamesSavedDialogModal').modal();
+                        var ua = getUserAgent();
+
+                        if (ua.deviceType == "Mobile")
+                        {
+                            alert("Picks Error\n"+data);
+                        }
+                        else
+                        {
+                            $('#gamesSavedDialogModalTitle').text("Picks Error");
+                            $('#gamesSavedDialogModalLabelBody').text(data);
+                            $('#gamesSavedDialogModal').modal();
+                        }
                     }
                 })
                 .error( function(edata) {

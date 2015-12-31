@@ -22,6 +22,42 @@ function setviewpadding()
 	}, 1000);
 }
 
+function getUserAgent()
+{
+	var deviceName = "MainStream";
+	var deviceType = "Computer";
+
+	var useragent = navigator.userAgent.toLowerCase();
+	if (useragent.search("iphone") > -1)
+	{
+		deviceName = "iPhone";
+		deviceType = "Mobile";
+	}
+	else if (useragent.search("android") > -1)
+	{
+		deviceName = "Android";
+		deviceType = "Mobile";
+	}
+	else if (useragent.search("ipad") > -1)
+	{
+		deviceName = "iPad";
+		deviceType = "Mobile";
+	}
+	else if (useragent.search("blackberry") > -1)
+	{
+		deviceName = "BlackBerry";
+		deviceType = "Mobile";
+	}
+	else if (useragent.search("iemobile") > -1)
+	{
+		deviceName = "Windows";
+		deviceType = "Mobile";
+	}
+
+
+	return { deviceName: deviceName, deviceType: deviceType };
+}
+
 function decodeHtmlString(str) {
 	var decodedStr = $("<div/>").html(str).text();
 
@@ -43,23 +79,23 @@ function adjustNavbarImages()
 	{
 		$("#nav-bar-menu-bar").addClass("fixed");
 
-		$("#teamnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-	    $("#playernavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-	    $("#gamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-	    $("#halloffamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-	    $("#adminnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
-	    $("#avatarnavimg").addClass("imgAvatarNav").removeClass("imgAvatarNavSmall");
+		// $("#teamnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	 //    $("#playernavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	 //    $("#gamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	 //    $("#halloffamenavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	 //    $("#adminnavimg").addClass("imgButtonNav").removeClass("imgButtonNavSmall");
+	 //    $("#avatarnavimg").addClass("imgAvatarNav").removeClass("imgAvatarNavSmall");
 	}
 	else
 	{
 		$("#nav-bar-menu-bar").removeClass("fixed");
 
-		$("#teamnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-		$("#playernavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-		$("#gamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-		$("#halloffamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-		$("#adminnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
-		$("#avatarnavimg").addClass("imgAvatarNavSmall").removeClass("imgAvatarNav");
+		// $("#teamnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		// $("#playernavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		// $("#gamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		// $("#halloffamenavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		// $("#adminnavimg").addClass("imgButtonNavSmall").removeClass("imgButtonNav");
+		// $("#avatarnavimg").addClass("imgAvatarNavSmall").removeClass("imgAvatarNav");
 
 	}
 }

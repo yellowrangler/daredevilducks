@@ -137,6 +137,11 @@ border: 0 none;
 	height:80%;
 }
 
+.imgButtonMobileNav {
+	width:40%; 
+	height:40%;
+}
+
 .imgButtonNavSmall {
 	width:40%; 
 	height:40%;
@@ -144,6 +149,10 @@ border: 0 none;
 
 .imgAvatarNav {
 	height:75px;
+}
+
+.imgAvatarNavMobile {
+	height:45px;
 }
 
 .imgAvatarNavSmall {
@@ -263,6 +272,12 @@ border: 0 none;
 	padding-top:10px;
 	padding-right:15%;
 	cursor: pointer;
+}
+
+.systemInfo {
+	padding-top:35px; 
+	color: NavajoWhite;
+	font-size: 12px;
 }
 
 .loginLink a {
@@ -705,7 +720,7 @@ border: 0 none;
 /*ddd footer*/
 .ddd-footer {
 	background:LightSeaGreen;
-	height:475px;
+	height:525px;
 	color:Snow;
 	font-size:15px;
 	text-decoration: none;
