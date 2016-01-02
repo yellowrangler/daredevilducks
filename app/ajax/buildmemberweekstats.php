@@ -448,7 +448,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 	// loop through rest of weeks - uncomment to get cumulative rolled up results
 	//
 	$start = $week;
-	for ($week = $start; $week <= $gamesInRegularSeason; $week++)
+	for ($week = $start; $week <= $weeksinregularseason; $week++)
 	{
 		$sql = "UPDATE memberweekstatstbl 
 			SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 

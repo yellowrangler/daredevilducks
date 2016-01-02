@@ -7173,3 +7173,303 @@ LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
 WHERE ts.season = '2015' and ts.gametypeid = undefined
 ORDER BY conference ASC, division ASC, percent DESC
+2016-01-02 03:06:07 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2016-01-02 03:06:07 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2016-01-02 03:32:30 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:30 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 9, losses = 7, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 1 AND season = 2015 AND week = 17
+2016-01-02 03:32:30 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:30 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 10, losses = 6, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 2 AND season = 2015 AND week = 17
+2016-01-02 03:32:31 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:31 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 9, losses = 7, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 6 AND season = 2015 AND week = 17
+2016-01-02 03:32:32 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:32 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 8, losses = 8, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 7 AND season = 2015 AND week = 17
+2016-01-02 03:32:32 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:32 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 7, losses = 9, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 8 AND season = 2015 AND week = 17
+2016-01-02 03:32:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:33 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 12, losses = 4, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 9 AND season = 2015 AND week = 17
+2016-01-02 03:32:34 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:34 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 8, losses = 7, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 10 AND season = 2015 AND week = 17
+2016-01-02 03:32:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:35 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 9, losses = 7, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 11 AND season = 2015 AND week = 17
+2016-01-02 03:32:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:36 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 10, losses = 6, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 12 AND season = 2015 AND week = 17
+2016-01-02 03:32:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:37 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 12, losses = 4, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 13 AND season = 2015 AND week = 17
+2016-01-02 03:32:37 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:37 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 12, losses = 4, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 14 AND season = 2015 AND week = 17
+2016-01-02 03:32:38 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:38 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 11, losses = 5, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 15 AND season = 2015 AND week = 17
+2016-01-02 03:32:39 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:39 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 11, losses = 5, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 16 AND season = 2015 AND week = 17
+2016-01-02 03:32:39 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:39 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 11, losses = 5, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 17 AND season = 2015 AND week = 17
+2016-01-02 03:32:40 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:40 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 9, losses = 7, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 18 AND season = 2015 AND week = 17
+2016-01-02 03:32:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:41 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 10, losses = 6, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 19 AND season = 2015 AND week = 17
+2016-01-02 03:32:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:41 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 0, losses = 0, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 20 AND season = 2015 AND week = 17
+2016-01-02 03:32:42 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:42 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 0, losses = 0, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 21 AND season = 2015 AND week = 17
+2016-01-02 03:32:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:43 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 10, losses = 6, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 22 AND season = 2015 AND week = 17
+2016-01-02 03:32:43 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:43 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 10, losses = 6, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 23 AND season = 2015 AND week = 17
+2016-01-02 03:32:44 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:44 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 10, losses = 6, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 24 AND season = 2015 AND week = 17
+2016-01-02 03:32:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:45 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 13, losses = 3, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 25 AND season = 2015 AND week = 17
+2016-01-02 03:32:45 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:45 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 0, losses = 0, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 26 AND season = 2015 AND week = 17
+2016-01-02 03:32:46 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:46 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 0, losses = 0, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 27 AND season = 2015 AND week = 17
+2016-01-02 03:32:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:47 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 8, losses = 8, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 28 AND season = 2015 AND week = 17
+2016-01-02 03:32:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:47 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 11, losses = 5, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 29 AND season = 2015 AND week = 17
+2016-01-02 03:32:48 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:48 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 8, losses = 8, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 30 AND season = 2015 AND week = 17
+2016-01-02 03:32:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE mem' at line 2 - Error doing update to db Unable to update member week stats.
+2016-01-02 03:32:49 : SQL: UPDATE memberweekstatstbl 
+			SET totalgames = 16, wins = 11, losses = 5, ties = 0, percent = , season = 2015, gametypeid = 2,  enterdate = '2016-01-02 03:32:29' 
+			WHERE memberid = 31 AND season = 2015 AND week = 17
+2016-01-02 03:39:05 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2016-01-02 03:39:05 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2016-01-02 03:51:09 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2016-01-02 03:51:09 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
+2016-01-02 03:52:55 : SQL error: Unknown column 'undefined' in 'where clause' - Error doing select to db Unable to get nfl team statistical information.
+2016-01-02 03:52:55 : SQL: SELECT tt.id as teamid, 
+location as teamlocation, 
+name as teamname, 
+tss.postseasonstatus as postseasonstatus,
+league, 
+conference, 
+division,
+teamiconname,
+teamorder,
+teamurl,
+wins as teamwins,
+losses as teamlosses,
+ties as teamties,
+totalgames as teamtotalgames,
+percent as teampercent,
+homewins, 
+homelosses, 
+hometies, 
+hometotalgames, 
+homepercent, 
+awaywins, 
+awaylosses, 
+awayties, 
+awaytotalgames, 
+awaypercent, 
+confwins, 
+conflosses, 
+confties, 
+conftotalgames, 
+confpercent, 
+ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
+ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
+ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
+ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+FROM teamstbl tt
+LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2015
+WHERE ts.season = '2015' and ts.gametypeid = undefined
+ORDER BY conference ASC, division ASC, percent DESC
