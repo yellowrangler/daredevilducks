@@ -87,7 +87,7 @@ $weekend[15] = "Dec 29 2015";
 $weekgametypeid[15] = 2;
 
 $weekstart[16] = "Jan 3 2016";
-$weekend[16] = "Jan 5 2016";
+$weekend[16] = "Jan 4 2016";
 $weekgametypeid[16] = 2;
 
 $weekstart[17] = "Jan 9 2016";

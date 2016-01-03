@@ -139,7 +139,7 @@ if (!$sql_result_prime)
 //---------------------------------------------------------------
 $sql = "SELECT MAX(week) as weeks
 FROM gameweekstbl where season = $season
-AND weekend <= '$enterdateTS'";
+AND weekend <= DATE_ADD(now(), INTERVAL 1 DAY)";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

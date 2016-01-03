@@ -34,8 +34,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
         if (ua.deviceType == "Mobile")
         {
-            $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav");
-            $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
+            // $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav");
+            // $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
         }
        
         //
@@ -95,7 +95,20 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             })
             .error( function(edata) {
                 alert(edata);
-            });        
+            }); 
+
+        nflteamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
+
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
+
 
         checkRole();  
     };         
