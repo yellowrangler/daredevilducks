@@ -150,7 +150,7 @@ else
  	networkid, hometeamid, awayteamid, hometeamscore, awayteamscore,
 	gamedatetime, enterdate )
 	VALUES ( '$season', '$week', 
-		'$gamenbr', '$gamedate', '$gameyear', $gameday', '$gametime', '$gametypeid',
+		'$gamenbr', '$gamedate', '$gameyear', '$gameday', '$gametime', '$gametypeid',
 		'$networkid', '$hometeamid', '$awayteamid', '$hometeamscore', '$awayteamscore', 
 		'$gamedatetime', '$enterdateTS'	)";
 }

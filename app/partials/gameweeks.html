@@ -1,0 +1,118 @@
+<div class="pageCaption row">
+	<div style="padding-top:15px;display:inline;" class="col-md-12">
+		<h2 style="display:inline;" class="headerTitle">Game Week Information</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<div class="col-md-12 form-inline">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getAdminGameWeekly()" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+				
+					<div style="padding-left:30px;"class="form-group horizontalFieldOffset">
+		                <button  style="font-weight:bold;" class="btn btn-info btn-sm" ng-click="saveWeekly()" id="saveWeekly" name="saveWeekly" >Save Weekly Rankingss</button>
+					</div> <!-- end of form-group --> 
+
+				</div> <!-- end of panel body -->		
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 9 -->
+</div> <!-- end of row -->
+
+<form id="admingameweeklyForm" name="admingameweeklyForm">
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverride">
+			<div class="panelBodyOverride table-responsive">
+				<table class="table gameWeeklyTable" >
+
+					<tr class="tableTitleNoBorder">	
+						<th style="width:5%">Season</th>	
+						<th style="width:5%">Week</th>	
+						<th style="width:5%">Type</th>	
+						<th style="width:5%">Week Start</th>
+						<th style="width:5%">Week End</th>					
+					</tr>
+
+					<tr ng-repeat="gameweekly in gameweeklys">
+						<td class="center-column-text">
+							<select class="customSelect form-control" ng-model="gameweekly.season" name="gameweekly_season_{{gameweekly.id}}" id="gameweekly_season_{{gameweekly.id}}">
+				                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+				            </select>
+							<input type="hidden" id="gameweekly_{{gameweekly.id}}" name="gameweekly_{{gameweekly.id}}" value="{{gameweekly.id}}">
+						</td>
+
+						<td class="center-column-text">
+							<input type="text" id="week_{{gameweekly.teamid}}" name="week_{{gameweekly.teamid}}" value="{{gameweekly.week}}">
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="pw_{{gameweekly.teamid}}" name="pw_{{gameweekly.teamid}}" value="{{gameweekly.powerranking}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="oo_{{gameweekly.teamid}}" name="oo_{{gameweekly.teamid}}" value="{{gameweekly.offencetotal}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="os_{{gameweekly.teamid}}" name="os_{{gameweekly.teamid}}" value="{{gameweekly.offencescoring}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="op_{{gameweekly.teamid}}" name="op_{{gameweekly.teamid}}" value="{{gameweekly.offencepassing}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="or_{{gameweekly.teamid}}" name="or_{{gameweekly.teamid}}" value="{{gameweekly.offencerushing}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="do_{{gameweekly.teamid}}" name="do_{{gameweekly.teamid}}" value="{{gameweekly.defencetotal}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="ds_{{gameweekly.teamid}}" name="ds_{{gameweekly.teamid}}" value="{{gameweekly.defencescoring}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="dp_{{gameweekly.teamid}}" name="dp_{{gameweekly.teamid}}" value="{{gameweekly.defencepassing}}">  
+						</td>
+
+						<td class="left-column-text">
+							<input type="text" class="form-control" id="dr_{{gameweekly.teamid}}" name="dr_{{gameweekly.teamid}}" value="{{gameweekly.defencerushing}}">  
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+
+<!-- dialogs -->
+<div class="modal fade" id="gameWeeklySavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gameWeeklySavedDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="gameWeeklySavedDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="gameWeeklySavedDialogModalBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

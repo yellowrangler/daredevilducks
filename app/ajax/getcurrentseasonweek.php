@@ -46,8 +46,10 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 $sql = "SELECT season, week 
 FROM gameweekstbl 
-WHERE weekend >= now() 
+WHERE weekend >= DATE_SUB(now(), INTERVAL 1 DAY)
 ORDER BY season, week ASC LIMIT 1";
+
+// WHERE weekend >= now() 
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

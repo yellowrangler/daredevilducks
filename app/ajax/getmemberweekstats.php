@@ -51,7 +51,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
-$sql = "SELECT 
+$sql = "SELECT DISTINCT
    M.screenname as screenname,
    M.id as memberid,
    M.membername as membername,
