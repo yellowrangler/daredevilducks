@@ -74,7 +74,18 @@
 
   <div style="padding-bottom:25px;"  class="col-md-7">
 
+    <div class="pageCaption row">
+
+      <div class="col-md-12">  
+       
+          <img style="float:right;height:160px;padding-right:45px;"  class="centeredImage" ng-src="img/NFLNewsScrn.png">
+
+      </div> <!-- end of col 12 -->
+
+    </div> <!-- end of row -->
+
      <div class="pageCaption row">
+
       <div class="col-md-12">
         <div id="newsdetailDiv" ng-if="newsdetail" style="position:fixed;padding-top:0px; height:{{divheight}}px;width:{{divwidth}}px;">
           <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>

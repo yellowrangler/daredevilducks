@@ -14,6 +14,7 @@ $week = $_POST['week'];
 $gamenbr = $_POST['gamenbr'];
 $gameday = $_POST['gameday'];
 $gamedate = $_POST['gamedate'];
+$gameyear = $_POST['gameyear'];
 $networkid = $_POST['networkid'];
 $gametime = $_POST['gametime'];
 $hometeamid = $_POST['hometeamid'];
@@ -80,29 +81,36 @@ if (!mysql_select_db($DBschema, $dbConn))
 	exit($rv);
 }
 
+//
+// build gamedatetime
+//
+$datetime = $gameday . " " . $gamedate . " " . $gameyear . " " .$gametime;
+$unixTS = strtotime($datetime);
+$mysqlTS = date("Y-m-d H:i:s", $unixTS);
+$gamedatetime = $mysqlTS;
+
+//
+// convert date components to be consistent
+//
+$datetimestr = strtotime($gamedatetime);
+$gameday = date("D",$datetimestr); 
+$gametime = date("g:i a",$datetimestr); 
+$gamedate = date("M j",$datetimestr);
+
+
 //---------------------------------------------------------------
 // update game 
 //---------------------------------------------------------------
 
-$sql = "INSERT INTO gamestbl
-	(
-	 season, week, gamenbr, gamedate, gameday, 
-	 networkid, gametime, hometeamid, awayteamid, 
-	 hometeamscore, awayteamscore, gametypeid, enterdate
-	 ) VALUES (
-	'$season', 
-	'$week', 
-	'$gamenbr', 
-	'$gamedate', 
-	'$gameday', 
-	'$networkid', 
-	'$gametime', 
-	'$hometeamid', 
-	'$awayteamid', 
-	'$hometeamscore', 
-	'$awayteamscore', 
-	'$gametypeid',		
-	'$enterdateTS' )"; 
+$sql = "INSERT INTO gamestbl ( season, week, 
+	gamenbr, gamedate, gameyear, gameday, gametime, gametypeid,
+ 	networkid, hometeamid, awayteamid, hometeamscore, awayteamscore,
+	gamedatetime, enterdate )
+	VALUES ( '$season', '$week', 
+		'$gamenbr', '$gamedate', '$gameyear', '$gameday', '$gametime', '$gametypeid',
+		'$networkid', '$hometeamid', '$awayteamid', '$hometeamscore', '$awayteamscore', 
+		'$gamedatetime', '$enterdateTS'	)";
+}
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

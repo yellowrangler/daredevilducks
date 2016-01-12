@@ -936,7 +936,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
     function loadNewsDetail(url, idx)
     {
         x = windowDimentions();
-        $scope.divheight = x.height / 1.40;
+        $scope.divheight = x.height / 1.8;
         $scope.divwidth = x.width / 1.9;
 
         $scope.current.newsidx = idx;
@@ -2123,7 +2123,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
     $scope.newGameInfo = function () {
         var formstring = $("#gameForm").serialize();
 
-        nflteamsFactory.addGameInfo(formstring)
+        nflteamsFactory.updateGameInfo(formstring)
         .success( function(data) {
             if (data !== "ok")
             {
