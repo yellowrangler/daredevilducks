@@ -518,7 +518,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	    exit($msg);
 	}	
 
-	//
+	// TC
 	// union 5 selects to get total, home, away, conf and div ties
 	//
 	$idx = 0;
@@ -574,21 +574,49 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	// calculate percentage
 	//
 	$percent = 0;
+	$homepercent = 0;
+	$awaypercent = 0;
+	$confpercent = 0;
+	$divpercent = 0;
+
+	$regularseasonpercent = 0;
+	$regularseasonhomepercent = 0;
+	$regularseasonawaypercent = 0;
+	$regularseasonconfpercent = 0;
+	$regularseasondivpercent = 0;
+
+	$postseasonpercent = 0;
+	$postseasonhomepercent = 0;
+	$postseasonawaypercent = 0;
+	$postseasonconfpercent = 0;
+	$postseasondivpercent = 0;
 	
 	if ($games > 0)
 	{
 		$p = $wins / $games;
 		$percent = round($p, 3);
+	}
 
+	if ($homegames > 0)
+	{
 		$p = $homewins / $homegames;
 		$homepercent = round($p, 3);
+	}
 
+	if ($awaygames > 0)
+	{
 		$p = $awaywins / $awaygames;
 		$awaypercent = round($p, 3);
+	}
 
+	if ($confgames > 0)
+	{
 		$p = $confwins / $confgames;
 		$confpercent = round($p, 3);
+	}
 
+	if ($divgames > 0)
+	{
 		$p = $divwins / $divgames;
 		$divpercent = round($p, 3);
 	}
@@ -598,16 +626,28 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	{
 		$p = $regularseasonwins / $regularseasongames;
 		$regularseasonpercent = round($p, 3);
+	}
 
+	if ($regularseasonhomegames > 0)
+	{
 		$p = $regularseasonhomewins / $regularseasonhomegames;
 		$regularseasonhomepercent = round($p, 3);
+	}
 
+	if ($regularseasonawaygames > 0)
+	{
 		$p = $regularseasonawaywins / $regularseasonawaygames;
 		$regularseasonawaypercent = round($p, 3);
+	}
 
+	if ($regularseasonconfgames > 0)
+	{
 		$p = $regularseasonconfwins / $regularseasonconfgames;
 		$regularseasonconfpercent = round($p, 3);
+	}
 
+	if ($regularseasondivgames > 0)
+	{
 		$p = $regularseasondivwins / $regularseasondivgames;
 		$regularseasondivpercent = round($p, 3);
 	}
@@ -616,16 +656,28 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	{
 		$p = $postseasonwins / $postseasongames;
 		$postseasonpercent = round($p, 3);
+	}
 
+	if ($postseasonhomegames > 0)
+	{
 		$p = $postseasonhomewins / $postseasonhomegames;
 		$postseasonhomepercent = round($p, 3);
+	}
 
+	if ($postseasonawaygames > 0)
+	{
 		$p = $postseasonawaywins / $postseasonawaygames;
 		$postseasonawaypercent = round($p, 3);
+	}
 
+	if ($postseasonconfgames > 0)
+	{
 		$p = $postseasonconfwins / $postseasonconfgames;
 		$postseasonconfpercent = round($p, 3);
+	}
 
+	if ($postseasondivgames > 0)
+	{
 		$p = $postseasondivwins / $postseasondivgames;
 		$postseasondivpercent = round($p, 3);
 	}
