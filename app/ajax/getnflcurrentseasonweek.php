@@ -67,6 +67,35 @@ if (!$sql_result)
 }
 
 //
+// check to see if anything returned
+// if none then past end of season
+// run special query
+//
+$count = mysql_num_rows($sql_result);
+if ($count < 1)
+{
+	//---------------------------------------------------------------
+	// get nfl week information
+	//---------------------------------------------------------------
+	$sql = "SELECT MAX(season), MAX(week)
+	FROM gameweekstbl 
+	WHERE weekstart <= now()";
+
+	$sql_result = @mysql_query($sql, $dbConn);
+	if (!$sql_result)
+	{
+	    $log = new ErrorLog("logs/");
+	    $sqlerr = mysql_error();
+	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl CURRENT season week 2 information.");
+	    $log->writeLog("SQL: $sql");
+
+	    $status = -100;
+	    $msgtext = "System Error: $sqlerr";
+	}
+
+}
+
+//
 // fill the array
 //
 $weeks = array();

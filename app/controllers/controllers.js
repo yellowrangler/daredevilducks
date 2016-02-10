@@ -149,6 +149,8 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
 
         loginFactory.loginPassword(data)
             .success( function(login) {
+                var ua = getUserAgent();
+                
                 if (login.rc == "1")
                 {
                     loginService.addLogin(login);
@@ -159,8 +161,6 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
                     // flip the label
                     var route = loginService.setLoginLogoffLabel("menubarlogin",0);
                     loginService.setAvatarLabel("menubaravatar",0);
-
-                    var ua = getUserAgent();
 
                     if (ua.deviceType == "Mobile")
                     {
@@ -1005,8 +1005,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
 
 controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
-
+ 
     function selectChange()
     {
         setBracketImage();
@@ -1017,11 +1016,11 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         switch ($scope.current.season)
         {
             case "2014":
-                $scope.bracketimg = "NFLPlayOffBracket2014D.png";
+                $scope.bracketimg = "NFLPlayOffBracket2014C.png";
                 break;
 
             case "2015":
-                $scope.bracketimg = "NFLPlayOffBracket2015G.png";
+                $scope.bracketimg = "NFLPlayOffBracket2015H.png";
                 break;  
                 
             default:
@@ -1036,6 +1035,8 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        $scope.current.season = nflTeamsService.getCurrentSeason();
 
         setBracketImage();
         
