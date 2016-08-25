@@ -1309,6 +1309,22 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
         // in jquery ready. So adding it here
         //
         setviewpadding();
+
+        $( "#hf2014" )
+            .mouseover(function() {
+                 $(this).attr("src", "img/halloffame/MomKissCup.png");
+                })
+            .mouseout(function() {
+                $(this).attr("src", "img/halloffame/MomVictor.png");
+                });
+
+        $( "#hf2015" )
+            .mouseover(function() {
+                 $(this).attr("src", "img/halloffame/SabrinaDisapointment.png");
+                })
+            .mouseout(function() {
+                $(this).attr("src", "img/halloffame/SabrinaWinner.png");
+                });    
         
     };
 }
