@@ -149,6 +149,73 @@ if (!$sql_result)
 }
 
 //
+// Tarry added this 08/25/2016 if nothing returned the because begining of season
+//
+$rows = mysql_num_rows($sql_result);
+// echo "rows = $rows";	
+if ($rows == 0)
+{
+	//---------------------------------------------------------------
+	// Get nfl team statistical information
+	//---------------------------------------------------------------
+	$sql = "SELECT tt.id as teamid, 
+	location as teamlocation, 
+	name as teamname, 
+	' ' as postseasonstatus,
+	league, 
+	conference, 
+	division,
+	teamiconname,
+	teamorder,
+	teamurl,
+	'0' as teamwins,
+	'0' as teamlosses,
+	'0' as teamties,
+	'0' as teamtotalgames,
+	'0' as wins,
+	'0' as losses,
+	'0' as ties,
+	'0' as totalgames,
+	'0' as percent,
+	'0' as homewins, 
+	'0' as homelosses, 
+	'0' as hometies, 
+	'0' as hometotalgames, 
+	'0' as homepercent, 
+	'0' as awaywins, 
+	'0' as awaylosses, 
+	'0' as awayties, 
+	'0' as awaytotalgames, 
+	'0' as awaypercent, 
+	'0' as confwins, 
+	'0' as conflosses, 
+	'0' as confties, 
+	'0' as conftotalgames, 
+	'0' as confpercent, 
+	'0.0%' as percentdisplay,
+	'0.0%' as homepercentdisplay,
+	'0.0%' as awaypercentdisplay,
+	'0.0%' as confpercentdisplay
+	FROM teamstbl tt
+	ORDER BY conference ASC, division ASC";
+	// print $sql;
+
+	$sql_result = @mysql_query($sql, $dbConn);
+	if (!$sql_result)
+	{
+	    $log = new ErrorLog("logs/");
+	    $sqlerr = mysql_error();
+	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl team statistical start of year information.");
+	    $log->writeLog("SQL: $sql");
+
+	    $status = -100;
+	    $msgtext = "System Error: $sqlerr";
+	}
+
+}
+	
+
+//
 // fill the array
 //
 $teamstats = array();

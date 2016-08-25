@@ -23,10 +23,21 @@ else
 	$dumpdatabaselabel = $dateStr;
 }
 
-$execStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE  -u tarryc -ptarryc ddd > dbsql/ddd-dump-$dumpdatabaselabel.sql";
 
-$msg = "Input variables:dumpdatabaselabel: $dumpdatabaselabel <br />Run string:$execStr";
-$msg = $msg . exec($execStr);
+$mySqlStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd";
+$fileNameStr = "dbsql/ddd-dump-$dumpdatabaselabel.sql";
+$execStr = $mySqlStr . " > " . $fileNameStr;
+
+$return = null;
+$owner = get_current_user();
+
+$msg = "Input variables:dumpdatabaselabel: $dumpdatabaselabel <br />Owner: $owner<br />Run string:$execStr";
+
+exec($execStr, $output, $return);
+
+$results = "<br />Return Code:" . $return;
+
+$msg = $msg . $results;
 
 //
 // pass back info

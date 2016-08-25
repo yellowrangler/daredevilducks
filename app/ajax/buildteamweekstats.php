@@ -795,7 +795,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				season = $season, enterdate = '$enterdateTS' 
 				WHERE teamid = $teamid AND week = $week AND season = $season";
 
-				echo "sql = $sql<br />";
+				//echo "sql = $sql<br />";
 
 			// $sql_r = @mysql_query($sql, $dbConn);
 			// if (!$sql_r)

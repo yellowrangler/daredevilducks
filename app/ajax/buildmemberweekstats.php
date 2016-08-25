@@ -160,6 +160,12 @@ if (!$sql_result)
 $r = mysql_fetch_assoc($sql_result);
 $weekstotal = $r[weeks];
 
+// added 8/25/2016 if weeks is null
+if ($weekstotal == null)
+{
+	$weekstotal = 0;
+}
+
 //
 // loop through all members
 //

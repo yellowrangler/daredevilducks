@@ -90,7 +90,8 @@ while($r = mysql_fetch_assoc($sql_result)) {
 	$gamedatetime = $mysqlTS;
 	$id = $r['id'];
 
-	$sql = "UPDATE gamestbl SET gamedatetime = '$gamedatetime', gametime = '$gametime', enterdate = '$enterdateTS' WHERE id = $id";
+	$sql = "UPDATE gamestbl SET gamedatetime = '$gamedatetime', gametime = '$gametime', 
+		gameyear = '$year', enterdate = '$enterdateTS' WHERE id = $id";
 	$sql_result_update = @mysql_query($sql, $dbConn);
 	if (!$sql_result_update)
 	{
