@@ -28,6 +28,10 @@ dddApp.service('selectListService', function () {
             url : "welcome-email.html"
         },
         {  
+            title :  "New Season",
+            url : "welcome-new-season-email.html"
+        },
+        {  
             title :  "Game week",
             url : "gameweek-email.html"
         },
