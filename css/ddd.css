@@ -138,13 +138,14 @@ border: 0 none;
 }
 
 .imgButtonMobileNav {
-	width:30%; 
-	height:30%;
+	width:50%;
+	height:50%;
+	padding-left:10%;
 }
 
 .imgButtonNavSmall {
-	width:40%; 
-	height:40%;
+	width:100px; 
+
 }
 
 .imgAvatarNav {
