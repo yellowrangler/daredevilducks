@@ -28,14 +28,21 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function init() {
         $scope.current = {};
 
-        var ua = getUserAgent();
-        $scope.current.devicename = ua.deviceName;
-        $scope.current.devicetype = ua.deviceType;
+        
+        $scope.mobileDevice = isMobile();
 
-        if (ua.deviceType == "Mobile")
+
+        if ($scope.mobileDevice)
         {
-            // $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav");
-            // $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
+            // alert ("Is Mobile");
+
+            $(".collapsableNavbar").click(function(event) {
+              $(".navbar-collapse").collapse('hide');
+              setviewpadding();
+            });
+
+            $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav").removeClass("img-responsive");
+            $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
         }
        
         //

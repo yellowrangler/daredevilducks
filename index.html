@@ -80,10 +80,10 @@
                     <img id="gamenavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/games.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="#/pickgames">Pick Your Teams</a></li>
+                        <li><a class="collapsableNavbar" href="#/pickgames">Pick Your Teams</a></li>
                       <!--   <li id="admintestpickgames"><a href="#/pickgames2">Pick Your Teams 2</a></li> -->
-                        <li><a href="#/viewselectpickgames">Player's picks for week</a></li>
-                        <li><a href="#/viewtotalpickgames">Player Picks for week by Team</a></li>
+                        <li><a class="collapsableNavbar" href="#/viewselectpickgames">Player's picks for week</a></li>
+                        <li><a class="collapsableNavbar" href="#/viewtotalpickgames">Player Picks for week by Team</a></li>
                     </ul>
                 </li>
             </ul>
@@ -94,8 +94,8 @@
                     <img id="playernavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/memberstats.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="#/leaderboard">Leader Board</a></li>
-                        <li><a href="#/memberweekly">Weekly Totals</a></li>
+                        <li><a class="collapsableNavbar" href="#/leaderboard">Leader Board</a></li>
+                        <li><a class="collapsableNavbar" href="#/memberweekly">Weekly Totals</a></li>
                     </ul>
                 </li>
             </ul>
@@ -106,17 +106,17 @@
                     <img id="teamnavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/team.png">
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="#/teamstandings">Team Standings</a></li>
-                        <li id="adminplayoffstandings"><a href="#/playoffstandings">Playoff Brackets</a></li>
-                        <li><a href="#/teamweeklyranking">Team Weekly Ranking</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamstandings">Team Standings</a></li>
+                        <li id="adminplayoffstandings"><a class="collapsableNavbar" href="#/playoffstandings">Playoff Brackets</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamweeklyranking">Team Weekly Ranking</a></li>
                         <li id="adminnflnews"><a href="#/nflnews">NFL Headlines</a></li>
-                        <li><a href="#/teamdiscovery">Team Discovery</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamdiscovery">Team Discovery</a></li>
                     </ul>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav">
-                <li class="menuItems"><a href="#/halloffame">
+                <li class="menuItems"><a class="collapsableNavbar" href="#/halloffame">
                 <img id="halloffamenavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/halloffame.png">
                 </a></li>
             </ul>
@@ -128,26 +128,26 @@
                     <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <li role="presentation" class="divider"></li>
-                        <li role="presentation" class="disabled"><a style="color:teal;" href="">Team Management</a></li>
+                        <li role="presentation" class="disabled"><a class="collapsableNavbar" style="color:teal;" href="">Team Management</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a href="#/teaminfo">Team Information</a></li>
-                        <li><a href="#/teamseasoninfo">Team Season Information</a></li>
+                        <li><a class="collapsableNavbar" href="#/teaminfo">Team Information</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamseasoninfo">Team Season Information</a></li>
                         <li role="presentation" class="divider"></li>
                         <li role="presentation" class="disabled"><a style="color:teal;" href="">Game Management</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a href="#/gameinfo">Game Day Informtion</a></li>
-                        <li><a href="#/gameranking">Game Week Ranking </a></li>
+                        <li><a class="collapsableNavbar" href="#/gameinfo">Game Day Informtion</a></li>
+                        <li><a class="collapsableNavbar" href="#/gameranking">Game Week Ranking </a></li>
                         <li role="presentation" class="divider"></li>
                         <li role="presentation" class="disabled"><a style="color:teal;" href="">Player Management</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a href="#/addmember">Add New Player</a></li>
-                        <li><a href="#/updatemember">Manage Player Information</a></li>
-                        <li><a href="#/addavatar">Manage Player Avatar</a></li>
-                        <li><a href="#/sendplayeremail">Send Player eMail</a></li>
+                        <li><a class="collapsableNavbar" href="#/addmember">Add New Player</a></li>
+                        <li><a class="collapsableNavbar" href="#/updatemember">Manage Player Information</a></li>
+                        <li><a class="collapsableNavbar" href="#/addavatar">Manage Player Avatar</a></li>
+                        <li><a class="collapsableNavbar" href="#/sendplayeremail">Send Player eMail</a></li>
                         <li role="presentation" class="divider"></li>
                         <li role="presentation" class="disabled"><a style="color:teal;" href="">System Management</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a href="#/weeklyscripts">System Scripts</a></li>
+                        <li><a class="collapsableNavbar" href="#/weeklyscripts">System Scripts</a></li>
                     </ul>
                 </li>
             </ul>
@@ -155,7 +155,7 @@
             <ul style="float:right;padding-top:10px;" class="nav navbar-nav showPointer">
                 <li>
                     <div style="text-align:center;padding-top:30px;">
-                    <a id="menubaravatarimage" name="menubaravatarimage" href="#/memberupdatemember">
+                    <a id="menubaravatarimage" name="menubaravatarimage" class="collapsableNavbar" href="#/memberupdatemember">
                     <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
                     </a>
                     <br />

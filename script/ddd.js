@@ -58,6 +58,21 @@ function getUserAgent()
 	return { deviceName: deviceName, deviceType: deviceType };
 }
 
+function isMobile() {
+	var rval = 0;
+
+	var ua = getUserAgent();
+
+	// alert("User Agent:"+ ua.deviceName + " " + ua.deviceType);
+        
+    if (ua.deviceType == "Mobile" && ua.deviceName != "iPad")
+    {
+        rval = 1;
+    }
+
+    return rval;
+}
+
 function decodeHtmlString(str) {
 	var decodedStr = $("<div/>").html(str).text();
 

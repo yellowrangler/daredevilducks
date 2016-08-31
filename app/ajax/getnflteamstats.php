@@ -192,10 +192,10 @@ if ($rows == 0)
 	'0' as confties, 
 	'0' as conftotalgames, 
 	'0' as confpercent, 
-	'0.0%' as percentdisplay,
-	'0.0%' as homepercentdisplay,
-	'0.0%' as awaypercentdisplay,
-	'0.0%' as confpercentdisplay
+	'0.0' as percentdisplay,
+	'0.0' as homepercentdisplay,
+	'0.0' as awaypercentdisplay,
+	'0.0' as confpercentdisplay
 	FROM teamstbl tt
 	ORDER BY conference ASC, division ASC";
 	// print $sql;
