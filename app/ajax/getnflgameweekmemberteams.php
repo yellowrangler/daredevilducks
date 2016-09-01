@@ -168,7 +168,7 @@ LEFT JOIN teamweekstatstbl TSH ON TSH.teamid = G.hometeamid AND TSH.week = G.wee
 LEFT JOIN teamweekstatstbl TSA ON TSA.teamid = G.awayteamid AND TSA.week = G.week AND TSA.season = G.season
 WHERE G.season = '$season'
 AND G.week ='$week'
-ORDER BY G.gamedatetime";
+ORDER BY G.gamedatetime, TH.location";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
