@@ -92,6 +92,12 @@ function isSmall() {
 		rval = 1;
 	}
 
+	var m = isMobile();
+	if (m)
+	{
+		rval = 1;
+	}
+
     return rval;
 }
 
