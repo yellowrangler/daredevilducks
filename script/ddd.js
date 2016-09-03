@@ -11,21 +11,34 @@ $(document).ready( function(){
 
 function setviewpadding()
 {	
-	var navTypeMobile = isMobile();
-	var navTypeSmall = isSmall();
-
+	// var navTypeMobile = isMobile();
+	// var navTypeSmall = isSmall();
+	var navHeightNormal = 170;
 	var viewoffset = 0;
 
-	if (navTypeSmall || navTypeMobile) 
+	// var wd = windowDimentions();
+	// var navHeight = $("#navBarHeader").height();	
+
+	var navHeight = $("#nav-bar-menu-bar").height();
+
+	if (navHeight  > navHeightNormal) 
 	{
-	 	viewoffset = 0;
+	 	viewoffset = navHeight - navHeightNormal;
 	}
 	else
 	{
-		viewoffset = $("#navBarHeader").height() + 10;
+		viewoffset = navHeight;
 	}
 
+	viewoffset = navHeight;
+
 	setTimeout(function() { 
+		// $('html,body').animate({
+		// 	scrollTop: $('#ddd-view').position().top + viewoffset
+		// }, 1000);
+		// $('#ddd-view').animate({
+		// 	scrollTop: $('#ddd-view').offset().top + viewoffset
+		// }, 1000);
   		$( "#ddd-view" ).animate({paddingTop: viewoffset}, 1000);
 	}, 1000);
 
