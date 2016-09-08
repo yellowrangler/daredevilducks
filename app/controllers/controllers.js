@@ -1592,7 +1592,7 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
                 else
                 {
                     alert("Member added succesfully!");
-                    // $("#addmemberForm")[0].reset();
+                    $("#addmemberForm")[0].reset();
                 }
 
             })
