@@ -175,7 +175,9 @@ COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasontota
 COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasontotalgames,
 COALESCE(COUNT(gamenbr),0) as totalgames
 FROM gamestbl  
-WHERE season = $season and week  < $currentweek";
+WHERE season = $season and week  <= $currentweek";
+
+// Tarry changed from < to <= current week 09092016 because dirst week data not getting updated
 
 $sql_result_games = @mysql_query($sql, $dbConn);
 if (!$sql_result_games)

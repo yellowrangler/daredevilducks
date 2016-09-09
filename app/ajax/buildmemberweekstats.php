@@ -137,7 +137,8 @@ if (!$sql_result_prime)
 //---------------------------------------------------------------
 // get total weeks to date
 //---------------------------------------------------------------
-$sql = "SELECT MAX(week) as weeks
+$sql = "SELECT 
+COALESCE(MAX(week),1) AS weeks
 FROM gameweekstbl where season = $season
 AND weekend <= DATE_ADD(now(), INTERVAL 1 DAY)";
 

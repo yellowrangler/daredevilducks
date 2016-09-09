@@ -105,35 +105,102 @@ division,
 teamiconname,
 teamorder,
 teamurl,
-wins as teamwins,
-losses as teamlosses,
-ties as teamties,
-totalgames as teamtotalgames,
-percent as teampercent,
-homewins, 
-homelosses, 
-hometies, 
-hometotalgames, 
-homepercent, 
-awaywins, 
-awaylosses, 
-awayties, 
-awaytotalgames, 
-awaypercent, 
-confwins, 
-conflosses, 
-confties, 
-conftotalgames, 
-confpercent, 
-ROUND(CONCAT(percent * 100 , '%'),1) as percentdisplay,
-ROUND(CONCAT(homepercent * 100 , '%'),1) as homepercentdisplay,
-ROUND(CONCAT(awaypercent * 100 , '%'),1) as awaypercentdisplay,
-ROUND(CONCAT(confpercent * 100 , '%'),1) as confpercentdisplay
+COALESCE(percent,0) AS percent,
+
+COALESCE(wins,0) AS teamwins,
+COALESCE(losses,0) AS teamlosses,
+COALESCE(ties,0) AS teamties,
+COALESCE(totalgames,0) AS totalgames,
+COALESCE(percent,0) AS teampercent,
+
+COALESCE(homewins,0) AS homewins,
+COALESCE(homelosses,0) AS homelosses,
+COALESCE(hometies,0) AS hometies,
+COALESCE(hometotalgames,0) AS hometotalgames,
+COALESCE(homepercent,0) AS homepercent,
+
+COALESCE(awaywins,0) AS awaywins,
+COALESCE(awaylosses,0) AS awaylosses,
+COALESCE(awayties,0) AS awayties,
+COALESCE(awaytotalgames,0) AS awaytotalgames,
+COALESCE(awaypercent,0) AS awaypercent,
+
+COALESCE(confwins,0) AS confwins,
+COALESCE(conflosses,0) AS conflosses,
+COALESCE(confties,0) AS confties,
+COALESCE(conftotalgames,0) AS conftotalgames,
+COALESCE(confpercent,0) AS confpercent,
+
+CASE percent WHEN NULL THEN '0.0'
+ELSE ROUND(CONCAT(percent * 100 , '%'),1) 
+END AS percentdisplay,
+
+CASE homepercent WHEN NULL THEN '0.0'
+ELSE ROUND(CONCAT(homepercent * 100 , '%'),1) 
+END AS homepercentdisplay,
+
+CASE awaypercent WHEN NULL THEN '0.0'
+ELSE ROUND(CONCAT(awaypercent * 100 , '%'),1) 
+END AS awaypercentdisplay,
+
+CASE confpercent WHEN NULL THEN '0.0'
+ELSE ROUND(CONCAT(confpercent * 100 , '%'),1) 
+END AS confpercentdisplay
+
 FROM teamstbl tt
 LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = $season
 WHERE ts.season = '$season' and ts.gametypeid = $gametypeid
-ORDER BY conference ASC, division ASC, percent DESC";
+
+UNION ALL
+
+SELECT DISTINCT
+	tt.id as teamid, 
+	location as teamlocation, 
+	name as teamname, 
+	' ' as postseasonstatus,
+	league, 
+	conference, 
+	division,
+	teamiconname,
+	teamorder,
+	teamurl,
+	'0' as percent,
+
+	'0' as teamwins,
+	'0' as teamlosses,
+	'0' as teamties,
+	'0' as teamtotalgames,
+	'0' as teampercent,
+
+	'0' as homewins, 
+	'0' as homelosses, 
+	'0' as hometies, 
+	'0' as hometotalgames, 
+	'0' as homepercent, 
+
+	'0' as awaywins, 
+	'0' as awaylosses, 
+	'0' as awayties, 
+	'0' as awaytotalgames, 
+	'0' as awaypercent, 
+
+	'0' as confwins, 
+	'0' as conflosses, 
+	'0' as confties, 
+	'0' as conftotalgames, 
+	'0' as confpercent, 
+
+	'0.0' as percentdisplay,
+	'0.0' as homepercentdisplay,
+	'0.0' as awaypercentdisplay,
+	'0.0' as confpercentdisplay
+	FROM teamstbl tt
+	LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+	LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = $season
+	WHERE tss.id IS NULL
+
+	ORDER BY conference ASC, division ASC, percent DESC";
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);

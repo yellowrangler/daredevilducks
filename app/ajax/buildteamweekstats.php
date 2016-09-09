@@ -84,31 +84,31 @@ $games = 0;
 $wins = 0;
 $losses = 0;
 $ties = 0;
-$percentage = 0;
+$percent = 0;
 
 $homegames = 0;
 $homewins = 0;
 $homelosses = 0;
 $hometies = 0;
-$homepercentage = 0;
+$homepercent = 0;
 
 $awaygames = 0;
 $awaywins = 0;
 $awaylosses = 0;
 $awayties = 0;
-$awaypercentage = 0;
+$awaypercent = 0;
 
 $confgames = 0;
 $confwins = 0;
 $conflosses = 0;
 $confties = 0;
-$confpercentage = 0;
+$confpercent = 0;
 
 $divgames = 0;
 $divwins = 0;
 $divlosses = 0;
 $divties = 0;
-$divpercentage = 0;
+$divpercent = 0;
 
 //
 // connect to db
@@ -140,7 +140,8 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //
 // get total weeks to date
 //
-$sql = "SELECT MAX(week) as weeks
+$sql = "SELECT 
+COALESCE(MAX(week),1) AS weeks
 FROM gameweekstbl where season = $season
 AND weekend <= '$enterdateTS'";
 
@@ -160,6 +161,7 @@ if (!$sql_result)
 $r = mysql_fetch_assoc($sql_result);
 $weekstotal = $r[weeks];
 
+// echo "<br>timestamp: $enterdateTS<br/><br/>";
 // echo "<br />weekstotal: $weekstotal <br /><br />";
 
 //---------------------------------------------------------------
@@ -199,39 +201,43 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	$wins = 0;
 	$losses = 0;
 	$ties = 0;
-	$percentage = 0;
+	$percent = 0;
 
 	$homegames = 0;
 	$homewins = 0;
 	$homelosses = 0;
 	$hometies = 0;
-	$homepercentage = 0;
+	$homepercent = 0;
 
 	$awaygames = 0;
 	$awaywins = 0;
 	$awaylosses = 0;
 	$awayties = 0;
-	$awaypercentage = 0;
+	$awaypercent = 0;
 
 	$confgames = 0;
 	$confwins = 0;
 	$conflosses = 0;
 	$confties = 0;
-	$confpercentage = 0;
+	$confpercent = 0;
 
 	$divgames = 0;
 	$divwins = 0;
 	$divlosses = 0;
 	$divties = 0;
-	$divpercentage = 0;
+	$divpercent = 0;
 
 	$teamid = $row['id'];
+
+	// echo "<br />weekstotal2: $weekstotal<br />";
 
 	//
 	// for every week get totals
 	//
 	for ($week = 1; $week <= $weekstotal; $week++)
 	{
+
+		// echo "<br />week loop: $week<br />";
 
 		//
 		// wins
@@ -615,7 +621,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
     		exit($msg);
 		}	
 
-			//
+		//
 		// union 5 selects to get total, home, away, conf and div ties
 		//
 		$idx = 0;
@@ -633,6 +639,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		$awayties = $tiesArray[2];
 		$confties = $tiesArray[3];
 		$divties = $tiesArray[4];
+
 
 		// $regularseasonties = $regularseasontiesArray[0];
 		// $regularseasonhometies = $regularseasontiesArray[1];
@@ -758,7 +765,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			AND week = $week
 			AND season = $season";
 
-		// echo "sql = $sql<br />";
+			// debug
+			// echo "sqlupdate = $sql<br />";
 
 		$sql_r = @mysql_query($sql, $dbConn);
 		if (!$sql_r)
@@ -795,7 +803,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				season = $season, enterdate = '$enterdateTS' 
 				WHERE teamid = $teamid AND week = $week AND season = $season";
 
-				//echo "sql = $sql<br />";
+				// debug
+				// echo "loopsql = $sql<br />";
 
 			// $sql_r = @mysql_query($sql, $dbConn);
 			// if (!$sql_r)
