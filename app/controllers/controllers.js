@@ -2114,6 +2114,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
         nflteamsFactory.getNFLGamesTeams($scope.current.season)
             .success( function(data) {
+                // $scope.gridOptionsGames.colFilter.term = $scope.current.season;
                 $scope.nflgames = data; 
                 $scope.gridOptionsGames.data = data;
             })

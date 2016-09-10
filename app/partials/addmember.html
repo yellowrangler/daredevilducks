@@ -166,7 +166,11 @@
               <div class="form-group">
                   <label for="passwd" class="col-md-2 control-label">Password</label>
                   <div class="col-md-5">
-                      <input tabindex="13" type="password" class="form-control" id="passwd" name="passwd" placeholder="Password">
+                      <input tabindex="13" ng-model="current.passwd" type="password" class="form-control" id="passwd" name="passwd" placeholder="Password">
+                  </div>
+
+                  <div class="col-md-4">
+                      <input tabindex="17" type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
                   </div>
               </div> <!-- end of form-group -->
 
