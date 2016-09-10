@@ -64,7 +64,9 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 // Get memberid password for compare.
 //---------------------------------------------------------------
-$sql = "SELECT id AS memberid,screenname,membername,avatar,passwd,role,status FROM membertbl WHERE screenname = '$loginscreenname'";
+$sql = "SELECT id AS memberid,screenname,membername,avatar,passwd,role,status 
+FROM membertbl 
+WHERE status = 'active' AND screenname = '$loginscreenname'";
 // print $sql;
 
 $rc = 1;

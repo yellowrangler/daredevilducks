@@ -115,10 +115,10 @@ $gamesleftinweek = $r['gamesleftinweek'];
 //---------------------------------------------------------------
 // get all member picks for week going forward with member list
 //---------------------------------------------------------------
-$sql = "SELECT memberid, membername, screenname, email 
+$sql = "SELECT memberid, membername, screenname, email, status 
 	FROM
 	(
-		SELECT id as memberid, membername, screenname, email,
+		SELECT id as memberid, membername, screenname, email, status,
 		CASE WHEN MSEL.memberpicks IS NULL
 		THEN 0
 		ELSE MSEL.memberpicks
@@ -145,7 +145,8 @@ $sql = "SELECT memberid, membername, screenname, email
 		) MSEL ON MSEL.memberid = M.id
 		GROUP BY M.id
 	) MSEL2
-	WHERE MSEL2.memberpickstatus = 'Lackard'
+	WHERE MSEL2.status = 'active'
+	AND MSEL2.memberpickstatus = 'Lackard'
 	ORDER BY $orderby ASC";
 // print $sql;
 

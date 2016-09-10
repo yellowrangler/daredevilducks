@@ -1987,6 +1987,7 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
 controllers.gameinfoController = function ($scope, $http, $log, $location, uiGridConstants, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
+    $scope.current.week = nflTeamsService.getCurrentWeek();
     $scope.teams = {};
 
     var seasonHeaderCellTemplate = '<div ng-click="col.sort()" ng-class="{ ngSorted: !noSortVisible }">'+
@@ -2114,6 +2115,14 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
         nflteamsFactory.getNFLGamesTeams($scope.current.season)
             .success( function(data) {
+                $scope.gridApi.grid.columns[0].filters[0] = {
+                    term: $scope.current.season
+                  };
+
+                $scope.gridApi.grid.columns[1].filters[0] = {
+                    term: $scope.current.week
+                  }; 
+
                 // $scope.gridOptionsGames.colFilter.term = $scope.current.season;
                 $scope.nflgames = data; 
                 $scope.gridOptionsGames.data = data;

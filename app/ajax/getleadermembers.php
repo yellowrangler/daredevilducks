@@ -82,7 +82,8 @@ $sql = "SELECT
   M.screenname as screenname
 FROM memberstatstbl MS 
 LEFT JOIN membertbl M ON M.id = MS.memberid
-WHERE MS.season = '$season' AND gametypeid = $gametypeid";
+WHERE M.status = 'active'
+AND MS.season = '$season' AND gametypeid = $gametypeid";
 
 if ($leaderType == 'pickingpercent')
 {

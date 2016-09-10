@@ -75,11 +75,11 @@ if (!mysql_select_db($DBschema, $dbConn))
 //---------------------------------------------------------------
 if ($memberid != "")
 {
-	$sql = "SELECT *  FROM membertbl WHERE id = '$memberid'";
+	$sql = "SELECT *  FROM membertbl WHERE id = '$memberid' AND status = 'active'";
 }
 else
 {
-	$sql = "SELECT *  FROM membertbl WHERE membername = '$membername'";
+	$sql = "SELECT *  FROM membertbl WHERE membername = '$membername'  AND status = 'active'";
 }
 
 // print $sql;
