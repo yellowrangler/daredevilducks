@@ -267,6 +267,24 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.getAllMembers = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getallmembers.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getAllMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getallmember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.addMember = function (data) {
         return $http({ 
             method: 'POST', 

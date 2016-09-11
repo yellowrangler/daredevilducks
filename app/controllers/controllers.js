@@ -1697,7 +1697,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
 
         $scope.teams = nflTeamsService.getNFLTeams(); 
         
-        membersFactory.getMembers()
+        membersFactory.getAllMembers()
             .success( function(data) {
                 $scope.members = data; 
             })
@@ -1706,10 +1706,10 @@ controllers.updatememberController = function ($scope, $http, $location, members
             });   
     };
 
-    $scope.getMember = function(data) {
+    $scope.getAllMember = function(data) {
     
         var membername = "membername="+data;
-        membersFactory.getMember(membername)
+        membersFactory.getAllMember(membername)
         .success( function(data) {
             $scope.current = data;
 

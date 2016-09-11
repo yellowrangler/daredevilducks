@@ -13,7 +13,7 @@
               <div class="form-group" >
                 <label for="membername" class="col-md-2 control-label">Name</label>
                 <div class="col-md-5">
-                  <select tabindex="1"  class="form-control" ng-change="getMember(current.membername)" ng-model="current.membername" id="membername" name="membername">
+                  <select tabindex="1"  class="form-control" ng-change="getAllMember(current.membername)" ng-model="current.membername" id="membername" name="membername">
                     <option ng-repeat="member in members" value="{{member.membername}}">{{member.membername}}</option>
                   </select>
                   <input type="hidden" value="{{current.id}}" id="id" name="id">
