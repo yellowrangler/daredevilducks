@@ -95,7 +95,8 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //---------------------------------------------------------------
 // Get nfl team statistical information
 //---------------------------------------------------------------
-$sql = "SELECT tt.id as teamid, 
+$sql = "SELECT DISTINCT 
+tt.id as teamid, 
 location as teamlocation, 
 name as teamname, 
 tss.postseasonstatus as postseasonstatus,
@@ -198,7 +199,14 @@ SELECT DISTINCT
 	FROM teamstbl tt
 	LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
 	LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = $season
-	WHERE tss.id IS NULL
+	WHERE tt.id NOT IN (
+	SELECT DISTINCT 
+		tt.id as teamid
+		FROM teamstbl tt
+		LEFT JOIN teamstatstbl ts ON tt.id = ts.teamid
+		LEFT JOIN teamseasontbl tss ON tt.id = tss.teamid AND tss.season = 2016
+		WHERE ts.season = '2016' and ts.gametypeid = 2
+	)
 
 	ORDER BY conference ASC, division ASC, percent DESC";
 // print $sql;
