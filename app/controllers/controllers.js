@@ -2589,7 +2589,11 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         //
         url = "emailforms/" + $scope.current.emailtemplate;
         $.get(url, null, function (data) {
-            $("#emailmessage").val(data)
+            var title = data.split("\n")[0];
+            $("#emailsubject").val(title);
+
+            var body = data.replace(title+"\n","");
+            $("#emailmessage").val(body);
         })
     }
 
