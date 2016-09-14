@@ -1,0 +1,77 @@
+<form id="pickweekForm" name="pickweekForm">
+<div class="pageCaption row">
+	<div style="display:inline;"  class="col-md-12">
+		<h2 class="headerTitle">Players Picks for Week by Team</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.season"  id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="gametypeid" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
+				            <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->   
+
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset">
+		<div class="pickTeamsList" ng-repeat="game in games">
+			<div class="pickTeamsPair" >
+				<div class="row" >
+					<div style="display:inline-block;line-height:50px;" class="col-md-offset-1 ">&nbsp;</div>
+
+					<div style="display:inline-block;line-height:50px;"  class="col-md-offset-1 col-md-4">
+						<a ng-href="{{game.hometeamurl}}" target="_blank">
+							<img height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+						</a>
+					</div>
+
+					<div style="display:inline-block;line-height:50px;" class="col-md-5">
+						{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)
+					</div>
+					
+					<div style="display:inline-block;line-height:50px;"  class="center-column-text col-md-2" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcounthome}}
+					</div>
+				</div> <!-- end of row -->
+
+			<div class="row">
+				<div style="display:inline-block;line-height:50px;" class="col-md-offset-1 ">&nbsp;</div>
+
+				<div style="display:inline-block;line-height:50px;" class="col-md-4">
+					<a ng-href="{{game.awayteamurl}}" target="_blank">
+						<img height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+					</a>
+				</div>
+
+				<div style="display:inline-block;line-height:50px;"  class="col-md-5">
+					{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)
+				</div>
+
+				<div style="display:inline-block;line-height:50px;" class="center-column-text col-md-2" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcountaway}}
+				</div>
+			</div> <!-- end of row -->
+
+		</div>	<!-- end of pickTeamsPair -->
+
+		<hr>
+		
+	</div> <!-- end of pickTeamsList -->		
+
+</div> <!-- end of pageStandardOffset -->
+</form>

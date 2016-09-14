@@ -1,0 +1,181 @@
+<div class="pageCaption row">
+	<div class="col-md-6">
+		<h2 class="headerTitle">System Scripts</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">System Scripts</h3>
+			</div>
+
+			<div class="panel-body">
+				<div class="panel-group" id="scriptgroup">
+					<div class="panel panel-default">
+					<form id="rungamescriptsForm" name="rungamescriptsForm" class="form-horizontal">
+						<div style="background-color:#DBF0EF;" class="panel-heading" id="rungamescriptsheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#rungamescript">
+								Run Game Scripts
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="rungamescript" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="systemscriptsseason">Season</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.season" class="form-control" id="systemscriptsseason" name="systemscriptsseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="systemscriptsweeksinregularseason">Regular Season Weeks</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.weeksinregularseason" class="form-control" id="systemscriptsweeksinregularseason" name="systemscriptsweeksinregularseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="systemscriptsweeksinplayoffseason">Playoff Season Weeks</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.weeksinplayoffseason" class="form-control" id="systemscriptsweeksinplayoffseason" name="systemscriptsweeksinplayoffseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<!-- <div class="form-group">
+									<label class="col-md-4 control-label" for="systemscriptsgametype">Game Type</label>
+									<div class="col-md-5">
+										<select class="form-control" ng-model="current.gametypeid"  id="systemscriptsgametype" name="systemscriptsgametype">
+						                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+					                    </select>
+									</div>
+								</div> --> <!-- end of form group -->
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="runGameScripts()" id="systemscriptsbutton" name="systemscriptsbutton"  class="btn btn-primary">Run Game Scripts</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form horizontal -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="dumpdatabaseForm" name="dumpdatabaseForm" class="form-horizontal">
+						<div style="background-color:#F0F0DB;" class="panel-heading" id="dumpdatabaseheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#dumpdatabase">
+								Dump Data Base
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="dumpdatabase" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="dumpdatabaselabel">Dump File Label</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.dumpdatabaselabel" class="form-control" id="dumpdatabaselabel" placeholder="">
+									</div>
+								</div> <!-- end of form group -->						
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="buildMySqlDump()" id="dumpdatabaselabelbutton" class="btn btn-primary">Dump Database</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->	
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="importteamweeklyrankForm" name="importteamweeklyrankForm" class="form-horizontal">
+						<div style="background-color:#FCE4DF;" class="panel-heading" id="importteamweeklyrankheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#importteamweeklyrank">
+								Import Team Weekly Ranking
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="importteamweeklyrank" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="importteamweeklyrankfile">Import File Name</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.importteamweeklyrankfile" class="form-control" id="importteamweeklyrankfile" placeholder="">
+									</div>
+								</div> <!-- end of form group -->						
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="importTeamWeeklyRank()" id="importteamweeklyrankbutton" class="btn btn-primary">Import File Name</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->	
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="runphpmoduleForm" name="runphpmoduleForm" class="form-horizontal">
+						<div style="background-color:#ADDDCF;" class="panel-heading" id="runphpmoduleheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#runphpmodulegroup" data-target="#runphpmodule">
+								Run PHP Module
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="runphpmodule" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="runphpmodule">PHP Module</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.runphpmodule" class="form-control" id="runphpmodule" name="runphpmodule" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<!-- <div class="form-group">
+									<label class="col-md-4 control-label" for="runphpmoduleparm">Parm</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.runphpmoduleparm" class="form-control" id="runphpmoduleparm" placeholder="">
+									</div>
+								</div> --> <!-- end of form group -->						
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="runPhpModule()" id="runphpmodulebutton" class="btn btn-primary">Run PHP</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->	
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+				</div> <!-- end of panel group -->
+			</div> <!-- end of panel body -->
+		</div> <!-- end of panel primary -->						
+	</div> <!-- end of column -->
+
+	<!-- Detail Data -->
+	<div style="padding-right:25px;"  class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+		        <h3 class="panel-title">Script Messages</h3>
+		      </div>
+
+		      <div class="panel-body">
+				<div class="pageStandardOffset">
+					<div id="scriptMessagesDisplay" name="scriptMessagesDisplay" class="ScriptscrollClass"></div>
+				</div> 	<!-- end of offset -->
+			</div> <!-- end of panel body -->
+		</div> <!-- end of panel -->
+	</div> <!-- end of column -->
+</div> <!-- end of row -->	

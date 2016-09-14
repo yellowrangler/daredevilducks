@@ -1,0 +1,64 @@
+<div class="pageCaption row">
+  <div style="padding-bottom:25px;"  class="col-md-5">
+    <h2 style="display:inline;" class="headerTitle">NFL Headlines</h2>
+
+    <span style="font-weight:bold;float:right;" >
+      <button  class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Refresh News</button>
+    </span>  
+  </div> <!-- end of col -->  
+</div> <!-- end of row -->   
+
+ <div style="padding-top:25px;" class="row">
+  <div class="col-md-5">
+    <div class="pageStandardOffset row">
+      <div ng-repeat="nflnew in nflnews" class="panel panel-default">
+        <div class="panel-body table-responsive">
+          <table >
+            <tr style="padding:15px;">
+              <td style="vertical-align:top">
+                <div style="text-align:top;font-weight:bold; color:maroon;" >
+                  Headline:
+                </div>
+              </td>
+              <td>  
+                <div style="color:teal;" >
+                  {{nflnew.title}}
+                </div>
+              </td> 
+            </tr>
+
+            <tr style="padding:15px;">
+              <td style="vertical-align:top">    
+                <div style="text-align:top;font-weight:bold; color:maroon;" >
+                  Published:
+                </div>
+              </td>
+              <td>
+                <div style="color:teal;" >
+                  {{nflnew.publishedDate}}
+                </div>
+              </td>
+            </tr>
+            
+            <tr >  
+              <td >  
+                <div style="padding-top:25px;">
+                   <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link)"  >Read More</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div> <!-- end of body -->
+      </div> <!-- end of panel -->
+    </div> <!-- end of row -->
+  </div> <!-- end of col 5 -->
+
+  <div class="col-md-6">
+    <div class="pageStandardOffset row">
+        <div id="newsdetailDiv" ng-if="newsdetail" style="position: fixed; height:{{divheight}}px;width:{{divwidth}}px;">
+          <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>
+    </div> <!-- end of row -->
+  </div> <!-- end of col 6 -->  
+</div> <!-- end of row -->   
+
+<div class="row" style="padding-bottom:300px;">&nbsp;</div><!-- end of row -->  

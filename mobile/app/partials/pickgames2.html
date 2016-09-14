@@ -1,0 +1,123 @@
+<form id="pickweekForm" name="pickweekForm">
+<div class="pageCaption row">
+	<div style="display:inline;" class="col-md-12">
+		<h2 style="display:inline;" class="headerTitle">Pick Your Teams</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<div class="col-md-12 form-inline">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+						<label for="memberid" class="control-label">Player</label>
+				        <select class="customSelect form-control" ng-change="getMemberWeekPicks('member')" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
+				            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks('season')" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="week" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks('week')" ng-model="current.week" id="week" name="week">
+			                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group --> 
+				</div> <!-- end of panel body -->		
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset">
+	<div class="pickTeamsList" ng-repeat="game in games">
+		<div class="pickTeamsPair" >
+			<div class="row" >
+				<div style="display:inline-block;line-height:50px;" class="col-md-offset-1 ">&nbsp;</div>
+
+				<div style="display:inline-block;line-height:50px;"  class="col-md-offset-1 col-md-4" id='pickh_{{game.gamenbr}}_icon'>
+				    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
+				
+					<img style="display:inline-block;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+				</div>
+
+				<div style="display:inline-block;line-height:50px;" class="col-md-5" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
+					{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)
+				</div>
+				
+				<div style="display:inline;line-height:50px;"  class="center-column-text col-md-2" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">{{game.hometeamscore}} 
+				</div>
+			</div> <!-- end of row -->
+
+			<div class="row">
+				<div style="display:inline-block;line-height:50px;" class="col-md-offset-1 ">&nbsp;</div>
+
+				<div style="display:inline-block;line-height:50px;" class="col-md-4" id='picka_{{game.gamenbr}}_icon' >
+				    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
+				
+					<img style="display:inline;line-height:50px;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+				</div>
+
+				<div style="display:inline-block;line-height:50px;"  class="col-md-5" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
+					{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)
+				</div>
+
+				<div style="display:inline-block;line-height:50px;" class="center-column-text col-md-2" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">{{game.awayteamscore}}
+				</div>
+			</div> <!-- end of row -->
+
+		</div>	<!-- end of pickTeamsPair -->
+
+		<hr>
+
+	</div> <!-- end of pickTeamsList -->
+
+</div> <!-- end of pageStandardOffset -->
+
+<div style="padding-top:15px; padding-bottom:20px;" class="row">
+	<div class="col-md-offset-1  col-md-4">
+		<button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block" ng-click="saveGames()" id="saveGamesBottom" name="saveGamesBottom">Save Picks</button>
+	</div><!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+
+<!-- dialogs -->
+<div class="modal fade" id="gamesSavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gamesSavedDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="gamesSavedDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="gamesSavedDialogModalLabelBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="modal fade" id="teamStatsDialogModal" tabindex="-1" role="dialog" aria-labelledby="teamStatsDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="teamStatsDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="teamStatsDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  

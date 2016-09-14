@@ -1,0 +1,38 @@
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2 class="headerTitle">Playoff Brackets</h2> 
+	</div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<div class="row">
+	<form id="teamstandingForm" name="teamstandingForm" style="padding:0px;" class="form-inline">
+	<div style="padding-top:15px;" class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season </label>
+			            <select class="customSelect form-control" ng-change="selectChange()" ng-model="current.season" id="season" name="season">
+	            			<option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+	        			</select>
+					</div> <!-- end of form-group -->
+				</div> <!-- end of panel body -->			
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of col -->
+	</form>
+</div> <!-- end of row -->
+
+<div ng-if="bracketimg.length" class="pageStandardOffset row">
+	<div class="col-md-12">
+		<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="img/{{bracketimg}}">
+  	</div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<div style="padding-top:50px;text-align:center;" ng-if="!bracketimg.length" class="pageStandardOffset row">
+	<div class="col-md-12">
+		<span style="color:red;font-size:x-large; font-weight:bold;">Not yet!</span>
+  	</div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<div style="padding-bottom:50px;">&nbsp;</div>

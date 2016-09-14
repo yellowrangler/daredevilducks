@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="dddAppMobile">
+<head>
+<title>Dare Devil Ducks League</title>
+<meta name="description" content="Dare Devil Ducks League Mobile">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="img/ddd-url-img.ico" /> 
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<link href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700'|Damion|Pacifico|Lusitana|Balthazar|Josefin+Sans" type="text/css" rel="stylesheet" >
+<link href="css/dddMobile.css" rel="stylesheet" />
+
+<!-- Vendor Libs -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    
+<!-- UI Libs -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- App libs -->
+<script src="app/dddAppMobile.js"></script>
+<script src="app/controllers/controllers.js"></script>
+<script src="app/factories/factories.js"></script>
+<script src="app/services/dddservice.js"></script>
+<script src="app/directives/directives.js"></script>
+<script src="app/validations/validate.js"></script>
+
+<script src="script/dddMobile.js"></script>
+</head>
+
+<body style="background:white;" data-ng-controller="dddParentController" >
+
+<nav id="nav-bar-menu-bar" style="height:80px;" role="navigation" class="customNavbar navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div id="navBarHeader" class="navbar-header">
+            <a class="navbar-brand" href="#/home"><img style="vertical-align:middle;height:70px;display:inline;" class="" src="../img/buttons/home.png"><span style="color:maroon;padding-left:15px;font-weight:700;">Dare Devile Ducks</span></a>
+        </div>
+    </div>
+</nav>
+
+<div id="ddd-view" style="background:white;" data-ng-view="" class="topPagePosition"></div>
+
+<div class="ddd-footer" style="text-align:center;">
+    <a id="menubaravatarimage" name="menubaravatarimage" href="#/memberupdatemember">
+    <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="../img/avatars/{{memberavatar}}">
+    </a>
+    <br />
+    <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
+</div> <!-- end of footer -->
+
+</body>
+</html>

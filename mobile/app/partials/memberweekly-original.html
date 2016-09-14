@@ -1,0 +1,60 @@
+
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2>Player Weekly Totals</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<form id="pickweekForm" name="pickweekForm" style="padding:10px;" class="form-inline">
+<div class="pageStandardOffset row">
+	<div class="col-md-2">
+		<div class="form-group horizontalFieldOffset">
+	    	<label for="season" class="control-label">Season</label>
+	        <select class="form-control" ng-change="getMemberWeekStats()" ng-model="current.season"  id="season" name="season">
+	            <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+	        </select>
+		</div> <!-- end of form-grroup -->
+	</div> <!-- end of col 2 -->
+
+	<div class="col-md-9">
+		<div style="padding-left:15px;">
+		<table class="MemberWeeklyTableHdr">
+			<tr style="height:35px;">
+				<th style="width:10%;">Week</th>
+				<th style="width:40%;text-align: center; " >Dates</th>
+				<th style="width:35%;text-align: center; " >Player</th>			
+				<th style="width:15%;text-align: center;" >W - L - T</th>
+			</tr>
+		</table>
+		</div>
+	</div> <!-- end of col 9 -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<div class="scrollClass col-md-offset-2 col-md-9">
+		<div style="padding-left:30px;">
+		<table class="MemberWeeklyTable">
+			<tr ng-repeat="memberweekstat in memberweekstats">
+				<td style="width:10%;" class="center-column-text">
+					{{memberweekstat.week}}
+				</td>
+
+
+				<td style="width:35%;" class="left-column-text">
+	                {{memberweekstat.weekstart}} thru {{memberweekstat.weekend}}
+				</td>
+
+				<td  style="width:25%;" class="left-column-text" >
+	                <img style="height:40px;" ng-show="memberweekstat.memberavatar != ''" ng-src="img/avatars/{{memberweekstat.memberavatar}}"> {{memberweekstat.screenname}}
+				</td>
+
+				<td  style="width:30%;" class="center-column-text">
+					{{memberweekstat.wins}} - {{memberweekstat.losses}} - {{memberweekstat.ties}}
+				</td>
+			</tr>
+		</table>
+		</div>				
+	</div> <!-- end of col 9 -->
+</div> <!-- end of row -->
+</form>
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

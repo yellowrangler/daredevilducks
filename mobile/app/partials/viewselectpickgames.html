@@ -1,0 +1,186 @@
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2 class="headerTitle">Player's Picks for Week</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="row">
+	<form id="pickweekForm" name="pickweekForm" class="form-inline">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+
+					<div class="form-group horizontalFieldOffset">
+						<label for="memberid" class="control-label">Player</label>
+				        <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
+				            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.season"  id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="gametypeid" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
+				            <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->     
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of col 7 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-10">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th>Game Day</th>			
+						<th colspan=2>Home Team</th>
+						<th>Score</th>	
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>								
+						<th colspan=2>Away Team</th>
+						<th>Score</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>						
+					</tr>
+
+					<tr ng-repeat="game in games">
+						<td class="left-column-text">
+							<div>{{game.gameday}}</div>
+							<div>{{game.gametime}}</div>
+						</td>
+
+						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							<a ng-href="{{game.hometeamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+							</a>
+						</td>
+
+						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+						</td>
+
+						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
+
+						<td class="center-column-text">
+							   {{game.homewins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.homelosses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.hometies}}
+						</td>
+
+						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							<a ng-href="{{game.awayteamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+							</a>
+						</td>
+
+						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+						</td>
+
+						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
+
+						<td class="center-column-text">
+							   {{game.awaywins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.awaylosses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{game.awayties}}
+						</td>
+					</tr>
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->				
+	</div> <!-- end of col 10 -->
+
+	<div style="display:inline;" class="col-md-2">
+		<div style="padding-top:5px;">
+			<div style="width:100%;" class="form-group">
+	            <img style="height:100px;" class="center-block"  ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+			</div>  
+
+			<div style="padding-top:10px;width:100%;width:100%;text-align:center;font-weight:bold;padding:10px;" class="form-group teamSelected">
+		        Selected
+		    </div>  
+
+			<div style="padding-top:10px;width:100%;width:100%;text-align:center;padding:10px;font-weight:bold;" class="form-group teamWon">    
+		        Winner
+	        </div> 
+        </div>
+		<img style="height:235px;padding-top:35px;" class="center-block img-rounded" ng-src="img/viewselectpicks.png">
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div ng-if="byegames.length" class="pageStandardOffset row">
+	<div class="col-md-5">
+		<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
+	</div> <!-- end of col 4 -->
+
+	<div class="col-md-5">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th colspan=5>Bye Teams for Week</th>
+					</tr>
+
+					<tr>
+						<th colspan=2>Team</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>		
+					</tr>
+
+					<tr ng-repeat="byegame in byegames">
+						<td class="left-column-text">
+							<a ng-href="{{byegame.teamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{byegame.teamiconname}}'>
+							</a>
+						</td>
+
+						<td class="left-column-text">
+							{{byegame.teamlocation}} &nbsp; {{byegame.teamname}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.wins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.losses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.ties}}
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
+	</div> <!-- end of col 6 -->
+</div> <!-- end of row -->
+</form>
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

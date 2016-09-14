@@ -1,0 +1,361 @@
+<div class="pageCaption row">
+	<div class="col-md-5">
+		<h2 class="headerTitle">Team Weekly Ranking</h2>
+
+		<div class="pageStandardOffset">	
+			<div style="padding-top:45px;">
+				<a ng-href="{{current.team.teamurl}}" target="_blank">
+								<img height="90" ng-src='img/nflicons/{{current.team.teamiconname}}'>
+								</a>
+				<span style="font-size:20px;font-weight:bold;color:black;">{{current.team.location}} {{current.team.name}}</span>				
+			</div>				
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of column -->
+
+	<form id="teamweeklyrankForm" name="teamweeklyrankForm" class="form-inline">
+	<div class="col-md-4">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div style="padding-top:120px;" class="form-group horizontalFieldOffset">
+						<label for="teamid" class="control-label">Team</label>
+				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
+				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+				        </select>
+					</div> <!-- end of form-group --> 
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of col 9 -->
+
+	<div class="col-md-3">	
+		<img style="float:right;height:175px;padding-right:25px;"  class="centeredImage" ng-src="img/teamweeklyranking.png">
+	</div> <!-- end of col 4 -->
+</div> <!-- end of row -->
+
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverride">
+			<div class="panelBodyOverride table-responsive">
+				<table id="TeamWeeklyRankings" class="table teamWeeklyRankings" >
+					<tr class="tableTitleNoBorder">
+						<th class="tableTitle">Week</th>
+						<th class="tableTitle" colspan=2>Team's</th>
+						<th class="tableTitle">Score</th>
+						<th class="tableTitle" colspan=3>&nbsp;</th>						
+						<th class="powerRankingTitle">&nbsp;</th>			
+						<th class="offenceTitle" colspan=4>Offensive Stats</th>
+						<th class="defenceTitle" colspan=4>Defensive Stats</th>		
+					</tr>
+					<tr class="tableTitleNoBorder">
+						<th class="tableTitle" >
+							<button id="teamRankSortButton" type="button" class="btn btn-default" ng-click="toggleSort()" aria-label="Left Align">
+							  <span class="glyphicon" id="teamRankSort"></span>
+							</button>
+						</th>			
+						<th class="tableTitle" colspan=2>
+							<div>Top - Home</div> 
+							<div>Bottom - Away</div>
+						</th>
+						<th class="tableTitle" >&nbsp;</th>	
+						<th class="tableTitle" >W</th>
+						<th class="tableTitle" >L</th>
+						<th class="tableTitle" >T</th>								
+						<th class="powerRankingTitle">PR</th>
+						<th class="offenceTitle">OO</th>
+						<th class="offenceTitle">OS</th>
+						<th class="offenceTitle">OP</th>
+						<th class="offenceTitle">OR</th>
+						<th class="defenceTitle">DO</th>
+						<th class="defenceTitle">DS</th>
+						<th class="defenceTitle">DP</th>
+						<th class="defenceTitle">DR</th>						
+					</tr>
+					<tr ng-repeat="teamweekrank in teamweekranks">
+						<td style="font-size:25px;font-weight: bold;padding-top:55px;"class="center-column-text">
+							{{teamweekrank.week}}
+						</td>
+
+						<td class="left-column-text" >
+						<div style="padding:5px;height:60px;width:76px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv">
+							<a ng-href="{{teamweekrank.hometeamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{teamweekrank.hometeamiconname}}'>
+							</a>
+						</div>
+
+						<div style="padding:5px;height:60px;width:76px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-if="teamweekrank.awayteamiconname != 'B' ">
+							<a ng-href="{{teamweekrank.awayteamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{teamweekrank.awayteamiconname}}'>
+							</a>
+						</div>
+						</td>
+
+						<td class="left-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv" ng-class="{{teamweekrank.hometeamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.hometeamlocation}} &nbsp; {{teamweekrank.hometeamname}}
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-class="{{teamweekrank.awayteamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.awayteamlocation}} &nbsp; {{teamweekrank.awayteamname}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamscorediv" name="hometeamscorediv" ng-class="compareScores( 'home', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+							{{teamweekrank.hometeamscore}}
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamscorediv" name="awayteamscorediv" ng-class="compareScores( 'away', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+							{{teamweekrank.awayteamscore}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamwinsdiv" name="hometeamwinsdiv" >
+							{{teamweekrank.hometeamwins}}
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamwinsdiv" name="awayteamwinsdiv">
+							{{teamweekrank.awayteamwins}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamlossesdiv" name="hometeamlossesdiv" >
+							{{teamweekrank.hometeamlosses}}
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamlossesdiv" name="awayteamlossesdiv">
+							{{teamweekrank.awayteamlosses}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamtiesdiv" name="hometeamtiesdiv" >
+							{{teamweekrank.hometeamties}}
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamtiesdiv" name="awayteamtiesdiv">
+							{{teamweekrank.awayteamties}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="powerRankingText" id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
+							{{teamweekrank.hometeampowerranking}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="powerRankingText" id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
+							{{teamweekrank.awayteampowerranking}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
+							{{teamweekrank.hometeamoffencetotal}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
+							{{teamweekrank.awayteamoffencetotal}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
+							{{teamweekrank.hometeamoffencescoring}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
+							{{teamweekrank.awayteamoffencescoring}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
+							{{teamweekrank.hometeamoffencepassing}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
+							{{teamweekrank.awayteamoffencepassing}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
+							{{teamweekrank.hometeamoffencerushing}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
+							{{teamweekrank.awayteamoffencerushing}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
+							{{teamweekrank.hometeamdefencetotal}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
+							{{teamweekrank.awayteamdefencetotal}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
+							{{teamweekrank.hometeamdefencescoring}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
+							{{teamweekrank.awayteamdefencescoring}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
+							{{teamweekrank.hometeamdefencepassing}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
+							{{teamweekrank.awayteamdefencepassing}}
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
+							{{teamweekrank.hometeamdefencerushing}}
+						</div>
+
+						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
+							{{teamweekrank.awayteamdefencerushing}}
+						</div>
+						</td>
+					</tr>
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->				
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel-body">
+			<div class="panel-group" id="weeklydefinitionsgroup">
+				<div class="panel panel-default">
+					<div style="background-color:#DBF0EF;" class="panel-heading" id="weeklydefinitionsheading">
+						<h3 class="panel-title">
+							<a style="text-align:center;vertical-align:middle;text-decoration:none;" data-toggle="collapse" data-parent="#weeklydefinitionsgroup" data-target="#weeklydefinitions">
+							<span id="toggletext" >{{current.toggletext}}</span>
+							</a>
+						</h3>
+					</div> <!-- end of panel header -->
+
+					<div id="weeklydefinitions" class="panel-collapse collapse">
+
+						<div class="panel-body">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <p>This Information displays the Rankings for the team selected, for each week.</p>
+
+								<p>The Power Rankings are determined by ESPN's Power Panel (group of 80+ Writers, Editors & TV Personalities) prior to the week’s games.</p>
+
+								<p>Offensive Rankings are based on the highest to lowest Average of Yards Gained by each Team.</p>
+
+								<p>Defensive Rankings are based on the lowest to highest Average of Yards Gained by the Team’s Opponents.</p>
+
+								<p>The Offensive & Defensive Statistical Data is provided by SportsDirect Inc. via Team Rankings, LLC .  They are for the previous week’s game.</p>  
+
+								<p>Hopefully this gives you a better idea of how to select the winning team for each game.</p>
+							  </div>
+							</div>
+
+							<div style="padding-top:30px;" >
+								<table class="table TeamWeeklyRankingsInfoTable">
+
+									<tr>
+										<td class="miscText">Week</td>
+										<td class="miscData">Week that the statistics were created from.</td>
+									</tr>
+
+									<tr>
+										<td class="miscText">Team's</td>
+										<td class="miscData">Team's Name who played the Game. Team in <span class="teamSelected">Red</span> is the team you selected.</td>
+									</tr>
+
+									<tr>
+										<td class="miscText">Score</td>
+										<td class="miscData">Score of that Team had per Game. The score in <span class="teamWon">Green</span> is the winning score.</td>
+									</tr>
+
+									<tr>
+										<td class="miscText">W</td>
+										<td class="miscData">Wins for the Team that played the Game. 
+									</tr>
+
+									<tr>
+										<td class="miscText">L</td>
+										<td class="miscData">Losses for the Team that played the Game. 
+									</tr>
+
+									<tr>
+										<td class="miscText">T</td>
+										<td class="miscData">Ties for the Team that played the Game. 
+									</tr>
+
+									<tr>
+										<td class="powerRankingText" >PR</td>
+										<td class="miscData">Power Ranking lists all 32 NFL teams from #1 through #32 determined by ESPN's Power Panel (group of 80+ Writers, Editors & TV Personalities) prior to the week’s games. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">OO</td>
+										<td class="miscData">OverAll Offense Ranking the Team that has the highest avg Yards Gained per game. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">OS</td>
+										<td class="miscData">Offense Scoring Rank = Team with the highest avg of Points Gained per game. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">OP</td>
+										<td class="miscData">Offense Passing Rank = Team with the highest avg Pass Yards Gained per game. 
+									</tr>
+
+									<tr>
+										<td class="offenceText">OR</td>
+										<td class="miscData">Offense Rushing Rank = Team with the highest avg Rush Yards Gained per Game.
+									</tr>
+
+									<tr>
+										<td class="defenceText">DO</td>
+										<td class="miscData">OverAll Defense Rank = Team that has the lowest Opponent Yards Gained per game. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">DS</td>
+										<td class="miscData">Defense Scoring Rank = Team with the lowest avg of Points Allowed per Opponent. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">DP</td>
+										<td class="miscData">Defense Passing Rank = Team with the lowest avg Pass Yards Gained per Opponent. 
+									</tr>
+
+									<tr>
+										<td class="defenceText">DR</td>
+										<td class="miscData">Defense Rush Rank = Team with the lowest avg Rush Yards Gained per Opponent. 
+									</tr>
+								</table>							
+							</div> <!-- end of padding -->
+
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel collapse -->
+				</div> <!-- end of panel panel -->
+			</div> <!-- end of panel group -->
+		</div> <!-- end of panel body -->
+	</div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

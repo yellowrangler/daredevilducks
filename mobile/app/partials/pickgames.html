@@ -1,0 +1,216 @@
+<form id="pickweekForm" name="pickweekForm">
+<div class="pageCaption row">
+	<div style="padding-top:15px;display:inline;" class="col-md-12">
+		<h2 style="display:inline;" class="headerTitle">Pick Your Teams</h2>
+
+		<div style="padding-left:10px;display:inline;" class="form-group">
+            <img style="height:45px;" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+		</div> <!-- end of form-group -->  
+	</div> <!-- end of column -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<div class="col-md-12 form-inline">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+						<label for="memberid" class="control-label">Player</label>
+				        <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
+				            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="week" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
+			                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->  
+				
+					<div style="padding-left:30px;"class="form-group horizontalFieldOffset">
+		                <button  style="font-weight:bold;" class="btn btn-info btn-sm" ng-click="saveGames()" id="saveGames" name="saveGames" >Save Picks</button>
+					</div> <!-- end of form-group --> 
+
+				</div> <!-- end of panel body -->		
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 9 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th colspan=2>Game Day</th>
+						<th>Pick</th>				
+						<th colspan=2>Home Team</th>
+						<th>Score</th>						
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>
+						<th>Pick</th>				
+						<th colspan=2>Away Team</th>
+						<th>Score</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>						
+					</tr>
+
+					<tr ng-repeat="game in games">
+						<td class="left-column-text">
+							<img height="50" style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'>
+						</td>
+
+						<td class="left-column-text">
+							 {{game.gamedate}} &nbsp; {{game.gameday}} &nbsp; {{game.gametime}}
+						</td>
+
+						<td class="center-column-text">
+						    <input 
+						    ng-model="game.teamselected"
+						    ng-change="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.teamselected)" 
+						    ng-checked="{{game.hometeamid == game.teamselected}}"
+						    name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
+						</td>
+
+						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+							<a ng-href="{{game.hometeamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+							</a>
+						</td>
+
+						<td id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
+						</td>
+						
+						<td class="center-column-text" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.hometeamscore}}</td>
+
+						<td class="center-column-text">
+						   {{game.homewins}}
+						</td>
+
+						<td class="center-column-text">
+						   {{game.homelosses}}
+						</td>
+
+						<td class="center-column-text">
+						   {{game.hometies}}
+						</td>
+
+						<td class="center-column-text">
+						    <input  
+						    ng-model="game.teamselected"
+						    ng-change="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.teamselected)" 
+						    ng-checked="{{game.awayteamid == game.teamselected}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='radio' ng-disabled="check4ExpiredGameSelections(game.gamestatus)" />
+						</td>
+
+						<td id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+							<a ng-href="{{game.awayteamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+							</a>
+						</td>
+
+						<td id='picka_{{game.gamenbr}}_teamname' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+						</td>
+
+						<td class="center-column-text" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.awayteamscore}}</td>
+
+						<td class="center-column-text">
+						   {{game.awaywins}}
+						</td>
+
+						<td class="center-column-text">
+						   {{game.awaylosses}}
+						</td>
+
+						<td class="center-column-text">
+						   {{game.awayties}}
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-6">
+		<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="img/pickteamsbye.png">
+	</div> <!-- end of col 5 -->
+
+	<div class="col-md-6">
+		<div class="panel panel-default panelOverride">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th colspan=5>Bye Teams for Week</th>
+					</tr>
+
+					<tr>
+						<th colspan=2>Team</th>
+						<th>W</th>
+						<th>L</th>
+						<th>T</th>		
+					</tr>
+
+					<tr ng-repeat="byegame in byegames">
+						<td class="left-column-text">
+							<a ng-href="{{byegame.teamurl}}" target="_blank">
+							<img height="50" ng-src='img/nflicons/{{byegame.teamiconname}}'>
+							</a>
+						</td>
+
+						<td class="left-column-text">
+							{{byegame.teamlocation}} &nbsp; {{byegame.teamname}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.wins}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.losses}}
+						</td>
+
+						<td class="center-column-text">
+							   {{byegame.ties}}
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
+	</div> <!-- end of col 8 -->
+</div> <!-- end of row -->
+</form>
+
+<!-- dialogs -->
+<div class="modal fade" id="gamesSavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gamesSavedDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="gamesSavedDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="gamesSavedDialogModalLabelBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

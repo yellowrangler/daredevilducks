@@ -1,0 +1,121 @@
+<div class="pageCaption row">
+     <div class="col-md-12">
+     	<h2 class="headerTitle">Team Information</h2>
+ 	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<!-- Grid data -->
+<div class="pageStandardOffset row">
+	<div class="col-md-5">
+		<div style="padding-bottom:15px;" class="panel panel-default">
+			<div class="panelCaption panel-body">NFL Team List</div>
+
+			<div class="pageStandardOffset">
+				<div id="teaminfoGrid" ui-grid="gridOptionsTeams" ui-grid-selection ui-grid-resize-columns class="teaminfoGrid"></div>
+			</div> 	<!-- end of offset -->
+
+		</div> <!-- end of panel -->
+	</div> <!-- end of column -->
+
+<!-- Detail Data -->
+	<div class="col-md-5">
+		<div style="width:100%;">
+			<div class="panel panel-default">
+				<div class="subpanelCaption panel-heading">NFL Team Detail</div>
+				<form id="teamForm" name="teamForm" style="padding:10px;" class="form-horizontal">
+		            <div class="form-group">
+		              <label for="location" class="col-sm-4 control-label">Location</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="location" name="location" placeholder="{{current.location}}" ng-model="current.location">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="name" class="col-sm-4 control-label">Team</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="name" name="name" placeholder="{{current.name}}" ng-model="current.name">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="league" class="col-sm-4 control-label">League</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="league" name="league" placeholder="{{current.league}}" ng-model="current.league">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="conference" class="col-sm-4 control-label">Conference</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="conference" name="conference" placeholder="{{current.conference}}" ng-model="current.conference">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="division" class="col-sm-4 control-label">Division</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="division" name="division" placeholder="{{current.division}}" ng-model="current.division">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="city" class="col-sm-4 control-label">City</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="city" name="city" placeholder="{{current.city}}" ng-model="current.city">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="state" class="col-sm-4 control-label">State</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="state" name="state" placeholder="{{current.state}}" ng-model="current.state">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="teamiconname" class="col-sm-4 control-label">Icon Name</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="teamiconname" name="teamiconname" placeholder="{{current.teamiconname}}" ng-model="current.teamiconname">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="teamorder" class="col-sm-4 control-label">Display Order</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="teamorder" name="teamorder" placeholder="{{current.teamorder}}" ng-model="current.teamorder">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="teamurl" class="col-sm-4 control-label">Team URL</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="teamurl" name="teamurl" placeholder="{{current.teamurl}}" ng-model="current.teamurl">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="status" class="col-sm-4 control-label">Status</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="status" name="status" placeholder="{{current.status}}" ng-model="current.status">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div class="form-group">
+		              <label for="teamid" class="col-sm-4 control-label">Team ID</label>
+		              <div class="col-sm-7">
+		                <input type="text" class="form-control" id="teamid" name="teamid" placeholder="{{current.teamid}}" ng-model="current.teamid">
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+
+		            <div style="padding-top:15px;" class="form-group">
+		              <div class="col-sm-offset-2 col-sm-10">
+		                <button style="width:20%;" class="btn btn-info btn-sm" ng-click="updateTeamInfoRequest()" id="updateButton" name="updateButton" >Update</button>
+		              </div> <!-- end of col -->
+		            </div> <!-- end of form-group -->
+		          </form> <!-- end of form -->
+			</div> <!-- end of panel -->
+		</div> <!-- end of width -->
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div style="padding-bottom:350px;">&nbsp;</div>

@@ -1,0 +1,101 @@
+<div class="pageCaption row">
+  <div style="padding-bottom:25px;"  class="col-md-5">
+
+        <div class="pageCaption row">
+
+            <div style="padding-bottom:25px;"  class="col-md-12">
+              <h2 style="display:inline;" class="headerTitle">NFL Headlines</h2>
+            </div> <!-- end of col -->
+
+            <form class="form-inline pageStandardOffset">
+              <div class="form-group">
+                <label for="nflrss">News Source</label>
+                <select style="padding-left:5px;"  class="customSelect form-control" ng-change="getNFLrssFeed()" ng-model="current.rsslinkid" id="nflrss" name="nflrss">
+                    <option ng-repeat="nflrss in nflrsss" value="{{nflrss.id}}">{{nflrss.rsssource}}</option>
+                </select>
+              </div>  <!-- end of div -->
+                
+              <div style="padding-left:35px;" class="form-group">
+                  <button  class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Refresh News</button>
+              </div>  <!-- end of div -->
+            </form>
+
+        </div> <!-- end of row --> 
+
+        <div style="padding-top:25px;" class="row">
+
+            <div class="col-md-12">
+              <div class="pageStandardOffset row">
+                <div ng-repeat="nflnew in nflnews" class="panel panel-default">
+                  <div class="panel-body table-responsive">
+                    <table >
+                      <tr style="padding:15px;">
+                        <td style="vertical-align:top">
+                          <div style="text-align:top;font-weight:bold; color:maroon;" >
+                            Headline:
+                          </div>
+                        </td>
+                        <td>  
+                          <div style="color:teal;" >
+                            {{decodeRssString(nflnew.title)}}
+                          </div>
+                        </td> 
+                      </tr>
+
+                      <tr style="padding:15px;">
+                        <td style="vertical-align:top">    
+                          <div style="text-align:top;font-weight:bold; color:maroon;" >
+                            Published:
+                          </div>
+                        </td>
+                        <td>
+                          <div style="color:teal;" >
+                            {{nflnew.publishedDate}}
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr >  
+                        <td >  
+                          <div style="padding-top:25px;">
+                             <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link, 0)">Read More</a>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div> <!-- end of body -->
+                </div> <!-- end of panel -->
+              </div> <!-- end of row -->
+
+            </div> <!-- end of col 12 -->
+
+        </div> <!-- end of row -->
+  </div> <!-- end of col 5 -->
+
+  <div style="padding-bottom:25px;"  class="col-md-7">
+
+    <div class="pageCaption row">
+
+      <div class="col-md-12">  
+       
+          <img style="float:right;height:160px;padding-right:45px;"  class="centeredImage" ng-src="img/NFLNewsScrn.png">
+
+      </div> <!-- end of col 12 -->
+
+    </div> <!-- end of row -->
+
+     <div class="pageCaption row">
+
+      <div class="col-md-12">
+        <div id="newsdetailDiv" ng-if="newsdetail" style="position:fixed;padding-top:0px; height:{{divheight}}px;width:{{divwidth}}px;">
+          <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>
+        </div> <!-- end of fixed -->
+      </div> <!-- end of col 12 -->   
+
+    </div> <!-- end of row -->
+
+  </div> <!-- end of col 6 -->     
+
+</div> <!-- end of row -->
+
+<div class="row" style="padding-bottom:300px;">&nbsp;</div><!-- end of row -->  
