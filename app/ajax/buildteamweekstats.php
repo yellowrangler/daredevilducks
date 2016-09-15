@@ -806,18 +806,18 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				// debug
 				// echo "loopsql = $sql<br />";
 
-			// $sql_r = @mysql_query($sql, $dbConn);
-			// if (!$sql_r)
-			// {
-			//     $log = new ErrorLog("logs/");
-			//     $sqlerr = mysql_error();
-			//     $log->writeLog("SQL error: $sqlerr - Error doing update extending to db Unable to update team week stats.");
-			//     $log->writeLog("SQL: $sql");
+			$sql_r = @mysql_query($sql, $dbConn);
+			if (!$sql_r)
+			{
+			    $log = new ErrorLog("logs/");
+			    $sqlerr = mysql_error();
+			    $log->writeLog("SQL error: $sqlerr - Error doing update extending to db Unable to update team week stats.");
+			    $log->writeLog("SQL: $sql");
 
-			//     $status = -27750;
-			//     $msg = $msg . "System Error: $sqlerr <br /> Error doing update extending to db Unable to update team week stats . <br /> $sqlerr <br /> SQL: $sql";
-	  //   		exit($msg);
-			// }
+			    $status = -27750;
+			    $msg = $msg . "System Error: $sqlerr <br /> Error doing update extending to db Unable to update team week stats . <br /> $sqlerr <br /> SQL: $sql";
+	    		exit($msg);
+			}
 
 		}
 	}

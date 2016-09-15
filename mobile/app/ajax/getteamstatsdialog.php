@@ -284,14 +284,14 @@ $returnStr = "
 		<td>
 			<div style='text-align:center;'>
 				<a href='$hometeamurl' target='_blank'>
-					<img style='text-align:center;' height='50' src='img/nflicons/$hometeamiconname'> 
+					<img style='text-align:center;' height='50' src='../img/nflicons/$hometeamiconname'> 
 				</a> 
 			</div>
 		</td>
 		<td>
 			<div style='text-align:center;'>
 				<a href='$awayteamurl' target='_blank'>
-					<img style='text-align:center;' height='50' src='img/nflicons/$awayteamiconname'>
+					<img style='text-align:center;' height='50' src='../img/nflicons/$awayteamiconname'>
 				</a> 
 			</div>
 		</td>											

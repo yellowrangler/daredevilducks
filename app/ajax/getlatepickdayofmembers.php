@@ -113,12 +113,11 @@ if ($r['gamecount'] == 0)
 //---------------------------------------------------------------
 $sql = "SELECT id as memberid, membername, screenname, email   
 FROM membertbl M
-WHERE id NOT IN 
+WHERE M.status = 'active' AND id NOT IN 
 (SELECT memberid
 FROM memberpickstbl MP
 LEFT JOIN gamestbl G ON G.gamenbr = MP.gamenbr AND G.season = MP.season
-WHERE M.status = 'active'
-AND DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(NOW(),'%m-%d-%Y')
+WHERE DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(NOW(),'%m-%d-%Y')
 AND DATE_FORMAT(gamedatetime,'%T') > DATE_FORMAT(NOW(),'%T'))";
 // print $sql;
 
