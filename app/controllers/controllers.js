@@ -132,6 +132,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         }
     }
 
+    $scope.goMobile = function () {
+        window.location.href = "mobile/index.html";
+    }
+
     $scope.showMemberAvatar = function () {
         getAvatar();
     }
