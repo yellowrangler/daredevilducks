@@ -2521,9 +2521,6 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
         $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();     
 
         $scope.gametypes = nflTeamsService.getNFLGametypes();
-
-        $scope.sqls = ""; 
-
     };
 
     $scope.runGameScripts = function () {
