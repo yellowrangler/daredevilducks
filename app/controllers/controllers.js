@@ -2522,6 +2522,8 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, nfltea
 
         $scope.gametypes = nflTeamsService.getNFLGametypes();
 
+        $scope.sqls = ""; 
+
     };
 
     $scope.runGameScripts = function () {

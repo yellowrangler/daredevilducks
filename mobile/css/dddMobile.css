@@ -75,8 +75,8 @@
 .teamNotSelected  {
 	background-color: white;
 	color:black; 
-	padding-top:14px;
-	padding-bottom:14px;	
+	/*padding-top:14px;
+	padding-bottom:14px;	*/
 /*	border:1px solid white;*/
 }
 
@@ -502,10 +502,10 @@ border: 0 none;
 	color:black; 
 }
 
-.teamNotSelected  {
+/*.teamNotSelected  {
 	background-color: white;
 	color:black; 
-}
+}*/
 
 .menuItems {
 	padding-top:10px;
@@ -563,7 +563,7 @@ border: 0 none;
 }
 
 .pickTeamsPair {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 700;
 	font-variant: small-caps;
     padding-top: 5px;

@@ -12,7 +12,6 @@ dddApp.service('selectListService', function () {
             case 'emt':
                 thisList = emtList;
                 break;
-
         }
 
         return thisList;

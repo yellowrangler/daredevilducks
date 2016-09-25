@@ -66,35 +66,6 @@
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
-					<form id="dumpdatabaseForm" name="dumpdatabaseForm" class="form-horizontal">
-						<div style="background-color:#F0F0DB;" class="panel-heading" id="dumpdatabaseheading">
-							<h3 class="panel-title">
-								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#dumpdatabase">
-								Dump Data Base
-								</a>
-							</h3>
-						</div> <!-- end of panel header -->
-
-						<div id="dumpdatabase" class="panel-collapse collapse">
-							<div class="panel-body">
-								<div class="form-group">
-									<label class="col-md-4 control-label" for="dumpdatabaselabel">Dump File Label</label>
-									<div class="col-md-5">
-										<input type="text" ng-model="current.dumpdatabaselabel" class="form-control" id="dumpdatabaselabel" placeholder="">
-									</div>
-								</div> <!-- end of form group -->						
-								
-								<div class="form-group">
-									<div class="col-md-offset-4 col-md-5">
-										<button type="button" ng-click="buildMySqlDump()" id="dumpdatabaselabelbutton" class="btn btn-primary">Dump Database</button>
-									</div>
-								</div> <!-- end of form group -->
-							</div> <!-- end of panel body -->
-						</div> <!-- end of panel collapse -->	
-					</form> <!-- end of form default -->
-					</div> <!-- end of panel default -->
-
-					<div class="panel panel-default">
 					<form id="importteamweeklyrankForm" name="importteamweeklyrankForm" class="form-horizontal">
 						<div style="background-color:#FCE4DF;" class="panel-heading" id="importteamweeklyrankheading">
 							<h3 class="panel-title">
@@ -116,6 +87,35 @@
 								<div class="form-group">
 									<div class="col-md-offset-4 col-md-5">
 										<button type="button" ng-click="importTeamWeeklyRank()" id="importteamweeklyrankbutton" class="btn btn-primary">Import File Name</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->	
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="dumpdatabaseForm" name="dumpdatabaseForm" class="form-horizontal">
+						<div style="background-color:#F0F0DB;" class="panel-heading" id="dumpdatabaseheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#dumpdatabase">
+								Dump Data Base
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="dumpdatabase" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="dumpdatabaselabel">Dump File Label</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.dumpdatabaselabel" class="form-control" id="dumpdatabaselabel" placeholder="">
+									</div>
+								</div> <!-- end of form group -->						
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="buildMySqlDump()" id="dumpdatabaselabelbutton" class="btn btn-primary">Dump Database</button>
 									</div>
 								</div> <!-- end of form group -->
 							</div> <!-- end of panel body -->
