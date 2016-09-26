@@ -182,6 +182,10 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
         // in jquery ready. So adding it here
         //
 
+        var navButtons = $('#navbarButtons');
+        navButtons.on('show.bs.collapse','.collapse', function() {
+                navButtons.find('.collapse.in').collapse('hide');
+            });
 
         var loggedIn = loginService.isLoggedIn();
         if (loggedIn)

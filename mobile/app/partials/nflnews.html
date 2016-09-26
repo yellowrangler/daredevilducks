@@ -1,5 +1,7 @@
-<div class="pageCaption row">
-  <div style="padding-bottom:25px;"  class="col-md-5">
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption">
+  <div style="padding-bottom:25px;">
 
         <div class="pageCaption row">
 
@@ -15,7 +17,7 @@
                 </select>
               </div>  <!-- end of div -->
                 
-              <div style="padding-left:35px;" class="form-group">
+              <div class="form-group">
                   <button  class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Refresh News</button>
               </div>  <!-- end of div -->
             </form>
@@ -58,7 +60,7 @@
                       <tr >  
                         <td >  
                           <div style="padding-top:25px;">
-                             <a  style="font-weight:bold;" class="btn btn-success btn-md" ng-href="" ng-click="loadNewsDetail(nflnew.link, 0)">Read More</a>
+                             <a  style="font-weight:bold;" target="_blank" class="btn btn-success btn-md" ng-href="{{nflnew.link}}" >Read More</a>
                           </div>
                         </td>
                       </tr>
@@ -70,32 +72,4 @@
             </div> <!-- end of col 12 -->
 
         </div> <!-- end of row -->
-  </div> <!-- end of col 5 -->
-
-  <div style="padding-bottom:25px;"  class="col-md-7">
-
-    <div class="pageCaption row">
-
-      <div class="col-md-12">  
-       
-          <img style="float:right;height:160px;padding-right:45px;"  class="centeredImage" ng-src="img/NFLNewsScrn.png">
-
-      </div> <!-- end of col 12 -->
-
-    </div> <!-- end of row -->
-
-     <div class="pageCaption row">
-
-      <div class="col-md-12">
-        <div id="newsdetailDiv" ng-if="newsdetail" style="position:fixed;padding-top:0px; height:{{divheight}}px;width:{{divwidth}}px;">
-          <iframe height="100%" width="100%" scrolling="auto" ng-src="{{trustSrc(newsdetail)}}"></iframe>
-        </div> <!-- end of fixed -->
-      </div> <!-- end of col 12 -->   
-
-    </div> <!-- end of row -->
-
-  </div> <!-- end of col 6 -->     
-
-</div> <!-- end of row -->
-
-<div class="row" style="padding-bottom:300px;">&nbsp;</div><!-- end of row -->  
+  </div> <!-- end of div -->
