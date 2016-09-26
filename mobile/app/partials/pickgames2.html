@@ -39,16 +39,14 @@
 <div class="pageStandardOffset">
 	<div class="pickTeamsList" ng-repeat="game in games">
 		<div class="pickTeamsPair" >
-			<div style="padding-top:3px;padding-bottom:2px;" class="row" >
-				<div style="display:inline-block;line-height:50px;" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">&nbsp;</div>
-
+			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row" >
 				<div style="display:inline-block;line-height:50px;"  class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id='pickh_{{game.gamenbr}}_icon'>
 				    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
 				
-					<img style="display:inline-block;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+					<img style="display:inline-block;float:right;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
 				</div>
 
-				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-6 col-sm-6 col-md-6 col-lg-6" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
+				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-7 col-sm-7 col-md-7 col-lg-7" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
 					<span class="left-column-text">{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)</span>
 				</div>
 				
@@ -57,16 +55,14 @@
 				</div>
 			</div> <!-- end of row -->
 
-			<div style="padding-top:3px;padding-bottom:2px;" class="row">
-				<div style="display:inline-block;line-height:50px;" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">&nbsp;</div>
-
+			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row">
 				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-3 col-sm-3 col-md-3 col-lg-3" id='picka_{{game.gamenbr}}_icon' >
 				    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
 				
-					<img style="display:inline;line-height:50px;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+					<img style="display:inline;line-height:50px;float:right;" ng-click="getTeamStats(game.hometeamid,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
 				</div>
 
-				<div style="display:inline-block;line-height:50px;"  class="left-column-text col-xs-6 col-sm-6 col-md-6 col-lg-6" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
+				<div style="display:inline-block;line-height:50px;"  class="left-column-text col-xs-7 col-sm-7 col-md-7 col-lg-7" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
 					<span class="left-column-text">{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)</span>
 				</div>
 

@@ -33,16 +33,14 @@
 <div class="pageStandardOffset">
 		<div class="pickTeamsList" ng-repeat="game in games">
 			<div class="pickTeamsPair" >
-				<div style="padding-top:3px;padding-bottom:2px;" class="row" >
-					<div style="display:inline-block;line-height:50px;" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">&nbsp;</div>
-
+				<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row" >
 					<div style="display:inline-block;line-height:50px;"  class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 						<a ng-href="{{game.hometeamurl}}" target="_blank">
-							<img height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+							<img style="display:inline-block;float:right;" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
 						</a>
 					</div>
 
-					<div style="display:inline-block;line-height:50px;" class="left-column-text  col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<div style="display:inline-block;line-height:50px;" class="left-column-text  col-xs-7 col-sm-7 col-md-7 col-lg-7">
 						{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)
 					</div>
 					
@@ -50,16 +48,14 @@
 					</div>
 				</div> <!-- end of row -->
 
-			<div style="padding-top:3px;padding-bottom:2px;" class="row">
-				<div style="display:inline-block;line-height:50px;" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">&nbsp;</div>
-
+			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row">
 				<div style="display:inline-block;line-height:50px;" class="left-column-text  col-xs-3 col-sm-3 col-md-3 col-lg-3">
 					<a ng-href="{{game.awayteamurl}}" target="_blank">
-						<img height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+						<img style="display:inline-block;float:right;" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
 					</a>
 				</div>
 
-				<div style="display:inline-block;line-height:50px;"  class="left-column-text  col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div style="display:inline-block;line-height:50px;"  class="left-column-text  col-xs-7 col-sm-7 col-md-7 col-lg-7">
 					{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)
 				</div>
 
