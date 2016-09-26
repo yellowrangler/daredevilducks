@@ -1,23 +1,16 @@
 <div class="pageCaption row">
-	<div class="col-md-5">
+	<div class="col-md-12">
 		<h2 class="headerTitle">Team Weekly Ranking</h2>
+	</div> <!-- end of col -->
+</div> <!-- end of row -->
 
-		<div class="pageStandardOffset">	
-			<div style="padding-top:45px;">
-				<a ng-href="{{current.team.teamurl}}" target="_blank">
-								<img height="90" ng-src='img/nflicons/{{current.team.teamiconname}}'>
-								</a>
-				<span style="font-size:20px;font-weight:bold;color:black;">{{current.team.location}} {{current.team.name}}</span>				
-			</div>				
-		</div> <!-- end of panelOffset -->	
-	</div> <!-- end of column -->
-
+<div class="row">
 	<form id="teamweeklyrankForm" name="teamweeklyrankForm" class="form-inline">
-	<div class="col-md-4">
+	<div class="col-md-12">
 		<div class="pageStandardOffset">
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
-					<div style="padding-top:120px;" class="form-group horizontalFieldOffset">
+					<div style="padding-top:15px;" class="form-group horizontalFieldOffset">
 						<label for="teamid" class="control-label">Team</label>
 				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
 				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
@@ -27,10 +20,6 @@
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->	
 	</div> <!-- end of col 9 -->
-
-	<div class="col-md-3">	
-		<img style="float:right;height:175px;padding-right:25px;"  class="centeredImage" ng-src="img/teamweeklyranking.png">
-	</div> <!-- end of col 4 -->
 </div> <!-- end of row -->
 
 
@@ -80,13 +69,13 @@
 						<td class="left-column-text" >
 						<div style="padding:5px;height:60px;width:76px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv">
 							<a ng-href="{{teamweekrank.hometeamurl}}" target="_blank">
-							<img height="50" ng-src='img/nflicons/{{teamweekrank.hometeamiconname}}'>
+							<img height="50" ng-src='../img/nflicons/{{teamweekrank.hometeamiconname}}'>
 							</a>
 						</div>
 
 						<div style="padding:5px;height:60px;width:76px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-if="teamweekrank.awayteamiconname != 'B' ">
 							<a ng-href="{{teamweekrank.awayteamurl}}" target="_blank">
-							<img height="50" ng-src='img/nflicons/{{teamweekrank.awayteamiconname}}'>
+							<img height="50" ng-src='../img/nflicons/{{teamweekrank.awayteamiconname}}'>
 							</a>
 						</div>
 						</td>

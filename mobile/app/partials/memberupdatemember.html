@@ -4,237 +4,153 @@
   </div> <!-- end of column -->
 </div> <!-- end of row -->
 
-<div class="pageStandardOffset row">
-    <div class="col-md-offset-1 col-md-10">
-      <div class="panel panel-default">
-        <!-- <div style="background-color:#058689;border:2px solid #055659;color:white;text-align:center;" class="panel-heading">
-          <h3 class="leaderBoardPanelTitle panel-title">My Information</h3>
-        </div> -->
-        <form id="memberupdatememberForm" name="memberupdatememberForm" style="padding:10px;" class="form-horizontal">
-          <div class="row" style="padding-top:35px;">
-            <div class="col-md-7">
-              <div class="form-group" >
-                <label for="membername" class="col-md-3 control-label">Name</label>
-                  <div class="col-md-4">
-                      <input tabindex="7" type="text" class="form-control" ng-model="current.membername" id="membername" name="membername" placeholder="">
-                  </div> <!-- end of col -->
+<div class="pageStandardOffset">
+  <div class="panel panel-default">
+    <form id="memberupdatememberForm" name="memberupdatememberForm" style="padding:10px;">
+      <div class="form-group" >
+        <label for="membername" class="control-label">Name</label>
+              <input tabindex="7" type="text" class="form-control" ng-model="current.membername" id="membername" name="membername" placeholder="">
 
-                  <input type="hidden" value="{{current.id}}" id="memberid" name="memberid">
-              </div> <!-- end of form-group -->
+          <input type="hidden" value="{{current.id}}" id="memberid" name="memberid">
+      </div> <!-- end of form-group -->
 
-              <div class="form-group">
-                  <label for="screenname" class="col-md-3 control-label">Screen Name</label>
-                  <div class="col-md-4">
-                      <input tabindex="2" type="text" class="form-control" ng-model="current.screenname" id="screenname" name="screenname" placeholder="Screen Name">
-                  </div>
-              </div> <!-- end of form-group -->
+      <div class="form-group">
+          <label for="screenname" class="col-md-3 control-label">Screen Name</label>
+              <input tabindex="2" type="text" class="form-control" ng-model="current.screenname" id="screenname" name="screenname" placeholder="Screen Name">
+      </div> <!-- end of form-group -->
 
-              <div class="form-group" >
-                <label for="gender" class="col-md-3 control-label">Gender</label>
-                <div class="col-md-3">
-                  <select tabindex="4" class="form-control" ng-model="current.gender" id="gender" name="gender" >
-                    <option value="Not Selected">Not Selected</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-              </div> <!-- end of form-group -->
-            </div> <!-- end of col-7 -->
-            <div class="col-md-4">
-                <img style="float:left;height:125px;padding-right:15px;" align="left" src='../img/thinking.png'>    
+      <div class="form-group" >
+        <label for="gender" class="control-label">Gender</label>
+          <select tabindex="4" class="form-control" ng-model="current.gender" id="gender" name="gender" >
+            <option value="Not Selected">Not Selected</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+      </div> <!-- end of form-group -->
 
-                <div style="padding-top:35px; padding-left:15px;font-weight:bold; font-size:15px; font-style:italic;">
-                Think Carefully for the Right Name. Make it Fun & Clean!
-                </div>
-            </div> <!-- end of col-4 -->
-          </div> <!-- end of row -->
+        <div class="form-group">
+            <label for="street" class="control-label">Street</label>
+            <input tabindex="5" type="text" class="form-control" ng-model="current.street" id="street" name="street"placeholder="{{current.street}}">
+        </div> <!-- end of form-group -->
 
-          <hr class="hrBreak">
+        <div class="form-group">
+            <label for="city" class="control-label">City</label>
+            <input tabindex="7" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
+        </div> <!-- end of form-group -->    
 
-          <div class="row" style="padding-top:30px;">
-            <div class="col-md-7">
-              <div class="form-group">
-                  <label for="street" class="col-md-3 control-label">Street</label>
-                  <div class="col-md-4">
-                      <input tabindex="5" type="text" class="form-control" ng-model="current.street" id="street" name="street"placeholder="{{current.street}}">
-                  </div>
-              </div> <!-- end of form-group -->
+        <div class="form-group">
+            <label for="state" class="control-label">State</label>
+            <select class="form-control" ng-model="current.state" tabindex="8" name="state" id="state">
+              <option value="">Not Selected</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
 
-              <div class="form-group">
-                  <label for="city" class="col-md-3 control-label">City</label>
-                  <div class="col-md-4">
-                      <input tabindex="7" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
-                  </div>
-              </div> <!-- end of form-group -->    
+            <label for="zip" class="control-label">Zip</label>
+            <input tabindex="9" type="text" class="form-control" ng-model="current.zip" id="zip" name="zip" placeholder="Zip">
+        </div> <!-- end of form-group -->
 
-              <div class="form-group">
-                  <label for="state" class="col-md-3 control-label">State</label>
-                  <div class="col-md-4">
-                      <select class="form-control" ng-model="current.state" tabindex="8" name="state" id="state">
-                        <option value="">Not Selected</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                    </select>
-                  </div>
+      <div class="form-group">
+          <label for="phonenumber" class="control-label">Phone</label>
+          <input tabindex="10" type="text" class="form-control" ng-model="current.phonenumber" id="phonenumber" name="phonenumber" placeholder="Phone">
+      </div> <!-- end of form-group -->
 
-                  <label for="zip" class="col-md-1 control-label">Zip</label>
-                  <div class="col-md-3">
-                      <input tabindex="9" type="text" class="form-control" ng-model="current.zip" id="zip" name="zip" placeholder="Zip">
-                  </div>
-              </div> <!-- end of form-group -->
-            </div> <!-- end of col-7 -->
-            <div class="col-md-4">
-                <img style="height:155px;padding-right:15px;" align="center" src='../img/postman.png'>    
-            </div> <!-- end of col-4 -->
-          </div> <!-- end of row -->
+      <div class="form-group">
+          <label for="email" class="control-label">eMail</label>
+          <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
 
-          <hr class="hrBreak">
+          &nbsp; 
 
-          <div class="row" style="padding-top:30px;">
-            <div class="col-md-7">
-              <div class="form-group">
-                  <label for="phonenumber" class="col-md-3 control-label">Phone</label>
-                  <div class="col-md-4">
-                      <input tabindex="10" type="text" class="form-control" ng-model="current.phonenumber" id="phonenumber" name="phonenumber" placeholder="Phone">
-                  </div>
-              </div> <!-- end of form-group -->
+          <input style="padding-left:15px" tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please no eMail's
+      </div> <!-- end of form-group -->
 
-              <div class="form-group">
-                  <label for="email" class="col-md-3 control-label">eMail</label>
-                  <div class="col-md-5">
-                      <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
-                  </div>
+        <div class="form-group">
+          <label for="favoriteteamid" class="control-label">Favorite Team</label>
+          <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+              <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+          </select>
+        </div> <!-- end of form-group --> 
 
-                  &nbsp; 
+        <div class="form-group">
+            <label for="biography" class="control-label">Biography</label>
+            <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
+        </div> <!-- end of form-group -->
 
-                  <input tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please no eMail's
-              </div> <!-- end of form-group -->
+      <div class="form-group">
+          <label for="passwd" class="control-label">Password</label>
+          <input tabindex="15" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
 
-                <div class="form-group">
-                  <label for="favoriteteamid" class="col-md-3 control-label">Favorite Team</label>
-                  <div class="col-md-5">
-                    <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
-                        <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
-                    </select>
-                  </div>
-                </div> <!-- end of form-group --> 
+          <input type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
+      </div> <!-- end of form-group -->
 
-                <div class="form-group">
-                    <label for="biography" class="col-md-3 control-label">Biography</label>
-                    <div class="col-md-7">
-                        <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
-                    </div>
-                </div> <!-- end of form-group -->
+      <div class="form-group">
+          <label for="vpasswd" class="control-label">Verify</label>
+          <input tabindex="16" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
+      </div> <!-- end of form-group -->
 
-              </div> <!-- end of col-7 -->
+      <div class="form-group">
+        <label for="avatar" class="control-label">Avatar</label>
+          <img ng-click="updateAvatar()" style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="showPointer img-rounded center-block" >
 
-              <div class="col-md-4">
-                <img style="height:200px;padding-right:15px;" align="center" src='../img/profilebio.png'>    
-              </div> <!-- end of col-4 -->
+          <input ng-model="current.avatar" type="hidden" value="{{current.avatar}}" id="avatar" name="avatar">
+      </div> <!-- end of form-group -->
 
-          </div> <!-- end of row -->
-
-          <hr class="hrBreak">
-
-          <div class="row" style="padding-top:35px;">
-            <div class="col-md-7">
-              <div class="form-group">
-                  <label for="passwd" class="col-md-3 control-label">Password</label>
-                  <div class="col-md-4">
-                      <input tabindex="15" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
-                  </div>
-
-                  <div class="col-md-4">
-                      <input type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
-                  </div>
-              </div> <!-- end of form-group -->
-
-              <div class="form-group">
-                  <label for="vpasswd" class="col-md-3 control-label">Verify</label>
-                  <div class="col-md-4">
-                      <input tabindex="16" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
-                  </div>
-              </div> <!-- end of form-group -->
-            </div> <!-- end of col-7 -->
-          </div> <!-- end of row -->
-
-          <hr class="hrBreak">
-
-          <div class="row" style="padding-top:35px;">
-            <div class="col-md-7">
-              <div class="form-group">
-                <label for="avatar" class="col-md-3 control-label">Avatar</label>
-                  <div class="col-md-4">
-                      <img ng-click="updateAvatar()" style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="showPointer img-rounded" >
-                  </div>
-                  <input ng-model="current.avatar" type="hidden" value="{{current.avatar}}" id="avatar" name="avatar">
-              </div> <!-- end of form-group -->
-            </div> <!-- end of col-7 -->
-          </div> <!-- end of row -->
-
-          <div class="row" style="padding-top:35px;">
-            <div class="col-md-7">
-              <div class="form-group">
-                <div class="col-md-offset-2 col-md-3">
-                  <button tabindex="17" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
-                 </div>
-              </div> <!-- end of form-group -->
-            </div> <!-- end of col-7 -->
-          </div> <!-- end of row -->  
-        </form>
-      </div> <!-- end of panel panel -->
-    </div> <!-- end of div col md 12 -->
-</div> <!-- end of row -->    
+      <div class="form-group text-center">
+          <button tabindex="17" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
+      </div> <!-- end of form-group -->
+    </form>
+  </div> <!-- end of panel panel -->
+</div> <!-- end of offset -->    
 
 <!-- dialogs -->
 <div class="modal fade" id="meberUpdateMemberDialogModal" tabindex="-1" role="dialog" aria-labelledby="meberUpdateMemberDialogModalTitle" aria-hidden="true">
