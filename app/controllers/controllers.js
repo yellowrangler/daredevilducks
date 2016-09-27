@@ -139,6 +139,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     $scope.showMemberAvatar = function () {
         getAvatar();
     }
+
+    $scope.showAlert = function (title, body) {
+        $('#parentAlertModalTitle').text(title);
+        $('#parentAlertModalBody').text(body);
+        $('#parentAlertModal').modal();
+    }
 }
 
 controllers.loginController = function ($scope, $http, $location, loginService, msgService, loginFactory) {
@@ -336,7 +342,9 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         {
             if (gamestatus == "expired")
             {
-                alert ("Game is alerady underway!");
+                // new code
+                $scope.$parent.showAlert("Too Late!", "Game is alerady underway!");
+                // alert ("Game is alerady underway!");
 
                 return;
             }
@@ -597,7 +605,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+                
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -762,7 +773,10 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
         
@@ -1179,7 +1193,10 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -1275,7 +1292,10 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -1324,7 +1344,10 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
     var loggedIn = loginService.isLoggedIn();
     if (!loggedIn)
     {
-        alert ("You must login!")
+        // new code
+        $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+         
+        // alert ("You must login in order to continue!")
         $location.path("#home");
     }
 
@@ -1392,7 +1415,10 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -1520,7 +1546,10 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -1601,7 +1630,10 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         var val2 = $("#vpasswd").val();
         if (val1 !== val2)
         {
-            alert ("Passwords do not match!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "Passwords do not match!");
+             
+            // alert ("Passwords do not match!")
 
         }
         else
@@ -1756,7 +1788,10 @@ controllers.updatememberController = function ($scope, $http, $location, members
         var val2 = $("#vpasswd").val();
         if (val1 !== val2)
         {
-            alert ("Passwords do not match!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "Passwords do not match!");
+             
+            // alert ("Passwords do not match!")
 
         }
         else

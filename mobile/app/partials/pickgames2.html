@@ -77,6 +77,36 @@
 
 	</div> <!-- end of pickTeamsList -->
 
+	<div ng-if="byegames.length" class="pageStandardOffset">
+		<div>
+			<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="../img/pickteamsbye.png">
+		</div> <!-- end of div img -->
+
+		<div>
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body table-responsive">
+					<table class="table pickGameTable" >
+						<tr class="tableTitle">
+							<th colspan=5>Bye Teams for Week</th>
+						</tr>
+
+						<tr ng-repeat="byegame in byegames">
+							<td class="left-column-text">
+								<a ng-href="{{byegame.teamurl}}" target="_blank">
+								<img height="50" ng-src='../img/nflicons/{{byegame.teamiconname}}'>
+								</a>
+							</td>
+
+							<td class="left-column-text">
+								{{byegame.teamlocation}} &nbsp; {{byegame.teamname}}
+							</td>
+						</tr>
+					</table>
+				</div> <!-- end of panel body -->
+			</div> 	<!-- end of panel -->
+		</div> <!-- end of col 6 -->
+	</div> <!-- end of row -->
+
 </div> <!-- end of pageStandardOffset -->
 
 <div style="padding-top:15px; padding-bottom:20px;" class="row">
