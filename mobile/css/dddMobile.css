@@ -1,5 +1,5 @@
 /* create sticky menu bar */
-.fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
+.fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 999; }
 
 .customSelect {
    background: #d7fbfd;
@@ -667,7 +667,8 @@ border: 0 none;
 }
 
 .pageNavbarOffset {
-	padding-top:70px;
+	/*padding-top:70px;*/
+	padding-top:85px;
 }
 
 .horizontalFieldOffset {

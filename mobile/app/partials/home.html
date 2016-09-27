@@ -6,19 +6,19 @@
 
 	<div id="navbarButtons">
 		<div style="background-color:#F6F59B;" class="btn btn-info btn-lg active btn-block" id="membergamessheading">
-				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#membergames">
+				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#membergames" class="collapsed" aria-expanded="false">
 				Games
 				</a>
 		</div> <!-- end of button -->
 
-		<div id="membergames" class="collapse">
+		<div id="membergames" class="collapse" aria-expanded="false" style="height: 0px;">
 			<a href="#/pickgames" class="btn btn-info btn-lg active btn-block" role="button">Pick Games</a>
 			<a href="#/viewselectpickgames" class="btn btn-info btn-lg active btn-block" role="button">Player Picks for Week</a>
 			<a href="#/viewtotalpickgames" class="btn btn-info btn-lg active btn-block" role="button">Player Picks for week by Team</a>
 		</div> <!-- end of panel collapse -->
 
 		<div style="background-color:#F6F59B;" class="btn btn-info btn-lg active btn-block" id="memberstatsheading">
-				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#memberstats">
+				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#memberstats" class="" aria-expanded="true">
 				Player Stats
 				</a>
 		</div> <!-- end of button -->
@@ -29,24 +29,24 @@
 		</div> <!-- end of panel collapse -->
 
 		<div style="background-color:#F6F59B;" class="btn btn-info btn-lg active btn-block" id="teamsheading">
-				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#teams">
+				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#teams" class="collapsed" aria-expanded="false">
 				Teams
 				</a>
 		</div> <!-- end of button -->
 
-		<div id="teams" class="collapse">
+		<div id="teams" class="collapse" aria-expanded="false">
 			<a href="#/teamstandings" class="btn btn-info btn-lg active btn-block" role="button">Standings</a>
 			<a href="#/teamweeklyranking" class="btn btn-info btn-lg active btn-block" role="button">Weekly Ranking</a>
 			<a href="#/nflnews" class="btn btn-info btn-lg active btn-block" role="button">NFL News</a>
 		</div> <!-- end of panel collapse -->
 
 		<div style="background-color:#F6F59B;" class="btn btn-info btn-lg active btn-block" id="halloffameheading">
-				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#halloffame">
+				<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtons" data-target="#halloffame" class="collapsed" aria-expanded="false">
 				Hall of Fame
 				</a>
 		</div> <!-- end of button -->
 
-		<div id="halloffame" class="collapse">
+		<div id="halloffame" class="collapse" aria-expanded="false">
 			<a href="#/halloffame" class="btn btn-info btn-lg active btn-block" role="button">Hall of Fame</a>
 		</div> <!-- end of panel collapse -->
 
@@ -55,6 +55,6 @@
 		<a href="#/leaderboard" id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()" class="btn btn-danger btn-lg active btn-block" role="button">Login</a>
 
 		<div style="padding-top:20px;">&nbsp;</div>
-	</div> <!-- end of navbarbutton -->
+	</div>
 </div> <!-- end of container -->
     
