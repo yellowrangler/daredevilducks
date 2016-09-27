@@ -17,6 +17,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function init() {
         $scope.current = {};
 
+        // parent.document.body.style.overflowY='scroll';
+
         getAvatar();
         loginService.setAvatarLabel("menubaravatar",0);
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);

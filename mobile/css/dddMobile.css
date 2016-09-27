@@ -1,5 +1,5 @@
 /* create sticky menu bar */
-.fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 999; }
+.fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 999999; }
 
 .customSelect {
    background: #d7fbfd;

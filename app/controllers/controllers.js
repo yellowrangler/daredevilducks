@@ -596,7 +596,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
+        {
+            alert ("You must login!")
             $location.path("#home");
+        }
 
         $scope.current.memberlogin = loginService.getLogin();
 
@@ -758,7 +761,10 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
+        {
+            alert ("You must login!")
             $location.path("#home");
+        }
         
         $scope.current.memberlogin = loginService.getLogin();
 
@@ -1172,7 +1178,10 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
+        {
+            alert ("You must login!")
             $location.path("#home");
+        }
 
         $scope.current = {};
         $scope.current.season = nflTeamsService.getCurrentSeason();
@@ -1265,7 +1274,10 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
+        {
+            alert ("You must login!")
             $location.path("#home");
+        }
 
         $scope.current.memberlogin = loginService.getLogin();
         
@@ -1311,7 +1323,10 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 controllers.halloffameController = function ($scope, $http, $location, loginService) {
     var loggedIn = loginService.isLoggedIn();
     if (!loggedIn)
+    {
+        alert ("You must login!")
         $location.path("#home");
+    }
 
     init();
     function init() {
@@ -1376,8 +1391,11 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
+        {
+            alert ("You must login!")
             $location.path("#home");
-    
+        }
+
         $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
 
         nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
@@ -1501,7 +1519,10 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
     function init() {
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
+        {
+            alert ("You must login!")
             $location.path("#home");
+        }
 
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
