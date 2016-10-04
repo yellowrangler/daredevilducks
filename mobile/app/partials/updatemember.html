@@ -1,3 +1,5 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
 <div class="pageCaption row">
      <div class="col-md-12">
       <h2 class="headerTitle">Manage Player Information</h2>
@@ -187,18 +189,18 @@
               <div class="form-group">
                 <label for="avatar" class="col-md-2 control-label">Avatar</label>
                   <div class="col-md-7">
-                      <img style="max-width:100px;" src="img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="img-rounded" >
+                      <img style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="img-rounded" >
                   </div>
                   <input ng-model="current.avatar" type="hidden" value="{{current.avatar}}" id="avatar" name="avatar">
               </div> <!-- end of form-group -->
 
               <div style="padding-top:25px;" class="form-group">
-                <div class="col-md-offset-2 col-md-3">
-                  <button tabindex="18" id="updatenewmemberbutton" data-ng-click="updatenewmember()" type="button" class="btn btn-primary">Update Player</button>
+                <div>
+                  <button tabindex="18" id="updatenewmemberbutton" data-ng-click="updatenewmember()" type="button" class="btn btn-primary center-block">Update Player</button>
                  </div>
              
-                <div class="col-md-offset-2 col-md-3">
-                  <button tabindex="19" class="btn btn-danger" ng-click="deletememberbutton()" id="deletememberbutton">Delete Player</button>
+                <div style="padding-top:15px;">
+                  <button tabindex="19" class="btn btn-danger center-block" ng-click="deletememberbutton()" id="deletememberbutton">Delete Player</button>
                 </div>
               </div> <!-- end of form-group -->
           </form>
