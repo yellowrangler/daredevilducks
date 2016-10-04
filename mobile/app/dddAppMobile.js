@@ -2,6 +2,9 @@ var dddAppMobile = angular.module ('dddAppMobile', [
     'ngRoute', 
     'ngAnimate', 
     'ngTouch', 
+    'ui.grid', 
+    'ui.grid.selection', 
+    'dropzone', 
     'ngSanitize']);
 
 // define routes for app
@@ -47,11 +50,6 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'nflnewsController',
                 templateUrl: 'app/partials/nflnews.html'
             })
-        .when('/nflnews-test',
-            {
-                controller: 'nflnewsController',
-                templateUrl: 'app/partials/nflnews-new.html'
-            })
         .when('/teamweeklyranking',
             {
                 controller: 'teamweeklyrankingController',
@@ -67,6 +65,59 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'teamdiscoveryController',
                 templateUrl: 'app/partials/teamdiscovery.html'
             })
+        .when('/teaminfo',
+            {
+                controller: 'teaminfoController',
+                templateUrl: 'app/partials/teaminfo.html'
+            })
+
+        .when('/teamseasoninfo',
+            {
+                controller: 'teamseasoninfoController',
+                templateUrl: 'app/partials/teamseasoninfo.html'
+            })
+        .when('/gameinfo',
+            {
+                controller: 'gameinfoController',
+                templateUrl: 'app/partials/gameinfo.html'
+            })
+
+        .when('/gameranking',
+            {
+                controller: 'gamerankingController',
+                templateUrl: 'app/partials/gameranking.html'
+            })
+
+        .when('/addmember',
+            {
+                controller: 'addmemberController',
+                templateUrl: 'app/partials/addmember.html'
+            })
+
+       .when('/addavatar',
+            {
+                controller: 'addavatarController',
+                templateUrl: 'app/partials/addavatar.html'
+            }) 
+
+       .when('/sendplayeremail',
+            {
+                controller: 'sendplayeremailController',
+                templateUrl: 'app/partials/sendplayeremail.html'
+            }) 
+
+        .when('/updatemember',
+            {
+                controller: 'updatememberController',
+                templateUrl: 'app/partials/updatemember.html'
+            })
+
+        .when('/weeklyscripts',
+            {
+                controller: 'weeklyscriptsController',
+                templateUrl: 'app/partials/weeklyscripts.html'
+            })
+
         .when('/memberupdatemember',
             {
                 controller: 'memberupdatememberController',

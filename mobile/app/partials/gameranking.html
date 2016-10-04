@@ -1,3 +1,5 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
 <div class="pageCaption row">
 	<div style="padding-top:15px;display:inline;" class="col-md-12">
 		<h2 style="display:inline;" class="headerTitle">Game Weekly Ranking</h2>
@@ -31,13 +33,13 @@
 				</div> <!-- end of panel body -->		
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->
-	</div> <!-- end of col 9 -->
+	</div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 
 <form id="adminteamweeklyrankForm" name="adminteamweeklyrankForm">
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
-		<div class="panel panel-default panelOverride">
+		<div class="panel panel-default panelOverrideNoBorder">
 			<div class="panelBodyOverride table-responsive">
 				<table class="table teamWeekRankTable" >
 
@@ -59,7 +61,7 @@
 					<tr ng-repeat="gameweeklyrank in gameweeklyranks">
 						<td class="left-column-text">
 							<a ng-href="{{gameweeklyrank.teamurl}}" target="_blank">
-							<img height="25" ng-src='img/nflicons/{{gameweeklyrank.teamiconname}}'>
+							<img height="25" ng-src='../img/nflicons/{{gameweeklyrank.teamiconname}}'>
 							</a>
 						</td>
 
