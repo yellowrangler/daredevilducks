@@ -19,9 +19,46 @@ $email = $_POST['email'];
 $screenname = $_POST['screenname']; 
 $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
-$noemail = 0;
 $biography = $_POST['biography'];
+
+$membernameprofileind = 0;
+$genderprofileind = 0;
+$emailprofileind = 0; 
+$addressprofileind = 0; 
+$phonenumberprofileind = 0; 
+$biographyprofileind = 0; 
+$noemail = 0;
 $favoriteteamid = 0;
+
+if( isset($_POST['membernameprofileind']) )
+{
+     $membernameprofileind = 1;
+}
+
+if( isset($_POST['genderprofileind']) )
+{
+     $genderprofileind = 1;
+}
+
+if( isset($_POST['emailprofileind']) )
+{
+     $emailprofileind = 1;
+}
+
+if( isset($_POST['addressprofileind']) )
+{
+     $addressprofileind = 1;
+}
+
+if( isset($_POST['phonenumberprofileind']) )
+{
+     $phonenumberprofileind = 1;
+}
+
+if( isset($_POST['biographyprofileind']) )
+{
+     $biographyprofileind = 1;
+}
 
 if( isset($_POST['noemail']) )
 {
@@ -109,8 +146,14 @@ $sql = "UPDATE membertbl
 		state = '$state', 
 		zip = '$zip', 
 		phonenumber = '$phonenumber', 
-		noemail = $noemail,
 		biography = '$biography',
+		membernameprofileind = $membernameprofileind, 
+		genderprofileind = $genderprofileind, 
+		emailprofileind = $emailprofileind, 
+	    addressprofileind = $addressprofileind, 
+	    phonenumberprofileind = $phonenumberprofileind, 
+	    biographyprofileind = $biographyprofileind,
+		noemail = $noemail,
 		favoriteteamid = $favoriteteamid,
 		passwd = '$passwd', 
 		enterdate = '$enterdateTS'

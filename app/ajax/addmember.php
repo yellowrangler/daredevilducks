@@ -21,14 +21,51 @@ $passwd = $_POST['passwd'];
 $vpasswd = $_POST['vpasswd'];
 $role = $_POST['role'];
 $avatar = 'default.png';       
-$noemail = 0;
 $biography = $_POST['biography'];
+
+$membernameprofileind = 0;
+$genderprofileind = 0;
+$emailprofileind = 0; 
+$addressprofileind = 0; 
+$phonenumberprofileind = 0; 
+$biographyprofileind = 0; 
+$noemail = 0;
 $favoriteteamid = 0;
+
+if( isset($_POST['membernameprofileind']) )
+{
+     $membernameprofileind = 1;
+}
+
+if( isset($_POST['genderprofileind']) )
+{
+     $genderprofileind = 1;
+}
+
+if( isset($_POST['emailprofileind']) )
+{
+     $emailprofileind = 1;
+}
+
+if( isset($_POST['addressprofileind']) )
+{
+     $addressprofileind = 1;
+}
+
+if( isset($_POST['phonenumberprofileind']) )
+{
+     $phonenumberprofileind = 1;
+}
+
+if( isset($_POST['biographyprofileind']) )
+{
+     $biographyprofileind = 1;
+}
 
 if( isset($_POST['noemail']) )
 {
      $noemail = 1;
-}  
+} 
 
 if( isset($_POST['favoriteteamid']) )
 {
@@ -144,14 +181,20 @@ $sql = "INSERT INTO membertbl
 	avatar, 
 	role, 
 	email, 
-	noemail,
 	biography,
-	favoriteteamid,
 	street,
 	city, 
 	state, 
 	zip, 
 	phonenumber, 
+	membernameprofileind, 
+	genderprofileind, 
+	emailprofileind, 
+    addressprofileind, 
+    phonenumberprofileind, 
+    biographyprofileind,
+	noemail,
+	favoriteteamid,
 	passwd, 
 	status, 
 	enterdate) 
@@ -161,14 +204,20 @@ $sql = "INSERT INTO membertbl
 	'$avatar',
 	'$role',
 	'$email',
-	$noemail,
 	'$biography',
-	$favoriteteamid,
 	'$street',
 	'$city',
 	'$state',
 	'$zip',
 	'$phonenumber',
+	$membernameprofileind, 
+	$genderprofileind, 
+	$emailprofileind, 
+    $addressprofileind, 
+    $phonenumberprofileind, 
+    $biographyprofileind,
+	$noemail,
+	$favoriteteamid,
 	'$passwd',
 	'$status',
 	'$enterdateTS')"; 

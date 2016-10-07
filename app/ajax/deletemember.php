@@ -9,20 +9,6 @@ include_once ('../class/class.AccessLog.php');
 //
 $memberid = $_POST['id'];
 $membername = $_POST['membername'];
-$gender = $_POST['gender'];
-$street = $_POST['street'];
-$city =  $_POST['city '];
-$state = $_POST['state'];
-$zip = $_POST['zip'];
-$phonenumber = $_POST['phonenumber'];
-$email = $_POST['email'];
-$status = $_POST['status'];
-$screenname = $_POST['screenname']; 
-$passwd = $_POST['passwd'];
-$vpasswd = $_POST['vpasswd'];
-$role = $_POST['role'];
-$avatar = $_POST['avatar'];    
-$avatarselect = $_POST['avatarselect'];     
 
 //
 //  set global values

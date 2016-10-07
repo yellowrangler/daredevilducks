@@ -7,9 +7,6 @@
 <div class="pageStandardOffset row">
     <div class="col-md-offset-1 col-md-10">
       <div class="panel panel-default">
-        <!-- <div style="background-color:#058689;border:2px solid #055659;color:white;text-align:center;" class="panel-heading">
-          <h3 class="leaderBoardPanelTitle panel-title">My Information</h3>
-        </div> -->
         <form id="memberupdatememberForm" name="memberupdatememberForm" style="padding:10px;" class="form-horizontal">
           <div class="row" style="padding-top:35px;">
             <div class="col-md-7">
@@ -207,6 +204,40 @@
               </div> <!-- end of form-group -->
             </div> <!-- end of col-7 -->
           </div> <!-- end of row -->
+
+          <hr class="hrBreak">
+
+          <div class="row" style="padding-top:25px;">
+            <div class="col-md-offset-1 col-md-7">
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.membernameprofileind" ng-checked="current.membernameprofileind == '1'" id="membernameprofileind" name="membernameprofileind"> You can show members my Name
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.genderprofileind" ng-checked="current.genderprofileind == '1'" id="genderprofileind" name="genderprofileind"> You can show members my Gender
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.emailprofileind" ng-checked="current.emailprofileind == '1'" id="emailprofileind" name="emailprofileind"> You can show members my eMail
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.addressprofileind" ng-checked="current.addressprofileind == '1'" id="addressprofileind" name="addressprofileind"> You can show members my Address
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.phonenumberprofileind" ng-checked="current.phonenumberprofileind == '1'" id="phonenumberprofileind" name="phonenumberprofileind"> You can show members my Phone Number
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.biographyprofileind" ng-checked="current.biographyprofileind == '1'" id="biographyprofileind" name="biographyprofileind"> You can show members my Biogrophy
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.noemail" ng-checked="current.noemail == '1'"  id="noemail" name="noemail"> Please do NOT send me eMails
+              </div> <!-- end of form-group -->
+            </div>    
+          </div>
 
           <hr class="hrBreak">
 
