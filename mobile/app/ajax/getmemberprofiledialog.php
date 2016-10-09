@@ -163,7 +163,7 @@ $returnStr = $returnStr . "
 		<td style='font-weight:bold;padding-top:20px;width:35%'>$memberscreenname</td>			
 		<td>
 			<div style='text-align:center;'>
-				<img align='left' height='75' src='img/avatars/$memberavatar'> 
+				<img align='left' height='75' src='../img/avatars/$memberavatar'> 
 			</div>
 		</td>										
 	</tr>	
@@ -252,7 +252,7 @@ if ($emailprofileind == 1)
 	$returnStr = $returnStr . "
 	<tr>
 		<td style='font-weight:bold;'>eMail</td>	
-		<td><a href='mailto:$memberemail' target='_top'>$memberemail</a></td>									
+		<td colspan=2><a href='mailto:$memberemail' target='_top'>$memberemail</a></td>									
 	</tr>
 	";
 }

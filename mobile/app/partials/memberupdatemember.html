@@ -15,12 +15,12 @@
       </div> <!-- end of form-group -->
 
       <div class="form-group">
-          <label for="screenname" class="col-md-3 control-label">Screen Name</label>
+          <label for="screenname" class="control-label">Screen Name</label>
               <input tabindex="2" type="text" class="form-control" ng-model="current.screenname" id="screenname" name="screenname" placeholder="Screen Name">
       </div> <!-- end of form-group -->
 
       <div class="form-group" >
-        <label for="gender" class="control-label">Gender</label>
+          <label for="gender" class="control-label">Gender</label>
           <select tabindex="4" class="form-control" ng-model="current.gender" id="gender" name="gender" >
             <option value="Not Selected">Not Selected</option>
             <option value="Male">Male</option>
@@ -29,17 +29,17 @@
           </select>
       </div> <!-- end of form-group -->
 
-        <div class="form-group">
+      <div class="form-group">
             <label for="street" class="control-label">Street</label>
             <input tabindex="5" type="text" class="form-control" ng-model="current.street" id="street" name="street"placeholder="{{current.street}}">
-        </div> <!-- end of form-group -->
+      </div> <!-- end of form-group -->
 
-        <div class="form-group">
+      <div class="form-group">
             <label for="city" class="control-label">City</label>
             <input tabindex="7" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
-        </div> <!-- end of form-group -->    
+      </div> <!-- end of form-group -->    
 
-        <div class="form-group">
+      <div class="form-group">
             <label for="state" class="control-label">State</label>
             <select class="form-control" ng-model="current.state" tabindex="8" name="state" id="state">
               <option value="">Not Selected</option>
@@ -98,7 +98,7 @@
 
             <label for="zip" class="control-label">Zip</label>
             <input tabindex="9" type="text" class="form-control" ng-model="current.zip" id="zip" name="zip" placeholder="Zip">
-        </div> <!-- end of form-group -->
+      </div> <!-- end of form-group -->
 
       <div class="form-group">
           <label for="phonenumber" class="control-label">Phone</label>
@@ -108,23 +108,19 @@
       <div class="form-group">
           <label for="email" class="control-label">eMail</label>
           <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
-
-          &nbsp; 
-
-          <input style="padding-left:15px" tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please no eMail's
       </div> <!-- end of form-group -->
 
-        <div class="form-group">
+      <div class="form-group">
           <label for="favoriteteamid" class="control-label">Favorite Team</label>
           <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
               <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
           </select>
-        </div> <!-- end of form-group --> 
+      </div> <!-- end of form-group --> 
 
-        <div class="form-group">
+      <div class="form-group">
             <label for="biography" class="control-label">Biography</label>
             <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
-        </div> <!-- end of form-group -->
+      </div> <!-- end of form-group -->
 
       <div class="form-group">
           <label for="passwd" class="control-label">Password</label>
@@ -139,15 +135,53 @@
       </div> <!-- end of form-group -->
 
       <div class="form-group">
-        <label for="avatar" class="control-label">Avatar</label>
-          <img ng-click="updateAvatar()" style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="showPointer img-rounded center-block" >
+          <label for="avatar" class="control-label">Avatar</label>
+            <img ng-click="updateAvatar()" style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="showPointer img-rounded center-block" >
 
           <input ng-model="current.avatar" type="hidden" value="{{current.avatar}}" id="avatar" name="avatar">
       </div> <!-- end of form-group -->
 
-      <div class="form-group text-center">
-          <button tabindex="17" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
-      </div> <!-- end of form-group -->
+      <div style="padding-top:20px;">
+          <div class="form-group" >
+            <span style="font-weight:bold;">Permissions</span>
+          </div> <!-- end of form-group -->
+      </div>    
+
+      <div class="col-md-offset-1 col-md-7">  
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.membernameprofileind" ng-checked="current.membernameprofileind == '1'" id="membernameprofileind" name="membernameprofileind"> You can show members my Name
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.genderprofileind" ng-checked="current.genderprofileind == '1'" id="genderprofileind" name="genderprofileind"> You can show members my Gender
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.emailprofileind" ng-checked="current.emailprofileind == '1'" id="emailprofileind" name="emailprofileind"> You can show members my eMail
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.addressprofileind" ng-checked="current.addressprofileind == '1'" id="addressprofileind" name="addressprofileind"> You can show members my Address
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.phonenumberprofileind" ng-checked="current.phonenumberprofileind == '1'" id="phonenumberprofileind" name="phonenumberprofileind"> You can show members my Phone Number
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.biographyprofileind" ng-checked="current.biographyprofileind == '1'" id="biographyprofileind" name="biographyprofileind"> You can show members my Biogrophy
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.noemail" ng-checked="current.noemail == '1'"  id="noemail" name="noemail"> Please do NOT send me eMails
+          </div> <!-- end of form-group -->  
+      </div>
+
+      <div style="padding-top:20px;" class="col-md-7">
+        <div class="form-group text-center">
+            <button tabindex="17" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
+        </div> <!-- end of form-group -->
+      </div>    
     </form>
   </div> <!-- end of panel panel -->
 </div> <!-- end of offset -->    

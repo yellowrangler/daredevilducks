@@ -111,7 +111,7 @@
 	<div style="display:inline;">
 		<div style="padding-top:5px;">
 			<div style="width:100%;" class="form-group">
-	            <img style="height:100px;" class="center-block"  ng-show="current.memberavatar != ''" ng-src="../img/avatars/{{current.memberavatar}}">
+	            <img style="height:100px;cursor:pointer;" class="center-block"  ng-show="current.memberavatar != ''" ng-click="getMemberProfile(current.memberid)" ng-src="../img/avatars/{{current.memberavatar}}">
 			</div>  
 
 			<div style="padding-top:10px;width:100%;width:100%;text-align:center;font-weight:bold;padding:10px;" class="form-group teamSelected">
@@ -126,4 +126,20 @@
 	</div> <!-- end of column -->
 </div> <!-- end of row -->
 
+<!-- Dialogs -->
+<div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberProfileDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberProfileDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
 <!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

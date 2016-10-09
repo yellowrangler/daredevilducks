@@ -657,6 +657,24 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
+    function getMemberProfile(memberid)
+    {
+        // alert("memberid = "+memberid)
+
+        var q = "memberid="+memberid;
+        membersFactory.getMemberProfileDialog(q)
+            .success( function(data) {
+                $scope.memberprofile = data; 
+
+                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalBody').html(data);
+                $('#memberProfileDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
+
     function selectChange()
     {
         var memberid = "memberid="+$scope.current.memberid;
@@ -775,6 +793,10 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
 
     $scope.getMemberWeekPicks = function() {
         selectChange();
+    }
+
+    $scope.getMemberProfile = function(memberid) {
+        getMemberProfile(memberid);
     }
 
     $scope.compareScores = function (venue, homescore, awayscore) {
@@ -961,7 +983,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
     }
 }
 
-controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory, loginService) {
+controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, membersFactory, nflteamsFactory, loginService) {
 
     // function getGameTypeName() 
     // {
@@ -972,6 +994,24 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
     //         }
     //     });
     // }
+
+    function getMemberProfile(memberid)
+    {
+        // alert("memberid = "+memberid)
+
+        var q = "memberid="+memberid;
+        membersFactory.getMemberProfileDialog(q)
+            .success( function(data) {
+                $scope.memberprofile = data; 
+
+                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalBody').html(data);
+                $('#memberProfileDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
 
     function workWinsTableData(data)
     {
@@ -1104,11 +1144,33 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
     $scope.getYearlyLeaderBoard = function() {
         getYearlyLeaderBoard();
     }
+
+    $scope.getMemberProfile = function(memberid) {
+        getMemberProfile(memberid);
+    }
 }
 
 controllers.memberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, nflteamsFactory, loginService) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
+
+    function getMemberProfile(memberid)
+    {
+        // alert("memberid = "+memberid)
+
+        var q = "memberid="+memberid;
+        membersFactory.getMemberProfileDialog(q)
+            .success( function(data) {
+                $scope.memberprofile = data; 
+
+                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalBody').html(data);
+                $('#memberProfileDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
 
     function selectChange()
     {
@@ -1204,6 +1266,10 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 
     $scope.getMemberWeekStats = function() {
         selectChange();
+    }
+
+    $scope.getMemberProfile = function(memberid) {
+        getMemberProfile(memberid);
     }
 }
 

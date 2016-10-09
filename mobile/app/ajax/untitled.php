@@ -89,7 +89,6 @@ $sql = "SELECT
 	M.favoriteteamid, 
 	M.noemail, 
 	M.biography, 
-	CONCAT(M.city, ', ', M.state) as memberaddress,
 	CONCAT(T.location, ' ', T.name) as favorateteam,
 	T.teamiconname as favoriteteamiconame,
 	T.teamurl as favoriteteamurl
@@ -131,7 +130,6 @@ $memberstreet = $memberprofile['street'];
 $membercity =  $memberprofile['city'];
 $memberstate = $memberprofile['state'];
 $memberzip = $memberprofile['zip'];
-$memberaddress = $memberprofile['memberaddress'];
 $memberphonenumber = $memberprofile['phonenumber'];
 $memberemail = $memberprofile['email'];
 $memberscreenname = $memberprofile['screenname']; 
@@ -163,7 +161,7 @@ $returnStr = $returnStr . "
 		<td style='font-weight:bold;padding-top:20px;width:35%'>$memberscreenname</td>			
 		<td>
 			<div style='text-align:center;'>
-				<img align='left' height='75' src='img/avatars/$memberavatar'> 
+				<img align='left' height='75' src='../img/avatars/$memberavatar'> 
 			</div>
 		</td>										
 	</tr>	
@@ -240,8 +238,12 @@ if ($addressprofileind == 1)
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;'>Location</td>	
-		<td>$memberaddress</td>									
+		<td style='font-weight:bold;'>City</td>	
+		<td colspan=2>$membercity</td>									
+	</tr>
+	<tr>
+		<td style='font-weight:bold;'>State</td>	
+		<td colspan=2>$memberstate</td>									
 	</tr>
 	";
 }
@@ -252,7 +254,7 @@ if ($emailprofileind == 1)
 	$returnStr = $returnStr . "
 	<tr>
 		<td style='font-weight:bold;'>eMail</td>	
-		<td><a href='mailto:$memberemail' target='_top'>$memberemail</a></td>									
+		<td colspan=2><a href='mailto:$memberemail' target='_top'>$memberemail</a></td>									
 	</tr>
 	";
 }

@@ -9,9 +9,12 @@
 <div class="pageStandardOffset row">
     <div class="col-md-12">
       <div style="padding-left:5%;padding-right:5%;" style="width:90%;">
+
+      <form id="updatememberForm" name="updatememberForm">
+
         <div class="panel panel-default">
           <div class="subpanelCaption panel-heading">Player Information</div>
-          <form id="updatememberForm" name="updatememberForm" style="padding:10px;" class="form-horizontal">
+          <div style="padding:10px;" class="form-horizontal">
               <div class="form-group" >
                 <label for="membername" class="col-md-2 control-label">Name</label>
                 <div class="col-md-5">
@@ -139,10 +142,6 @@
                   <div class="col-md-5">
                       <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
                   </div>
-
-                  &nbsp; 
-
-                  <input tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please don't Send eMail's
               </div> <!-- end of form-group -->
 
               <div class="form-group">
@@ -189,22 +188,57 @@
               <div class="form-group">
                 <label for="avatar" class="col-md-2 control-label">Avatar</label>
                   <div class="col-md-7">
-                      <img style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="img-rounded" >
+                      <img style="max-width:100px;" src="img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="img-rounded" >
                   </div>
                   <input ng-model="current.avatar" type="hidden" value="{{current.avatar}}" id="avatar" name="avatar">
               </div> <!-- end of form-group -->
 
-              <div style="padding-top:25px;" class="form-group">
-                <div>
-                  <button tabindex="18" id="updatenewmemberbutton" data-ng-click="updatenewmember()" type="button" class="btn btn-primary center-block">Update Player</button>
-                 </div>
-             
-                <div style="padding-top:15px;">
-                  <button tabindex="19" class="btn btn-danger center-block" ng-click="deletememberbutton()" id="deletememberbutton">Delete Player</button>
-                </div>
-              </div> <!-- end of form-group -->
-          </form>
+          </div>
         </div> <!-- end of panel panel -->
-      </div> <!-- end of div style 100% -->
+
+        <div class="panel panel-default">
+          <div class="subpanelCaption panel-heading">Player Permissions</div>
+          <div style="padding-left:30px;padding-top:15px;" class="form-horizontal">
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.membernameprofileind" ng-checked="current.membernameprofileind == '1'" id="membernameprofileind" name="membernameprofileind"> You can show members my Name
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.genderprofileind" ng-checked="current.genderprofileind == '1'" id="genderprofileind" name="genderprofileind"> You can show members my Gender
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.emailprofileind" ng-checked="current.emailprofileind == '1'" id="emailprofileind" name="emailprofileind"> You can show members my eMail
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.addressprofileind" ng-checked="current.addressprofileind == '1'" id="addressprofileind" name="addressprofileind"> You can show members my Address
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.phonenumberprofileind" ng-checked="current.phonenumberprofileind == '1'" id="phonenumberprofileind" name="phonenumberprofileind"> You can show members my Phone Number
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.biographyprofileind" ng-checked="current.biographyprofileind == '1'" id="biographyprofileind" name="biographyprofileind"> You can show members my Biogrophy
+              </div> <!-- end of form-group -->
+
+              <div class="form-group" >
+                <input tabindex="" type="checkbox" ng-model="current.noemail" ng-checked="current.noemail == '1'"  id="noemail" name="noemail"> Please do NOT send me eMails
+              </div> <!-- end of form-group -->
+          </div>
+        </div> <!-- end of panel panel -->
+
+        <div style="padding-top:25px;padding-bottom:50px;" class="form-group">
+          <div>
+            <button tabindex="18" id="updatenewmemberbutton" data-ng-click="updatenewmember()" type="button" class="btn btn-primary center-block">Update Player</button>
+           </div>
+       
+          <div style="padding-top:15px;">
+            <button tabindex="19" class="btn btn-danger center-block" ng-click="deletememberbutton()" id="deletememberbutton">Delete Player</button>
+          </div>
+        </div> <!-- end of form-group -->
+        </form>
+      </div> <!-- end of div style 90% -->
     </div> <!-- end of div col md 12 -->
 </div> <!-- end of row -->    
