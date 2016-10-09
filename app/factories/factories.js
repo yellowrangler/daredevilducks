@@ -267,6 +267,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.getMemberProfileDialog = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmemberprofiledialog.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getAllMembers = function (data) {
         return $http({ 
             method: 'POST', 
