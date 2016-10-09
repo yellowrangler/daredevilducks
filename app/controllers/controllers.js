@@ -1110,7 +1110,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
     }
 }
 
-controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory, loginService) {
+controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory, membersFactory, loginService) {
 
     // function getGameTypeName() 
     // {
@@ -1121,6 +1121,24 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
     //         }
     //     });
     // }
+
+    function getMemberProfile(memberid)
+    {
+        // alert("memberid = "+memberid)
+
+        var q = "memberid="+memberid;
+        membersFactory.getMemberProfileDialog(q)
+            .success( function(data) {
+                $scope.memberprofile = data; 
+
+                $('#memberProfileDialogTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalBody').html(data);
+                $('#memberProfileDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
 
     function workWinsTableData(data)
     {
@@ -1256,12 +1274,34 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
     $scope.getYearlyLeaderBoard = function() {
         getYearlyLeaderBoard();
     }
+
+    $scope.getMemberProfile = function(memberid) {
+        getMemberProfile(memberid);
+    }
 }
 
 controllers.memberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, nflteamsFactory, loginService) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
+    function getMemberProfile(memberid)
+    {
+        // alert("memberid = "+memberid)
+
+        var q = "memberid="+memberid;
+        membersFactory.getMemberProfileDialog(q)
+            .success( function(data) {
+                $scope.memberprofile = data; 
+
+                $('#memberProfileDialogTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalBody').html(data);
+                $('#memberProfileDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
+    
     function selectChange()
     {
         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
@@ -1359,6 +1399,10 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
 
     $scope.getMemberWeekStats = function() {
         selectChange();
+    }
+
+    $scope.getMemberProfile = function(memberid) {
+        getMemberProfile(memberid);
     }
 }
 

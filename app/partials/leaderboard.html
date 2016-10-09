@@ -50,7 +50,7 @@
 					<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
 						<td style="padding-right:15px;" class="center-column-text">{{memberseasonwinstats.position}}</td>
 
-						<td class="left-column-text"><img style="height:70px;" ng-show="memberseasonwinstats.memberavatar != ''" ng-src="img/avatars/{{memberseasonwinstats.memberavatar}}"></td>
+						<td class="left-column-text"><img style="height:70px;cursor:pointer;" ng-show="memberseasonwinstats.memberavatar != ''" ng-click="getMemberProfile(memberseasonwinstats.memberid)" ng-src="img/avatars/{{memberseasonwinstats.memberavatar}}"></td>
 
 						<td class="left-column-text">{{memberseasonwinstats.screenname}}</td>
 
@@ -103,7 +103,7 @@
 					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
 						<td style="padding-right:15px;" class="center-column-text">{{memberseasonpercentstat.position}}</td>
 
-						<td class="left-column-text"><img style="height:70px;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
+						<td class="left-column-text"><img style="height:70px;cursor:pointer;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-click="getMemberProfile(memberseasonpercentstat.memberid)" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
 
 						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
 
@@ -117,5 +117,22 @@
 		</div> <!-- end of panel -->
 	</div> <!-- end of col-5 -->
 </div> <!-- end of row -->
+
+<!-- Dialogs -->
+<div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberProfileDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberProfileDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
 
 <div style="padding-bottom:50px;">&nbsp;</div>
