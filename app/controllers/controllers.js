@@ -736,7 +736,7 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .success( function(data) {
                 $scope.memberprofile = data; 
 
-                $('#memberProfileDialogTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
                 $('#memberProfileDialogModalBody').html(data);
                 $('#memberProfileDialogModal').modal();
             })
@@ -1131,7 +1131,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
             .success( function(data) {
                 $scope.memberprofile = data; 
 
-                $('#memberProfileDialogTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
                 $('#memberProfileDialogModalBody').html(data);
                 $('#memberProfileDialogModal').modal();
             })
@@ -1293,7 +1293,7 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
             .success( function(data) {
                 $scope.memberprofile = data; 
 
-                $('#memberProfileDialogTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
                 $('#memberProfileDialogModalBody').html(data);
                 $('#memberProfileDialogModal').modal();
             })

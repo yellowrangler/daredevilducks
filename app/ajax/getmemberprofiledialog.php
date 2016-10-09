@@ -230,7 +230,7 @@ if ($emailprofileind == 1)
 	$returnStr = $returnStr . "
 	<tr>
 		<td>eMail:</td>	
-		<td colspan=2>$memberemail</td>									
+		<td colspan=2><a href='mailto:$memberemail' target='_top'>$memberemail</a></td>									
 	</tr>
 	";
 }
@@ -239,7 +239,6 @@ if ($emailprofileind == 1)
 $returnStr = $returnStr . "
 </table>
 ";
-
 
 //
 // close db connection
