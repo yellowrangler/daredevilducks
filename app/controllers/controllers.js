@@ -1131,7 +1131,7 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
             .success( function(data) {
                 $scope.memberprofile = data; 
 
-                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalTitle').text("Member Profile Information");
                 $('#memberProfileDialogModalBody').html(data);
                 $('#memberProfileDialogModal').modal();
             })
@@ -1293,7 +1293,7 @@ controllers.memberweeklyController = function ($scope, $http, $location, members
             .success( function(data) {
                 $scope.memberprofile = data; 
 
-                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalTitle').text("Member Profile Information");
                 $('#memberProfileDialogModalBody').html(data);
                 $('#memberProfileDialogModal').modal();
             })
