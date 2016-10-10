@@ -27,6 +27,18 @@ dddApp.service('selectListService', function () {
             url : "welcome-email.html"
         },
         {  
+            title :  "New Avatar",
+            url : "avatar-change-email.html"
+        },
+        {  
+            title :  "New Avatar and Login",
+            url : "avatar-login-change-email.html"
+        },
+        {  
+            title :  "New Login",
+            url : "login-change-email.html"
+        },
+        {  
             title :  "New Season",
             url : "welcome-new-season-email.html"
         },
