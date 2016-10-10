@@ -666,7 +666,7 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
             .success( function(data) {
                 $scope.memberprofile = data; 
 
-                $('#memberProfileDialogModalTitle').text("Member Profile Informatin");
+                $('#memberProfileDialogModalTitle').text("Member Profile Information");
                 $('#memberProfileDialogModalBody').html(data);
                 $('#memberProfileDialogModal').modal();
             })
