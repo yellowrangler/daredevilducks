@@ -138,7 +138,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 
 //
 // now encode string. Must be done  after mysql connect
-//
+// 
 $biography = mysql_real_escape_string($biography);
 
 
