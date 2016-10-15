@@ -1,1 +1,12 @@
-goaccess -f /var/log/nginx/access.log -c
+#!/bin/bash
+
+# By Tarrant Cutler
+# goaccess log analysis
+# if parm passed in create log with parm as name if no parm do interactive
+
+if [ $# -eq 0 ]; then
+   goaccess -f /var/log/nginx/access.log -c
+else
+  goaccess -f /var/log/nginx/access.log  -a -o $1.html >$1.html
+fi
+
