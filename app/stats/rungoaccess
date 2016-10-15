@@ -7,6 +7,6 @@
 if [ $# -eq 0 ]; then
    goaccess -f /var/log/nginx/access.log -c
 else
-  goaccess -f /var/log/nginx/access.log  -a -o $1.html >$1.html
+  goaccess -f /var/log/nginx/access.log  -a -o webstats-$1.html >webstats-$1.html
 fi
 
