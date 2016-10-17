@@ -172,6 +172,9 @@ $sql = "UPDATE membertbl
 		enterdate = '$enterdateTS'
 	WHERE id = '$memberid'"; 
 
+// print $sql;
+// exit("ok");
+
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {

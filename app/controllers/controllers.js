@@ -1705,6 +1705,7 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         else
         {
             var formstring = $("#addmemberForm").serialize();
+            // var formstringClean = encodeURIComponent(formstring);
 
             membersFactory.addMember(formstring)
             .success( function(data) {
@@ -1787,8 +1788,8 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
     };
 
     $scope.getMember = function(data) {
-    
-        var membername = "membername="+data;
+        var cleanData = encodeURIComponent(data);
+        var membername = "membername="+cleanData;
         membersFactory.getMember(membername)
         .success( function(data) {
             $scope.current = data;
@@ -1830,8 +1831,8 @@ controllers.updatememberController = function ($scope, $http, $location, members
     };
 
     $scope.getAllMember = function(data) {
-    
-        var membername = "membername="+data;
+        var cleanData = encodeURIComponent(data);
+        var membername = "membername="+cleanData;
         membersFactory.getAllMember(membername)
         .success( function(data) {
             $scope.current = data;
@@ -1863,7 +1864,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
         else
         {
             var formstring = $("#updatememberForm").serialize();
-
+            // var formstringClean = encodeURIComponent(formstring);
             membersFactory.updateMember(formstring)
             .success( function(data) {
                 if (data !== "ok")
@@ -2864,7 +2865,7 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         else
         {
             var formstring = $("#memberupdatememberForm").serialize();
-
+            // var formstringClean = encodeURIComponent(formstring);
             membersFactory.memberUpdateMember(formstring)
             .success( function(data) {
                 if (data == "ok")

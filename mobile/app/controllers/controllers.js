@@ -983,6 +983,57 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
     }
 }
 
+controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
+    $scope.current = {};
+ 
+    function selectChange()
+    {
+        setBracketImage();
+    }
+
+    function setBracketImage ()
+    {
+        switch ($scope.current.season)
+        {
+            case "2014":
+                $scope.bracketimg = "NFLPlayOffBracket2014C.png";
+                break;
+
+            case "2015":
+                $scope.bracketimg = "NFLPlayOffBracket2015H.png";
+                break;  
+                
+            default:
+                $scope.bracketimg = ""; 
+        }
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+
+        setBracketImage();
+        
+        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
+        nflteamsFactory.getNFLTeamstats(data)
+            .success( function(data) {
+                $scope.teamstats = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+    };
+
+    $scope.selectChange = function() {
+        selectChange();
+    }
+}
 controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, membersFactory, nflteamsFactory, loginService) {
 
     // function getGameTypeName() 
@@ -1533,9 +1584,6 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
 
         $scope.teams = nflTeamsService.getNFLTeams(); 
 
-
-
-
   }
 
 }
@@ -1565,6 +1613,7 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         else
         {
             var formstring = $("#addmemberForm").serialize();
+            // var formstringClean = encodeURIComponent(formstring);
 
             membersFactory.addMember(formstring)
             .success( function(data) {
@@ -1641,8 +1690,8 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
     };
 
     $scope.getMember = function(data) {
-    
-        var membername = "membername="+data;
+        var cleanData = encodeURIComponent(data);
+        var membername = "membername="+cleanData;
         membersFactory.getMember(membername)
         .success( function(data) {
             $scope.current = data;
@@ -1681,8 +1730,8 @@ controllers.updatememberController = function ($scope, $http, $location, members
     };
 
     $scope.getAllMember = function(data) {
-    
-        var membername = "membername="+data;
+        var cleanData = encodeURIComponent(data);
+        var membername = "membername="+cleanData;
         membersFactory.getAllMember(membername)
         .success( function(data) {
             $scope.current = data;
@@ -1714,7 +1763,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
         else
         {
             var formstring = $("#updatememberForm").serialize();
-
+            // var formstringClean = encodeURIComponent(formstring);
             membersFactory.updateMember(formstring)
             .success( function(data) {
                 if (data !== "ok")
@@ -2671,7 +2720,7 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         else
         {
             var formstring = $("#memberupdatememberForm").serialize();
-
+            // var formstringClean = encodeURIComponent(formstring);
             membersFactory.memberUpdateMember(formstring)
             .success( function(data) {
                 if (data == "ok")

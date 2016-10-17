@@ -73,6 +73,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 // get nfl game type information
 //---------------------------------------------------------------
 $sql = "SELECT *  FROM membertbl 
+WHERE status = 'active'
 ORDER BY $orderby ASC";
 // print $sql;
 
