@@ -5,8 +5,7 @@
 # if parm passed in create log with parm as name if no parm do interactive
 
 if [ $# -eq 0 ]; then
-   goaccess -f /var/log/nginx/access.log -c
+   zcat -f /var/log/nginx/access.log-*.gz | goaccess -a -o webstats-current.html >webstats-current.html
 else
   goaccess -f /var/log/nginx/access.log  -a -o webstats-$1.html >webstats-$1.html
 fi
-
