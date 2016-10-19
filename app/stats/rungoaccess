@@ -9,4 +9,3 @@ if [ $# -eq 0 ]; then
 else
   goaccess -f /var/log/nginx/access.log  -a -o webstats-$1.html >webstats-$1.html
 fi
-
