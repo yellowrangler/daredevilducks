@@ -303,6 +303,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.buildeMailTemplate = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/buildemail.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.updateMember = function (data) {
         return $http({ 
             method: 'POST', 

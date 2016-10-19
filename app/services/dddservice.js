@@ -44,7 +44,7 @@ dddApp.service('selectListService', function () {
         },
         {  
             title :  "Game week",
-            url : "gameweek-email.html"
+            url : "gameweek"
         },
         {  
             title :  "Team Weekly Rankings",

@@ -95,7 +95,7 @@
         <form id="getTemplateForm" name="getTemplateForm" style="padding:10px;" class="form">
           <div class="form-group" >
             <label for="templatename" class="control-label">Name</label>
-              <select tabindex="1"  class="form-control" ng-change="geteMailTemplate()" ng-model="current.emailtemplate" id="templatename" name="templatename">
+              <select tabindex="1"  class="form-control" ng-change="geteMailTemplate(current.emailtemplate)" ng-model="current.emailtemplate" id="templatename" name="templatename">
                 <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate.url}}">{{emailtemplate.title}}</option>
               </select>
           </div> <!-- end of form-group -->
