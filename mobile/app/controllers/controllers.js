@@ -186,7 +186,7 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
         
 }
 
-controllers.homeController = function ($scope, $http, $location, $route, loginService) {
+controllers.homeController = function ($scope, $http, $location, $window, $route, loginService) {
 
     init();
     function init() {
@@ -201,6 +201,8 @@ controllers.homeController = function ($scope, $http, $location, $route, loginSe
             });
 
         $scope.$parent.checkRole();  
+
+        $window.scrollTo(0, 0);
 
         var loggedIn = loginService.isLoggedIn();
         if (loggedIn)
@@ -822,7 +824,7 @@ controllers.viewallpicksController = function ($scope, $http, $location, nflTeam
     };
 }
 
-controllers.teamstandingsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory) {
+controllers.teamstandingsController = function ($scope, $http, $location, $window, nflTeamsService, nflteamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -846,6 +848,12 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
         // in jquery ready. So adding it here
         //
 
+        var navButtons = $('#navbarButtonsStandings');
+        navButtons.on('show.bs.collapse','.collapse', function() {
+                navButtons.find('.collapse.in').collapse('hide');
+
+                $window.scrollTo(0, 0);
+            });
 
         var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
         $scope.postseasonstatuses = postseasonstatuses;
@@ -1034,7 +1042,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         selectChange();
     }
 }
-controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, membersFactory, nflteamsFactory, loginService) {
+controllers.leaderboardController = function ($scope, $http, $location, $window, nflTeamsService, membersFactory, nflteamsFactory, loginService) {
 
     // function getGameTypeName() 
     // {
@@ -1160,6 +1168,13 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
             alert ("You must login!")
             $location.path("#home");
         }
+
+        var navButtons = $('#navbarButtonsLeader');
+        navButtons.on('show.bs.collapse','.collapse', function() {
+                navButtons.find('.collapse.in').collapse('hide');
+
+                $window.scrollTo(0, 0);
+            });
 
         $scope.current = {};
         $scope.current.season = nflTeamsService.getCurrentSeason();

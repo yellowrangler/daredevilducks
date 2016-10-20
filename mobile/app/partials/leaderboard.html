@@ -4,39 +4,43 @@
 	<h2 class="headerTitle">Leader Board</h2> 
 </div> <!-- end of caption -->	
 
-<div class="row">
-	<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">
-	<div class="col-md-12">
-		<div class="pageStandardOffset">
-			<div class="panel panel-default panelOverrideNoBorder">
-				<div class="panel-body">
-					<div class="form-group horizontalFieldOffset">
-				    	<label for="season" class="control-label">Season </label>
-			            <select class="customSelect form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.season" id="season" name="season">
-			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
-			            </select>
-					</div> <!-- end of form-group -->
-
-					<div class="form-group horizontalFieldOffset">
-						<label class="control-label" for="gametype">Game Type</label>
-						<select class="customSelect form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.gametypeid"  id="gametype" name="gametype">
-		                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
-	                    </select>
-					</div>  <!-- end of form group -->
-				</div> <!-- end of panel body -->			
-			</div> <!-- end of panel -->
-		</div> <!-- end of panelOffset -->			
-	</div> <!-- end of col 10 -->
-	</form>
-</div> <!-- end of row -->
-
-<div class="pageStandardOffset">
+<div id="navbarButtonsLeader">
 	<div class="row">
+		<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">
 		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div style="background-color:#058689;border:2px solid #055659;color:white;text-align:center;" class="panel-heading">
-					<h3 class="leaderBoardPanelTitle panel-title">Total Games Won Leader</h3>
-				</div>
+			<div class="pageStandardOffset">
+				<div class="panel panel-default panelOverrideNoBorder">
+					<div class="panel-body">
+						<div class="form-group horizontalFieldOffset">
+					    	<label for="season" class="control-label">Season </label>
+				            <select class="customSelect form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.season" id="season" name="season">
+				                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+				            </select>
+						</div> <!-- end of form-group -->
+
+						<div class="form-group horizontalFieldOffset">
+							<label class="control-label" for="gametype">Game Type</label>
+							<select class="customSelect form-control" ng-change="getYearlyLeaderBoard()" ng-model="current.gametypeid"  id="gametype" name="gametype">
+			                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+		                    </select>
+						</div>  <!-- end of form group -->
+					</div> <!-- end of panel body -->			
+				</div> <!-- end of panel -->
+			</div> <!-- end of panelOffset -->			
+		</div> <!-- end of col 10 -->
+		</form>
+	</div> <!-- end of row -->
+
+	<div style="padding-left:5%;width:95%;background-color:white;" class="row">
+		<div style="background-color:#058689;color:white;text-align:center;" class="btn btn-info btn-lg active btn-block" id="leaderBoardWinsheading">
+			<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtonsLeader" data-target="#leaderBoardWins" class="collapsed" aria-expanded="false">
+			<!-- <img style="vertical-align:middle;height:40px;display:inline;" class="" src="../img/buttons/halloffame-mobile.png">-->
+			<span style="color:white;padding-left:15px;">Total Games Won Leader</span>
+			</a>
+		</div> <!-- end of button -->
+
+		<div id="leaderBoardWins" class="collapse" aria-expanded="false">
+			 <div class="panel panel-default">
 				<div class="panel-body">
 					<div class="table-responsive">
 					<table class="table leaderBoardTable">
@@ -65,15 +69,20 @@
 					</div> <!-- end of responsive -->
 				</div> <!-- end of panel body -->
 			</div> <!-- end of panel -->
-		</div> <!-- end of col-12 -->
+		</div> <!-- end of panel collapse -->
 	</div>	<!-- end of row -->
+				
+	<div style="padding-top:15px;padding-left:5%;width:95%;background-color:white;" class="row">
+		<div style="background-color:#058689;color:white;text-align:center;" class="btn btn-info btn-lg active btn-block" id="leaderBoardPercentheading">
+			<a style="text-decoration:none;" data-toggle="collapse" data-parent="#navbarButtonsLeader" data-target="#leaderBoardPercent" class="collapsed" aria-expanded="false">
+			<!-- <img style="vertical-align:middle;height:40px;display:inline;" class="" src="../img/buttons/halloffame-mobile.png">-->
+			<span style="color:white;padding-left:15px;">Total Percentage Leader</span>
+			</a>
+		</div> <!-- end of button -->
 
-	<div class="row">
-		<div class="col-md-12">
+		<div id="leaderBoardPercent" class="collapse" aria-expanded="false">
+
 			<div class="panel panel-default ">
-				<div style="background-color:#058689;border:2px solid #055659;color:white;text-align:center;" class="panel-heading">
-					<h3 class="leaderBoardPanelTitle panel-title">Total Percentage Leader</h3>
-				</div>
 				<div id="percentPanelBody" class="panel-body">
 					<div class=" table-responsive">
 					<table class="table leaderBoardTable" >
@@ -99,10 +108,9 @@
 					</div> <!-- end of responsive -->
 				</div> <!-- end of panel body -->
 			</div> <!-- end of panel -->
-		</div> <!-- end of col-5 -->
+		</div> <!-- end of button -->
 	</div> <!-- end of row -->
-
-</div> <!-- end of standard offset -->
+</div>	
 
 <!-- Dialogs -->
 <div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">

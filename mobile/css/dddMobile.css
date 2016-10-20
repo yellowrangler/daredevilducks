@@ -112,7 +112,8 @@ border: 0 none;
 }
 
 .mainTitle {
-	color:#6C0000;
+	color:#094c4d;
+	/*color:#6C0000;*/
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
 	font-weight: 700;
 }
@@ -668,7 +669,7 @@ border: 0 none;
 
 .pageNavbarOffset {
 	/*padding-top:70px;*/
-	padding-top:85px;
+	padding-top:60px;
 }
 
 .horizontalFieldOffset {
