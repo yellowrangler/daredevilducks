@@ -303,6 +303,59 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.addMemberGroup = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/addmembergroup.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getAllMemberGroups = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getallmembergroups.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getAllMemberGroup = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getallmembergroup.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.updateMemberGroup = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/updatemembergroup.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.deleteMemberGroup = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/deletemembergroup.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+    factory.getAllMemberGroupMembers = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getallmembergroupmembers.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.buildeMailTemplate = function (data) {
         return $http({ 
             method: 'POST', 

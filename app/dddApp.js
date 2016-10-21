@@ -28,15 +28,20 @@ dddApp.config(function ($routeProvider) {
                 controller: 'viewtotalpickgamesController',
                 templateUrl: 'app/partials/viewtotalpickgames.html'
             }) 
-        .when('/leaderboard',
+        .when('/playerstatstotalwins',
             {
-                controller: 'leaderboardController',
-                templateUrl: 'app/partials/leaderboard.html'
+                controller: 'playerstatstotalwinsController',
+                templateUrl: 'app/partials/playerstatstotalwins.html'
             }) 
-        .when('/memberweekly',
+        .when('/playerstatstotalpercentage',
             {
-                controller: 'memberweeklyController',
-                templateUrl: 'app/partials/memberweekly.html'
+                controller: 'playerstatstotalpercentageController',
+                templateUrl: 'app/partials/playerstatstotalpercentage.html'
+            }) 
+        .when('/playerstatsmemberweekly',
+            {
+                controller: 'playerstatsmemberweeklyController',
+                templateUrl: 'app/partials/playerstatsmemberweekly.html'
             }) 
         .when('/teamstandings',
             {
@@ -68,73 +73,71 @@ dddApp.config(function ($routeProvider) {
                 controller: 'halloffameController',
                 templateUrl: 'app/partials/halloffame.html'
             })
-
         .when('/teaminfo',
             {
                 controller: 'teaminfoController',
                 templateUrl: 'app/partials/teaminfo.html'
             })
-
         .when('/teamseasoninfo',
             {
                 controller: 'teamseasoninfoController',
                 templateUrl: 'app/partials/teamseasoninfo.html'
             })
-
         .when('/teamdiscovery',
             {
                 controller: 'teamdiscoveryController',
                 templateUrl: 'app/partials/teamdiscovery.html'
             })
-
         .when('/gameinfo',
             {
                 controller: 'gameinfoController',
                 templateUrl: 'app/partials/gameinfo.html'
             })
-
         .when('/gameranking',
             {
                 controller: 'gamerankingController',
                 templateUrl: 'app/partials/gameranking.html'
             })
-
         .when('/addmember',
             {
                 controller: 'addmemberController',
                 templateUrl: 'app/partials/addmember.html'
             })
-
        .when('/addavatar',
             {
                 controller: 'addavatarController',
                 templateUrl: 'app/partials/addavatar.html'
             }) 
-
        .when('/sendplayeremail',
             {
                 controller: 'sendplayeremailController',
                 templateUrl: 'app/partials/sendplayeremail.html'
             }) 
-
         .when('/updatemember',
             {
                 controller: 'updatememberController',
                 templateUrl: 'app/partials/updatemember.html'
             })
-
+        .when('/addmembergroup',
+            {
+                controller: 'addmembergroupController',
+                templateUrl: 'app/partials/addmembergroup.html'
+            })
+        .when('/updatemembergroup',
+            {
+                controller: 'updatemembergroupController',
+                templateUrl: 'app/partials/updatemembergroup.html'
+            })
         .when('/weeklyscripts',
             {
                 controller: 'weeklyscriptsController',
                 templateUrl: 'app/partials/weeklyscripts.html'
             })
-
         .when('/memberupdatemember',
             {
                 controller: 'memberupdatememberController',
                 templateUrl: 'app/partials/memberupdatemember.html'
             })
-
         .when('/login',
             {
                 controller: 'loginController',

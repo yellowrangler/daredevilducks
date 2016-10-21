@@ -1,0 +1,100 @@
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2 class="headerTitle">Total Percentage Leader</h2> 
+	</div> <!-- end of col -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season </label>
+			            <select class="customSelect form-control" ng-change="getYearlyTotalPercentage()" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<label class="control-label" for="gametype">Game Type</label>
+						<select class="customSelect form-control" ng-change="getYearlyTotalPercentage()" ng-model="current.gametypeid"  id="gametype" name="gametype">
+		                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+	                    </select>
+					</div>  <!-- end of form group -->
+				</div> <!-- end of panel body -->			
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->			
+	</div> <!-- end of col 10 -->
+	</form>
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-8">
+		<div class="panel panel-default ">
+			<div id="percentPanelBody" class="panel-body">
+				<div class=" table-responsive">
+				<table class="table leaderBoardTable" >
+					<tr class="tableTitle">
+						<th style="padding-right:15px;">Rank</th>
+						<th colspan="2">Leader</th>				
+						<th>Percent</th>
+						<th>Games</th>				
+					</tr>
+
+					<tr ng-repeat="memberseasonpercentstat in memberseasonpercentstats">
+						<td style="padding-right:15px;" class="center-column-text">{{memberseasonpercentstat.position}}</td>
+
+						<td class="left-column-text"><img style="height:70px;cursor:pointer;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-click="getMemberProfile(memberseasonpercentstat.memberid)" ng-src="img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
+
+						<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
+
+						<td class="center-column-text">{{memberseasonpercentstat.showplayerpickedpercent}}</td>
+
+						<td class="center-column-text">{{memberseasonpercentstat.playerpickedgames}}</td>
+					</tr>
+				</table>
+				</div> <!-- end of responsive -->
+			</div> <!-- end of panel body -->
+		</div> <!-- end of panel -->
+	</div> <!-- end of col-8 -->
+
+	<div class="col-md-2">
+		<div style='padding-top:5px;' class="row">
+			<div class="col-md-12">
+				<div >
+					<!-- <img style="width:100%;" align="center" src='img/lb-top.png'> -->
+					<img style="width:100%;" align="center" src='img/PictureLeaderBdTopScrn.png'>
+				</div>	
+			</div>	
+		</div>
+		
+		<div style='padding-top:2300px;' class="row">
+			<div class="col-md-12">
+				<div>
+					<img style="width:100%;" align="center" src='img/ddd_lb_bot.png'>
+				</div>	
+			</div>				
+		</div>
+	</div> <!-- end of col-2 -->
+</div> <!-- end of row -->
+
+<!-- Dialogs -->
+<div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberProfileDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberProfileDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div style="padding-bottom:50px;">&nbsp;</div>

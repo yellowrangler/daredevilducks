@@ -1110,17 +1110,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
     }
 }
 
-controllers.leaderboardController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory, membersFactory, loginService) {
-
-    // function getGameTypeName() 
-    // {
-    //     $.each($scope.gametypes, function (index,value) {
-    //         if ($scope.gametypes[index].id == $scope.current.gametypeid)
-    //         {
-    //             $scope.current.gametype = $scope.gametypes[index].gametype;
-    //         }
-    //     });
-    // }
+controllers.playerstatstotalwinsController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory, membersFactory, loginService) {
 
     function getMemberProfile(memberid)
     {
@@ -1167,48 +1157,8 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         return data;
     }
 
-    function workPercentTableData(data)
+    function getYearlyTotalWins() 
     {
-        data.position = {};
-
-        var prev = 0;
-        $.each(data, function (index,value) {
-            if (index == 0)
-            {
-                value.position = index+1;
-            }
-            else
-            {
-                prev = index - 1;
-                if (value.totalgamespercent == data[prev].totalgamespercent)
-                {
-                    value.position = data[prev].position;
-                }
-                else
-                {
-                    value.position = data[prev].position +1;
-                }
-            }
-        });
-
-        return data;
-
-    }
-
-    function getYearlyLeaderBoard() 
-    {
-        //
-        // get total season percent leaders
-        //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent";
-        nflteamsFactory.getLeaderMembers(qStr)
-            .success( function(data) {
-                $scope.memberseasonpercentstats = workPercentTableData(data); 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });
-
         //
         // get total season win leaders
         //
@@ -1247,18 +1197,6 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
         $scope.gametypes = nflTeamsService.getNFLGametypes();
 
         //
-        // get percent season leaders
-        //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent"
-        nflteamsFactory.getLeaderMembers(qStr)
-            .success( function(data) {
-                $scope.memberseasonpercentstats = workPercentTableData(data); 
-            })
-            .error( function(edata) {
-                alert(edata);
-            });
-
-        //
         // get wins season leaders
         //
         var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins";
@@ -1271,8 +1209,8 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
             });    
     };
 
-    $scope.getYearlyLeaderBoard = function() {
-        getYearlyLeaderBoard();
+    $scope.getYearlyTotalWins = function() {
+        getYearlyTotalWins();
     }
 
     $scope.getMemberProfile = function(memberid) {
@@ -1280,7 +1218,116 @@ controllers.leaderboardController = function ($scope, $http, $location, nflTeams
     }
 }
 
-controllers.memberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, nflteamsFactory, loginService) {
+controllers.playerstatstotalpercentageController = function ($scope, $http, $location, nflTeamsService, nflteamsFactory, membersFactory, loginService) {
+
+    function getMemberProfile(memberid)
+    {
+        // alert("memberid = "+memberid)
+
+        var q = "memberid="+memberid;
+        membersFactory.getMemberProfileDialog(q)
+            .success( function(data) {
+                $scope.memberprofile = data; 
+
+                $('#memberProfileDialogModalTitle').text("Member Profile Information");
+                $('#memberProfileDialogModalBody').html(data);
+                $('#memberProfileDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+    }
+
+    function workPercentTableData(data)
+    {
+        data.position = {};
+
+        var prev = 0;
+        $.each(data, function (index,value) {
+            if (index == 0)
+            {
+                value.position = index+1;
+            }
+            else
+            {
+                prev = index - 1;
+                if (value.totalgamespercent == data[prev].totalgamespercent)
+                {
+                    value.position = data[prev].position;
+                }
+                else
+                {
+                    value.position = data[prev].position +1;
+                }
+            }
+        });
+
+        return data;
+
+    }
+
+    function getYearlyTotalPercentage() 
+    {
+        //
+        // get total season percent leaders
+        //
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent";
+        nflteamsFactory.getLeaderMembers(qStr)
+            .success( function(data) {
+                $scope.memberseasonpercentstats = workPercentTableData(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });    
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+        {
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
+            $location.path("#home");
+        }
+
+        $scope.current = {};
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.current.gametypeid = 1;
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+        $scope.gametypes = nflTeamsService.getNFLGametypes();
+
+        //
+        // get percent season leaders
+        //
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent"
+        nflteamsFactory.getLeaderMembers(qStr)
+            .success( function(data) {
+                $scope.memberseasonpercentstats = workPercentTableData(data); 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+    };
+
+    $scope.getYearlyTotalPercentage = function() {
+        getYearlyTotalPercentage();
+    }
+
+    $scope.getMemberProfile = function(memberid) {
+        getMemberProfile(memberid);
+    }
+}
+
+controllers.playerstatsmemberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, nflteamsFactory, loginService) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -1898,6 +1945,181 @@ controllers.updatememberController = function ($scope, $http, $location, members
                 alert("Member deleted succesfully!");
                 $("#updatememberForm")[0].reset();
             }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+}
+
+controllers.addmembergroupController = function ($scope, $http, $location, membersFactory) {
+    init();
+    function init() {
+        
+        $scope.membergroupmembers =  [
+            { id: "1", membername: "", memberid: "0" }
+        ];
+
+        membersFactory.getAllMembers()
+            .success( function(data) {
+                $scope.members = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+        
+        setviewpadding();
+        
+    };
+
+    $scope.addnewmembergroup = function() {
+        var formstring = $("#addmembergroupForm").serialize();
+        // var formstringClean = encodeURIComponent(formstring);
+
+        // membersFactory.addMemberGroup(formstring)
+        // .success( function(data) {
+        //     if (data !== "ok")
+        //     {
+        //         alert("Error adding member - "+data);
+        //     }
+        //     else
+        //     {
+        //         alert("Member added succesfully!");
+        //         $("#addmemberForm")[0].reset();
+        //     }
+
+        // })
+        // .error( function(edata) {
+        //     alert(edata);
+        // });
+    }
+
+    $scope.getAllMember = function(data) {
+        var cleanData = encodeURIComponent(data);
+        var membername = "membername="+cleanData;
+        membersFactory.getAllMember(membername)
+        .success( function(data) {
+            $scope.current = data;
+
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    
+    }
+
+    $scope.addNewMemberGroupMember = function() {
+        var newItemNo = $scope.membergroupmembers.length+1;
+        $scope.membergroupmembers.push({'id':newItemNo});
+    };
+
+    $scope.deleteMemberGroupMember = function(membergroupmember) {
+        $.each($scope.membergroupmembers, function(i){
+            if($scope.membergroupmembers[i].id === membergroupmember.id) {
+                $scope.membergroupmembers.splice(i,1);
+                return false;
+            }
+        });
+    }
+
+    $scope.showMemberGroupMemberLabel = function(membergroupmember) {
+        if (membergroupmember.id == 1)
+            return true;
+        else 
+            return false;
+    };
+
+    $scope.showDeleteMemberGroupMember = function(membergroupmember) {
+        if (membergroupmember.id != 1)
+            return true;
+    }
+
+    $scope.showAddMemberGroupMember = function(membergroupmember) {
+      return membergroupmember.id === $scope.membergroupmembers[$scope.membergroupmembers.length-1].id;
+    };
+}
+
+controllers.updatemembergroupController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+    $scope.current = {};
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+        
+        membersFactory.getAllMemberGroups()
+            .success( function(data) {
+                $scope.membergroups = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            });   
+    };
+
+    $scope.getAllMemberGroup = function(data) {
+        var cleanData = encodeURIComponent(data);
+        var membergroupname = "membergroupname="+cleanData;
+        membersFactory.getAllMemberGroup(membergroupname)
+        .success( function(data) {
+            $scope.current = data;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    
+    }
+
+    $scope.updatemembergroup = function() {
+        
+        var formstring = $("#updatemembergroupForm").serialize();
+        // var formstringClean = encodeURIComponent(formstring);
+        membersFactory.updateMemberGroup(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error updating member group - "+data);
+            }
+            else
+            {
+                alert("Member group updated succesfully!");
+                // $("#addmemberForm")[0].reset();
+            }
+
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+
+    }
+
+    $scope.deletemembergroup = function() {
+        var formstring = $("#updatemembergroupForm").serialize();
+
+        membersFactory.deleteMemberGroup(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error deleting member group - "+data);
+            }
+            else
+            {
+                alert("Member group deleted succesfully!");
+                $("#updatemembergroupForm")[0].reset();
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    $scope.getAllMemberGroupMembers = function() {
+        membersFactory.getMemberGroupMembers()(formstring)
+        .success( function(data) {
+            $scope.membergroupmembers = data;
+
         })
         .error( function(edata) {
             alert(edata);

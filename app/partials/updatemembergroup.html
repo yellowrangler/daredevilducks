@@ -1,0 +1,47 @@
+<div class="pageCaption row">
+     <div class="col-md-12">
+      <h2 class="headerTitle">Manage Member Groups</h2>
+  </div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+    <div class="col-md-12">
+      <div style="padding-left:5%;padding-right:5%;" style="width:90%;">
+
+      <form id="updatemembergroupForm" name="updatemembergroupForm">
+
+        <div class="panel panel-default">
+          <div class="subpanelCaption panel-heading">Member Group Information</div>
+          <div style="padding:10px;" class="form-horizontal">
+              <div class="form-group" >
+                <label for="membergroupname" class="col-md-2 control-label">Member Group</label>
+                <div class="col-md-5">
+                  <select tabindex="1"  class="form-control" ng-change="getAllMemberGroups(current.membergroupname)" ng-model="current.membergroupname" id="membergroupname" name="membergroupname">
+                    <option ng-repeat="membergroup in membergroups" value="{{membergroup.membergroupname}}">{{membergroup.membergroupname}}</option>
+                  </select>
+                  <input type="hidden" value="{{current.membergroupid}}" id="id" name="membergroupid">
+                  </div> <!-- end of col -->
+              </div> <!-- end of form-group -->
+
+              <div class="form-group">
+                  <label for="screenname" class="col-md-2 control-label">Screen Name</label>
+                  <div class="col-md-3">
+                      <input tabindex="2" type="text" class="form-control" ng-model="current.screenname" id="screenname" name="screenname" placeholder="Screen Name">
+                  </div>
+              </div> <!-- end of form-group -->
+          </div>
+        </div> <!-- end of panel panel -->
+
+        <div style="padding-top:25px;padding-bottom:50px;" class="form-group">
+          <div class="col-md-offset-2 col-md-3">
+            <button tabindex="18" id="updatemembergroupbutton" data-ng-click="updatemembergroup()" type="button" class="btn btn-primary">Update Member Group</button>
+           </div>
+       
+          <div class="col-md-offset-2 col-md-3">
+            <button tabindex="19" class="btn btn-danger" ng-click="deletemembergroup()" id="deletemembergroupbutton">Delete Member Group</button>
+          </div>
+        </div> <!-- end of form-group -->
+        </form>
+      </div> <!-- end of div style 90% -->
+    </div> <!-- end of div col md 12 -->
+</div> <!-- end of row -->    
