@@ -98,9 +98,19 @@ else
    LEFT JOIN membertbl M ON M.id = MG.memberid";
 }
 
-$sql = $sql . "
+if ($membergroupid == 0)
+{
+  $sql = $sql . "
   WHERE M.status = 'active'
   AND MS.season = '$season' AND gametypeid = $gametypeid";
+}
+else
+{
+  $sql = $sql . "
+  WHERE M.status = 'active' AND MG.membergroupid = '$membergroupid'
+  AND MS.season = '$season' AND gametypeid = $gametypeid";
+}
+
 
 if ($leaderType == 'pickingpercent')
 {

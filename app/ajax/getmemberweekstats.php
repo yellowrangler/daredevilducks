@@ -57,36 +57,47 @@ if (!mysql_select_db($DBschema, $dbConn))
 
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
-$sql = "SELECT DISTINCT
-   M.screenname as screenname,
-   M.id as memberid,
-   M.membername as membername,
-   M.avatar as memberavatar,   
-   MS.losses as losses,
-   MS.wins as wins,
-   MS.ties as ties,
-   MS.week as week,
-   DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
-   DATE_FORMAT(GW.weekend,'%b %D') as weekend
-  ";
-  if ($membergroupid == 0)
-  {
-    $sql = $sql . "
+if ($membergroupid == 0)
+{
+    $sql = "SELECT DISTINCT
+    M.screenname as screenname,
+    M.id as memberid,
+    M.membername as membername,
+    M.avatar as memberavatar,   
+    MS.losses as losses,
+    MS.wins as wins,
+    MS.ties as ties,
+    MS.week as week,
+    DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+    DATE_FORMAT(GW.weekend,'%b %D') as weekend
     FROM membertbl M
-     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid";
-  }
-  else
-  {
-    $sql = $sql . "
+    LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+    LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+    WHERE  M.status = 'active'
+    AND MS.season = $season AND MS.week = $week
+    ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
+}
+else
+{
+    $sql = "SELECT DISTINCT
+    M.screenname as screenname,
+    M.id as memberid,
+    M.membername as membername,
+    M.avatar as memberavatar,   
+    MS.losses as losses,
+    MS.wins as wins,
+    MS.ties as ties,
+    MS.week as week,
+    DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+    DATE_FORMAT(GW.weekend,'%b %D') as weekend
     FROM membergroupmembertbl MG
-     LEFT JOIN membertbl M ON M.id = MG.memberid
-     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid";
-  }
-  $sql = $sql . "
-  LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
-  WHERE  M.status = 'active'
-  AND MS.season = $season AND MS.week = $week
-  ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
+    LEFT JOIN membertbl M ON M.id = MG.memberid
+    LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+    LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+    WHERE M.status = 'active' AND MG.membergroupid = $membergroupid
+    AND MS.season = $season AND MS.week = $week
+    ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
+}
 
 // echo $sql;
 // die();

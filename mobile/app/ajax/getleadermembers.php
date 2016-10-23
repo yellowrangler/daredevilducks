@@ -48,22 +48,22 @@ $DBpassword = "tarryc";
 $dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
 if (!$dbConn) 
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team information.");
+  $log = new ErrorLog("logs/");
+  $dberr = mysql_error();
+  $log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team information.");
 
-	$rv = "";
-	exit($rv);
+  $rv = "";
+  exit($rv);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team information.");
+  $log = new ErrorLog("logs/");
+  $dberr = mysql_error();
+  $log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team information.");
 
-	$rv = "";
-	exit($rv);
+  $rv = "";
+  exit($rv);
 }
 
 // create time stamp versions for insert to mysql
@@ -98,9 +98,19 @@ else
    LEFT JOIN membertbl M ON M.id = MG.memberid";
 }
 
-$sql = $sql . "
+if ($membergroupid == 0)
+{
+  $sql = $sql . "
   WHERE M.status = 'active'
   AND MS.season = '$season' AND gametypeid = $gametypeid";
+}
+else
+{
+  $sql = $sql . "
+  WHERE M.status = 'active' AND MG.membergroupid = '$membergroupid'
+  AND MS.season = '$season' AND gametypeid = $gametypeid";
+}
+
 
 if ($leaderType == 'pickingpercent')
 {
