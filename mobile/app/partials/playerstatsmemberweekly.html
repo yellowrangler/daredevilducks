@@ -27,7 +27,7 @@
 					</div> <!-- end of form-group -->
 
 					<div class="form-group horizontalFieldOffset">
-						<label class="control-label" for="gametype">Player Groups</label>
+						<label class="control-label" for="gametype">Groups</label>
 						<select class="customSelect form-control" ng-change="getMemberWeekStats()" ng-model="current.membergroupid"  id="membergroup" name="membergroup">
 							<option value="0">No Group Selected</option>
 		                    <option ng-repeat="membergroup in membergroups" value="{{membergroup.membergroupid}}">{{membergroup.membergroupname}}</option>
@@ -47,7 +47,7 @@
 				<div class=" table-responsive">
 				<table class="table MemberWeeklyTable" >
 					<tr class="tableTitle">
-						<th>Rank</th>
+						<th style="width:15%;">Rank</th>
 						<th colspan=2>Player</th>			
 						<th style="width:25px;">W</th>
 						<th style="width:25px;">L</th>

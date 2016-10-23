@@ -28,7 +28,7 @@
 					</div>  <!-- end of form group -->
 
 					<div class="form-group horizontalFieldOffset">
-						<label class="control-label" for="gametype">Player Groups</label>
+						<label class="control-label" for="gametype">Groups</label>
 						<select class="customSelect form-control" ng-change="getYearlyTotalPercentage()" ng-model="current.membergroupid"  id="membergroup" name="membergroup">
 							<option value="0">No Group Selected</option>
 		                    <option ng-repeat="membergroup in membergroups" value="{{membergroup.membergroupid}}">{{membergroup.membergroupname}}</option>
