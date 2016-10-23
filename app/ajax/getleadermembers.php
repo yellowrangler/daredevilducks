@@ -10,6 +10,12 @@ include_once ('../class/class.AccessLog.php');
 $season = $_POST['season'];
 $leaderType = $_POST['leaderType'];
 $gametypeid = $_POST['gametypeid'];
+$membergroupid = 0;
+
+if( isset($_POST['membergroupid']) )
+{
+     $membergroupid = $_POST['membergroupid'];
+}
 
 
 // get date time for this transaction
@@ -80,10 +86,21 @@ $sql = "SELECT
   M.avatar as memberavatar,
   M.membername as membername,
   M.screenname as screenname
-FROM memberstatstbl MS 
-LEFT JOIN membertbl M ON M.id = MS.memberid
-WHERE M.status = 'active'
-AND MS.season = '$season' AND gametypeid = $gametypeid";
+FROM memberstatstbl MS
+";
+if ($membergroupid == 0)
+{
+  $sql = $sql . "LEFT JOIN membertbl M ON M.id = MS.memberid";
+}
+else
+{
+  $sql = $sql . "LEFT JOIN membergroupmembertbl MG ON MG.memberid = MS.memberid
+   LEFT JOIN membertbl M ON M.id = MG.memberid";
+}
+
+$sql = $sql . "
+  WHERE M.status = 'active'
+  AND MS.season = '$season' AND gametypeid = $gametypeid";
 
 if ($leaderType == 'pickingpercent')
 {
@@ -102,9 +119,8 @@ else
   $sql = $sql . " wrong argument passed ";
 }
 
-
-
 // echo $sql;
+// die();
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

@@ -1166,7 +1166,7 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         //
         // get total season win leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=wins";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonwinstats = workWinsTableData(data); 
@@ -1199,6 +1199,17 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
+
+        //
+        // get member groups
+        //
+        membersFactory.getAllMemberGroups()
+            .success( function(data) {
+                $scope.membergroups = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
 
         //
         // get wins season leaders
@@ -1275,7 +1286,7 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         //
         // get total season percent leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=pickingpercent";
         nflteamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonpercentstats = workPercentTableData(data); 
@@ -1308,6 +1319,17 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
+
+        //
+        // get member groups
+        //
+        membersFactory.getAllMemberGroups()
+            .success( function(data) {
+                $scope.membergroups = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
 
         //
         // get percent season leaders
@@ -1355,7 +1377,7 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
     
     function selectChange()
     {
-        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
+        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&membergroupid="+$scope.current.membergroupid;
 
         nflteamsFactory.getMemberWeekStats(requestStr)
             .success( function(data) {
@@ -1411,6 +1433,18 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
             // alert ("You must login in order to continue!")
             $location.path("#home");
         }
+
+        //
+        // get member groups
+        //
+        membersFactory.getAllMemberGroups()
+            .success( function(data) {
+                $scope.membergroups = data; 
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+
 
         $scope.current.memberlogin = loginService.getLogin();
         

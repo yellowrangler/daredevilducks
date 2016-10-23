@@ -23,6 +23,14 @@
 		                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
 	                    </select>
 					</div>  <!-- end of form group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<label class="control-label" for="gametype">Player Groups</label>
+						<select class="customSelect form-control" ng-change="getYearlyTotalWins()" ng-model="current.membergroupid"  id="membergroup" name="membergroup">
+							<option value="0">No Group Selected</option>
+		                    <option ng-repeat="membergroup in membergroups" value="{{membergroup.membergroupid}}">{{membergroup.membergroupname}}</option>
+	                    </select>
+					</div>  <!-- end of form group -->
 				</div> <!-- end of panel body -->			
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->			
@@ -71,14 +79,6 @@
 					<img style="width:100%;" align="center" src='img/PictureLeaderBdTopScrn.png'>
 				</div>	
 			</div>	
-		</div>
-		
-		<div style='padding-top:2300px;' class="row">
-			<div class="col-md-12">
-				<div>
-					<img style="width:100%;" align="center" src='img/ddd_lb_bot.png'>
-				</div>	
-			</div>				
 		</div>
 	</div> <!-- end of col-2 -->
 </div> <!-- end of row -->

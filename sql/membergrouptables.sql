@@ -8,6 +8,7 @@ CREATE TABLE `membergrouptbl` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
 DROP TABLE IF EXISTS `membergroupmembertbl`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -18,5 +19,6 @@ CREATE TABLE `membergroupmembertbl` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 -- SELECT LAST_INSERT_ID();
