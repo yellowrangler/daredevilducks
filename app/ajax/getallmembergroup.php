@@ -7,17 +7,17 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$membername = "";
-$memberid = "";
+$membergroupname = "";
+$membergroupid = "";
 
-if( isset($_POST['membername']) )
+if( isset($_POST['membergroupname']) )
 {
-     $membername = $_POST['membername'];
+     $membergroupname = $_POST['membergroupname'];
 }
 
-if( isset($_POST['memberid']) )
+if( isset($_POST['membergroupid']) )
 {
-     $memberid = $_POST['memberid'];
+     $membergroupid = $_POST['membergroupid'];
 }
 
 //
@@ -31,16 +31,9 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $enterdate = $datetime;
 
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Member List request started" );
-
 //------------------------------------------------------
-// get admin user info
+// connect to db
 //------------------------------------------------------
-// open connection to host
 $DBhost = "localhost";
 $DBschema = "ddd";
 $DBuser = "tarryc";
@@ -54,7 +47,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get member information.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get membergroup information.");
 
 	$rv = "";
 	exit($rv);
@@ -64,22 +57,30 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get member information.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to get membergroup information.");
 
 	$rv = "";
 	exit($rv);
 }
 
 //---------------------------------------------------------------
-// get nfl game type information
+// get member group information
 //---------------------------------------------------------------
-if ($memberid != "")
+if ($membergroupid != "")
 {
-	$sql = "SELECT *  FROM membertbl WHERE id = '$memberid' AND status = 'active'";
+	$sql = "SELECT 
+	id as membergroupid,
+	groupname as membergroupname  
+	FROM membergrouptbl 
+	WHERE id = '$membergroupid'";
 }
 else
 {
-	$sql = "SELECT *  FROM membertbl WHERE membername = '$membername'  AND status = 'active'";
+	$sql = "SELECT 
+	id as membergroupid,
+	groupname as membergroupname    
+	FROM membergrouptbl 
+	WHERE groupname = '$membergroupname'";
 }
 
 // print $sql;
@@ -89,7 +90,7 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get member $membername information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get membergroup $membername information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -100,7 +101,7 @@ if (!$sql_result)
 // get the member information
 //
 $r = mysql_fetch_assoc($sql_result);
-$member = $r;
+$membergroup = $r;
 
 //
 // close db connection
@@ -110,6 +111,6 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($member));
+exit(json_encode($membergroup));
 
 ?>

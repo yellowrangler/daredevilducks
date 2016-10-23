@@ -15,11 +15,18 @@
           <div style="padding:10px;" class="form-horizontal">
               <div class="form-group" >
                 <label for="membergroupname" class="col-md-2 control-label">Group Name</label>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <input tabindex="1" type="text" class="form-control" id="membergroupname" name="membergroupname" placeholder="Member Group name">
                 </div>
 
-              </div> <!-- end of form-group -->
+                <div class="col-md-4">
+                    <span >
+                        <button class="btn btn-success btn-sm" ng-click="addNewMemberGroupMember()">Add Member
+                        </button>
+                    </span>
+                </div>
+              </div> <!-- end of form-group -->  
+
               <div class="form-group" data-ng-repeat="membergroupmember in membergroupmembers">
                   <div ng-show="showMemberGroupMemberLabel(membergroupmember)" class="col-md-2"> 
                       <label for="membergroupmember" style="float:right;" class="control-label">Members</label>
@@ -27,31 +34,28 @@
                   <div ng-hide="showMemberGroupMemberLabel(membergroupmember)" class="col-md-2"> 
                       <label for="member" class="control-label">&nbsp;</label>
                   </div> 
-                  <div class="col-md-6">
-                      <!-- <input type="text" class="form-control" ng-model="membergroupmember.membername" name="" placeholder="Enter a member name"> -->
-                      <select class="form-control" ng-change="getAllMember(current.membername)" ng-model="current.membername" id="membername" name="membername">
-                    <option ng-repeat="member in members" value="{{member.membername}}">{{member.membername}}</option>
-                  </select>
-                  <input type="hidden" value="{{current.id}}" id="id" name="id">
-                  </div> <!-- end of col -->
-                  </div>
                   <div class="col-md-4">
-                      <span ng-show="showAddMemberGroupMember(membergroupmember)">
-                          <button class="btn btn-success btn-sm" ng-click="addNewMemberGroupMember()">Add Member
-                          </button>
-                      </span>
-                      &nbsp;
-                      <span ng-show="showDeleteMemberGroupMember(membergroupmember)" ng-click="deleteMemberGroupMember(membergroupmember)" style="color:red;" class="btn glyphicon glyphicon-trash"></span>
-                  </div>
+                      <select class="form-control" ng-change="getAllMember(member.memberid,membergroupmember)" ng-model="member.memberid" id="memberid" name="memberid[]">
+                    <option ng-repeat="member in members" value="{{member.id}}">{{member.membername}}</option>
+                  </select>
+                  </div> <!-- end of col -->
+
+                  <div class="col-md-4">
+                    <span ng-show="showDeleteMemberGroupMember(membergroupmember)" ng-click="deleteMemberGroupMember(membergroupmember)" style="color:red;" class="btn glyphicon glyphicon-trash"></span>
+                </div>
+              </div> <!-- end of form-group -->
+            </div> <!-- end of form-group -->
+          </div> <!-- end of form-horizontal -->
+
+          <div style="padding:10px;" class="form-horizontal">
+            <div class="form-group">
+              <div class="col-md-5">
+                <button tabindex="15" id="addnewmembergroupbutton" data-ng-click="addnewmembergroup(membergroupmembers)" type="button" class="btn btn-primary">Add Member Group</button>
+              </div>
               </div> <!-- end of form-group -->
           </div> <!-- end of form-horizontal -->
         </div> <!-- end of panel panel -->              
-
-        <div style="padding-top:25px;padding-bottom:50px; class="form-group">
-          <div class="col-md-5">
-            <button tabindex="15" id="addnewmembergroupbutton" data-ng-click="addnewmembergroup()" type="button" class="btn btn-primary">Add Member Group</button>
-          </div>
-        </div> <!-- end of form-group -->
+          
       </form>
       </div> <!-- end of div style 100% -->
     </div> <!-- end of div col md 12 -->

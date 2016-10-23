@@ -4,37 +4,13 @@ include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
-
-//
-// post input
-//
-$orderby = "membername";
-
-if( isset($_POST['orderby']) )
-{
-     $orderby = $_POST['orderby'];
-}
-
-//
-// functions
-//
-
 //
 // get date time for this transaction
 //
 $datetime = date("Y-m-d H:i:s");
 
-// print_r($_POST);
-// die();
-
 // set variables
 $enterdate = $datetime;
-
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Member List request started" );
 
 //------------------------------------------------------
 // get admin user info
@@ -70,11 +46,29 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 //---------------------------------------------------------------
-// get nfl game type information
+// get membergrouptbl information
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM membertbl 
-WHERE status = 'active'
-ORDER BY $orderby ASC";
+$sql = "SELECT 
+id as membergroupid,
+groupname as membergroupname  
+FROM membergrouptbl 
+ORDER BY groupname";
+// print $sql;
+
+$sql_result = @mysql_query($sql, $dbConn);
+if (!$sql_result)
+{
+	$log = new ErrorLog("logs/");
+	$sqlerr = mysql_error();
+	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to add membergroups for ddd membergroups.");
+	$log->writeLog("SQL: $sql");
+
+	$rc = -100;
+	$msgtext = "System Error: $sqlerr";
+
+	exit($msgtext);
+}
+
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);
@@ -92,9 +86,9 @@ if (!$sql_result)
 //
 // fill the array
 //
-$members = array();
+$membergroups = array();
 while($r = mysql_fetch_assoc($sql_result)) {
-    $members[] = $r;
+    $membergroups[] = $r;
 }
 
 //
@@ -105,6 +99,6 @@ mysql_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($members));
+exit(json_encode($membergroups));
 
 ?>
