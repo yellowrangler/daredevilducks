@@ -9,6 +9,12 @@ include_once ('../class/class.ErrorLog.php');
 $season = $_POST['season'];
 $week = $_POST['week'];
 $gametypeid = 1;
+$membergroupid = 0;
+
+if( isset($_POST['membergroupid']) )
+{
+     $membergroupid = $_POST['membergroupid'];
+}
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");
@@ -62,14 +68,28 @@ $sql = "SELECT DISTINCT
    MS.week as week,
    DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
    DATE_FORMAT(GW.weekend,'%b %D') as weekend
-  FROM membertbl M
-  LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+  ";
+  if ($membergroupid == 0)
+  {
+    $sql = $sql . "
+    FROM membertbl M
+     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid";
+  }
+  else
+  {
+    $sql = $sql . "
+    FROM membergroupmembertbl MG
+     LEFT JOIN membertbl M ON M.id = MG.memberid
+     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid";
+  }
+  $sql = $sql . "
   LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
   WHERE  M.status = 'active'
   AND MS.season = $season AND MS.week = $week
   ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
 // echo $sql;
+// die();
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
