@@ -259,7 +259,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
         // in jquery ready. So adding it here
         //
         $window.scrollTo(0, 0);
-         
+
         setviewpadding();
 
         var loggedIn = loginService.isLoggedIn();
@@ -2062,6 +2062,74 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
 
 controllers.updatemembergroupController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
     
+    function updatemembergroup() {
+        
+        var formstring = $("#updatemembergroupForm").serialize();
+        var formstringClean = encodeURIComponent(formstring);
+        membersFactory.updateMemberGroup(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error updating member group - "+data);
+            }
+            else
+            {
+                alert("Member group updated succesfully!");
+                // $("#addmemberForm")[0].reset();
+            }
+
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+
+    }
+
+    function deletemembergroup() {
+        var formstring = $("#updatemembergroupForm").serialize();
+
+        membersFactory.deleteMemberGroup(formstring)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error deleting member group - "+data);
+            }
+            else
+            {
+                alert("Member group deleted succesfully!");
+                $("#updatemembergroupForm")[0].reset();
+            }
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function getAllMemberGroupMembers() {
+        membersFactory.getMemberGroupMembers()(formstring)
+        .success( function(data) {
+            $scope.membergroupmembers = data;
+
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function getAllMember(memberid, membergroupmember) {
+        membergroupmember.memberid = memberid;
+
+        var cleanData = encodeURIComponent(memberid);
+        var memberid = "memberid="+cleanData;
+        membersFactory.getAllMember(memberid)
+        .success( function(data) {
+            $scope.current = data;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
     function deleteMemberGroupMember(membergroupmember) 
     {
         $.each($scope.membergroupmembers, function(i){
@@ -2200,72 +2268,19 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
     }
 
     $scope.getAllMember = function(memberid, membergroupmember) {
-        membergroupmember.memberid = memberid;
-
-        var cleanData = encodeURIComponent(memberid);
-        var memberid = "memberid="+cleanData;
-        membersFactory.getAllMember(memberid)
-        .success( function(data) {
-            $scope.current = data;
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
-    
+        getAllMember(memberid, membergroupmember);
     }
 
     $scope.updatemembergroup = function() {
-        
-        var formstring = $("#updatemembergroupForm").serialize();
-        // var formstringClean = encodeURIComponent(formstring);
-        membersFactory.updateMemberGroup(formstring)
-        .success( function(data) {
-            if (data !== "ok")
-            {
-                alert("Error updating member group - "+data);
-            }
-            else
-            {
-                alert("Member group updated succesfully!");
-                // $("#addmemberForm")[0].reset();
-            }
-
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
-
+        updatemembergroup();
     }
 
     $scope.deletemembergroup = function() {
-        var formstring = $("#updatemembergroupForm").serialize();
-
-        membersFactory.deleteMemberGroup(formstring)
-        .success( function(data) {
-            if (data !== "ok")
-            {
-                alert("Error deleting member group - "+data);
-            }
-            else
-            {
-                alert("Member group deleted succesfully!");
-                $("#updatemembergroupForm")[0].reset();
-            }
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
+        deletemembergroup();
     }
 
     $scope.getAllMemberGroupMembers = function() {
-        membersFactory.getMemberGroupMembers()(formstring)
-        .success( function(data) {
-            $scope.membergroupmembers = data;
-
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
+        getAllMemberGroupMembers();
     }
 }
 
