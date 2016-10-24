@@ -62,18 +62,18 @@
 						<th class="tableTitle" >W</th>
 						<th class="tableTitle" >L</th>
 						<th class="tableTitle" >T</th>								
-						<th class="powerRankingTitle">PR</th>
-						<th class="offenceTitle">OO</th>
-						<th class="offenceTitle">OS</th>
-						<th class="offenceTitle">OP</th>
-						<th class="offenceTitle">OR</th>
-						<th class="defenceTitle">DO</th>
-						<th class="defenceTitle">DS</th>
-						<th class="defenceTitle">DP</th>
-						<th class="defenceTitle">DR</th>						
+						<th class="powerRankingTitle" style="width:5%;">Power Rank</th>
+						<th class="offenceTitle" style="width:5%;"">Over All</th>
+						<th class="offenceTitle">Score</th>
+						<th class="offenceTitle">Pass</th>
+						<th class="offenceTitle">Rush</th>
+						<th class="defenceTitle" style="width:5%;"">Over All</th>
+						<th class="defenceTitle">Score</th>
+						<th class="defenceTitle">Pass</th>
+						<th class="defenceTitle">Rush</th>						
 					</tr>
 					<tr ng-repeat="teamweekrank in teamweekranks">
-						<td style="font-size:25px;font-weight: bold;padding-top:55px;"class="center-column-text">
+						<td style="font-size:25px;font-weight: bold;padding-top:55px;" class="center-column-text">
 							{{teamweekrank.week}}
 						</td>
 
@@ -141,92 +141,92 @@
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="powerRankingText" id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
+						<td class="center-column-text powerRankingText" >
+						<div style="padding:5px;height:60px;" id="hometeampowerrankingdiv" name="hometeampowerrankingdiv" >
 							{{teamweekrank.hometeampowerranking}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="powerRankingText" id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
+						<div style="padding:5px;height:60px;" id="awayteampowerrankingdiv" name="awayteampowerrankingdiv">
 							{{teamweekrank.awayteampowerranking}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
+						<td class="center-column-text offenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamoffencetotaldiv" name="hometeamoffencetotaldiv" >
 							{{teamweekrank.hometeamoffencetotal}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
+						<div style="padding:5px;height:60px;" id="awayteamoffencetotaldiv" name="awayteamoffencetotaldiv">
 							{{teamweekrank.awayteamoffencetotal}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
+						<td class="center-column-text offenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamoffencescoringdiv" name="hometeamoffencescoringdiv" >
 							{{teamweekrank.hometeamoffencescoring}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
+						<div style="padding:5px;height:60px;" id="awayteamoffencescoringdiv" name="awayteamoffencescoringdiv">
 							{{teamweekrank.awayteamoffencescoring}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
+						<td class="center-column-text offenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamoffencepassingdiv" name="hometeamoffencepassingdiv" >
 							{{teamweekrank.hometeamoffencepassing}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
+						<div style="padding:5px;height:60px;" id="awayteamoffencepassingdiv" name="awayteamoffencepassingdiv">
 							{{teamweekrank.awayteamoffencepassing}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="offenceText" id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
+						<td class="center-column-text offenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamoffencerushingdiv" name="hometeamoffencerushingdiv" >
 							{{teamweekrank.hometeamoffencerushing}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="offenceText" id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
+						<div style="padding:5px;height:60px;" id="awayteamoffencerushingdiv" name="awayteamoffencerushingdiv">
 							{{teamweekrank.awayteamoffencerushing}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
+						<td class="center-column-text defenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamdefencetotaldiv" name="hometeamdefencetotaldiv" >
 							{{teamweekrank.hometeamdefencetotal}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
+						<div style="padding:5px;height:60px;" id="awayteamdefencetotaldiv" name="awayteamdefencetotaldiv">
 							{{teamweekrank.awayteamdefencetotal}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
+						<td class="center-column-text defenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamdefencescoringdiv" name="hometeamdefencescoringdiv" >
 							{{teamweekrank.hometeamdefencescoring}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
+						<div style="padding:5px;height:60px;" id="awayteamdefencescoringdiv" name="awayteamdefencescoringdiv">
 							{{teamweekrank.awayteamdefencescoring}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
+						<td class="center-column-text defenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamdefencepassingdiv" name="hometeamdefencepassingdiv" >
 							{{teamweekrank.hometeamdefencepassing}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
+						<div style="padding:5px;height:60px;" id="awayteamdefencepassingdiv" name="awayteamdefencepassingdiv">
 							{{teamweekrank.awayteamdefencepassing}}
 						</div>
 						</td>
 
-						<td class="center-column-text" >
-						<div style="padding:5px;height:60px;" class="defenceText" id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
+						<td class="center-column-text defenceText" >
+						<div style="padding:5px;height:60px;" id="hometeamdefencerushingdiv" name="hometeamdefencerushingdiv" >
 							{{teamweekrank.hometeamdefencerushing}}
 						</div>
 
-						<div style="padding:5px;height:60px;" class="defenceText" id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
+						<div style="padding:5px;height:60px;" id="awayteamdefencerushingdiv" name="awayteamdefencerushingdiv">
 							{{teamweekrank.awayteamdefencerushing}}
 						</div>
 						</td>
@@ -304,47 +304,47 @@
 									</tr>
 
 									<tr>
-										<td class="powerRankingText" >PR</td>
+										<td class="powerRankingText" >Power Rank</td>
 										<td class="miscData">Power Ranking lists all 32 NFL teams from #1 through #32 determined by ESPN's Power Panel (group of 80+ Writers, Editors & TV Personalities) prior to the week’s games. 
 									</tr>
 
 									<tr>
-										<td class="offenceText">OO</td>
+										<td class="offenceText">Over All</td>
 										<td class="miscData">OverAll Offense Ranking the Team that has the highest avg Yards Gained per game. 
 									</tr>
 
 									<tr>
-										<td class="offenceText">OS</td>
+										<td class="offenceText">Score</td>
 										<td class="miscData">Offense Scoring Rank = Team with the highest avg of Points Gained per game. 
 									</tr>
 
 									<tr>
-										<td class="offenceText">OP</td>
+										<td class="offenceText">Pass</td>
 										<td class="miscData">Offense Passing Rank = Team with the highest avg Pass Yards Gained per game. 
 									</tr>
 
 									<tr>
-										<td class="offenceText">OR</td>
+										<td class="offenceText">Rush</td>
 										<td class="miscData">Offense Rushing Rank = Team with the highest avg Rush Yards Gained per Game.
 									</tr>
 
 									<tr>
-										<td class="defenceText">DO</td>
+										<td class="defenceText">Over All</td>
 										<td class="miscData">OverAll Defense Rank = Team that has the lowest Opponent Yards Gained per game. 
 									</tr>
 
 									<tr>
-										<td class="defenceText">DS</td>
+										<td class="defenceText">Score</td>
 										<td class="miscData">Defense Scoring Rank = Team with the lowest avg of Points Allowed per Opponent. 
 									</tr>
 
 									<tr>
-										<td class="defenceText">DP</td>
+										<td class="defenceText">Pass</td>
 										<td class="miscData">Defense Passing Rank = Team with the lowest avg Pass Yards Gained per Opponent. 
 									</tr>
 
 									<tr>
-										<td class="defenceText">DR</td>
+										<td class="defenceText">Run</td>
 										<td class="miscData">Defense Rush Rank = Team with the lowest avg Rush Yards Gained per Opponent. 
 									</tr>
 								</table>							

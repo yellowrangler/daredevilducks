@@ -89,6 +89,7 @@ $maxrankweek = $row['maxrankweek'];
 //---------------------------------------------------------------
 $sql = "SELECT 
 G.week as week,
+G.gamenbr as gamenbr,
 TH.id as hometeamid,
 TH.location as hometeamlocation, 
 TH.name as hometeamname, 
@@ -145,6 +146,7 @@ UNION
 
 SELECT 
 GB.week as week,
+'B' as gamenbr,
 GB.teamid as hometeamid,
 T.location as hometeamlocation, 
 T.name as hometeamname, 
@@ -186,6 +188,7 @@ LEFT JOIN teamstbl T ON GB.teamid = T.id
 WHERE GB.season = $season  AND GB.week <= $maxrankweek AND GB.teamid = $teamid
 ORDER BY week $orderbydirection";
 // print $sql;
+// die();
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)

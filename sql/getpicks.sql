@@ -41,7 +41,7 @@ WHERE id NOT IN
 SELECT  memberid, membername, COUNT(*) as picks
 FROM memberpickstbl MP
 LEFT JOIN membertbl M on MP.memberid = M.id
-WHERE season = 2016 and week = 5
+WHERE season = 2016 and week = 7
 GROUP BY membername, memberid
 
 UNION 
@@ -53,8 +53,9 @@ WHERE id NOT IN
 	SELECT  memberid as id
 	FROM memberpickstbl MP
 	LEFT JOIN membertbl M on MP.memberid = M.id
-	WHERE season = 2016 and week = 5
+	WHERE season = 2016 and week = 7
 )
+AND status = 'active'
 
 
 

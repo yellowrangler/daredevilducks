@@ -1583,6 +1583,29 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
             });  
     }
 
+    function getTeamStats (hometeamid,awayteamid,gamenbr)
+    {
+        if (gamenbr == "B")
+        {
+            alert("No Stats for a Bye Week!");
+
+            return false;
+        }
+        
+        var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
+        nflteamsFactory.getTeamStandingsDialog(q)
+            .success( function(data) {
+                $scope.teamstat = data; 
+
+                $('#teamStatsDialogModalTitle').text("Team Stats");
+                $('#teamStatsDialogModalBody').html(data);
+                $('#teamStatsDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+    }
+
     function toggleSort () 
     {
         if ($scope.current.toggleSort == "DESC")
@@ -1666,6 +1689,10 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
 
     $scope.toggleSort = function () {
         toggleSort();
+    }
+
+    $scope.getTeamStats = function (hometeamid,awayteamid,gamenbr) {
+        getTeamStats(hometeamid,awayteamid,gamenbr);
     }
 
 }
