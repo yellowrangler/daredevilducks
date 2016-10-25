@@ -96,7 +96,7 @@ if (!$sql_result)
 $winstable = "
 <div style='width:70%;'>
 <p>
-  <span style='font-weight:bold; color:maroon;'>The Top Leaders by Total Season Wins are:</span>
+  <span style='font-weight:bold; color:maroon;'>The Top 5 Leaders by Total Season Wins are:</span>
 <p>
 <table style='width:100%;'>
   <tr style='background-color:maroon;color:white;'>
@@ -197,7 +197,7 @@ if (!$sql_result)
 $totalpercenttable = "
 <div style='width:70%;'>
 <p>
-  <span style='font-weight:bold; color:blue;'>The Top Leaders by Total Personal Pick Percentage are:</span>
+  <span style='font-weight:bold; color:blue;'>The Top 5 Leaders by Total Personal Pick Percentage are:</span>
 <p>
 <table style='width:100%;'>
   <tr style='background-color:blue;color:white;'>
@@ -292,7 +292,7 @@ if (!$sql_result)
 $leaderweektable = "
 <div style='width:70%;'>
 <p>
-  <span style='font-weight:bold; color:#228b22;'>The Top Leaders for the current week on Player Weekly Totals are:</span>
+  <span style='font-weight:bold; color:#228b22;'>The Top 5 Leaders for the current week on Player Weekly Totals are:</span>
 <p>
 <table style='width:100%;'>
   <tr style='background-color:#228b22;color:white;'>
