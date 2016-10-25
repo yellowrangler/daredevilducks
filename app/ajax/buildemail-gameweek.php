@@ -163,7 +163,7 @@ $sql = "SELECT
   -- MS.totalgames as totalgames,
   MS.playerpickedgames as playerpickedgames,
   MS.totalgamespercent as totalgamespercent,
-  -- MS.playerpickedpercent as playerpickedpercent,
+  MS.playerpickedpercent as playerpickedpercent,
   CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
   CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
   -- MS.gametypeid as gametypeid,
@@ -215,8 +215,8 @@ $rank = 1;
 $prevValue = "";
 while($leadertotalpercent = mysql_fetch_assoc($sql_result)) {
     $member = $leadertotalpercent['screenname'];
-    $showpercent = $leadertotalpercent['playerpickedpercent'];
-    $percent = $leadertotalpercent['playerpickedgames'];
+    $showpercent = $leadertotalpercent['showplayerpickedpercent'];
+    $percent = $leadertotalpercent['playerpickedpercent'];
 
     if ($prevValue == "")
     {
