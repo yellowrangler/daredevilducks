@@ -271,8 +271,8 @@ $sql = "SELECT DISTINCT
     AND MS.season = $season AND MS.week = $week
     ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
-print $sql;
-exit();
+// print $sql;
+// exit();
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
