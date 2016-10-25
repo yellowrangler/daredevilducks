@@ -161,11 +161,11 @@ $sql = "SELECT
   -- MS.losses as losses,
   -- MS.ties as ties,
   -- MS.totalgames as totalgames,
-  -- MS.playerpickedgames as playerpickedgames,
+  MS.playerpickedgames as playerpickedgames,
   MS.totalgamespercent as totalgamespercent,
   -- MS.playerpickedpercent as playerpickedpercent,
   CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
-  -- CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
+  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
   -- MS.gametypeid as gametypeid,
   -- M.avatar as memberavatar,
   -- M.membername as membername,
@@ -174,7 +174,7 @@ FROM memberstatstbl MS
 LEFT JOIN membertbl M ON M.id = MS.memberid
 WHERE M.status = 'active'
 AND MS.season = '$season' AND gametypeid = '$gametype'
-ORDER BY MS.totalgamespercent DESC, M.screenname ASC";
+ORDER BY MS.playerpickedpercent DESC, M.screenname ASC";
 
 // print $sql;
 // exit();
@@ -215,8 +215,8 @@ $rank = 1;
 $prevValue = "";
 while($leadertotalpercent = mysql_fetch_assoc($sql_result)) {
     $member = $leadertotalpercent['screenname'];
-    $showpercent = $leadertotalpercent['showtotalgamespercent'];
-    $percent = $leadertotalpercent['totalgamespercent'];
+    $showpercent = $leadertotalpercent['playerpickedpercent'];
+    $percent = $leadertotalpercent['playerpickedgames'];
 
     if ($prevValue == "")
     {
