@@ -30,6 +30,11 @@
 			                <option ng-repeat="week in weeks" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 			            </select>
 					</div> <!-- end of form-group --> 
+
+					<div style="padding-left:30px;padding-top:10px;" class="form-group horizontalFieldOffset">
+		                <button style="width:80%;font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block center-block" ng-click="saveGames()" id="saveGamesBottom" name="saveGamesBottom">Save Picks</button>
+					</div> <!-- end of form-group --> 
+
 				</div> <!-- end of panel body -->		
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->
@@ -110,8 +115,8 @@
 </div> <!-- end of pageStandardOffset -->
 
 <div style="padding-top:15px; padding-bottom:20px;" class="row">
-	<div class="col-md-offset-1  col-md-4">
-		<button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block" ng-click="saveGames()" id="saveGamesBottom" name="saveGamesBottom">Save Picks</button>
+	<div class="col-md-offset-1  col-md-11">
+		<button style="width:80%;font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block center-block" ng-click="saveGames()" id="saveGamesBottom" name="saveGamesBottom">Save Picks</button>
 	</div><!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>
