@@ -264,16 +264,15 @@ $sql = "SELECT DISTINCT
     MS.week as week,
     DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
     DATE_FORMAT(GW.weekend,'%b %D') as weekend
-    FROM membergroupmembertbl MG
-    LEFT JOIN membertbl M ON M.id = MG.memberid
+    FROM membertbl M
     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
     LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
-    WHERE M.status = 'active' AND MG.membergroupid = $membergroupid
+    WHERE  M.status = 'active'
     AND MS.season = $season AND MS.week = $week
     ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
-// print $sql;
-// exit();
+print $sql;
+exit();
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
@@ -286,11 +285,6 @@ if (!$sql_result)
     $status = -100;
     $msgtext = "System Error: $sqlerr";
 }
-
-//
-// get the query results
-//
-$leaderweek = mysql_fetch_assoc($sql_result);
 
 //
 // build table top
@@ -459,6 +453,7 @@ AirDreamer & Wildcat Wonder
 
 </div>
 ";
+
 //
 // pass back info
 //
