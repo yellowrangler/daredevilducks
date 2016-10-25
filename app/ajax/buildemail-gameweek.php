@@ -192,11 +192,6 @@ if (!$sql_result)
 }
 
 //
-// get the query results
-//
-$leadertotalpercent = mysql_fetch_assoc($sql_result);
-
-//
 // build table top
 //
 $totalpercenttable = "
@@ -256,30 +251,26 @@ $totalpercenttable = $totalpercenttable . "
 ";
 
 //---------------------------------------------------------------
-// get weekpercent leaders 
+// get week leaders 
 //---------------------------------------------------------------
-$sql = "SELECT
-  -- MS.season as season,
-  MS.memberid as memberid,
-  MS.id as id,
-  -- MS.wins as wins,
-  -- MS.losses as losses,
-  -- MS.ties as ties,
-  -- MS.totalgames as totalgames,
-  -- MS.playerpickedgames as playerpickedgames,
-  -- MS.totalgamespercent as totalgamespercent,
-  MS.playerpickedpercent as playerpickedpercent,
-  -- CONCAT( ROUND( ( MS.totalgamespercent * 100 ), 1 ),  '%' ) as showtotalgamespercent,
-  CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
-  -- MS.gametypeid as gametypeid,
-  -- M.avatar as memberavatar,
-  -- M.membername as membername,
-  M.screenname as screenname
-FROM memberstatstbl MS 
-LEFT JOIN membertbl M ON M.id = MS.memberid
-WHERE M.status = 'active'
-AND MS.season = '$season' AND gametypeid = '$gametype'
-ORDER BY MS.playerpickedpercent DESC, M.screenname ASC";
+$sql = "SELECT DISTINCT
+    M.screenname as screenname,
+    M.id as memberid,
+    M.membername as membername,
+    M.avatar as memberavatar,   
+    MS.losses as losses,
+    MS.wins as wins,
+    MS.ties as ties,
+    MS.week as week,
+    DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
+    DATE_FORMAT(GW.weekend,'%b %D') as weekend
+    FROM membergroupmembertbl MG
+    LEFT JOIN membertbl M ON M.id = MG.memberid
+    LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
+    LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
+    WHERE M.status = 'active' AND MG.membergroupid = $membergroupid
+    AND MS.season = $season AND MS.week = $week
+    ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
 // print $sql;
 // exit();
@@ -289,7 +280,7 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get game week week perecent email information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get game week week  email information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -299,12 +290,12 @@ if (!$sql_result)
 //
 // get the query results
 //
-$leaderweekpercent = mysql_fetch_assoc($sql_result);
+$leaderweek = mysql_fetch_assoc($sql_result);
 
 //
 // build table top
 //
-$weekpercenttable = "
+$leaderweektable = "
 <div style='width:70%;'>
 <p>
   <span style='font-weight:bold; color:#228b22;'>The Top Leaders for the current week on Player Weekly Totals are:</span>
@@ -313,7 +304,7 @@ $weekpercenttable = "
   <tr style='background-color:#228b22;color:white;'>
     <th>Rank</th>
     <th>Name</th>
-    <th>Percent</th>
+    <th>Wins</th>
   </tr>
 ";
 
@@ -323,19 +314,18 @@ $weekpercenttable = "
 //
 $rank = 1;
 $prevValue = "";
-while($leaderweekpercent = mysql_fetch_assoc($sql_result)) {
-    $member = $leaderweekpercent['screenname'];
-    $showpercent = $leaderweekpercent['showplayerpickedpercent'];
-    $percent = $leaderweekpercent['playerpickedpercent'];
+while($leaderweek = mysql_fetch_assoc($sql_result)) {
+    $member = $leaderweek['screenname'];
+    $wins = $leaderweek['wins'];
 
     if ($prevValue == "")
     {
-      $prevValue = $percent;
+      $prevValue = $wins;
     }
-    elseif ($prevValue > $percent) 
+    elseif ($prevValue > $wins) 
     {
       $rank = $rank + 1;
-      $prevValue = $percent;
+      $prevValue = $wins;
     }
     
     if ($rank > $toprankingnumber)
@@ -343,11 +333,11 @@ while($leaderweekpercent = mysql_fetch_assoc($sql_result)) {
       break;
     }
 
-    $weekpercenttable = $weekpercenttable . "
+    $leaderweektable = $leaderweektable . "
     <tr>
     <td style='text-align: center;'>$rank</td>
     <td>$member</td>
-    <td style='text-align: center;'>$showpercent</td>
+    <td style='text-align: center;'>$wins</td>
   </tr>
   ";
 }
@@ -355,7 +345,7 @@ while($leaderweekpercent = mysql_fetch_assoc($sql_result)) {
 //
 // build table bottom
 //
-$weekpercenttable = $weekpercenttable . "
+$leaderweektable = $leaderweektable . "
 </table>
 </div>
 ";
@@ -376,31 +366,19 @@ Hi Folks,
 <br />
 
 <p>
-Another good win for the Patriots. The Bengals are a tough defensive group. A lot of chippieness especially at the end - but hopefully no harm done. So its on to Pittsburgh! 
+A so  so win for the Patriots. The Steelers are a tough defensive group and chippy to boot! But they have lost a great deal with Roethlisberger being out.Thank goodness for LeGarrette Blount. With out him the Patriots might not have had a running game. And that would have made it infinitely harder for Brady to pass! But a win is a win!  
 </p>
 
 <p>
-The Chargers Broncos game was a real nail-biter. The Chargers always seem to find a way to lose in the 4th quarter. And it seemed like that was going to happen again. But no - the Chargers persevered!  A great game if you were a Chargers fan. 
+The Chiefs won again beating the Saints in a tight contest. The Vikings finally lost their first game to the Eagles. The Redskins lost to the Lions in a close contest. The Jets beat the Ravens and fond, lost and fond a new quarter back - again. The Chargers beat the Falcons in an upset.
 </p>
 
 <p>
-A bad day for Steeler fans as big Ben went down with a meniscus tear. Only time will tell when or if he will make it back for this season. Still, the Steelers have plenty of fire power so we shall have to wait and see.
+The Seahawks Cardinals overtime ended in a tie. That game feature two chances by each team to win by completing a field goal less then 15 yards from the uprights. And both teams missed. Kind of makes me wonder about league integrity. I will leave it there. 
 </p>
 
 <p>
-What is up with those crazy Chiefs; they win, they loose - repeat! They beat up the good looking kid on the block (Oakland) quite handily.  I never know which team is going to show up with either of these teams. 
-</p>
-
-<p>
-The Falcons Seahawks was a good game marred by bad officiating. Is it just me or is the league unable to be anything even near consistent - especially with anything to do with pass interference. Atlanta got victimized by a terrible call at the end of the game. Doesn't mean Atlanta would have won, But.....
-</p>
-
-<p>
-The Texans Colts game was a late night snooze for the first 3 quarters. Not a good looking game up to that point. I confess that I went to bed expecting to see a Colt victory in the morning. Woof! For those Texan fans who put the time in and stayed up - You got your reward!
-</p>
-
-<p>
-All in all a good/bizarre week.
+All in all a good/weird week. But then we ARE close to Halloween.
 </p>
 
 <p>
@@ -419,24 +397,62 @@ $email = $email .
 "<div id='tablecontainer' style='width:100%;'>" .
 $winstable . "\n" . 
 $totalpercenttable . "\n" . 
-$weekpercenttable . "\n"  .
+$leaderweektable . "\n"  .
 "</div>";
+
+$email = $email . 
+"<p>
+<span  style='font-weight:bold; color:blue;'>Website Changes</span>
+</p>
+
+<p>
+<span  style='font-weight:bold; color:red;'>Delete your Daredevil Ducks web page</span>
+</p>
+
+<p>
+We have made a couple of changes that you should be aware of. You will need to delete your current version of daredevil ducks. You can do this by closing the browser or closing the tab. You may also need to clear your browser cache. If you are not sure on how to do this please contact me and I will walk you through it. You will know you need to do this if you are not able to get to the Player Stats!
+</p>
+
+<p>
+<span  style='font-weight:bold; color:green;'>Player Stats now has 3 selections</span>
+</p>
+
+<p>
+The Player stats now has 3 selections -  Total Wins Leaders, Total Percentage Leaders, and Weekly Total Leaders, We broke the total wins and total percentage wins out from the Leader Board page inter their own pages.
+</p>
+
+<p>
+<span  style='font-weight:bold;color:green;'>We have added Player Groups</span>
+</p>
+
+<p>
+The Player stats selections -  Total Wins Leaders, Total Percentage Leaders, and Weekly Total Leaders, now has a dropdown selection called Player Groups. These groups represent a number of players. If selected, only the information for those players is returned and ranked. A great way to see how you compare to your friends, family etc! We added a few groups so that you can see how it works. But if you want to have a group of your own - send me the group name and its members and I will set it up for you.
+</p>
+
+<p>
+<span  style='font-weight:bold;color:green;'>Please set up your profile!</span>
+</p>
+
+<p>
+Your player profile can be accessed by clicking on your avatar at the top right of the Daredevil Ducks web page. Add some information about yourself! Go to the viewing permissions check boxes at the bottom of the page and open up what you feel comfortable sharing with people,
+</p>
+
+<p>
+<span  style='font-weight:bold;color:green;'>New Video available on How to Login and make your picks</span>
+</p>
+
+<p>
+I have posted a video on youtube on how to login and make your game picks. You can See the video at https://youtu.be/YG9ZleppJwo
+</p>";
 
 $email = $email . "
 <p> 
-
 Great effort by all! But remember Week $nextweek (Thursday) is upon us! So start thinking about what you want to pick!  
 </p>
 
 Click on http://daredevilducks.xyz to get make your picks!
 <br />
 Mobile devices  can click on http://yellowrangler.com. 
-<br />
-
-<p>
-We have added a selection under <span style='font-weight:bold; color:maroon;'>Teams</span> titled <span style='font-weight:bold; color:grey;'>Current Scores</span>. Clicking on that will open another browser window with current scores for the week that the teams are playing (courtesy of NFL.com).
-</p>
-
 <br />
 
 AirDreamer & Wildcat Wonder

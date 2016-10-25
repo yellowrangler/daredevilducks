@@ -2002,9 +2002,8 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
         });
     }
 
-    init();
-    function init() {
-        
+    function initMemberGroups() 
+    {
         $scope.membergroupmembers =  [
             { 
                 id: "1", 
@@ -2019,6 +2018,12 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
             .error( function(edata) {
                 alert(edata);
             }); 
+    }
+
+    init();
+    function init() {
+        
+        initMemberGroups(); 
         
         setviewpadding();
         
@@ -2045,6 +2050,8 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name and Members added succesfully!");
+
+                initMemberGroups();
             }
 
         })
