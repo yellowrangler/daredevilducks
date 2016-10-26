@@ -519,6 +519,12 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         var fieldname = "";
 
         //
+        // disable all buttons
+        //
+        $("#saveGames").addClass("disabled");
+        $("#saveGamesBottom").addClass("disabled");
+
+        //
         // loop through all radio fields and count 
         //
         $("[name^=pick_]").each(function() {
@@ -590,6 +596,13 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                             $('#gamesSavedDialogModal').modal();
                         }
                     }
+
+                    setTimeout(function () {
+                        $("#saveGames").removeClass("disabled");
+                        $("#saveGamesBottom").removeClass("disabled");
+                        }, 5000);
+                    
+
                 })
                 .error( function(edata) {
                     alert(edata);
