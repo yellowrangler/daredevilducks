@@ -452,8 +452,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         //
         // disable all buttons
         //
-        $("#saveGames").addClass("disabled");
-        $("#saveGamesBottom").addClass("disabled");
+        $("#saveGames").hide();
+        $("#saveGamesBottom").hide();
 
 
         //
@@ -530,8 +530,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                     }
 
                     setTimeout(function () {
-                        $("#saveGames").removeClass("disabled");
-                        $("#saveGamesBottom").removeClass("disabled");
+                        $("#saveGames").show();
+                        $("#saveGamesBottom").show();
                         }, 10000);
                 })
                 .error( function(edata) {

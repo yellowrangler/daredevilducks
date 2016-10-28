@@ -521,8 +521,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         //
         // disable all buttons
         //
-        $("#saveGames").addClass("disabled");
-        $("#saveGamesBottom").addClass("disabled");
+        $("#saveGames").hide();
+        $("#saveGamesBottom").hide();
 
         //
         // loop through all radio fields and count 
@@ -598,8 +598,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                     }
 
                     setTimeout(function () {
-                        $("#saveGames").removeClass("disabled");
-                        $("#saveGamesBottom").removeClass("disabled");
+                        $("#saveGames").show();
+                        $("#saveGamesBottom").show();
                         }, 10000);
                     
 
