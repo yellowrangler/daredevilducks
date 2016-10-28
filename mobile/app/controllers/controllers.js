@@ -532,7 +532,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                     setTimeout(function () {
                         $("#saveGames").removeClass("disabled");
                         $("#saveGamesBottom").removeClass("disabled");
-                        }, 5000);
+                        }, 10000);
                 })
                 .error( function(edata) {
                     alert(edata);
