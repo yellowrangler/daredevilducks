@@ -1,0 +1,47 @@
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2 class="headerTitle">Team Stats Charts</h2>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+
+<div class="row pageStandardOffset">
+<form id="teamstatschartsForm" name="teamstatschartsForm" class="form-inline">
+	<div class="col-md-12 form-inline">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+
+					<div class="form-group horizontalFieldOffset">
+						<label for="teamstatschart" class="control-label">Chart</label>
+				        <select class="customSelect form-control" ng-change="getTeamStatsCharts()" ng-model="current.teamstatschart" id="teamstatschart" name="teamstatschart">
+				            <option ng-repeat="teamstatschart in teamstatscharts" value="{{teamstatschart.id}}">{{teamstatschart.name}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<label for="teamid" class="control-label">Team</label>
+				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
+				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+				        </select>
+					</div> <!-- end of form-group --> 
+
+					<div style="padding-left:30px;" class="form-group horizontalFieldOffset">
+		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="drawTeamStatsCharts()" id="drawTeamStatsCharts" name="drawTeamStatsCharts" >Draw Chart</button>
+					</div> <!-- end of form-group --> 
+
+				</div> <!-- end of panel body -->		
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 12 -->
+</form>		
+</div> <!-- end of row -->
+
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div style="height:400px;" id="chart_div"></div>
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->
