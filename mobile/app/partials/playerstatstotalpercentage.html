@@ -16,14 +16,14 @@
 					<div class="form-group horizontalFieldOffset">
 				    	<label for="season" class="control-label">Season </label>
 			            <select class="customSelect form-control" ng-change="getYearlyTotalPercentage()" ng-model="current.season" id="season" name="season">
-			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
 			            </select>
 					</div> <!-- end of form-group -->
 
 					<div class="form-group horizontalFieldOffset">
 						<label class="control-label" for="gametype">Game Type</label>
 						<select class="customSelect form-control" ng-change="getYearlyTotalPercentage()" ng-model="current.gametypeid"  id="gametype" name="gametype">
-		                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+		                    <option ng-repeat="gametype in gametypes" ng-selected="current.gametypeid == gametype.id" value="{{gametype.id}}">{{gametype.gametype}}</option>
 	                    </select>
 					</div>  <!-- end of form group -->
 

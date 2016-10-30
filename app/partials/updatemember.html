@@ -17,7 +17,7 @@
                 <label for="membername" class="col-md-2 control-label">Name</label>
                 <div class="col-md-5">
                   <select tabindex="1"  class="form-control" ng-change="getAllMember(current.membername)" ng-model="current.membername" id="membername" name="membername">
-                    <option ng-repeat="member in members" value="{{member.membername}}">{{member.membername}}</option>
+                    <option ng-repeat="member in members" ng-selected="current.membername == member.membername" value="{{member.membername}}">{{member.membername}}</option>
                   </select>
                   <input type="hidden" value="{{current.id}}" id="id" name="id">
                   </div> <!-- end of col -->
@@ -146,7 +146,7 @@
                 <label for="favoriteteamid" class="col-md-2 control-label">Favorite Team</label>
                 <div class="col-md-5">
                   <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
-                      <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+                      <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
                   </select>
                 </div>
               </div> <!-- end of form-group --> 

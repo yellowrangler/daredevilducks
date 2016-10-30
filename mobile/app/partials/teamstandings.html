@@ -4,26 +4,25 @@
 	<h2 class="headerTitle">Team Standings</h2> 
 </div> <!-- end of row -->
 
-<div id="navbarButtonsStandings">
-	<div class="row">
-		<form id="teamstandingForm" name="teamstandingForm" style="padding:0px;" class="form-inline">
-		<div style="padding-top:15px;" class="col-md-12">
-			<div class="pageStandardOffset">
-				<div class="panel panel-default panelOverrideNoBorder">
-					<div class="panel-body">
-						<div class="form-group horizontalFieldOffset">
-					    	<label for="season" class="control-label">Season </label>
-				            <select class="customSelect form-control" ng-change="selectChange()" ng-model="current.season" id="season" name="season">
-		            			<option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
-		        			</select>
-						</div> <!-- end of form-group -->
+<div class="row">
+	<form id="teamstandingForm" name="teamstandingForm" style="padding:0px;" class="form-inline">
+	<div style="padding-top:15px;" class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season </label>
+			            <select class="customSelect form-control" ng-change="selectChange()" ng-model="current.season" id="season" name="season">
+	            			<option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
+	        			</select>
+					</div> <!-- end of form-group -->
 
-						<div class="form-group horizontalFieldOffset">
-							<label class="control-label" for="gametype">Game Type</label>
-							<select class="customSelect form-control" ng-change="selectChange()" ng-model="current.gametypeid"  id="gametype" name="gametype">
-			                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
-		                    </select>
-						</div>  <!-- end of form group -->
+					<div class="form-group horizontalFieldOffset">
+						<label class="control-label" for="gametype">Game Type</label>
+						<select class="customSelect form-control" ng-change="selectChange()" ng-model="current.gametypeid"  id="gametype" name="gametype">
+		                    <option ng-repeat="gametype in gametypes" ng-selected="current.gametypeid == gametype.id" value="{{gametype.id}}">{{gametype.gametype}}</option>
+	                    </select>
+					</div>  <!-- end of form group -->
 
 					</div> <!-- end of panel body -->			
 				</div> <!-- end of panel -->

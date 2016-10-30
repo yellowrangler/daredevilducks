@@ -14,21 +14,21 @@
 					<div class="form-group horizontalFieldOffset">
 						<label for="memberid" class="control-label">Player</label>
 				        <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
-				            <option ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				            <option ng-selected="current.memberid == member.id"  ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
 				        </select>
 					</div> <!-- end of form-group -->
 
 					<div class="form-group horizontalFieldOffset">
 				    	<label for="season" class="control-label">Season</label>
 			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.season"  id="season" name="season">
-			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			                <option ng-selected="current.season == season.season" ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
 			            </select>
 					</div> <!-- end of form-group -->
 
 					<div class="form-group horizontalFieldOffset">
-				    	<label for="gametypeid" class="control-label">Week</label>
+				    	<label for="week" class="control-label">Week</label>
 			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
-				            <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+				            <option ng-selected="current.week == week.week" ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 			            </select>
 					</div> <!-- end of form-group -->     
 				</div> <!-- end of panel body -->				

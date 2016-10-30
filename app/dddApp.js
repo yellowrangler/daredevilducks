@@ -1,4 +1,12 @@
-var dddApp = angular.module ('dddApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.grid', 'ui.grid.selection', 'dropzone', 'ngSanitize']);
+var dddApp = angular.module ('dddApp', [
+    'ngRoute', 
+    'ngAnimate', 
+    'ngTouch', 
+    'ui.grid', 
+    'ui.grid.selection', 
+    'dropzone', 
+    'ngSanitize',
+    'chart.js']);
 
 // define routes for app
 dddApp.config(function ($routeProvider) {

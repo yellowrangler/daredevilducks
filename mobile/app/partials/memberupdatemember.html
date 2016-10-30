@@ -110,12 +110,14 @@
           <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
       </div> <!-- end of form-group -->
 
-      <div class="form-group">
-          <label for="favoriteteamid" class="control-label">Favorite Team</label>
-          <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
-              <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
-          </select>
-      </div> <!-- end of form-group --> 
+                <div class="form-group">
+                  <label for="favoriteteamid" class="col-md-3 control-label">Favorite Team</label>
+                  <div class="col-md-5">
+                    <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                        <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+                    </select>
+                  </div>
+                </div> <!-- end of form-group --> 
 
       <div class="form-group">
             <label for="biography" class="control-label">Biography</label>

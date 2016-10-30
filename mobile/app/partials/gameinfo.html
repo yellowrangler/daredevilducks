@@ -40,7 +40,7 @@
 		            	<label for="gametypeid" class="col-sm-4 control-label">Game Type</label>
 						<div class="col-sm-7">
 				            <select class="form-control" ng-model="current.gametypeid"  id="gametypeid" name="gametypeid">
-			                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+			                    <option ng-repeat="gametype in gametypes" ng-selected="current.gametypeid == gametype.id" value="{{gametype.id}}">{{gametype.gametype}}</option>
 		                    </select>
 						</div> <!-- end of col -->	                    
 		            </div> <!-- end of form-group -->
@@ -91,7 +91,7 @@
 		            	<label for="networkid" class="col-sm-4 control-label">Network</label>
 						<div class="col-sm-7">
 				            <select class="form-control" ng-model="current.networkid"  id="networkid" name="networkid">
-			                    <option ng-repeat="network in networks" value="{{network.id}}">{{network.network}}</option>
+			                    <option ng-repeat="network in networks" ng-selected="current.networkid == network.id" value="{{network.id}}">{{network.network}}</option>
 		                    </select>
 						</div> <!-- end of col -->	                    
 		            </div> <!-- end of form-group -->
@@ -100,7 +100,7 @@
 		            	<label for="hometeamid" class="col-sm-4 control-label">Home Team</label>
 						<div class="col-sm-7">
 				            <select class="form-control" ng-model="current.hometeamid"  id="hometeamid" name="hometeamid">
-			                    <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+			                    <option ng-repeat="team in teams" ng-selected="current.hometeamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 		                    </select>
 						</div> <!-- end of col -->	             
 		            </div> <!-- end of form-group -->
@@ -117,7 +117,7 @@
 		            	<label for="awayteamid" class="col-sm-4 control-label">Away Team</label>
 						<div class="col-sm-7">
 				            <select class="form-control" ng-model="current.awayteamid"  id="awayteamid" name="awayteamid">
-			                    <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+			                    <option ng-repeat="team in teams" ng-selected="current.awayteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 		                    </select>
 						</div> <!-- end of col -->	                    
 		            </div> <!-- end of form-group -->

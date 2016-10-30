@@ -5,7 +5,8 @@ var dddAppMobile = angular.module ('dddAppMobile', [
     'ui.grid', 
     'ui.grid.selection', 
     'dropzone', 
-    'ngSanitize']);
+    'ngSanitize',
+    'chart.js']);
 
 // define routes for app
 dddAppMobile.config(function ($routeProvider) {
@@ -45,16 +46,6 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'playerstatsmemberweeklyController',
                 templateUrl: 'app/partials/playerstatsmemberweekly.html'
             }) 
-        .when('/leaderboard',
-            {
-                controller: 'leaderboardController',
-                templateUrl: 'app/partials/leaderboard.html'
-            }) 
-        .when('/memberweekly',
-            {
-                controller: 'memberweeklyController',
-                templateUrl: 'app/partials/memberweekly.html'
-            }) 
         .when('/teamstandings',
             {
                 controller: 'teamstandingsController',
@@ -74,7 +65,12 @@ dddAppMobile.config(function ($routeProvider) {
             {
                 controller: 'teamweeklyrankingController',
                 templateUrl: 'app/partials/teamweeklyranking.html'
-            })        
+            })
+        .when('/teamstatscharts',
+            {
+                controller: 'teamstatschartsController',
+                templateUrl: 'app/partials/teamstatscharts.html'
+            })         
         .when('/halloffame',
             {
                 controller: 'halloffameController',

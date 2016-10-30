@@ -220,9 +220,6 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
 }
 
 controllers.pickgames2Controller = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
-    $scope.current = {};
-    $scope.teamstat = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
 
     //
     // this returnd false if admin true if other
@@ -543,6 +540,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
     init();
     function init() {
+        $scope.current = {};
+        $scope.teamstat = {};
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -558,68 +557,67 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
         $scope.current.memberlogin = loginService.getLogin();
 
-        var orderby = "orderby=screenname";
-        membersFactory.getMembers(orderby)
+        nflteamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.members = data; 
-            
-                $scope.seasons = nflTeamsService.getNFLTeamseasons();
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
 
-                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
-                .success( function(data) {
-                    $scope.weeks = data; 
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);
 
-                    nflteamsFactory.getCurrentSeasonWeek()
-                        .success( function(data) {
-                            $scope.current.season = data.season; 
-                            $scope.current.week = data.week;
+                var orderby = "orderby=screenname";
+                membersFactory.getMembers(orderby)
+                    .success( function(data) {
+                        $scope.members = data; 
+                        $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
-                            nflTeamsService.addCurrentWeek($scope.current.week);
-                            nflTeamsService.addCurrentSeason($scope.current.season);
+                        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                            .success( function(data) {
+                                $scope.weeks = data; 
 
-                            //
-                            // get bye teams
-                            //
-                            var q = "week="+$scope.current.week+"&season="+$scope.current.season;
-                            nflteamsFactory.getNFLByeWeekMemberTeams(q)
-                                .success( function(data) {
-                                    $scope.byegames = data; 
-                                })
-                                .error( function(edata) {
-                                    alert(edata);
-                                });       
+                                //
+                                // get bye teams
+                                //
+                                var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                                nflteamsFactory.getNFLByeWeekMemberTeams(q)
+                                    .success( function(data) {
+                                        $scope.byegames = data; 
+                                    })
+                                    .error( function(edata) {
+                                        alert(edata);
+                                    });       
 
-                            $scope.current.memberid = $scope.current.memberlogin.memberid;
-                            var memberid = "memberid="+$scope.current.memberid;
-                            membersFactory.getMember(memberid)
-                                .success( function(data) {
-                                    $scope.current.memberavatar = data.avatar;  
+                                $scope.current.memberid = $scope.current.memberlogin.memberid;
+                                var memberid = "memberid="+$scope.current.memberid;
+                                membersFactory.getMember(memberid)
+                                    .success( function(data) {
+                                        $scope.current.memberavatar = data.avatar;  
 
-                                    var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
-                                    nflteamsFactory.getNFLGamesWeekMemberTeams(q)
-                                        .success( function(data) {
-                                            $scope.games = data; 
-                                        })
-                                        .error( function(edata) {
-                                            alert(edata);
-                                        });   
-                                })
-                                .error( function(edata) {
-                                    alert(edata);
-                                });  
+                                        var q = "memberid="+$scope.current.memberid+"&week="+$scope.current.week+"&season="+$scope.current.season;
+                                        nflteamsFactory.getNFLGamesWeekMemberTeams(q)
+                                            .success( function(data) {
+                                                $scope.games = data; 
+                                            })
+                                            .error( function(edata) {
+                                                alert(edata);
+                                            });   
+                                    })
+                                    .error( function(edata) {
+                                        alert(edata);
+                                    });  
 
-                        })
-                        .error( function(edata) {
-                            alert(edata);
-                        }); 
-                })
-                .error( function(edata) {
-                    alert(edata);
-                });
-            })
-        .error( function(edata) {
-            alert(edata);
-        }); 
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            }); 
+                     })        
+                    .error( function(edata) {
+                        alert(edata);
+                    });
+             })         
+            .error( function(edata) {
+                alert(edata);
+            }); 
      
     };
 
@@ -668,8 +666,6 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 }
 
 controllers.viewselectpickgamesController = function ($scope, $http, $location, membersFactory, nflteamsFactory, nflTeamsService, loginService) {
-    $scope.current = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
 
     function getMemberProfile(memberid)
     {
@@ -726,6 +722,8 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
 
     init();
     function init() {
+        $scope.current = {};
+
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -741,24 +739,24 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         
         $scope.current.memberlogin = loginService.getLogin();
 
-        var orderby = "orderby=screenname";
-        membersFactory.getMembers(orderby)
+        nflteamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;  
 
-                $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);  
 
-                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
-                .success( function(data) {
-                    $scope.weeks = data; 
-
-                nflteamsFactory.getCurrentSeasonWeek()
+                var orderby = "orderby=screenname";
+                membersFactory.getMembers(orderby)
                     .success( function(data) {
-                        $scope.current.season = data.season; 
-                        $scope.current.week = data.week;  
+                        $scope.members = data; 
 
-                        nflTeamsService.addCurrentWeek($scope.current.week);
-                        nflTeamsService.addCurrentSeason($scope.current.season);  
+                        $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
+
+                        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                        .success( function(data) {
+                            $scope.weeks = data; 
 
                         //
                         // get bye teams
@@ -802,7 +800,7 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         })
         .error( function(edata) {
             alert(edata);
-        });      
+        });        
     };
 
     $scope.getMemberWeekPicks = function() {
@@ -1302,8 +1300,6 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
 }
 
 controllers.playerstatsmemberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, nflteamsFactory, loginService) {
-    $scope.current = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
 
     function getMemberProfile(memberid)
     {
@@ -1366,6 +1362,8 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
 
     init();
     function init() {
+        $scope.current = {};
+
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -1392,19 +1390,19 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
 
         $scope.current.memberlogin = loginService.getLogin();
         
-        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+        nflteamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.weeks = data;
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
 
-                nflteamsFactory.getCurrentSeasonWeek()
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                $scope.seasons = nflTeamsService.getNFLTeamseasons();
+        
+                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
                     .success( function(data) {
-                        $scope.current.season = data.season; 
-                        $scope.current.week = data.week;
-
-                        nflTeamsService.addCurrentWeek($scope.current.week);
-                        nflTeamsService.addCurrentSeason($scope.current.season);  
-
-                        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+                        $scope.weeks = data;
 
                         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
                         nflteamsFactory.getMemberWeekStats(requestStr)
@@ -1423,7 +1421,7 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         })
         .error( function(edata) {
             alert(edata);
-        });                  
+        });                
     }
 
     $scope.getMemberWeekStats = function() {
@@ -1480,9 +1478,6 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
 controllers.viewtotalpickgamesController = function ($scope, $http, $location, nflteamsFactory, nflTeamsService, loginService) {
 
-    $scope.current = {};
-    $scope.current.season = nflTeamsService.getCurrentSeason();
-
     function selectChange()
     {
         var data = "week="+$scope.current.week+"&season="+$scope.current.season;
@@ -1498,6 +1493,8 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
 
     init();
     function init() {
+        $scope.current = {};
+
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -1513,17 +1510,17 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
     
         $scope.seasons = nflTeamsService.getNFLTeamseasons(); 
 
-        nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
+        nflteamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.weeks = data; 
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;  
 
-                nflteamsFactory.getCurrentSeasonWeek()
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                nflteamsFactory.getNFLTeamseasonweeks($scope.current.season)
                     .success( function(data) {
-                        $scope.current.season = data.season; 
-                        $scope.current.week = data.week;  
-
-                        nflTeamsService.addCurrentWeek($scope.current.week);
-                        nflTeamsService.addCurrentSeason($scope.current.season);  
+                        $scope.weeks = data; 
 
                         var q = "week="+$scope.current.week+"&season="+$scope.current.season;
                         nflteamsFactory.getNFLGamesWeekMemberTeamPicks(q)
@@ -1540,7 +1537,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
             })
             .error( function(edata) {
                 alert(edata);
-            });      
+            });    
     };
 
     $scope.getMemberWeekPicks = function() {
@@ -1557,15 +1554,126 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, n
 
 }
 
-controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, membersFactory, nflTeamsService, loginService) {
-    $scope.current = {};
-    $scope.current.team = {};
-    $scope.current.toggletextShow = "Click ME to SHOW Information for Weekly Ranking";
-    $scope.current.toggletextHide = "Click ME to HIDE Information for Weekly Ranking";
+controllers.teamstatschartsController = function ($scope, $http, $location, nflteamsFactory, membersFactory, nflTeamsService, loginService) {
+    
+    function getTeamWeekRank ()
+    {
+        if ($("#teamRankSortButton").is(':hidden'))
+        {
+            $("#teamRankSort").addClass("glyphicon-sort-by-attributes");
+            $("#teamRankSortButton").show(400);
+        }
+        
 
-    $scope.current.teamid = 0;
-    $scope.current.toggleSort = "ASC";
-    $scope.current.toggletext = $scope.current.toggletextShow;
+        var q = "teamid="+$scope.current.teamid+"&season="+$scope.current.season+"&orderbydirection="+$scope.current.toggleSort;
+        nflteamsFactory.getTeamWeekyRanking(q)
+            .success( function(data) {
+                $scope.teamweekranks = data; 
+
+                var q = "teamid="+$scope.current.teamid;
+                nflteamsFactory.getNflTeam(q)
+                    .success( function(data) {
+                        $scope.current.team = data; 
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });  
+                })
+            .error( function(edata) {
+                alert(edata);
+            });  
+    }
+
+    function getTeamStatsCharts() 
+    {
+
+    }
+
+    function drawTeamStatsCharts() 
+    {
+        $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+        $scope.series = ['Series A', 'Series B'];
+        $scope.data = [
+            [65, 59, 80, 81, 56, 55, 40],
+            [28, 48, 40, 19, 86, 27, 90]
+            ];
+        $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+        $scope.options = {
+            scales: {
+              yAxes: [
+                {
+                  id: 'y-axis-1',
+                  type: 'linear',
+                  display: true,
+                  position: 'left'
+                },
+                {
+                  id: 'y-axis-2',
+                  type: 'linear',
+                  display: true,
+                  position: 'right'
+                }
+              ]
+            }
+      };
+
+    }
+
+    init();
+    function init() {
+        $scope.current = {};
+        $scope.current.team = {};
+
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+        {
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
+            $location.path("#home");
+        }
+
+        $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+
+        $scope.current.memberlogin = loginService.getLogin();  
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        var q = "memberid="+$scope.current.memberid;
+        membersFactory.getMember(q)
+        .success( function(data) {
+            $scope.membember = data;
+
+            $scope.current.teamid = $scope.membember.favoriteteamid;
+
+            getTeamWeekRank();
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+           
+    };
+
+    $scope.getTeamStatsCharts = function() {
+        getTeamStatsCharts();
+    }
+
+    $scope.getTeamWeekRank = function() {
+        getTeamWeekRank();
+    }
+
+    $scope.drawTeamStatsCharts = function() {
+        drawTeamStatsCharts();
+    }
+
+    $scope.onClick = function (points, evt) {
+        console.log(points, evt);
+    };
+
+}
+
+controllers.teamweeklyrankingController = function ($scope, $http, $location, nflteamsFactory, membersFactory, nflTeamsService, loginService) {
 
     function getTeamWeekRank ()
     {
@@ -1640,6 +1748,10 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, nf
 
     init();
     function init() {
+        $scope.current = {};
+        $scope.current.team = {};
+        $scope.current.teamid = 0;
+
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
          {
@@ -2000,6 +2112,8 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name and Members added succesfully!");
+
+                initMemberGroups();
             }
 
         })
@@ -3035,6 +3149,32 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             }); 
     }
 
+    function geteDynamiceMailTemplate(template)
+    {
+        nflteamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
+                var gametype = 2;
+                var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&gametype="+gametype+"&template="+template;
+                membersFactory.buildeMailTemplate(q)
+                    .success( function(data) {
+                        var title = data.split("\n")[0];
+                        $("#emailsubject").val(title);
+
+                        var body = data.replace(title+"\n","");
+                        $("#emailmessage").val(body);
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    })
+                })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+
+    }
+
     function geteMailTemplate() {
         var url = "";
 
@@ -3125,7 +3265,14 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
     }
 
     $scope.geteMailTemplate = function(template) {
-        geteMailTemplate();
+        if (template == "gameweek")
+        {
+            geteDynamiceMailTemplate(template);
+        }
+        else
+        {
+            geteMailTemplate(template);
+        }
     }
 
     $scope.getLatePickMembersbutton = function() {

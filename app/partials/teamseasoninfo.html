@@ -17,21 +17,21 @@
 					<div class="form-group">
 		            	<label for="season" class="control-label">Season</label>
 			            <select class="form-control" ng-model="current.season"  id="season" name="season">
-		                    <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+		                    <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
 	                    </select>                 
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		            	<label for="teamid" class="control-label">Team</label>
 			            <select class="form-control" ng-model="current.teamid"  id="teamid" name="teamid">
-		                    <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+		                    <option ng-repeat="team in teams" ng-selected="current.teamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 	                    </select>                 
 		            </div> <!-- end of form-group -->
 
 		            <div class="form-group">
 		            	<label for="postseasonstatus" class="control-label">Post Season Status</label>
 			            <select class="form-control" ng-model="current.postseasonstatus"  id="postseasonstatus" name="postseasonstatus">
-		                    <option ng-repeat="postseasonstatus in postseasonstatuses" value="{{postseasonstatus.id}}">{{postseasonstatus.title}}</option>
+		                    <option ng-repeat="postseasonstatus in postseasonstatuses" ng-selected="current.postseasonstatus == postseasonstatus.id" value="{{postseasonstatus.id}}">{{postseasonstatus.title}}</option>
 	                    </select>                 
 		            </div> <!-- end of form-group -->
 
