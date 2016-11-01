@@ -1,0 +1,1 @@
+dddAppMobile.controller(controllers); 

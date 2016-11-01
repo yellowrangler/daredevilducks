@@ -783,3 +783,14 @@ border: 0 none;
 .ddd-paragraph-large li {
 	padding-top:10px;
 }
+
+/*Angular-ChartJS */
+.chart-container {
+    width: 100%;
+    height: 100%;
+}
+
+.teamStatsChart {
+    /*width: 500px;*/
+    height: 300px;
+}
