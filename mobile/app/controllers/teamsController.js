@@ -123,6 +123,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
             ];
         $scope.datasetOverride = [{ yAxisID: 'Power-Rankings' }];
         $scope.options = {
+            legend: { display: true },
             scales: {
               yAxes: [
                 {
@@ -139,7 +140,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
               ]
             }
       };
-
     }
 
     init();
