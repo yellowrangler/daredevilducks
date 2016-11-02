@@ -61,4 +61,31 @@
 	</div> <!-- end of teamStatsChart -->
 </div> <!-- end of row -->
 
+<div class="pageStandardOffset row">
+	<div style="padding-bottom:450px;" class="teamStatsChart col-md-7">
+		<canvas id="line" 
+		class="chart chart-line" 
+		chart-data="data"
+		chart-labels="labels" 
+		chart-series="series" 
+		chart-options="options"
+		chart-dataset-override="datasetOverride" 
+		chart-click="onClick">
+		</canvas> 
+	</div> <!-- end of teamStatsChart -->
+
+	<div style="padding-left:50px;padding-top:45px;" class="col-md-4">
+		<div class="panel panel-primary">
+			<div class="panel-body">
+				<p>This is our first foray into charting statistics. There will be more to come!</p>
+
+				<p>This chart shows a reverse power rankings. The two teams you pick will have a chart built to show how good/bad they compare. We realized that most people tend to look at charts as the higher the line the better the score. 
+				</p>
+
+				<p>So we Took the power rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that the higher the line the better the team score; the lower the worse! </p>
+			</div> <!-- end of panel body -->
+    </div> <!-- end of panel -->  
+</div> <!-- end of row -->
+
+
 <!-- <div style="padding-bottom:350px;">&nbsp;</div> -->
