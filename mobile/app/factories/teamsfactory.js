@@ -170,10 +170,19 @@ dddAppMobile.factory('teamsFactory', function($q, $http) {
         })
     }
 
-    factory.getTeamPowerRankingAlltoDate = function (data) {
+    factory.getTeamsPowerRankings = function (data) {
         return $http({ 
             method: 'POST', 
-            url: "app/ajax/getteampowerrankingalltodate.php",
+            url: "app/ajax/getteamspowerrankings.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getTeamPowerRankings = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getteampowerrankings.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })

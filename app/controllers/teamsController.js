@@ -213,7 +213,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
     }
 }
 
-controllers.teamstatschartsController = function ($scope, $http, $location, teamsFactory, membersFactory, nflTeamsService, loginService) {
+controllers.teamstatschartsController = function ($scope, $http, $location, teamsFactory, membersFactory, nflTeamsService, chartService, loginService) {
 
     function getTeamWeekRank ()
     {
@@ -236,7 +236,25 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
             });  
     }
 
-    function getTeamsPowerRankingsRank ()
+    function displayChart() 
+    {
+        switch ($scope.current.teamstatschartid)
+        {
+            case "1":
+                getTeamsPowerRankings();  
+                break;
+
+            case "2":
+                getTeamPowerRankings();
+                break;  
+                
+            default:
+                $scope.current.teamstatschartid = ""; 
+        }
+
+    }
+
+    function getTeamsPowerRankings()
     {
         var teamA = $scope.current.teamidA;
         var teamB = $scope.current.teamidB;
@@ -244,18 +262,18 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
-        teamsFactory.getTeamPowerRankingAlltoDate(q)
+        teamsFactory.getTeamsPowerRankings(q)
             .success( function(data) {
                 $scope.teamweekranksA = data[0]; 
 
                 var q = "teamid="+teamB+"&season="+$scope.current.season;
-                teamsFactory.getTeamPowerRankingAlltoDate(q)
+                teamsFactory.getTeamsPowerRankings(q)
                     .success( function(data) {
                         $scope.teamweekranksB = data[0]; 
 
                         $scope.powerRankingsWeeks = data[1];  
 
-                        drawTeamStatsCharts($scope.teamweekranksA, $scope.teamweekranksB, $scope.powerRankingsWeeks);
+                        drawTeamsPowerRankings($scope.teamweekranksA, $scope.teamweekranksB, $scope.powerRankingsWeeks);
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -266,12 +284,135 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
             });  
     }
 
+    function getTeamPowerRankings ()
+    {
+        var teamA = $scope.current.teamidA;
+        var season = $scope.current.season;
+        // var week = $scope.current.week;
+
+        var q = "teamid="+teamA+"&season="+$scope.current.season;
+        teamsFactory.getTeamPowerRankings(q)
+            .success( function(data) {
+                $scope.pot = data[0]; 
+                $scope.pos = data[1]; 
+                $scope.pop = data[2]; 
+                $scope.por = data[3]; 
+                $scope.pdt = data[4]; 
+                $scope.pds = data[5]; 
+                $scope.pdp = data[6]; 
+                $scope.pdr = data[7]; 
+
+                $scope.weeks = data[8]; 
+
+                drawTeamPowerRankings($scope.pot,
+                                    $scope.pos,
+                                    $scope.pop,
+                                    $scope.por,
+                                    $scope.pdt,
+                                    $scope.pds,
+                                    $scope.pdp,
+                                    $scope.pdr,
+                                    $scope.weeks);
+
+                })
+            .error( function(edata) {
+                alert(edata);
+            });  
+    }
+
     function getTeamStatsCharts() 
     {
+        switch ($scope.current.teamstatschartid)
+        {
+            case "1":
+                $scope.current.showteama = true;
+                $scope.current.showteamb = true;  
+
+                $scope.current.message = "<p>This chart shows a reverse power rankings. The two teams you pick will have a chart built to show how good/bad they compare. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took the power rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that the higher the line the better the team ranking; the lower the worse! </p>";
+                break;
+
+            case "2":
+                $scope.current.showteama = true;
+                $scope.current.showteamb = false;  
+
+                $scope.current.message = "<p>This chart shows a reverse offensive and defensive rankings. The team you pick will have a chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that the higher the line the better the ranking; the lower the worse! </p>";
+
+                break;  
+                
+            default:
+                $scope.current.teamstatschartid = ""; 
+        }
+
+        $("#chartMessage").html($scope.current.message);
 
     }
 
-    function drawTeamStatsCharts(teamApowerRankings, teamBpowerRankings, powerRankingsWeeks) 
+    function drawTeamPowerRankings(pot,pos,pop,por,pdt,pds,pdp,pdr,weeks) 
+    {
+        var series1 = "Off All";
+        var series2 = "Off Score";
+        var series3 = "Off Pass";
+        var series4 = "Off Rush";
+        var series5 = "Def All";
+        var series6 = "Def Score";
+        var series7 = "Def Pass";
+        var series8 = "Def Rush";
+
+
+        $scope.labels = weeks;
+        $scope.series = [series1,
+                    series2,
+                    series3,
+                    series4,
+                    series5,
+                    series6,
+                    series7,
+                    series8];
+        $scope.data = [
+             pot,pos,pop,por,pdt,pds,pdp,pdr
+            ];
+
+        $scope.colors = [
+            {
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            },
+            {
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            }];   
+
+        $scope.datasetOverride = [
+                { 
+                    yAxisID: 'Power-Rankings' 
+                }
+            ];
+        $scope.options = {
+            legend: { display: true },
+            scales: {
+              yAxes: [
+                {
+                  id: 'Power-Rankings',
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  ticks: {
+                    max:32,
+                    min:0
+                  }
+                  
+                }
+              ]
+            }
+      };
+
+    }
+
+    function drawTeamsPowerRankings(teamApowerRankings, teamBpowerRankings, powerRankingsWeeks) 
     {
         var series1 = $( "#teamidA option:selected" ).text();
         var series2 = $( "#teamidB option:selected" ).text();
@@ -342,6 +483,14 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
 
+        // default chart is poer rankings compare
+        $scope.current.teamstatschartid = "1";
+        $scope.current.showteama = true;
+        $scope.current.showteamb = true;        
+        $scope.teamstatscharts = chartService.getChartList("teamCharts");
+
+        getTeamStatsCharts();
+
         $scope.current.memberlogin = loginService.getLogin();  
         $scope.current.memberid = $scope.current.memberlogin.memberid;
 
@@ -368,8 +517,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         getTeamStatsCharts();
     }
 
-    $scope.getTeamsPowerRankingsRank = function() {
-        getTeamsPowerRankingsRank();
+    $scope.displayChart = function() {
+        displayChart();
     }
 
     $scope.onClick = function (points, evt) {

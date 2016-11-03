@@ -44,22 +44,22 @@ $DBpassword = "tarryc";
 $dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
 if (!$dbConn) 
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get team weekly power rankings all season information.");
+    $log = new ErrorLog("logs/");
+    $dberr = mysql_error();
+    $log->writeLog("DB error: $dberr - Error mysql connect. Unable to get team weekly power rankings all season information.");
 
-	$rv = "";
-	exit($rv);
+    $rv = "";
+    exit($rv);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get team weekly power rankings all season information.");
+    $log = new ErrorLog("logs/");
+    $dberr = mysql_error();
+    $log->writeLog("DB error: $dberr - Error selecting db Unable to get team weekly power rankings all season information.");
 
-	$rv = "";
-	exit($rv);
+    $rv = "";
+    exit($rv);
 }
 
 // create time stamp versions for insert to mysql

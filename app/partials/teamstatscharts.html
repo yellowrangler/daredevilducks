@@ -12,21 +12,21 @@
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
 
-					<!-- <div class="form-group horizontalFieldOffset">
-						<label for="teamstatschart" class="control-label">Chart</label>
-				        <select class="customSelect form-control" ng-change="getTeamStatsCharts()" ng-model="current.teamstatschart" id="teamstatschart" name="teamstatschart">
-				            <option ng-repeat="teamstatschart in teamstatscharts" ng-selected="current.teamstatschart == teamstatschart.id" value="{{teamstatschart.id}}">{{teamstatschart.name}}</option>
-				        </select>
-					</div> --> <!-- end of form-group -->
-
 					<div class="form-group horizontalFieldOffset">
+						<label for="teamstatschart" class="control-label">Chart</label>
+				        <select class="customSelect form-control" ng-change="getTeamStatsCharts()" ng-model="current.teamstatschartid" id="teamstatschart" name="teamstatschart">
+				            <option ng-repeat="teamstatschart in teamstatscharts" ng-selected="current.teamstatschartid == teamstatschart.id" value="{{teamstatschart.id}}">{{teamstatschart.title}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
+
+					<div ng-if="current.showteama" class="form-group horizontalFieldOffset">
 						<label for="teamidA" class="control-label">Team A</label>
 				        <select class="customSelect form-control" ng-model="current.teamidA" id="teamidA" name="teamidA">
 				            <option ng-repeat="team in teams" ng-selected="current.teamidA == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
 					</div> <!-- end of form-group --> 
 
-					<div class="form-group horizontalFieldOffset">
+					<div ng-if="current.showteamb" class="form-group horizontalFieldOffset">
 						<label for="teamidB" class="control-label">Team B</label>
 				        <select class="customSelect form-control" ng-model="current.teamidB" id="teamidB" name="teamidB">
 				            <option ng-repeat="team in teams" ng-selected="current.teamidB == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
@@ -34,7 +34,7 @@
 					</div> <!-- end of form-group --> 
 
 					<div style="padding-left:30px;" class="form-group horizontalFieldOffset">
-		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="getTeamsPowerRankingsRank()" id="getTeamsPowerRankingsRank" name="getTeamsPowerRankingsRank" >Draw Chart</button>
+		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="displayChart()" id="displayChart" name="displayChart" >Draw Chart</button>
 					</div> <!-- end of form-group --> 
 
 				</div> <!-- end of panel body -->		
@@ -61,12 +61,7 @@
 	<div style="padding-left:50px;padding-top:45px;" class="col-md-4">
 		<div class="panel panel-primary">
 			<div class="panel-body">
-				<p>This is our first foray into charting statistics. There will be more to come!</p>
-
-				<p>This chart shows a reverse power rankings. The two teams you pick will have a chart built to show how good/bad they compare. We realized that most people tend to look at charts as the higher the line the better the score. 
-				</p>
-
-				<p>So we Took the power rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that the higher the line the better the team score; the lower the worse! </p>
+				<div id="chartMessage"></div>
 			</div> <!-- end of panel body -->
     </div> <!-- end of panel -->  
 </div> <!-- end of row -->
