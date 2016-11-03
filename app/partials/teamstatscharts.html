@@ -14,20 +14,20 @@
 
 					<div class="form-group horizontalFieldOffset">
 						<label for="teamstatschart" class="control-label">Chart</label>
-				        <select class="customSelect form-control" ng-change="getTeamStatsCharts()" ng-model="current.teamstatschartid" id="teamstatschart" name="teamstatschart">
-				            <option ng-repeat="teamstatschart in teamstatscharts" ng-selected="current.teamstatschartid == teamstatschart.id" value="{{teamstatschart.id}}">{{teamstatschart.title}}</option>
+				        <select class="customSelect form-control" ng-change="getTeamStatsCharts()" ng-model="current.chartid" id="teamstatschart" name="teamstatschart">
+				            <option ng-repeat="teamstatschart in teamstatscharts" ng-selected="current.chartid == teamstatschart.id" value="{{teamstatschart.id}}">{{teamstatschart.title}}</option>
 				        </select>
 					</div> <!-- end of form-group -->
 
 					<div ng-if="current.showteama" class="form-group horizontalFieldOffset">
-						<label for="teamidA" class="control-label">Team A</label>
+						<label for="teamidA" class="control-label">Team {{current.teama}}</label>
 				        <select class="customSelect form-control" ng-model="current.teamidA" id="teamidA" name="teamidA">
 				            <option ng-repeat="team in teams" ng-selected="current.teamidA == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
 					</div> <!-- end of form-group --> 
 
 					<div ng-if="current.showteamb" class="form-group horizontalFieldOffset">
-						<label for="teamidB" class="control-label">Team B</label>
+						<label for="teamidB" class="control-label">Team {{current.teamb}}</label>
 				        <select class="customSelect form-control" ng-model="current.teamidB" id="teamidB" name="teamidB">
 				            <option ng-repeat="team in teams" ng-selected="current.teamidB == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
@@ -44,21 +44,32 @@
 </form>		
 </div> <!-- end of row -->
 
+<div  style="padding-bottom:75px;" class="pageStandardOffset row">
+	<div class="col-offset-md-1 col-md-8">
+		<div ng-if="current.showlinechart" class="chart-container">
+			<canvas id="line" 
+			class="chart chart-line" 
+			chart-data="data"
+			chart-labels="labels" 
+			chart-series="series" 
+			chart-options="options"
+			chart-dataset-override="datasetOverride" 
+			chart-click="onClick">
+			</canvas> 
+		</div> <!-- end of teamStatsChart -->
 
-<div class="pageStandardOffset row">
-	<div style="padding-bottom:450px;" class="teamStatsChart col-md-7">
-		<canvas id="line" 
-		class="chart chart-line" 
-		chart-data="data"
-		chart-labels="labels" 
-		chart-series="series" 
-		chart-options="options"
-		chart-dataset-override="datasetOverride" 
-		chart-click="onClick">
-		</canvas> 
-	</div> <!-- end of teamStatsChart -->
+		<div ng-if="current.showbarchart"class="chart-container col-offset-md-1 col-md-8">
+			<canvas id="bar" 
+			class="chart chart-bar"
+			chart-data="data" 
+			chart-labels="labels" 
+			chart-options="options"
+			chart-series="series">
+			</canvas>
+		</div> <!-- end of teamStatsChart -->
+	</div>	
 
-	<div style="padding-left:50px;padding-top:45px;" class="col-md-4">
+	<div class="col-md-3">
 		<div class="panel panel-primary">
 			<div class="panel-body">
 				<div id="chartMessage"></div>

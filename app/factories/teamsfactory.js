@@ -188,6 +188,15 @@ dddApp.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.getTeamsStatsCurrentWeek = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getteamsstatscurrentweek.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getAdminTeamWeeklyRanking = function (data) {
         return $http({ 
             method: 'POST', 

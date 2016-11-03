@@ -68,7 +68,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //---------------------------------------------------------------
 // Get max week from team rank table
 //---------------------------------------------------------------
-$sql = "SELECT MAX(week) AS maxrankweek FROM teamweekranktbl";
+$sql = "SELECT MAX(week) AS maxrankweek FROM teamweekranktbl WHERE season = $season";
 $sql_result_check = @mysql_query($sql, $dbConn);
 if (!$sql_result_check)
 {

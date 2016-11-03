@@ -45,7 +45,7 @@ if (!$dbConn)
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get team weekly power rankings all season information.");
+	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get team weekly power rankings current week information.");
 
 	$rv = "";
 	exit($rv);
@@ -55,7 +55,7 @@ if (!mysql_select_db($DBschema, $dbConn))
 {
 	$log = new ErrorLog("logs/");
 	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get team weekly power rankings all season information.");
+	$log->writeLog("DB error: $dberr - Error selecting db Unable to get team weekly power rankings current week information.");
 
 	$rv = "";
 	exit($rv);
@@ -73,7 +73,7 @@ if (!$sql_result_check)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly power rankings all season information for max week.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly power rankings current week information for max week.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -84,7 +84,7 @@ $row = mysql_fetch_assoc($sql_result_check);
 $maxrankweek = $row['maxrankweek'];
 
 //---------------------------------------------------------------
-// get team weekly power rankings all season information
+// get team weekly power rankings current week information
 //---------------------------------------------------------------
 $sql = "SELECT 
 week,
@@ -99,7 +99,7 @@ defencerushing as pdr
 FROM `teamweekranktbl` 
 WHERE teamid = $teamid
 and season = $season
-and week <= $maxrankweek
+and week = $maxrankweek
 ";
 // print $sql;
 // die();
@@ -109,7 +109,7 @@ if (!$sql_result)
 {
     $log = new ErrorLog("logs/");
     $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly power rankings all season information.");
+    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly power rankings current week information.");
     $log->writeLog("SQL: $sql");
 
     $status = -100;
@@ -128,20 +128,18 @@ $pdt = array();
 $pds = array();
 $pdp = array();
 $pdr = array();
-$weeks = array();
 
-while($r = mysql_fetch_assoc($sql_result)) {
-    $pot[] = 32 - $r[pot];
-    $pos[] = 32 - $r[pos];
-    $pop[] = 32 - $r[pop];
-    $por[] = 32 - $r[por];
+$r = mysql_fetch_assoc($sql_result);
+$pot = 32 - $r[pot];
+$pos = 32 - $r[pos];
+$pop = 32 - $r[pop];
+$por = 32 - $r[por];
 
-    $pdt[] = 32 - $r[pdt];
-    $pds[] = 32 - $r[pds];
-    $pdp[] = 32 - $r[pdp];
-    $pdr[] = 32 - $r[pdr];
-    $weeks[] = "Week " . $r[week];
-}
+$pdt = 32 - $r[pdt];
+$pds = 32 - $r[pds];
+$pdp = 32 - $r[pdp];
+$pdr = 32 - $r[pdr];
+
 
 $returnArray = array();
 $returnArray[0] = $pot;
@@ -153,9 +151,6 @@ $returnArray[4] = $pdt;
 $returnArray[5] = $pds;
 $returnArray[6] = $pdp;
 $returnArray[7] = $pdr;
-
-$returnArray[8] = $weeks;
-
 
 //
 // close db connection
