@@ -26,10 +26,11 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function init() {
         $scope.current = {};
 
-        
+        var ua = getUserAgent();
+        $scope.current.devicename = ua.deviceName; 
+        $scope.current.devicetype = ua.deviceType;   
+
         $scope.mobileDevice = isMobile();
-
-
         if ($scope.mobileDevice)
         {
             // alert ("Is Mobile");
@@ -130,9 +131,9 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         }
     }
 
-    $scope.goMobile = function () {
-        window.location.href = "mobile/index.html";
-    }
+    // $scope.goMobile = function () {
+    //     window.location.href = "mobile/index.html";
+    // }
 
     $scope.showMemberAvatar = function () {
         getAvatar();

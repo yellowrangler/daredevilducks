@@ -53,6 +53,7 @@
 <script src="app/controllers/teamsController.js"></script>
 <script src="app/controllers/awardsController.js"></script>
 <script src="app/controllers/adminController.js"></script>
+<script src="app/controllers/faqsController.js"></script>
 <script src="app/controllers/lastController.js"></script>
 <!-- factories  -->
 <script src="app/factories/loginfactory.js"></script>
@@ -197,38 +198,44 @@
 
                     <div class="cold-md-offset-1 col-md-9">
                         <h3>We subscribe to the following addadge:</h3>
-                        <h3>Enjoy Life and Have Fun!</h3>
+                        <h3 style="font-style:italic;">Enjoy Life and Have Fun!</h3>
                     </div>
                 </div> <!-- end of row -->
             </div> <!-- end of col 5 -->
         
-            <div class="col-md-4">
-                <h3>Contact Information</h3>
-                <br />
-                Tarry Cutler
-                <br />
-                <a class="emailLink" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">daredevilducks.xyz@gmail.com</a>
-                <br />
-
-                <div class="systemInfo">
-                   <!--  <div>Device: {{current.devicename}}</div> 
-                    <div>Type: {{current.devicetype}}</div> -->    
-                </div> <!-- end of systemInfo -->
+            <div class="col-md-5">
+                <div style="padding-top:15px;padding-bottom:10px;">
+                    <a href="#/faqs"><img style="height:30px;vertical-align:top" src="img/infozig.png" alt="information" class="img-circle"></a><span style="padding-left:15px;font-style:italic;font-weight:bold;font-size:22px;">Information</span>
+                </div>
+                <div>
+                    <span style="padding-right:5px">Contact:</span> <span class="helpInfo">Tarry Cutler</span>
+                </div>
+                <div>
+                    <span style="padding-right:5px">eMail:</span> <a class="emailLink" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">daredevilducks.xyz@gmail.com</a>
+                </div>
+                <div style="padding-top:15px;">
+                    <span style="padding-right:5px">Device:</span> <span class="helpInfo">{{current.devicename}}</span>
+                </div> 
+                <div>
+                    <span style="padding-right:5px">Type:</span> <span class="helpInfo">{{current.devicetype}}</span>
+                </div>    
+                <div style="padding-top:25px;padding-bottom:10px;">
+                    <span style="padding-right:5px">Go Mobile:</span>
+                    <a id="gomobile" name="gomobile" href="http://yellowrangler.com" target="_blank">
+                     <img src="img/phone-mobile.png" style="height:40px;text-align:center;" alt="Go Mobile!"> 
+                </a>
+            </div> <!-- end of col -->   
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <div class="loginLink row">
                     <div class="col-md-12">
                         <a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
                     </div> <!-- end of col -->    
                 </div> <!-- end of row -->    
 
-                <div style="padding-top:75px;" class="row">
-                    <div class="col-md-12">
-                        <a id="gomobile" name="gomobile" href="http://yellowrangler.com" target="_blank">
-                            <img src="img/phone-mobile.png" style="height:40px;float:right;padding-right:35px;" alt="Go Mobile!"> 
-                        </a>
-                    </div> <!-- end of col -->    
+                <div style="padding-top:25px;" class="row">
+                     
                 </div> <!-- end of row -->    
             </div> <!-- end of row -->
 

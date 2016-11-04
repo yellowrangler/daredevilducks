@@ -15,7 +15,12 @@ dddAppMobile.config(function ($routeProvider) {
             {
                 controller: 'homeController',
                 templateUrl: 'app/partials/home.html'
-            })       
+            })
+        .when('/faqs',
+            {
+                controller: 'faqsController',
+                templateUrl: 'app/partials/faqs.html'
+            })           
         .when('/pickgames',
             {
                 controller: 'pickgames2Controller',

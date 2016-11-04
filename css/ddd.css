@@ -276,29 +276,37 @@ border: 0 none;
 }
 
 .loginLink {
-	float:right;
+	/*float:right;*/
 	color: #F5F38E;
 	font-size: 16px;
-	padding-top:10px;
-	padding-right:15%;
+	padding-top:15px;
+/*	padding-right:15%;*/
+	text-align:center;
 	cursor: pointer;
 }
 
-.systemInfo {
-	padding-top:35px; 
+.helpInfo {
+	padding-top:10px;
+	padding-bottom:10px;
 	color: NavajoWhite;
-	font-size: 12px;
+	font-size: 16px;
+	font-variant:small-caps;
+	letter-spacing: 1px;
 }
 
 .loginLink a {
 	color: #F5F38E;
 	font-size: 16px;
 	cursor: pointer;
+	font-variant:small-caps;
+	letter-spacing: 2px;
 }
 
 .emailLink {
 	color:NavajoWhite;
-	font-size:15px;
+	font-size:16px;
+	font-variant:small-caps;
+	letter-spacing: 1px;	
 	cursor: pointer;
 }
 

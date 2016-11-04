@@ -10,7 +10,6 @@ dddApp.service('loginService', function () {
         if (login == null)
         {
             $("#"+labelid).text(logintext.login.text);
-            // $("#"+avatarlabelid).text("");
             if (action)
                 location = "/login";
         }
@@ -25,7 +24,7 @@ dddApp.service('loginService', function () {
             }
             else
             {
-                $("#"+labelid).html(login.screenname+"<br /> "+logintext.logoff.text);
+                $("#"+labelid).html(logintext.logoff.text);
             }
         } 
 
