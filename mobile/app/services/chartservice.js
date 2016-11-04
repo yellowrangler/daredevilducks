@@ -45,7 +45,11 @@ dddAppMobile.service('chartService', function () {
         {  
             title :  "Two Teams Offense Defense Stats Game Week - Line",
             id : "7"
-        }
+        },
+        {  
+            title :  "Team Offense Defense Stats All Weeks - Bar",
+            id : "8"
+        },
     ];
 
 });
