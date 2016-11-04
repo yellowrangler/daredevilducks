@@ -52,7 +52,7 @@ controllers.teamstandingsController = function ($scope, $http, $location, $windo
     }
 }
 
-controllers.teamstatschartsController = function ($scope, $http, $location, teamsFactory, membersFactory, nflTeamsService, chartService, loginService) {
+controllers.teamstatschartsController = function ($scope, $http, $location, $window, teamsFactory, membersFactory, nflTeamsService, chartService, loginService) {
 
     function displayChart() 
     {
@@ -1063,6 +1063,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
             .error( function(edata) {
                 alert(edata);
             });     
+
+        $window.scrollTo(0, 0);
     };
 
     $scope.getTeamStatsCharts = function() {
