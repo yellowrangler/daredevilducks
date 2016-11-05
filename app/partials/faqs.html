@@ -9,11 +9,11 @@
   <div class="col-md-4">&nbsp;</div>
 </div> <!-- end of row -->
 
-<div class="pageStandardOffset row">
+<div style="padding-bottom:45px;" class="pageStandardOffset row">
   <div class="col-md-1">
       &nbsp;
     </div>
-    <div class="col-md-10">
+    <div id="faqInfoItems" name="faqInfoItems" class="col-md-10">
       <div class="panel-group" id="accordion">
 
         <div class="panel panel-default">
@@ -172,6 +172,117 @@
               </p>
             </div>
           </div>
+        </div> <!-- end of panel -->
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a style="text-decoration:none;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTen">
+                I don't understand the weekly Power rankings and the Team Offense/Defense stats?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTen" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>
+                  This Information displays the Rankings for the team selected, for each week.
+                  </p>
+
+                <p>The Power Rankings are determined by ESPN's Power Panel (group of 80+ Writers, Editors & TV Personalities) prior to the week’s games.</p>
+
+                <p>Offensive Rankings are based on the highest to lowest Average of Yards Gained by each Team.</p>
+
+                <p>Defensive Rankings are based on the lowest to highest Average of Yards Gained by the Team’s Opponents.</p>
+
+                <p>The Offensive & Defensive Statistical Data is provided by SportsDirect Inc. via Team Rankings, LLC .  They are for the previous week’s game.</p>  
+
+                <p>Hopefully this gives you a better idea of how to select the winning team for each game.</p>
+                </div>
+              </div>
+
+              <div style="padding-top:30px;" >
+                <table class="table TeamWeeklyRankingsInfoTable">
+
+                  <tr>
+                    <td class="miscText">Week</td>
+                    <td class="miscData">Week that the statistics were created from.</td>
+                  </tr>
+
+                  <tr>
+                    <td class="miscText">Team's</td>
+                    <td class="miscData">Team's Name who played the Game. Team in <span class="teamSelected">Red</span> is the team you selected.</td>
+                  </tr>
+
+                  <tr>
+                    <td class="miscText">Score</td>
+                    <td class="miscData">Score of that Team had per Game. The score in <span class="teamWon">Green</span> is the winning score.</td>
+                  </tr>
+
+                  <tr>
+                    <td class="miscText">W</td>
+                    <td class="miscData">Wins for the Team that played the Game. 
+                  </tr>
+
+                  <tr>
+                    <td class="miscText">L</td>
+                    <td class="miscData">Losses for the Team that played the Game. 
+                  </tr>
+
+                  <tr>
+                    <td class="miscText">T</td>
+                    <td class="miscData">Ties for the Team that played the Game. 
+                  </tr>
+
+                  <tr>
+                    <td class="powerRankingText" >Power Rank</td>
+                    <td class="miscData">Power Ranking lists all 32 NFL teams from #1 through #32 determined by ESPN's Power Panel (group of 80+ Writers, Editors & TV Personalities) prior to the week’s games. 
+                  </tr>
+
+                  <tr>
+                    <td class="offenceText">Over All</td>
+                    <td class="miscData">OverAll Offense Ranking the Team that has the highest avg Yards Gained per game. 
+                  </tr>
+
+                  <tr>
+                    <td class="offenceText">Score</td>
+                    <td class="miscData">Offense Scoring Rank = Team with the highest avg of Points Gained per game. 
+                  </tr>
+
+                  <tr>
+                    <td class="offenceText">Pass</td>
+                    <td class="miscData">Offense Passing Rank = Team with the highest avg Pass Yards Gained per game. 
+                  </tr>
+
+                  <tr>
+                    <td class="offenceText">Rush</td>
+                    <td class="miscData">Offense Rushing Rank = Team with the highest avg Rush Yards Gained per Game.
+                  </tr>
+
+                  <tr>
+                    <td class="defenceText">Over All</td>
+                    <td class="miscData">OverAll Defense Rank = Team that has the lowest Opponent Yards Gained per game. 
+                  </tr>
+
+                  <tr>
+                    <td class="defenceText">Score</td>
+                    <td class="miscData">Defense Scoring Rank = Team with the lowest avg of Points Allowed per Opponent. 
+                  </tr>
+
+                  <tr>
+                    <td class="defenceText">Pass</td>
+                    <td class="miscData">Defense Passing Rank = Team with the lowest avg Pass Yards Gained per Opponent. 
+                  </tr>
+
+                  <tr>
+                    <td class="defenceText">Run</td>
+                    <td class="miscData">Defense Rush Rank = Team with the lowest avg Rush Yards Gained per Opponent. 
+                  </tr>
+                </table>              
+              </div> <!-- end of padding -->
+
+            </div> <!-- end of panel body -->
         </div> <!-- end of panel -->
 
       </div> <!-- end of panel group -->
