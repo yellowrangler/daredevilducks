@@ -677,6 +677,12 @@ border: 0 none;
 	padding-right:15px;
 }
 
+.verticalFieldOffset {
+	padding-left:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
 .objectOffset {
 	padding-top:15px;
 	padding-bottom:15px;
