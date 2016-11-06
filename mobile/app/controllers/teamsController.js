@@ -210,12 +210,12 @@ controllers.teamstatschartsController = function ($scope, $http, $location, $win
 
             case "8":
                 $scope.current.showteama = true;
-                $scope.current.showteamb = true;  
+                $scope.current.showteamb = false;  
                 $scope.current.showlinechart = false;
                 $scope.current.showbarchart = false; 
 
-                $scope.current.teama = "1";
-                $scope.current.teamb = "2";
+                $scope.current.teama = " ";
+                $scope.current.teamb = " ";
 
                 $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The team you pick will have a bar chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
                 break;             
