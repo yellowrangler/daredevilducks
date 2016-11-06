@@ -114,7 +114,7 @@ if (!$sql_result)
 $powerrankingsteams = array();
 $powerrankingsweeks = array();
 while($r = mysql_fetch_assoc($sql_result)) {
-    $powerrankingsteams[] = 32 - $r[powerranking];
+    $powerrankingsteams[] = 33 - $r[powerranking];
     $powerrankingsweeks[] = "Week " . $r[week];
 }
 

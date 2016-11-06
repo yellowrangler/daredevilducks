@@ -21,20 +21,146 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         return status;
     }
 
-    function getTeamStats (hometeamid,awayteamid,gamenbr)
+    function drawChart6() 
     {
-        var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
-        teamsFactory.getTeamStandingsDialog(q)
-            .success( function(data) {
-                $scope.teamstat = data; 
+        var series1 = $scope.current.hometeamname;
+        var series2 = $scope.current.awayteamname;
 
-                $('#teamStatsDialogModalTitle').text("Team Stats");
-                $('#teamStatsDialogModalBody').html(data);
-                $('#teamStatsDialogModal').modal();
-            })
+        var labels1 = "Off All";
+        var labels2 = "Off Score";
+        var labels3 = "Off Pass";
+        var labels4 = "Off Rush";
+        var labels5 = "Def All";
+        var labels6 = "Def Score";
+        var labels7 = "Def Pass";
+        var labels8 = "Def Rush";
+
+        $scope.labels = [labels1,labels2,labels3,labels4,labels5,labels6,labels7,labels8];
+        
+        $scope.series = [series1,series2];
+
+        $scope.data = [
+                        [$scope.teamApot,
+                        $scope.teamApos,
+                        $scope.teamApop,
+                        $scope.teamApor,
+                        $scope.teamApdt,
+                        $scope.teamApds,
+                        $scope.teamApdp,
+                        $scope.teamApdr
+                        ],
+                        [
+                        $scope.teamBpot,
+                        $scope.teamBpos,
+                        $scope.teamBpop,
+                        $scope.teamBpor,
+                        $scope.teamBpdt,
+                        $scope.teamBpds,
+                        $scope.teamBpdp,
+                        $scope.teamBpdr
+                        ]
+                    ];
+
+        $scope.colors = [
+            {
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            },
+            {
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            }];   
+
+        // $scope.datasetOverride = [
+        //         { 
+        //             yAxisID: 'Power-Rankings' 
+        //         }
+        //     ];
+
+        $scope.options = {
+            legend: { display: true },
+            scales: {
+              yAxes: [
+                {
+                  id: 'Power-Rankings',
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  ticks: {
+                    max:32,
+                    min:0
+                  }
+                  
+                }
+              ]
+            }
+        };
+    }
+
+    function getTeamStats (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
+    {
+        $scope.current.hometeamname = hometeamname;
+        $scope.current.awayteamname = awayteamname;
+
+        var q = "teamid="+hometeamid+"&season="+$scope.current.season;
+        teamsFactory.getTeamsStatsCurrentWeek(q)
+            .success( function(data) {
+                $scope.teamApot = data[0]; 
+                $scope.teamApos = data[1]; 
+                $scope.teamApop = data[2]; 
+                $scope.teamApor = data[3]; 
+                $scope.teamApdt = data[4]; 
+                $scope.teamApds = data[5]; 
+                $scope.teamApdp = data[6]; 
+                $scope.teamApdr = data[7]; 
+
+                var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+                teamsFactory.getTeamsStatsCurrentWeek(q)
+                    .success( function(data) {
+                        $scope.teamBpot = data[0]; 
+                        $scope.teamBpos = data[1]; 
+                        $scope.teamBpop = data[2]; 
+                        $scope.teamBpor = data[3]; 
+                        $scope.teamBpdt = data[4]; 
+                        $scope.teamBpds = data[5]; 
+                        $scope.teamBpdp = data[6]; 
+                        $scope.teamBpdr = data[7];  
+
+                        drawChart6(); 
+
+                        var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
+                        teamsFactory.getTeamStandingsDialog(q)
+                            .success( function(data) {
+                                $scope.teamstats = data[0]; 
+
+                                // $scope.teamstat = "";
+
+                                $('#teamStatsDialogModalTitle').text("Team Stats");
+                                // $('#teamStatsDialogModalBody').html(data);
+                                $('#teamStatsDialogModal').modal();
+
+                                $('#teamStatsDialogModal').on('shown.bs.modal', function() {
+                                    
+                                })
+
+                                
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });  
+                })
             .error( function(edata) {
                 alert(edata);
-            });  
+            });   
+                          
     }
 
     //
@@ -55,7 +181,9 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         {
             if (gamestatus == "expired")
             {
-                alert ("Game is alerady underway!");
+                // new code
+                $scope.$parent.showAlert("Too Late!", "Game is alerady underway!");
+                // alert ("Game is alerady underway!");
 
                 return;
             }
@@ -64,10 +192,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         if (teamtype =='home')
         {
             $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
-            // $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
+            $("#"+hometeamicon).addClass("teamSelected").removeClass("teamNotSelected");
 
             $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
-            // $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");            
+            $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");            
 
             $("#"+hometeamfieldid).val(hometeamid);
             $("#"+hometeamfieldid).prop("disabled", false);
@@ -78,10 +206,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         else if (teamtype =='away')
         {
             $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
-            // $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
 
             $("#"+awayteamname).addClass("teamSelected").removeClass("teamNotSelected");
-            // $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
+            $("#"+awayteamicon).addClass("teamSelected").removeClass("teamNotSelected");
 
 
             $("#"+hometeamfieldid).val(0);
@@ -94,10 +222,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         else
         {
             $("#"+hometeamname).addClass("teamNotSelected").removeClass("teamSelected");
-            // $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+hometeamicon).addClass("teamNotSelected").removeClass("teamSelected");
 
             $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
-            // $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
+            $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
         }
     }
 
@@ -231,7 +359,6 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         $("#saveGames").hide();
         $("#saveGamesBottom").hide();
 
-
         //
         // loop through all radio fields and count 
         //
@@ -309,6 +436,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                         $("#saveGames").show();
                         $("#saveGamesBottom").show();
                         }, 10000);
+                    
+
                 })
                 .error( function(edata) {
                     alert(edata);
@@ -320,17 +449,15 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
     init();
     function init() {
         $scope.current = {};
-        $scope.teamstat = {};
-        //
-        // this is not getting called at right time for definig top offset 
-        // in jquery ready. So adding it here
-        //
-
+        $scope.teamstats = {};
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+                
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -397,7 +524,6 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
             .error( function(edata) {
                 alert(edata);
             }); 
-     
     };
 
     $scope.check4ExpiredGameSelections = function(data) 
@@ -438,8 +564,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamselected);
     }
 
-    $scope.getTeamStats = function (hometeamid,awayteamid,gamenbr) {
-        getTeamStats(hometeamid,awayteamid,gamenbr);
+    $scope.getTeamStats = function (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
+        getTeamStats(hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
     }
     
 }

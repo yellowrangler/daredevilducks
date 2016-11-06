@@ -294,7 +294,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = "1";
                 $scope.current.teamb = "2";
 
-                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse power rankings</span>. The two teams you pick will have a line chart built so you can compare the teams relatuve merits. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took the power rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the charted value the better the team ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse power rankings</span>. The two teams you pick will have a line chart built so you can compare the teams relative merits. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took the power rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the charted value the better the team ranking</span>; the lower the worse! </p>";
                 break;
 
             case "2":
@@ -306,7 +306,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = " ";
                 $scope.current.teamb = " ";
 
-                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The team you pick will have a line chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The team you pick will have a line chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
                 break; 
 
             case "3":
@@ -318,7 +318,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = "1";
                 $scope.current.teamb = "2";
 
-                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse power rankings</span>. The two teams you pick will have a bar chart built so you can compare the teams relatuve merits. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took the power rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the charted value the better the team ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse power rankings</span>. The two teams you pick will have a bar chart built so you can compare the teams relative merits. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took the power rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the charted value the better the team ranking</span>; the lower the worse! </p>";
                 break;   
 
             case "4":
@@ -330,7 +330,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = " ";
                 $scope.current.teamb = " ";
 
-                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive rankings</span>. The team you pick will have a bar chart built to show how its offensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive rankings</span>. The team you pick will have a bar chart built to show how its offensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
                 break;       
                 
             case "5":
@@ -342,7 +342,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = " ";
                 $scope.current.teamb = " ";
 
-                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse defensive rankings</span>. The team you pick will have a bar chart built to show how its defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse defensive rankings</span>. The team you pick will have a bar chart built to show how its defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
                 break; 
 
             case "6":
@@ -354,7 +354,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = "1";
                 $scope.current.teamb = "2";
 
-                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The teams you pick will have a bar chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing for the current week. In this way you can compare the relative merits of the two teams. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that the higher <span display='color:red;font-weight:800;'>the line the better the ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The teams you pick will have a bar chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing for the current week. In this way you can compare the relative merits of the two teams. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that the higher <span display='color:red;font-weight:800;'>the line the better the ranking</span>; the lower the worse! </p>";
                 break; 
 
             case "7":
@@ -366,7 +366,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = "1";
                 $scope.current.teamb = "2";
 
-                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The teams you pick will have a line chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing for the current week. In this way you can compare the relative merits of the two teams. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that the higher <span display='color:red;font-weight:800;'>the line the better the ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The teams you pick will have a line chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing for the current week. In this way you can compare the relative merits of the two teams. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that the higher <span display='color:red;font-weight:800;'>the line the better the ranking</span>; the lower the worse! </p>";
                 break;      
 
             case "8":
@@ -378,7 +378,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.teama = " ";
                 $scope.current.teamb = " ";
 
-                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The team you pick will have a bar chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 32 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
+                $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The team you pick will have a bar chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
                 break;             
                     
             default:
@@ -712,9 +712,9 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                   position: 'left',
                   ticks: {
                     max:32,
-                    min:0
+                    min:0,
+                    // reverse: true,
                   }
-                  
                 }
               ]
             }
@@ -832,7 +832,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                   position: 'left',
                   ticks: {
                     max:32,
-                    min:0
+                    min:0,
+                    // reverse: true,
                   }
                   
                 }

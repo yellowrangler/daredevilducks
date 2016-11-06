@@ -130,15 +130,15 @@ $pdp = array();
 $pdr = array();
 
 $r = mysql_fetch_assoc($sql_result);
-$pot = 32 - $r[pot];
-$pos = 32 - $r[pos];
-$pop = 32 - $r[pop];
-$por = 32 - $r[por];
+$pot = 33 - $r[pot];
+$pos = 33 - $r[pos];
+$pop = 33 - $r[pop];
+$por = 33 - $r[por];
 
-$pdt = 32 - $r[pdt];
-$pds = 32 - $r[pds];
-$pdp = 32 - $r[pdp];
-$pdr = 32 - $r[pdr];
+$pdt = 33 - $r[pdt];
+$pds = 33 - $r[pds];
+$pdp = 33 - $r[pdp];
+$pdr = 33 - $r[pdr];
 
 
 $returnArray = array();
