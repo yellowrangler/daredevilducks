@@ -17,14 +17,9 @@ controllers.teamstandingsController = function ($scope, $http, $location, $windo
 
     init();
     function init() {
-        //
-        // this is not getting called at right time for definig top offset 
-        // in jquery ready. So adding it here
-        //
-
-        var navButtons = $('#navbarButtonsStandings');
-        navButtons.on('show.bs.collapse','.collapse', function() {
-                navButtons.find('.collapse.in').collapse('hide');
+        var teamStandingsCollapse = $('#teamStandingsCollapse');
+        teamStandingsCollapse.on('show.bs.collapse','.collapse', function() {
+                teamStandingsCollapse.find('.collapse.in').collapse('hide');
 
                 $window.scrollTo(0, 0);
             });
