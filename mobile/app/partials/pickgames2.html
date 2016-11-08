@@ -42,47 +42,55 @@
 </div> <!-- end of row -->
 
 <div style="padding-left:25px;" class="pageStandardOffset">
-	<div class="pickTeamsList" ng-repeat="game in games">
-		<div class="pickTeamsPair" >
-			<div style="padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row" >
-				<div style="display:inline-block;line-height:50px;"  class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id='pickh_{{game.gamenbr}}_icon'>
-				    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
-				
-					<img style="display:inline-block;cursor:pointer;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
-				</div>
+	<div class="row">
+		<div class="pickTeamsList" ng-repeat="game in games">
+			<div class="pickTeamsPair" >
+				<div style="padding-top:3px;padding-bottom:2px;padding-right:3px;padding-left:3px;" class="row" >
+					<div style="display:inline-block;line-height:50px;"  class="col-xs-3 col-sm-2 col-md-2 col-lg-2" id='pickh_{{game.gamenbr}}_icon'>
+					    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
+					
+						<img style="display:inline-block;cursor:pointer;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+					</div>
 
-				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-7 col-sm-7 col-md-7 col-lg-7" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
-					<span class="left-column-text">{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)</span>
-				</div>
-				
-				<div style="display:inline-block;line-height:50px;"  class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">
-					<span class="center-column-text">{{game.hometeamscore}}</span>
-				</div>
-			</div> <!-- end of row -->
+					<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-7 col-sm-8 col-md-8 col-lg-8" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
+						<span class="left-column-text">{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)</span>
+					</div>
+					
+					<div style="display:inline-block;line-height:50px;"  class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">
+						<span class="center-column-text">{{game.hometeamscore}}</span>
+					</div>
+				</div> <!-- end of row -->
 
-			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row">
-				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-3 col-sm-3 col-md-3 col-lg-3" id='picka_{{game.gamenbr}}_icon' >
-				    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
-				
-					<img style="display:inline;cursor:pointer;line-height:50px;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
-				</div>
+				<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;padding-left:3px;" class="row">
+					<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2" id='picka_{{game.gamenbr}}_icon' >
+					    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
+					
+						<img style="display:inline;cursor:pointer;line-height:50px;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+					</div>
 
-				<div style="display:inline-block;line-height:50px;"  class="left-column-text col-xs-7 col-sm-7 col-md-7 col-lg-7" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
-					<span class="left-column-text">{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)</span>
-				</div>
+					<div style="display:inline-block;line-height:50px;"  class="left-column-text col-xs-7 col-sm-8 col-md-8 col-lg-8" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
+						<span class="left-column-text">{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)</span>
+					</div>
 
-				<div style="display:inline-block;line-height:50px;" class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">
-					<span class="center-column-text">{{game.awayteamscore}}</span>
-				</div>
-			</div> <!-- end of row -->
+					<div style="display:inline-block;line-height:50px;" class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">
+						<span class="center-column-text">{{game.awayteamscore}}</span>
+					</div>
+				</div> <!-- end of row -->
 
-		</div>	<!-- end of pickTeamsPair -->
+			</div>	<!-- end of pickTeamsPair -->
 
-		<hr>
+			<hr>
 
-	</div> <!-- end of pickTeamsList -->
+		</div> <!-- end of pickTeamsList -->
+	</div> <!-- end of row -->
 
-	<div ng-if="byegames.length" class="pageStandardOffset">
+	<div style="padding-top:15px; padding-bottom:20px;" class="row">
+		<div class="col-md-offset-1  col-md-11">
+			<button style="width:80%;font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block center-block" ng-click="saveGames()" id="saveGamesBottom" name="saveGamesBottom">Save Picks</button>
+		</div><!-- end of col 12 -->
+	</div> <!-- end of row -->
+
+	<div ng-if="byegames.length" class="row">
 		<div>
 			<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="../img/pickteamsbye.png">
 		</div> <!-- end of div img -->
@@ -113,12 +121,6 @@
 	</div> <!-- end of row -->
 
 </div> <!-- end of pageStandardOffset -->
-
-<div style="padding-top:15px; padding-bottom:20px;" class="row">
-	<div class="col-md-offset-1  col-md-11">
-		<button style="width:80%;font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block center-block" ng-click="saveGames()" id="saveGamesBottom" name="saveGamesBottom">Save Picks</button>
-	</div><!-- end of col 12 -->
-</div> <!-- end of row -->
 </form>
 
 <!-- dialogs -->
@@ -253,7 +255,7 @@
 			<tr>
 				<td colspan=4 >
 					<canvas id='bar' 
-					height="250"
+					height="200"
 					class='chart chart-bar'
 					chart-data='data' 
 					chart-labels='labels' 
