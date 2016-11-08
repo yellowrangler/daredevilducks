@@ -62,6 +62,30 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
 
     init();
     function init() {
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
+
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -182,6 +206,30 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
 
     init();
     function init() {
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
+        
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -301,6 +349,30 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
     init();
     function init() {
         $scope.current = {};
+
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
 
         //
         // this is not getting called at right time for definig top offset 
