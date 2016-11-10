@@ -52,7 +52,7 @@
 						<img style="display:inline-block;cursor:pointer;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
 					</div>
 
-					<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-7 col-sm-8 col-md-8 col-lg-8" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
+					<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-7 col-sm-8 col-md-8 col-lg-8" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
 						<span class="left-column-text">{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)</span>
 					</div>
 					
