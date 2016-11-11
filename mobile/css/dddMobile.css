@@ -564,6 +564,14 @@ border: 0 none;
     border-width: 1px;
 }
 
+.pickTeamsPickPair {
+	font-size: 18px;
+	font-weight: 700;
+	font-variant: small-caps;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .pickTeamsPair {
 	font-size: 14px;
 	font-weight: 700;
@@ -571,7 +579,6 @@ border: 0 none;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
 .teamTitleDiv {
 	color:white;
 	padding-left:10px;
