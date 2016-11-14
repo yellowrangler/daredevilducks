@@ -72,6 +72,12 @@
 	border:1px solid maroon;
 }
 
+.gameDateTime {
+	background-color: teal;
+	color:white;
+	border:1px solid teal;
+}
+
 .teamNotSelected  {
 	background-color: white;
 	color:black; 
@@ -573,7 +579,7 @@ border: 0 none;
 }
 
 .pickTeamsPair {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 700;
 	font-variant: small-caps;
     padding-top: 5px;

@@ -171,8 +171,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                   display: true,
                   position: 'left',
                   ticks: {
-                    max:32,
-                    min:0
+                    display: false 
                   }
                   
                 }

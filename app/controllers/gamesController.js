@@ -76,7 +76,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                 {
                   id: 'Power-Rankings',
                   type: 'linear',
-                  display: true,
+                  display: false,
                   position: 'left',
                   ticks: {
                     max:32,
@@ -159,8 +159,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                   display: true,
                   position: 'left',
                   ticks: {
-                    max:32,
-                    min:0
+                    display: false 
                   }
                   
                 }
@@ -703,6 +702,30 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
     init();
     function init() {
         $scope.current = {};
+
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
  
         //
         // this is not getting called at right time for definig top offset 
@@ -820,6 +843,30 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
     init();
     function init() {
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
+        
         $scope.current = {};
 
         //
