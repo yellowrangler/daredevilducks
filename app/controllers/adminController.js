@@ -1345,27 +1345,19 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     function geteDynamiceMailTemplate(template)
     {
-        teamsFactory.getCurrentSeasonWeek()
+        var gametype = 2;
+        var q = "week="+$scope.current.weekOverride+"&season="+$scope.current.season+"&gametype="+gametype+"&template="+template;
+        membersFactory.buildeMailTemplate(q)
             .success( function(data) {
-                $scope.current.season = data.season; 
-                $scope.current.week = data.week;
-                var gametype = 2;
-                var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&gametype="+gametype+"&template="+template;
-                membersFactory.buildeMailTemplate(q)
-                    .success( function(data) {
-                        var title = data.split("\n")[0];
-                        $("#emailsubject").val(title);
+                var title = data.split("\n")[0];
+                $("#emailsubject").val(title);
 
-                        var body = data.replace(title+"\n","");
-                        $("#emailmessage").val(body);
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    })
-                })
+                var body = data.replace(title+"\n","");
+                $("#emailmessage").val(body);
+            })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            })
 
     }
 
@@ -1442,6 +1434,17 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         setviewpadding();
 
         $scope.emailtemplates = selectListService.getList('emt');
+
+        teamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
+
+                $scope.current.weekOverride = $scope.current.week;
+                })
+            .error( function(edata) {
+                alert(edata);
+            }); 
 
         membersFactory.getMembers()
             .success( function(data) {

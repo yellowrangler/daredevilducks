@@ -99,6 +99,11 @@
                 <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate.url}}">{{emailtemplate.title}}</option>
               </select>
           </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="weekOverride" class="control-label">Week Override</label>
+              <input type="weekOverride" class="form-control" ng-model="current.weekOverride" id="weekOverride" name="weekOverride">
+          </div> <!-- end of form-group -->
         </form>  
       </div> <!-- end of panel body -->
     </div> <!-- end of panel -->  
@@ -106,6 +111,8 @@
     <div class="panel panel-info">
 
       <div class="panel-body">
+        <p style="padding-10px;color:red; font-size:16px;">Week Override MUST be set before selecting template!</p>
+
         <p style="padding-10px;color:teal; font-size:16px;">Please rember that the eMail Message is rendered in html and therefore requires html tags to do things like carrige returns, font color etc.</p>
       </div> <!-- end of panel body -->
     </div> <!-- end of panel -->  
