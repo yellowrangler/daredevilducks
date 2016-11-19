@@ -46,6 +46,21 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
     }
 }
 
+controllers.teamdiscoveryController = function ($scope, $http, $log, $location, nflTeamsService) {
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset 
+        // in jquery ready. So adding it here
+        //
+
+        $scope.teams = nflTeamsService.getNFLTeams(); 
+
+  }
+
+}
+
 controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTeamsService, teamsFactory) {
     $scope.current = {};
 
