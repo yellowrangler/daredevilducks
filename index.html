@@ -75,7 +75,7 @@
 </head>
 <body style="background:white;" data-ng-controller="dddParentController" >
 
-<nav id="nav-bar-menu-bar" role="navigation" class="customNavbar navbar navbar-default fixed">
+<nav style="display:block;" id="nav-bar-menu-bar-tall" role="navigation" class="customNavbar navbar navbar-default fixed">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div id="navBarHeader" class="navbar-header">
@@ -91,7 +91,7 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
     		<ul style="padding-top:7px;" class="nav navbar-nav">
                 <li class="menuItems"><a class="collapsableNavbar" href="#/home">
-                <img style="vertical-align:middle;height:95px;padding-right:25px;" class="" src="img/ddd-Jess.png">
+                <img style="vertical-align:middle;height:95px;padding-right:25px;" class="" src="img/ddd-Jess-small.png">
                 </a></li>
             </ul>
 
@@ -179,6 +179,126 @@
                     </a>
                     <br />
                     <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
+                    </div>
+                </li>
+            </ul>
+        </div> <!-- end of navbar  -->
+    </div> <!-- end of container fluid -->            
+</nav>
+
+<nav style="display:none;"  id="nav-bar-menu-bar-short" role="navigation" class="navbar collapsableNavbarShortOverride fixed">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div id="navBarHeader" class="navbar-header">
+          <button id="navBarButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>  
+          
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse collapsableNavbarShortOverride">
+            <ul class="nav navbar-nav collapsableNavbarShortOverride">
+                <li class="menuItems ">
+                    <a class="collapsableNavbar" href="#/home">
+                    <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/ddd-Jess-small.png"><span style="padding-left:5px;">Home</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/games-mobile.png"><span style="padding-left:5px;">Games</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="collapsableNavbar" href="#/pickgames">Pick Your Teams</a></li>
+                      <!--   <li id="admintestpickgames"><a href="#/pickgames2">Pick Your Teams 2</a></li> -->
+                        <li><a class="collapsableNavbar" href="#/viewselectpickgames">Player's picks for week</a></li>
+                        <li><a class="collapsableNavbar" href="#/viewtotalpickgames">Player Picks for week by Team</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/memberstats-mobile.png"><span style="padding-left:5px;">Player Stats</span>
+                   
+                        <b class="caret"></b>
+                    </a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="collapsableNavbar" href="#/playerstatstotalwins">Total Wins Leaders</a></li>
+                        <li><a class="collapsableNavbar" href="#/playerstatstotalpercentage">Total Percentage Leaders</a></li>
+                        <li><a class="collapsableNavbar" href="#/playerstatsmemberweekly">Weekly Totals Leaders</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/team-mobile.png"><span style="padding-left:5px;">Teams
+                        <b class="caret"></b>
+                    </a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="collapsableNavbar" href="#/teamstandings">Team Standings</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamweeklyranking">Team Weekly Ranking</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamstatscharts">Team Stats Charts</a></li>
+                        <li id="adminplayoffstandings"><a class="collapsableNavbar" href="#/playoffstandings">Team Playoff Brackets</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a class="collapsableNavbar" href="http://www.nfl.com/scores" target="_blank">Current Scores</a></li>
+                        <li id="adminnflnews"><a class="collapsableNavbar" href="#/nflnews">NFL Headlines</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamdiscovery">Team Discovery</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="menuItems">
+                    <a class="collapsableNavbar " href="#/halloffame">
+                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/halloffame-mobile.png"><span style="padding-left:15px;">Hall of Fame</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul id="adminselect" class="nav navbar-nav">
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/admin-mobile.png"><span style="padding-left:15px;">Administration</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="collapsableNavbar" href="#/teaminfo">Team Information</a></li>
+                        <li><a class="collapsableNavbar" href="#/teamseasoninfo">Team Season Information</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a class="collapsableNavbar" href="#/gameinfo">Game Day Informtion</a></li>
+                        <li><a class="collapsableNavbar" href="#/gameranking">Game Week Ranking </a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a class="collapsableNavbar" href="#/addmember">Player Add</a></li>
+                        <li><a class="collapsableNavbar" href="#/updatemember">Player Manage</a></li>
+                        <li><a class="collapsableNavbar" href="#/addavatar">Player Avatar</a></li>
+                        <li><a class="collapsableNavbar" href="#/sendplayeremail">Player(s) eMail</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a class="collapsableNavbar" href="#/addmembergroup">Group Add</a></li>
+                        <li><a class="collapsableNavbar" href="#/updatemembergroup">Group Manage</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a class="collapsableNavbar" href="#/weeklyscripts">System Scripts</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul  class="nav navbar-nav pull-right" >
+                <li style="text-align:center;padding-top:28px;padding-right:20px;">
+                    <div>
+                    <a id="menubaravatarimage" name="menubaravatarimage" style="color:crimson;text-decoration:none;font-weight:bold;" class="collapsableNavbar" href="#/memberupdatemember">
+                        {{memberscreenname}}
+                    </a>
+                    <br />
+                    <span id="menubaravatar" name="menubaravatar"></span>
                     </div>
                 </li>
             </ul>

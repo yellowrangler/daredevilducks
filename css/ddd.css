@@ -15,6 +15,24 @@
    /*background: rgba(240, 255, 255, 0.2);*/
 }
 
+.customNavbarShort {
+  /* background-color: transparent;
+   background: transparent;
+   border-color: transparent;*/
+   opacity: .99;
+   background: #5bb5b1;
+   color:#FFFF99;
+}
+
+.collapsableNavbarShortOverride {
+	background: #e7e7e7;
+	color:maroon;
+}
+
+.collapsableNavbarShortOverride :hover {
+	color:maroon;
+}
+
 /*.sticky {
 	 position: fixed;
 	 width: 100%;

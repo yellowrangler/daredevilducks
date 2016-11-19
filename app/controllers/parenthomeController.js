@@ -22,27 +22,33 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         $scope.memberavatar = loginService.getMemberAvatar();
     }
 
+    function getScreenName()
+    {
+        $scope.memberscreenname = loginService.getMemberScreenname();
+    }
+
     init();
     function init() {
         $scope.current = {};
+        $scope.bigNavbar = true;
 
         var ua = getUserAgent();
         $scope.current.devicename = ua.deviceName; 
         $scope.current.devicetype = ua.deviceType;   
 
         $scope.mobileDevice = isMobile();
-        if ($scope.mobileDevice)
-        {
-            // alert ("Is Mobile");
+        // if ($scope.mobileDevice)
+        // {
+        //     // alert ("Is Mobile");
 
-            $(".collapsableNavbar").click(function(event) {
-              $(".navbar-collapse").collapse('hide');
-              setviewpadding();
-            });
+        //     $(".collapsableNavbar").click(function(event) {
+        //       $(".navbar-collapse").collapse('hide');
+        //       setviewpadding();
+        //     });
 
-            $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav").removeClass("img-responsive");
-            $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
-        }
+        //     $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav").removeClass("img-responsive");
+        //     $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
+        // }
        
         //
         // this is not getting called at right time for definig top offset 
@@ -50,7 +56,29 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         //
         setviewpadding();
 
+        $(window).scroll(function() {  
+
+            var windowCurrentPos = $(window).scrollTop();
+            var viewTopPos = $('#ddd-view').offset().top;
+
+            
+            if (windowCurrentPos >= 100) 
+            {
+                $("#nav-bar-menu-bar-tall").hide();
+                $("#nav-bar-menu-bar-short").show();
+                
+            } 
+            else 
+            {
+                $("#nav-bar-menu-bar-short").hide();
+                $("#nav-bar-menu-bar-tall").show();
+            }
+        });
+
+
         getAvatar();
+        getScreenName();
+
         loginService.setAvatarLabel("menubaravatar",0);
         var route = loginService.setLoginLogoffLabel("menubarlogin",0);
 

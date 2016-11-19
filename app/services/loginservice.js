@@ -93,6 +93,19 @@ dddApp.service('loginService', function () {
         return memberavatar;
     }
 
+    this.getMemberScreenname = function() {
+        var memberscreenname = "";
+        var login = "";
+
+        var login = this.getLogin();
+        if (login != null)
+        {
+            var memberscreenname = login.screenname;
+        }
+
+        return memberscreenname;
+    }
+
     this.getEmptyLogin = function() {
         var login = emptyLogin;
 
