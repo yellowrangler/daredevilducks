@@ -45,30 +45,35 @@ $DBpassword = "tarryc";
 $dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
 if (!$dbConn) 
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team member pick list information.");
+  $log = new ErrorLog("logs/");
+  $dberr = mysql_error();
+  $log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team member pick list information.");
 
-	$rv = "";
-	exit($rv);
+  $rv = "";
+  exit($rv);
 }
 
 if (!mysql_select_db($DBschema, $dbConn)) 
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team member pick list information.");
+  $log = new ErrorLog("logs/");
+  $dberr = mysql_error();
+  $log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team member pick list information.");
 
-	$rv = "";
-	exit($rv);
+  $rv = "";
+  exit($rv);
 }
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 
-$sql = "SELECT screenname, avatar
+$sql = "SELECT screenname, 
+avatar, 
+T.name as teamname, 
+T.location as teamlocation,
+T.teamiconname as teamiconname
 FROM memberpickstbl MP
 LEFT JOIN membertbl M ON M.id = MP.memberid
+LEFT JOIN teamstbl T ON T.id = $teamid
 WHERE season = $season
 AND week = $week
 AND teamid = $teamid
@@ -93,29 +98,53 @@ if (!$sql_result)
 // var set
 $returnStr = "";
 
-// first row 
-$returnStr = $returnStr . "
-<table style='width:95%;' class='table' >
-"; 
 
 //
 // fill the array
 //
-$screenname = "test";
+$count = 1;
 $member = array();
 while($r = mysql_fetch_assoc($sql_result)) {
   $screenname = $r[screenname];
   $memberavatar = $r[avatar];
+
+  if ($count == 1)
+  {
+    $teamname = $r[teamname];
+    $teamlocation = $r[teamlocation];
+    $teamiconname = $r[teamiconname];    
+    // first row 
+    $returnStr = $returnStr . "
+    <table style='width:95%;' class='table' >
+    <tr >   
+        <td style='font-weight:bold;padding-left:1%;'>
+          <div style='text-align:center;'>
+            <img align='center' height='75' src='../img/nflicons/$teamiconname'> 
+          </div>
+        </td>                   
+        <td style='font-weight:bold;font-size:25px;padding-top:20px;'>$teamname</td> 
+    </tr>    
+    </table>  
+    "; 
+
+    // following rows 
+    $returnStr = $returnStr . "
+    <table style='width:95%;padding-top:55px;' class='table' >
+    "; 
+  }
+    
   $returnStr = $returnStr . "
-    <tr >
-    <td style='font-weight:bold;padding-left:5%;padding-top:20px;width:45%'>$screenname</td>      
-    <td>
-      <div style='text-align:center;'>
-        <img align='left' height='75' src='../img/avatars/$memberavatar'> 
-      </div>
-    </td>                   
+    <tr >    
+      <td style='padding-left:5%;'>
+        <div style='text-align:center;'>
+          <img align='right' height='75' src='../img/avatars/$memberavatar'> 
+        </div>
+      </td>  
+      <td style='font-weight:bold;padding-top:20px;width:45%'>$screenname</td>                   
   </tr>
   ";
+
+  $count = $count + 1;
 }
 
 $returnStr = $returnStr . " 

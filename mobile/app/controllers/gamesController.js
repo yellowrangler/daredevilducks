@@ -824,7 +824,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&teamid="+teamid+"&gamenbr="+gamenbr;
         teamsFactory.getMemberTeamPickListDialog(q)
             .success( function(data) {
-                $('#memberListDialogModalTitle').text("Members who picked!");
+                $('#memberListDialogModalTitle').text("Members who picked:");
                 $('#memberListDialogModalBody').html(data);
                 $('#memberListDialogModal').modal();
             })
