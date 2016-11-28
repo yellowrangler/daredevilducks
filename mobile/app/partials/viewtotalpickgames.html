@@ -44,7 +44,7 @@
 						{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)
 					</div>
 					
-					<div style="display:inline-block;line-height:50px;"  class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcounthome}}
+					<div style="display:inline-block;line-height:50px;"  class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-click="getMemberPickList(game.hometeamid,game.gamenbr)"  ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcounthome}}
 					</div>
 				</div> <!-- end of row -->
 
@@ -59,7 +59,7 @@
 					{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)
 				</div>
 
-				<div style="display:inline-block;line-height:50px;" class="center-column-text  col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcountaway}}
+				<div style="display:inline-block;line-height:50px;" class="center-column-text  col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-click="getMemberPickList(game.awayteamid,game.gamenbr)"  ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcountaway}}
 				</div>
 			</div> <!-- end of row -->
 
@@ -73,14 +73,14 @@
 </form>
 
 <!-- Dialogs -->
-<div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">
+<div class="modal fade" id="memberListDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberListDialogModalTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="memberProfileDialogModalTitle"></h4>
+        <h4 class="modal-title" id="memberListDialogModalTitle"></h4>
       </div>
-      <div class="modal-body" id="memberProfileDialogModalBody">
+      <div class="modal-body" id="memberListDialogModalBody">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

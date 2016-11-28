@@ -116,6 +116,15 @@ dddApp.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.getMemberTeamPickListDialog = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmemberteampicklistdialog.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLGametypes = function () {
         return $http({ 
             method: 'POST', 

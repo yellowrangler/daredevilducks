@@ -1266,6 +1266,20 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
             }); 
     }
 
+    function getMemberPickList(teamid,gamenbr)
+    {
+        var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&teamid="+teamid+"&gamenbr="+gamenbr;
+        teamsFactory.getMemberTeamPickListDialog(q)
+            .success( function(data) {
+                $('#memberListDialogModalTitle').text("Members who picked!");
+                $('#memberListDialogModalBody').html(data);
+                $('#memberListDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });        
+    }
+
     init();
     function init() {
         $(window).scroll(function(){
@@ -1349,6 +1363,10 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
     $scope.getTeamStats = function (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
         getTeamStats(hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
+    }
+
+    $scope.getMemberPickList = function (teamid,gamenbr) {
+        getMemberPickList(teamid,gamenbr)
     }
 
     $scope.compareScores = function (venue, homescore, awayscore) {
