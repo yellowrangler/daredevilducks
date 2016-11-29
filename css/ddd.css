@@ -33,6 +33,10 @@
 	color:maroon;
 }
 
+.collapsableNavbar {
+	padding-right:30px;
+}
+
 /*.sticky {
 	 position: fixed;
 	 width: 100%;
@@ -153,6 +157,8 @@ border: 0 none;
 .imgButtonNav {
 	width:80%; 
 	height:80%;
+	/*text-align: center;*/
+	/*padding-left:18%;*/
 }
 
 .imgButtonMobileNav {
@@ -549,8 +555,8 @@ border: 0 none;
 }
 
 .menuItems {
-	padding-top:10px;
-	padding-right:20px;
+	padding-top:0px;
+	padding-left:0px;
 	font-size: 17px;
 }
 
