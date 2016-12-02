@@ -130,6 +130,30 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
 
     init();
     function init() {
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
+        
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
         $scope.newsdetail = "";

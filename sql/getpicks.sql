@@ -58,7 +58,7 @@ WHERE id NOT IN
 AND status = 'active'
 
 
-DELETE FROM memberpickstbl WHERE season = 2016 and week = 8 and memberid = 19
+DELETE FROM memberpickstbl WHERE season = 2016 and week = 13 and memberid = 37
 
 
 
