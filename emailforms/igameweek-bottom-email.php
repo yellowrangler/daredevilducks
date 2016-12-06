@@ -9,23 +9,15 @@ $emailbottomwriteup = "<p>
 </p>
 
 <p>
-We have made a couple of changes that you should be aware of. You will need to delete your current version of daredevil ducks. You can do this by closing the browser or closing the tab. You may also need to clear your browser cache. If you are not sure on how to do this please contact me and I will walk you through it. You will know you need to do this if you are not able to get to the Player Stats!
+We had an IP address chane for the Daredevil Ducks website. What this means to you is that if you had our website book marked OR if you had your web browser open to our web page when this IP address change occured; then you may not beable to get back in. Even if you dont understand any of teh above. The solution is to delete your current Daredevil Ducks web page and start a new one typing in daredevilducks.xyz. That simple.
 </p>
 
 <p>
-<span  style='font-weight:bold; color:green;'>Player Stats now has 3 selections</span>
+<span  style='font-weight:bold; color:green;'>Login Button and Footer Changes (bottom of page)</span>
 </p>
 
 <p>
-The Player stats now has 3 selections -  Total Wins Leaders, Total Percentage Leaders, and Weekly Total Leaders, We broke the total wins and total percentage wins out from the Leader Board page inter their own pages.
-</p>
-
-<p>
-<span  style='font-weight:bold;color:green;'>We have added Player Groups</span>
-</p>
-
-<p>
-The Player stats selections -  Total Wins Leaders, Total Percentage Leaders, and Weekly Total Leaders, now has a dropdown selection called Player Groups. These groups represent a number of players. If selected, only the information for those players is returned and ranked. A great way to see how you compare to your friends, family etc! We added a few groups so that you can see how it works. But if you want to have a group of your own - send me the group name and its members and I will set it up for you.
+We moved the Donald Duck figure and addage to the right of the page. We added a button for feedback if you would like to comment on our web site (what you like/dislike or future services). The Login button on the home page will now stay and show Logoff after you login. The Logoff link on the footer will be larger so people can continue to logoff from any page if they desire. Now when you logoff you will get a dialog acknowledging that action.
 </p>
 
 <p>
