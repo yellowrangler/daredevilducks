@@ -300,12 +300,25 @@ border: 0 none;
 }
 
 .loginLink {
-	/*float:right;*/
-	color: #F5F38E;
-	font-size: 16px;
+	/*color: #ce2c3d;
+	font-size:28px;*/
 	padding-top:15px;
-/*	padding-right:15%;*/
-	text-align:center;
+	/*text-align:left;
+	text-decoration:none;
+	font-variant:small-caps;
+	letter-spacing: 2px;*/
+	cursor: pointer;
+}
+
+.loginLink a {
+	/*color: #ce2c3d;*/
+	color: NavajoWhite;
+	font-size:28px;
+	text-align:left;
+	text-decoration:none;
+	font-variant:small-caps;
+	font-weight:bold;
+	letter-spacing: 2px;
 	cursor: pointer;
 }
 
@@ -316,14 +329,6 @@ border: 0 none;
 	font-size: 16px;
 	font-variant:small-caps;
 	letter-spacing: 1px;
-}
-
-.loginLink a {
-	color: #F5F38E;
-	font-size: 16px;
-	cursor: pointer;
-	font-variant:small-caps;
-	letter-spacing: 2px;
 }
 
 .emailLink {

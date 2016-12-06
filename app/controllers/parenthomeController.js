@@ -8,12 +8,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if (role == "admin")
         {
             $("#adminselect").show();
-            // $("#adminnflnews").show();
+            $("#adminselectsmall").show();
         }
         else
         {
             $("#adminselect").hide();
-            // $("#adminnflnews").hide();
+            $("#adminselectsmall").hide();
         }  
     }
 
@@ -25,6 +25,36 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function getScreenName()
     {
         $scope.memberscreenname = loginService.getMemberScreenname();
+    }
+
+    function showAlert(title, body) {
+        $('#parentAlertModalTitle').text(title);
+        $('#parentAlertModalBody').text(body);
+        $('#parentAlertModal').modal();
+    }
+
+    function loginlogoff(request) {
+        var route = loginService.setLoginLogoffLabel("menubarlogin",1);
+        getAvatar();
+        loginService.setAvatarLabel("menubaravatar",1);
+
+        checkRole();
+        if (route != "")
+        {
+            $location.path(route);
+        }
+
+        var loggedIn = loginService.isLoggedIn();
+        if (loggedIn)
+        {
+            $("#loginHomeButton").text("Logoff");
+        }
+        else
+        {
+            $("#loginHomeButton").text("Login");
+            if (route == '/home')
+                showAlert("Success", "You are now logged off from Daredevil Ducks");
+        }
     }
 
     init();
@@ -147,16 +177,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         checkRole();  
     };         
 
-    $scope.loginlogoff = function () {
-        var route = loginService.setLoginLogoffLabel("menubarlogin",1);
-        getAvatar();
-        loginService.setAvatarLabel("menubaravatar",1);
-
-        checkRole();
-        if (route != "")
-        {
-            $location.path(route);
-        }
+    $scope.loginlogoff = function (request) {
+        loginlogoff(request);
     }
 
     // $scope.goMobile = function () {
@@ -264,10 +286,12 @@ controllers.loginController = function ($scope, $http, $location, $window, login
         if (role == "admin")
         {
             $("#adminselect").show();
+            $("#adminselectsmall").show();
         }
         else
         {
             $("#adminselect").hide();
+            $("#adminselectsmall").hide();
         }
 
         $('#iformationDialogModal').modal('hide');
@@ -291,14 +315,20 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
 
         var loggedIn = loginService.isLoggedIn();
         if (loggedIn)
-            $("#loginHomeButton").hide();
+            $("#loginHomeButton").text("Logoff");
         else
-            $("#loginHomeButton").show();
+            $("#loginHomeButton").text("Login");
       
     };
 
     $scope.homepagelogin = function () {
         $scope.$parent.loginlogoff();
+
+        var loggedIn = loginService.isLoggedIn();
+        if (loggedIn)
+            $("#loginHomeButton").text("Logoff");
+        else
+            $("#loginHomeButton").text("Login");
 
         // $route.reload();
     }

@@ -265,7 +265,7 @@
                 </li>
             </ul>
 
-            <ul id="adminselect" class="nav navbar-nav">
+            <ul id="adminselectsmall" class="nav navbar-nav">
                 <li class="menuItems dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">
                         <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/admin-mobile.png"><span style="padding-left:5px;">Administration</span>
@@ -293,12 +293,12 @@
 
             <ul  class="nav navbar-nav pull-right" >
                 <li style="text-align:center;padding-top:18px;padding-right:20px;">
-                    <div>
-                    <a id="menubaravatarimage" name="menubaravatarimage" style="color:crimson;text-decoration:none;font-weight:bold;" class="collapsableNavbar" href="#/memberupdatemember">
-                        {{memberscreenname}}
-                    </a>
-                    <br />
-                    <span id="menubaravatar" name="menubaravatar"></span>
+                    <div ng-show="memberavatar != ''" >
+                        <a id="menubaravatarimageshort" name="menubaravatarimageshort" style="color:crimson;text-decoration:none;font-weight:bold;" class="collapsableNavbar" href="#/memberupdatemember">
+                            {{memberscreenname}}
+                        </a>
+                        <br />
+                        <span id="menubaravatar" name="menubaravatar"></span>
                     </div>
                 </li>
             </ul>
@@ -311,65 +311,59 @@
 <div class="ddd-footer">
 	<div class="container-fluid" style="padding-top:15px;">
         <div class="row">
-            <div style="padding-left:15px;" class="col-md-6">
-                <div class="row">
-                    <div  class="col-md-2">
-                        <img style="height:125px;padding:15px;" src="img/ddd-small-footer.png" alt="Ha!" class="img-circle">
-                    </div>
+            <div style="padding-left:15px;padding-top:0px;" class="col-md-5">
 
-                    <div class="cold-md-offset-1 col-md-9">
-                        <h3>We subscribe to the following addadge:</h3>
-                        <h3 style="font-style:italic;">Enjoy Life and Have Fun!</h3>
+                <div style="padding-left:40px;" class="row">
+
+                    <div style="padding-left:10px;" ng-show="memberavatar != ''" class="loginLink">
+                        <a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
+                    </div> <!-- end of loginLink -->    
+
+                    <div style="padding-top:30px;padding-bottom:10px;padding-left:8px;">
+                        <a href="#/faqs"><img style="height:30px;vertical-align:top" src="img/DareDevilDuckInfoButton.png" alt="information" class="img-circle"></a>
+                        <span style="padding-left:15px;font-style:italic;font-weight:bold;font-size:22px;">Information</span>
                     </div>
+                    <div style="padding-top:5px;padding-bottom:5px;">
+                        <a href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Feedback"><img style="height:30px;vertical-align:top" src="img/feedback-ddd.png" alt="feedback" class="img-circle"></a>
+                        <span style="padding-left:10px;font-style:italic;font-weight:bold;font-size:22px;">Feedback</span>
+                    </div>
+                    <div style="padding-top:5px;padding-bottom:5px;">
+                        <a id="gomobile" name="gomobile" href="http://yellowrangler.com" target="_blank">
+                            <img src="img/phone-mobile.png" style="height:40px;text-align:center;" alt="Go Mobile!"> 
+                        </a>
+                        <span style="padding-left:13px;font-style:italic;font-weight:bold;font-size:22px;">Mobile</span>
+                    </div> 
+                    <div style="padding-top:25px;">
+                        <span style="padding-right:5px">Contact:</span> <span class="helpInfo">Tarry Cutler</span>
+                    </div>
+                    <div>
+                        <span style="padding-right:5px">eMail:</span> <a class="emailLink" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">daredevilducks.xyz@gmail.com</a>
+                    </div>
+                    <div style="padding-top:15px;">
+                        <span style="padding-right:5px">Device:</span> <span class="helpInfo">{{current.devicename}}</span>
+                    </div> 
+                    <div>
+                        <span style="padding-right:5px">Type:</span> <span class="helpInfo">{{current.devicetype}}</span>
+                    </div>    
                 </div> <!-- end of row -->
             </div> <!-- end of col 5 -->
-        
-            <div class="col-md-5">
-                <div style="padding-top:15px;padding-bottom:10px;">
-                    <a href="#/faqs"><img style="height:30px;vertical-align:top" src="img/DareDevilDuckInfoButton.png" alt="information" class="img-circle"></a><span style="padding-left:15px;font-style:italic;font-weight:bold;font-size:22px;">Information</span>
-                </div>
-                <div>
-                    <span style="padding-right:5px">Contact:</span> <span class="helpInfo">Tarry Cutler</span>
-                </div>
-                <div>
-                    <span style="padding-right:5px">eMail:</span> <a class="emailLink" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Inquirey">daredevilducks.xyz@gmail.com</a>
-                </div>
-                <div style="padding-top:15px;">
-                    <span style="padding-right:5px">Device:</span> <span class="helpInfo">{{current.devicename}}</span>
-                </div> 
-                <div>
-                    <span style="padding-right:5px">Type:</span> <span class="helpInfo">{{current.devicetype}}</span>
-                </div>    
-                <div style="padding-top:25px;padding-bottom:10px;">
-                    <span style="padding-right:5px">Go Mobile:</span>
-                    <a id="gomobile" name="gomobile" href="http://yellowrangler.com" target="_blank">
-                     <img src="img/phone-mobile.png" style="height:40px;text-align:center;" alt="Go Mobile!"> 
-                </a>
+
+            <div class="col-md-7">
+                <div style="float:right;" class="row">
+                    <div style="display:inline-block;padding-top:30px;padding-right:10px;">
+                        <span style="font-weight:bold;font-size:22px;">We subscribe to the following addadge -</span>
+                        <br />
+                        <span style="padding-left:35px;font-weight:bold;font-size:22px;font-style:italic;">Enjoy Life and Have Fun!</span>
+                    </div>
+
+                    <div style="display:inline-block;padding-right:30px;float:right;">
+                        <img style="height:125px;padding:15px;" src="img/ddd-small-footer.png" alt="Ha!" class="img-circle">
+                    </div>    
+                </div>  <!-- end of row -->   
             </div> <!-- end of col -->   
-            </div>
-
-            <div class="col-md-1">
-                <div class="loginLink row">
-                    <div class="col-md-12">
-                        <a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
-                    </div> <!-- end of col -->    
-                </div> <!-- end of row -->    
-
-                <div style="padding-top:25px;" class="row">
-                     
-                </div> <!-- end of row -->    
-            </div> <!-- end of row -->
 
         </div> <!-- end of row -->
         
-        <div class="row">
-            <div class="col-md-1">
-                &nbsp;
-            </div>
-            <div class="col-md-3">
-                &nbsp;
-            </div>
-        </div> <!-- end of row -->
 	</div><!-- end of container top -->
 </div> <!-- end of footer -->
 
