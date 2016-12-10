@@ -12,6 +12,11 @@
 				<div class="panel-body">
 
 					<div class="form-group horizontalFieldOffset">
+			            <img style="height:100px; cursor:pointer;" ng-click="getMemberProfile(current.memberid)" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
+					</div>  <!-- end of form-group -->
+
+
+					<div class="form-group horizontalFieldOffset">
 						<label for="memberid" class="control-label">Player</label>
 				        <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
 				            <option ng-selected="current.memberid == member.id"  ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
@@ -112,21 +117,21 @@
 	</div> <!-- end of col 10 -->
 
 	<div style="display:inline;" class="col-md-2">
-		<div style="position:fixed;padding-top:5px;padding-right:40px;" class="floatingImgDiv">
-			<div style="width:100%;" class="form-group">
+		<div style="position:fixed;padding-right:40px;" class="floatingImgDiv">
+			<!-- <div style="width:100%;" class="form-group">
 	            <img style="height:100px; cursor:pointer;" class="center-block"  ng-click="getMemberProfile(current.memberid)" ng-show="current.memberavatar != ''" ng-src="img/avatars/{{current.memberavatar}}">
 			</div>  
-
-			<div style="padding-top:10px;width:100%;width:100%;text-align:center;font-weight:bold;padding:10px;" class="form-group teamSelected">
+ -->
+			<div class="form-group teamSelected" style="width:100%;text-align:center;font-weight:bold;padding-top:2px;padding-bottom:2px;margin:0;" >
 		        Selected
 		    </div>  
 
-			<div style="padding-top:10px;width:100%;width:100%;text-align:center;padding:10px;font-weight:bold;" class="form-group teamWon">    
+			<div class="form-group teamWon" style="width:100%;text-align:center;font-weight:bold;padding-top:2px;padding-bottom:2px;margin:0;" >    
 		        Winner
 	        </div> 
 
-	        <div style="padding-top:10px;">
-		        <img style="width:100%;" class="center-block img-rounded" ng-src="img/DonaldDuckThanksgiving-PlayersPicforWeek.png">
+	        <div >
+		        <img style="width:100%;padding-top:5px;" class="center-block img-rounded" ng-src="img/DonaldDuckChristmas2016PlayersPickforWeek.png">
 	        </div>
         </div>
 	</div> <!-- end of column -->
