@@ -9,17 +9,10 @@ $emailbottomwriteup = "<p>
 </p>
 
 <p>
-We had an IP address chane for the Daredevil Ducks website. What this means to you is that if you had our website book marked OR if you had your web browser open to our web page when this IP address change occured; then you may not beable to get back in. Even if you dont understand any of teh above. The solution is to delete your current Daredevil Ducks web page and start a new one typing in daredevilducks.xyz. That simple.
+We had an IP address change for the Daredevil Ducks website. What this means to you is that if you had our website book marked OR if you had your web browser open to our web page when this IP address change occured; then you may not be able to get back in. Even if you don't understand any of the above; The solution is to delete your current Daredevil Ducks web page and start a new one typing in daredevilducks.xyz. That simple.
 </p>
 
 <p>
-<span  style='font-weight:bold; color:green;'>Login Button and Footer Changes (bottom of page)</span>
-</p>
-
-<p>
-We moved the Donald Duck figure and addage to the right of the page. We added a button for feedback if you would like to comment on our web site (what you like/dislike or future services). The Login button on the home page will now stay and show Logoff after you login. The Logoff link on the footer will be larger so people can continue to logoff from any page if they desire. Now when you logoff you will get a dialog acknowledging that action.
-</p>
-
 <p>
 <span  style='font-weight:bold;color:green;'>Please set up your profile!</span>
 </p>

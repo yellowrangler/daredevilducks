@@ -9,11 +9,11 @@ Hi Folks,
 <br />
 
 <p>
-A good win for the Patriots. The Rams are not exactly championship material; but we actually were able to put pressure on the quaterback! Secondary still looks a bit iffy. Next game against the Ravens will be very telling. Good for Brady passing all to become winningest quaterback of all time! Unfortunately another week with 'uneven' officiating. Maybe Roger could use some of his excessive compensation to make officials full time profesionals.  
+A great win for the Patriots. This was a great game even though both sides were plagued with foolish mistakes. The Ravens dropped more passes and the Patriots punt return team looked clueless. But still! What a great game. Two teams that may meet agin in the playoffs. Two teams that do not like each other. Two physical teams. It is unfortunate that the closer we get to the end of the season - the better the good teams play.  
 </p>
 
 <p>
-The Cowboys and the Chiefs had heart stopping endings. The Texans and Eagles continue their downward spiral. The Steelers looked very impressive in their big win over the Giants. The Cardinals kept themselves statistically in the hunt for a wildcard by beating the Readskins. The Panthers and Colts disproved the addage - it can't get any worse then this.
+The Chiefs are again getting some momentum. They are not flashy or boastful, they are plodders. May the earth be inspired by that sence of purpose and demeaner! The Steelers let the Bills get closer then they wanted,  but still took the win. The Titans beat the Broncos to get a tie for first place in their division. The Redskins beat the Eagles who are slowly sinking into the east. The Falcons put a whopping on the Saints perhaps costing Jeff Fisher his coaching job. The Packers humbled the bully Seahawks to stay in the playoff race. And the Cowboys looked good but could not score giving the Giants a 10 to 7 win!
 </p>
 
 <p>
@@ -21,14 +21,14 @@ All in all a good week of football.
 </p>
 
 <p>
-We had another great turnout this week. Thank you all again for participating. 18 Wheeler manitains command of first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! He is followed by NFL Amateur and Wildcat Wonder in second place. 
+We had another great turnout this week. Thank you all again for participating. Wildcat Wonder wrestled command of first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by 18 Wheeler in second place andn ToothFairy in third. 
 </p>
 
 <p>
-Johor Tigress has taken command of first place (70.5%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by 18 Wheeler and NFL Amateur.
+Johor Tigress maintains command of first place (70.7%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by Wildcat Wonder and 18 Wheeler.
 </p>
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have Exploding Brain, NFL Amateur and Steel Got a Chance in first place followed by many others. Way to go folks. The stats are below. Read em and weep (I know I do)!
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have beach goer, Cooper, Happy Campers, Hawk Eye and Peanuts in first place followed by many others. Way to go folks. The stats are below. Read em and weep (I know I do)!
 </p>  
 ";
 ?>
