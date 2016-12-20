@@ -30,6 +30,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-sanitize.js"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- <script src="script/jquery.snow.js"></script> -->
 <!-- <script src="script/parallax-js/parallax.js"></script> -->
 <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
 <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
@@ -320,19 +321,31 @@
                         <a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
                     </div> <!-- end of loginLink -->    
 
-                    <div style="padding-top:30px;padding-bottom:10px;padding-left:8px;">
-                        <a href="#/faqs"><img style="height:30px;vertical-align:top" src="img/DareDevilDuckInfoButton.png" alt="information" class="img-circle"></a>
-                        <span style="padding-left:15px;font-style:italic;font-weight:bold;font-size:22px;">Information</span>
-                    </div>
-                    <div style="padding-top:5px;padding-bottom:5px;">
-                        <a href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Feedback"><img style="height:30px;vertical-align:top" src="img/feedback-ddd.png" alt="feedback" class="img-circle"></a>
-                        <span style="padding-left:10px;font-style:italic;font-weight:bold;font-size:22px;">Feedback</span>
-                    </div>
-                    <div style="padding-top:5px;padding-bottom:5px;">
-                        <a id="gomobile" name="gomobile" href="http://yellowrangler.com" target="_blank">
-                            <img src="img/phone-mobile.png" style="height:40px;text-align:center;" alt="Go Mobile!"> 
+                    <div style="padding-left:4px;padding-top:15px;padding-bottom:5px;">
+                        <a id="letitsnow" name="letitsnow" href="" class="ddd-footer-links" style="text-decoration:none;" ng-click="letItSnow()">
+                            <img src="img/xmastree.png" style="height:60px;text-align:center;" alt="Go Snow!"> 
+                            <span id="letitsnowtext" name="letitsnowtext"style="padding-left:13px;cursor: pointer;"></span>
                         </a>
-                        <span style="padding-left:13px;font-style:italic;font-weight:bold;font-size:22px;">Mobile</span>
+                    </div>
+
+                    <div style="padding-top:45px;padding-bottom:10px;padding-left:8px;">
+                        <a class="ddd-footer-links" style="text-decoration:none;" href="#/faqs">
+                            <img style="height:30px;vertical-align:top" src="img/DareDevilDuckInfoButton.png" alt="information" class="img-circle">
+                            <span style="padding-left:15px;cursor: pointer;">Information</span>
+                        </a>
+                    </div>
+                    <div style="padding-top:5px;padding-bottom:5px;">
+                        <a class="ddd-footer-links" style="text-decoration:none;" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Feedback">
+                            <img style="height:30px;vertical-align:top" src="img/feedback-ddd.png" alt="feedback" class="img-circle">
+                            <span style="padding-left:10px;cursor: pointer;">Feedback</span>
+                        </a>
+                    </div>
+                    <div style="padding-top:5px;padding-bottom:5px;">
+                        <a id="gomobile" name="gomobile" class="ddd-footer-links" style="text-decoration:none;" href="http://yellowrangler.com" target="_blank">
+                            <img src="img/phone-mobile.png" style="height:40px;text-align:center;" alt="Go Mobile!"> 
+                            <span style="padding-left:13px;cursor: pointer;">Mobile
+                            </span>
+                        </a>
                     </div> 
                     <div style="padding-top:25px;">
                         <span style="padding-right:5px">Contact:</span> <span class="helpInfo">Tarry Cutler</span>

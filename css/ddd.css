@@ -781,6 +781,20 @@ border: 0 none;
 	font-family:"Lusitana", Arial, Helvetica, sans-serif;
 }
 
+.ddd-footer-links {
+	font-style:italic;
+	font-weight:bold;
+	font-size:22px;
+	color:NavajoWhite;
+	cursor: pointer;
+}
+
+.ddd-footer-links :hover {
+	color:#2a6496;
+	cursor: pointer;
+}
+
+
 /* ddd paragraph text large */
 .ddd-paragraph {
 	color:grey;
