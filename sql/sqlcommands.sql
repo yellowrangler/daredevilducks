@@ -12,7 +12,7 @@ SELECT table_schema "Data Base Name", sum( data_length + index_length) / 1024 / 
 SELECT  memberid, membername, COUNT(*) as picks
 FROM memberpickstbl MP
 LEFT JOIN membertbl M on MP.memberid = M.id
-WHERE season = 2016 and week = 8
+WHERE season = 2016 and week = 15
 GROUP BY membername, memberid
 
 UNION 
@@ -24,11 +24,12 @@ WHERE id NOT IN
 	SELECT  memberid as id
 	FROM memberpickstbl MP
 	LEFT JOIN membertbl M on MP.memberid = M.id
-	WHERE season = 2016 and week = 8
+	WHERE season = 2016 and week = 15
 )
 AND status = 'active'
 
 
-DELETE FROM memberpickstbl WHERE season = 2016 and week = 13 and memberid = 37
+SELECT * FROM memberpickstbl WHERE season = 2016 and week = 15 and memberid = 15
 
+DELETE FROM memberpickstbl WHERE season = 2016 and week = 15 and memberid = 15
 
