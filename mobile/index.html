@@ -93,8 +93,20 @@
     <br />
     <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
 
-    <div style="padding-top:25px;padding-bottom:10px;">
-        <a href="#/faqs"><img style="height:30px;vertical-align:top" src="../img/DareDevilDuckInfoButton.png" alt="information" class="img-circle"></a>
+    <div style="padding-top:15px;padding-bottom:25px;">
+        <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
+            <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmastreeStop.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
+        </a>
+    </div>
+
+    <div style="padding-top:15px;padding-bottom:25px;">    
+        <a href="#/faqs">
+            <img style="height:30px;vertical-align:top" src="../img/DareDevilDuckInfoButton.png" alt="information" class="img-circle">
+        </a>
+
+        <a style="padding-left:5px;" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Feedback">
+            <img style="height:30px;vertical-align:top" src="../img/feedback-ddd.png" alt="information" class="img-circle">
+        </a>
     </div>
 </div> <!-- end of footer -->
 

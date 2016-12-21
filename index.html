@@ -317,14 +317,9 @@
 
                 <div style="padding-left:40px;" class="row">
 
-                    <div style="padding-left:10px;" ng-show="memberavatar != ''" class="loginLink">
-                        <a id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
-                    </div> <!-- end of loginLink -->    
-
                     <div style="padding-left:4px;padding-top:15px;padding-bottom:5px;">
                         <a id="letitsnow" name="letitsnow" href="" class="ddd-footer-links" style="text-decoration:none;" ng-click="letItSnow()">
-                            <img src="img/xmastree.png" style="height:60px;text-align:center;" alt="Go Snow!"> 
-                            <span id="letitsnowtext" name="letitsnowtext"style="padding-left:13px;cursor: pointer;"></span>
+                            <img ng-src="{{isSnowing == 0 && 'img/xmastree.png' || 'img/xmastreeStop.png'}}"  style="height:125px;text-align:center;" alt="Go Snow!"> 
                         </a>
                     </div>
 
@@ -360,14 +355,18 @@
                         <span style="padding-right:5px">Type:</span> <span class="helpInfo">{{current.devicetype}}</span>
                     </div>    
                 </div> <!-- end of row -->
-            </div> <!-- end of col 5 -->
+            </div> <!-- end of col 4 -->
 
-            <div class="col-md-7">
+            <div style="padding-left:15px;padding-top:20px;" class="col-md-3">
+                <div style="padding-left:10px;" ng-show="memberavatar != ''" class="loginLink">
+                    <a style="color:lightgrey;" id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
+                </div> <!-- end of loginLink -->  
+            </div>  
+
+            <div class="col-md-4">
                 <div style="float:right;" class="row">
-                    <div style="display:inline-block;padding-top:30px;padding-right:10px;">
-                        <span style="font-weight:bold;font-size:22px;">We subscribe to the following addadge -</span>
-                        <br />
-                        <span style="padding-left:35px;font-weight:bold;font-size:22px;font-style:italic;">Enjoy Life and Have Fun!</span>
+                    <div style="display:inline-block;padding-top:40px;padding-right:10px;">
+                        <span style="padding-left:35px;font-weight:bold;font-size:20px;font-style:italic;">Enjoy Life and Have Fun!</span>
                     </div>
 
                     <div style="display:inline-block;padding-right:30px;float:right;">

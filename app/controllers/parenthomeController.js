@@ -61,7 +61,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     {
         if ($scope.isSnowing == 0)
         {
-            $("#letitsnowtext").text("Turn off snow!");
+            // $("#letitsnowtext").text("Turn off snow!");
             
             makeSnowAnimation({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#2ECC71' });
 
@@ -69,7 +69,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         }
         else
         {
-            $("#letitsnowtext").text("Let it Snow!");
+            // $("#letitsnowtext").text("Let it Snow!");
 
             stopSnowAnimation();
             $scope.isSnowing = 0;
@@ -133,7 +133,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function init() {
         $scope.isSnowing = 0;
         $scope.intervalVariable = "";
-        $("#letitsnowtext").text("Let it Snow!");
+        // $("#letitsnowtext").text("Let it Snow!");
 
         $scope.current = {};
         $scope.bigNavbar = true;
