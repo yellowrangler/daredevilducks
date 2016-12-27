@@ -103,6 +103,7 @@ class MailerDDD
                     </html>";
 
         $mime = new Mail_mime();
+
         $mime->setHTMLBody($mailbody);
         $mime->addHTMLImage(file_get_contents($this->logoimagefullpath),$this->logoimagemimetype,$this->logoimage,false);
         $body = $mime->get();
