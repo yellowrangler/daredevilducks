@@ -103,11 +103,21 @@ class MailerDDD
                     </html>";
 
         $mime = new Mail_mime();
+
         $mime->setHTMLBody($mailbody);
         $mime->addHTMLImage(file_get_contents($this->logoimagefullpath),$this->logoimagemimetype,$this->logoimage,false);
         $body = $mime->get();
         $mimeheaders = $mime->headers($headers);
         $this->recipients = $this->to.", ".$this->cc;
+
+        // echo "Got Mail_mime:";
+        // echo "mailbody:".$mailbody.":";
+        // echo "smtp:";
+        // print_r($smtp);
+        // echo ":";
+        // echo "mimeheaders:";
+        // print_r($headers);
+        // echo ":";
 
         try {
 
