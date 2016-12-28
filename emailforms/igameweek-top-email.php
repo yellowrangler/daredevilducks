@@ -9,30 +9,30 @@ Hi Folks,
 <br />
 
 <p>
-Another great win for the Patriots. Vengence may be the Lords province but it seems payback is the Patriots. At least it was last Sunday. What a great game. The Broncos fought as much with each other as with the Pats. TJ Ward got the Bonehead Award for the game as he body slammed Edelmen and then had the cheek to flex for the viewing audience! That bit of chivalry sealed the win for the Patriots. What a frigging jerk. You can't make this stuff up!  
+A necessary win for the Patriots. The boys from New England pummeled the haples Jets. Our defence continues to improve which is a MUST because the cream is starting to rise to the top. The Steelers, Chiefs and Raiders are all peaking (More on Oakland later). All in all its is shaping up to be a fine playoff year! 
 </p>
 
 <p>
-This was a defining week for a number of teams. The Dolphins kept their playoff hopes alive with a win over the truely pathetic Jets. The Titans remain in the hunt with a win over the mecurial Chiefs. The Steelers looked strong as they put the nail in the Bengals season. The Giants continue to impress as they beat the Lions. The Texans benched their high priced quaterback on the way to a win over the Jaguars. The Bills kept their playoff hopes alive with a win over the winless Browns. The Ravens kept up with the Steelers as they dispatched the Eagles. 
+The Giants got their butts whipped by an out of contention Eagles team. Not a good game for Giants fans. The Packers extended their playoff hopes by beating the Vikings. Reports have surfased that some of the Viking secondry disregarded the game plan in favor of what they thought was best. I wonder what Belichick would have done? Hmmmm. Big (BIG) game for Packers and Lions next week. The Falcons and the Redskins took care of business by easily dispatching their rivals. The Texans eacked out a win over the Bengals to get into the playoffs. They did it with Tom Savage as their quaterback. What a great name. Sounds like it was made for Hollywood doesn't it? Pittsburg won their bigget game of the year in exciting fashion beating the Ravens with only seconds left. I believe that Roethlisberger and Brady are the two best 2 minute and under quaterbacks when you need a score. Great game.
+</p> 
+
+<p>
+The Chiefs took out the Broncos in spectacular fashion including a final score that featured their 350 pound nose tackle Dontari Poein as full back shot putting the ball to a reciever Demetrius Harris in the endzone. That win removed the Broncos from the playoffs and capped a disappointing year for Denver fans. Dallas finished off our Christmas week games with a thrashing of the Detriot Lions.
 </p>
 
 <p>
-The Raiders took care of business as they beat the Chargers. The Buccaneers gave Dallas almost more then they could take in a great game. But Dallas showed their mettle and prevailed. The final game pitted Carolona against Washington. This was a tough game for Redskin fans as Carolina won the day. 
+Two very sad and unfortunate injuries occured this week each entailing low twisting tackles. I LOVE football; but I hate what I see as exagerted violence on the field. That is violence perpetrated for only one reason and that is to injure a player. The league practically trips over itself with their 'concussion protocol' and yet ignores shameless 'Leagl' hits that have only one purpase in mind, to injure. I am not suggesting that these two tackles were intened to harm. I have not studied the video. But I am concerened that there is a level of thugary that is encouraged through out the NFL (Ya - I am talking to you Pete Carroll). Cant we all just play ball?   
 </p>
 
 <p>
-This is the time of year that footbal is at it's best. Bubble teams fighting for a shot and dominant teams trying to maintain their MoJo. 
+We had another great turnout this week. Thank you all again for participating. Toothfairy has again taken command of first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by 18 Wheeler and Wildcat Wonder in second place and Exploding Brain and NFL Amateur in third. 
 </p>
 
 <p>
-We had another great turnout this week. Thank you all again for participating. Wildcat Wonder and Toothfairy take command of first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! They are followed by 18 Wheeler in second place and NFL Amateur in third. 
-</p>
-
-<p>
-Johor Tigress again maintains command of first place (71.1%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by Toothfairy, Wildcat Wonder and 18 Wheeler.
+Toothfairy has taken command of first place (70.4%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by 18 Wheeler and Wildcat Wonder .
 </p>
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have 4Horseman alone in first place followed Steel Got a Chance in second and Mouse Girl and Super Brawler in third. Way to go folks! The stats are below. Read em and weep (I know I do)!
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have AirDreamer, Exploding Brain and Tenn Vols alone in first place followed by Empty Nesters in second and many others in third. Way to go folks! The stats are below. Read em and weep (I know I do)!
 </p>  
 ";
 ?>

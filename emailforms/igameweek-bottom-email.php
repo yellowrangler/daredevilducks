@@ -4,7 +4,7 @@ $emailbottomwriteup = "
 <br />
 
 <p>
-<span  style='font-weight:bold;color:red;'>Note: Many ganes this week are on Saturday!</span>
+<span  style='font-weight:bold;color:red;'>Note: All games this week are on Sunday!</span>
 </p>
 
 <p>
@@ -15,15 +15,6 @@ $emailbottomwriteup = "
 <p>
 We added a Christmas tree at the bottom of our web page for both the Regular and Mobile websites. Clicking on the Christmas tree will start the snowfall animation. Clicking on the Christmass tree with the international symbol for NO on it will stop the animation! 
 </p>
-
-<p>
-<span  style='font-weight:bold;color:green;'>Shenanigans!</span>
-</p>
-
-<p>
-We had a visit from some of Santa's evil elves! Some of our players picks got doubled. But not to worry; we resolved the issues. Word at the pole is that Santa is on the case and retribution will be swift and with out any Ho Ho Ho's. 
-</p>
-
 
 <p>
 <span  style='font-weight:bold;color:green;'>Please set up your profile!</span>
