@@ -299,9 +299,3 @@ function stopWatch() {
 	};
 
 }
-
-
-
-
-
-
