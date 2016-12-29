@@ -318,8 +318,6 @@ function AnimateTextColor(elmID, textStr, colorText, timeMS)
 
 	var index = 0;
 	doAnimation(index, colorText, timeMS);
-
-	// $('#demodiv').animate({color: '#E4D8B8'})
 }
 
 function doAnimation(index, colorText, timeMS) 
@@ -341,17 +339,6 @@ function doAnimation(index, colorText, timeMS)
 				}
 			);
 		}, 50);
-
-	// setTimeout(function(){
-	// 	alert(index); 
-	// 	$('#anim'+index).animate({ 
-	// 		'color': colorText 
-	// 	}, timeMS, "linear", function(){ 
-	// 		index++; 
-	// 		doAnimation(index, colorText, timeMS);
-	// 	});
-	// 	alert("end"); 
-	// }, 50);
 }
 
 

@@ -411,7 +411,6 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
             $("#loginHomeButton").text("Logoff");
         else
             $("#loginHomeButton").text("Login");
-      
     };
 
     $scope.homepagelogin = function () {
