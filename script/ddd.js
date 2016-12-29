@@ -299,3 +299,64 @@ function stopWatch() {
 	};
 
 }
+
+function AnimateTextColor(elmID, textStr, colorText, timeMS) 
+{
+	var jqElem = $('#'+elmID);
+	var letters = textStr.split('');
+	var lettersLength = textStr.length;	
+
+	// clear out the field
+	$(jqElem).text('');
+
+	// build the span 
+
+	$.each(letters, function(idx, value) {	
+    	var letterStr = "<span id='anim" + idx + "''>" + value + "</span>";
+    	$(jqElem).append(letterStr);
+	});
+
+	var index = 0;
+	doAnimation(index, colorText, timeMS);
+
+	// $('#demodiv').animate({color: '#E4D8B8'})
+}
+
+function doAnimation(index, colorText, timeMS) 
+{
+	
+	setTimeout(
+		function()
+		{
+			$('#anim'+index).animate(
+				{ 
+					'color': colorText 
+				}, 
+				timeMS, 
+				"linear", 
+				function()
+				{ 
+					index++; 
+					doAnimation(index, colorText, timeMS);
+				}
+			);
+		}, 50);
+
+	// setTimeout(function(){
+	// 	alert(index); 
+	// 	$('#anim'+index).animate({ 
+	// 		'color': colorText 
+	// 	}, timeMS, "linear", function(){ 
+	// 		index++; 
+	// 		doAnimation(index, colorText, timeMS);
+	// 	});
+	// 	alert("end"); 
+	// }, 50);
+}
+
+
+
+
+
+
+

@@ -786,6 +786,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 	//
 	// loop through rest of weeks
 	//
+	$start = "No start";
+	$week = $week - 1;
 	if ($week < $weeksinregularseason)
 	{
 		$start = $week;
@@ -825,7 +827,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 } // end of looping through teams
 
-$msg = $msg . "Totals Teams:$teamcount.";
+$msg = $msg . "Totals Teams:$teamcount. <br />Weeks total: $weekstotal <br />Weeks run: $week <br />Weeks in regular Season: $weeksinregularseason";
 
 //
 // close db connection

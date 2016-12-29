@@ -61,15 +61,24 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     {
         if ($scope.isSnowing == 0)
         {
-            $("#letitsnowtext").text("Click the Tree to Turn off snow!");
+            AnimateTextColor("letitsnowtext",
+                "Click the Tree to Turn off snow!",
+                "yellow",
+                500);
+            // $("#letitsnowtext").text("Click the Tree to Turn off snow!");
             
-            makeSnowAnimation({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#2ECC71' });
+            makeSnowAnimation({ minSize: 5, maxSize: 50, newOn: 500, flakeColor: '#2ECC71' });
 
             $scope.isSnowing = 1;
         }
         else
         {
-            $("#letitsnowtext").text("Click the Tree to Turn on Snow!");
+            AnimateTextColor("letitsnowtext",
+                "Click the Tree to Turn on snow!",
+                "NavajoWhite",
+                500);
+
+            // $("#letitsnowtext").text("Click the Tree to Turn on Snow!");
 
             stopSnowAnimation();
             $scope.isSnowing = 0;
@@ -133,7 +142,11 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function init() {
         $scope.isSnowing = 0;
         $scope.intervalVariable = "";
-        $("#letitsnowtext").text("Click the Tree to Turn on Snow!");
+        AnimateTextColor("letitsnowtext",
+                "Click the Tree to Turn on snow!",
+                "NavajoWhite",
+                500);
+        // $("#letitsnowtext").text("Click the Tree to Turn on Snow!");
 
         $scope.current = {};
         $scope.bigNavbar = true;

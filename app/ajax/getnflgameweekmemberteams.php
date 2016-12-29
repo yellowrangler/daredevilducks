@@ -170,6 +170,9 @@ WHERE G.season = '$season'
 AND G.week ='$week'
 ORDER BY G.gamedatetime, TH.location";
 
+// echo "sql:$sql";
+// exit();
+
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {
