@@ -348,7 +348,7 @@ function makeSnowAnimation(options)
         documentWidth   = $(document).width(),
         defaults        = {
                             minSize     : 10,
-                            maxSize     : 15,
+                            maxSize     : 20,
                             newOn       : 500,
                             flakeColor  : "#FFFFFF"
                         },
@@ -359,7 +359,7 @@ function makeSnowAnimation(options)
         documentWidth   = $(document).width(),
         defaults        = {
                             minSize     : 10,
-                            maxSize     : 15,
+                            maxSize     : 20,
                             newOn       : 500,
                             flakeColor  : "#FFFFFF"
                         },
@@ -367,19 +367,21 @@ function makeSnowAnimation(options)
         
     var intervalVariable        = 
         setInterval( function(){
-            var startPositionLeft   = Math.random() * documentWidth - 100,
-            	startPositionRight   = Math.random() * documentWidth - 10,
+            var startPositionLeft1   = Math.random() * documentWidth - 100,
+            	startPositionLeft2   = Math.random() * documentWidth - 10,
                 startOpacity        = 0.5 + Math.random(),
                 sizeFlake           = options.minSize + Math.random() * options.maxSize,
-                endPositionTop      = documentHeight - 40,
-                endPositionLeft     = startPositionLeft - 100 + Math.random() * 200,
+                endPositionTop1      = documentHeight - 20,
+                endPositionTop2      = documentHeight - 50,
+                endPositionLeft1     = startPositionLeft1 - 100 + Math.random() * 200,
+                endPositionLeft2     = startPositionLeft2 - 10 + Math.random() * 40,
                 durationFall        = documentHeight * 10 + Math.random() * 5000;
             $flake1
                 .clone()
                 .appendTo('body')
                 .css(
                     {
-                        left: startPositionLeft,
+                        left: startPositionLeft1,
                         opacity: startOpacity,
                         'font-size': sizeFlake,
                         color: options.flakeColor
@@ -387,8 +389,8 @@ function makeSnowAnimation(options)
                 )
                 .animate(
                     {
-                        top: endPositionTop,
-                        left: endPositionLeft,
+                        top: endPositionTop1,
+                        left: endPositionLeft1,
                         opacity: 0.2
                     },
                     durationFall,
@@ -403,7 +405,7 @@ function makeSnowAnimation(options)
                 .appendTo('body')
                 .css(
                     {
-                        left: startPositionRight,
+                        left: startPositionLeft2,
                         opacity: startOpacity,
                         'font-size': sizeFlake,
                         color: 'red'
@@ -411,8 +413,8 @@ function makeSnowAnimation(options)
                 )
                 .animate(
                     {
-                        top: endPositionTop,
-                        left: endPositionLeft,
+                        top: endPositionTop2,
+                        left: endPositionLeft2,
                         opacity: 0.2
                     },
                     durationFall,
