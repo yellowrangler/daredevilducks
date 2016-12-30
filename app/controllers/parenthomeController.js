@@ -65,9 +65,11 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 "Click the Tree to Turn off snow!",
                 "yellow",
                 500);
-            // $("#letitsnowtext").text("Click the Tree to Turn off snow!");
             
-            $scope.intervalVariable = makeSnowAnimation({ minSize: 10, maxSize: 40, newOn: 600, flakeColor: '#2ECC71' });
+            var flakeObj =  { minSize: 10, maxSize: 40, newOn: 600, flakeColor1: '#2ECC71', flakeColor2: 'red'};
+            // var targetArea = "#ddd-view";
+            var targetArea = "body";
+            $scope.intervalVariable = makeSnowAnimation(flakeObj,targetArea);
 
             $scope.isSnowing = 1;
         }
@@ -77,8 +79,6 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 "Click the Tree to Turn on snow!",
                 "NavajoWhite",
                 500);
-
-            // $("#letitsnowtext").text("Click the Tree to Turn on Snow!");
 
             stopSnowAnimation();
             $scope.isSnowing = 0;
@@ -99,7 +99,6 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 "Click the Tree to Turn on snow!",
                 "NavajoWhite",
                 500);
-        // $("#letitsnowtext").text("Click the Tree to Turn on Snow!");
 
         $scope.current = {};
         $scope.bigNavbar = true;

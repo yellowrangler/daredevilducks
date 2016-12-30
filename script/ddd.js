@@ -341,56 +341,57 @@ function doAnimation(index, colorText, timeMS)
 		}, 50);
 }
 
-function makeSnowAnimation(options)
+function makeSnowAnimation(options, targetElement)
 {
     var $flake1          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
-        documentHeight  = $(document).height(),
-        documentWidth   = $(document).width(),
+        documentHeight  = $(targetElement).height(),
+        documentWidth   = $(targetElement).width(),
         defaults        = {
                             minSize     : 10,
                             maxSize     : 20,
                             newOn       : 500,
-                            flakeColor  : "#FFFFFF"
+                            flakeColor1  : "#FFFFFF",
+                            flakeColor2  : "black"
                         },
         options         = $.extend({}, defaults, options);
 
-    var $flake2          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10053;'),
-        documentHeight  = $(document).height(),
-        documentWidth   = $(document).width(),
-        defaults        = {
-                            minSize     : 10,
-                            maxSize     : 20,
-                            newOn       : 500,
-                            flakeColor  : "#FFFFFF"
-                        },
-        options         = $.extend({}, defaults, options);    
+    var $flake2          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10053;');
+        // documentHeight  = $(targetElement).height(),
+        // documentWidth   = $(targetElement).width(),
+        // defaults        = {
+        //                     minSize     : 10,
+        //                     maxSize     : 20,
+        //                     newOn       : 500,
+        //                     flakeColor  : "#FFFFFF"
+        //                 },
+        // options2         = $.extend({}, defaults, options2);    
         
     var intervalVariable        = 
         setInterval( function(){
-            var startPositionLeft1   = Math.random() * documentWidth - 100,
-            	startPositionLeft2   = Math.random() * documentWidth - 10,
+            var startPositionLeftFlake1   = Math.random() * documentWidth - 100,
+            	startPositionLeftFlake2   = Math.random() * documentWidth - 10,
                 startOpacity        = 0.5 + Math.random(),
                 sizeFlake           = options.minSize + Math.random() * options.maxSize,
-                endPositionTop1      = documentHeight - 20,
-                endPositionTop2      = documentHeight - 50,
-                endPositionLeft1     = startPositionLeft1 - 100 + Math.random() * 200,
-                endPositionLeft2     = startPositionLeft2 - 10 + Math.random() * 40,
+                endPositionTopFlake1      = documentHeight - 20,
+                endPositionTopFlake2      = documentHeight - 50,
+                endPositionLeftFlake1     = startPositionLeftFlake1 - 100 + Math.random() * 200,
+                endPositionLeftFlake2     = startPositionLeftFlake2 - 10 + Math.random() * 40,
                 durationFall        = documentHeight * 10 + Math.random() * 5000;
             $flake1
                 .clone()
-                .appendTo('body')
+                .appendTo(targetElement)
                 .css(
                     {
-                        left: startPositionLeft1,
+                        left: startPositionLeftFlake1,
                         opacity: startOpacity,
                         'font-size': sizeFlake,
-                        color: options.flakeColor
+                        color: options.flakeColor1
                     }
                 )
                 .animate(
                     {
-                        top: endPositionTop1,
-                        left: endPositionLeft1,
+                        top: endPositionTopFlake1,
+                        left: endPositionLeftFlake1,
                         opacity: 0.2
                     },
                     durationFall,
@@ -402,19 +403,19 @@ function makeSnowAnimation(options)
 
             $flake2
                 .clone()
-                .appendTo('body')
+                .appendTo(targetElement)
                 .css(
                     {
-                        left: startPositionLeft2,
+                        left: startPositionLeftFlake2,
                         opacity: startOpacity,
                         'font-size': sizeFlake,
-                        color: 'red'
+                        color: options.flakeColor2
                     }
                 )
                 .animate(
                     {
-                        top: endPositionTop2,
-                        left: endPositionLeft2,
+                        top: endPositionTopFlake2,
+                        left: endPositionLeftFlake2,
                         opacity: 0.2
                     },
                     durationFall,
