@@ -67,7 +67,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 500);
             // $("#letitsnowtext").text("Click the Tree to Turn off snow!");
             
-            $scope.intervalVariable = makeSnowAnimation({ minSize: 5, maxSize: 40, newOn: 600, flakeColor: '#2ECC71' });
+            $scope.intervalVariable = makeSnowAnimation({ minSize: 10, maxSize: 40, newOn: 600, flakeColor: '#2ECC71' });
 
             $scope.isSnowing = 1;
         }
