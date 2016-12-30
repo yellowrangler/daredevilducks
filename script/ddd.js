@@ -343,26 +343,38 @@ function doAnimation(index, colorText, timeMS)
 
 function makeSnowAnimation(options)
 {
-    var $flake          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
+    var $flake1          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
         documentHeight  = $(document).height(),
         documentWidth   = $(document).width(),
         defaults        = {
                             minSize     : 10,
-                            maxSize     : 20,
+                            maxSize     : 15,
                             newOn       : 500,
                             flakeColor  : "#FFFFFF"
                         },
         options         = $.extend({}, defaults, options);
+
+    var $flake2          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10053;'),
+        documentHeight  = $(document).height(),
+        documentWidth   = $(document).width(),
+        defaults        = {
+                            minSize     : 10,
+                            maxSize     : 15,
+                            newOn       : 500,
+                            flakeColor  : "#FFFFFF"
+                        },
+        options         = $.extend({}, defaults, options);    
         
     var intervalVariable        = 
         setInterval( function(){
             var startPositionLeft   = Math.random() * documentWidth - 100,
+            	startPositionRight   = Math.random() * documentWidth - 10,
                 startOpacity        = 0.5 + Math.random(),
                 sizeFlake           = options.minSize + Math.random() * options.maxSize,
                 endPositionTop      = documentHeight - 40,
                 endPositionLeft     = startPositionLeft - 100 + Math.random() * 200,
                 durationFall        = documentHeight * 10 + Math.random() * 5000;
-            $flake
+            $flake1
                 .clone()
                 .appendTo('body')
                 .css(
@@ -385,6 +397,30 @@ function makeSnowAnimation(options)
                         $(this).remove()
                     }
                 );
+
+            $flake2
+                .clone()
+                .appendTo('body')
+                .css(
+                    {
+                        left: startPositionRight,
+                        opacity: startOpacity,
+                        'font-size': sizeFlake,
+                        color: 'red'
+                    }
+                )
+                .animate(
+                    {
+                        top: endPositionTop,
+                        left: endPositionLeft,
+                        opacity: 0.2
+                    },
+                    durationFall,
+                    'linear',
+                    function() {
+                        $(this).remove()
+                    }
+                );  
         }, options.newOn);
 
     return(intervalVariable);
