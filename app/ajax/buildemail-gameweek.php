@@ -368,7 +368,7 @@ $email = $email . $emailbottomwriteup;
 
 $email = $email . "
 <p> 
-Great effort by all! But remember Week $nextweek (Thursday) is upon us! So start thinking about what you want to pick!  
+Great effort by all! But remember Week $nextweek is upon us! So start thinking about what you want to pick!  
 </p>
 
 Click on http://daredevilducks.xyz to get make your picks!

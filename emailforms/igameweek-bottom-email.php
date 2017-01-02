@@ -4,7 +4,7 @@ $emailbottomwriteup = "
 <br />
 
 <p>
-<span  style='font-weight:bold;color:red;'>Note: All games this week are on Sunday!</span>
+<span  style='font-weight:bold;color:red;'>Note: Regular season is over. Playoffs start this Saturday and Sunday!</span>
 </p>
 
 <p>
@@ -14,6 +14,15 @@ $emailbottomwriteup = "
 
 <p>
 We added a Christmas tree at the bottom of our web page for both the Regular and Mobile websites. Clicking on the Christmas tree will start the snowfall animation. Clicking on the Christmass tree with the international symbol for NO on it will stop the animation! 
+</p>
+
+<p>
+<span  style='font-weight:bold;color:green;'>Fireworks Animation</span>
+</p>
+
+
+<p>
+Click on the <span style='font-weight:bold; color:blue;'>Home Page 2017 New Year</span> Image and you will get a pop up window with fireworks! Click anywhere outside the popup and the fireworks display will disappear.
 </p>
 
 <p>
