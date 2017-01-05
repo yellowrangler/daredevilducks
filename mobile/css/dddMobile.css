@@ -776,6 +776,13 @@ border: 0 none;
 	font-family:"Lusitana", Arial, Helvetica, sans-serif;
 }
 
+.ddd-footer-text-green {
+	font-style:italic;
+	font-weight:bold;
+	font-size:18px;
+	color:#74d680;  
+}
+
 /* ddd paragraph text large */
 .ddd-paragraph {
 	color:grey;

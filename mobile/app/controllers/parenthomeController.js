@@ -21,13 +21,26 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function letItSnow () 
     {
         if ($scope.isSnowing == 0)
-        {        
-            makeSnowAnimation({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#2ECC71' });
+        {
+            AnimateTextColor("letitsnowtext",
+                "Click Tree Stop Snow!",
+                "red",
+                500);
+            
+            var flakeObj =  { minSize: 10, maxSize: 40, newOn: 600, flakeColor1: '#2ECC71', flakeColor2: 'red'};
+            // var targetArea = "#ddd-view";
+            var targetArea = "body";
+            $scope.intervalVariable = makeSnowAnimation(flakeObj,targetArea);
 
             $scope.isSnowing = 1;
         }
         else
         {
+            AnimateTextColor("letitsnowtext",
+                "Click Tree Start Snow!",
+                "teal",
+                500);
+
             stopSnowAnimation();
             $scope.isSnowing = 0;
         }
@@ -39,57 +52,15 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         clearInterval($scope.intervalVariable); 
     }
 
-    function makeSnowAnimation(options)
-    {
-        var $flake          = $('<div id="flake" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
-            documentHeight  = $(document).height(),
-            documentWidth   = $(document).width(),
-            defaults        = {
-                                minSize     : 10,
-                                maxSize     : 20,
-                                newOn       : 500,
-                                flakeColor  : "#FFFFFF"
-                            },
-            options         = $.extend({}, defaults, options);
-            
-        $scope.intervalVariable        = 
-            setInterval( function(){
-                var startPositionLeft   = Math.random() * documentWidth - 100,
-                    startOpacity        = 0.5 + Math.random(),
-                    sizeFlake           = options.minSize + Math.random() * options.maxSize,
-                    endPositionTop      = documentHeight - 40,
-                    endPositionLeft     = startPositionLeft - 100 + Math.random() * 200,
-                    durationFall        = documentHeight * 10 + Math.random() * 5000;
-                $flake
-                    .clone()
-                    .appendTo('body')
-                    .css(
-                        {
-                            left: startPositionLeft,
-                            opacity: startOpacity,
-                            'font-size': sizeFlake,
-                            color: options.flakeColor
-                        }
-                    )
-                    .animate(
-                        {
-                            top: endPositionTop,
-                            left: endPositionLeft,
-                            opacity: 0.2
-                        },
-                        durationFall,
-                        'linear',
-                        function() {
-                            $(this).remove()
-                        }
-                    );
-            }, options.newOn);
-    }
 
     init();
     function init() {
         $scope.isSnowing = 0;
         $scope.intervalVariable = "";
+        AnimateTextColor("letitsnowtext",
+                "Click Tree Start Snow!",
+                "teal",
+                500);
 
         $scope.current = {};
 

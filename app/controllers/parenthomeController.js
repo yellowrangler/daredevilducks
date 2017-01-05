@@ -62,8 +62,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if ($scope.isSnowing == 0)
         {
             AnimateTextColor("letitsnowtext",
-                "Click the Tree to Turn off snow!",
-                "yellow",
+                "Click Tree Start snow!",
+                "red",
                 500);
             
             var flakeObj =  { minSize: 10, maxSize: 40, newOn: 600, flakeColor1: '#2ECC71', flakeColor2: 'red'};
@@ -76,7 +76,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         else
         {
             AnimateTextColor("letitsnowtext",
-                "Click the Tree to Turn on snow!",
+                "Click Tree Stop snow!",
                 "NavajoWhite",
                 500);
 
@@ -96,7 +96,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         $scope.isSnowing = 0;
         $scope.intervalVariable = "";
         AnimateTextColor("letitsnowtext",
-                "Click the Tree to Turn on snow!",
+                "Click Tree Start snow!",
                 "NavajoWhite",
                 500);
 
