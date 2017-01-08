@@ -820,3 +820,18 @@ border: 0 none;
     /*width: 500px;*/
     height: 300px;
 }
+
+.horizontalContainer {
+	font-size: 0; /* Required because inline-block elements have space between them. Other possible solutions for the problem: http://css-tricks.com/fighting... */
+	overflow: auto;
+	overflow-y: hidden;
+	white-space: nowrap; /* actually this line of code does the "magic" */
+	width: 100%;
+	height: 100%;
+}
+
+.horizontalContainer > article {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}

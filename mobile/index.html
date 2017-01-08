@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="..//css/dropzone/dropzone.css">
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
 <link href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700'|Damion|Pacifico|Lusitana|Balthazar|Josefin+Sans" type="text/css" rel="stylesheet" >
+<link href="css/fireworks.css" rel="stylesheet">
 <link href="css/dddMobile.css" rel="stylesheet" />
 
 <!-- Vendor Libs -->
@@ -56,6 +57,7 @@
 <script src="app/controllers/awardsController.js"></script>
 <script src="app/controllers/adminController.js"></script>
 <script src="app/controllers/faqsController.js"></script>
+<script src="app/controllers/fireworksController.js"></script>
 <script src="app/controllers/lastController.js"></script>
 <!-- factories  -->
 <script src="app/factories/loginfactory.js"></script>
@@ -87,19 +89,29 @@
 <div id="ddd-view" style="background:white;" data-ng-view="" class="topPagePosition"></div>
 
 <div class="ddd-footer" style="text-align:center;">
-    <a id="menubaravatarimage" name="menubaravatarimage" href="#/memberupdatemember">
-    <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="../img/avatars/{{memberavatar}}">
-    </a>
-    <br />
-    <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
+    <div class="horizontalContainer">
+        <article>
+            <a id="menubaravatarimage" name="menubaravatarimage" href="#/memberupdatemember">
+            <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="../img/avatars/{{memberavatar}}">
+            </a>
+            <br />
+            <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
+        </article>
 
-    <div style="padding-top:15px;padding-bottom:25px;">
-        <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
-            <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmastreeStop.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
-        </a>
+        <article>
+            <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
+                <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmastreeStop.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
+            </a>
 
-        <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext"></div>
-    </div>
+            <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext"></div>
+        </article>
+
+        <article>
+            <a href="#fireworks">
+                <img ng-src="../img/DonaldDuckNewYear2017HomeScrn.png" style="height:100px;text-align:center;" alt="Go Fireworks!"> 
+            </a>
+        </article>
+    </div> <!-- end of container -->
 
     <div style="padding-top:15px;padding-bottom:25px;">    
         <a href="#/faqs">
