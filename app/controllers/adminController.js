@@ -1345,7 +1345,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     function geteDynamiceMailTemplate(template)
     {
-        var gametype = 2;
+        var gametype = 1;
         var q = "week="+$scope.current.weekOverride+"&season="+$scope.current.season+"&gametype="+gametype+"&template="+template;
         membersFactory.buildeMailTemplate(q)
             .success( function(data) {

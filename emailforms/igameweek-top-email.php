@@ -9,26 +9,25 @@ Hi Folks,
 <br />
 
 <p>
-A necessary win for the Patriots. The boys from New England secured home field advantage through-out the playoffs! It was a tight game until a Damien Williams fortuitous fumble put any chance of a Dolphins comeback to bed. Gird your loins folks, because the playoffs have started! It is game on.
+The playoff gods have spoken! This week was not as competative as one would have hoped. Most games were a statement making beatdown. 
 </p>
 
 <p>
-The Steelers eeked out an overtime win over the Browns in a game that meant nothing other then pride. The Giants beat the Redskins out of the playoffs. The Broncos got some swager back in a meaningless game for them by spanking the quaterback-less Raiders. The Falcons beat the Saints, the Chiefs beat the Chargers and the Packers beat the Lions in a game that was supposed to feature a winner take all but instead found both allready in the playoffs. 
-</p> 
-
-<p>
-I can't believe the regular season is over. Can you? It feels like the year just started! But this is where the fun starts. I feel we have a good representation of the cream of the NFL. There are always exceptions; but as the soothsayer told Ceaser - be wary the exceptions of January/February! Ha ha!    
+The Car-less Raiders just could not get into gear to beat a very animic Texas team. The only person on the Lions team who showed up was the quaterback. Though there were some crucial questionable calls that went Seattle's way in that game (4th down scoring fasemask anyone?). The Steelers looked VERY scarey as they pumled the Dolphins. Elli Manning saw his heralded (well tanned - Ha) recievers unable to make big plays even when the ball hit them squarely on the hands. Rogers had no such problem - as the Packers quietly dispathched the Giants.
 </p>
 
 <p>
-We had another great turnout this week. Thank you all again for participating. Toothfairy continues her command of first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by 18 Wheeler and Wildcat Wonder in second place and Empty Nesters, Exploding Brain, NFL Amateur and Scotsman357 in third. 
+So now the real fun begins. Time for the cream of the NFL to get churned! Wildcat Wonder is working on the updated brackets as I write this. Same format next week - 2 games on Saturday and 2 games on Sunday.</p>
+
+<p>
+We had another great turnout this week. Thank you all again for participating. We have a 3 way tie as 18 Wheeler,  Toothfairy and Wildcat Wonder share first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! They are followed by Exploding Brain in second place and Empty Nesters and NFL Amateur in third. 
 </p>
 
 <p>
-Johor Tigress resilient as ever, jumped over Toothfairy to re-take command of first place (70.8%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by Toothfairy and 18 Wheeler.
+Johor Tigress retaines command of first place of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by 18 Wheeler in second and Exploding Brain in third.
 </p>
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have Kiver in first followed by Empty Nesters, Johor Tigress, Mouse Girl, Skinny and Summerville 5 in second and many others in third. Way to go folks! The stats are below. Read em and weep (I know I do)!
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have more folks then will fit on this line! Check them out fllowing! Way to go folks! The stats are below. Read em and weep (I know I do)!
 </p>  
 ";
 ?>
