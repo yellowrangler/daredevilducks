@@ -85,6 +85,7 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
                 } 
             }
         });
+ 
 
         //
         // this is not getting called at right time for definig top offset 
