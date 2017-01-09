@@ -347,15 +347,6 @@ controllers.loginController = function ($scope, $http, $location, $window, login
 }
 
 controllers.homeController = function ($scope, $http, $location, $window, $route, loginService) {
-    function newYearFireworks()
-    {
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        var fireworksWindowWidth = 600;
-        var left = (width - fireworksWindowWidth) / 2;
-        var windowSpecs = "menubar=n0,width="+fireworksWindowWidth+",height=500,top=100,left="+left;
-        window.open("Fireworks/", "Happy New Year!", windowSpecs);
-    }
 
     init();
     function init() {
@@ -384,10 +375,6 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
             $("#loginHomeButton").text("Login");
 
         // $route.reload();
-    }
-
-    $scope.newYearFireworks = function () {
-        newYearFireworks();
     }
 }
 
