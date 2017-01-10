@@ -25,7 +25,12 @@ dddAppMobile.config(function ($routeProvider) {
             {
                 controller: 'fireworksController',
                 templateUrl: 'app/partials/fireworks.html'
-            })               
+            })  
+        .when('/happyholidays',
+            {
+                controller: 'happyholidaysController',
+                templateUrl: 'app/partials/happyholidays.html'
+            })                   
         .when('/pickgames',
             {
                 controller: 'pickgames2Controller',
