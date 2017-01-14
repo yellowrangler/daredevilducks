@@ -68,6 +68,8 @@ else
 
 $msg = "Input variables: Season:$season weeksinregularseason:$weeksinregularseason weeksinplayoffseason: $weeksinplayoffseason<br />";
 
+$weeksinfullyear = $weeksinregularseason + $weeksinplayoffseason;
+
 //------------------------------------------------------
 // db admin user info
 //------------------------------------------------------
@@ -823,11 +825,52 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		}
 	}
+
+	//
+	// loop through playoff weeks
+	//
+	$start = "No start";
+	$week = $week - 1;
+	if ($week < $weeksinfullyear)
+	{
+		$start = $week;
+		for ($week = $start; $week <= $weeksinfullyear; $week++)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE teamweekstatstbl 
+				SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent,
+				hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
+				awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,			
+				conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
+				divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
+				season = $season, enterdate = '$enterdateTS' 
+				WHERE teamid = $teamid AND week = $week AND season = $season";
+
+				// debug
+				// echo "loopsql = $sql<br />";
+
+			$sql_r = @mysql_query($sql, $dbConn);
+			if (!$sql_r)
+			{
+			    $log = new ErrorLog("logs/");
+			    $sqlerr = mysql_error();
+			    $log->writeLog("SQL error: $sqlerr - Error doing update extending post season to db Unable to update team week stats.");
+			    $log->writeLog("SQL: $sql");
+
+			    $status = -27750;
+			    $msg = $msg . "System Error: $sqlerr <br /> Error doing update extending post season to db Unable to update team week stats . <br /> $sqlerr <br /> SQL: $sql";
+	    		exit($msg);
+			}
+
+		}
+	}
 		
 
 } // end of looping through teams
 
-$msg = $msg . "Totals Teams:$teamcount. <br />Weeks total: $weekstotal <br />Weeks run: $week <br />Weeks in regular Season: $weeksinregularseason";
+$msg = $msg . "Totals Teams:$teamcount. <br />Weeks total: $weekstotal <br />Weeks run: $week <br />Weeks in regular Season: $weeksinregularseason<br />Weeks in full Season: $weeksinfullyear";
 
 //
 // close db connection
