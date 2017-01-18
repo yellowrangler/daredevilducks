@@ -219,7 +219,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
                 break;  
 
             case "2016":
-                $scope.bracketimg = "NFLPlayOffBracketSuperbowl512017B.png";
+                $scope.bracketimg = "NFLPlayOffBracketSuperbowl512017C.png";
                 break;
 
             default:
