@@ -34,6 +34,7 @@
 <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
 <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
 <script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+<script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
     
 <!-- UI Libs -->
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
@@ -306,7 +307,7 @@
     </div> <!-- end of container fluid -->            
 </nav>
 
-<div id="ddd-view" style="padding-top:180px; background:white;" data-ng-view="" class="topPagePosition"></div>
+<div id="ddd-view" style="padding-top:180px; padding-bottom:120px;background:white;" data-ng-view="" class="topPagePosition"></div>
 
 <div class="ddd-footer">
 	<div class="container-fluid" style="padding-top:15px;">
@@ -358,8 +359,8 @@
             </div> <!-- end of col 4 -->
 
             <div style="padding-left:15px;padding-top:20px;" class="col-md-3">
-                <div style="padding-left:10px;" ng-show="memberavatar != ''" class="loginLink">
-                    <a style="color:lightgrey;" id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
+                <div style="padding:10px;" ng-show="memberavatar != ''" class="loginLink">
+                    <a style="padding:10px;border:2px solid lightgrey;color:lightgrey;" id="menubarlogin" name="menubarlogin" ng-click="loginlogoff()"></a>
                 </div> <!-- end of loginLink -->  
             </div>  
 

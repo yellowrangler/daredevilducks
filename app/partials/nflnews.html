@@ -27,28 +27,28 @@
         <div ng-repeat="nflnew in nflnews" class="panel panel-default">
           <div class="panel-body table-responsive">
             <table >
-              <tr style="padding:15px;">
+              <tr style="padding:20px;">
                 <td style="vertical-align:top">
-                  <div style="text-align:top;font-weight:bold; color:maroon;" >
+                  <div style="padding-right:5px;text-align:top;font-weight:bold; color:maroon;" >
                     Headline:
                   </div>
                 </td>
                 <td>  
                   <div style="color:teal;" >
-                    {{decodeRssString(nflnew.title)}}
+                    {{decodeRssString(nflnew.description)}}
                   </div>
                 </td> 
               </tr>
 
-              <tr style="padding:15px;">
+              <tr style="padding:20px;">
                 <td style="vertical-align:top">    
-                  <div style="text-align:top;font-weight:bold; color:maroon;" >
+                  <div style="padding-right:5px;text-align:top;font-weight:bold; color:maroon;" >
                     Published:
                   </div>
                 </td>
                 <td>
                   <div style="color:teal;" >
-                    {{nflnew.publishedDate}}
+                    {{nflnew.pubDate}}
                   </div>
                 </td>
               </tr>
@@ -68,7 +68,7 @@
 
     <div style="padding-bottom:25px;"  class="col-md-4">
       <div style="position:fixed;padding-right:20px;" class="floatingImgDiv" id="news-pic">
-        <img style="float:right;height:300px;padding-right:45px;"  class="centeredImage" ng-src="img/DonaldDuckChristmas2016NFLNews.png">
+        <img style="float:right;height:300px;padding-right:45px;"  class="centeredImage" ng-src="img/NFLNewsScrn2017.png">
       </div>
     </div> <!-- end of col 4 -->     
 </div> <!-- end of row -->

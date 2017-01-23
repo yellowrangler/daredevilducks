@@ -271,9 +271,18 @@ dddApp.factory('teamsFactory', function($q, $http) {
 
     factory.getNFLrss = function () {
         return $http({ 
-            type: 'POST', 
+            method: 'POST', 
             url: "app/ajax/getnflrss.php",
             // data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.getrss = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getrss.php",
+            data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }

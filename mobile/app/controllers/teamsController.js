@@ -1364,20 +1364,17 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
 
     function refreshNflNews()
     {
-        url = $scope.newsurl;
-        $.ajax({
-            type: "GET",
-            url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' + encodeURIComponent(url),
-            dataType: 'json',
-            error: function(){
-                alert('Unable to load feed, Incorrect path or invalid feed');
-            },
-            success: function(xml){
-                $scope.nflnews = xml.responseData.feed.entries; 
+        var url = $scope.newsurl;
 
-                $scope.$digest();
-            }
-        });
+        var data = "url=" + encodeURIComponent(url);
+        // var data = "url=" + url;
+        teamsFactory.getrss(data)
+            .success( function(data) {
+                $scope.nflnews = data.channel.item;
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
     }
 
     function loadNewsDetail(url, idx)
