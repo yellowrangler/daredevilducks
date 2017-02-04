@@ -62,7 +62,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         if ($scope.isSnowing == 0)
         {
             AnimateTextColor("letitsnowtext",
-                "Click Tree Start snow!",
+                "Click Tree Stop snow!",
                 "red",
                 500);
             
@@ -76,7 +76,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         else
         {
             AnimateTextColor("letitsnowtext",
-                "Click Tree Stop snow!",
+                "Click Tree Start snow!",
                 "NavajoWhite",
                 500);
 
