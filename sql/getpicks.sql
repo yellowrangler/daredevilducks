@@ -62,9 +62,22 @@ SELECT * FROM memberpickstbl WHERE season = 2016 and week = 1 and memberid = 42
 
 DELETE FROM memberpickstbl WHERE season = 2016 and week = 1 and memberid = 42
 
+-- Find mult picks for same teams games
 
+SELECT  memberid, COUNT(DISTINCT gamenbr)
+FROM memberpickstbl MP
+LEFT JOIN membertbl M on MP.memberid = M.id
+WHERE season = 2016 and week = 1
+GROUP BY memberid
+HAVING COUNT(DISTINCT gamenbr) > 1
 
+SELECT  memberid, membername, screenname, gamenbr, MP.id as memberpickid
+FROM memberpickstbl MP
+LEFT JOIN membertbl M on MP.memberid = M.id
+WHERE season = 2016 and week = 1 and memberid = 43
 
+SELECT * FROM memberpickstbl WHERE season = 2016 and week = 1 and memberid = 43 and id = 13792
+DELETE FROM memberpickstbl WHERE season = 2016 and week = 1 and memberid = 43
 
 
 

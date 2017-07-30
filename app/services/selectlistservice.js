@@ -39,6 +39,10 @@ dddApp.service('selectListService', function () {
             url : "welcome-new-season-email.html"
         },
         {  
+            title :  "Season Wrap Up",
+            url : "end-of-season-email.html"
+        },
+        {  
             title :  "Game week",
             url : "gameweek"
         },
