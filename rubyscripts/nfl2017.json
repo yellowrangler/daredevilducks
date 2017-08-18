@@ -1,0 +1,2106 @@
+[
+  {
+    "Week": "1",
+    "Day": "Thu",
+    "Date": "Sept 7",
+    "Visitor": "Chiefs",
+    "Home": "Patriots",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Jets",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Falcons",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Ravens",
+    "Home": "Bengals",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Steelers",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Cardinals",
+    "Home": "Lions",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Jaguars",
+    "Home": "Texans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Buccaneers",
+    "Home": "Dolphins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Raiders",
+    "Home": "Titans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Eagles",
+    "Home": "Redskins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Colts",
+    "Home": "Rams",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Seahawks",
+    "Home": "Packers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Panthers",
+    "Home": "49ers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Sun",
+    "Date": "Sept 10",
+    "Visitor": "Giants",
+    "Home": "Cowboys",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Mon",
+    "Date": "Sept 11",
+    "Visitor": "Saints",
+    "Home": "Vikings",
+    "Time": "7:10 PM"
+  },
+  {
+    "Week": "1",
+    "Day": "Mon",
+    "Date": "Sept 11",
+    "Visitor": "Chargers",
+    "Home": "Broncos",
+    "Time": "10:20 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Thu",
+    "Date": "Sept 14",
+    "Visitor": "Texans",
+    "Home": "Bengals",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Bills",
+    "Home": "Panthers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Cardinals",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Titans",
+    "Home": "Jaguars",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Eagles",
+    "Home": "Chiefs",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Patriots",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Vikings",
+    "Home": "Steelers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Browns",
+    "Home": "Ravens",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Bears",
+    "Home": "Buccaneers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Jets",
+    "Home": "Raiders",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Dolphins",
+    "Home": "Chargers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Cowboys",
+    "Home": "Broncos",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Redskins",
+    "Home": "Rams",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "49ers",
+    "Home": "Seahawks",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Sun",
+    "Date": "Sept 17",
+    "Visitor": "Packers",
+    "Home": "Falcons",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "2",
+    "Day": "Mon",
+    "Date": "Sept 18",
+    "Visitor": "Lions",
+    "Home": "Giants",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Thu",
+    "Date": "Sept 21",
+    "Visitor": "Rams",
+    "Home": "49ers",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Ravens",
+    "Home": "Jaguars",
+    "Time": "9:30 AM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Broncos",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Saints",
+    "Home": "Panthers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Steelers",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Browns",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Falcons",
+    "Home": "Lions",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Buccaneers",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Texans",
+    "Home": "Patriots",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Dolphins",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Giants",
+    "Home": "Eagles",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Seahawks",
+    "Home": "Titans",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Bengals",
+    "Home": "Packers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Chiefs",
+    "Home": "Chargers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Sun",
+    "Date": "Sept 24",
+    "Visitor": "Raiders",
+    "Home": "Redskins",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "3",
+    "Day": "Mon",
+    "Date": "Sept 25",
+    "Visitor": "Cowboys",
+    "Home": "Cardinals",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Thu",
+    "Date": "Sept 28",
+    "Visitor": "Bears",
+    "Home": "Packers",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Saints",
+    "Home": "Dolphins",
+    "Time": "9:30 AM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Bills",
+    "Home": "Falcons",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Bengals",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Rams",
+    "Home": "Cowboys",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Titans",
+    "Home": "Texans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Lions",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Panthers",
+    "Home": "Patriots",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Jaguars",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Steelers",
+    "Home": "Ravens",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "49ers",
+    "Home": "Cardinals",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Eagles",
+    "Home": "Chargers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Giants",
+    "Home": "Buccaneers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Raiders",
+    "Home": "Broncos",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Sun",
+    "Date": "Oct 1",
+    "Visitor": "Colts",
+    "Home": "Seahawks",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "4",
+    "Day": "Mon",
+    "Date": "Oct 2",
+    "Visitor": "Redskins",
+    "Home": "Chiefs",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Falcons, Broncos, Saints, Redskins"
+  },
+  {
+    "Week": "5",
+    "Day": "Thu",
+    "Date": "Oct 5",
+    "Visitor": "Patriots",
+    "Home": "Buccaneers",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Bills",
+    "Home": "Bengals",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Jets",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "49ers",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Panthers",
+    "Home": "Lions",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Titans",
+    "Home": "Dolphins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Chargers",
+    "Home": "Giants",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Cardinals",
+    "Home": "Eagles",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Jaguars",
+    "Home": "Steelers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Ravens",
+    "Home": "Raiders",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Seahawks",
+    "Home": "Rams",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Packers",
+    "Home": "Cowboys",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Sun",
+    "Date": "Oct 8",
+    "Visitor": "Chiefs",
+    "Home": "Texans",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "5",
+    "Day": "Mon",
+    "Date": "Oct 9",
+    "Visitor": "Vikings",
+    "Home": "Bears",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Bills, Bengals, Cowboys, Seahawks"
+  },
+  {
+    "Week": "6",
+    "Day": "Thu",
+    "Date": "Oct 12",
+    "Visitor": "Eagles",
+    "Home": "Panthers",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Dolphins",
+    "Home": "Falcons",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Browns",
+    "Home": "Texans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Packers",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Lions",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Patriots",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Bears",
+    "Home": "Ravens",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "49ers",
+    "Home": "Redskins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Buccaneers",
+    "Home": "Cardinals",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Rams",
+    "Home": "Jaguars",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Steelers",
+    "Home": "Chiefs",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Chargers",
+    "Home": "Raiders",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Sun",
+    "Date": "Oct 15",
+    "Visitor": "Giants",
+    "Home": "Broncos",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "6",
+    "Day": "Mon",
+    "Date": "Oct 16",
+    "Visitor": "Colts",
+    "Home": "Titans",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Lions, Texans"
+  },
+  {
+    "Week": "7",
+    "Day": "Thu",
+    "Date": "Oct 19",
+    "Visitor": "Chiefs",
+    "Home": "Raiders",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Buccaneers",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Panthers",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Titans",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Jaguars",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Saints",
+    "Home": "Packers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Jets",
+    "Home": "Dolphins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Ravens",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Bengals",
+    "Home": "Steelers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Cardinals",
+    "Home": "Rams",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Cowboys",
+    "Home": "49ers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Seahawks",
+    "Home": "Giants",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Broncos",
+    "Home": "Chargers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Sun",
+    "Date": "Oct 22",
+    "Visitor": "Falcons",
+    "Home": "Patriots",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "7",
+    "Day": "Mon",
+    "Date": "Oct 23",
+    "Visitor": "Redskins",
+    "Home": "Eagles",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Cardinals, Packers, Jaguars, Rams, Giants, Titans"
+  },
+  {
+    "Week": "8",
+    "Day": "Thu",
+    "Date": "Oct 26",
+    "Visitor": "Dolphins",
+    "Home": "Ravens",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Vikings",
+    "Home": "Browns",
+    "Time": "9:30 AM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Raiders",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Colts",
+    "Home": "Bengals",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Bears",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Chargers",
+    "Home": "Patriots",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Falcons",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "49ers",
+    "Home": "Eagles",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Panthers",
+    "Home": "Buccaneers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Texans",
+    "Home": "Seahawks",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Cowboys",
+    "Home": "Redskins",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Sun",
+    "Date": "Oct 29",
+    "Visitor": "Steelers",
+    "Home": "Lions",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "8",
+    "Day": "Mon",
+    "Date": "Oct 30",
+    "Visitor": "Broncos",
+    "Home": "Chiefs",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Bears, Browns, Chargers, Vikings, Patriots, Steelers"
+  },
+  {
+    "Week": "9",
+    "Day": "Thu",
+    "Date": "Nov 2",
+    "Visitor": "Bills",
+    "Home": "Jets",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Falcons",
+    "Home": "Panthers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Colts",
+    "Home": "Texans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Bengals",
+    "Home": "Jaguars",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Buccaneers",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Rams",
+    "Home": "Giants",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Ravens",
+    "Home": "Titans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Broncos",
+    "Home": "Eagles",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Redskins",
+    "Home": "Seahawks",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Cardinals",
+    "Home": "49ers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Chiefs",
+    "Home": "Cowboys",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Sun",
+    "Date": "Nov 5",
+    "Visitor": "Raiders",
+    "Home": "Dolphins",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "9",
+    "Day": "Mon",
+    "Date": "Nov 6",
+    "Visitor": "Lions",
+    "Home": "Packers",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Ravens, Chiefs, Raiders, Eagles"
+  },
+  {
+    "Week": "10",
+    "Day": "Thu",
+    "Date": "Nov 9",
+    "Visitor": "Seahawks",
+    "Home": "Cardinals",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Saints",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Packers",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Steelers",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Browns",
+    "Home": "Lions",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Chargers",
+    "Home": "Jaguars",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Bengals",
+    "Home": "Titans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Jets",
+    "Home": "Buccaneers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Vikings",
+    "Home": "Redskins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Texans",
+    "Home": "Rams",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Cowboys",
+    "Home": "Falcons",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Giants",
+    "Home": "49ers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Sun",
+    "Date": "Nov 12",
+    "Visitor": "Patriots",
+    "Home": "Broncos",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "10",
+    "Day": "Mon",
+    "Date": "Nov 13",
+    "Visitor": "Dolphins",
+    "Home": "Panthers",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "NA",
+    "Date": "NA",
+    "Visitor": "Bye",
+    "Home": "Bye",
+    "Time": "Panthers, Colts, Dolphins, Jets, 49ers, Buccaneers"
+  },
+  {
+    "Week": "11",
+    "Day": "Thu",
+    "Date": "Nov 16",
+    "Visitor": "Titans",
+    "Home": "Steelers",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Lions",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Jaguars",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Ravens",
+    "Home": "Packers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Cardinals",
+    "Home": "Texans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Rams",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Redskins",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Chiefs",
+    "Home": "Giants",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Bills",
+    "Home": "Chargers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Bengals",
+    "Home": "Broncos",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Patriots",
+    "Home": "Raiders",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Sun",
+    "Date": "Nov 19",
+    "Visitor": "Eagles",
+    "Home": "Cowboys",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "11",
+    "Day": "Mon",
+    "Date": "Nov 20",
+    "Visitor": "Falcons",
+    "Home": "Seahawks",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Thu",
+    "Date": "Nov 23",
+    "Visitor": "Vikings",
+    "Home": "Lions",
+    "Time": "12:30 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Thu",
+    "Date": "Nov 23",
+    "Visitor": "Chargers",
+    "Home": "Cowboys",
+    "Time": "4:30 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Thu",
+    "Date": "Nov 23",
+    "Visitor": "Giants",
+    "Home": "Redskins",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Buccaneers",
+    "Home": "Falcons",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Browns",
+    "Home": "Bengals",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Titans",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Bills",
+    "Home": "Chiefs",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Dolphins",
+    "Home": "Patriots",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Panthers",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Bears",
+    "Home": "Eagles",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Saints",
+    "Home": "Rams",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Seahawks",
+    "Home": "49ers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Jaguars",
+    "Home": "Cardinals",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Broncos",
+    "Home": "Raiders",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Sun",
+    "Date": "Nov 26",
+    "Visitor": "Packers",
+    "Home": "Steelers",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "12",
+    "Day": "Mon",
+    "Date": "Nov 27",
+    "Visitor": "Texans",
+    "Home": "Ravens",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Thu",
+    "Date": "Nov 30",
+    "Visitor": "Redskins",
+    "Home": "Cowboys",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Vikings",
+    "Home": "Falcons",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Patriots",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "49ers",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Buccaneers",
+    "Home": "Packers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Colts",
+    "Home": "Jaguars",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Broncos",
+    "Home": "Dolphins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Panthers",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Chiefs",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Texans",
+    "Home": "Titans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Lions",
+    "Home": "Ravens",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Browns",
+    "Home": "Chargers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Rams",
+    "Home": "Cardinals",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Giants",
+    "Home": "Raiders",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Sun",
+    "Date": "Dec 3",
+    "Visitor": "Eagles",
+    "Home": "Seahawks",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "13",
+    "Day": "Mon",
+    "Date": "Dec 4",
+    "Visitor": "Steelers",
+    "Home": "Bengals",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Thu",
+    "Date": "Dec 7",
+    "Visitor": "Saints",
+    "Home": "Falcons",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Colts",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Vikings",
+    "Home": "Panthers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Bears",
+    "Home": "Bengals",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Packers",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "49ers",
+    "Home": "Texans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Seahawks",
+    "Home": "Jaguars",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Raiders",
+    "Home": "Chiefs",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Lions",
+    "Home": "Buccaneers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Titans",
+    "Home": "Cardinals",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Jets",
+    "Home": "Broncos",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Redskins",
+    "Home": "Chargers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Cowboys",
+    "Home": "Giants",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Eagles",
+    "Home": "Rams",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Sun",
+    "Date": "Dec 10",
+    "Visitor": "Ravens",
+    "Home": "Steelers",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "14",
+    "Day": "Mon",
+    "Date": "Dec 11",
+    "Visitor": "Patriots",
+    "Home": "Dolphins",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Thu",
+    "Date": "Dec 14",
+    "Visitor": "Broncos",
+    "Home": "Colts",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sat",
+    "Date": "Dec 16",
+    "Visitor": "Bears",
+    "Home": "Lions",
+    "Time": "4:30 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sat",
+    "Date": "Dec 16",
+    "Visitor": "Chargers",
+    "Home": "Chiefs",
+    "Time": "8:25 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Dolphins",
+    "Home": "Bills",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Packers",
+    "Home": "Panthers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Ravens",
+    "Home": "Browns",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Texans",
+    "Home": "Jaguars",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Bengals",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Jets",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Eagles",
+    "Home": "Giants",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Cardinals",
+    "Home": "Redskins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Rams",
+    "Home": "Seahawks",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Patriots",
+    "Home": "Steelers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Titans",
+    "Home": "49ers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Sun",
+    "Date": "Dec 17",
+    "Visitor": "Cowboys",
+    "Home": "Raiders",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "15",
+    "Day": "Mon",
+    "Date": "Dec 18",
+    "Visitor": "Falcons",
+    "Home": "Buccaneers",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sat",
+    "Date": "Dec 23",
+    "Visitor": "Colts",
+    "Home": "Ravens",
+    "Time": "4:30 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sat",
+    "Date": "Dec 23",
+    "Visitor": "Vikings",
+    "Home": "Packers",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Buccaneers",
+    "Home": "Panthers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Browns",
+    "Home": "Bears",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Lions",
+    "Home": "Bengals",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Dolphins",
+    "Home": "Chiefs",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Falcons",
+    "Home": "Saints",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Bills",
+    "Home": "Patriots",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Chargers",
+    "Home": "Jets",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Rams",
+    "Home": "Titans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Broncos",
+    "Home": "Redskins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Jaguars",
+    "Home": "49ers",
+    "Time": "4:05 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Giants",
+    "Home": "Cardinals",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Sun",
+    "Date": "Dec 24",
+    "Visitor": "Seahawks",
+    "Home": "Cowboys",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Mon",
+    "Date": "Dec 25",
+    "Visitor": "Steelers",
+    "Home": "Texans",
+    "Time": "4:30 PM"
+  },
+  {
+    "Week": "16",
+    "Day": "Mon",
+    "Date": "Dec 25",
+    "Visitor": "Raiders",
+    "Home": "Eagles",
+    "Time": "8:30 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Panthers",
+    "Home": "Falcons",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Texans",
+    "Home": "Colts",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Packers",
+    "Home": "Lions",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Bills",
+    "Home": "Dolphins",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Bears",
+    "Home": "Vikings",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Jets",
+    "Home": "Patriots",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Redskins",
+    "Home": "Giants",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Jaguars",
+    "Home": "Titans",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Cowboys",
+    "Home": "Eagles",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Browns",
+    "Home": "Steelers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Bengals",
+    "Home": "Ravens",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Saints",
+    "Home": "Buccaneers",
+    "Time": "1:00 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Chiefs",
+    "Home": "Broncos",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "49ers",
+    "Home": "Rams",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Raiders",
+    "Home": "Chargers",
+    "Time": "4:25 PM"
+  },
+  {
+    "Week": "17",
+    "Day": "Sun",
+    "Date": "Dec 31",
+    "Visitor": "Cardinals",
+    "Home": "Seahawks",
+    "Time": "4:25 PM"
+  }
+]
