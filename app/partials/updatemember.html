@@ -33,7 +33,11 @@
               <div class="form-group">
                   <label for="role" class="col-md-2 control-label">Role</label>
                   <div class="col-md-3">
-                      <input tabindex="3" type="text" class="form-control" ng-model="current.role" id="role" name="role" placeholder="role">
+                    <select tabindex="3" class="form-control" ng-model="current.role" id="role" name="role" >
+                      <option value="Not Selected">Not Selected</option>
+                      <option value="member">member</option>
+                      <option value="admin">admin</option>
+                    </select>
                   </div>
               </div> <!-- end of form-group -->
 
@@ -59,14 +63,14 @@
               <div class="form-group">
                   <label for="city" class="col-md-2 control-label">City</label>
                   <div class="col-md-4">
-                      <input tabindex="7" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
+                      <input tabindex="6" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
                   </div>
               </div> <!-- end of form-group -->    
 
               <div class="form-group">
                   <label for="state" class="col-md-2 control-label">State</label>
                   <div class="col-md-4">
-                      <select class="form-control" ng-model="current.state" tabindex="8" name="state" id="state">
+                      <select class="form-control" ng-model="current.state" tabindex="7" name="state" id="state">
                         <option value="">Not Selected</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -124,28 +128,28 @@
 
                   <label for="zip" class="col-md-1 control-label">Zip</label>
                   <div class="col-md-2">
-                      <input tabindex="9" type="text" class="form-control" ng-model="current.zip" id="zip" name="zip" placeholder="Zip">
+                      <input tabindex="8" type="text" class="form-control" ng-model="current.zip" id="zip" name="zip" placeholder="Zip">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="phonenumber" class="col-md-2 control-label">Phone</label>
                   <div class="col-md-5">
-                      <input tabindex="10" type="text" class="form-control" ng-model="current.phonenumber" id="phonenumber" name="phonenumber" placeholder="Phone">
+                      <input tabindex="9" type="text" class="form-control" ng-model="current.phonenumber" id="phonenumber" name="phonenumber" placeholder="Phone">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="email" class="col-md-2 control-label">eMail</label>
                   <div class="col-md-5">
-                      <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
+                      <input tabindex="10" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                 <label for="favoriteteamid" class="col-md-2 control-label">Favorite Team</label>
                 <div class="col-md-5">
-                  <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                  <select tabindex="11" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
                       <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
                   </select>
                 </div>
@@ -154,32 +158,36 @@
               <div class="form-group">
                   <label for="biography" class="col-md-2 control-label">Biography</label>
                   <div class="col-md-7">
-                      <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
+                      <textarea tabindex="12" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="status" class="col-md-2 control-label">Status</label>
                   <div class="col-md-4">
-                      <input tabindex="15" type="text" class="form-control" ng-model="current.status" id="status" name="status" placeholder="Status">
+                      <select tabindex="13" class="form-control" ng-model="current.status" id="status" name="status" >
+                        <option value="Not Selected">Not Selected</option>
+                        <option value="active">active</option>
+                        <option value="inactive">inactive</option>
+                      </select>
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="passwd" class="col-md-2 control-label">Password</label>
                   <div class="col-md-4">
-                      <input tabindex="16" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
+                      <input tabindex="14" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
                   </div>
 
                   <div class="col-md-4">
-                      <input type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
+                      <input tabindex="15" type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="vpasswd" class="col-md-2 control-label">Verify</label>
                   <div class="col-md-4">
-                      <input tabindex="17" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
+                      <input tabindex="16" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
                   </div>
               </div> <!-- end of form-group -->
 
