@@ -92,12 +92,12 @@ class MailerDDD
 
         $mailbody = "<html>
                     <body>
-                    <div style='display:block;' id='headerlogo'>
+                    <div style='display:block;background-color:#f4a4a4;color:##6C0000;width:90%; height:100px;' id='headerlogo'>
                     <img style='float:left;' src='$this->logoimage' />
-                    <h2 style='float:left; padding-left:20px;'>Dare Devil Ducks League News</h2>
+                    <h2 style='float:left; padding-left:24px;'>Dare Devil Ducks League News</h2>
                     </div>
-                    <div style='padding-top:75px;clear:all;' id='messagebody'>
-                    <div>$this->msg</div>
+                    <div style='display:block;color:white;width:90%;padding-top:75px;clear:all;' id='messagebody'>
+                    $this->msg
                     </div>
                     </body>
                     </html>";
