@@ -132,21 +132,21 @@
               <div class="form-group">
                   <label for="phonenumber" class="col-md-2 control-label">Phone</label>
                   <div class="col-md-5">
-                      <input tabindex="10" type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone">
+                      <input tabindex="9" type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="email" class="col-md-2 control-label">eMail</label>
                   <div class="col-md-5">
-                      <input tabindex="9" type="email" class="form-control" id="email" name="email" placeholder="eMail">
+                      <input tabindex="10" type="email" class="form-control" id="email" name="email" placeholder="eMail">
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                 <label for="favoriteteamid" class="col-md-2 control-label">Favorite Team</label>
                 <div class="col-md-5">
-                  <select tabindex="10" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                  <select tabindex="11" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
                       <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
                   </select>
                 </div>
@@ -155,14 +155,14 @@
               <div class="form-group">
                   <label for="biography" class="col-md-2 control-label">Biography</label>
                   <div class="col-md-5">
-                      <textarea tabindex="11" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
+                      <textarea tabindex="12" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="status" class="col-md-2 control-label">Status</label>
                   <div class="col-md-5">
-                      <select tabindex="3" class="form-control" id="status" name="status" >
+                      <select tabindex="13" class="form-control" id="status" name="status" >
                         <option value="Not Selected">Not Selected</option>
                         <option value="active">active</option>
                         <option value="inactive">inactive</option>
@@ -173,18 +173,18 @@
               <div class="form-group">
                   <label for="passwd" class="col-md-2 control-label">Password</label>
                   <div class="col-md-5">
-                      <input tabindex="13" ng-model="current.passwd" type="password" class="form-control" id="passwd" name="passwd" placeholder="Password">
+                      <input tabindex="14" ng-model="current.passwd" type="password" class="form-control" id="passwd" name="passwd" placeholder="Password">
                   </div>
 
                   <div class="col-md-4">
-                      <input tabindex="14" type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
+                      <input tabindex="15" type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
                   </div>
               </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="vpasswd" class="col-md-2 control-label">Verify</label>
                   <div class="col-md-5">
-                      <input tabindex="14" type="password" class="form-control" id="vpasswd" name="vpasswd" placeholder="Password">
+                      <input tabindex="16" type="password" class="form-control" id="vpasswd" name="vpasswd" placeholder="Password">
                   </div>
               </div> <!-- end of form-group -->
           </div>
