@@ -94,9 +94,9 @@ class MailerDDD
                     <body>
                     <div style='display:block;margin:0 auto;padding:10px;width:95%;'>
 
-                    <div bgcolor='#f4a4a4' style='background-color:#f4a4a4;background:#f4a4a4;color:##6C0000;padding:10px;width:100%;height:65px' id='headerlogo'>
-                    <img style='float:left;padding-left:15px;padding-top:15px;' src='$this->logoimage' />
-                    <span style='float:left;font-size:20px;padding-left:24px;padding-top:25px;font-weight:bold;'>Dare Devil Ducks League News</span>
+                    <div style='background-color:#f4a4a4;padding:10px;width:100%;height:65px' id='headerlogo'>
+                    <img style='float:left;padding-left:15px;padding-top:10px;padding-top:10px;' src='$this->logoimage' />
+                    <span style='float:left;font-size:16px;padding-left:24px;padding-top:25px;font-weight:bold;color:##6C0000;'>Dare Devil Ducks League News</span>
                     </div>
 
                     <div style='clear:both;padding-top:15px;'>
