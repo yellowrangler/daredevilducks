@@ -128,7 +128,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
 
         $scope.teams = nflTeamsService.getNFLTeams(); 
         
-        membersFactory.getAllMembers()
+        membersFactory.getAllMembersAdmin()
             .success( function(data) {
                 $scope.members = data; 
             })
@@ -142,7 +142,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
     $scope.getAllMember = function(data) {
         var cleanData = encodeURIComponent(data);
         var membername = "membername="+cleanData;
-        membersFactory.getAllMember(membername)
+        membersFactory.getAllMemberAdmin(membername)
         .success( function(data) {
             $scope.current = data;
 
