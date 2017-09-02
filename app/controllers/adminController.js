@@ -1246,7 +1246,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         $("#scriptMessagesDisplay").html("");
 
         //
-        // run php 
+        // run gametimestamp 
         //
         sw.start();
         startTime = sw.getLocalTimeStart();

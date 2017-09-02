@@ -1195,30 +1195,30 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
-    function runPhpModule() 
+    function runGameTimeStampandYear() 
     {
         var data = "";
-        var moduleData = "";
+        var scriptData = "";
 
         $("#scriptMessagesDisplay").html("");
 
         //
-        // run php 
+        // run gametimestamp 
         //
         sw.start();
         startTime = sw.getLocalTimeStart();
 
-        $("#scriptMessagesDisplay").append("Start of PHP Modulel. Time:"+startTime+"<br />");
-        moduleData = "runphpmodule="+$scope.current.runphpmodule;
+        $("#scriptMessagesDisplay").append("Start of Create game timestamp and year. Time:"+startTime+"<br />");
+        scriptData = "season="+$scope.current.season;
 
-        scriptsFactory.runPhpModule(moduleData)
+        scriptsFactory.makeGameTimeStampandYear(scriptData)
         .success( function(data) {
             sw.stop();
             stopTime = sw.getLocalTimeStop();
             timeDiff = sw.getSecondsDiff();
 
             $("#scriptMessagesDisplay").append(data);
-            $("#scriptMessagesDisplay").append("<br />End of Run PHP Modulel. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+            $("#scriptMessagesDisplay").append("<br />End of Create game timestamp and year. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
         })
         .error( function(edata) {
             alert(edata);
@@ -1248,8 +1248,8 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         importTeamWeeklyRank();
     }
 
-    $scope.runPhpModule = function () {
-        runPhpModule();
+    $scope.runGameTimeStampandYear = function () {
+        runGameTimeStampandYear();
     }
 }
 
