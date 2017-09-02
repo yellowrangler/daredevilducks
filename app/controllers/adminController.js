@@ -1296,8 +1296,8 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         importTeamWeeklyRank();
     }
 
-    $scope.runPhpModule = function () {
-        runPhpModule();
+    $scope.runGameTimeStampandYear = function () {
+        runGameTimeStampandYear();
     }
 }
 
