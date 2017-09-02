@@ -1,10 +1,9 @@
 <?php
 
-$emailtopwriteup = "<div style='font-size:15px; font-style: normal; color:black;'>
+$emailtopwriteup = "
+<div style='padding-top:25px;font-size:16px; font-style: normal;color:black;'>
 
-<br />
-
-Hi Folks,
+Hi <span style='color:teal;'>All Daredevil Ducks members</span>,
 
 <br />
 

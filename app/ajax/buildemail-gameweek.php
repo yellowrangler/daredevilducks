@@ -353,7 +353,10 @@ $leaderweektable = $leaderweektable . "
 //
 mysql_close($dbConn);
 
-$email = "Daredevil Ducks - Week $week is over. Prepare for week $nextweek!\n";
+$email = "Daredevil Ducks - Week $week is over. Prepare for week $nextweek!\n
+<p>
+<span style='font-size:16px;font-style:normal;font-weight:bold;color:#6C0000;''>Daredevil Ducks - Week $week is over. Prepare for week $nextweek!</span>
+</p>";
 
 $email = $email . $emailtopwriteup;
 
@@ -371,19 +374,17 @@ $email = $email . "
 Great effort by all! But remember Week $nextweek is upon us! So start thinking about what you want to pick!  
 </p>
 
-Click on http://daredevilducks.xyz to get make your picks!
+Click on http://daredevilducks.xyz to get started!
 <br />
-Mobile devices  can click on http://yellowrangler.com. 
+Mobile devices can click on http://daredevilducksm.xyz
 <br />
 <br />
 
 AirDreamer & Wildcat Wonder
-
 </div>";
 
 //
 // pass back info
 //
 exit($email);
-
 ?>
