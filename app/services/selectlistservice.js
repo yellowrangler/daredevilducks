@@ -61,10 +61,6 @@ dddApp.service('selectListService', function () {
         {  
             title :  "Ooops Moment",
             url : "oops-email.html"
-        },
-        {  
-            title :  "IP Change",
-            url : "ipchange-email.html"
         }, 
         {  
             title :  "Site Problems",

@@ -4,11 +4,6 @@ $emailbottomwriteup = "
 <br />
 
 <p>
-<span  style='font-weight:bold;color:red;'>Note: Regular season is over. Playoffs are Sunday!</span>
-</p>
-
-
-<p>
 <span  style='font-weight:bold;color:green;'>Please set up your profile!</span>
 </p>
 

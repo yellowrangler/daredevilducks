@@ -8,10 +8,6 @@ Hi <span style='color:teal;'>All Daredevil Ducks members</span>,
 <br />
 
 <p>
-<span style='font-weight:bold; color:red;'>Someone fat fingered a score and that correction has changed our standings. That someone has been severely reprimanded and he promises to be more careful!</span>
-</p>
-
-<p>
 What a great week of playoffs! Now we enter into the final conference challenges from which will emerge our Super Bowl contenders!
 </p>
 
