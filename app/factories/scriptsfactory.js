@@ -73,10 +73,10 @@ dddApp.factory('scriptsFactory', function($q, $http) {
         })
     }
 
-    factory.runPhpModule = function (data) {
+    factory.makeGameTimeStampandYear = function (data) {
         return $http({ 
             method: 'POST', 
-            url: "app/ajax/runphpmodule.php",
+            url: "app/ajax/makegametimestamp.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
