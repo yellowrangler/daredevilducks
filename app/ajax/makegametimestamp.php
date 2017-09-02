@@ -1,5 +1,7 @@
 <?php
 
+echo "makegametimestamp started";
+
 //
 // get date time for this transaction
 //
@@ -19,6 +21,37 @@ $DBhost = "localhost";
 $DBschema = "ddd";
 $DBuser = "tarryc";
 $DBpassword = "tarryc";
+
+//------------------------------------------------------
+// get season
+//------------------------------------------------------
+$season = "";
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else if (isset($_GET["season"]))
+{
+	$season = $_GET["season"];
+}
+else 
+{
+	echo "No season passed - makegametimestamp terminated";
+	exit();
+}
+
+//------------------------------------------------------
+// validate season
+//------------------------------------------------------
+if (is_numeric($season))
+{
+	echo "season passed - $season";
+}
+else
+{
+	echo "Invalid season passed: $season - makegametimestamp terminated";
+	exit();
+}
 
 //
 // connect to db
@@ -42,7 +75,7 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 //---------------------------------------------------------------
 // Get game information
 //---------------------------------------------------------------
-$sql = "SELECT * FROM gamestbl";
+$sql = "SELECT * FROM gamestbl where season = '$season'";
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
 {
@@ -65,9 +98,13 @@ while($r = mysql_fetch_assoc($sql_result)) {
 	}
 
 	$gamedate = $r['gamedate'];
-	$season = $r['season'];	
+	// $season = $r['season'];	                  This was used when entire db was scanned now pass year
 	$dateYearArray = explode(" ", $gamedate);
 	if ($dateYearArray[0] == "Jan")
+	{
+		$year = $season + 1;
+	}
+	else if ($dateYearArray[0] == "Feb")
 	{
 		$year = $season + 1;
 	}
@@ -108,6 +145,7 @@ mysql_close($dbConn);
 //
 // pass back info
 //
+echo "makegametimestamp successful";
 exit();
 
 ?>
