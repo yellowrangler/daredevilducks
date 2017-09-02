@@ -1,7 +1,5 @@
 <?php
 
-echo "makegametimestamp started";
-
 //
 // get date time for this transaction
 //
@@ -46,7 +44,7 @@ else
 //------------------------------------------------------
 if (is_numeric($season))
 {
-	$msg = $msg . "season passed - $season <br />";
+	$msg = $msg . "season passed - $season <br /><br />";
 }
 else
 {
@@ -136,13 +134,13 @@ while($r = mysql_fetch_assoc($sql_result)) {
 	// echo "year:".$year."</br>";
 	
 	$datetime = $r['gamedate'] . " " . $year . " " .$gametime;
-	$msg = $msg . "datetime" . $datetime . " string<br/>"; 
+	$msg = $msg . "datetime: " . $datetime . " string<br/>"; 
 
 	$unixTS = strtotime($datetime);
-	$msg = $msg . "unixTS" . $unixTS . " unix<br/>"; 
+	$msg = $msg . "unixTS: " . $unixTS . " unix<br/>"; 
 
 	$mysqlTS = date("Y-m-d H:i:s", $unixTS);
-	$msg = $msg .  "mysqlTS" . $mysqlTS . " mysql<br/><br/>"; 
+	$msg = $msg .  "mysqlTS: " . $mysqlTS . " mysql<br/><br/>"; 
 
 	$gamedatetime = $mysqlTS;
 	$id = $r['id'];
