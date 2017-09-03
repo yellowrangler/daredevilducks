@@ -87,23 +87,23 @@ $weekend[15] = "Dec 26 2017";
 $weekgametypeid[15] = 2;
 
 $weekstart[16] = "Dec 28 2017";
-$weekend[16] = "Jan 1 2017";
+$weekend[16] = "Jan 1 2018";
 $weekgametypeid[16] = 2;
 
-$weekstart[17] = "Jan 6 2017";
-$weekend[17] = "Jan 8 2017";
+$weekstart[17] = "Jan 6 2018";
+$weekend[17] = "Jan 8 2018";
 $weekgametypeid[17] = 3;
 
-$weekstart[18] = "Jan 13 2017";
-$weekend[18] = "Jan 15 2017";
+$weekstart[18] = "Jan 13 2018";
+$weekend[18] = "Jan 15 2018";
 $weekgametypeid[18] = 3;
 
-$weekstart[19] = "Jan 21 2017";
-$weekend[19] = "Jan 22 2017";
+$weekstart[19] = "Jan 21 2018";
+$weekend[19] = "Jan 22 2018";
 $weekgametypeid[19] = 3;
 
-$weekstart[20] = "Feb 4 2017";
-$weekend[20] = "Feb 5 2017";
+$weekstart[20] = "Feb 4 2018";
+$weekend[20] = "Feb 5 2018";
 $weekgametypeid[20] = 3;
 
 //
