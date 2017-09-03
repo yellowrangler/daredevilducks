@@ -1150,7 +1150,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
                                 gw.stop();
                                 stopTime = gw.getLocalTimeStop();
                                 timeDiff = gw.getSecondsDiff();
-                                $("#scriptMessagesDisplay").append("<br /><br />End of Game Scripts. Total Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
+                                $("#scriptMessagesDisplay").append("<br /><br />End of Build Scripts. Total Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
                             })
                             .error( function(edata) {
                                 alert(edata);
@@ -1167,6 +1167,65 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
                 .error( function(edata) {
                     alert(edata);
                 });
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function runInitializeScripts() 
+    {
+        //
+        // initialize message variables and html space
+        //
+        var data = "";
+        var scriptData = "";
+
+        gw.start();
+        startTime = gw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").html("Start of Build Initialize Scripts. Time:"+startTime+"<br /><br />");
+
+        //
+        // run initialize team week stats
+        //
+        sw.start();
+        startTime = sw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").append("Start of Intialize Team Week Stats. Time:"+startTime+"<br />");
+
+        scriptData = "season="+$scope.current.season+"&weeksinregularseason="+$scope.current.weeksinregularseason+"&weeksinplayoffseason="+$scope.current.weeksinplayoffseason;
+        scriptsFactory.initializeTeamWeekStats(scriptData)
+        .success( function(data) {
+            sw.stop();
+            stopTime = sw.getLocalTimeStop();
+            timeDiff = sw.getSecondsDiff();  
+
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Intialize Team Week Stats. Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
+
+            //
+            // run initialize member week stats
+            //
+            sw.start();
+            startTime = sw.getLocalTimeStart();
+            $("#scriptMessagesDisplay").append("<br /><br />Start of Intialize Member Week Stats. Time:"+startTime+"<br />");
+
+            scriptData = "season="+$scope.current.season+"&weeksinregularseason="+$scope.current.weeksinregularseason+"&weeksinplayoffseason="+$scope.current.weeksinplayoffseason;
+            scriptsFactory.initializeMemberWeekStats(scriptData)
+            .success( function(data) {
+                sw.stop();
+                stopTime = sw.getLocalTimeStop();
+                timeDiff = sw.getSecondsDiff();
+                $("#scriptMessagesDisplay").append(data);
+                $("#scriptMessagesDisplay").append("<br />End of Intialize Member Week Stats. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+
+                gw.stop();
+                stopTime = gw.getLocalTimeStop();
+                timeDiff = gw.getSecondsDiff();
+                $("#scriptMessagesDisplay").append("<br /><br />End of Initialize Scripts. Total Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
             })
             .error( function(edata) {
                 alert(edata);
@@ -1286,6 +1345,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
     $scope.runGameScripts = function () {
         runGameScripts();
+    }
+
+    $scope.runInitializeScripts = function () {
+        runInitializeScripts();
     }
 
     $scope.buildMySqlDump = function () {
