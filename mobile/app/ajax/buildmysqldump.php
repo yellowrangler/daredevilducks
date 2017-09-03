@@ -26,7 +26,7 @@ else
 
 $mySqlStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd";
 $fileNameStr = "dbsql/dddm-dump-$dumpdatabaselabel.sql";
-$stderr = "dddm-error.err";
+$stderr = "dbsql/dddm-error.err";
 $execStr = $mySqlStr . " > " . $fileNameStr . " 2> " . $stderr;
 
 $return = null;
