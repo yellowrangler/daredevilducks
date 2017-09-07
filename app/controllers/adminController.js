@@ -1241,6 +1241,39 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
+    function getmemberpicklistscripts()
+    {
+        //
+        // initialize message variables and html space
+        //
+        var data = "";
+        var scriptData = "";
+
+        gw.start();
+        startTime = gw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").html("Start of Get Member Picks List Scripts. Time:"+startTime+"<br /><br />");
+
+        //
+        // run get member picks list
+        //
+        sw.start();
+        startTime = sw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").append("Start Get Member Picks List. Time:"+startTime+"<br />");
+
+        scriptData = "season="+$scope.current.season+"&week="+$scope.current.week;
+        scriptsFactory.getmemberpicklist(scriptData)
+        .success( function(data) {
+            sw.stop();
+            stopTime = sw.getLocalTimeStop();
+            timeDiff = sw.getSecondsDiff();
+
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Get Member Picks List. Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
 
     function buildMySqlDump()
     {
@@ -1354,6 +1387,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
     $scope.runInitializeScripts = function () {
         runInitializeScripts();
+    }
+
+    $scope.getmemberpicklistscripts = function () {
+        getmemberpicklistscripts();
     }
 
     $scope.buildMySqlDump = function () {

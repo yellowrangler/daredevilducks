@@ -45,7 +45,7 @@
 										<input type="text" ng-model="current.weeksinplayoffseason" class="form-control" id="systemscriptsweeksinplayoffseason" name="systemscriptsweeksinplayoffseason" placeholder="">
 									</div>
 								</div> <!-- end of form group -->
-								
+
 								<div class="form-group">
 									<div class="col-md-offset-4 col-md-5">
 										<button type="button" ng-click="runGameScripts()" id="systemscriptsbutton" name="systemscriptsbutton"  class="btn btn-primary">Run Game Scripts</button>
@@ -54,6 +54,100 @@
 							</div> <!-- end of panel body -->
 						</div> <!-- end of panel collapse -->
 					</form> <!-- end of form horizontal -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="getmemberpicklistscriptsForm" name="getmemberpicklistscriptsForm" class="form-horizontal">
+						<div style="background-color:#becee8;" class="panel-heading" id="getmemberpicklistscriptsheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#runinitializescript">
+								Get Member Pick List
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="getmemberpicklistscript" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="getmemberpicklistscriptseason">Season</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.season" class="form-control" id="getmemberpicklistscriptseason" name="getmemberpicklistscriptseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="getmemberpicklistscriptweek">Week</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.week" class="form-control" id="getmemberpicklistscriptweek" name="getmemberpicklistscriptweek" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="getmemberpicklistscripts()" id="getmemberpicklistscriptbutton" name="getmemberpicklistscriptbutton"  class="btn btn-primary">Get Member Picks List</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form horizontal -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="importteamweeklyrankForm" name="importteamweeklyrankForm" class="form-horizontal">
+						<div style="background-color:#FCE4DF;" class="panel-heading" id="importteamweeklyrankheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#importteamweeklyrank">
+								Import Team Weekly Ranking
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="importteamweeklyrank" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="importteamweeklyrankfile">Import File Name</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.importteamweeklyrankfile" class="form-control" id="importteamweeklyrankfile" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="importTeamWeeklyRank()" id="importteamweeklyrankbutton" class="btn btn-primary">Import File Name</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="dumpdatabaseForm" name="dumpdatabaseForm" class="form-horizontal">
+						<div style="background-color:#F0F0DB;" class="panel-heading" id="dumpdatabaseheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#dumpdatabase">
+								Dump Data Base
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="dumpdatabase" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="dumpdatabaselabel">Dump File Label</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.dumpdatabaselabel" class="form-control" id="dumpdatabaselabel" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="buildMySqlDump()" id="dumpdatabaselabelbutton" class="btn btn-primary">Dump Database</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form default -->
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
@@ -88,7 +182,7 @@
 										<input type="text" ng-model="current.weeksinplayoffseason" class="form-control" id="initializescriptsweeksinplayoffseason" name="initializescriptsweeksinplayoffseason" placeholder="">
 									</div>
 								</div> <!-- end of form group -->
-								
+
 								<div class="form-group">
 									<div class="col-md-offset-4 col-md-5">
 										<button type="button" ng-click="runInitializeScripts()" id="initializescriptsbutton" name="initializescriptsbutton"  class="btn btn-primary">Run Initialize Scripts</button>
@@ -97,64 +191,6 @@
 							</div> <!-- end of panel body -->
 						</div> <!-- end of panel collapse -->
 					</form> <!-- end of form horizontal -->
-					</div> <!-- end of panel default -->
-
-					<div class="panel panel-default">
-					<form id="importteamweeklyrankForm" name="importteamweeklyrankForm" class="form-horizontal">
-						<div style="background-color:#FCE4DF;" class="panel-heading" id="importteamweeklyrankheading">
-							<h3 class="panel-title">
-								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#importteamweeklyrank">
-								Import Team Weekly Ranking
-								</a>
-							</h3>
-						</div> <!-- end of panel header -->
-
-						<div id="importteamweeklyrank" class="panel-collapse collapse">
-							<div class="panel-body">
-								<div class="form-group">
-									<label class="col-md-4 control-label" for="importteamweeklyrankfile">Import File Name</label>
-									<div class="col-md-7">
-										<input type="text" ng-model="current.importteamweeklyrankfile" class="form-control" id="importteamweeklyrankfile" placeholder="">
-									</div>
-								</div> <!-- end of form group -->						
-								
-								<div class="form-group">
-									<div class="col-md-offset-4 col-md-5">
-										<button type="button" ng-click="importTeamWeeklyRank()" id="importteamweeklyrankbutton" class="btn btn-primary">Import File Name</button>
-									</div>
-								</div> <!-- end of form group -->
-							</div> <!-- end of panel body -->
-						</div> <!-- end of panel collapse -->	
-					</form> <!-- end of form default -->
-					</div> <!-- end of panel default -->
-
-					<div class="panel panel-default">
-					<form id="dumpdatabaseForm" name="dumpdatabaseForm" class="form-horizontal">
-						<div style="background-color:#F0F0DB;" class="panel-heading" id="dumpdatabaseheading">
-							<h3 class="panel-title">
-								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#dumpdatabase">
-								Dump Data Base
-								</a>
-							</h3>
-						</div> <!-- end of panel header -->
-
-						<div id="dumpdatabase" class="panel-collapse collapse">
-							<div class="panel-body">
-								<div class="form-group">
-									<label class="col-md-4 control-label" for="dumpdatabaselabel">Dump File Label</label>
-									<div class="col-md-5">
-										<input type="text" ng-model="current.dumpdatabaselabel" class="form-control" id="dumpdatabaselabel" placeholder="">
-									</div>
-								</div> <!-- end of form group -->						
-								
-								<div class="form-group">
-									<div class="col-md-offset-4 col-md-5">
-										<button type="button" ng-click="buildMySqlDump()" id="dumpdatabaselabelbutton" class="btn btn-primary">Dump Database</button>
-									</div>
-								</div> <!-- end of form group -->
-							</div> <!-- end of panel body -->
-						</div> <!-- end of panel collapse -->	
-					</form> <!-- end of form default -->
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
@@ -174,21 +210,21 @@
 									<div class="col-md-7">
 										<input type="text" ng-model="current.season" class="form-control" id="creategametimestampandyearseason" name="creategametimestampandyearseason" placeholder="">
 									</div>
-								</div> <!-- end of form group -->					
-								
+								</div> <!-- end of form group -->
+
 								<div class="form-group">
 									<div class="col-md-offset-4 col-md-5">
 										<button type="button" ng-click="runGameTimeStampandYear()" id="creategametimestampandyearbutton" class="btn btn-primary">Create Timestamp and Year</button>
 									</div>
 								</div> <!-- end of form group -->
 							</div> <!-- end of panel body -->
-						</div> <!-- end of panel collapse -->	
+						</div> <!-- end of panel collapse -->
 					</form> <!-- end of form default -->
 					</div> <!-- end of panel default -->
 
 				</div> <!-- end of panel group -->
 			</div> <!-- end of panel body -->
-		</div> <!-- end of panel primary -->						
+		</div> <!-- end of panel primary -->
 	</div> <!-- end of column -->
 
 	<!-- Detail Data -->
@@ -205,4 +241,4 @@
 			</div> <!-- end of panel body -->
 		</div> <!-- end of panel -->
 	</div> <!-- end of column -->
-</div> <!-- end of row -->	
+</div> <!-- end of row -->
