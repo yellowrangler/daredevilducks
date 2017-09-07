@@ -285,8 +285,9 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
                 //  reset variables
                 $scope.members = {};
 
-                $scope.current.favoriteteamid = "Not Selected";
+                $scope.current.favoriteteamid = 0;
                 $scope.current.biography = "";
+                $scope.current.passwd = "";
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name and Members added succesfully!");
@@ -1404,6 +1405,8 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 $('#eMailDialogModalTitle').text("eMail Status");
                 $('#eMailDialogModalLabelBody').html(textStr);
                 $('#eMailDialogModal').modal();
+
+                $scope.current.emailto = "";
             })
             .error( function(edata) {
                 alert(edata);
