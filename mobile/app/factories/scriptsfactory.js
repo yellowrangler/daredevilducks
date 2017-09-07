@@ -10,6 +10,15 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
         })
     }
 
+    factory.getmemberpicklist = function (data) {
+        return $http({
+            method: 'POST', 
+            url: "app/ajax/getmemberpicklist.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.initializeMemberWeekStats = function (data) {
         return $http({ 
             method: 'POST', 
