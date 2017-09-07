@@ -9,22 +9,48 @@ mysqldump --complete-insert --skip-extended-insert -u tarryc -p ddd > ddd-dump-0
 SELECT table_schema "Data Base Name", sum( data_length + index_length) / 1024 / 1024
 "Data Base Size in MB" FROM information_schema.TABLES GROUP BY table_schema ;
 
-SELECT  memberid, membername, COUNT(*) as picks
+SELECT memberid, membername, screenname, picks
+FROM QueryMember,
+(
+	SELECT memberid, membername, COUNT(*) as picks
+	FROM memberpickstbl MP
+	LEFT JOIN membertbl M on MP.memberid = M.id
+	WHERE season = 2017 and week = 1
+	GROUP BY membername, memberid
+
+	UNION
+
+	SELECT  DISTINCT id as memberid, membername, CAST('0' AS INT) as picks
+	FROM membertbl
+	WHERE id NOT IN
+	(
+		SELECT  memberid as id
+		FROM memberpickstbl MP
+		LEFT JOIN membertbl M on MP.memberid = M.id
+		WHERE season = 2017 and week = 1
+	)
+	AND status = 'active'
+)
+LEFT JOIN membertbl M on QueryMember.memberid = M.id
+
+
+
+SELECT memberid, membername, COUNT(*) as picks
 FROM memberpickstbl MP
 LEFT JOIN membertbl M on MP.memberid = M.id
-WHERE season = 2016 and week = 16
+WHERE season = 2017 and week = 1
 GROUP BY membername, memberid
 
-UNION 
+UNION
 
 SELECT  DISTINCT id as memberid, membername, CAST('0' AS INT) as picks
-FROM membertbl 
-WHERE id NOT IN 
+FROM membertbl
+WHERE id NOT IN
 (
 	SELECT  memberid as id
 	FROM memberpickstbl MP
 	LEFT JOIN membertbl M on MP.memberid = M.id
-	WHERE season = 2016 and week = 16
+	WHERE season = 2017 and week = 1
 )
 AND status = 'active'
 
@@ -32,4 +58,3 @@ AND status = 'active'
 SELECT * FROM memberpickstbl WHERE season = 2016 and week = 15 and memberid = 15
 
 DELETE FROM memberpickstbl WHERE season = 2016 and week = 15 and memberid = 15
-
