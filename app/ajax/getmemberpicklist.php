@@ -46,7 +46,7 @@ else
 	}
 }
 
-$msg = "Input variables: Season:$season week:$week<br />";
+$msg = "Input variables: Season:$season week:$week<br /><br />";
 
 //------------------------------------------------------
 // db admin user info
@@ -164,7 +164,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			$memberspicked = $memberspicked + 1;
 	}
 
-	$padLength = 5 - strlen($picks);
+	$padLength = 10 - strlen($picks);
 	$msg = $msg . "Picks: " . str_replace('~', '&nbsp;', str_pad($picks, $padLength, '~')) . "Member Name: $membername <br />";
 }
 
