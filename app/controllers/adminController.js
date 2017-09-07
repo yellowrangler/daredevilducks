@@ -1377,6 +1377,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         $scope.current.weeksinplayoffseason = 4;
         $scope.current.season = nflTeamsService.getCurrentSeason();
         $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();
+        $scope.current.week = nflTeamsService.getCurrentWeek();
 
         $scope.gametypes = nflTeamsService.getNFLGametypes();
     };
