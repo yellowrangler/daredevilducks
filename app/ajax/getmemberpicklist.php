@@ -164,7 +164,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			$memberspicked = $memberspicked + 1;
 	}
 
-	$msg = $msg . "Member Name: " . str_replace('~', '&nbsp;', str_pad($membername, 25, '~')) . " Picks: $picks <br />";
+	$padLength = strlen($picks) - 3;
+	$msg = $msg . "Picks: " . str_replace('~', '&nbsp;', str_pad($picks, $padLength, '~')) . "Member Name: $membername <br />";
 }
 
 $msg = $msg . "<br />Totals members:$totalmembers Members who picked:$memberspicked Members who did not pick:$membersdidnotpick.";
