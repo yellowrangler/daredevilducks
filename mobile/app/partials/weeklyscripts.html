@@ -59,41 +59,34 @@
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
-					<form id="runinitializescriptsForm" name="runinitializescriptsForm" class="form-horizontal">
-						<div style="background-color:#becee8;" class="panel-heading" id="runinitializescriptsheading">
+					<form id="getmemberpicklistscriptsForm" name="getmemberpicklistscriptsForm" class="form-horizontal">
+						<div style="background-color:#e8a096;" class="panel-heading" id="getmemberpicklistscriptsheading">
 							<h3 class="panel-title">
-								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#runinitializescript">
-								Run Initialize Scripts
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#getmemberpicklistscript">
+								Get Member Pick List
 								</a>
 							</h3>
 						</div> <!-- end of panel header -->
 
-						<div id="runinitializescript" class="panel-collapse collapse">
+						<div id="getmemberpicklistscript" class="panel-collapse collapse">
 							<div class="panel-body">
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="initializescriptsseason">Season</label>
+									<label class="col-md-4 control-label" for="getmemberpicklistscriptseason">Season</label>
 									<div class="col-md-5">
-										<input type="text" ng-model="current.season" class="form-control" id="initializescriptsseason" name="initializescriptsseason" placeholder="">
+										<input type="text" ng-model="current.season" class="form-control" id="getmemberpicklistscriptseason" name="getmemberpicklistscriptseason" placeholder="">
 									</div>
 								</div> <!-- end of form group -->
 
 								<div class="form-group">
-									<label class="col-md-4 control-label" for="initializescriptsweeksinregularseason">Regular Season Weeks</label>
+									<label class="col-md-4 control-label" for="getmemberpicklistscriptweek">Week</label>
 									<div class="col-md-5">
-										<input type="text" ng-model="current.weeksinregularseason" class="form-control" id="initializescriptsweeksinregularseason" name="initializescriptsweeksinregularseason" placeholder="">
+										<input type="text" ng-model="current.week" class="form-control" id="getmemberpicklistscriptweek" name="getmemberpicklistscriptweek" placeholder="">
 									</div>
 								</div> <!-- end of form group -->
 
-								<div class="form-group">
-									<label class="col-md-4 control-label" for="initializescriptsweeksinplayoffseason">Playoff Season Weeks</label>
-									<div class="col-md-5">
-										<input type="text" ng-model="current.weeksinplayoffseason" class="form-control" id="initializescriptsweeksinplayoffseason" name="initializescriptsweeksinplayoffseason" placeholder="">
-									</div>
-								</div> <!-- end of form group -->
-								
 								<div class="form-group">
 									<div class="col-md-offset-4 col-md-5">
-										<button type="button" ng-click="runInitializeScripts()" id="initializescriptsbutton" name="initializescriptsbutton"  class="btn btn-primary">Run Initialize Scripts</button>
+										<button type="button" ng-click="getmemberpicklistscripts()" id="getmemberpicklistscriptbutton" name="getmemberpicklistscriptbutton"  class="btn btn-primary">Get Member Picks List</button>
 									</div>
 								</div> <!-- end of form group -->
 							</div> <!-- end of panel body -->
@@ -157,6 +150,49 @@
 							</div> <!-- end of panel body -->
 						</div> <!-- end of panel collapse -->	
 					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
+					<form id="runinitializescriptsForm" name="runinitializescriptsForm" class="form-horizontal">
+						<div style="background-color:#becee8;" class="panel-heading" id="runinitializescriptsheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#runinitializescript">
+								Run Initialize Scripts
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="runinitializescript" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="initializescriptsseason">Season</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.season" class="form-control" id="initializescriptsseason" name="initializescriptsseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="initializescriptsweeksinregularseason">Regular Season Weeks</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.weeksinregularseason" class="form-control" id="initializescriptsweeksinregularseason" name="initializescriptsweeksinregularseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="initializescriptsweeksinplayoffseason">Playoff Season Weeks</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.weeksinplayoffseason" class="form-control" id="initializescriptsweeksinplayoffseason" name="initializescriptsweeksinplayoffseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+								
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="runInitializeScripts()" id="initializescriptsbutton" name="initializescriptsbutton"  class="btn btn-primary">Run Initialize Scripts</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form horizontal -->
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
