@@ -26,25 +26,23 @@ else
 	{
 		$msg = $msg . "No season passed - getmemberpicklist terminated";
 		exit($msg);
-
 	}
 }
 
 if (isset($_POST["week"]))
 {
-	week = $_POST["week"];
+	$week = $_POST["week"];
 }
 else
 {
 	if (isset($_GET["week"]))
 	{
-		week = $_GET["week"];
+		$week = $_GET["week"];
 	}
 	else
 	{
 		$msg = $msg . "No week passed - getmemberpicklist terminated";
 		exit($msg);
-
 	}
 }
 
