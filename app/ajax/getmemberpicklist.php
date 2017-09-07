@@ -164,7 +164,7 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			$memberspicked = $memberspicked + 1;
 	}
 
-	$padLength = strlen($picks) - 3;
+	$padLength = 5 - strlen($picks);
 	$msg = $msg . "Picks: " . str_replace('~', '&nbsp;', str_pad($picks, $padLength, '~')) . "Member Name: $membername <br />";
 }
 
