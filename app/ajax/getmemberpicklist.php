@@ -141,6 +141,12 @@ $phonenumber = "";
 $screenname = "";
 $picks = 0;
 
+$pickStrLength = 12 / 2;
+$membernameStrLength = 40 / 2;
+$picksStr = "Picks";
+$membernameStr = "Member Name";
+$msg = $msg . "&nbsp;" . str_replace('~', '&nbsp;', str_pad($picksStr, $pickStrLength, '~', STR_PAD_BOTH)) . str_replace('~', '&nbsp;', str_pad($membernameStr, $membernameStrLength, '~', STR_PAD_BOTH)) . "<br /><br />";
+
 while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	// count active members
@@ -164,8 +170,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			$memberspicked = $memberspicked + 1;
 	}
 
-	$padLength = 10 - strlen($picks);
-	$msg = $msg . "Picks: " . str_replace('~', '&nbsp;', str_pad($picks, $padLength, '~')) . "Member Name: $membername <br />";
+	$padLength = 12 - strlen($picks);
+	$msg = $msg . "&nbsp;&nbsp;" . str_replace('~', '&nbsp;', str_pad($picks, $padLength, '~')) . $membername . "<br />";
 }
 
 $msg = $msg . "<br />Totals members:$totalmembers Members who picked:$memberspicked Members who did not pick:$membersdidnotpick.";
