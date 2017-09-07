@@ -9,8 +9,8 @@ mysqldump --complete-insert --skip-extended-insert -u tarryc -p ddd > ddd-dump-0
 SELECT table_schema "Data Base Name", sum( data_length + index_length) / 1024 / 1024
 "Data Base Size in MB" FROM information_schema.TABLES GROUP BY table_schema ;
 
-SELECT memberid, membername, screenname, picks
-FROM QueryMember,
+SELECT memberid, QM.membername, screenname, picks
+FROM
 (
 	SELECT memberid, membername, COUNT(*) as picks
 	FROM memberpickstbl MP
@@ -30,8 +30,8 @@ FROM QueryMember,
 		WHERE season = 2017 and week = 1
 	)
 	AND status = 'active'
-)
-LEFT JOIN membertbl M on QueryMember.memberid = M.id
+) AS QM
+LEFT JOIN membertbl M on QM.memberid = M.id
 
 
 

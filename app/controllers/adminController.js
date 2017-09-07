@@ -2,14 +2,14 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
 
-        $scope.teams = nflTeamsService.getNFLTeams(); 
-        
+        $scope.teams = nflTeamsService.getNFLTeams();
+
         setviewpadding();
-        
+
     };
 
     $scope.addnewmember = function() {
@@ -19,7 +19,7 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         {
             // new code
             $scope.$parent.showAlert("Whoops!", "Passwords do not match!");
-             
+
             // alert ("Passwords do not match!")
 
         }
@@ -54,7 +54,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
@@ -63,7 +63,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
 
         membersFactory.getMembers()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.members = data;
             })
             .error( function(edata) {
                 alert(edata);
@@ -81,7 +81,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
                     if (response == "ok")
                     {
                         $scope.current.avatar = file.name;
-                        
+
                         var data = 'avatar='+file.name+'&memberid='+$scope.current.id;
                         membersFactory.saveMemberAvatar(data)
                             .success( function(data) {
@@ -99,13 +99,13 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
                     {
                         alert("Avatar "+file.name+" must be JPG, JPEG, PNG & GIF. Try again.");
                     }
-                    else 
+                    else
                     {
                         alert("Avatar System error: "+response);
                     }
                   }
             }
-          };   
+          };
     };
 
     $scope.getMember = function(data) {
@@ -125,7 +125,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
         .error( function(edata) {
             alert(edata);
         });
-    
+
     }
 }
 
@@ -135,20 +135,20 @@ controllers.updatememberController = function ($scope, $http, $location, members
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
 
-        $scope.teams = nflTeamsService.getNFLTeams(); 
-        
+        $scope.teams = nflTeamsService.getNFLTeams();
+
         membersFactory.getAllMembersAdmin()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.members = data;
             })
             .error( function(edata) {
                 alert(edata);
-            });   
+            });
     };
 
     $scope.getAllMember = function(data) {
@@ -168,7 +168,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
         .error( function(edata) {
             alert(edata);
         });
-    
+
     }
 
     $scope.updatenewmember = function() {
@@ -178,7 +178,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
         {
             // new code
             $scope.$parent.showAlert("Whoops!", "Passwords do not match!");
-             
+
             // alert ("Passwords do not match!")
 
         }
@@ -227,8 +227,8 @@ controllers.updatememberController = function ($scope, $http, $location, members
 }
 
 controllers.addmembergroupController = function ($scope, $http, $location, membersFactory) {
-    
-    function deleteMemberGroupMember(membergroupmember) 
+
+    function deleteMemberGroupMember(membergroupmember)
     {
         $.each($scope.membergroupmembers, function(i){
             if($scope.membergroupmembers[i].id === membergroupmember.id) {
@@ -238,31 +238,31 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
         });
     }
 
-    function initMemberGroups() 
+    function initMemberGroups()
     {
         $scope.membergroupmembers =  [
-            { 
-                id: "1", 
-                memberid: "0" 
+            {
+                id: "1",
+                memberid: "0"
             }
         ];
 
         membersFactory.getAllMembers()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.members = data;
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
     }
 
     init();
     function init() {
-        
-        initMemberGroups(); 
-        
+
+        initMemberGroups();
+
         setviewpadding();
-        
+
     };
 
     $scope.addnewmembergroup = function(membergroupmembers) {
@@ -282,7 +282,9 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
             }
             else
             {
-                $scope.members = {}; 
+                $scope.members = {};
+
+                $scope.current.favoriteteamid = "Not Selected";
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name and Members added succesfully!");
@@ -308,7 +310,7 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
         .error( function(edata) {
             alert(edata);
         });
-    
+
     }
 
     $scope.addNewMemberGroupMember = function() {
@@ -323,7 +325,7 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
     $scope.showMemberGroupMemberLabel = function(membergroupmember) {
         if (membergroupmember.id == 1)
             return true;
-        else 
+        else
             return false;
     };
 
@@ -338,9 +340,9 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
 }
 
 controllers.updatemembergroupController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
-    
+
     function updatemembergroup() {
-        
+
         var formstring = $("#updatemembergroupForm").serialize();
         var formstringClean = encodeURIComponent(formstring);
         membersFactory.updateMemberGroup(formstring)
@@ -407,7 +409,7 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         });
     }
 
-    function deleteMemberGroupMember(membergroupmember) 
+    function deleteMemberGroupMember(membergroupmember)
     {
         $.each($scope.membergroupmembers, function(i){
             if($scope.membergroupmembers[i].id === membergroupmember.id) {
@@ -422,7 +424,7 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         $scope.membergroupmembers.push({'id':newItemNo});
     };
 
-    function getAllMemberGroupsAndMembers(groupid) 
+    function getAllMemberGroupsAndMembers(groupid)
     {
         var cleanData = encodeURIComponent(groupid);
         var membergroupid = "membergroupid="+cleanData;
@@ -459,18 +461,18 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
             })
             .error( function(edata) {
                 alert(edata);
-            });      
+            });
         })
         .error( function(edata) {
             alert(edata);
         });
-    
+
     }
 
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
@@ -478,27 +480,27 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         $scope.current = {};
         $scope.membergroupmeberslist = {};
         $scope.membergroupmembers =  [
-            { 
-                id: "0", 
-                memberid: "0"  
+            {
+                id: "0",
+                memberid: "0"
             }
         ];
-        
+
         membersFactory.getAllMemberGroups()
             .success( function(data) {
-                $scope.membergroups = data; 
+                $scope.membergroups = data;
             })
             .error( function(edata) {
                 alert(edata);
-            });   
+            });
 
         membersFactory.getAllMembers()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.members = data;
             })
             .error( function(edata) {
                 alert(edata);
-            });     
+            });
     };
 
     $scope.getMemberGroupMemberSelectedId = function(row, selectmemberid) {
@@ -520,14 +522,14 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
     $scope.showMemberGroupMemberLabel = function(membergroupmember) {
         if (membergroupmember.id == 1)
             return true;
-        else 
+        else
             return false;
     };
 
     $scope.showMemberGroupMemberSelect = function(membergroupmember) {
         if (membergroupmember.id == 0)
             return false;
-        else 
+        else
             return true;
     }
 
@@ -567,14 +569,14 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
 
         var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
-        $scope.postseasonstatuses = postseasonstatuses; 
-        
+        $scope.postseasonstatuses = postseasonstatuses;
+
        $scope.gridOptionsTeams = {
             showGridFooter: true,
             // showColumnFooter: true,
@@ -596,61 +598,61 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                     if (row.isSelected)
                     {
                         // if row is seleted ad information to current team
-                        $scope.current.name = row.entity["name"]; 
-                        $scope.current.conference = row.entity["conference"];                
+                        $scope.current.name = row.entity["name"];
+                        $scope.current.conference = row.entity["conference"];
                         $scope.current.division = row.entity["division"];
 
                         // fill in data from hidden fields
                         $scope.current.teamid = row.entity["id"];
                         $scope.current.league = row.entity["league"];
-                        $scope.current.location = row.entity["location"]; 
+                        $scope.current.location = row.entity["location"];
                         $scope.current.city = row.entity["city"];
-                        $scope.current.state = row.entity["state"];                                                                                               
+                        $scope.current.state = row.entity["state"];
                         $scope.current.teamiconname = row.entity["teamiconname"];
-                        $scope.current.teamorder = row.entity["teamorder"];  
-                        $scope.current.teamurl = row.entity["teamurl"];   
-                        $scope.current.status = row.entity["status"];                         
+                        $scope.current.teamorder = row.entity["teamorder"];
+                        $scope.current.teamurl = row.entity["teamurl"];
+                        $scope.current.status = row.entity["status"];
                     }
                     else
                     {
                         // if row is unseleted remove from current team
-                        $scope.current.name = ""; 
-                        $scope.current.conference = ""; 
-                        $scope.current.division = ""; 
+                        $scope.current.name = "";
+                        $scope.current.conference = "";
+                        $scope.current.division = "";
 
                         // clear data from hidden fields
-                        $scope.current.teamid = ""; 
-                        $scope.current.league = "";                         
-                        $scope.current.location = ""; 
+                        $scope.current.teamid = "";
+                        $scope.current.league = "";
+                        $scope.current.location = "";
                         $scope.current.city = "";
-                        $scope.current.state = "";                         
-                        $scope.current.teamiconname = ""; 
-                        $scope.current.teamorder = "";  
-                        $scope.current.teamurl = "";    
-                        $scope.current.status = "";  
-                    }        
+                        $scope.current.state = "";
+                        $scope.current.teamiconname = "";
+                        $scope.current.teamorder = "";
+                        $scope.current.teamurl = "";
+                        $scope.current.status = "";
+                    }
                 })
             },
             columnDefs: [
                 // default
-                { field: "teamiconname",    
+                { field: "teamiconname",
                     cellTemplate: '<img height="25" ng-src="img/nflicons/{{ COL_FIELD }}" >',
-                    displayName: " ", 
+                    displayName: " ",
                     width: '10%',
                     headerCellClass: $scope.highlightFilteredHeader },
-                { field: "location", 
+                { field: "location",
                     displayName: "Location", width: '25%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: "name", 
+                { field: "name",
                     displayName: "Team", width: '25%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: "conference", 
+                { field: "conference",
                     displayName: "Conf", width: '20%', headerCellClass: $scope.highlightFilteredHeader },
-                { field: "division", 
+                { field: "division",
                     displayName: "Div", width: '20%', headerCellClass: $scope.highlightFilteredHeader }
             ]
         }
 
         var nflteams = nflTeamsService.getNFLTeams();
-        $scope.nflteam = nflteams; 
+        $scope.nflteam = nflteams;
         $scope.gridOptionsTeams.data = nflteams;
     };
 
@@ -674,7 +676,7 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
                 })
                 .error( function(edata) {
                     alert(edata);
-                });  
+                });
             }
         })
         .error( function(edata) {
@@ -720,32 +722,32 @@ controllers.teamseasoninfoController  = function ($scope, $http, $log, $location
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
 
         $scope.postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
-        $scope.teams = nflTeamsService.getNFLTeams(); 
+        $scope.teams = nflTeamsService.getNFLTeams();
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
         teamsFactory.getCurrentSeasonWeek()
         .success( function(data) {
-            $scope.current.season = data.season; 
+            $scope.current.season = data.season;
         })
 
         .error( function(edata) {
             alert(edata);
-        });   
+        });
 
     }
 
     $scope.updateTeamSeasonInfoRequest = function () {
-        updateTeamSeasonInfoRequest(); 
+        updateTeamSeasonInfoRequest();
     }
 
     $scope.showTeamSeasonInfoRequest = function () {
-        showTeamSeasonInfoRequest(); 
+        showTeamSeasonInfoRequest();
     }
 }
 
@@ -767,15 +769,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
-        
+
         // get nfl team data
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
-        $scope.networks = nflTeamsService.getNFLnetworks();        
+        $scope.networks = nflTeamsService.getNFLnetworks();
 
         $scope.gridOptionsGames = {
             showGridFooter: true,
@@ -798,17 +800,17 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                     if (row.isSelected)
                     {
                         // if row is seleted ad information to current team
-                        $scope.current.season = row.entity["season"]; 
-                        $scope.current.week = row.entity["week"];                
+                        $scope.current.season = row.entity["season"];
+                        $scope.current.week = row.entity["week"];
                         $scope.current.gamenbr = row.entity["gamenbr"];
-                        $scope.current.gamedate = row.entity["gamedate"];  
-                        $scope.current.gameyear = row.entity["gameyear"];  
-                        $scope.current.hometeamname = row.entity["hometeamname"];   
-                        $scope.current.awayteamname = row.entity["awayteamname"]; 
-                        $scope.current.gametype = row.entity["gametype"]; 
+                        $scope.current.gamedate = row.entity["gamedate"];
+                        $scope.current.gameyear = row.entity["gameyear"];
+                        $scope.current.hometeamname = row.entity["hometeamname"];
+                        $scope.current.awayteamname = row.entity["awayteamname"];
+                        $scope.current.gametype = row.entity["gametype"];
 
                         // fill in data from hidden fields
-                        $scope.current.teamid = row.entity["id"];   
+                        $scope.current.teamid = row.entity["id"];
                         $scope.current.league = row.entity["league"];
                         $scope.current.division = row.entity["division"];
                         $scope.current.conference = row.entity["conference"];
@@ -816,17 +818,17 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                         $scope.current.gametime = row.entity["gametime"];
                         $scope.current.hometeamid = row.entity["hometeamid"];
                         $scope.current.awayteamid = row.entity["awayteamid"];
-                        $scope.current.hometeamscore = row.entity["hometeamscore"];  
-                        $scope.current.awayteamscore = row.entity["awayteamscore"];   
-                        $scope.current.gameday = row.entity["gameday"];  
-                        $scope.current.teamiconname = row.entity["teamiconname"]; 
-                        $scope.current.gametypeid = row.entity["gametypeid"]; 
+                        $scope.current.hometeamscore = row.entity["hometeamscore"];
+                        $scope.current.awayteamscore = row.entity["awayteamscore"];
+                        $scope.current.gameday = row.entity["gameday"];
+                        $scope.current.teamiconname = row.entity["teamiconname"];
+                        $scope.current.gametypeid = row.entity["gametypeid"];
                     }
                     else
                     {
                         // if row is unseleted remove from current team
-                        $scope.current.season = ""; 
-                        $scope.current.week = "";                
+                        $scope.current.season = "";
+                        $scope.current.week = "";
                         $scope.current.gamenbr = "";
                         $scope.current.gamedate = "";
                         $scope.current.gameyear = "";
@@ -836,13 +838,13 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
                         // clear data from hidden fields
                         $scope.current.teamid = "";
-                        $scope.current.league = "";                        
+                        $scope.current.league = "";
                         $scope.current.division = "";
-                        $scope.current.conference = "";   
-                        $scope.current.networkid = ""; 
-                        $scope.current.gametime = "";                        
+                        $scope.current.conference = "";
+                        $scope.current.networkid = "";
+                        $scope.current.gametime = "";
                         $scope.current.hometeamid = "";
-                        $scope.current.awayteamid = "";                                             
+                        $scope.current.awayteamid = "";
                         $scope.current.hometeamscore = "";
                         $scope.current.awayteamscore = "";
                         $scope.current.gameday = "";
@@ -854,26 +856,26 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                     // If yes then show link button
                     //
                     // showLinkButtonCheck();
-            
+
                 })
             },
             columnDefs: [
                 // default
-                { field: "season", 
+                { field: "season",
                     displayName: "Season", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "week", 
+                { field: "week",
                     displayName: "Week", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "gamenbr", 
+                { field: "gamenbr",
                     displayName: "Nbr", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "gamedate", 
+                { field: "gamedate",
                     displayName: "Date", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "gameyear", 
-                    displayName: "Year", headerCellClass: $scope.highlightFilteredHeader },    
-                { field: "hometeamname", 
+                { field: "gameyear",
+                    displayName: "Year", headerCellClass: $scope.highlightFilteredHeader },
+                { field: "hometeamname",
                     displayName: "Home", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "awayteamname", 
+                { field: "awayteamname",
                     displayName: "Away", headerCellClass: $scope.highlightFilteredHeader },
-                { field: "gametype", 
+                { field: "gametype",
                     displayName: "Type", headerCellClass: $scope.highlightFilteredHeader }
             ]
         }
@@ -886,10 +888,10 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
                 $scope.gridApi.grid.columns[1].filters[0] = {
                     term: $scope.current.week
-                  }; 
+                  };
 
                 // $scope.gridOptionsGames.colFilter.term = $scope.current.season;
-                $scope.nflgames = data; 
+                $scope.nflgames = data;
                 $scope.gridOptionsGames.data = data;
             })
             .error( function(edata) {
@@ -911,7 +913,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             {
                 teamsFactory.getNFLGamesTeams($scope.current.season)
                 .success( function(data) {
-                    $scope.nflgames = data; 
+                    $scope.nflgames = data;
                     $scope.gridOptionsGames.data = data;
                 })
                 .error( function(edata) {
@@ -926,7 +928,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             alert(edata);
         });
     }
-    
+
     $scope.newGameInfo = function () {
         var formstring = $("#gameForm").serialize();
 
@@ -949,7 +951,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     $scope.Delete = function () {
         alert("You be submitting delete request");
-    } 
+    }
 
 }
 
@@ -988,35 +990,35 @@ controllers.gamerankingController = function ($scope, $http, $location, membersF
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
-            
+
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
         teamsFactory.getNFLTeamseasonweeks($scope.current.season)
         .success( function(data) {
-            $scope.weeks = data; 
+            $scope.weeks = data;
 
             teamsFactory.getCurrentSeasonWeek()
                 .success( function(data) {
-                    $scope.current.season = data.season; 
+                    $scope.current.season = data.season;
                     $scope.current.week = data.week;
 
                     getAdminTeamWeeklyRanking ();
                 })
                 .error( function(edata) {
                     alert(edata);
-                }); 
+                });
         })
         .error( function(edata) {
             alert(edata);
         });
-     
+
     };
 
-    
+
     $scope.saveWeeklyRankings = function() {
         saveWeeklyRankings();
     }
@@ -1024,7 +1026,7 @@ controllers.gamerankingController = function ($scope, $http, $location, membersF
     $scope.getAdminTeamWeeklyRanking = function () {
         getAdminTeamWeeklyRanking();
     }
-    
+
 }
 
 controllers.weeklyscriptsController = function ($scope, $http, $location, teamsFactory, nflTeamsService, scriptsFactory) {
@@ -1036,7 +1038,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
     var stopTime = 0;
     var timeDiff = 0;
 
-    function runGameScripts() 
+    function runGameScripts()
     {
         //
         // initialize message variables and html space
@@ -1060,7 +1062,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         .success( function(data) {
             sw.stop();
             stopTime = sw.getLocalTimeStop();
-            timeDiff = sw.getSecondsDiff();  
+            timeDiff = sw.getSecondsDiff();
 
             $("#scriptMessagesDisplay").append(data);
             $("#scriptMessagesDisplay").append("<br />End of Intialize Team Week Stats. Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
@@ -1177,7 +1179,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
-    function runInitializeScripts() 
+    function runInitializeScripts()
     {
         //
         // initialize message variables and html space
@@ -1201,7 +1203,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         .success( function(data) {
             sw.stop();
             stopTime = sw.getLocalTimeStop();
-            timeDiff = sw.getSecondsDiff();  
+            timeDiff = sw.getSecondsDiff();
 
             $("#scriptMessagesDisplay").append(data);
             $("#scriptMessagesDisplay").append("<br />End of Intialize Team Week Stats. Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
@@ -1237,7 +1239,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
     }
 
 
-    function buildMySqlDump() 
+    function buildMySqlDump()
     {
         var data = "";
         var scriptData = "";
@@ -1267,7 +1269,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
-    function importTeamWeeklyRank() 
+    function importTeamWeeklyRank()
     {
         var data = "";
         var scriptData = "";
@@ -1297,7 +1299,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
-    function runGameTimeStampandYear() 
+    function runGameTimeStampandYear()
     {
         var data = "";
         var scriptData = "";
@@ -1305,7 +1307,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         $("#scriptMessagesDisplay").html("");
 
         //
-        // run gametimestamp 
+        // run gametimestamp
         //
         sw.start();
         startTime = sw.getLocalTimeStart();
@@ -1330,15 +1332,15 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
-        
+
         $scope.current.weeksinregularseason = 17;
         $scope.current.weeksinplayoffseason = 4;
-        $scope.current.season = nflTeamsService.getCurrentSeason();   
-        $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();     
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();
 
         $scope.gametypes = nflTeamsService.getNFLGametypes();
     };
@@ -1393,7 +1395,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     function sendeMailForm() {
         var data = $("#dddeMailForm").serialize();
-        
+
         membersFactory.sendeMail2Members(data)
             .success( function(rv) {
                 var textStr = rv;
@@ -1403,7 +1405,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
     }
 
     function geteDynamiceMailTemplate(template)
@@ -1446,7 +1448,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.current.season = data.season; 
+                $scope.current.season = data.season;
                 $scope.current.week = data.week;
 
                 var q = "week="+$scope.current.week+"&season="+$scope.current.season;
@@ -1454,7 +1456,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                     .success( function(data) {
                         $.each(data, function (key, value) {
                             setMembereMail(value.email);
-                        }); 
+                        });
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -1462,14 +1464,14 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 })
             .error( function(edata) {
                 alert(edata);
-            });                     
+            });
     }
 
     function getLatePickDayOfMembersbutton() {
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.current.season = data.season; 
+                $scope.current.season = data.season;
                 $scope.current.week = data.week;
 
                 var q = "week="+$scope.current.week+"&season="+$scope.current.season;
@@ -1477,7 +1479,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                     .success( function(data) {
                         $.each(data, function (key, value) {
                             setMembereMail(value.email);
-                        }); 
+                        });
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -1485,13 +1487,13 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 })
             .error( function(edata) {
                 alert(edata);
-            });                     
+            });
     }
 
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
@@ -1500,22 +1502,22 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.current.season = data.season; 
+                $scope.current.season = data.season;
                 $scope.current.week = data.week;
 
                 $scope.current.weekOverride = $scope.current.week;
                 })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
 
         membersFactory.getMembers()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.members = data;
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
     }
 
     $scope.setMembereMail = function (email) {
@@ -1539,7 +1541,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         {
             geteMailTemplate(template);
         }
-        
+
     }
 
     $scope.getLatePickMembersbutton = function() {
@@ -1556,7 +1558,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService, nflTeamsService) {
     $scope.current = {};
 
-    function getMember() 
+    function getMember()
     {
         var q = "memberid="+$scope.current.memberid;
         membersFactory.getMember(q)
@@ -1573,20 +1575,20 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         .error( function(edata) {
             alert(edata);
         });
-    
+
     }
 
     init();
     function init() {
         //
-        // this is not getting called at right time for definig top offset 
+        // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
         setviewpadding();
 
-        $scope.teams = nflTeamsService.getNFLTeams(); 
-        
-        $scope.current.memberlogin = loginService.getLogin();  
+        $scope.teams = nflTeamsService.getNFLTeams();
+
+        $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;
 
         getMember();

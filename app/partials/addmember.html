@@ -62,9 +62,9 @@
                   <div class="col-md-4">
                       <input tabindex="6" type="text" class="form-control" id="city" name="city" placeholder="City">
                   </div>
-              </div> <!-- end of form-group -->  
-              
-              <div class="form-group">  
+              </div> <!-- end of form-group -->
+
+              <div class="form-group">
                   <label for="state" class="col-md-2 control-label">State</label>
                   <div class="col-md-4">
                       <select class="form-control" tabindex="7" name="state" id="state">
@@ -147,10 +147,11 @@
                 <label for="favoriteteamid" class="col-md-2 control-label">Favorite Team</label>
                 <div class="col-md-5">
                   <select tabindex="11" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                      <option value="Not Selected">Not Selected</option>
                       <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
                   </select>
                 </div>
-              </div> <!-- end of form-group --> 
+              </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="biography" class="col-md-2 control-label">Biography</label>
@@ -188,7 +189,7 @@
                   </div>
               </div> <!-- end of form-group -->
           </div>
-        </div> <!-- end of panel panel -->              
+        </div> <!-- end of panel panel -->
 
         <div class="panel panel-default">
           <div class="subpanelCaption panel-heading">Player Permissions</div>
@@ -231,4 +232,4 @@
       </form>
       </div> <!-- end of div style 100% -->
     </div> <!-- end of div col md 12 -->
-</div> <!-- end of row -->    
+</div> <!-- end of row -->
