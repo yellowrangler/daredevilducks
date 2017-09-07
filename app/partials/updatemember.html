@@ -65,7 +65,7 @@
                   <div class="col-md-4">
                       <input tabindex="6" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
                   </div>
-              </div> <!-- end of form-group -->    
+              </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="state" class="col-md-2 control-label">State</label>
@@ -150,10 +150,11 @@
                 <label for="favoriteteamid" class="col-md-2 control-label">Favorite Team</label>
                 <div class="col-md-5">
                   <select tabindex="11" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                      <option value="0">Not Selected</option>
                       <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
                   </select>
                 </div>
-              </div> <!-- end of form-group --> 
+              </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="biography" class="col-md-2 control-label">Biography</label>
@@ -239,7 +240,7 @@
           <div class="col-md-offset-2 col-md-3">
             <button tabindex="18" id="updatenewmemberbutton" data-ng-click="updatenewmember()" type="button" class="btn btn-primary">Update Player</button>
            </div>
-       
+
           <div class="col-md-offset-2 col-md-3">
             <button tabindex="19" class="btn btn-danger" ng-click="deletememberbutton()" id="deletememberbutton">Delete Player</button>
           </div>
@@ -247,4 +248,4 @@
         </form>
       </div> <!-- end of div style 90% -->
     </div> <!-- end of div col md 12 -->
-</div> <!-- end of row -->    
+</div> <!-- end of row -->

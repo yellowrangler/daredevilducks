@@ -39,7 +39,7 @@
               </div> <!-- end of form-group -->
             </div> <!-- end of col-7 -->
             <div class="col-md-4">
-                <img style="float:left;height:125px;padding-right:15px;" align="left" src='img/thinking.png'>    
+                <img style="float:left;height:125px;padding-right:15px;" align="left" src='img/thinking.png'>
 
                 <div style="padding-top:35px; padding-left:15px;font-weight:bold; font-size:15px; font-style:italic;">
                 Think Carefully for the Right Name. Make it Fun & Clean!
@@ -63,7 +63,7 @@
                   <div class="col-md-4">
                       <input tabindex="7" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
                   </div>
-              </div> <!-- end of form-group -->    
+              </div> <!-- end of form-group -->
 
               <div class="form-group">
                   <label for="state" class="col-md-3 control-label">State</label>
@@ -131,7 +131,7 @@
               </div> <!-- end of form-group -->
             </div> <!-- end of col-7 -->
             <div class="col-md-4">
-                <img style="height:155px;padding-right:15px;" align="center" src='img/postman.png'>    
+                <img style="height:155px;padding-right:15px;" align="center" src='img/postman.png'>
             </div> <!-- end of col-4 -->
           </div> <!-- end of row -->
 
@@ -152,7 +152,7 @@
                       <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
                   </div>
 
-                  &nbsp; 
+                  &nbsp;
 
                   <input tabindex="12" type="checkbox" ng-model="current.noemail" id="noemail" name="noemail"> Please no eMail's
               </div> <!-- end of form-group -->
@@ -161,10 +161,11 @@
                   <label for="favoriteteamid" class="col-md-3 control-label">Favorite Team</label>
                   <div class="col-md-5">
                     <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                        <option value="0">Not Selected</option>
                         <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
                     </select>
                   </div>
-                </div> <!-- end of form-group --> 
+                </div> <!-- end of form-group -->
 
                 <div class="form-group">
                     <label for="biography" class="col-md-3 control-label">Biography</label>
@@ -176,7 +177,7 @@
               </div> <!-- end of col-7 -->
 
               <div class="col-md-4">
-                <img style="height:200px;padding-right:15px;" align="center" src='img/profilebio.png'>    
+                <img style="height:200px;padding-right:15px;" align="center" src='img/profilebio.png'>
               </div> <!-- end of col-4 -->
 
           </div> <!-- end of row -->
@@ -236,7 +237,7 @@
               <div class="form-group" >
                 <input tabindex="" type="checkbox" ng-model="current.noemail" ng-checked="current.noemail == '1'"  id="noemail" name="noemail"> Please do NOT send me eMails
               </div> <!-- end of form-group -->
-            </div>    
+            </div>
           </div>
 
           <hr class="hrBreak">
@@ -261,11 +262,11 @@
                  </div>
               </div> <!-- end of form-group -->
             </div> <!-- end of col-7 -->
-          </div> <!-- end of row -->  
+          </div> <!-- end of row -->
         </form>
       </div> <!-- end of panel panel -->
     </div> <!-- end of div col md 12 -->
-</div> <!-- end of row -->    
+</div> <!-- end of row -->
 
 <!-- dialogs -->
 <div class="modal fade" id="meberUpdateMemberDialogModal" tabindex="-1" role="dialog" aria-labelledby="meberUpdateMemberDialogModalTitle" aria-hidden="true">
@@ -283,4 +284,4 @@
       </div>
     </div>
   </div>
-</div>  
+</div>

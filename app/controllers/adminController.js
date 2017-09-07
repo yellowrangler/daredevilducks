@@ -282,9 +282,11 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
             }
             else
             {
+                //  reset variables
                 $scope.members = {};
 
                 $scope.current.favoriteteamid = "Not Selected";
+                $scope.current.biography = "";
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name and Members added succesfully!");
