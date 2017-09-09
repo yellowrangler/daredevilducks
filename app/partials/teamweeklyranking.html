@@ -36,15 +36,34 @@
 		</div> <!-- end of panelOffset -->
 	</div> <!-- end of col 9 -->
 
-	<div class="col-md-2" >
+	<div class="col-md-2">
+		<div style="display:block;">
+			<img style="height:150px;float:right;padding-right:25px;"  class="centeredImage" ng-src="img/teamweeklyranking-small.png">
+		</div>
+
+
+		<div style="clear:both;padding-top:25px;">
+
+			<div class="center-column-text offenceText"  style="width:80%;font-weight:bold;font-size:13px;padding1px;margin:0;" >
+		        Offence
+		    </div>  
+
+			<div class="center-column-text defenceText"  style="width:80%;font-weight:bold;font-size:13px;padding1px;margin:0;" >    
+		        Defence
+	        </div> 
+        </div>
+	
+	</div>
+
+<!-- 	<div class="col-md-2" >
 		<img style="height:150px;float:right;padding-right:25px;"  class="centeredImage" ng-src="img/teamweeklyranking-small.png">
-	</div> <!-- end of col 4 -->
+	</div>  -->
 </div> <!-- end of row -->
 
 
 <div class="pageStandardOffset row">
-	<div class="col-md-9">
-		<div class="panel panel-default">
+	<div class="col-md-10">
+		<div class="panel panel-default panelOverrideNoBorder">
 			<div class="panelBodyOverride">
 				<table id="TeamWeeklyRankings" class="table teamWeeklyRankings" >
 					<thead style="width:1100px;display:block;">
@@ -54,7 +73,7 @@
 						<th class="tableTitle">Score</th>
 						<th class="tableTitle" colspan=3>&nbsp;</th>
 						<th class="powerRankingTitle">&nbsp;</th>
-						<th class="offenceTitle" colspan=4>Offensive Stats</th>
+						<th class="offenceTitle" colspan=4>{{game.gametime}}</th>
 						<th class="defenceTitle" colspan=4>Defensive Stats</th>
 					</tr> -->
 					<tr class="tableTitleNoBorder">
@@ -249,7 +268,8 @@
 				</table>
 			</div> <!-- end of panel body -->
 		</div> 	<!-- end of panel -->
-	</div> <!-- end of col 9 -->
+	</div> <!-- end of col 10 -->
+
 </div> <!-- end of row -->
 </form>
 

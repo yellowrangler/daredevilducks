@@ -69,8 +69,9 @@
 							<img ng-if="game.networkiconname" height="50" style='padding-left:5px;' ng-src='img/tvicons/{{game.networkiconname}}'>
 						</td>
 
-						<td class="left-column-text">
-							 {{game.gameday}} &nbsp; {{game.gametime}}
+						<td class="center-column-text">
+							 <div>{{game.gameday}}</div> 
+							 <div>{{game.gametime}}</div> 
 						</td>
 
 						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
