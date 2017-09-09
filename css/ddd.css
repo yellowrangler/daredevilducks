@@ -47,7 +47,7 @@
 	padding-left:5px;
 	padding-right:5px;
 	margin-top:5px;
-	margin-bottom:5px;	
+	margin-bottom:5px;
 	text-align:center;
 	height:50px;
 }*/
@@ -61,7 +61,7 @@
 	padding-left:5px;
 	padding-right:5px;
 	margin-top:5px;
-	margin-bottom:5px;	
+	margin-bottom:5px;
 	text-align:center;
 	height:50px;
 }
@@ -71,7 +71,7 @@
 	padding-left:5px;
 	padding-right:5px;
 	margin-top:5px;
-	margin-bottom:5px;	
+	margin-bottom:5px;
 	text-align:center;
 	height:50px;
 }
@@ -88,38 +88,38 @@
 
 .teamSelected2 {
 	background-color: maroon;
-	color:white; 
+	color:white;
 	padding-top:14px;
-	padding-bottom:14px;	
+	padding-bottom:14px;
 	border:1px solid maroon;
 }
 
 .teamNotSelected  {
 	background-color: white;
-	color:black; 
+	color:black;
 	padding-top:14px;
-	padding-bottom:14px;	
+	padding-bottom:14px;
 /*	border:1px solid white;*/
 }
 
 .teamSelectedImg {
 	background-color: maroon;
-	color:white; 	
+	color:white;
 	padding-top:0px;
-	padding-bottom:0px;	
+	padding-bottom:0px;
 	border:1px solid maroon;
 }
 
 .teamNotSelectedImg  {
 	background-color: white;
-	color:black; 
+	color:black;
 }
 
 .teamWon2  {
 	background-color: #006600;
-	color:white; 	
+	color:white;
 	padding-top:14px;
-	padding-bottom:14px;	
+	padding-bottom:14px;
 	border:1px solid white;
 }
 
@@ -135,27 +135,27 @@ border: 0 none;
 
 .mainTitle {
 	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
 }
 
 .siteDownTitle {
 	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
-	text-align:center; 
+	text-align:center;
 }
 
 .siteDownText p {
 	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
-	text-align:center; 
+	text-align:center;
 	font-size:18px;
 }
 
 .imgButtonNav {
-	width:80%; 
+	width:80%;
 	height:80%;
 	/*text-align: center;*/
 	/*padding-left:18%;*/
@@ -168,7 +168,7 @@ border: 0 none;
 }
 
 .imgButtonNavSmall {
-	width:100px; 
+	width:100px;
 
 }
 
@@ -185,7 +185,7 @@ border: 0 none;
 }
 .headerTitle {
 	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
 }
 
@@ -335,31 +335,31 @@ border: 0 none;
 	color:NavajoWhite;
 	font-size:16px;
 	font-variant:small-caps;
-	letter-spacing: 1px;	
+	letter-spacing: 1px;
 	cursor: pointer;
 }
 
 .center-column-text {
-	text-align: center; 
+	text-align: center;
 	vertical-align:middle;
 }
 
 .left-column-text {
-	text-align: left; 
+	text-align: left;
 	vertical-align:middle;
 }
 
 .right-column-text {
-	text-align: right; 
+	text-align: right;
 	vertical-align:middle;
 }
 
 .pickGameTable  {
-	width: 100%; 
+	width: 100%;
 }
 
 .pickGameTable  th {
-	text-align: center; 
+	text-align: center;
 	vertical-align: middle;
 	/*color: #6C0000;*/
 	font-size: 16px;
@@ -378,11 +378,11 @@ border: 0 none;
 }
 
 .teamWeekRankTable  {
-	width: 100%; 
+	width: 100%;
 }
 
 .teamWeekRankTable  th {
-	text-align: center; 
+	text-align: center;
 	vertical-align: middle;
 	/*color: #6C0000;*/
 	font-size: 12px;
@@ -407,11 +407,11 @@ border: 0 none;
 }
 
 .teamWeeklyRankings  {
-	width: 100%; 
+	/*width: 100%; */
 }
 
 .teamWeeklyRankings  th {
-	text-align: center; 
+	text-align: center;
 	vertical-align: middle;
 	/*color: #6C0000;*/
 	font-size: 14px;
@@ -432,14 +432,14 @@ border: 0 none;
 
 
 .TeamWeeklyRankingsInfoTable  {
-	width: 100%; 
+	width: 100%;
 	background-color:white;
 	border:2px solid white;
 	overflow-x: scroll;
 }
 
 .TeamWeeklyRankingsTableItemsCenter   {
-	text-align: center; 
+	text-align: center;
 	vertical-align: middle;
 	font-size: 14px;
 	font-weight: bold;
@@ -488,7 +488,7 @@ border: 0 none;
 
 .MemberWeeklyTable {
 	padding-top:20px;
-	padding: 3px;  
+	padding: 3px;
 	width:100%;
 	font-size: 18px;
 }
@@ -498,17 +498,17 @@ border: 0 none;
 }
 
 .MemberWeeklyTable th {
-	text-align: center; 
+	text-align: center;
 }
 
 /*.leaderBoardTable  {
-	width: 100%; 
+	width: 100%;
 	font-size: 16px;
 }*/
 
 .leaderBoardTable {
 	padding-top:20px;
-	padding: 3px;  
+	padding: 3px;
 	width:100%;
 	font-size: 18px;
 }
@@ -523,7 +523,7 @@ border: 0 none;
 }
 
 .leaderBoardTable th {
-	text-align: center; 
+	text-align: center;
 }
 
 .leaderBoardTable tr {
@@ -532,31 +532,31 @@ border: 0 none;
 
 .leaderBoardPanelTitle {
 	color:white;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
-	text-align:center; 
+	text-align:center;
 	font-size: 26px;
 }
 
 .teamSelected  {
 	background-color: maroon;
-	color:white; 
+	color:white;
 	border:1px solid maroon;
 }
 
 .teamWon  {
 	background-color: #006600;
-	color:white; 	
+	color:white;
 	border:1px solid white;
 }
 
 .teamLost  {
-	color:black; 
+	color:black;
 }
 
 .teamNotSelected  {
 	background-color: white;
-	color:black; 
+	color:black;
 }
 
 .menuItems {
@@ -662,7 +662,7 @@ border: 0 none;
 
 /* all page css */
 .topPagePosition {
-	padding-top:85px; 
+	padding-top:85px;
 }
 
 .pageCaption {
@@ -671,12 +671,12 @@ border: 0 none;
 	/*height: 35px;*/
 /*	padding-top:50px;*/
 	color:maroon;
-	font-weight:600; 
+	font-weight:600;
 }
 
 .panelCaption {
 	color:teal;
-	font-weight:700; 
+	font-weight:700;
 }
 
 .panelTable {
@@ -686,9 +686,9 @@ border: 0 none;
 	border-color: white;
 }
 
-.subpanelCaption {	
+.subpanelCaption {
 	color:red;
-	font-weight:600; 
+	font-weight:600;
 }
 
 .pageStandardOffset {
@@ -757,15 +757,15 @@ border: 0 none;
 }
 
 #anchorMessage {
-    text-decoration:none; 
-    font-style:italic; 
+    text-decoration:none;
+    font-style:italic;
     color:black;
     font-weight:bold;
 }
 
 #anchorMessage :hover {
-    text-decoration:none; 
-    font-style:italic; 
+    text-decoration:none;
+    font-style:italic;
     color:red;
     font-weight:bold;
 }
@@ -785,14 +785,14 @@ border: 0 none;
 	font-style:italic;
 	font-weight:bold;
 	font-size:18px;
-	color:#ff7878;  
+	color:#ff7878;
 }
 
 .ddd-footer-text-green {
 	font-style:italic;
 	font-weight:bold;
 	font-size:18px;
-	color:#74d680;  
+	color:#74d680;
 }
 
 .ddd-footer-links {
