@@ -1,34 +1,41 @@
 <div class="pageCaption row">
-	<div class="col-md-5">
+	<div class="col-md-3">
 		<h2 class="headerTitle">Team Weekly Ranking</h2>
 
 		<div class="pageStandardOffset">
-			<div style="padding-top:45px;">
+			<div style="padding-top:15px;">
 				<a ng-href="{{current.team.teamurl}}" target="_blank">
-					<img height="70" ng-src='img/nflicons/{{current.team.teamiconname}}'>
+					<img height="85" ng-src='img/nflicons/{{current.team.teamiconname}}'>
 				</a>
-				<span style="font-size:20px;font-weight:bold;color:black;">{{current.team.location}} {{current.team.name}}</span>
 			</div>
 		</div> <!-- end of panelOffset -->
 	</div> <!-- end of column -->
 
 	<form id="teamweeklyrankForm" name="teamweeklyrankForm" class="form-inline">
-	<div class="col-md-5">
+	<div class="col-md-6">
 		<div class="pageStandardOffset">
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
-					<div style="padding-top:120px;" class="form-group horizontalFieldOffset">
+					<div style="padding-top:60px;" class="form-group horizontalFieldOffset">
 						<label for="teamid" class="control-label">Team</label>
 				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
 				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
+
+				        <div style="padding-top:25px;width:75px;margin:0;" >
+					        <span class="center-column-text offenceText" style="font-weight:bold;font-size:13px;padding:5px;">Offence</span>
+					    </div> 
 					</div> <!-- end of form-group -->
 
-					<div style="padding-top:120px;" class="form-group horizontalFieldOffset">
+					<div style="padding-top:60px;" class="form-group horizontalFieldOffset">
 						<label for="season" class="control-label">Season </label>
 						<select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.season" id="season" name="season">
 							<option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
 						</select>
+
+						<div style="padding-top:25px;width:width:75px;margin:0;" >    
+					        <span class="center-column-text defenceText" style="font-weight:bold;font-size:13px;padding:5px;">Defence</span>
+				        </div> 
 					</div> <!-- end of form-group -->
 
 				</div> <!-- end of panel body -->
@@ -42,7 +49,7 @@
 		</div>
 
 
-		<div style="clear:both;padding-top:25px;">
+		<!-- <div style="clear:both;padding-top:25px;">
 
 			<div class="center-column-text offenceText"  style="width:80%;font-weight:bold;font-size:13px;padding1px;margin:0;" >
 		        Offence
@@ -51,13 +58,9 @@
 			<div class="center-column-text defenceText"  style="width:80%;font-weight:bold;font-size:13px;padding1px;margin:0;" >    
 		        Defence
 	        </div> 
-        </div>
+        </div> -->
 	
 	</div>
-
-<!-- 	<div class="col-md-2" >
-		<img style="height:150px;float:right;padding-right:25px;"  class="centeredImage" ng-src="img/teamweeklyranking-small.png">
-	</div>  -->
 </div> <!-- end of row -->
 
 
@@ -106,7 +109,7 @@
 					</thead>
 					<tbody style="display:block;width:1100px;overflow-y:auto;height:{{current.WeeklRankingtablesize}}px;">
 					<tr ng-repeat="teamweekrank in teamweekranks">
-						<td style="font-size:25px;font-weight: bold;padding-top:55px;width:25px;" class="center-column-text">
+						<td style="font-size:25px;font-weight:bold;padding-top:55px;width:25px;" class="center-column-text">
 							{{teamweekrank.week}}
 						</td>
 

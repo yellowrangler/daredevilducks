@@ -914,6 +914,10 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         $scope.current = {};
         $scope.teamstats = {};
 
+        var windowHeight = window.innerHeight;
+        $scope.current.WeeklRankingtablesize = windowHeight * .45;
+
+
         $(window).scroll(function(){
             if ($(".floatingImgDiv").length)
             {
