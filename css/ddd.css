@@ -218,8 +218,8 @@ border: 0 none;
 }
 
 .offenceTitle {
-	background-color:#006600;
-	border:2px solid #006600;
+	background-color:#275bad;
+	border:2px solid #275bad;
 	color:white;
 }
 
@@ -242,8 +242,8 @@ border: 0 none;
 
 .offenceText {
 	color:white;
-	background-color:#006600;
-	border:2px solid #006600;
+	background-color:#275bad;
+	border:2px solid #275bad;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
 /*	color:#006600;
