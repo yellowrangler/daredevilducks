@@ -34,6 +34,13 @@
 		                    <option ng-repeat="membergroup in membergroups" value="{{membergroup.membergroupid}}">{{membergroup.membergroupname}}</option>
 	                    </select>
 					</div>  <!-- end of form group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<label class="control-label" for="showexperts">Show Experts</label>
+						<input style="padding-left:15px;" type="checkbox"
+					       ng-model="current.showexperts"  id="showexperts" name="showexperts"
+					       ng-change="getYearlyTotalPercentage()" >
+					</div>  <!-- end of form group -->
 				</div> <!-- end of panel body -->			
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->			
@@ -58,7 +65,7 @@
 
 					<td class="left-column-text"><img style="height:70px;cursor:pointer;" ng-show="memberseasonpercentstat.memberavatar != ''" ng-click="getMemberProfile(memberseasonpercentstat.memberid)" ng-src="../img/avatars/{{memberseasonpercentstat.memberavatar}}"></td>
 
-					<td class="left-column-text">{{memberseasonpercentstat.screenname}}</td>
+					<td ng-class="{{memberseasonpercentstat.memberrole == 'expert'}} ? 'expertRole' : 'left-column-text' ">{{memberseasonpercentstat.screenname}}</td>
 
 					<td class="center-column-text">{{memberseasonpercentstat.showplayerpickedpercent}}</td>
 

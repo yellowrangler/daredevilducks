@@ -500,6 +500,13 @@ border: 0 none;
 	border:1px solid maroon;
 }
 
+.expertRole  {
+	color:#8c072a;
+	text-align: left;
+	vertical-align:middle;
+	background-color: #f7edef;
+}
+
 .teamWon  {
 	background-color: #006600;
 	color:white; 	

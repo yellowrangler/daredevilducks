@@ -11,12 +11,17 @@ $season = $_POST['season'];
 $leaderType = $_POST['leaderType'];
 $gametypeid = $_POST['gametypeid'];
 $membergroupid = 0;
+$showexperts = false;
 
 if( isset($_POST['membergroupid']) )
 {
      $membergroupid = $_POST['membergroupid'];
 }
 
+if( isset($_POST['showexperts']) )
+{
+     $showexperts = $_POST['showexperts'];
+}
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");
@@ -84,6 +89,7 @@ $sql = "SELECT
   CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
   MS.gametypeid as gametypeid,
   M.avatar as memberavatar,
+  M.role as memberrole,
   M.membername as membername,
   M.screenname as screenname
 FROM memberstatstbl MS
@@ -103,6 +109,14 @@ if ($membergroupid == 0)
   $sql = $sql . "
   WHERE M.status = 'active'
   AND MS.season = '$season' AND gametypeid = $gametypeid";
+
+  //
+  // only applicable in non group lists
+  //
+  if ($showexperts == "false")
+  {
+      $sql = $sql . " AND M.role != 'expert' ";
+  }
 }
 else
 {

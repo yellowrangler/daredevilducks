@@ -50,7 +50,7 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         //
         // get total season win leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=wins";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=wins"+"&showexperts="+$scope.current.showexperts;
         teamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonwinstats = workWinsTableData(data); 
@@ -108,6 +108,7 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
+        $scope.current.showexperts = true;
 
         //
         // get member groups
@@ -123,7 +124,7 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         //
         // get wins season leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins"+"&showexperts="+$scope.current.showexperts;
         teamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonwinstats = workWinsTableData(data);  
@@ -196,7 +197,7 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         //
         // get total season percent leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=pickingpercent";
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=pickingpercent"+"&showexperts="+$scope.current.showexperts;
         teamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonpercentstats = workPercentTableData(data); 
@@ -253,6 +254,7 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
+        $scope.current.showexperts = true;
 
         //
         // get member groups
@@ -268,7 +270,7 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         //
         // get percent season leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent"
+        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=pickingpercent"+"&showexperts="+$scope.current.showexperts;
         teamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonpercentstats = workPercentTableData(data); 
@@ -309,7 +311,7 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
     
     function selectChange()
     {
-        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&membergroupid="+$scope.current.membergroupid;
+        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&membergroupid="+$scope.current.membergroupid+"&showexperts="+$scope.current.showexperts;
 
         teamsFactory.getMemberWeekStats(requestStr)
             .success( function(data) {
@@ -351,6 +353,7 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
     init();
     function init() {
         $scope.current = {};
+        $scope.current.showexperts = true;
 
         $(window).scroll(function(){
             if ($(".floatingImgDiv").length)
@@ -420,7 +423,7 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
                     .success( function(data) {
                         $scope.weeks = data;
 
-                        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week;
+                        var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&showexperts="+$scope.current.showexperts;
                         teamsFactory.getMemberWeekStats(requestStr)
                             .success( function(data) {
                                 $scope.memberweekstats = workWinsTableData(data); 

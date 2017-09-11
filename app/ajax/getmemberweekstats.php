@@ -10,11 +10,18 @@ $season = $_POST['season'];
 $week = $_POST['week'];
 $gametypeid = 1;
 $membergroupid = 0;
+$showexperts = false;
 
 if( isset($_POST['membergroupid']) )
 {
      $membergroupid = $_POST['membergroupid'];
 }
+
+if( isset($_POST['showexperts']) )
+{
+     $showexperts = $_POST['showexperts'];
+}
+
 
 // get date time for this transaction
 $datetime = date("Y-m-d H:i:s");
@@ -63,6 +70,7 @@ if ($membergroupid == 0)
     M.screenname as screenname,
     M.id as memberid,
     M.membername as membername,
+    M.role as memberrole,
     M.avatar as memberavatar,   
     MS.losses as losses,
     MS.wins as wins,
@@ -74,8 +82,14 @@ if ($membergroupid == 0)
     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
     LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
     WHERE  M.status = 'active'
-    AND MS.season = $season AND MS.week = $week
-    ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
+    AND MS.season = $season AND MS.week = $week";
+
+    if ($showexperts == "false")
+    {
+        $sql = $sql . " AND M.role != 'expert' ";
+    }
+    
+    $sql = $sql . " ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 }
 else
 {
@@ -83,6 +97,7 @@ else
     M.screenname as screenname,
     M.id as memberid,
     M.membername as membername,
+    M.role as memberrole,
     M.avatar as memberavatar,   
     MS.losses as losses,
     MS.wins as wins,
