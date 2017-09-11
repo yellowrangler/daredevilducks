@@ -111,9 +111,11 @@ if ($r['gamecount'] == 0)
 //---------------------------------------------------------------
 // get all member picks for today going forward with member list
 //---------------------------------------------------------------
-$sql = "SELECT id as memberid, membername, screenname, email   
+$sql = "SELECT id as memberid, membername, screenname, email, noemail   
 FROM membertbl M
-WHERE M.status = 'active' AND id NOT IN 
+WHERE M.status = 'active'
+AND COALESCE(noemail,0) != 1 
+AND id NOT IN 
 (SELECT memberid
 FROM memberpickstbl MP
 LEFT JOIN gamestbl G ON G.gamenbr = MP.gamenbr AND G.season = MP.season

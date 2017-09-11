@@ -9,10 +9,16 @@ include_once ('../class/class.AccessLog.php');
 // post input
 //
 $orderby = "membername";
+$noemail = 0;
 
 if( isset($_POST['orderby']) )
 {
      $orderby = $_POST['orderby'];
+}
+
+if( isset($_POST['noemail']) )
+{
+     $noemail = 1;
 }
 
 //
@@ -70,11 +76,21 @@ if (!mysql_select_db($DBschema, $dbConn))
 }
 
 //---------------------------------------------------------------
-// get nfl game type information
+// get member list
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM membertbl 
-WHERE status = 'active'
-ORDER BY $orderby ASC";
+if ($noemail == 1)
+{
+	$sql = "SELECT *  FROM membertbl 
+	WHERE status = 'active'
+	AND COALESCE(noemail,0) != 1
+	ORDER BY $orderby ASC";
+}
+else 
+{
+	$sql = "SELECT *  FROM membertbl 
+	WHERE status = 'active'
+	ORDER BY $orderby ASC";
+}	
 // print $sql;
 
 $sql_result = @mysql_query($sql, $dbConn);

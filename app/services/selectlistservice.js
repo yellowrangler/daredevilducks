@@ -58,7 +58,7 @@ dddApp.service('selectListService', function () {
     var memberroleList = [ 
         { title :  "member", value : "member" },
         { title :  "admin", value : "admin" },
-        { title :  "sportsanalyst", value : "sportsanalyst" }
+        { title :  "expert", value : "expert" }
     ];
 
     var membergenderList = [ 

@@ -1503,7 +1503,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 $scope.current.season = data.season;
                 $scope.current.week = data.week;
 
-                var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                var q = "week="+$scope.current.week+"&season=";
                 membersFactory.getLatePickMembers(q)
                     .success( function(data) {
                         $.each(data, function (key, value) {
@@ -1542,6 +1542,10 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             });
     }
 
+    function clearMailTo() {
+        $scope.current.emailto = "";
+    }
+
     init();
     function init() {
         //
@@ -1549,6 +1553,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         // in jquery ready. So adding it here
         //
         setviewpadding();
+        $scope.sendDataEmail = "noemail=1";
 
         $scope.emailtemplates = selectListService.getList('emt');
 
@@ -1563,7 +1568,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 alert(edata);
             });
 
-        membersFactory.getMembers()
+        membersFactory.getMembers($scope.sendDataEmail)
             .success( function(data) {
                 $scope.members = data;
             })
@@ -1582,6 +1587,10 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     $scope.sendeMailForm = function () {
         sendeMailForm();
+    }
+
+    $scope.clearMailTo = function() {
+        clearMailTo();
     }
 
     $scope.geteMailTemplate = function(template) {
