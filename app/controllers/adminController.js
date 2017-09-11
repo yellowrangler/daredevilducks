@@ -1,4 +1,4 @@
-controllers.addmemberController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+controllers.addmemberController = function ($scope, $http, $location, membersFactory, nflTeamsService, selectListService) {
     init();
     function init() {
         //
@@ -7,6 +7,14 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         //
 
         $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.states = selectListService.getList('states');
+        $scope.memberstatuses = selectListService.getList('memberstatus');
+        $scope.memberroles = selectListService.getList('memberroles');
+        $scope.membergenders = selectListService.getList('membergenders');
+
+        $scope.current.favoriteteamid = 0;
+        $scope.current.biography = "";
+        $scope.current.passwd = "";
 
         setviewpadding();
 
@@ -129,7 +137,7 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
     }
 }
 
-controllers.updatememberController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+controllers.updatememberController = function ($scope, $http, $location, membersFactory, nflTeamsService, selectListService) {
     $scope.current = {};
 
     init();
@@ -141,6 +149,10 @@ controllers.updatememberController = function ($scope, $http, $location, members
         setviewpadding();
 
         $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.states = selectListService.getList('states');
+        $scope.memberstatuses = selectListService.getList('memberstatus');
+        $scope.memberroles = selectListService.getList('memberroles');
+        $scope.membergenders = selectListService.getList('membergenders');        
 
         membersFactory.getAllMembersAdmin()
             .success( function(data) {
@@ -285,9 +297,6 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
                 //  reset variables
                 $scope.members = {};
 
-                $scope.current.favoriteteamid = 0;
-                $scope.current.biography = "";
-                $scope.current.passwd = "";
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name and Members added succesfully!");
@@ -1598,7 +1607,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 }
 
 
-controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService, nflTeamsService) {
+controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService, nflTeamsService, selectListService) {
     $scope.current = {};
 
     function getMember()
@@ -1630,6 +1639,8 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         setviewpadding();
 
         $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.states = selectListService.getList('states');
+        $scope.membergenders = selectListService.getList('membergenders');  
 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;

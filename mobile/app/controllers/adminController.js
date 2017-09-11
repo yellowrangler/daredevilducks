@@ -1,4 +1,4 @@
-controllers.addmemberController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+controllers.addmemberController = function ($scope, $http, $location, membersFactory, nflTeamsService, selectListService) {
     init();
     function init() {
         //
@@ -6,7 +6,16 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         // in jquery ready. So adding it here
         //
 
-        $scope.teams = nflTeamsService.getNFLTeams(); 
+        $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.states = selectListService.getList('states');
+        $scope.memberstatuses = selectListService.getList('memberstatus');
+        $scope.memberroles = selectListService.getList('memberroles');
+        $scope.membergenders = selectListService.getList('membergenders'); 
+
+        $scope.current.favoriteteamid = 0;
+        $scope.current.biography = "";
+        $scope.current.passwd = "";
+        $scope.current.state = "";
     };
 
     $scope.addnewmember = function() {
@@ -120,13 +129,17 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
     }
 }
 
-controllers.updatememberController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
+controllers.updatememberController = function ($scope, $http, $location, membersFactory, nflTeamsService, selectListService) {
     $scope.current = {};
 
     init();
     function init() {
 
-        $scope.teams = nflTeamsService.getNFLTeams(); 
+        $scope.teams = nflTeamsService.getNFLTeams();
+        $scope.states = selectListService.getList('states');
+        $scope.memberstatuses = selectListService.getList('memberstatus');
+        $scope.memberroles = selectListService.getList('memberroles');
+        $scope.membergenders = selectListService.getList('membergenders'); 
         
         membersFactory.getAllMembersAdmin()
             .success( function(data) {
@@ -1532,7 +1545,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
 }
 
-controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService, nflTeamsService) {
+controllers.memberupdatememberController = function ($scope, $http, $location, membersFactory, loginService, nflTeamsService, selectListService) {
     $scope.current = {};
 
     function getMember() 
@@ -1564,6 +1577,8 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
 
 
         $scope.teams = nflTeamsService.getNFLTeams(); 
+        $scope.states = selectListService.getList('states');
+        $scope.membergenders = selectListService.getList('membergenders'); 
         
         $scope.current.memberlogin = loginService.getLogin();  
         $scope.current.memberid = $scope.current.memberlogin.memberid;
