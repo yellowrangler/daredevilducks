@@ -1478,16 +1478,69 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     }
 
-    function geteMailTemplate(template) {
-        var url = "";
+    function geteMailItems() {
+        var emailtemplateObj = JSON.parse($scope.current.emailtemplate);
+        var emailurl = emailtemplateObj.url; 
+        var emailtype = emailtemplateObj.type; 
+        var emailrecipients = emailtemplateObj.recipients; 
 
         $("#emailmessage").html("");
 
         //
+        // First get template build starterd
+        //
+        switch (emailtype)
+        {
+            case "normal":
+                geteMailTemplate(emailurl);
+                break;
+
+            case "dynamic":
+                geteDynamiceMailTemplate(emailurl);
+                break;
+
+            default:
+                alert("Invalid email type! email type = "+emailtype);
+        }
+
+        //
+        // Next get template recipients starterd
+        //
+        clearMailTo();
+
+        switch (emailrecipients)
+        {
+            case "all":
+                addAll2MailForm();
+                break;
+
+            case "latepicks":
+                getLatePickMembersbutton();
+                break;
+
+            case "latepicksdayof":
+                getLatePickDayOfMembersbutton();
+                break;  
+                
+            case "manual":
+                break;        
+
+            default:
+                alert("Invalid email recipients! email recipients = "+emailrecipients);
+        }
+
+
+       
+    }
+
+    function geteMailTemplate(url) {
+        //
         // add template to area
         //
-        url = "emailforms/" + $scope.current.emailtemplate;
-        $.get(url, null, function (data) {
+
+        var emailurl = "emailforms/" + url; 
+        
+        $.get(emailurl, null, function (data) {
             var title = data.split("\n")[0];
             $("#emailsubject").val(title);
 
@@ -1577,6 +1630,10 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             });
     }
 
+    $scope.geteMailItems = function () {
+        geteMailItems();
+    }
+
     $scope.setMembereMail = function (email) {
         setMembereMail(email);
     }
@@ -1591,26 +1648,6 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     $scope.clearMailTo = function() {
         clearMailTo();
-    }
-
-    $scope.geteMailTemplate = function(template) {
-        if (template == "gameweek")
-        {
-            geteDynamiceMailTemplate(template);
-        }
-        else
-        {
-            geteMailTemplate(template);
-        }
-
-    }
-
-    $scope.getLatePickMembersbutton = function() {
-        getLatePickMembersbutton();
-    }
-
-    $scope.getLatePickDayOfMembersbutton = function() {
-        getLatePickDayOfMembersbutton();
     }
 
 }

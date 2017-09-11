@@ -35,19 +35,19 @@ dddApp.service('selectListService', function () {
     ];
 
     var emtList = [ 
-        { title :  "Welcome", url : "welcome-email.html" },
-        { title :  "New Avatar", url : "avatar-change-email.html" },
-        { title :  "New Avatar and Login", url : "avatar-login-change-email.html" },
-        { title :  "New Login", url : "login-change-email.html" },
-        { title :  "New Season", url : "welcome-new-season-email.html" },
-        { title :  "Season Wrap Up", url : "end-of-season-email.html" },
-        { title :  "Game week", url : "gameweek" },
-        { title :  "Team Weekly Rankings", url : "teamweeklyrankings-email.html" },
-        { title :  "Late Picks", url : "latepicks-email.html" }, 
-        { title :  "Late Picks Day Of", url : "latepicksdayof-email.html" }, 
-        { title :  "Ooops Moment", url : "oops-email.html" }, 
-        { title :  "Site Problems", url : "siteproblems-email.html" },  
-        { title :  "Site Down", url : "sitedown-email.html" }
+        { title :  "Welcome", url : "welcome-email.html", type : "normal", recipients : "all" },
+        { title :  "New Avatar", url : "avatar-change-email.html", type : "normal", recipients : "manual" },
+        { title :  "New Avatar and Login", url : "avatar-login-change-email.html", type : "normal", recipients : "manual" },
+        { title :  "New Login", url : "login-change-email.html", type : "normal", recipients : "manual" },
+        { title :  "New Season", url : "welcome-new-season-email.html", type : "normal", recipients : "all" },
+        { title :  "Season Wrap Up", url : "end-of-season-email.html", type : "normal", recipients : "all" },
+        { title :  "Game week", url : "gameweek", type : "dynamic", recipients : "all" },
+        { title :  "Team Weekly Rankings", url : "teamweeklyrankings-email.html", type : "normal", recipients : "all" },
+        { title :  "Late Picks", url : "latepicks-email.html", type : "normal", recipients : "latepicks" }, 
+        { title :  "Late Picks Day Of", url : "latepicksdayof-email.html", type : "normal", recipients : "latepicksdayof" }, 
+        { title :  "Ooops Moment", url : "oops-email.html", type : "normal", recipients : "all" }, 
+        { title :  "Site Problems", url : "siteproblems-email.html", type : "normal", recipients : "all" },  
+        { title :  "Site Down", url : "sitedown-email.html", type : "normal", recipients : "all" }
     ];
 
     var memberstatusList = [ 
