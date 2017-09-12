@@ -220,21 +220,23 @@ controllers.updatememberController = function ($scope, $http, $location, members
     $scope.deletememberbutton = function() {
         var formstring = $("#updatememberForm").serialize();
 
-        membersFactory.deleteMember(formstring)
-        .success( function(data) {
-            if (data !== "ok")
-            {
-                alert("Error deleting member - "+data);
-            }
-            else
-            {
-                alert("Member deleted succesfully!");
-                $("#updatememberForm")[0].reset();
-            }
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
+        alert("No delete functionality. Use database.");
+
+        // membersFactory.deleteMember(formstring)
+        // .success( function(data) {
+        //     if (data !== "ok")
+        //     {
+        //         alert("Error deleting member - "+data);
+        //     }
+        //     else
+        //     {
+        //         alert("Member deleted succesfully!");
+        //         $("#updatememberForm")[0].reset();
+        //     }
+        // })
+        // .error( function(edata) {
+        //     alert(edata);
+        // });
     }
 }
 
