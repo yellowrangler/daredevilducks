@@ -135,6 +135,7 @@ border: 0 none;
 
 .mainTitle {
 	color:#6C0000;
+	font-size: 40px;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
 }
@@ -264,12 +265,24 @@ border: 0 none;
 
 .jumbotronOverride {
 	background:white;
-	border:2px solid #055659;
+	border:1px solid #055659;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .jumbotronOverrideEditorial {
 	background:white;
 	border:1px solid grey;
+}
+
+.panelHome {
+	padding-top:25px;
+	font-size:25px;
+}
+
+.panelHome .panel-body p{
+	font-size:15px;
+	font-weight: medium;
 }
 
 .panelOverride {

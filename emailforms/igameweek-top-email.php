@@ -16,12 +16,12 @@ Redskins lost at home to a good looking Eagles team. The Los Angeles Rams put a 
 The Packers beat the Seahawks in a game that started out as a snoozer, but picked up momentum at the end. The Giants lost
 to the Cowboys and the Vikings looked very good in their win over the Saints. It took a late game field goal block for the 
 Broncos to salt the game away from the comeback minded Chargers. All in all a great first week.
-
+</p>
 <p>
 Wildcat Wonder is working on the game stats, and we should have these available to you soon. 
 <br /><br />
 We added 10 expert football analysts. You will see them in our member lists for both picks and player stats. You can use these as you choose, like to help you pick or compare your scores. The daredevilducks community faired very well on balance against these experts.  
-<p>
+</p>
 We had a great turnout this week. Thank you all again for participating. We have a 2 way tie as Merida and Smokey SouWester share first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! They are followed by a plethora of people in second and third. Check out 
 the numbers below.
 </p>
