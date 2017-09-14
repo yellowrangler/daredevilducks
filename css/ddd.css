@@ -280,9 +280,11 @@ border: 0 none;
 	font-size:25px;
 }
 
-.panelHome .panel-body p{
-	font-size:15px;
-	font-weight: medium;
+.panelHome .panel-body p {
+	font-size:14px;
+	/*font-weight: medium;*/
+	font-family: Helvetica, 'Balthazar', Helvetica, sans-serif;
+
 }
 
 .panelOverride {
