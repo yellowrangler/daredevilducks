@@ -1524,7 +1524,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 getLatePickDayOfMembers();
                 break;  
 
-            case "latepicksdayof":
+            case "latepicksdaybefore":
                 getLatePickDayBeforeMembers();
                 break;    
                 
