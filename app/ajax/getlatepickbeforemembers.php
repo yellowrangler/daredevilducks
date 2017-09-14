@@ -119,7 +119,7 @@ AND id NOT IN
 (SELECT memberid
 FROM memberpickstbl MP
 LEFT JOIN gamestbl G ON G.gamenbr = MP.gamenbr AND G.season = MP.season
-WHERE DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(DATE_ADD(NOW(), interval 1 DAY),'%m-%d-%Y')";
+WHERE DATE_FORMAT(gamedatetime,'%m-%d-%Y') = DATE_FORMAT(DATE_ADD(NOW(), interval 1 DAY),'%m-%d-%Y'))";
 // print $sql;
 
 // $sql = "SELECT 
