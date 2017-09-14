@@ -1517,12 +1517,17 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 break;
 
             case "latepicks":
-                getLatePickMembersbutton();
+                getLatePickMembers();
                 break;
 
             case "latepicksdayof":
-                getLatePickDayOfMembersbutton();
+                getLatePickDayOfMembers();
                 break;  
+
+            case "latepicksdayof":
+                getLatePickDayBeforeMembers();
+                break;    
+                
                 
             case "manual":
                 break;        
@@ -1551,7 +1556,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         })
     }
 
-    function getLatePickMembersbutton() {
+    function getLatePickMembers() {
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
@@ -1574,7 +1579,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             });
     }
 
-    function getLatePickDayOfMembersbutton() {
+    function getLatePickDayOfMembers() {
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {

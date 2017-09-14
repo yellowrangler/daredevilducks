@@ -45,6 +45,7 @@ dddApp.service('selectListService', function () {
         { title :  "Team Weekly Rankings", url : "teamweeklyrankings-email.html", type : "normal", recipients : "all" },
         { title :  "Late Picks", url : "latepicks-email.html", type : "normal", recipients : "latepicks" }, 
         { title :  "Late Picks Day Of", url : "latepicksdayof-email.html", type : "normal", recipients : "latepicksdayof" }, 
+        { title :  "Late Picks Day Before", url : "latepicksdaybefore-email.html", type : "normal", recipients : "latepicksdaybefore" }, 
         { title :  "Ooops Moment", url : "oops-email.html", type : "normal", recipients : "all" }, 
         { title :  "Site Problems", url : "siteproblems-email.html", type : "normal", recipients : "all" },  
         { title :  "Site Down", url : "sitedown-email.html", type : "normal", recipients : "all" }
