@@ -1602,6 +1602,29 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
             });
     }
 
+    function getLatePickDayBeforeMembers() {
+
+        teamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season;
+                $scope.current.week = data.week;
+
+                var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                membersFactory.getLatePickDayBeforeMembers(q)
+                    .success( function(data) {
+                        $.each(data, function (key, value) {
+                            setMembereMail(value.email);
+                        });
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });
+                })
+            .error( function(edata) {
+                alert(edata);
+            });
+    }
+
     function clearMailTo() {
         $scope.current.emailto = "";
     }
