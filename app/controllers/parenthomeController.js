@@ -212,8 +212,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             })
             .error( function(edata) {
                 alert(edata);
-            });    
-
+            });  
 
         checkRole();  
     };         
