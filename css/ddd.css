@@ -277,7 +277,7 @@ border: 0 none;
 
 .panelHome {
 	padding-top:25px;
-	font-size:25px;
+	padding-bottom:25px;
 }
 
 .panelHome .panel-body p {
