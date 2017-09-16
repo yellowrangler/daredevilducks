@@ -146,6 +146,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             }
         });
 
+        var windowHeight = window.innerHeight;
+        $scope.current.homeNewsOpinionesize = windowHeight * .50;
 
         getAvatar();
         getScreenName();

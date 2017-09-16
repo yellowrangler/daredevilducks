@@ -4,11 +4,11 @@
   
 <div class="jumbotron jumbotronOverride">
 	<div class="mainTitle">
-		<div id="homemaintitle1">Welcome to the Daredevil Ducks League Football Game Website!</div>
+		<div id="homemaintitle1">Welcome to the Daredevil Ducks League Website!</div>
 	</div>
 
-	<div class="row" style="padding-top:25px;">
-		<div style="padding-top:25px;" class="col-md-6">
+	<div class="row" style="padding-top:30px;">
+		<div style="padding-top:25px;" class="col-md-5">
 			<div>
 			<!-- <a href="#fireworks"> -->
 			<!-- 	<img style="width:95%;cursor:pointer;padding-left:25px;" src="img/brady-bellicheck.png" alt="daredevil ducks mascot" class="img-rounded"> -->
@@ -26,14 +26,15 @@
 				<a id="loginHomeButton" class="btn btn-primary btn-lg" ng-click="homepagelogin()" role="button">Login</a>
 			</p>
 		</div> <!-- end of col 6 -->
-		<div class="col-md-6" >
+		<div class="col-md-offset-1 col-md-6" style="padding-top:15px;" >
 			<div class="panelHome">
 			    <div class="panel panel-primary">
 			      <div class="panel-heading">
 			        <h3 class="panel-title">League News & Opinion</h3>
 			      </div>
 
-			      <div id="newsopinion" ng-include="'app/partials/inewsopinion.html'" class="panel-body">
+			      <div id="newsopinion" ng-include="'app/partials/inewsopinion.html'" class="panel-body" >
+			      	<!-- style="display:block;overflow-y:auto;height:{{current.homeNewsOpinionesize}}px;"> -->
 			      </div> <!-- end of panel body -->
 			    </div> <!-- end of panel -->  
 			</div> <!-- end of panelhome --> 	
