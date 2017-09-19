@@ -34,7 +34,7 @@ For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> b
 </p>  
 
 <p>
-Don't despair to those who did not make the top tiers! There is plenty pf football left. More then enough time and games to make a run at the top! Read em and weep (I know I do)!
+Don't despair to those who did not make the top tiers! There is plenty of football left. More then enough time and games to make a run at the top! Read em and weep (I know I do)!
 </p>   
 ";
 ?>
