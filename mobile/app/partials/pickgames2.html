@@ -46,7 +46,9 @@
 		<div class="pickTeamsPickPair" ng-repeat="game in games">
 			<div class="pickTeamsPair" >
 				<div style="padding-top:3px;padding-bottom:2px;padding-right:3px;padding-left:3px;" class="row" >
-					<div style="display:inline-block;line-height:55px;"  class="gameDateTime center-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2">
+					<div style="display:inline-block;line-height:55px;"  
+					ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : '' "
+					class="gameDateTime center-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2">
 						<span > {{game.gameday}} </span> 
 					</div>
 					
@@ -63,7 +65,9 @@
 				</div> <!-- end of row -->
 
 				<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;padding-left:3px;" class="row">
-					<div style="display:inline-block;line-height:55px;"  class="gameDateTime center-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2">
+					<div style="display:inline-block;line-height:55px;"  
+					ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : '' "
+					class="gameDateTime center-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2">
 						<span > {{game.gametime}} </span>
 					</div>
 

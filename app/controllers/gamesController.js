@@ -236,14 +236,14 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
     //
     function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
     {
-        var hometeamname = "pickh_"+gamenbr+"_teamname"; 
-        var hometeamicon = "pickh_"+gamenbr+"_icon"; 
-
-        var awayteamname = "picka_"+gamenbr+"_teamname"; 
-        var awayteamicon = "picka_"+gamenbr+"_icon"; 
-
         var hometeamfieldid = "pickh_"+gamenbr; 
         var awayteamfieldid = "picka_"+gamenbr;    
+
+        var hometeamname = hometeamfieldid+"_teamname"; 
+        var hometeamicon = hometeamfieldid+"_icon"; 
+
+        var awayteamname = awayteamfieldid+"_teamname"; 
+        var awayteamicon = awayteamfieldid+"_icon";    
 
         if (checkRole())
         {
@@ -446,6 +446,11 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         if (picked == count)
         {
             $scope.msg = "All "+picked+" Picks for Week have been completed!";
+        }
+        else if (picked > count)
+        {
+            $scope.$parent.showAlert("System Error!", "You have picked more teams then there are teams to be picked! Games:"+count+" Picked:"+picked+". \nPlease report this to Airdreamer!");
+            picked = 0;
         }
         else
         {
