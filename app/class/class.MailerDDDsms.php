@@ -1,6 +1,5 @@
 <?php
 require_once "Mail.php";
-require_once "Mail/mime.php";
 
 // ini_set('display_errors','on');
 // error_reporting(E_ALL);
@@ -68,8 +67,8 @@ class MailerDDDsms
                 'password' => $this->password
             ));
 
-        $body = $mime->get();
-        $mimeheaders = $mime->headers($headers);
+        // $body = $mime->get();
+        // $mimeheaders = $mime->headers($headers);
         $this->recipients = $this->to;
 
         // echo "Got Mail_mime:";
@@ -83,7 +82,7 @@ class MailerDDDsms
 
         try {
 
-            $mail = $smtp->send($this->recipients, $mimeheaders, $textMessage);
+            $mail = $smtp->send($this->recipients, $headers, $textMessage);
          
             if (PEAR::isError($mail)) {
                 $this->setResult('<p>Error:' . $mail->getMessage() . '</p>');

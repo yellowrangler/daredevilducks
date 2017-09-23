@@ -12,6 +12,7 @@ $datetime = date("Y-m-d H:i:s");
 // $from = $_POST['emailfrom'];
 // $to = $_POST['emailto'];
 // $textmessage = $_POST['textmessage'];
+$rv = "";
 
 $from = "daredevilducks.xyz@gmail.com";
 $to = "9782392650@messa­gin­g.s­pri­ntp­cs.com";
