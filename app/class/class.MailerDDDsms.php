@@ -46,7 +46,7 @@ class MailerDDDsms
     //-------------------------------------------------------------
     
     // Constructor    
-    public function __construct ($from, $to, $textmessage)
+    public function __construct ($from, $to, $textMessage)
     {
         $this->setFrom($from);
         $this->setTo($to);
