@@ -9,7 +9,7 @@ $textMessage = "This was sent with PHP!\nOh Ya! Yarrr!";
 
 
 $headers = "From: $textFrom\n";
-echo mail($textTo, '', $textMessage, $headers);
+var_dump( mail($textTo, '', $textMessage, $headers) );
 
 // var_dump( mail( $textNumber . "@" . $textCarrier, '', $textMessage ) ); // bool(true)
  

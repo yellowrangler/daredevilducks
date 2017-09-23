@@ -71,15 +71,6 @@ class MailerDDDsms
         // $mimeheaders = $mime->headers($headers);
         $this->recipients = $this->to;
 
-        // echo "Got Mail_mime:";
-        // echo "mailbody:".$mailbody.":";
-        // echo "smtp:";
-        // print_r($smtp);
-        // echo ":";
-        // echo "mimeheaders:";
-        // print_r($headers);
-        // echo ":";
-
         try {
 
             $mail = $smtp->send($this->recipients, $headers, $textMessage);
