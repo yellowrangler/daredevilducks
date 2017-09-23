@@ -158,10 +158,10 @@ $returnStr = "";
 
 // first row 
 $returnStr = $returnStr . "
-<table style='width:95%;' class='table' >
+<table style='width:95%;' class='dialogTable' >
 	<tr >
-		<td style='font-weight:bold;padding-top:20px;width:35%'>$memberscreenname</td>			
-		<td>
+		<td style='font-weight:bold;padding-top:20px;width:125px;'>$memberscreenname</td>			
+		<td style=''>
 			<div style='text-align:center;'>
 				<img align='left' height='75' src='img/avatars/$memberavatar'> 
 			</div>
@@ -173,7 +173,7 @@ $returnStr = $returnStr . "
 // {
 // 	$returnStr = $returnStr . "
 // 	<tr>
-// 		<td style='font-weight:bold;width:35%;'>Favorite Team</td>
+// 		<td style='font-weight:bold;width:125px;'>Favorite Team</td>
 // 		<td>
 // 			<div style='text-align:center;'>
 // 				<img align='left' height='75' src='img/nflicons/$memberfavoriteteamiconame'> 
@@ -189,14 +189,14 @@ $returnStr = $returnStr . "
 ";
 
 // second table start
-$returnStr = $returnStr . "<table style='width:95%;' class='table' >";
+$returnStr = $returnStr . "<table style='width:95%;' class='dialogTable' >";
 
 // show favorite team if picked
 if ($memberfavorateteam != "")
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;width:35%;'>Favorite Team</td>
+		<td style='font-weight:bold;width:125px;'>Favorite Team</td>
 		<td>$memberfavorateteam</td>
 	</tr>
 	";
@@ -207,7 +207,7 @@ if ($biographyprofileind == 1)
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;'>Biography</td>	
+		<td style='font-weight:bold;width:125px;'>Biography</td>	
 		<td>$memberbiography</td>									
 	</tr>
 	";
@@ -218,7 +218,7 @@ if ($membernameprofileind == 1)
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;'>Name</td>	
+		<td style='font-weight:bold;width:125px;'>Name</td>	
 		<td>$membername</td>									
 	</tr>
 	";
@@ -229,7 +229,7 @@ if ($genderprofileind == 1)
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;'>Gender</td>	
+		<td style='font-weight:bold;width:125px;'>Gender</td>	
 		<td>$membergender</td>							
 	</tr>
 	";
@@ -240,7 +240,7 @@ if ($addressprofileind == 1)
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;'>Location</td>	
+		<td style='font-weight:bold;width:125px;'>Location</td>	
 		<td>$memberaddress</td>									
 	</tr>
 	";
@@ -251,7 +251,7 @@ if ($emailprofileind == 1)
 {
 	$returnStr = $returnStr . "
 	<tr>
-		<td style='font-weight:bold;'>eMail</td>	
+		<td style='font-weight:bold;width:125px;'>eMail</td>	
 		<td><a href='mailto:$memberemail' target='_top'>$memberemail</a></td>									
 	</tr>
 	";

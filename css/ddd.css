@@ -209,6 +209,16 @@ border: 0 none;
 	color:red;
 }
 
+.dialogTable {
+	padding:25px;
+}
+
+.dialogTable tr td {
+	padding-top:15px;
+	vertical-align:top;
+	padding-left: 10px;
+}
+
 .divRankingTableRow {
 	height:45px;
 }
