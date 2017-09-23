@@ -67,13 +67,9 @@ class MailerDDDsms
                 'password' => $this->password
             ));
 
-        // $body = $mime->get();
-        // $mimeheaders = $mime->headers($headers);
-        $this->recipients = $this->to;
-
         try {
 
-            $mail = $smtp->send($this->recipients, $headers, $textMessage);
+            $mail = $smtp->send($this->to, $headers, $textMessage);
          
             if (PEAR::isError($mail)) {
                 $this->setResult('<p>Error:' . $mail->getMessage() . '</p>');
