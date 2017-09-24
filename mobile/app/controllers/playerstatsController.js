@@ -155,7 +155,7 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
             else
             {
                 prev = index - 1;
-                if (value.totalgamespercent == data[prev].playerpickedpercent)
+                if (value.playerpickedpercent == data[prev].playerpickedpercent)
                 {
                     value.position = data[prev].position;
                 }
