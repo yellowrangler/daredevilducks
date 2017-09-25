@@ -15,7 +15,12 @@ $datetime = date("Y-m-d H:i:s");
 $rv = "";
 
 $from = "daredevilducks.xyz@gmail.com";
-$to = "9782392650@messa­gin­g.s­pri­ntp­cs.com";
+$to = "9784734868@messa­gin­g.s­pri­ntp­cs.com";
+
+$textNumber = "tarrant.cutler";
+$textCarrier = "gmail.com";
+$to = $textNumber . "@" . $textCarrier;
+
 $textmessage = "Hi Tammy this is a test of sending an sms message from a web server.";
 //
 // create mail object
