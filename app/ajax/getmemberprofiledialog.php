@@ -89,7 +89,7 @@ $sql = "SELECT
 	M.favoriteteamid, 
 	M.noemail, 
 	M.biography, 
-	CONCAT(M.city, ', ', M.state) as memberaddress,
+	CONCAT(COALESCE(M.city, ''), ', ', COALESCE(M.state, '')) as memberaddress,	
 	CONCAT(T.location, ' ', T.name) as favorateteam,
 	T.teamiconname as favoriteteamiconame,
 	T.teamurl as favoriteteamurl

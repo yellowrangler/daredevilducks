@@ -7,14 +7,11 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-
-// require_once "Mail.php";
-
-// $textNumber = "9784734868";
-// $textCarrier = "messa­gin­g.s­pri­ntp­cs.com";
+$textNumber = "9784734868";
+$textCarrier = "messa­gin­g.s­pri­ntp­cs.com";
 // $textNumber = "tarrant.cutler";
 // $textCarrier = "gmail.com";
-// $textTo = $textNumber . "@" . $textCarrier;
+$textTo = $textNumber . "@" . $textCarrier;
 // $textFrom = "daredevilducks.xyz@gmail.com";
 // $textMessage = "This was sent with PHP!\nOh Ya! Yarrr!";
 
@@ -24,6 +21,7 @@ require 'PHPMailer/src/SMTP.php';
 
 //Load composer's autoloader
 // require 'vendor/autoload.php';
+PHPMailer::$validator = function($email) { return true; };
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
@@ -38,10 +36,12 @@ try {
     $mail->Port = 587;                                     // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('daredevilducks.xyz@gmail.com', 'Mailer');
+    $mail->setFrom('daredevilducks.xyz@gmail.com', 'Daredevil Ducks');
     // $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-    $mail->addAddress('9784734868@messa­gin­g.s­pri­ntp­cs.com'); // Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
+    $textTo = "9784734868@messa­gin­g.s­pri­ntp­cs.com";
+    // $mail->addAddress('tarrant.cutler@gmail.com', 'test'); // Name is optional
+    $mail->addAddress($textTo, 'text'); // Name is optional
+    // $mail->addReplyTo($textTo, 'Information');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
 
@@ -53,12 +53,12 @@ try {
     $mail->isHTML(false);                                  // Set email format to HTML
     $mail->Subject = '';
     $mail->Body    = 'This is the text message body';
-    $mail->AltBody = 'This is the body in plain text';
+    // $mail->AltBody = 'This is the body in plain text';
 
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
-    echo 'Message could not be sent.';
+    echo 'Message could not be sent.<br>' . $textTo . '<br>';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
 

@@ -89,7 +89,7 @@ $sql = "SELECT
 	M.favoriteteamid, 
 	M.noemail, 
 	M.biography, 
-	CONCAT(M.city, ', ', M.state) as memberaddress,
+	CONCAT(COALESCE(M.city, ''), ', ', COALESCE(M.state, '')) as memberaddress,
 	CONCAT(T.location, ' ', T.name) as favorateteam,
 	T.teamiconname as favoriteteamiconame,
 	T.teamurl as favoriteteamurl
@@ -163,7 +163,7 @@ $returnStr = $returnStr . "
 		<td style='font-weight:bold;padding-top:20px;width:125px;'>$memberscreenname</td>			
 		<td style=''>
 			<div style='text-align:center;'>
-				<img align='left' height='75' src='../img/avatars/$memberavatar'> 
+				<img align='left' height='120' src='../img/avatars/$memberavatar'> 
 			</div>
 		</td>										
 	</tr>	
