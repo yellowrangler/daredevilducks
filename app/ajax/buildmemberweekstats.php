@@ -458,7 +458,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 	for ($week = $start; $week <= $weeksinregularseason; $week++)
 	{
 		$sql = "UPDATE memberweekstatstbl 
-			SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, percent = $percent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
+			SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, playerpickedpercent = $playerpickedpercent, totalgamespercent = $totalgamespercent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
 			WHERE memberid = $memberid AND season = $season AND week = $week";
 
 		$sql_result_update = @mysql_query($sql, $dbConn);
