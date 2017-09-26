@@ -26,6 +26,11 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'fireworksController',
                 templateUrl: 'app/partials/fireworks.html'
             })  
+        .when ('/newsopinion', 
+            {
+                controller: 'newsopinionController',
+                templateUrl: 'app/partials/newsopinion.html'
+            })
         .when('/happyholidays',
             {
                 controller: 'happyholidaysController',
