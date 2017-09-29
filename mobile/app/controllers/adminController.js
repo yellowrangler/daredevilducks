@@ -1398,55 +1398,107 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     function sendeMailForm() {
         var data = $("#dddeMailForm").serialize();
-        
+
         membersFactory.sendeMail2Members(data)
             .success( function(rv) {
                 var textStr = rv;
                 $('#eMailDialogModalTitle').text("eMail Status");
                 $('#eMailDialogModalLabelBody').html(textStr);
                 $('#eMailDialogModal').modal();
+
+                $scope.current.emailto = "";
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
     }
 
     function geteDynamiceMailTemplate(template)
     {
-        teamsFactory.getCurrentSeasonWeek()
+        var gametype = 1;
+        var q = "week="+$scope.current.weekOverride+"&season="+$scope.current.season+"&gametype="+gametype+"&template="+template;
+        membersFactory.buildeMailTemplate(q)
             .success( function(data) {
-                $scope.current.season = data.season; 
-                $scope.current.week = data.week;
-                var gametype = 2;
-                var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&gametype="+gametype+"&template="+template;
-                membersFactory.buildeMailTemplate(q)
-                    .success( function(data) {
-                        var title = data.split("\n")[0];
-                        $("#emailsubject").val(title);
+                var title = data.split("\n")[0];
+                $("#emailsubject").val(title);
 
-                        var body = data.replace(title+"\n","");
-                        $("#emailmessage").val(body);
-                    })
-                    .error( function(edata) {
-                        alert(edata);
-                    })
-                })
+                var body = data.replace(title+"\n","");
+                $("#emailmessage").val(body);
+            })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            })
 
     }
 
-    function geteMailTemplate() {
-        var url = "";
+    function geteMailItems() {
+        var emailtemplateObj = JSON.parse($scope.current.emailtemplate);
+        var emailurl = emailtemplateObj.url; 
+        var emailtype = emailtemplateObj.type; 
+        var emailrecipients = emailtemplateObj.recipients; 
 
         $("#emailmessage").html("");
 
         //
+        // First get template build starterd
+        //
+        switch (emailtype)
+        {
+            case "normal":
+                geteMailTemplate(emailurl);
+                break;
+
+            case "dynamic":
+                geteDynamiceMailTemplate(emailurl);
+                break;
+
+            default:
+                alert("Invalid email type! email type = "+emailtype);
+        }
+
+        //
+        // Next get template recipients starterd
+        //
+        clearMailTo();
+
+        switch (emailrecipients)
+        {
+            case "all":
+                addAll2MailForm();
+                break;
+
+            case "latepicks":
+                getLatePickMembers();
+                break;
+
+            case "latepicksdayof":
+                getLatePickDayOfMembers();
+                break;  
+
+            case "latepicksdaybefore":
+                getLatePickDayBeforeMembers();
+                break;    
+                
+                
+            case "manual":
+                break;        
+
+            default:
+                alert("Invalid email recipients! email recipients = "+emailrecipients);
+        }
+
+
+       
+    }
+
+    function geteMailTemplate(url) {
+        //
         // add template to area
         //
-        url = "emailforms/" + $scope.current.emailtemplate;
-        $.get(url, null, function (data) {
+
+        var emailurl = "emailforms/" + url; 
+        
+        $.get(emailurl, null, function (data) {
             var title = data.split("\n")[0];
             $("#emailsubject").val(title);
 
@@ -1455,19 +1507,19 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         })
     }
 
-    function getLatePickMembersbutton() {
+    function getLatePickMembers() {
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.current.season = data.season; 
+                $scope.current.season = data.season;
                 $scope.current.week = data.week;
 
-                var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                var q = "week="+$scope.current.week+"&season=";
                 membersFactory.getLatePickMembers(q)
                     .success( function(data) {
                         $.each(data, function (key, value) {
                             setMembereMail(value.email);
-                        }); 
+                        });
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -1475,14 +1527,14 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 })
             .error( function(edata) {
                 alert(edata);
-            });                     
+            });
     }
 
-    function getLatePickDayOfMembersbutton() {
+    function getLatePickDayOfMembers() {
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.current.season = data.season; 
+                $scope.current.season = data.season;
                 $scope.current.week = data.week;
 
                 var q = "week="+$scope.current.week+"&season="+$scope.current.season;
@@ -1490,7 +1542,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                     .success( function(data) {
                         $.each(data, function (key, value) {
                             setMembereMail(value.email);
-                        }); 
+                        });
                     })
                     .error( function(edata) {
                         alert(edata);
@@ -1498,20 +1550,68 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 })
             .error( function(edata) {
                 alert(edata);
-            });                     
+            });
+    }
+
+    function getLatePickDayBeforeMembers() {
+
+        teamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season;
+                $scope.current.week = data.week;
+
+                var q = "week="+$scope.current.week+"&season="+$scope.current.season;
+                membersFactory.getLatePickDayBeforeMembers(q)
+                    .success( function(data) {
+                        $.each(data, function (key, value) {
+                            setMembereMail(value.email);
+                        });
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });
+                })
+            .error( function(edata) {
+                alert(edata);
+            });
+    }
+
+    function clearMailTo() {
+        $scope.current.emailto = "";
     }
 
     init();
     function init() {
+        //
+        // this is not getting called at right time for definig top offset
+        // in jquery ready. So adding it here
+        //
+        $scope.sendDataEmail = "noemail=1";
+
         $scope.emailtemplates = selectListService.getList('emt');
 
-        membersFactory.getMembers()
+        teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.members = data; 
+                $scope.current.season = data.season;
+                $scope.current.week = data.week;
+
+                $scope.current.weekOverride = $scope.current.week;
+                })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        membersFactory.getMembers($scope.sendDataEmail)
+            .success( function(data) {
+                $scope.members = data;
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
+    }
+
+    $scope.geteMailItems = function () {
+        geteMailItems();
     }
 
     $scope.setMembereMail = function (email) {
@@ -1526,23 +1626,8 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         sendeMailForm();
     }
 
-    $scope.geteMailTemplate = function(template) {
-        if (template == "gameweek")
-        {
-            geteDynamiceMailTemplate(template);
-        }
-        else
-        {
-            geteMailTemplate(template);
-        }
-    }
-
-    $scope.getLatePickMembersbutton = function() {
-        getLatePickMembersbutton();
-    }
-
-    $scope.getLatePickDayOfMembersbutton = function() {
-        getLatePickDayOfMembersbutton();
+    $scope.clearMailTo = function() {
+        clearMailTo();
     }
 
 }

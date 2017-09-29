@@ -11,7 +11,29 @@
   <div class="col-md-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Select Recipients</h3>
+        <h3 class="panel-title">eMail Selections</h3>
+      </div>
+
+      <div class="panel-body">
+        <form id="getTemplateForm" name="getTemplateForm" style="padding:10px;" class="form">
+          <div class="form-group" >
+            <label for="templatename" class="control-label">Name</label>
+              <select tabindex="1"  class="form-control" ng-change="geteMailItems()" ng-model="current.emailtemplate" id="templatename" name="templatename">
+                <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate}}">{{emailtemplate.title}}</option>
+              </select>
+          </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="weekOverride" class="control-label">Week Override</label>
+              <input type="weekOverride" class="form-control" ng-model="current.weekOverride" id="weekOverride" name="weekOverride">
+          </div> <!-- end of form-group -->
+        </form>  
+      </div> <!-- end of panel body -->
+    </div> <!-- end of panel -->  
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recipients</h3>
       </div>
 
       <div class="panel-body">
@@ -24,43 +46,13 @@
               <input type="hidden" value="{{current.id}}" id="id" name="id">
           </div> <!-- end of form-group -->
 
-          <div>
-            <button id="addAll2Mailbutton" data-ng-click="addAll2MailForm()" type="button" class="btn btn-primary center-block">Add All</button>
-          </div>
-
-          <div style="padding-top:20px;">
-            <button id="getLatePickMembersbutton" data-ng-click="getLatePickMembersbutton()" type="button" class="btn btn-primary center-block">Late Pick All</button>
-          </div>
-
-          <div style="padding-top:20px;">
-            <button id="getLatePickDayOfMembersbutton" data-ng-click="getLatePickDayOfMembersbutton()" type="button" class="btn btn-primary center-block">Late Pick Day of</button>
-          </div>
-
+          <div style="padding-left:15px;" class="form-group   form-inline">
+              <button id="addAll2Mailbutton" data-ng-click="addAll2MailForm()" type="button" class="btn btn-primary">Add All</button>
+          </div> <!-- end of form-group -->
         </form>  
       </div> <!-- end of panel body -->
     </div> <!-- end of panel -->  
 
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Templates</h3>
-      </div>
-
-      <div class="panel-body">
-        <form id="getTemplateForm" name="getTemplateForm" style="padding:10px;" class="form">
-          <div class="form-group" >
-            <label for="templatename" class="control-label">Name</label>
-              <select tabindex="1"  class="form-control" ng-change="geteMailTemplate()" ng-model="current.emailtemplate" id="templatename" name="templatename">
-                <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate.url}}">{{emailtemplate.title}}</option>
-              </select>
-          </div> <!-- end of form-group -->
-        </form>  
-      </div> <!-- end of panel body -->
-    </div> <!-- end of panel -->   
-  </div> <!-- end of col 12 -->
-</div> <!-- end of row --> 
-
-<div class="row">
-  <div class="col-md-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h3 class="panel-title">Send eMail</h3>
@@ -100,19 +92,24 @@
           <div style="padding:5px;">&nbsp;</div>
 
           <div style="padding-left:15px;" class="form-group">
-            <div class="col-md-offset-2 col-md-3">
+            <div class="col-md-12">
               <button id="sendeMail" data-ng-click="sendeMailForm()" type="button" class="btn btn-primary">Send eMail</button>
+            </div>
+
+            <div style="padding:5px;">&nbsp;</div>
+            
+            <div class="col-md-12">
+              <button id="clearMailTo" data-ng-click="clearMailTo()" type="button" class="btn btn-primary">Clear Mail To</button>
             </div>
           </div> <!-- end of form-group -->
 
         </form>  
       </div> <!-- end of panel body -->
     </div> <!-- end of panel -->
-  </div> <!-- end of col 7 -->
+  </div> <!-- end of col 12 -->
 </div> <!-- end of row --> 
   
-
-  <!-- dialogs -->
+<!-- dialogs -->
 <div class="modal fade" id="eMailDialogModal" tabindex="-1" role="dialog" aria-labelledby="eMailDialogModalTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
