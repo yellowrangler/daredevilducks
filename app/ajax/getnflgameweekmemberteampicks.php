@@ -125,8 +125,8 @@ LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
 LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
 WHERE G.season = $season
 AND G.week = $week
-ORDER BY G.gamedatetime, TH.location";
-
+ORDER BY G.gamenbr";
+// ORDER BY G.gamedatetime, TH.location";
 // echo "sql:$sql";
 // exit();
 
