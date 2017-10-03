@@ -29,6 +29,26 @@ dddApp.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNFLGameWeekTeams = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnflgameweekteams.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.saveGameWeekTeamsNetworkInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/savegameweekteamsnetworkinfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    
+
     factory.getNFLnetworks = function () {
         return $http({ 
             method: 'POST', 
