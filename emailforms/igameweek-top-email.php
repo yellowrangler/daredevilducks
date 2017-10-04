@@ -8,32 +8,30 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 <br />
 
 <p>
-	Best week of football this season. The Patriots pulled another miracle win out of what is beginning to become routine. The defense is still looking shaky, but I believe this is fixable. The Thursday night game was an exciting offensive juggernaut with the Rams winning. The Browns and the Colts entertained with another high scoring contest. The Colts (former Patriots) Brissett continued to look capable in the win. The Eagles beat the Giants by kicking a 61 yard field goal with none or very little time left. The Jets won their first game of the season against Miami. 
+	Another week in this crazy season. The Patriots defence put in another stinker against the Panthers. Much will have to improve if we expect even a whiff of post season. The Saints pounded the hapless Dolphins. The Titan's in a week eerily reminiscent of last seasons final regular week found both Oakland and Titan's quarterbacks knocked out of the game. Speaking of the Titan's, they were pounded by the Texans. Deshaun Watson is beginning to look more and more like the real thing.
 </p>
 <p>
-	This week was also a week for upsets. The Bills beat the Broncos in a stunner. The Steelers lost to the Bears in an exciting match. The Bradford-less Vikings showed that they can still play by trouncing the Buccaneers. The Titans beat the Seahawks in a game where Richard Sherman proved once again that he is a bully and jerk. Why he was not ejected is beyond me.
+	The Jets beat the Jaguars in a close game. The Lions won a contested match against the much improved Vikings. The Steelers put the hammer on the Ravens. The Bengals finally won a game aginst the winless Browns. The Rams beat the Cowboys in a great offensive contest.  The Eagles dispatched the poor Chargers in a close game.
 </p>
 <p>
-	Other games found the Bengals loosing again, this time to the Packers. The Falcons won a highly controversial game against the Lions. On a third down with 8 seconds left on the clock the Lions appeared to have scored a winning touchdown. Replay showed he had not. NFL rules require a 10 second runoff after a review stoppage. As a result, the game ended. I am sure this rule will be reviewed by the powers that be!
+	This week had one big upset as the Bills beat the Falcons to take first place in their division. Is this the year for the Bills? The Giants lost again, this time to the Buccaneers. The Cardinals and Broncos eked eked out wins. The Seahawks destroyed the Colts and the Chiefs won a cliff hanger against the Redskins. All in all a great Third week.
 </p>
-<p>
-	The Chiefs continued their perfect record by beating the winless Chargers. The Redskins looked impressive in their thrashing of the Raiders. The Cowboys put together a great second half and trounced the happless Cardinals. All in all a great Third week.
-</p>
+
 <p>
 	Wildcat Wonder is working on the game stats, and we should have these available to you soon. 
 </p>
 
 <p>
-	We had another great turnout this week. Thank you all again for participating. 18 Wheeler stands alone in first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! He is followed by a plethora of people in second and third. Check out the numbers below.
+	We had another great turnout this week. Thank you all again for participating. 18 Wheeler continues to own first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! He is followed by a plethora of people in second and third. 
 </p>
 
 <p>
-	18 Wheeler also took command of first place of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. 
- 	Again check out the numbers below!
+	18 Wheeler also continues command of first place of <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. 
+ 	Check out the numbers below!
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have 18 Wheeler and Lady Luck! Way to go Folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have Ginger in first place; followed by a number of others in second! Way to go Ginger! 
 </p>  
 
 <p>
