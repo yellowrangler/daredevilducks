@@ -1,7 +1,7 @@
-<form id="gamenetworkweekForm" name="gamenetworkweekForm">
+<form id="gameteamscoreweekForm" name="gameteamscoreweekForm">
 <div class="pageCaption row">
 	<div style="padding-top:15px;display:inline;" class="col-md-12">
-		<h2 style="display:inline;" class="headerTitle">Set Game Network Information</h2>
+		<h2 style="display:inline;" class="headerTitle">Set Game Scores Information</h2>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->	
 
@@ -12,20 +12,20 @@
 				<div class="panel-body">
 					<div class="form-group horizontalFieldOffset">
 				    	<label for="season" class="control-label">Season</label>
-			            <select class="customSelect form-control" ng-change="getGameNetworkWeekInfo('season')" ng-model="current.season" id="season" name="season">
+			            <select class="customSelect form-control" ng-change="getGameScoresWeekInfo('season')" ng-model="current.season" id="season" name="season">
 			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
 			            </select>
 					</div> <!-- end of form-group -->
 
 					<div class="form-group horizontalFieldOffset">
 				    	<label for="week" class="control-label">Week</label>
-			            <select class="customSelect form-control" ng-change="getGameNetworkWeekInfo('week')" ng-model="current.week" id="week" name="week">
+			            <select class="customSelect form-control" ng-change="getGameScoresWeekInfo('week')" ng-model="current.week" id="week" name="week">
 			                <option ng-repeat="week in weeks" ng-selected="current.week == week.week" value="{{week.week}}"> {{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
 			            </select>
 					</div> <!-- end of form-group -->  
 				
 					<div style="padding-left:30px;"class="form-group horizontalFieldOffset">
-		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="saveGameNetworkWeeklyInfo()" id="saveGamesNetwork" name="saveGamesNetwork" >Save Games Network</button>
+		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="saveGameScoresWeeklyInfo()" id="saveGameScores" name="saveGameScores" >Save Games Scores</button>
 					</div> <!-- end of form-group --> 
 
 				</div> <!-- end of panel body -->		
@@ -40,38 +40,44 @@
 			<div class="panel-body table-responsive">
 				<table class="table pickGameTable" >
 					<tr class="tableTitle">
-						<th colspan=1>Network</th>	
 						<th colspan=1>Game Day</th>		
-						<th colspan=2>Home Team</th>	
-						<th colspan=2>Away Team</th>					
+						<th colspan=2>Home Team</th>
+						<th colspan=1>Score</th>		
+						<th colspan=2>Away Team</th>
+						<th colspan=1>Score</th>	
 					</tr>
 
 					<tr ng-repeat="game in games">
-						<td class="left-column-text">
-							<select class="customSelect form-control" ng-model="game.networkid" id="networkid" name="pick_{{game.gamenbr}}">
-				                <option ng-repeat="network in networks" ng-selected="game.networkid == network.id" value="{{network.id}}">{{network.network}}</option>
-				            </select>
-						</td>
-
 						<td class="center-column-text">
 							 <div>{{game.gameday}}</div> 
 							 <div>{{game.gametime}}</div> 
 						</td>
 
-						<td id='pickh_{{game.gamenbr}}_icon' class="teamNotSelected" >
+						<td class="teamNotSelected" >
 							<img height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
 						</td>
 
-						<td name='pickh_{{game.gamenbr}}_teamname' id='pickh_{{game.gamenbr}}_teamname' class="teamNotSelected" >
+						<td class="teamNotSelected" >
+							<input ng-model="game.gamenbr" name='gamenbr[]' value="{{game.gamenbr}}" type='hidden' />
+							<input ng-model="game.hometeamid" name='hometeamid[]' value="{{game.hometeamid}}" type='hidden' />
+							<input ng-model="game.awayteamid" name='awayteamid[]' value="{{game.awayteamid}}" type='hidden' />
 							{{game.hometeamlocation}} &nbsp; {{game.hometeamname}}
 						</td>
 
-						<td id='teama_{{game.gamenbr}}_icon' class="teamNotSelected"  >
+						<td class="center-column-text">
+							<input ng-model="game.hometeamscore" name='hometeamscore[]' value='{{game.hometeamscore}}' size="4" type='text' />
+						</td>
+
+						<td class="teamNotSelected"  >
 							<img height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
 						</td>
 
-						<td name='teama_{{game.gamenbr}}_teamname' id='awayteam' class="teamNotSelected" >
+						<td class="teamNotSelected" >
 							{{game.awayteamlocation}} &nbsp; {{game.awayteamname}}
+						</td>
+
+						<td class="center-column-text">
+							<input ng-model="game.awayteamscore" name='awayteamscore[]'  value='{{game.awayteamscore}}' size="4" type='text' />
 						</td>
 					</tr>
 
@@ -83,22 +89,22 @@
 
 <div style="padding-top:15px; padding-bottom:35px;" class="row">
 	<div class="col-md-offset-2  col-md-8">
-		<button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block" ng-click="saveGameNetworkWeeklyInfo()" id="saveGamesNetworkBottom" name="saveGamesNetworkBottom">Click Here to Save Network</button>
+		<button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block" ng-click="saveGameScoresWeeklyInfo()" id="saveGameScoresBottom" name="saveGameScoresBottom">Click Here to Save Scores</button>
 	</div><!-- end of col 12 -->
 </div> <!-- end of row -->
 
 </form>
 
 <!-- dialogs -->
-<div class="modal fade" id="gameNetworkInfoSavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gameNetworkInfoSavedDialogModalTitle" aria-hidden="true">
+<div class="modal fade" id="gameScoresInfoSavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gameScoresInfoSavedDialogModalTitle" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="gameNetworkInfoSavedDialogModalTitle"></h4>
+        <h4 class="modal-title" id="gameScoresInfoSavedDialogModalTitle"></h4>
       </div>
       <div class="modal-body">
-        <p id="gameNetworkInfoSavedDialogModalBody"></p>
+        <p id="gameScoresInfoSavedDialogModalBody"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -1063,7 +1063,7 @@ controllers.gamenetworkinfoController = function ($scope, $http, $location, memb
 
     function saveGameNetworkWeeklyInfo()
     {
-        var sdata = $("#pickweekForm").serialize();
+        var sdata = $("#gamenetworkweekForm").serialize();
         // var sdata = $("#pickweekForm").serializeArray();        // var jsdata = JSON.stringify(sdata);
         // var jpdata = JSON.parse(jsdata);
         teamsFactory.saveGameWeekTeamsNetworkInfo(sdata)
@@ -1130,6 +1130,90 @@ controllers.gamenetworkinfoController = function ($scope, $http, $location, memb
     }
 }
 
+controllers.gameteamscoresinfoController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
+    $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
+    $scope.current.week = nflTeamsService.getCurrentWeek();
+
+    function saveGameScoresWeeklyInfo()
+    {
+        var sdata = $("#gameteamscoreweekForm").serialize();
+
+        teamsFactory.saveGameWeekTeamsScoreInfo(sdata)
+            .success( function(data) {
+                getGameScoresWeekInfo();
+
+                $('#gameScoresInfoSavedDialogModalTitle').text("Success");
+                $('#gameScoresInfoSavedDialogModalBody').html(data);
+                $('#gameScoresInfoSavedDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        var i = 0;
+    }
+
+    function getGameScoresWeekInfo() 
+    {
+        var senddata = "season="+$scope.current.season+"&week="+$scope.current.week;
+        teamsFactory.getNFLGameWeekTeams(senddata)
+        .success( function(data) {
+            $scope.games = data;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
+        teamsFactory.getCurrentSeasonWeek()
+        .success( function(data) {
+            $scope.current.season = data.season; 
+            $scope.current.week = data.week;
+
+            nflTeamsService.addCurrentWeek($scope.current.week);
+            nflTeamsService.addCurrentSeason($scope.current.season);
+            $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+            teamsFactory.getNFLTeamseasonweeks($scope.current.season)
+            .success( function(data) {
+                $scope.weeks = data; 
+
+                var senddata = "season="+$scope.current.season+"&week="+$scope.current.week;
+                teamsFactory.getNFLGameWeekTeams(senddata)
+                .success( function(data) {
+                    $scope.games = data;
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
+                
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+        })
+        .error( function(edata) {
+            alert(edata);
+        }); 
+    }
+
+    $scope.saveGameScoresWeeklyInfo = function() {
+        saveGameScoresWeeklyInfo();
+    }
+
+    $scope.getGameScoresWeekInfo = function () {
+        getGameScoresWeekInfo();
+    }
+}
 controllers.weeklyscriptsController = function ($scope, $http, $location, teamsFactory, nflTeamsService, scriptsFactory) {
     $scope.current = {};
     var sw = new stopWatch();

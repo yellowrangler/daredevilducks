@@ -47,7 +47,14 @@ dddApp.factory('teamsFactory', function($q, $http) {
         })
     }
 
-    
+    factory.saveGameWeekTeamsScoreInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/savegameweekteamsscoreinfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
 
     factory.getNFLnetworks = function () {
         return $http({ 

@@ -14,6 +14,28 @@ $strCut = "pick_";
 $gamenbr = "";
 $teamid = "";
 $msgtext = "ok";
+
+//
+// collect the data coming in. 
+//
+$post = $_POST; 
+$count = 0;
+$gameArray = Array();
+$teamArray = Array();
+$gamenumberDuplicate = ""; 
+foreach ( $post as $key=>$value )
+{
+	$pos = strpos($key, $strCut);
+	if ($pos === false)
+	{
+		continue;
+	}
+	
+	$gameArray[$count] = str_replace($strCut, "", $key);
+	$teamArray[$count] = $value;
+
+	$count = $count + 1;
+}
   
 //
 // get date time for this transaction
@@ -64,19 +86,69 @@ if (!mysql_select_db($DBschema, $dbConn))
 	exit($rv);
 }
 
-$post = $_POST;  
-foreach ( $post as $key=>$value )
+//
+// Get total games to pick for week
+//
+$sql = "SELECT count(*) AS gamescount FROM gamestbl WHERE season = $season and week = $week";
+
+$sql_result_check = @mysql_query($sql, $dbConn);
+if (!$sql_result_check)
 {
-	// echo "key:".$key." value:".$value."</br>";
-	$pos = strpos($key, $strCut);
-	// echo "pos:".$pos."</br>";
-	if ($pos === false)
-	{
-		continue;
-	}
-	
-	$gamenbr = str_replace($strCut, "", $key);
-	$teamid = $value;
+    $log = new ErrorLog("logs/");
+    $sqlerr = mysql_error();
+    $log->writeLog("SQL error: $sqlerr - Error doing select for game count. Unable to add member game pick.");
+    $log->writeLog("SQL: $sql");
+
+    $status = -110;
+    $msgtext = "System Error: $sqlerr";
+}
+
+$r = mysql_fetch_assoc($sql_result_check);
+$gamescount = $r['gamescount'];
+
+//
+// Validate team pick data. We have been getting duplicate picks for same/different teams.
+//
+
+// if teams picked greater then games to pick out you go
+if ($count > $gamescount)
+{
+	$log = new ErrorLog("logs/");
+	$msgtext = "Error: Too many teams picked! Contact Airdreamer!";
+	$log->writeLog("Format error: $msgtext - Error with format from JS. Picked: $count. Games: $gamescount. Unable to add member game pick for ddd member $memberid.");
+
+	exit($msgtext);
+}
+
+// if no teams picked out you go
+if ($count == 0)
+{
+	$log = new ErrorLog("logs/");
+	$msgtext = "Error: No teams picked!";
+	$log->writeLog("Format error: $msgtext - Error with format from JS. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+
+	exit($msgtext);
+}
+
+// if duplicate teams picked out you go
+$teamDiffArray = array_diff_assoc( $teamArray, array_unique( $teamArray ) );
+$diffCount = count($teamDiffArray);  
+if (diffCount > 0)
+{
+	$log = new ErrorLog("logs/");
+		$msgtext = "Error: Duplicate teams picked!";
+	$log->writeLog("Format error: $msgtext - Error with format from JS. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+
+	exit($msgtext);
+}
+
+//
+// now loop through the picks
+//
+for ( $j = 0; $j < $count; $j++ )
+{
+	$gamenbr = $gameArray[$j];
+	$teamid = $teamArray[$j];
 
 	//---------------------------------------------------------------
 	// if we have this already then update else insert

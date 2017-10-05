@@ -40,7 +40,7 @@ LEFT JOIN membertbl M on QM.memberid = M.id
 SELECT memberid, membername, COUNT(*) as picks
 FROM memberpickstbl MP
 LEFT JOIN membertbl M on MP.memberid = M.id
-WHERE season = 2017 and week = 1
+WHERE season = 2017 and week = 5
 GROUP BY membername, memberid
 
 UNION
@@ -52,11 +52,11 @@ WHERE id NOT IN
 	SELECT  memberid as id
 	FROM memberpickstbl MP
 	LEFT JOIN membertbl M on MP.memberid = M.id
-	WHERE season = 2017 and week = 1
+	WHERE season = 2017 and week = 5
 )
 AND status = 'active'
 
 
-SELECT * FROM memberpickstbl WHERE season = 2016 and week = 15 and memberid = 15
+SELECT * FROM memberpickstbl WHERE season = 2017 and week = 5 and memberid = 57
 
-DELETE FROM memberpickstbl WHERE season = 2016 and week = 15 and memberid = 15
+DELETE FROM memberpickstbl WHERE season = 2017 and week = 5 and memberid = 57
