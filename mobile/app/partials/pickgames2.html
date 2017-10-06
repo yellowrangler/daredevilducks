@@ -49,7 +49,7 @@
 					<div style="display:inline-block;line-height:55px;"  
 					ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : '' "
 					class="gameDateTime center-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2">
-						<span > {{game.gameday}} </span> 
+						<span style="font-size:14px;"> {{game.gameday}} </span> 
 					</div>
 					
 					<div style="display:inline-block;line-height:55px;"  class="col-xs-3 col-sm-2 col-md-2 col-lg-2" id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
