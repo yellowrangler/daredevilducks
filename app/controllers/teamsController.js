@@ -1350,7 +1350,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         $scope.current.toggletext = $scope.current.toggletextShow;
 
         var windowHeight = window.innerHeight;
-        $scope.current.WeeklRankingtablesize = windowHeight * .45;
+        $scope.current.WeeklRankingtablesize = windowHeight * .35;
 
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
