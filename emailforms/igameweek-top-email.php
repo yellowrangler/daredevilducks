@@ -8,13 +8,17 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 <br />
 
 <p>
-	Another week in this crazy season. The Patriots defense put in another stinker against the Panthers. Much will have to improve if we expect even a whiff of post season. The Saints pounded the hapless Dolphins. The Titan's in a week eerily reminiscent of last seasons final regular week found both Oakland and Titan's quarterbacks knocked out of the game. Speaking of the Titan's, they were pounded by the Texans. Deshaun Watson is beginning to look more and more like the real thing.
+	Another week in the season. The Patriots defense looked better as they kept the Patriots in it enough to beat the Buccaneers at home. The Jets beat the hapless Browns. The Panthers continue to look good as they beat the Lions in Detroit. The Colts and Dolphins both won in un-remarkable fashion. 
 </p>
 <p>
-	The Jets beat the Jaguars in a close game. The Lions won a contested match against the much improved Vikings. The Steelers put the hammer on the Ravens. The Bengals finally won a game against the winless Browns. The Rams beat the Cowboys in a great offensive contest.  The Eagles dispatched the poor Chargers in a close game.
+	The Bengals finally won a game against the improved Bills. The Chargers got their first against the pathetic Giants whose misery was enhanced by loosing Beckham for the Season. I smell a coaching change and soon! The Jaguars upset the Steelers who continue to have issues on the field and in the locker room. 
 </p>
 <p>
-	This week had one big upset as the Bills beat the Falcons to take first place in their division. Is this the year for the Bills? The Giants lost again, this time to the Buccaneers. The Cardinals and Broncos eked eked out wins. The Seahawks destroyed the Colts and the Chiefs won a cliff hanger against the Redskins. All in all a great Third week.
+	The Eagles stay strong with an impressive win over the Cardinals. Though with the just announced addition of Adrian Peterson, the Cardinals should have more balance. The Seahawks beat the improved Rams, and the Ravens beat the Car-less Raiders.
+</p>
+
+<p>
+	The Green Bay Packers pulled out a last second win over the Cowboys in a thriller. The Chiefs showed that they are for real by beating the Texans. It was a tough day for Texas as they lost both defensive standouts Watt and Mercilus. The Vikings beat da Bears in Chicago. All in all a great fourth week.
 </p>
 
 <p>
