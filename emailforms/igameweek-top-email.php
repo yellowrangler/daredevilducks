@@ -8,25 +8,22 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 <br />
 
 <p>
-	Another week in the season. The Patriots defense looked better as they kept the Patriots in it enough to beat the Buccaneers at home. The Jets beat the hapless Browns. The Panthers continue to look good as they beat the Lions in Detroit. The Colts and Dolphins both won in un-remarkable fashion. 
+	Another week in a crazy season. The Patriots defense still needs work. The offence was able to put enough points on the board to beat the Jets. But an arcane rule spoiled the match. The Eagles beat the Panthers in a back and forth game. The Bears beat the Ravens in OT to keep their progress alive. The Browns lost again, this time to the Texans. The Packers lost to the Vikings and in the effort lost their star quarterback Aron Rogers. The Saints drilled the fickle Lions.
 </p>
 <p>
-	The Bengals finally won a game against the improved Bills. The Chargers got their first against the pathetic Giants whose misery was enhanced by loosing Beckham for the Season. I smell a coaching change and soon! The Jaguars upset the Steelers who continue to have issues on the field and in the locker room. 
+	Is it me, or does the league seem to be loosing top teams as mediocracy settles in. Last years super bowl contender Falcons lost to the aimless Dolphins. The Redskins squeaked by the struggling 49ers. The Buccaneers lost to the Cardinals, while the Rams beat the Jaguars. The Steelers and Big Ben showed their steel by beating the undefeated Chiefs. Don't count out the Steelers. When focused they are formidable!
 </p>
 <p>
-	The Eagles stay strong with an impressive win over the Cardinals. Though with the just announced addition of Adrian Peterson, the Cardinals should have more balance. The Seahawks beat the improved Rams, and the Ravens beat the Car-less Raiders.
+	The Chargers beat the Raiders, and the 5 and 0 Giants beat the Broncos at HOME. Really! Finally, the Titans beat the Colts in a badly played game. Still, all in all a great sixth week.
 </p>
 
-<p>
-	The Green Bay Packers pulled out a last second win over the Cowboys in a thriller. The Chiefs showed that they are for real by beating the Texans. It was a tough day for Texas as they lost both defensive standouts Watt and Mercilus. The Vikings beat da Bears in Chicago. All in all a great fourth week.
-</p>
 
 <p>
 	Wildcat Wonder is working on the game stats, and we should have these available to you soon. 
 </p>
 
 <p>
-	We had another great turnout this week. Thank you all again for participating. 18 Wheeler continues to own first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! But he had better watch out as Peanuts and Tooth Fairy are hot on his trail in second!
+	We had another great turnout this week. Thank you all again for participating. 18 Wheeler continues to own first place on the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! But he has his grand daughter NFL Amateur hot on his tail!
 </p>
 
 <p>
@@ -35,7 +32,7 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have a trifecta as ANTIC, Hygenius and Kitten Mittens are all tied for first place; followed by a number of others in second! Way to go Folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we Dr Joy in first place; followed by a Blue Lioness in second! Way to go Folks! 
 </p>  
 
 <p>
