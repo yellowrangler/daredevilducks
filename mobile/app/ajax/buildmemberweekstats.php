@@ -137,10 +137,10 @@ if (!$sql_result_prime)
 //---------------------------------------------------------------
 // get total weeks to date
 //---------------------------------------------------------------
-$sql = "SELECT 
-COALESCE(MAX(week),1) AS weeks
-FROM gameweekstbl where season = $season
-AND weekend <= DATE_ADD(now(), INTERVAL 1 DAY)";
+$sql = "SELECT MAX(week) AS weeks
+FROM gameweekstbl 
+WHERE season = $season
+AND weekstart <= now()";
 
 $sql_result = @mysql_query($sql, $dbConn);
 if (!$sql_result)
