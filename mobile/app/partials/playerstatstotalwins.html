@@ -35,10 +35,9 @@
 					</div>  <!-- end of form group -->
 
 					<div class="form-group horizontalFieldOffset">
-						<label class="control-label" for="showexperts">Show Experts</label>
-						<input style="padding-left:15px;" type="checkbox"
-					       ng-model="current.showexperts"  id="showexperts" name="showexperts"
-					       ng-change="getYearlyTotalWins()" >
+						<button id="showexperts" name="showexperts" type="button" class="btn btn-primary" ng-click="getYearlyTotalWins()">
+						    {{current.showexpertsTitle}}
+						</button>
 					</div>  <!-- end of form group -->
 				</div> <!-- end of panel body -->			
 			</div> <!-- end of panel -->

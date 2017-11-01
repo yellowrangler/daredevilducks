@@ -5,6 +5,7 @@ controllers.addmemberController = function ($scope, $http, $location, membersFac
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+        window.scrollTo(0, 0);
 
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.states = selectListService.getList('states');
@@ -59,6 +60,8 @@ controllers.addavatarController = function ($scope, $http, $location, membersFac
 
     init();
     function init() {
+        window.scrollTo(0, 0);
+
         $scope.current.avatar = "default.png";
 
         membersFactory.getMembers()
@@ -134,6 +137,7 @@ controllers.updatememberController = function ($scope, $http, $location, members
 
     init();
     function init() {
+        window.scrollTo(0, 0);
 
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.states = selectListService.getList('states');
@@ -261,6 +265,7 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
 
     init();
     function init() {
+        window.scrollTo(0, 0);
         
         initMemberGroups();  
         
@@ -474,6 +479,7 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+        window.scrollTo(0, 0);
 
         $scope.current = {};
         $scope.membergroupmeberslist = {};
@@ -566,6 +572,8 @@ controllers.teaminfoController = function ($scope, $http, $log, $location, uiGri
 
     init();
     function init() {
+        window.scrollTo(0, 0);
+
         var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
         $scope.postseasonstatuses = postseasonstatuses; 
         
@@ -713,6 +721,8 @@ controllers.teamseasoninfoController  = function ($scope, $http, $log, $location
 
     init();
     function init() {
+        window.scrollTo(0, 0);
+
         $scope.postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
         $scope.teams = nflTeamsService.getNFLTeams(); 
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
@@ -754,6 +764,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     init();
     function init() {
+        window.scrollTo(0, 0);
         
         // get nfl team data
         $scope.teams = nflTeamsService.getNFLTeams();
@@ -964,6 +975,8 @@ controllers.gamerankingController = function ($scope, $http, $location, membersF
 
     init();
     function init() {
+        window.scrollTo(0, 0);
+
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
         teamsFactory.getNFLTeamseasonweeks($scope.current.season)
@@ -1038,6 +1051,8 @@ controllers.gamenetworkinfoController = function ($scope, $http, $location, memb
 
     init();
     function init() {
+        window.scrollTo(0, 0);
+
          teamsFactory.getCurrentSeasonWeek()
         .success( function(data) {
             $scope.current.season = data.season; 
@@ -1117,6 +1132,8 @@ controllers.gameteamscoresinfoController = function ($scope, $http, $location, m
 
     init();
     function init() {
+        window.scrollTo(0, 0);
+
         teamsFactory.getCurrentSeasonWeek()
         .success( function(data) {
             $scope.current.season = data.season; 
@@ -1494,6 +1511,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
     init();
     function init() {
+        window.scrollTo(0, 0);
         
         $scope.current.weeksinregularseason = 17;
         $scope.current.weeksinplayoffseason = 4;
@@ -1746,6 +1764,9 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         // this is not getting called at right time for definig top offset
         // in jquery ready. So adding it here
         //
+
+        window.scrollTo(0, 0);
+
         $scope.sendDataEmail = "noemail=1";
 
         $scope.emailtemplates = selectListService.getList('emt');
@@ -1821,7 +1842,7 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
-
+        window.scrollTo(0, 0);
 
         $scope.teams = nflTeamsService.getNFLTeams(); 
         $scope.states = selectListService.getList('states');

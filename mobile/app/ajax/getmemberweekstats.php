@@ -10,7 +10,7 @@ $season = $_POST['season'];
 $week = $_POST['week'];
 $gametypeid = 1;
 $membergroupid = 0;
-$showexperts = false;
+$showexperts = 0;
 
 if( isset($_POST['membergroupid']) )
 {
@@ -83,7 +83,7 @@ if ($membergroupid == 0)
     WHERE  M.status = 'active'
     AND MS.season = $season AND MS.week = $week";
 
-    if ($showexperts == "false")
+    if ($showexperts == 0)
     {
         $sql = $sql . " AND M.role != 'expert' ";
     }

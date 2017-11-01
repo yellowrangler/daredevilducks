@@ -11,7 +11,7 @@ $season = $_POST['season'];
 $leaderType = $_POST['leaderType'];
 $gametypeid = $_POST['gametypeid'];
 $membergroupid = 0;
-$showexperts = false;
+$showexperts = 0;
 
 if( isset($_POST['membergroupid']) )
 {
@@ -113,7 +113,7 @@ if ($membergroupid == 0)
   //
   // only applicable in non group lists
   //
-  if ($showexperts == "false")
+  if ($showexperts == 0)
   {
       $sql = $sql . " AND M.role != 'expert' ";
   }

@@ -47,6 +47,21 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
 
     function getYearlyTotalWins() 
     {
+        // Set button title and toggle showexperts
+        switch ($scope.current.showexperts) {
+            case 0:
+                $scope.current.showexperts = 1;
+                $scope.current.showexpertsTitle = "Hide Experts";
+                break;
+
+            case 1:
+                $scope.current.showexperts = 0;
+                $scope.current.showexpertsTitle = "Show Experts";
+                break;    
+            default:
+                
+        }
+
         //
         // get total season win leaders
         //
@@ -87,7 +102,8 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
-        $scope.current.showexperts = true;
+        $scope.current.showexperts = 1;
+        $scope.current.showexpertsTitle = "Hide Experts";
 
         //
         // get member groups
@@ -171,6 +187,21 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
 
     function getYearlyTotalPercentage() 
     {
+        // Set button title and toggle showexperts
+        switch ($scope.current.showexperts) {
+            case 0:
+                $scope.current.showexperts = 1;
+                $scope.current.showexpertsTitle = "Hide Experts";
+                break;
+
+            case 1:
+                $scope.current.showexperts = 0;
+                $scope.current.showexpertsTitle = "Show Experts";
+                break;    
+            default:
+                
+        }
+
         //
         // get total season percent leaders
         //
@@ -211,7 +242,8 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
-        $scope.current.showexperts = true;
+        $scope.current.showexperts = 1;
+        $scope.current.showexpertsTitle = "Hide Experts";
 
         //
         // get member groups
@@ -268,6 +300,21 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
 
     function selectChange()
     {
+        // Set button title and toggle showexperts
+        switch ($scope.current.showexperts) {
+            case 0:
+                $scope.current.showexperts = 1;
+                $scope.current.showexpertsTitle = "Hide Experts";
+                break;
+
+            case 1:
+                $scope.current.showexperts = 0;
+                $scope.current.showexpertsTitle = "Show Experts";
+                break;    
+            default:
+                
+        }
+        
         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&membergroupid="+$scope.current.membergroupid+"&showexperts="+$scope.current.showexperts;
 
         teamsFactory.getMemberWeekStats(requestStr)
@@ -310,7 +357,8 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
     init();
     function init() {
         $scope.current = {};
-        $scope.current.showexperts = true;
+        $scope.current.showexperts = 1;
+        $scope.current.showexpertsTitle = "Hide Experts";
         
         //
         // this is not getting called at right time for definig top offset 
