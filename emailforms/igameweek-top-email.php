@@ -11,7 +11,7 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 	A week worthy of Halloween. The Patriots took advantage of a bye week. The Jets beat the surging Bill's in a bit of an upset at home. Thursday night games are proving to be harder to pick. The depleted Texans lost to the Colts. The Jaguars pummeled the hapless Bengals. The Saints continued to look impressive beating the Buccaneers. The Rams and the Eagles continue to look like the teams to beat as each scored 51 points over their competitors Giants and Broncos.
 </p>
 <p>
-	The fading Falcons lost to the Panthers. The Titan's beat the Ravens in a snoozer. The Cardinals put together a game without their starting quarterback and beat the winless 49ers. The Redskins showed real grit in beating the Seahawks. The Cowboys beat the Chiefs in one of the more competitive games of the week. The Raiders beat the Dolphins to stay 2 games behind Kansas in their division. And the Lions beat up the Rogers-lless Packers on Monday.
+	The fading Falcons lost to the Panthers. The Titan's beat the Ravens in a snoozer. The Cardinals put together a game without their starting quarterback and beat the winless 49ers. The Redskins showed real grit in beating the Seahawks. The Cowboys beat the Chiefs in one of the more competitive games of the week. The Raiders beat the Dolphins to stay 2 games behind Kansas in their division. And the Lions beat up the Rogers-less Packers on Monday.
 </p>
 
 <p>
