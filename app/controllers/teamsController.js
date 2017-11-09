@@ -1292,6 +1292,8 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
 
     function getTeamWeekRank (teamid)
     {
+        $scope.current.teamid = teamid;
+        
         if ($("#teamRankSortButton").is(':hidden'))
         {
             $("#teamRankSort").addClass("glyphicon-sort-by-attributes");
