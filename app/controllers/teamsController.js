@@ -1290,7 +1290,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
 controllers.teamweeklyrankingController = function ($scope, $http, $location, teamsFactory, membersFactory, nflTeamsService, loginService) {
 
-    function getTeamWeekRank ()
+    function getTeamWeekRank (teamid)
     {
         if ($("#teamRankSortButton").is(':hidden'))
         {
@@ -1334,7 +1334,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
             $scope.current.toggleSort = "DESC";
         }
 
-        getTeamWeekRank();
+        getTeamWeekRank($scope.current.teamid);
 
     }
 
@@ -1376,7 +1376,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
 
             $scope.current.teamid = $scope.membember.favoriteteamid;
 
-            getTeamWeekRank();
+            getTeamWeekRank($scope.current.teamid);
         })
         .error( function(edata) {
             alert(edata);
@@ -1393,7 +1393,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
            $("#toggletext").text($scope.current.toggletextHide);
         });
 
-        // getTeamWeekRank();
+        // getTeamWeekRank($sc);
 
         //
         // this is not getting called at right time for definig top offset
@@ -1411,8 +1411,8 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         return status;
     }
 
-    $scope.getTeamWeekRank = function() {
-        getTeamWeekRank();
+    $scope.getTeamWeekRank = function(teamid) {
+        getTeamWeekRank(teamid);
     }
 
     $scope.toggleSort = function () {

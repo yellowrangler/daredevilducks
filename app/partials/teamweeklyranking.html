@@ -18,7 +18,7 @@
 				<div class="panel-body">
 					<div style="padding-top:60px;" class="form-group horizontalFieldOffset">
 						<label for="teamid" class="control-label">Team</label>
-				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
+				        <select class="customSelect form-control" ng-change="getTeamWeekRank(current.teamid)" ng-model="current.teamid" id="teamid" name="teamid">
 				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
 
@@ -116,14 +116,14 @@
 						</td>
 
 						<td class="left-column-text" style="width:75px;">
-							<div style="padding:5px;height:60px;width:75px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv">
-								<a ng-href="{{teamweekrank.hometeamurl}}" target="_blank">
+							<div style="padding:5px;height:60px;width:75px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv" ng-click="getTeamWeekRank(teamweekrank.hometeamid)">
+							<!-- <a ng-href="{{teamweekrank.hometeamurl}}" target="_blank"> -->
 								<img height="50" ng-src='img/nflicons/{{teamweekrank.hometeamiconname}}'>
 								</a>
 							</div>
 
-							<div style="padding:5px;height:60px;width:75px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-if="teamweekrank.awayteamiconname != 'B' ">
-								<a ng-href="{{teamweekrank.awayteamurl}}" target="_blank">
+							<div style="padding:5px;height:60px;width:75px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-if="teamweekrank.awayteamiconname != 'B' " ng-click="getTeamWeekRank(teamweekrank.awayteamid)">
+								<!-- <a ng-href="{{teamweekrank.awayteamurl}}" target="_blank"> -->
 								<img height="50" ng-src='img/nflicons/{{teamweekrank.awayteamiconname}}'>
 								</a>
 							</div>
