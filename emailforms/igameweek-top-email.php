@@ -8,24 +8,24 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 <br />
 
 <p>
-	A week worthy of Halloween. The Patriots took advantage of a bye week. The Jets beat the surging Bill's in a bit of an upset at home. Thursday night games are proving to be harder to pick. The depleted Texans lost to the Colts. The Jaguars pummeled the hapless Bengals. The Saints continued to look impressive beating the Buccaneers. The Rams and the Eagles continue to look like the teams to beat as each scored 51 points over their competitors Giants and Broncos.
+	Games are starting to mean something. The Patriots beat the Broncos in a big way. The usually focused Broncos made multiple mistakes and the Patriots made them pay. The Seahawks beat the Cardinals to keep pace with the Rams who also won beating the now toothless Texans. The Packers found enough talent to beat the Bears. The Browns lost (again) to the Lions. 
 </p>
 <p>
-	The fading Falcons lost to the Panthers. The Titan's beat the Ravens in a snoozer. The Cardinals put together a game without their starting quarterback and beat the winless 49ers. The Redskins showed real grit in beating the Seahawks. The Cowboys beat the Chiefs in one of the more competitive games of the week. The Raiders beat the Dolphins to stay 2 games behind Kansas in their division. And the Lions beat up the Rogers-less Packers on Monday.
-</p>
-
-<p>
-	We had another great turnout this week. Thank you all again for participating. NFL Amateur now has sole possession of first place knocking out her Grand Father (18 Wheeler) for the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board!  Wildcat Wonder is now in second with 18 Wheeler, Hawk Eye, The Fighting Ducks and The Juice is Loose in third! Yowsa!
+	The Steelers had to come from behind to beat the Colts. The Jaguars and the Chargers both looked unfocused with the Jaguars winning in overtime. The Saints pounded the now fading Bill's. The Buccaneers reminded the Jets that they are going nowhere. The Vikings held on to beat the Redskins in a competitive matchup. The Titans beat the Bengals is a snoozer. The Falcons beat the Cowboys, with the Falcons defense negating the Dallas passing attack. The Giants gave the 49ers their first win. It cant be pretty in that Giants locker room. And the Panthers trounced the Dolphins.
 </p>
 
 <p>
-	NFL Amateur now has sole posetion of first place of <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. She is followed by Wildcat Wonder in second with 18 Wheeler, Hawk Eye, The Fighting Ducks and The Juice is Loose in third.
+	We had another great turnout this week. Thank you all again for participating. NFL Amateur, Hawk Eye and Wildcat Wonder have possession of the <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! Peanuts, The Fighting Ducks and The Juice is Loose are in second with Merida and Tooth Fairy in third! Yowsa!
+</p>
+
+<p>
+	NFL Amateur, Hawk Eye and Wildcat Wonder have possession of first place of <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board. They are followed by Peanuts, The Fighting Ducks and The Juice is Loose are in second with Merida and Tooth Fairy in third.
  	Check out the numbers under <span style='font-weight:bold;'>Players Stats</span>!
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have Mad Farah and Red Gorillaz in first place. They are followed by many in second and third! Way to go Folks! 
-</p>  
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we had a lot of folks; Hawk Eye, Hoosiers Daddy, Island Girl, MacDewars, SandyR, Scotsman357 and Wise Ass in first place. They are followed by many more in second and third! Way to go Folks! 
+</p>   
 
 <p>
 	The Statistics for week 9 are comming soon! 
