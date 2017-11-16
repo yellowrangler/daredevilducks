@@ -11,7 +11,7 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 	Games are starting to mean something. The Patriots beat the Broncos in a big way. The usually focused Broncos made multiple mistakes and the Patriots made them pay. The Seahawks beat the Cardinals to keep pace with the Rams who also won beating the now toothless Texans. The Packers found enough talent to beat the Bears. The Browns lost (again) to the Lions. 
 </p>
 <p>
-	The Steelers had to come from behind to beat the Colts. The Jaguars and the Chargers both looked unfocused with the Jaguars winning in overtime. The Saints pounded the now fading Bill's. The Buccaneers reminded the Jets that they are going nowhere. The Vikings held on to beat the Redskins in a competitive matchup. The Titans beat the Bengals is a snoozer. The Falcons beat the Cowboys, with the Falcons defense negating the Dallas passing attack. The Giants gave the 49ers their first win. It cant be pretty in that Giants locker room. And the Panthers trounced the Dolphins.
+	The Steelers had to come from behind to beat the Colts. The Jaguars and the Chargers both looked unfocused with the Jaguars winning in overtime. The Saints pounded the now fading Bill's. The Buccaneers win reminded the Jets that they are going nowhere. The Vikings held on to beat the Redskins in a competitive matchup. The Titans beat the Bengals in a snoozer. The Falcons beat the Cowboys, with the Falcons defense negating the Dallas passing attack. The Giants gave the 49ers their first win. It cant be pretty in that Giants locker room. And the Panthers trounced the Dolphins.
 </p>
 
 <p>
@@ -24,8 +24,8 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we had a lot of folks; Hawk Eye, Hoosiers Daddy, Island Girl, MacDewars, SandyR, Scotsman357 and Wise Ass in first place. They are followed by many more in second and third! Way to go Folks! 
-</p>   
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we had a lot of folks; with Hawk Eye, Hoosiers Daddy, Island Girl, MacDewars, SandyR, Scotsman357 and Wise Ass in first place. They are followed by many more in second and third! Way to go Folks! 
+</p>  
 
 <p>
 	The Statistics for week 9 are comming soon! 
