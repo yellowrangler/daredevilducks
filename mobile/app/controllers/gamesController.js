@@ -242,10 +242,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                           
     }
 
-    //
-    // if checked turn this red
-    //
-    function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
+    function setSelectTeamHTML(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
     {
         var hometeamfieldid = "pickh_"+gamenbr; 
         var awayteamfieldid = "picka_"+gamenbr;    
@@ -254,19 +251,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         var hometeamicon = hometeamfieldid+"_icon"; 
 
         var awayteamname = awayteamfieldid+"_teamname"; 
-        var awayteamicon = awayteamfieldid+"_icon";    
-
-        if (checkRole())
-        {
-            if (gamestatus == "expired")
-            {
-                // new code
-                $scope.$parent.showAlert("Too Late!", "Game is alerady underway!");
-                // alert ("Game is alerady underway!");
-
-                return;
-            }
-        }
+        var awayteamicon = awayteamfieldid+"_icon";   
 
         if (teamtype =='home')
         {
@@ -306,6 +291,47 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
             $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
             $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
         }
+    } 
+
+    //
+    // if checked turn this red
+    //
+    function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
+    {
+        if (checkRole())
+        {
+            //
+            // check if selected is expired
+            //
+            var q = "gamenbr="+gamenbr+"&week="+$scope.current.week+"&season="+$scope.current.season;
+            teamsFactory.getNFLGamesWeekMemberTeamsExpired(q)
+                .success( function(data) {
+                    var check = data; 
+
+                    if (check[0].gamestatus == "expired")
+                    {
+                        
+                        alert("Too Late! Game is alerady underway!");
+                        
+                    }
+                    else
+                    {
+                        
+                        setSelectTeamHTML(teamtype, gamenbr, awayteamid, hometeamid, gamestatus);
+                    }
+
+                })
+                .error( function(edata) {
+                    alert(edata);
+
+                    return;
+                });   
+        }
+        else
+        {
+            setSelectTeamHTML(teamtype, gamenbr, awayteamid, hometeamid, gamestatus);
+        }
+
     }
 
 
@@ -461,7 +487,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         }
         else if (picked > count)
         {
-            $scope.$parent.showAlert("System Error!", "You have picked more teams then there are teams to be picked! Games:"+count+" Picked:"+picked+". \nPlease report this to Airdreamer!");
+            alert("System Error! You have picked more teams then there are teams to be picked! Games:"+count+" Picked:"+picked+". \nPlease report this to Airdreamer!");
             picked = 0;
         }
         else
@@ -540,7 +566,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         if (!loggedIn)
         {
             // new code
-            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+            alert("Whoops! You must login in order to continue!");
                 
             // alert ("You must login in order to continue!")
             $location.path("#home");
