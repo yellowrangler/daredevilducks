@@ -231,10 +231,7 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
                           
     }
 
-    //
-    // if checked turn this red
-    //
-    function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
+    function setSelectTeamHTML(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
     {
         var hometeamfieldid = "pickh_"+gamenbr; 
         var awayteamfieldid = "picka_"+gamenbr;    
@@ -243,20 +240,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         var hometeamicon = hometeamfieldid+"_icon"; 
 
         var awayteamname = awayteamfieldid+"_teamname"; 
-        var awayteamicon = awayteamfieldid+"_icon";    
+        var awayteamicon = awayteamfieldid+"_icon";   
 
-        if (checkRole())
-        {
-            if (gamestatus == "expired")
-            {
-                // new code
-                $scope.$parent.showAlert("Too Late!", "Game is alerady underway!");
-                // alert ("Game is alerady underway!");
-
-                return;
-            }
-        }
-            
         if (teamtype =='home')
         {
             $("#"+hometeamname).addClass("teamSelected").removeClass("teamNotSelected");
@@ -295,6 +280,48 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
             $("#"+awayteamname).addClass("teamNotSelected").removeClass("teamSelected");
             $("#"+awayteamicon).addClass("teamNotSelected").removeClass("teamSelected");
         }
+    } 
+
+    //
+    // if checked turn this red
+    //
+    function setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, gamestatus)
+    {
+
+        if (checkRole())
+        {
+            //
+            // check if selected is expired
+            //
+            var q = "gamenbr="+gamenbr+"&week="+$scope.current.week+"&season="+$scope.current.season;
+            teamsFactory.getNFLGamesWeekMemberTeamsExpired(q)
+                .success( function(data) {
+                    var check = data; 
+
+                    if (check[0].gamestatus == "expired")
+                    {
+                        // new code
+                        $scope.$parent.showAlert("Too Late!", "Game is alerady underway!");
+
+                    }
+                    else
+                    {
+                        
+                        setSelectTeamHTML(teamtype, gamenbr, awayteamid, hometeamid, gamestatus);
+                    }
+
+                })
+                .error( function(edata) {
+                    alert(edata);
+
+                    return;
+                });   
+        }
+        else
+        {
+            setSelectTeamHTML(teamtype, gamenbr, awayteamid, hometeamid, gamestatus);
+        }
+            
     }
 
     //
