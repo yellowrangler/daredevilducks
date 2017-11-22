@@ -93,7 +93,8 @@
             <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
         </article>
 
-       <!--  <article>
+       <!--  
+        <article>
             <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
                 <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmastreeStop.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
             </a>
@@ -106,12 +107,11 @@
                 <img ng-src="../img/brady-bellicheck.png" style="height:125px;text-align:center;" alt="Go Fireworks!"> 
             </a>
         </article>
+        -->
 
         <article>
-            <a href="#happyholidays">
-                <img ng-src="../img/DonaldDuckNewYear2017HomeScrn.png" style="height:100px;text-align:center;" alt="Go Fireworks!"> 
-            </a>
-        </article> -->
+            <img ng-src="../img/FrontPageThanksgiving2017.png" style="height:100px;text-align:center;" alt="Thank you Lord for all that we have!"> 
+        </article> 
     </div> <!-- end of container -->
 
     <div style="padding-top:15px;padding-bottom:25px;">    
@@ -124,6 +124,24 @@
         </a>
     </div>
 </div> <!-- end of footer -->
+
+<!-- dialogs -->
+<div class="modal fade" id="parentAlertModal" tabindex="-1" role="dialog" aria-labelledby="parentAlertModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="parentAlertModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="parentAlertModalBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
 
 </body>
 </html>

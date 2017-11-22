@@ -18,6 +18,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         $scope.memberavatar = loginService.getMemberAvatar();
     }
 
+    function showAlert(title, body) {
+        $('#parentAlertModalTitle').text(title);
+        $('#parentAlertModalBody').text(body);
+        $('#parentAlertModal').modal();
+    }
+
     function letItSnow () 
     {
         if ($scope.isSnowing == 0)

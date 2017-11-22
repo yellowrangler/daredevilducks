@@ -310,8 +310,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
                     if (check[0].gamestatus == "expired")
                     {
-                        
-                        alert("Too Late! Game is alerady underway!");
+                        // $scope.$parent.showAlert("Too Late!", "Game is alerady underway!");
+                        alert("Too Late! \n\nGame is alerady underway!");
                         
                     }
                     else
