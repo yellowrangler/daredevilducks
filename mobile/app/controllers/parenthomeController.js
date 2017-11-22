@@ -18,10 +18,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         $scope.memberavatar = loginService.getMemberAvatar();
     }
 
-    function showAlert(title, body) {
-        $('#parentAlertModalTitle').text(title);
-        $('#parentAlertModalBody').text(body);
-        $('#parentAlertModal').modal();
+    function showPicture() {
+        $('#homePicShowModalTitle').text("Thank you Lord For All that We Have!");
+        // $('#homePicShowModalBody').text(body);
+        $('#homePicShowModal').modal();
     }
 
     function letItSnow () 
@@ -163,6 +163,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     $scope.letItSnow = function() {
         letItSnow();
+    }
+
+    $scope.showPicture = function (picture) {
+        showPicture(picture);   
     }
 }
 
