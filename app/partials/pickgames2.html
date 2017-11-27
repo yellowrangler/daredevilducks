@@ -15,7 +15,7 @@
 					</div> <!-- end of form-group --> 
 
 					<div class="form-group horizontalFieldOffset">
-						<label for="memberid" class="control-label">Player</label>
+						<label for="memberid" class="control-label">Member</label>
 				        <select class="customSelect form-control" ng-change="getMemberWeekPicks('member')" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
 				            <option ng-selected="current.memberid == member.id"  ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
 				        </select>
