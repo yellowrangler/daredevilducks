@@ -8,14 +8,17 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 <br />
 
 <p>
-	Teams are starting to feel the heat as we continue through the season. The Patriots beat the Dolphins at home. The Vikings showed their grit by beating the Lions in Detroit against a division rival. The Chargers kept their playoff hopes alive by beating the now hapless Cowboys. The Giants continued to look awful as they took it in the chin from the Redskins. The Titan's beat the Colts in a clash of the weeinies. The Eagle had their way with the Bears and the Panthers beat the disappearing Jets.
+	I absolutely love this time of year. The Patriots beat the Bill's in Buffalo. Not a game to write home about; but a win IS a win. Unfortunately Gronk misbehaved and got suspended for 1 game. He is fortunate it was  not for 2. The Redskins continue to confuse as they lost to Dallas. The Vikings improved their position in their division by beating the falling Falcons. Don't count out the Falcon's yet. The Titan's beat the Texans keeping their playoff hopes alive. The Chiefs lost (again) this time to the Jets. What has happened to my Chiefs! The Dolphins beat up the hapless Broncos in Miami.
 </p>
 <p>
-	The Falcons beat the Buccaneers. The Bengals beat the winless Browns. The Chiefs have clearly lost their Mojo as they were beaten by the Bills in Kansas City! The Seahawks beat the 49ers in a game that showcased Garoppolo in the final minutes. He looked good moving the ball and scoring a touchdown. The Rams beat the Saints in a true clash of scoring teams. The Cardinals beat the Jaguars in a back and forth affair. The Raiders kept their playoff hopes alive by beating the Broncos. The Packers lost a close game to the Steelers and the Ravens beat the Texans. All in all, another great week of football!
+	The Colts lost to the surging Jaguars. Watch out for the Jaguars, they have a lot of very good players! The Packers beat the Buccaneers on the frozen tundra and in so doing kept their playoff hopes alive. Talk is that Rodgers may come back sooner then later. The Ravens pummeled the predictably disappointing Lions. San Fransisco with Jimmy Garoppolo beat the Bears in a closely played contest. The Chargers beat the winless Browns. The Chargers are my dark horse to make the playoffs. They are tied with the Chiefs and Oakland in their division.
+</p>
+<p>
+	The Raiders beat the Giants in a game were Manning was benched, coaches decision. Ultimately, Macadoo was fired, owners decision. The Saints beat their division rival Panthers, propelling themselves into first. The Rams beat the Cardinals into playoff obscurity. The Eagles lost to the Seahawks in a game where Wilson showed why he should be MVP if the Seahawks go anywhere in the playoffs. The Steelers pulled out a close win coming from behind in a chippy afair with the Bengals. All in all, another great week of football!
 </p>
 
 <p>
-	We had another great turnout this week. Thank you all again for participating. Hawk Eye continues to keep sole possession of first place for <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by NFL Amateur in second and Wildcat Wonder in third. Oh ya. We have separation at the first three tiers!
+	We had another great turnout this week. Thank you all again for participating. Hawk Eye continues to keep sole possession of first place for <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by NFL Amateur in second and Wildcat Wonder in third.
 </p>
 
 <p>
@@ -24,11 +27,11 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we had a lot of folks; with 4Horsemen, Billy Bad Fun, Ginger, JonathanK, Kiver, Mouse Girl, Sfari Queen, Skinny, The Juice Is Loos and Tight End in first place. They are followed by many more in second and third! Way to go Folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we had a lot of folks; with DubCut, Mouse Girl, Scotsman357 in first place. They are followed by many more in second and third! Way to go Folks! 
 </p>  
 
 <p>
-	The Statistics for week 12 are available now! 
+	The Statistics for week 13 are available now! 
 </p>
 
 <p>

@@ -4,11 +4,15 @@ $emailbottomwriteup = "
 <br />
 
 <p>
-<span  style='font-weight:bold;color:green;'>Please set up your profile!</span>
+<span  style='font-weight:bold;color:#228B22;'>May you all have a Merry Christmas!</span>
 </p>
 
 <p>
-Your player profile can be accessed by clicking on your avatar at the top right of the Daredevil Ducks web page. Add some information about yourself! Go to the viewing permissions check boxes at the bottom of the page and open up what you feel comfortable sharing with people,
+To keep in the Holiday spirit we have added a Christmas tree at the bottom of the website that when clicked will start snow falling. If clicked again it will turn off the snow! 
+</p>
+
+<p>
+For your Mobile devices simply use your thumb and swipe right to left at the bottom of the page where your Avatar is. And behold the Christmas tree will appear.
 </p>
 ";
 ?>
