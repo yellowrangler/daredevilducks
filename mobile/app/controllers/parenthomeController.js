@@ -19,7 +19,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     }
 
     function showPicture() {
-        $('#homePicShowModalTitle').text("Thank you Lord For All that We Have!");
+        $('#homePicShowModalTitle').text("Mery Christmas to All and to All a Good Night!");
         // $('#homePicShowModalBody').text(body);
         $('#homePicShowModal').modal();
     }
