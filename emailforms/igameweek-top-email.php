@@ -27,7 +27,7 @@ For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> b
 </p>
 
 <p>
-Time to get your MoJo on for those who are not in the top tiers! There are only a few weeks of football left. Look at how the NFL experts picked. You are all in good company. More then enough time and games to make a run at the top! Read em and weep (I know I do)!
+Time to get your MoJo on for those who are not in the top tiers! There are only a few weeks of football left. The stats are bellow! Read em and weep (I know I do)!
 </p>   
 ";
 ?>
