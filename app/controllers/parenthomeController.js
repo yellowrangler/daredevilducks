@@ -17,6 +17,11 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         }  
     }
 
+    function showPicture() {
+        $('#homePicShowModalTitle').text("Playoff Brackets 2017!");
+        $('#homePicShowModal').modal();
+    }
+
     function getAvatar()
     {
         $scope.memberavatar = loginService.getMemberAvatar();
@@ -239,6 +244,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     $scope.letItSnow = function() {
         letItSnow();
+    }
+
+    $scope.showPicture = function (picture) {
+        showPicture(picture);   
     }
 }
 
