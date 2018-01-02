@@ -203,6 +203,22 @@ border: 0 none;
 	font-weight: 900;
 }
 
+.headerFireworks {
+	color:#3ca4d7;
+	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-variant: small-caps;
+	letter-spacing: 3px;
+}
+
+.headerFireworks2 {
+	color:#6C0000;
+	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-variant: small-caps;
+	letter-spacing: 3px;
+}
+
 .tableTitle {
 	background-color:#058689;
 	border:2px solid #058689;
