@@ -8,29 +8,35 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 <br />
 
 <p>
-	We are down to the final week! Where has the time gone! The Patriots started out slow but finally took it to the Bills defeating them handily keeping their 1st seed position in the AFC intact. The Ravens beat the Colts keeping them active in the wildcard hunt. The Vikings defeated the Packers solidifying their playoff spot as 2nd seed in the NFC. The Bengals beat the going, going gone Lions. The Chiefs beat the Dolphins positioning the Chiefs as 4th seed AFC. The Browns lost again; this time to the Bears.
+	The final game of the regular season has been played! The new year has been ushered in giving all of us another opportunity to recalibrate our lives! 
+</p>	
+<p>	
+	The Patriots started with a methodical march down the field and then struggled. But in the end they were able to put it together taking with them the home field advantage for playoffs. The Giants beat the Redskins in a meaningless game. The Vikings beat the Bears and the Lions beat the Packers and the Colts beat the Texans. Pittsburg decided to concede home field to the Patriots as they pulled their star players out, eking out a win over the now 0 and 16 Browns. The Eagles lost to the Cowboys and looked inept doing so. The Eagles may be a first seed, but they dont look the same with Wentz. The 49res beat the second string Rams.
 </p>
 <p>
-	The Panthers beat the Buccaneers keeping them ensconced in the Wild card hunt. The Saints beat the Falcons in a game where the Falcon's looked awful. The Redskin's crushed the Broncos. The Rams squeaked by the Titan's and the Chargers beat the Jet's. In a surprise the 49ers beat the Jaguars. And the Seahawks beat the Cowboys; bouncing the Cowboys from the playoffs and revitalizing the Seahawks chances. The Cardinals bludgeoned the Giants and the Steelers beat the Texans. In the final game the Eagles held on to beat the Raiders, preserving the Eagles first seed in the NFC.
+	The Chargers beat the Raiders, but missed the wild card cut. The Chiefs looked bad beating an equally bad Bronco team. The Titans beat the Jaguars. The Buccaneers beat the Saints and the Bills beat the Dolphins putting Buffalo in the playoffs for the first time in a long while. The Cardinals beat the Seahawks eliminating them from the playoffs. Way to go Cardinals! Atlanta beat the Panthers, knocking the Panthers out of the playoffs. The Bengals beat the Ravens, kicking the Ravens out of playoff contention. All in all a great final week! Looks like a good lineup for the playoffs.
 </p>
 <p>
-	We had another great turnout this week. Thank you all again for participating. Hawk Eye continues to keep sole possession of first place for <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by NFL Amateur in second with Wildcat Wonder in third.
+	We had another great turnout this week. Thank you all again for participating. Hawk Eye continues to keep sole possession of first place for <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by Wildcat Wonder in second with NFL Amateur in third.
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have 18 Wheeler, Island Girl and PatrickR in first place. They are followed by a large group of folks in second and third! Way to go Folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have beach goer, GrammyGrams, Johor Tigress and Wildcat Wonder in first place. They are followed by a large group of folks in second and third! Way to go Folks! 
 </p>  
 
+<p style="padding-top: 15px;font-weight:bold;color:black;">
+	Daredevil Ducks Updates
+</p>
 <p>
-	The Statistics for week 18 are ready! 
+	The Statistics for week 17 are ready now! 
+</p>
+
+<p>	
+	Wildcat Wonder has built the most current of the Playoff Brackets! Find this under <span style="font-weight:bold;color:black;">Teams > Team Playoff Bracket</span> OR Non Mobile users click on bracket image on left to see larger version!
 </p>
 
 <p>
-	Wildcat Wonder has built the first of many Playoff Brackets! Find this under Teams > Team Playoff Bracket 
-</p>
-
-<p>
-Time to get your MoJo on for those who are not in the top tiers! There is only one week of regular season football left. The stats are below! Read em and weep (I know I do)!
+Time to get your MoJo on for those who are not in the top tiers! We are in the playoffs and there is precious little football football left. The stats are below! Read em and weep (I know I do)!
 </p>   
 ";
 ?>
