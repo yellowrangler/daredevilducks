@@ -191,6 +191,18 @@ border: 0 none;
 	font-weight: 700;
 }
 
+.headerTitle2 {
+	color:#6C0000;
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 700;
+}
+
+.headerTitle3 {
+	color:#3ca4d7;
+	font-family: 'aileronlight', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+}
+
 .tableTitle {
 	background-color:#058689;
 	border:2px solid #058689;

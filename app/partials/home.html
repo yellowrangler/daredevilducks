@@ -2,7 +2,7 @@
 
 <div class="pageStandardOffset">&nbsp;</div>
   
-<div class="jumbotron jumbotronOverride">
+<div class="">
 	<div class="mainTitle">
 		<div id="homemaintitle1">Welcome to the Daredevil Ducks League Website!</div>
 	</div>
@@ -18,34 +18,30 @@
 				</a>
 			</div>
 
-			<div style="padding-top: 30px;">
-				<p style="padding-top:5px;text-align:center;color:#3ca4d7;font-weight:bold;font-size:25px;">Welcome Members to 2017 Season!</p>
-			</div>
-
-			<br />
-
 			<p style="padding-top: 30px;">
 				<a id="loginHomeButton" class="btn btn-primary btn-lg" ng-click="homepagelogin()" role="button">Login</a>
 			</p>
 
-			<div style="padding-top:60px;">
+			<br />
+
+			<div style="padding-top: 60px;">
+				<p class="headerTitle3" style="padding-top:5px;text-align:center; font-size:25px;">Welcome Members to 2017 Season!</p>
+			</div>
+
+			<div style="padding-top:20px;">
 				<a id="showpicture" name="showpicture" href="" ng-click="showPicture()">
 	                <img style="width:100%;" src="img/NFLPlayOffBracketSuperbowl522018B.png" alt="playoff bracket" class="img-rounded">
 	            </a>
 			</div>
 		</div> <!-- end of col 6 -->
 		<div class="col-md-offset-1 col-md-6" style="padding-top:15px;" >
-			<div class="panelHome">
-			    <div class="panel panel-primary">
-			      <div class="panel-heading">
-			        <h3 class="panel-title">League News & Opinion</h3>
-			      </div>
+		      <div class="">
+		        <h3 class="headerTitle2">League News & Opinion</h3>
+		      </div>
 
-			      <div id="newsopinion" ng-include="'app/partials/inewsopinion.html'" class="panel-body" >
-			      	<!-- style="display:block;overflow-y:auto;height:{{current.homeNewsOpinionesize}}px;"> -->
-			      </div> <!-- end of panel body -->
-			    </div> <!-- end of panel -->  
-			</div> <!-- end of panelhome --> 	
+		      <div id="newsopinion" ng-include="'app/partials/inewsopinion.html'" class="" >
+		      	<!-- style="display:block;overflow-y:auto;height:{{current.homeNewsOpinionesize}}px;"> -->
+		      </div> <!-- end of panel body -->
 		</div> <!-- end of col 6 -->
 	</div> <!-- end of row -->
 </div> <!-- end of jumbo -->
