@@ -29,7 +29,7 @@ For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> b
 </p>
 
 <p>	
-	Wildcat Wonder has built the most current of the Playoff Brackets! Find this under <span style="font-weight:bold;color:black;">Teams > Team Playoff Bracket</span> OR Non Mobile users click on bracket image on left to see larger version!
+	Wildcat Wonder has built the most current of the Playoff Brackets! Find this under <span style='font-weight:bold;color:black;''>Teams > Team Playoff Bracket</span> OR Non Mobile users click on bracket image on left to see larger version!
 </p>
 
 <p>
