@@ -24,9 +24,6 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have beach goer, GrammyGrams, Johor Tigress and Wildcat Wonder in first place. They are followed by a large group of folks in second and third! Way to go Folks! 
 </p>  
 
-<p style="padding-top: 15px;font-weight:bold;color:black;">
-	Daredevil Ducks Updates
-</p>
 <p>
 	The Statistics for week 17 are ready now! 
 </p>
