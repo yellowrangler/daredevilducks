@@ -219,6 +219,30 @@ border: 0 none;
 	letter-spacing: 3px;
 }
 
+.newsOpinion p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 17px;
+}
+
+.newsOpinionHeaders {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #b57f7f;
+}
+
+.cursiveTangerine {
+	font-family: 'Tangerine', cursive;
+}
+
+.enjoyLife {
+	font-family: 'Indie Flower', cursive;
+	font-weight:bold;
+	font-size:20px;
+	/*font-style:italic;*/
+}
 .tableTitle {
 	background-color:#058689;
 	border:2px solid #058689;
@@ -858,10 +882,13 @@ border: 0 none;
 
 .ddd-footer-links {
 	font-style:italic;
-	font-weight:bold;
-	font-size:22px;
+	font-weight:700;
+	font-size:18px;
 	color:NavajoWhite;
 	cursor: pointer;
+	font-family: 'Cormorant Garamond', serif;
+	font-variant: small-caps;
+	letter-spacing: 2px;
 }
 
 .ddd-footer-links :hover {
