@@ -233,6 +233,12 @@ border: 0 none;
 	color: #b57f7f;
 }
 
+.discoverCaption  {
+	color:#6C0000;
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 700;
+}
+
 .cursiveTangerine {
 	font-family: 'Tangerine', cursive;
 }

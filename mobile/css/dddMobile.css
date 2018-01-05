@@ -34,6 +34,23 @@
 	outline: 1px solid blue;
 }
 
+.newsOpinion p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 17px;
+}
+
+.newsOpinionHeaders {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #b57f7f;
+}
+
+.cursiveTangerine {
+	font-family: 'Tangerine', cursive;
+}
 .floatLeftDiv {
 	float:left;
 	padding-left:5px;
