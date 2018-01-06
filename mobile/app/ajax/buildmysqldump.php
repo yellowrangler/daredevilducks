@@ -25,14 +25,13 @@ else
 
 
 $mySqlStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd";
-$fileNameStr = "dbsql/dddm-dump-$dumpdatabaselabel.sql";
-$stderr = "dbsql/dddm-error.err";
-$execStr = $mySqlStr . " > " . $fileNameStr . " 2> " . $stderr;
+$fileNameStr = "dbsql/ddd-dump-$dumpdatabaselabel.sql";
+$execStr = $mySqlStr . " > " . $fileNameStr;
 
 $return = null;
 $owner = get_current_user();
 
-$msg = "Input variables:dumpdatabaselabel: $dumpdatabaselabel <br />Owner: $owner<br />Run string:$execStr <br />Error File:$stderr";
+$msg = "Input variables:dumpdatabaselabel: $dumpdatabaselabel <br />Owner: $owner<br />Run string:$execStr";
 
 exec($execStr, $output, $return);
 

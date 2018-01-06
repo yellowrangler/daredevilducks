@@ -7,9 +7,70 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$season = $_POST['season'];
-$week = $_POST['week'];
-$memberid = $_POST['memberid'];
+
+//
+// I added this logic becaue someone gotin with no season or week
+// I assume there wre other empty parms but I feel if these are gone
+// we are in deep poop. So stop the show here
+//
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	if (isset($_GET["season"]))
+	{
+		$season = $_GET["season"];
+	}
+	else
+	{
+		$log = new ErrorLog("logs/");
+		$msgtext = "Error: Bad data passed in!";
+		$log->writeLog("Data error: $msgtext - No Season. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+		exit($msgtext);
+	}
+}
+
+if (isset($_POST["week"]))
+{
+	$week = $_POST["week"];
+}
+else
+{
+	if (isset($_GET["week"]))
+	{
+		$week = $_GET["week"];
+	}
+	else
+	{
+		$log = new ErrorLog("logs/");
+		$msgtext = "Error: Bad data passed in!";
+		$log->writeLog("Data error: $msgtext - No week. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+		exit($msgtext);
+
+	}
+}
+
+if (isset($_POST["memberid"]))
+{
+	$memberid = $_POST["memberid"];
+}
+else
+{
+	if (isset($_GET["memberid"]))
+	{
+		$memberid = $_GET["memberid"];
+	}
+	else
+	{
+		$log = new ErrorLog("logs/");
+		$msgtext = "Error: Bad data passed in!";
+		$log->writeLog("Data error: $msgtext - No memberid. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+		exit($msgtext);
+	}
+}
+
 $strCut = "pick_";
 $gamenbr = "";
 $teamid = "";
@@ -101,6 +162,7 @@ if (!$sql_result_check)
 
     $status = -110;
     $msgtext = "System Error: $sqlerr";
+    exit($msgtext);
 }
 
 $r = mysql_fetch_assoc($sql_result_check);

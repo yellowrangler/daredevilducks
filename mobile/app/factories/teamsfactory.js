@@ -56,6 +56,15 @@ dddAppMobile.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.saveGameDateTimeWeekTeamsInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/savegamedatetimeweekteamsinfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLnetworks = function () {
         return $http({ 
             method: 'POST', 

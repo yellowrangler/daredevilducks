@@ -154,22 +154,47 @@
                     <a data-toggle="dropdown" class="dropdown-toggle">
                     <img id="adminnavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/admin.png">
                     <b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a class="collapsableNavbar" href="#/teaminfo">Team Information</a></li>
-                        <li><a class="collapsableNavbar" href="#/teamseasoninfo">Team Season Information</a></li>
+                    <ul role="menu" class="dropdown-menu multi-level" aria-labelledby="dropdownMenu">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Team Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/teaminfo">Team Information</a></li>
+                                <li><a class="collapsableNavbar" href="#/teamseasoninfo">Team Season Information</a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="#/gameinfo">Game Day Informtion</a></li>
-                        <li><a class="collapsableNavbar" href="#/gamenetworkinfo">Set Game Networks</a></li>
-                        <li><a class="collapsableNavbar" href="#/gameteamscoresinfo">Set Game Scores</a></li>
-                        <li><a class="collapsableNavbar" href="#/gameranking">Game Week Ranking </a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Game Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/gameinfo">Game Day Informtion</a></li>
+                                <li><a class="collapsableNavbar" href="#/gamenetworkinfo">Set Game Networks</a></li>
+                                <li><a class="collapsableNavbar" href="#/gameteamscoresinfo">Set Game Scores</a></li>
+                                <li><a class="collapsableNavbar" href="#/gameteamdatetimeinfo">Set Game DateTime</a></li>
+                                <li><a class="collapsableNavbar" href="#/gameranking">Game Week Ranking </a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="#/addmember">Member Add</a></li>
-                        <li><a class="collapsableNavbar" href="#/updatemember">Member Manage</a></li>
-                        <li><a class="collapsableNavbar" href="#/addavatar">Member Avatar</a></li>
-                        <li><a class="collapsableNavbar" href="#/sendplayeremail">Member(s) eMail</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Member Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/addmember">Member Add</a></li>
+                                <li><a class="collapsableNavbar" href="#/updatemember">Member Manage</a></li>
+                                <li><a class="collapsableNavbar" href="#/addavatar">Member Avatar</a></li>
+                                <li><a class="collapsableNavbar" href="#/sendplayeremail">Member(s) eMail</a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="#/addmembergroup">Group Add</a></li>
-                        <li><a class="collapsableNavbar" href="#/updatemembergroup">Group Manage</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Group Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/addmembergroup">Group Add</a></li>
+                                <li><a class="collapsableNavbar" href="#/updatemembergroup">Group Manage</a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
                         <li><a class="collapsableNavbar" href="#/weeklyscripts">System Scripts</a></li>
                     </ul>
@@ -276,20 +301,47 @@
                         <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/admin-mobile.png"><span style="padding-left:5px;">Administration</span>
                         <b class="caret"></b>
                     </a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a class="collapsableNavbar" href="#/teaminfo">Team Information</a></li>
-                        <li><a class="collapsableNavbar" href="#/teamseasoninfo">Team Season Information</a></li>
+                    <ul role="menu" class="dropdown-menu multi-level" aria-labelledby="dropdownMenu">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Team Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/teaminfo">Team Information</a></li>
+                                <li><a class="collapsableNavbar" href="#/teamseasoninfo">Team Season Information</a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="#/gameinfo">Game Day Informtion</a></li>
-                        <li><a class="collapsableNavbar" href="#/gameranking">Game Week Ranking </a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Game Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/gameinfo">Game Day Informtion</a></li>
+                                <li><a class="collapsableNavbar" href="#/gamenetworkinfo">Set Game Networks</a></li>
+                                <li><a class="collapsableNavbar" href="#/gameteamscoresinfo">Set Game Scores</a></li>
+                                <li><a class="collapsableNavbar" href="#/gameteamdatetimeinfo">Set Game DateTime</a></li>
+                                <li><a class="collapsableNavbar" href="#/gameranking">Game Week Ranking </a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="#/addmember">Member Add</a></li>
-                        <li><a class="collapsableNavbar" href="#/updatemember">Member Manage</a></li>
-                        <li><a class="collapsableNavbar" href="#/addavatar">Member Avatar</a></li>
-                        <li><a class="collapsableNavbar" href="#/sendplayeremail">Member(s) eMail</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Member Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/addmember">Member Add</a></li>
+                                <li><a class="collapsableNavbar" href="#/updatemember">Member Manage</a></li>
+                                <li><a class="collapsableNavbar" href="#/addavatar">Member Avatar</a></li>
+                                <li><a class="collapsableNavbar" href="#/sendplayeremail">Member(s) eMail</a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="#/addmembergroup">Group Add</a></li>
-                        <li><a class="collapsableNavbar" href="#/updatemembergroup">Group Manage</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Group Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/addmembergroup">Group Add</a></li>
+                                <li><a class="collapsableNavbar" href="#/updatemembergroup">Group Manage</a></li>
+                            </ul>
+                        </li>
+                        
                         <li role="presentation" class="divider"></li>
                         <li><a class="collapsableNavbar" href="#/weeklyscripts">System Scripts</a></li>
                     </ul>

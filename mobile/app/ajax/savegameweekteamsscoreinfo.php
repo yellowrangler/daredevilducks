@@ -81,11 +81,14 @@ for ($i = 0; $i < $gamecount; $i++)
 {
 
 	//-----------------------------------------------------------------
-	// add games scores for this week that are home
+	// add games scores for this week that are home and away
 	//-----------------------------------------------------------------
 	$sql = "UPDATE gamestbl
-		 SET hometeamscore='$hometeamscore[$i]'
-		 WHERE season = $season AND week = $week AND hometeamid= '$hometeamid[$i]' AND gamenbr = '$gamenbr[$i]' ";
+		 SET hometeamscore='$hometeamscore[$i]', awayteamscore='$awayteamscore[$i]'
+		 WHERE season = $season AND week = $week 
+		 AND hometeamid= '$hometeamid[$i]' 
+		 AND awayteamid = '$awayteamid[$i]'
+		 AND gamenbr = '$gamenbr[$i]' ";
 
 	 // echo "SQL:" . $sql ."<br>" ;
 	$sql_result = @mysql_query($sql, $dbConn);
@@ -93,33 +96,11 @@ for ($i = 0; $i < $gamecount; $i++)
 	{
 		$log = new ErrorLog("logs/");
 		$sqlerr = mysql_error();
-		$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to save game team scores home.");
+		$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to save game team scores home and away.");
 		$log->writeLog("SQL: $sql");
 
 		$rc = -100;
 		$msgtext = "System Error Home Team: $sqlerr. sql = $sql";
-
-		exit($msgtext);
-	}
-
-	//-----------------------------------------------------------------
-	// add games scores for this week that are away
-	//-----------------------------------------------------------------
-	$sql = "UPDATE gamestbl
-		 SET awayteamscore='$awayteamscore[$i]'
-		 WHERE season = $season AND week = $week AND awayteamid = '$awayteamid[$i]' AND gamenbr = '$gamenbr[$i]' ";
-
-	 // echo "SQL:" . $sql ."<br>" ;
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-		$log = new ErrorLog("logs/");
-		$sqlerr = mysql_error();
-		$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to save game team scores home.");
-		$log->writeLog("SQL: $sql");
-
-		$rc = -100;
-		$msgtext = "System Error Away Team: $sqlerr. sql = $sql";
 
 		exit($msgtext);
 	}

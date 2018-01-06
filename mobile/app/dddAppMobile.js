@@ -126,7 +126,11 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'gameteamscoresinfoController',
                 templateUrl: 'app/partials/gameteamscoresinfo.html'
             })
-
+        .when('/gameteamdatetimeinfo',
+            {
+                controller: 'gameteamdatetimeinfoController',
+                templateUrl: 'app/partials/gameteamdatetimeinfo.html'
+            })
         .when('/gameranking',
             {
                 controller: 'gamerankingController',
