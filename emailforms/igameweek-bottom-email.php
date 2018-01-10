@@ -4,7 +4,7 @@ $emailbottomwriteup = "
 <br />
 
 <p>
-<span  style='font-weight:bold;color:#228B22;'>May you all have a Merry Christmas!</span>
+<span  style='font-weight:bold;color:#228B22;'>May you all have a Wonderful Winter!</span>
 </p>
 
 <p>
