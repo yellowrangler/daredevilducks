@@ -216,6 +216,15 @@ border: 0 none;
 	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 900;
 	font-variant: small-caps;
+	font-style: normal;
+	letter-spacing: 3px;
+}
+
+.headerTitle4 {
+	color:#3ca4d7;
+	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-variant: small-caps;
 	letter-spacing: 3px;
 }
 
