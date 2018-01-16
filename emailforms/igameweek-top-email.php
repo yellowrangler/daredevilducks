@@ -7,35 +7,37 @@ Hi <span style='color:teal;'>Daredevil Ducks members</span>,
 
 <br />
 
-<p>
-	The first game of the playoff season has been played! 
+<p>Wow!  
 </p>	
 <p>	
-	The Titans beat the Chiefs in a thrilling game that showcased the Chiefs in the first half and then the Titans in the second. This was a game that was either going to show the world that the Titans are for real or that the Kansas City Chiefs were in fact the team that beat the stuffing out of the Patriots at the beginning of the season. This was a bad game for the Chiefs and I suspect a fatal game for Andy Reed. A very likable guy that just hasn't been able to get his team to show up on the field. But hats off to the Titans. In the end they did what they needed to do! Next step for them will be the Patriots.
+	The field was cold and the winter wind was running through players uniforms like Sherman through Atlanta. The Patriots came out cautiously against the Titan's, giving up an early lead. But Brady started to find his receivers and the defense started to put the kabash on the Titans offense. And before you knew it the Pats had put 21 points up on the Titans. And they never looked back. Not the greatest game, but a very well disciplined one AND a game that featured a number of sacks on Mariota. The road to the AFC title continues to go through New England. Next up - Jacksonville! 
 </p>
 <p>
-	The Falcons beat the Rams in another competitive matchup. The officials let the boys play, as there were numerous defensive holds that this viewer saw. This was a great game for the Atalanta defense as they handcuffed the vaunted Rams, holding them to 13 points. The Falcons look like a team on a mission! Good luck to them! They face the Wentz-less Eagles next.
+	The Falcons came out tentatively and just never looked comfortable! The Atlanta scoring juggxrnaught was effectively squashed by the Eagles defense. Nick Foles played well enough to win. But this viewer is not convinced he can score points. Next for the Eagles is the Vikings!
 </p>
 <p>	
-	The Jaguars beat the Bills in what started out as a snoozer. Many who left that game missed out on an exciting finish. The Jaguars defense looked much better in the second half. Bortles had a tough go at it in much of the game, but was able to do enough to win. The Jaguars face the Steelers next!
+	The Jaguars Steelers game was one for the books. The theme for the game went something like this - the Jaguars scored a lot and then the Steelers caught up on scintillating deep throws. Back and forth the two Goliaths beat each other. In the end some dubious play calling put the Steelers behind the 8 ball. A botched on sides kick opened up a killer field goal that the Steelers could not overcome as they ran out of time and luck. The Jaguars Next opponent is the New England Patriots. 
 </p>
 <p>
-	The Saints held on to beat the Panthers in a very close and entertaining matchup. This was a hard hitting game worthy of both teams. It took a late sack of Cam to finally put the nail on the proverbial game coffin. It was a great game to watch. The Saints move on to play the Vikings next! 
+	The Saints Vikings game was another crazy exciting affair. The Vikings looked stronger early on. But the Saints caught up in the fourth quarter. And what a quarter! The Saints had just put the finishing touches on a touchdown seemingly cinching the game. Ah but there was still time on the clock and fairy dust in the air. The Vikings got the ball on the 25 with 25 seconds on the clock. An offensive penalty cost them 5 yards to the 20. Then 2 incomplete passes. Third and long! With 10 seconds left in the game, Keenum dropped a perfect pass to Diggs who dodged the Saints safety and ran in for the winning touchdown. I love this stuff! Next for the Saints is Philadelphia!
 </p>
 <p>
 	We had another great turnout this week. Thank you all again for participating. Hawk Eye continues to keep sole possession of first place for <span style='font-weight:bold; color:maroon;'>Total Games Won Leader</span> board! She is followed by Wildcat Wonder in second with NFL Amateur in third.
 </p>
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have a ton of folks in first place. They are followed by a ton of folks in second and third! Way to go Folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have beach goer with a perfect 4  wins in first place! He is followed by a ton of folks in second and third! Way to go Folks! 
 </p>  
 
+<p style='padding-top: 15px;'>
+	<span class='newsOpinionHeaders'>Daredevil Ducks Updates</span>
+</p>
 <p>
-	The Statistics for week 18 are ready now! 
+	The Statistics for week 19 may not get compiled. If you cant make decisions now there  is no help for you! 
 </p>
 
 <p>	
-	Wildcat Wonder has built the most current of the Playoff Brackets! Find this under <span style='font-weight:bold;color:black;''>Teams > Team Playoff Bracket</span> OR Non Mobile users click on bracket image on left to see larger version!
+	Wildcat Wonder has built the most current of the Playoff Brackets! Find this under <span style='font-weight:bold;color:black;'>Teams > Team Playoff Bracket</span> OR Non Mobile users click on bracket image on left to see larger version!
 </p>
 
 <p>
