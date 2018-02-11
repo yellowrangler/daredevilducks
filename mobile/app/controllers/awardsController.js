@@ -36,7 +36,15 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
                 })
             .mouseout(function() {
                 $(this).attr("src", "../img/halloffame/SabrinaWinner.png");
-                });            
+                });   
+
+        $( "#hf2017" )
+            .mouseover(function() {
+                 $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+                })
+            .mouseout(function() {
+                $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+                });                    
         
         $( "#hfdefault" )
             .mouseover(function() {
