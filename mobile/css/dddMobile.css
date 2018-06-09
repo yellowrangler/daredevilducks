@@ -534,6 +534,17 @@ border: 0 none;
 	background-color: #f7edef;
 }
 
+.expertRoleNoAlign  {
+	color:#8c072a;
+	background-color: #f7edef;
+}
+
+.expertRoleCenterAlign  {
+	color:#8c072a;
+	background-color: #f7edef;
+	text-align: center;
+}
+
 .teamWon  {
 	background-color: #006600;
 	color:white; 	

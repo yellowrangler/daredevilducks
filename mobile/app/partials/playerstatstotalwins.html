@@ -52,19 +52,25 @@
 			<div class="table-responsive">
 			<table class="table leaderBoardTable">
 				<tr class="tableTitle">
-					<th>Rank</th>
-					<th colspan="2">Leader</th>				
+					<th>#</th>
+					<th>Leader</th>				
 					<th style="width:25px;">W</th>
 					<th style="width:25px;">L</th>
 					<th style="width:25px;">T</th>
 				</tr>
 
-				<tr ng-repeat="memberseasonwinstats in memberseasonwinstats">
-					<td style="padding-right:15px;" class="center-column-text">{{memberseasonwinstats.position}}</td>
+				<tr ng-repeat="memberseasonwinstats in memberseasonwinstats"  ng-class="{{memberseasonwinstats.memberrole == 'expert'}} ? 'expertRoleCenterAlign' : 'center-column-text' ">
+					<td class="center-column-text">{{memberseasonwinstats.position}}</td>
 
-					<td class="left-column-text"><img style="height:70px;cursor:pointer;" ng-show="memberseasonwinstats.memberavatar != ''" ng-click="getMemberProfile(memberseasonwinstats.memberid)" ng-src="../img/avatars/{{memberseasonwinstats.memberavatar}}"></td>
+					<td ng-class="{{memberseasonwinstats.memberrole == 'expert'}} ? 'expertRoleCenterAlign' : 'center-column-text' ">
+						<div class="center-column-text">
+							<img style="height:70px;cursor:pointer;" ng-show="memberseasonwinstats.memberavatar != ''" ng-click="getMemberProfile(memberseasonwinstats.memberid)" ng-src="../img/avatars/{{memberseasonwinstats.memberavatar}}">
+						</div>
 
-					<td ng-class="{{memberseasonwinstats.memberrole == 'expert'}} ? 'expertRole' : 'left-column-text' ">{{memberseasonwinstats.screenname}}</td>
+						<div class="center-column-text">
+							{{memberseasonwinstats.screenname}}
+						</div>
+					</td>
 
 					<td class="center-column-text">{{memberseasonwinstats.wins}} </td>
 					

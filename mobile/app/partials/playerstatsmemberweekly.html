@@ -53,22 +53,24 @@
 				<div class=" table-responsive">
 				<table class="table MemberWeeklyTable" >
 					<tr class="tableTitle">
-						<th style="width:15%;">Rank</th>
-						<th colspan=2>Player</th>			
+						<th>#</th>
+						<th >Player</th>			
 						<th style="width:25px;">W</th>
 						<th style="width:25px;">L</th>
 						<th style="width:25px;">T</th>
 					</tr>
 
-					<tr ng-repeat="memberweekstat in memberweekstats">
-						<td style="padding-right:15px;" class="center-column-text">{{memberweekstat.position}}</td>
+					<tr ng-repeat="memberweekstat in memberweekstats" ng-class="{{memberweekstat.memberrole == 'expert'}} ? 'expertRoleCenterAlign' : 'center-column-text' ">
+						<td class="center-column-text">{{memberweekstat.position}}</td>
 
-						<td style="width:15%;" class="left-column-text" >
-		                    <img style="height:70px;cursor:pointer;" ng-show="memberweekstat.memberavatar != ''" ng-click="getMemberProfile(memberweekstat.memberid)" ng-src="../img/avatars/{{memberweekstat.memberavatar}}">
-						</td>
+						<td ng-class="{{memberweekstat.memberrole == 'expert'}} ? 'expertRoleCenterAlign' : 'center-column-text' ">
+							<div class="center-column-text">
+								<img style="height:70px;cursor:pointer;" ng-show="memberweekstat.memberavatar != ''" ng-click="getMemberProfile(memberweekstat.memberid)" ng-src="../img/avatars/{{memberweekstat.memberavatar}}">
+							</div>
 
-						<td style="width:30%;" ng-class="{{memberweekstat.memberrole == 'expert'}} ? 'expertRole' : 'left-column-text' " >
-		                    {{memberweekstat.screenname}}
+							<div class="center-column-text">
+								{{memberweekstat.screenname}}
+							</div>
 						</td>
 
 						<td class="center-column-text">
