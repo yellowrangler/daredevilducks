@@ -132,7 +132,7 @@ def processBye(gameSeason)
 		season = "2018"
 		week = game["week"]
 		gametypeid = 2
-		byeteams = game["time"].split(', ')
+		byeteams = game["time"].split(',')
 
 		byeteamid = 0
 		byeteams.each do |bye|
