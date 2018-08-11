@@ -46,7 +46,8 @@ dddApp.service('nflTeamsService', function () {
     // set team seasons
     //
     this.setNFLTeamseasons = function(json) {
-
+        console.log("set team seasons");
+        console.log(json);
         this.addLocalNFLdata(json, dataKeySeasons, "json");
 
         return;
@@ -285,6 +286,8 @@ dddApp.service('nflTeamsService', function () {
     this.addLocalNFLdata = function(dataAddStr, dataKey, dataType) {
         var dataStr = "";
 
+        console.log("add addLocalNFLdata seasons");
+        console.log(dataAddStr);
         if (dataType == "json")
         {
             dataStr = JSON.stringify(dataAddStr);
@@ -292,12 +295,20 @@ dddApp.service('nflTeamsService', function () {
         else
         {
             dataStr = dataAddStr;
-        } 
+        }
 
+        console.log("add local addLocalNFLdata 2");
+        console.log(dataStr);
+        console.log(dataKey);
+        console.log("add local addLocalNFLdata 2 end");
         this.saveLocalNFLdata(dataStr, dataKey);
     }
 
     this.saveLocalNFLdata = function (dataAddStr, dataKey) {
+        console.log("save local");
+        console.log("dataKey="+dataKey);
+        console.log("dataAddStr="+dataAddStr);
+       
         localStorage.removeItem(dataKey);
         localStorage.setItem(dataKey, dataAddStr);
     }
