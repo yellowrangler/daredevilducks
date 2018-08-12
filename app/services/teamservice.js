@@ -46,8 +46,8 @@ dddApp.service('nflTeamsService', function () {
     // set team seasons
     //
     this.setNFLTeamseasons = function(json) {
-        console.log("set team seasons");
-        console.log(json);
+        // console.log("set team seasons");
+        // console.log(json);
         this.addLocalNFLdata(json, dataKeySeasons, "json");
 
         return;

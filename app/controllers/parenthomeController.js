@@ -171,8 +171,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
         teamsFactory.getNFLTeamseasons()
             .success( function(data) {
-                console.log("getNFLTeamseasons");
-                console.log(data);
+                // console.log("getNFLTeamseasons");
+                // console.log(data);
                 nflTeamsService.setNFLTeamseasons(data);
             })
             .error( function(edata) {
