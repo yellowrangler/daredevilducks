@@ -31,15 +31,15 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
                 })
             .mouseout(function() {
                 $(this).attr("src", "img/halloffame/SabrinaWinner.png");
-                });   
+                });       
 
         $( "#hf2016" )
             .mouseover(function() {
-                 $(this).attr("src", "img/halloffame/SabrinaDisapointment.png");
+                 $(this).attr("src", "img/halloffame/Sabrina2ndWinCrop.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "img/halloffame/SabrinaWinner.png");
-                });      
+                $(this).attr("src", "img/halloffame/Sabrina2ndWin5Crop.png");
+                });       
 
         $( "#hf2017" )
             .mouseover(function() {
