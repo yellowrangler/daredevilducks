@@ -35,10 +35,10 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
         $( "#hf2016" )
             .mouseover(function() {
-                 $(this).attr("src", "img/halloffame/Sabrina2ndWinCrop.png");
+                 $(this).attr("src", "img/halloffame/Sabrina2ndWin5Crop.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "img/halloffame/Sabrina2ndWin5Crop.png");
+                $(this).attr("src", "img/halloffame/Sabrina2ndWinCrop.png");
                 });       
 
         $( "#hf2017" )
