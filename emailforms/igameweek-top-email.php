@@ -1,22 +1,22 @@
 <?php
 
 $emailtopwriteup = "
-<p>A great start to the football season!  
+<p>Week 2 is in the books!  
 </p>	
 <p>	
-	The Patriots came out strong against the Texans but started to fade later in the game. The defence looks good this year, but offence needs more consitency. In the end the Patriots held on for a win! The Vikings beat the 49ers in a good game. Both teams looked good. The Buccaneers beat the Saints behind a masterful performance by Brian Fitzpatrick. The Jaguars beat the woefull looking Giants. The Bengals beat the Colts in a hard hitting game. The Browns held the struggling Steelers to a tie. The Ravens looked impressive thumping the hapless Bills. The Chiefs and Chargers slugged it out in the Chargers new home stadium. The Chiefs won the contest helped by the Chargers recievers inability to hold on to the ball. The Redskins looked very good as they pummled the Cardenals. The Cowboys looked disfunctional in their loss to the Panthers. The Broncos rallied to beat the Seahawks in an entertaining match. The Packers behind Aaron Rodgers beat the impressive looking Bears in a miricle finash. The Jets looked impressive in their dismantling of the Detroit Lions. Tough start for Patricia. In the final contest the Rams pounded the Raiders.
+	The Patriots looked tired and lethargic in their loss to the Jaguars. The Jaguars on the other hand, looked well balanced. And kudos to Bortles for a well managed offense. The Bengals beat the Ravens in Cinci in an exciting back and forth contest. The Falcons finally won a close game by beating the Panthers. The Colts thumped the Red Skins. The Titans beat the Texans in a game where Deshaun looked confused and off balance. The Buccaneers behind Fitz-magic beat the Eagles. Fitzpatrick is making football fun to watch! The Chiefs behind their young QB Mahomes, put on a scoring show as they beat the Steelers. The Dolphins beat the Jets. The Chargers beat the winless Bills. The Vikings and Packers tied in an action packed game. The Browns lost to the Saints. The poor Browns found another way to loose, as they missed too many off the foot points. The Lions lost to the 49ers. The Rams crushed the Cardinals. The Broncos squeaked by the Raiders. The Cowboys beat the Giants and in the last game, the Bears held on to win against the Seahawks.
 <br /><br />
-  All in all a tremendous start to the season!
+  All in all a good week of football!
 </p>
 <p>
-	We had a great turnout this first week. Thank you all again for participating. We hope you are having fun!
+	We had another great turnout this week. Thank you all again for participating. We hope you are having fun!
 </p>
 
 <p style='padding-top: 15px;'>
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
 <p>
-	The Statistics for week 1 will be available as soon as Wildcat Wonder gets to them!
+	The Statistics for week 2 will be available as soon as Wildcat Wonder gets to them!
 </p>
 
 <p>
