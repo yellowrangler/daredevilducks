@@ -1,10 +1,10 @@
 <?php
 
 $emailtopwriteup = "
-<p>Week 2 is in the books!  
+<p>Week 3 is in the books!  
 </p>	
 <p>	
-	The Patriots looked tired and lethargic in their loss to the Jaguars. The Jaguars on the other hand, looked well balanced. And kudos to Bortles for a well managed offense. The Bengals beat the Ravens in Cinci in an exciting back and forth contest. The Falcons finally won a close game by beating the Panthers. The Colts thumped the Red Skins. The Titans beat the Texans in a game where Deshaun looked confused and off balance. The Buccaneers behind Fitz-magic beat the Eagles. Fitzpatrick is making football fun to watch! The Chiefs behind their young QB Mahomes, put on a scoring show as they beat the Steelers. The Dolphins beat the Jets. The Chargers beat the winless Bills. The Vikings and Packers tied in an action packed game. The Browns lost to the Saints. The poor Browns found another way to loose, as they missed too many off the foot points. The Lions lost to the 49ers. The Rams crushed the Cardinals. The Broncos squeaked by the Raiders. The Cowboys beat the Giants and in the last game, the Bears held on to win against the Seahawks.
+The Patriots looked confused in their loss to the Lions. Lets hope they find some focus as they face an unbeaten division rival next week! This was a week of surprises and injury. The Browns continued to pull themselves out of last years cellar by beating the Jets. The Falcons found yet another way to loose, this time to the Saints. The Redskins looked good in their win over the Packers. The Eagles squeaked by the Colts. In the upset of the week, the Bills beat the Vikings in Minnesota. The Dolphins beat the Raiders keeping their perfect record for the season intact. The Ravens beat the struggling Broncos. The Panthers beat the Bengals. In another upset of sorts, the Giants beat the Texans. The Titan's beat the Jaguar's in a low scoring (and somewhat boring) contest. The Chiefs continued their winning ways beating the 49ers. Unfortunately, Garoppolo was injured and may be lost for the season. The Rams beat the Chargers as they continue their perfect record. The Seahawks beat the hapless Cowboys. The Bears just beat the Cardinals. In the final game the Steelers squeaked by the Buccaneers. The Steelers showed off a number of scintillating touchdown dance moves that should get them a chance to audition on Americas got talent. Hey - whatever floats your boat.
 <br /><br />
   All in all a good week of football!
 </p>
@@ -16,7 +16,7 @@ $emailtopwriteup = "
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
 <p>
-	The Statistics for week 2 will be available as soon as Wildcat Wonder gets to them!
+	The Statistics from week 3 will be available as soon as Wildcat Wonder gets to them!
 </p>
 
 <p>
