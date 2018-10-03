@@ -1,0 +1,154 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption">
+    <h2 class="headerTitle">Manage Your Information</h2>
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset">
+  <div class="panel panel-default">
+    <form id="memberupdatememberForm" name="memberupdatememberForm" style="padding:10px;">
+      <div class="form-group" >
+        <label for="membername" class="control-label">Name</label>
+              <input tabindex="7" type="text" class="form-control" ng-model="current.membername" id="membername" name="membername" placeholder="">
+
+          <input type="hidden" value="{{current.id}}" id="memberid" name="memberid">
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+          <label for="screenname" class="control-label">Screen Name</label>
+              <input tabindex="2" type="text" class="form-control" ng-model="current.screenname" id="screenname" name="screenname" placeholder="Screen Name">
+      </div> <!-- end of form-group -->
+
+      <div class="form-group" >
+          <label for="gender" class="control-label">Gender</label>
+          <select tabindex="4" class="form-control" ng-model="current.gender" id="gender" name="gender" >
+            <option value="Not Selected">Not Selected</option>
+            <option ng-repeat="gender in membergenders" value="{{gender.value}}">{{gender.title}}</option>
+          </select>
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+            <label for="street" class="control-label">Street</label>
+            <input tabindex="5" type="text" class="form-control" ng-model="current.street" id="street" name="street"placeholder="{{current.street}}">
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+            <label for="city" class="control-label">City</label>
+            <input tabindex="7" type="text" class="form-control" ng-model="current.city" id="city" name="city" placeholder="City">
+      </div> <!-- end of form-group -->    
+
+      <div class="form-group">
+            <label for="state" class="control-label">State</label>
+            <select class="form-control" ng-model="current.state" tabindex="8" name="state" id="state">
+              <option ng-repeat="state in states" value="{{state.value}}">{{state.title}}</option>
+            </select>
+
+            <label for="zip" class="control-label">Zip</label>
+            <input tabindex="9" type="text" class="form-control" ng-model="current.zip" id="zip" name="zip" placeholder="Zip">
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+          <label for="phonenumber" class="control-label">Phone</label>
+          <input tabindex="10" type="text" class="form-control" ng-model="current.phonenumber" id="phonenumber" name="phonenumber" placeholder="Phone">
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+          <label for="email" class="control-label">eMail</label>
+          <input tabindex="11" type="email" class="form-control" ng-model="current.email" id="email" name="email" placeholder="eMail">
+      </div> <!-- end of form-group -->
+
+                <div class="form-group">
+                  <label for="favoriteteamid" class="col-md-3 control-label">Favorite Team</label>
+                  <div class="col-md-5">
+                    <select tabindex="13" class="customSelect form-control" ng-model="current.favoriteteamid" id="favoriteteamid" name="favoriteteamid">
+                        <option ng-repeat="team in teams" ng-selected="current.favoriteteamid == team.id" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+                    </select>
+                  </div>
+                </div> <!-- end of form-group --> 
+
+      <div class="form-group">
+            <label for="biography" class="control-label">Biography</label>
+            <textarea tabindex="14" class="form-control" ng-model="current.biography" id="biography" name="biography" rows="3"></textarea>
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+          <label for="passwd" class="control-label">Password</label>
+          <input tabindex="15" type="password" class="form-control" ng-model="current.passwd" id="passwd" name="passwd" placeholder="Password">
+
+          <input type="text" class="form-control" ng-model="current.passwd" id="dpasswd" name="dpasswd" readonly>
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+          <label for="vpasswd" class="control-label">Verify</label>
+          <input tabindex="16" type="password" class="form-control" ng-model="current.vpasswd" id="vpasswd" name="vpasswd" placeholder="Password">
+      </div> <!-- end of form-group -->
+
+      <div class="form-group">
+          <label for="avatar" class="control-label">Avatar</label>
+            <img ng-click="updateAvatar()" style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="showPointer img-rounded center-block" >
+
+          <input ng-model="current.avatar" type="hidden" value="{{current.avatar}}" id="avatar" name="avatar">
+      </div> <!-- end of form-group -->
+
+      <div style="padding-top:20px;">
+          <div class="form-group" >
+            <span style="font-weight:bold;">Permissions</span>
+          </div> <!-- end of form-group -->
+      </div>    
+
+      <div class="col-md-offset-1 col-md-7">  
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.membernameprofileind" ng-checked="current.membernameprofileind == '1'" id="membernameprofileind" name="membernameprofileind"> You can show members my Name
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.genderprofileind" ng-checked="current.genderprofileind == '1'" id="genderprofileind" name="genderprofileind"> You can show members my Gender
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.emailprofileind" ng-checked="current.emailprofileind == '1'" id="emailprofileind" name="emailprofileind"> You can show members my eMail
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.addressprofileind" ng-checked="current.addressprofileind == '1'" id="addressprofileind" name="addressprofileind"> You can show members my Address
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.phonenumberprofileind" ng-checked="current.phonenumberprofileind == '1'" id="phonenumberprofileind" name="phonenumberprofileind"> You can show members my Phone Number
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.biographyprofileind" ng-checked="current.biographyprofileind == '1'" id="biographyprofileind" name="biographyprofileind"> You can show members my Biogrophy
+          </div> <!-- end of form-group -->
+
+          <div class="form-group" >
+            <input tabindex="" type="checkbox" ng-model="current.noemail" ng-checked="current.noemail == '1'"  id="noemail" name="noemail"> Please do NOT send me eMails
+          </div> <!-- end of form-group -->  
+      </div>
+
+      <div style="padding-top:20px;" class="col-md-7">
+        <div class="form-group text-center">
+            <button tabindex="17" id="updatenewmemberbutton" data-ng-click="updatemember()" type="button" class="btn btn-primary">Update My Information</button>
+        </div> <!-- end of form-group -->
+      </div>    
+    </form>
+  </div> <!-- end of panel panel -->
+</div> <!-- end of offset -->    
+
+<!-- dialogs -->
+<div class="modal fade" id="meberUpdateMemberDialogModal" tabindex="-1" role="dialog" aria-labelledby="meberUpdateMemberDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="meberUpdateMemberDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="meberUpdateMemberDialogModalBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  

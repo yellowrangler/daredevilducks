@@ -1,0 +1,378 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption">
+	<h2 class="headerTitle">Team Weekly Ranking</h2>
+</div> <!-- end of pagecaption -->
+
+<div class="row">
+	<form id="teamweeklyrankForm" name="teamweeklyrankForm" class="form-inline">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div style="padding-top:15px;" class="form-group horizontalFieldOffset">
+						<label for="teamid" class="control-label">Team</label>
+				        <select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.teamid" id="teamid" name="teamid">
+				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+				        </select>
+					</div> <!-- end of form-group --> 
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of col 9 -->
+</div> <!-- end of row -->
+
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverride">
+			<div class="panelBodyOverride ">
+				<table id="TeamWeeklyRankings" class="table teamWeeklyRankings" >
+					<tr class="tableTitleNoBorder">
+						<th class="tableTitle" >
+							<button id="teamRankSortButton" type="button" class="btn btn-default btn-xs " ng-click="toggleSort()" aria-label="Left Align">
+							  <span style="font-size:10px" class="glyphicon" id="teamRankSort"></span>
+							</button>
+						</th>
+						<th class="tableTitle" colspan=2>Team's</th>
+						<th class="tableTitle">Score</th>	
+					</tr>
+					<tr ng-repeat="teamweekrank in teamweekranks">
+						<td style="font-size:16px;font-weight:bold;padding-top:55px;" class="center-column-text">
+							{{teamweekrank.week}}
+						</td>
+
+						<td class="left-column-text" >
+						<div style="padding:5px;height:60px;width:76px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv">
+							<a href="" ng-click="getTeamStats(teamweekrank.hometeamname,teamweekrank.hometeamid,teamweekrank.awayteamname,teamweekrank.awayteamid,teamweekrank.gamenbr)">
+							<img height="50" ng-src='../img/nflicons/{{teamweekrank.hometeamiconname}}'>
+							</a>
+						</div>
+
+						<div style="padding:5px;height:60px;width:76px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-if="teamweekrank.awayteamiconname != 'B' ">
+							<a href="" ng-click="getTeamStats(teamweekrank.hometeamname,teamweekrank.hometeamid,teamweekrank.awayteamname,teamweekrank.awayteamid,teamweekrank.gamenbr)">
+							<img height="50" ng-src='../img/nflicons/{{teamweekrank.awayteamiconname}}'>
+							</a>
+						</div>
+						</td>
+
+						<td class="left-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamlocationnamediv" name="hometeamlocationnamediv" ng-class="{{teamweekrank.hometeamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.hometeamlocation}} &nbsp; {{teamweekrank.hometeamname}} (H)
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamlocationnamediv" name="awayteamlocationnamediv" ng-class="{{teamweekrank.awayteamid == current.teamid}} ? 'teamSelected' : 'teamNotSelected' ">
+							{{teamweekrank.awayteamlocation}} &nbsp; {{teamweekrank.awayteamname}} (A)
+						</div>
+						</td>
+
+						<td class="center-column-text" >
+						<div style="padding:5px;height:60px;" id="hometeamscorediv" name="hometeamscorediv" ng-class="compareScores( 'home', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+							{{teamweekrank.hometeamscore}}
+						</div>
+
+						<div style="padding:5px;height:60px;" id="awayteamscorediv" name="awayteamscorediv" ng-class="compareScores( 'away', teamweekrank.hometeamscore, teamweekrank.awayteamscore) ? 'teamWon' : 'teamLost' ">
+							{{teamweekrank.awayteamscore}}
+						</div>
+						</td>
+					</tr>
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->				
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel-body">
+			<div class="panel-group" id="weeklydefinitionsgroup">
+				<div class="panel panel-default">
+					<div style="background-color:#DBF0EF;" class="panel-heading" id="weeklydefinitionsheading">
+						<h3 class="panel-title">
+							<a style="text-align:center;vertical-align:middle;text-decoration:none;" data-toggle="collapse" data-parent="#weeklydefinitionsgroup" data-target="#weeklydefinitions">
+							<span id="toggletext" >{{current.toggletext}}</span>
+							</a>
+						</h3>
+					</div> <!-- end of panel header -->
+
+					<div id="weeklydefinitions" class="panel-collapse collapse">
+
+						<div class="panel-body">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <p>This Information displays the Rankings for the team selected, for each week. You access the Power rankings and stats by touching the NFL team logo fr either team for the week you want to see the stats.</p>
+
+								<p>Team Rankings.com's Predictive Power Ratings Model uses the Predictive power ratings described in the first three parts of this series.  To summarize, a computer algorithm iteratively analyzes data on every NFL game result this season.  In the end, every team receives a simple numerical rating (e.g. 92.4 or 104.7) indicative of its actual, documented, proven track record at outscoring opponents.</p>
+
+								<p>Offensive Rankings are based on the highest to lowest Average of Yards Gained by each Team.</p>
+
+								<p>Defensive Rankings are based on the lowest to highest Average of Yards Gained by the Team’s Opponents.</p>
+
+								<p>The Offensive & Defensive Statistical Data is provided by SportsDirect Inc. via Team Rankings, LLC .  They are for the previous week’s game.</p>  
+
+								<p>Hopefully this gives you a better idea of how to select the winning team for each game.</p>
+							  </div>
+							</div>
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel collapse -->
+				</div> <!-- end of panel panel -->
+			</div> <!-- end of panel group -->
+		</div> <!-- end of panel body -->
+	</div> <!-- end of col -->
+</div> <!-- end of row -->
+
+<!-- dialogs -->
+<div class="modal fade" id="gamesSavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gamesSavedDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="gamesSavedDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="gamesSavedDialogModalLabelBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="modal fade" id="teamStatsDialogModal" tabindex="-1" role="dialog" aria-labelledby="teamStatsDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="teamStatsDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="teamStatsDialogModalBody">
+      	<table style='width:100%;' class='table' >
+			<tr >
+				<td style='font-weight:bold;padding-top:20px;'>{{teamstats.hometeamname}} (H) VS {{teamstats.awayteamname}} (A)</td>			
+				<td>
+					<div style='text-align:center;'>
+						<a href='{{teamstats.hometeamurl}}' target='_blank'>
+							<img style='text-align:center;' height='50' src='../img/nflicons/{{teamstats.hometeamiconname}}'> 
+						</a> 
+					</div>
+				</td>
+				<td>
+					<div style='text-align:center;'>
+						<a href='{{teamstats.awayteamurl}}' target='_blank'>
+							<img style='text-align:center;' height='50' src='../img/nflicons/{{teamstats.awayteamiconname}}'>
+						</a> 
+					</div>
+				</td>											
+			</tr>
+
+			<tr style='background:green;color:white;font-weight:bold;' >
+				<td colspan=3>Standings</td>											
+			</tr>
+
+			<tr >
+				<td>Overall W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamwins}} - {{teamstats.hometeamlosses}} - {{teamstats.hometeamties}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamwins}} - {{teamstats.awayteamlosses}} - {{teamstats.awayteamties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Home W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.homehomewins}} - {{teamstats.homehomelosses}} - {{teamstats.homehometies}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.homeawaywins}} - {{teamstats.homeawaylosses}} - {{teamstats.homeawayties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Away W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayhomewins}} - {{teamstats.awayhomelosses}} - {{teamstats.awayhometies}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayawaywins}}- {{teamstats.awayawaylosses}} - {{teamstats.awayawayties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Conference W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.confhometeamwins}} - {{teamstats.confhometeamlosses}} - {{teamstats.confhometeamties}}
+				</td>
+				
+				<td class='center-column-text'>
+				   {{teamstats.confawayteamwins}} - {{teamstats.confawayteamlosses}} - {{teamstats.confawayteamties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Division W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.divhometeamwins}} - {{teamstats.divhometeamlosses}} - {{teamstats.divhometeamties}}
+				</td>
+				
+				<td class='center-column-text'>
+				   {{teamstats.divawayteamwins}} - {{teamstats.divawayteamlosses}} - {{teamstats.divawayteamties}}
+				</td>												
+			</tr>
+
+			<tr style='background:#0ABEC7;color:white;font-weight:bold;'>
+				<td colspan=3>Power Rankings (Lower number is better)</td>										
+			</tr>
+
+			<tr >
+				<td>Overall</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeampowerranking}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteampowerranking}}
+				</td>												
+			</tr>
+
+			<tr style='background:maroon;color:white;font-weight:bold;'>
+				<td colspan=3>Team Ranking Chart (Higher number is better)</td> 							
+			</tr>
+
+			<tr>
+				<td colspan=4 >
+					<canvas id='bar' 
+					height="250"
+					class='chart chart-bar'
+					chart-data='data' 
+					chart-labels='labels' 
+					chart-options='options'
+					chart-series='series'>
+					</canvas>
+				</td>												
+			</tr>
+
+			<tr style='background:#006600;color:white;font-weight:bold;'>
+				<td colspan=3>Offensive Rankings (Lower number is better)</td>								
+			</tr>
+
+			<tr >
+				<td>Overall</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencetotal}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencetotal}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Scoring</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencescoring}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencescoring}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Passing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencepassing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencepassing}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Rushing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencerushing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencerushing}}
+				</td>												
+			</tr>
+
+			<tr style='background:#CC0000;color:white;font-weight:bold;'>
+				<td colspan=3>Defensive Rankings (Lower number is better)</td>								
+			</tr>
+
+			<tr >
+				<td>Overall</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencetotal}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencetotal}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Scoring</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencescoring}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencescoring}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Passing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencepassing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencepassing}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Rushing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencerushing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencerushing}}
+				</td>												
+			</tr>
+
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  

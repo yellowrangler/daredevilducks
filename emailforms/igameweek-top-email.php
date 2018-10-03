@@ -1,10 +1,10 @@
 <?php
 
 $emailtopwriteup = "
-<p>Week 3 is in the books!  
+<p>Week 4 is in the books!  
 </p>	
 <p>	
-The Patriots looked confused in their loss to the Lions. Lets hope they find some focus as they face an unbeaten division rival next week! This was a week of surprises and injury. The Browns continued to pull themselves out of last years cellar by beating the Jets. The Falcons found yet another way to loose, this time to the Saints. The Redskins looked good in their win over the Packers. The Eagles squeaked by the Colts. In the upset of the week, the Bills beat the Vikings in Minnesota. The Dolphins beat the Raiders keeping their perfect record for the season intact. The Ravens beat the struggling Broncos. The Panthers beat the Bengals. In another upset of sorts, the Giants beat the Texans. The Titan's beat the Jaguar's in a low scoring (and somewhat boring) contest. The Chiefs continued their winning ways beating the 49ers. Unfortunately, Garoppolo was injured and may be lost for the season. The Rams beat the Chargers as they continue their perfect record. The Seahawks beat the hapless Cowboys. The Bears just beat the Cardinals. In the final game the Steelers squeaked by the Buccaneers. The Steelers showed off a number of scintillating touchdown dance moves that should get them a chance to audition on Americas got talent. Hey - whatever floats your boat.
+The Patriots did a 180 from last week as they pounded the undefeated Dolphins. They get Edelman back for Tuesday night football, which should also help. But it is is a short week for the Pats so we shall see. The Rams beat the Vikings in a closely fought contest. Atlanta found another way to loose as they fell to the Bengals. The Bears crushed the flailing Buccaneers; sealing the deal to have Winston as next weeks starter. The Cowboys beat the Lions in Dallas. The Packers beat the Bills big time. The Texans got a needed win over the Colts. The Jaguars beat the fading Jets. The Titans, in what has to be considered an upset, beat the Eagles. The Seahawks beat the Cardinals. The Raiders beat the Browns in a close contest. The Chargers beat the 49ers.The Saints pummeled the Giants. The Ravens crushed the Steelers. And in what had to be the game of the week; the Chiefs beat the Broncos.
 <br /><br />
   All in all a good week of football!
 </p>
@@ -16,7 +16,7 @@ The Patriots looked confused in their loss to the Lions. Lets hope they find som
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
 <p>
-	The Statistics from week 3 will be available as soon as Wildcat Wonder gets to them!
+	The Statistics from week 3 are available thanks to Wildcat Wonder!
 </p>
 
 <p>

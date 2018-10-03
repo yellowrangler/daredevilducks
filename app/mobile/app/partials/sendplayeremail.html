@@ -1,0 +1,131 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="container">
+
+<div style="color:maroon;font-weight:600;padding-bottom:25px; " class="row">
+  <div class="col-md-5"><h2 class="headerTitle">Send Member eMail</h2></div>
+  <div class="col-md-7">&nbsp;</div>
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">eMail Selections</h3>
+      </div>
+
+      <div class="panel-body">
+        <form id="getTemplateForm" name="getTemplateForm" style="padding:10px;" class="form">
+          <div class="form-group" >
+            <label for="templatename" class="control-label">Name</label>
+              <select tabindex="1"  class="form-control" ng-change="geteMailItems()" ng-model="current.emailtemplate" id="templatename" name="templatename">
+                <option ng-repeat="emailtemplate in emailtemplates" value="{{emailtemplate}}">{{emailtemplate.title}}</option>
+              </select>
+          </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="weekOverride" class="control-label">Week Override</label>
+              <input type="weekOverride" class="form-control" ng-model="current.weekOverride" id="weekOverride" name="weekOverride">
+          </div> <!-- end of form-group -->
+        </form>  
+      </div> <!-- end of panel body -->
+    </div> <!-- end of panel -->  
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recipients</h3>
+      </div>
+
+      <div class="panel-body">
+        <form id="updateeMailForm" name="updatememberForm" style="padding:10px;" class="form">
+          <div class="form-group" >
+            <label for="membername" class="control-label">Name</label>
+              <select tabindex="1"  class="form-control" ng-change="setMembereMail(current.email)" ng-model="current.email" id="membername" name="membername">
+                <option ng-repeat="member in members" value="{{member.email}}">{{member.membername}} - {{member.email}}</option>
+              </select>
+              <input type="hidden" value="{{current.id}}" id="id" name="id">
+          </div> <!-- end of form-group -->
+
+          <div style="padding-left:15px;" class="form-group   form-inline">
+              <button id="addAll2Mailbutton" data-ng-click="addAll2MailForm()" type="button" class="btn btn-primary">Add All</button>
+          </div> <!-- end of form-group -->
+        </form>  
+      </div> <!-- end of panel body -->
+    </div> <!-- end of panel -->  
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Send eMail</h3>
+      </div>
+
+      <div class="panel-body">
+        <form id="dddeMailForm" name="dddeMailForm" class="form-horizontal">
+
+          <div class="form-group">
+            <label for="emailfrom" class="col-md-2 control-label">From</label>
+            <div class="col-md-9">
+                <input type="email" class="form-control" ng-model="current.emailfrom" id="emailfrom" name="emailfrom" placeholder="">
+            </div>
+          </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="emailto" class="col-md-2 control-label">To</label>
+            <div class="col-md-9">
+              <textarea class="form-control" rows="3" ng-model="current.emailto" id="emailto" name="emailto"></textarea> 
+            </div>
+          </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="emailsubject" class="col-md-2 control-label">Subject</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" ng-model="current.emailsubject" id="emailsubject" name="emailsubject" placeholder="">
+            </div>
+          </div> <!-- end of form-group -->
+
+          <div class="form-group">
+            <label for="emailmessage" class="col-md-2 control-label">Message</label>
+            <div class="col-md-9">
+              <textarea class="form-control" rows="15" ng-model="current.emailmessage" id="emailmessage" name="emailmessage"></textarea> 
+            </div>
+          </div> <!-- end of form-group -->
+
+          <div style="padding:5px;">&nbsp;</div>
+
+          <div style="padding-left:15px;" class="form-group">
+            <div class="col-md-12">
+              <button id="sendeMail" data-ng-click="sendeMailForm()" type="button" class="btn btn-primary">Send eMail</button>
+            </div>
+
+            <div style="padding:5px;">&nbsp;</div>
+            
+            <div class="col-md-12">
+              <button id="clearMailTo" data-ng-click="clearMailTo()" type="button" class="btn btn-primary">Clear Mail To</button>
+            </div>
+          </div> <!-- end of form-group -->
+
+        </form>  
+      </div> <!-- end of panel body -->
+    </div> <!-- end of panel -->
+  </div> <!-- end of col 12 -->
+</div> <!-- end of row --> 
+  
+<!-- dialogs -->
+<div class="modal fade" id="eMailDialogModal" tabindex="-1" role="dialog" aria-labelledby="eMailDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="eMailDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="eMailDialogModalLabelBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-click="closeModalCleanUp()" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+</div> <!-- end of container -->
+    

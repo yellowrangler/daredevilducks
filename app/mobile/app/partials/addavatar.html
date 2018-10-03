@@ -1,0 +1,45 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption row">
+     <div class="col-md-12">
+      <h2 class="headerTitle">Add Member Avatar</h2>
+  </div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+  <div class="col-md-12">      
+    <div style="padding-left:5%;padding-right:5%;" style="width:90%;">
+      <div class="panel panel-default">
+        <div class="subpanelCaption panel-heading">Upload Avatar</div>
+        <div style="padding-top:35px;" class="row">
+          <div class="form-group" >
+            <label style="text-align:right;" for="membername" class="col-md-2 control-label">Select Player</label>
+            <div class="col-md-7">
+              <select tabindex="1"  class="form-control" ng-change="getMember(current.membername)" ng-model="current.membername" id="membername" name="membername">
+                <option ng-repeat="member in members" ng-selected="current.membername == member.membername" value="{{member.membername}}">{{member.membername}}</option>
+              </select>
+              <input type="hidden" value="{{current.id}}" id="id" name="id">
+              </div> <!-- end of col -->
+          </div> <!-- end of form-group -->
+        </div> <!-- end of row -->  
+
+        <div style="padding-top:15px;" class="row">
+          <div class="form-group">
+            <label style="text-align:right;" for="avatar" class="col-md-2 control-label">Current Avatar</label>
+              <div class="col-md-7">
+                  <img style="max-width:100px;" src="../img/avatars/{{current.avatar}}" alt="avatar" name="avatar" id="avatar" class="img-rounded" ng-model="current.avatar" >
+              </div>
+          </div> <!-- end of form-group -->
+        </div> <!-- end of row --> 
+
+        <div class="row">        
+          <div style="padding-top:5%;padding-bottom:5%;padding-left:15%;padding-right:15%;">
+            <button style="height:200px; width:80%;" dropzone="dropzoneConfig">
+            Drag and drop files here or click to upload
+            </button>
+         </div>
+        </div> <!-- end of row -->          
+      </div> <!-- end of panel panel -->
+    </div> <!-- end of div style 100% -->
+  </div> <!-- end of div col md 12 -->              
+</div> <!-- end of row -->    

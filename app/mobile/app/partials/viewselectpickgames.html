@@ -1,0 +1,389 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption">
+	<h2 class="headerTitle">Member's Picks for Week</h2>
+</div> <!-- end of caption -->
+
+<div class="row">
+	<form id="pickweekForm" name="pickweekForm" class="form-inline">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+
+					<div class="form-group horizontalFieldOffset">
+						<label for="memberid" class="control-label">Player</label>
+				        <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.memberid" id="memberid" name="memberid">
+				            <option ng-selected="current.memberid == member.id"  ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				        </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.season"  id="season" name="season">
+			                <option ng-selected="current.season == season.season" ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="week" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekPicks()" ng-model="current.week" id="week" name="week">
+				            <option ng-selected="current.week == week.week" ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->     
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->	
+	</div> <!-- end of col 7 -->
+</div> <!-- end of row -->
+
+<div style="padding-left:25px;" class="pageStandardOffset">
+	<div class="pickTeamsList" ng-repeat="game in games">			
+		<div class="pickTeamsPair" >
+			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row" >
+				<div style="display:inline-block;line-height:50px;"  class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+					<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+					
+					<!-- <a ng-href="{{game.hometeamurl}}" target="_blank">
+					<img style="display:inline-block;float:right;" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+					</a> -->
+				</div>
+
+				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-7 col-sm-8 col-md-8 col-lg-8" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
+					<span class="left-column-text">{{game.hometeamlocation}} &nbsp; {{game.hometeamname}} (H)</span>
+				</div>
+				
+				<div style="display:inline-block;line-height:50px;"  class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">
+					<span class="center-column-text">{{game.hometeamscore}}</span>
+				</div>
+			</div> <!-- end of row -->
+
+			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row">
+				<div style="display:inline-block;line-height:50px;" class="left-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2">
+					<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+
+					<!-- <a ng-href="{{game.awayteamurl}}" target="_blank">
+					<img style="display:inline;line-height:50px;float:right;" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+					</a> -->
+				</div>
+
+				<div style="display:inline-block;line-height:50px;"  class="left-column-text col-xs-7 col-sm-8 col-md-8 col-lg-8" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
+					<span class="left-column-text">{{game.awayteamlocation}} &nbsp; {{game.awayteamname}} (A)</span>
+				</div>
+
+				<div style="display:inline-block;line-height:50px;" class="center-column-text col-xs-2 col-sm-2 col-md-2 col-lg-2" ng-class="compareScores( 'away', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost'">
+					<span class="center-column-text">{{game.awayteamscore}}</span>
+				</div>
+			</div> <!-- end of row -->
+
+		</div>	<!-- end of pickTeamsPair -->
+
+		<hr>
+
+	</div> <!-- end of pickTeamsList -->
+		
+	<div ng-if="byegames.length" class="pageStandardOffset">
+		<div>
+			<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="../img/DonaldDuckSleepinginHammck2017.png">
+		</div> <!-- end of div img -->
+
+		<div>
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body table-responsive">
+					<table class="table pickGameTable" >
+						<tr class="tableTitle">
+							<th colspan=5>Bye Teams for Week</th>
+						</tr>
+
+						<tr ng-repeat="byegame in byegames">
+							<td class="left-column-text">
+								<a ng-href="{{byegame.teamurl}}" target="_blank">
+								<img height="50" ng-src='../img/nflicons/{{byegame.teamiconname}}'>
+								</a>
+							</td>
+
+							<td class="left-column-text">
+								{{byegame.teamlocation}} &nbsp; {{byegame.teamname}}
+							</td>
+						</tr>
+					</table>
+				</div> <!-- end of panel body -->
+			</div> 	<!-- end of panel -->
+		</div> <!-- end of col 6 -->
+	</div> <!-- end of row -->
+	
+	<div style="display:inline;">
+		<div style="padding-top:5px;">
+			<div style="width:100%;" class="form-group">
+	            <img style="height:100px;cursor:pointer;" class="center-block"  ng-show="current.memberavatar != ''" ng-click="getMemberProfile(current.memberid)" ng-src="../img/avatars/{{current.memberavatar}}">
+			</div>  
+
+			<div style="padding-top:10px;width:100%;width:100%;text-align:center;font-weight:bold;padding:10px;" class="form-group teamSelected">
+		        Selected
+		    </div>  
+
+			<div style="padding-top:10px;width:100%;width:100%;text-align:center;padding:10px;font-weight:bold;" class="form-group teamWon">    
+		        Winner
+	        </div> 
+        </div>
+		
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<!-- Dialogs -->
+<div class="modal fade" id="teamStatsDialogModal" tabindex="-1" role="dialog" aria-labelledby="teamStatsDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="teamStatsDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="teamStatsDialogModalBody">
+      	<table style='width:100%;' class='table' >
+			<tr >
+				<td style='font-weight:bold;padding-top:20px;'>{{teamstats.hometeamname}} (H) VS {{teamstats.awayteamname}} (A)</td>			
+				<td>
+					<div style='text-align:center;'>
+						<a href='{{teamstats.hometeamurl}}' target='_blank'>
+							<img style='text-align:center;' height='50' src='../img/nflicons/{{teamstats.hometeamiconname}}'> 
+						</a> 
+					</div>
+				</td>
+				<td>
+					<div style='text-align:center;'>
+						<a href='{{teamstats.awayteamurl}}' target='_blank'>
+							<img style='text-align:center;' height='50' src='../img/nflicons/{{teamstats.awayteamiconname}}'>
+						</a> 
+					</div>
+				</td>											
+			</tr>
+
+			<tr style='background:green;color:white;font-weight:bold;' >
+				<td colspan=3>Standings</td>											
+			</tr>
+
+			<tr >
+				<td>Overall W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamwins}} - {{teamstats.hometeamlosses}} - {{teamstats.hometeamties}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamwins}} - {{teamstats.awayteamlosses}} - {{teamstats.awayteamties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Home W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.homehomewins}} - {{teamstats.homehomelosses}} - {{teamstats.homehometies}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.homeawaywins}} - {{teamstats.homeawaylosses}} - {{teamstats.homeawayties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Away W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayhomewins}} - {{teamstats.awayhomelosses}} - {{teamstats.awayhometies}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayawaywins}}- {{teamstats.awayawaylosses}} - {{teamstats.awayawayties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Conference W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.confhometeamwins}} - {{teamstats.confhometeamlosses}} - {{teamstats.confhometeamties}}
+				</td>
+				
+				<td class='center-column-text'>
+				   {{teamstats.confawayteamwins}} - {{teamstats.confawayteamlosses}} - {{teamstats.confawayteamties}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Division W-L-T</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.divhometeamwins}} - {{teamstats.divhometeamlosses}} - {{teamstats.divhometeamties}}
+				</td>
+				
+				<td class='center-column-text'>
+				   {{teamstats.divawayteamwins}} - {{teamstats.divawayteamlosses}} - {{teamstats.divawayteamties}}
+				</td>												
+			</tr>
+
+			<tr style='background:maroon;color:white;font-weight:bold;'>
+				<td colspan=3>Compare Off/Def Ranking (Higher better)</td> 	
+			</tr>
+
+			<tr>
+				<td colspan=4 >
+					<canvas id='bar' 
+					height="200"
+					class='chart chart-bar'
+					chart-data='data' 
+					chart-labels='labels' 
+					chart-options='options'
+					chart-series='series'>
+					</canvas>
+				</td>												
+			</tr>
+
+			<tr >
+				<td style='font-weight:bold;padding-top:20px;'>
+					&nbsp;		
+				<td>
+					<div style='text-align:center;'>
+						<a href='{{teamstats.hometeamurl}}' target='_blank'>
+							<img style='text-align:center;' height='50' src='../img/nflicons/{{teamstats.hometeamiconname}}'> 
+						</a> 
+					</div>
+				</td>
+				<td>
+					<div style='text-align:center;'>
+						<a href='{{teamstats.awayteamurl}}' target='_blank'>
+							<img style='text-align:center;' height='50' src='../img/nflicons/{{teamstats.awayteamiconname}}'>
+						</a> 
+					</div>
+				</td>											
+			</tr>
+
+			<tr style='background:#0ABEC7;color:white;font-weight:bold;'>
+				<td colspan=3>Power Rankings (Lower number is better)</td>					
+			</tr>
+
+			<tr >
+				<td>Overall</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeampowerranking}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteampowerranking}}
+				</td>												
+			</tr>
+
+			<tr style='background:#006600;color:white;font-weight:bold;'>
+				<td colspan=3>Offensive Rankings (Lower number is better)</td>			
+			</tr>
+
+			<tr >
+				<td>Overall</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencetotal}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencetotal}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Scoring</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencescoring}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencescoring}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Passing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencepassing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencepassing}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Rushing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamoffencerushing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamoffencerushing}}
+				</td>												
+			</tr>
+
+			<tr style='background:#CC0000;color:white;font-weight:bold;'>
+				<td colspan=3>Defensive Rankings (Lower number is better)</td>								
+			</tr>
+
+			<tr >
+				<td>Overall</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencetotal}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencetotal}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Scoring</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencescoring}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencescoring}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Passing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencepassing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencepassing}}
+				</td>												
+			</tr>
+
+			<tr >
+				<td>Rushing</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.hometeamdefencerushing}}
+				</td>
+
+				<td class='center-column-text'>
+				   {{teamstats.awayteamdefencerushing}}
+				</td>												
+			</tr>
+
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

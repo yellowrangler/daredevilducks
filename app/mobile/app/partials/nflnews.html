@@ -1,0 +1,75 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption">
+  <div style="padding-bottom:25px;">
+
+        <div class="pageCaption row">
+
+            <div style="padding-bottom:25px;"  class="col-md-12">
+              <h2 style="display:inline;" class="headerTitle">NFL Headlines</h2>
+            </div> <!-- end of col -->
+
+            <form class="form-inline pageStandardOffset">
+              <div class="form-group">
+                <label for="nflrss">News Source</label>
+                <select style="padding-left:5px;"  class="customSelect form-control" ng-change="getNFLrssFeed()" ng-model="current.rsslinkid" id="nflrss" name="nflrss">
+                    <option ng-repeat="nflrss in nflrsss" ng-selected="current.rsslinkid == nflrss.id" value="{{nflrss.id}}">{{nflrss.rsssource}}</option>
+                </select>
+              </div>  <!-- end of div -->
+                
+              <div class="form-group">
+                  <button  class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Refresh News</button>
+              </div>  <!-- end of div -->
+            </form>
+
+        </div> <!-- end of row --> 
+
+        <div style="padding-top:25px;" class="row">
+
+            <div class="col-md-12">
+              <div class="pageStandardOffset row">
+                <div ng-repeat="nflnew in nflnews" class="panel panel-default">
+                  <div class="panel-body table-responsive">
+                    <table >
+                      <tr style="padding:15px;">
+                        <td style="vertical-align:top">
+                          <div style="text-align:top;font-weight:bold; color:maroon;" >
+                            Headline:
+                          </div>
+                        </td>
+                        <td>  
+                          <div style="color:teal;" >
+                            {{decodeRssString(nflnew.description)}}
+                          </div>
+                        </td> 
+                      </tr>
+
+                      <tr style="padding:15px;">
+                        <td style="vertical-align:top">    
+                          <div style="text-align:top;font-weight:bold; color:maroon;" >
+                            Published:
+                          </div>
+                        </td>
+                        <td>
+                          <div style="color:teal;" >
+                            {{nflnew.pubDate}}
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr >  
+                        <td >  
+                          <div style="padding-top:25px;">
+                             <a  style="font-weight:bold;" target="_blank" class="btn btn-success btn-md" ng-href="{{nflnew.link}}" >Read More</a>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div> <!-- end of body -->
+                </div> <!-- end of panel -->
+              </div> <!-- end of row -->
+
+            </div> <!-- end of col 12 -->
+
+        </div> <!-- end of row -->
+  </div> <!-- end of div -->

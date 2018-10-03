@@ -1,0 +1,92 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption">
+	<h2 class="headerTitle">Player Weekly Totals</h2>
+</div> <!-- end of row -->	
+
+<div class="row">
+	<form id="pickweekForm" name="pickweekForm" style="padding:0;" class="form-inline">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekStats()" ng-model="current.season"  id="season" name="season">
+			                <option ng-repeat="season in seasons" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+	 
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="week" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="getMemberWeekStats()" ng-model="current.week" id="week" name="week">
+			                <option ng-repeat="week in weeks" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+				</div> <!-- end of panel body -->				
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->				
+	</div> <!-- end of col 9 -->
+	</form>
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverrideNoBorder  table-responsive">
+			
+			<table class="table MemberWeeklyTable" >
+				<tr class="tableTitle">
+					<th>Rank</th>
+					<th colspan=2>Player</th>			
+					<th style="width:25px;">W</th>
+					<th style="width:25px;">L</th>
+					<th style="width:25px;">T</th>
+				</tr>
+
+				<tr ng-repeat="memberweekstat in memberweekstats">
+					<td style="padding-right:5px;" class="center-column-text">{{memberweekstat.position}}</td>
+					
+					<td class="left-column-text" >
+	                    <img style="height:70px;cursor:pointer;" ng-show="memberweekstat.memberavatar != ''" ng-click="getMemberProfile(memberweekstat.memberid)" ng-src="../img/avatars/{{memberweekstat.memberavatar}}">
+					</td>
+
+					<td class="left-column-text" >
+	                    {{memberweekstat.screenname}}
+					</td>
+
+					<td class="center-column-text">
+						{{memberweekstat.wins}}
+					</td>
+
+					<td class="center-column-text">
+						{{memberweekstat.losses}}
+					</td>
+
+					<td class="center-column-text">
+						{{memberweekstat.ties}}
+					</td>
+				</tr>
+			</table>
+
+		</div> 	<!-- end of panel -->				
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+</form>
+
+<!-- Dialogs -->
+<div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberProfileDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberProfileDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

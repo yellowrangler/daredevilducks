@@ -77,6 +77,7 @@ FROM memberstatstbl MS
 LEFT JOIN membertbl M ON M.id = MS.memberid
 WHERE M.status = 'active'
 AND MS.season = '$season' AND gametypeid = '$gametype'
+AND M.role != 'expert'
 ORDER BY MS.wins DESC, M.screenname ASC";
 
 // print $sql;
@@ -178,6 +179,7 @@ FROM memberstatstbl MS
 LEFT JOIN membertbl M ON M.id = MS.memberid
 WHERE M.status = 'active'
 AND MS.season = '$season' AND gametypeid = '$gametype'
+AND M.role != 'expert'
 ORDER BY MS.playerpickedpercent DESC, M.screenname ASC";
 
 // print $sql;
@@ -273,6 +275,7 @@ $sql = "SELECT DISTINCT
     LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
     WHERE  M.status = 'active'
     AND MS.season = $season AND MS.week = $week
+    AND M.role != 'expert'
     ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 
 // print $sql;

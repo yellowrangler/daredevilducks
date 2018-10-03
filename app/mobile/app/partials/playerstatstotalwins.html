@@ -1,0 +1,104 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption row">
+	<div class="col-md-12">
+		<h2 class="headerTitle">Total Wins Leaders</h2> 
+	</div> <!-- end of col -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">
+	<div class="col-md-12">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season </label>
+			            <select class="customSelect form-control" ng-change="getYearlyTotalWins()" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<label class="control-label" for="gametype">Game Type</label>
+						<select class="customSelect form-control" ng-change="getYearlyTotalWins()" ng-model="current.gametypeid"  id="gametype" name="gametype">
+		                    <option ng-repeat="gametype in gametypes" ng-selected="current.gametypeid == gametype.id" value="{{gametype.id}}">{{gametype.gametype}}</option>
+	                    </select>
+					</div>  <!-- end of form group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<label class="control-label" for="membergroup">Groups</label>
+						<select class="customSelect form-control" ng-change="getYearlyTotalWins()" ng-model="current.membergroupid"  id="membergroup" name="membergroup">
+							<option value="0">No Group Selected</option>
+		                    <option ng-repeat="membergroup in membergroups" value="{{membergroup.membergroupid}}">{{membergroup.membergroupname}}</option>
+	                    </select>
+					</div>  <!-- end of form group -->
+
+					<div class="form-group horizontalFieldOffset">
+						<button id="showexperts" name="showexperts" type="button" class="btn btn-primary" ng-click="getYearlyTotalWins()">
+						    {{current.showexpertsTitle}}
+						</button>
+					</div>  <!-- end of form group -->
+				</div> <!-- end of panel body -->			
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->			
+	</div> <!-- end of col 10 -->
+	</form>
+</div> <!-- end of row -->
+
+<div style="padding-left:5%;width:100%;background-color:white;" class="row">
+	 <div style="border:0px;" class="panel panel-default">
+		<div style="padding:0px;" class="panel-body">
+			<div class="table-responsive">
+			<table class="table leaderBoardTable">
+				<tr class="tableTitle">
+					<th>#</th>
+					<th>Leader</th>				
+					<th style="width:25px;">W</th>
+					<th style="width:25px;">L</th>
+					<th style="width:25px;">T</th>
+				</tr>
+
+				<tr ng-repeat="memberseasonwinstats in memberseasonwinstats"  ng-class="{{memberseasonwinstats.memberrole == 'expert'}} ? 'expertRoleCenterAlign' : 'center-column-text' ">
+					<td class="center-column-text">{{memberseasonwinstats.position}}</td>
+
+					<td ng-class="{{memberseasonwinstats.memberrole == 'expert'}} ? 'expertRoleCenterAlign' : 'center-column-text' ">
+						<div class="center-column-text">
+							<img style="height:70px;cursor:pointer;" ng-show="memberseasonwinstats.memberavatar != ''" ng-click="getMemberProfile(memberseasonwinstats.memberid)" ng-src="../img/avatars/{{memberseasonwinstats.memberavatar}}">
+						</div>
+
+						<div class="center-column-text">
+							{{memberseasonwinstats.screenname}}
+						</div>
+					</td>
+
+					<td class="center-column-text">{{memberseasonwinstats.wins}} </td>
+					
+					<td class="center-column-text">{{memberseasonwinstats.losses}} </td>
+
+					<td class="center-column-text">{{memberseasonwinstats.ties}}</td>
+				</tr>
+			</table>
+			</div> <!-- end of responsive -->
+		</div> <!-- end of panel body -->
+	</div> <!-- end of panel -->
+</div>	<!-- end of row -->
+
+<!-- Dialogs -->
+<div class="modal fade" id="memberProfileDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberProfileDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberProfileDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberProfileDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div style="padding-bottom:50px;">&nbsp;</div>

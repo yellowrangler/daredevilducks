@@ -1,0 +1,241 @@
+<div class="pageCaption row">
+  <div class="col-md-12">
+    <h2 class="headerTitle">System Scripts</h2>
+  </div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+
+			<div class="panel-heading">
+				<h3 class="panel-title">Script Panels</h3>
+			</div>
+
+			<div class="panel-body">
+				<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Build Team Stats</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+								<p style="padding:10px;color:teal;">Pleae be sure that if any new teams or players have been added that you have run the initialize script.</p>
+								<label class="col-md-4 control-label" for="buildteamstatseason">Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.season" class="form-control" id="buildteamstatseason" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+							
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button" ng-click="buildTeamStats()" id="buildteamstatbutton" class="btn btn-primary">Build Team Stats</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->						
+				</form> <!-- end of form horizontal -->
+
+				<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Build Team Weekly Stats</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+							<p style="padding:10px;color:teal;">Pleae be sure that if any new teams or players have been added that you have run the initialize script.</p>
+								<label class="col-md-4 control-label" for="buildteamweekstatseason">Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.season" class="form-control" id="buildteamweekstatseason" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="buildteamweekstatweeks">Weeks in Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.weeksinseason" class="form-control" id="buildteamweekstatweeks" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+							
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button"  ng-click="buildTeamWeekStats()" id="buildteamweekstatbutton" class="btn btn-primary">Build Team Weekly Stats</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->								
+				</form> <!-- end of form horizontal -->
+
+				<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Build Player Stats</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="buildmemberstatseason">Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.season" class="form-control" id="buildmemberstatseason" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="buildmemberstatgametype">Game Type</label>
+								<div class="col-md-5">
+									<select class="form-control" ng-model="current.gametypeid"  id="buildmemberstatgametype" name="buildmemberstatgametype">
+					                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+				                    </select>
+								</div>
+							</div> <!-- end of form group -->	
+
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button" ng-click="buildMemberStats()" id="buildmemberstatbutton" class="btn btn-primary">Build Player Stats</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->	
+				</form> <!-- end of form horizontal -->
+
+				<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Build Player Weekly Stats</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="buildmemberweekstatseason">Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.season" class="form-control" id="buildmemberweekstatseason" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="buildmemberweekstatgametype">Game Type</label>
+								<div class="col-md-5">
+									<select class="form-control" ng-model="current.gametypeid"  id="buildmemberweekstatgametype" name="buildmemberweekstatgametype">
+					                    <option ng-repeat="gametype in gametypes" value="{{gametype.id}}">{{gametype.gametype}}</option>
+				                    </select>
+								</div>
+							</div> <!-- end of form group -->						
+							
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button" ng-click="buildMemberWeekStats()" id="buildmemberweekstatbutton" class="btn btn-primary">Build Player Week Stats</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->	
+				</form> <!-- end of form horizontal -->
+
+				<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Dump Data Base</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="dumpdatabaselabel">Dump File Label</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.dumpdatabaselabel" class="form-control" id="dumpdatabaselabel" placeholder="">
+								</div>
+							</div> <!-- end of form group -->						
+							
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button" ng-click="buildMySqlDump()" id="dumpdatabaselabelbutton" class="btn btn-primary">Dump Database</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->	
+				</form> <!-- end of form horizontal -->
+			</div> <!-- end of panel body -->
+
+			<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Initialize Team Week Stats</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="initializeteamweekstatseason">Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.season" class="form-control" id="initializeteamweekstatseason" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="initializeteamweekstatweeks">Weeks in Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.weeksinseason" class="form-control" id="initializeteamweekstatweeks" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+							
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button"  ng-click="initializeTeamWeekStats()" id="initializeteamweekstatbutton" class="btn btn-primary">Initialize Team Week Stats</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->								
+				</form> <!-- end of form horizontal -->
+
+				<form style="padding-top:25px;" class="form-horizontal">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">Initialize Member Week Stats</h3>
+						</div> <!-- end of panel header -->
+
+						<div class="panel-body">
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="initializememberweekstatseason">Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.season" class="form-control" id="initializememberweekstatseason" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="initializememberweekstatweeks">Weeks in Season</label>
+								<div class="col-md-5">
+									<input type="text" ng-model="current.weeksinseason" class="form-control" id="initializememberweekstatweeks" placeholder="">
+								</div>
+							</div> <!-- end of form group -->
+							
+							<div class="form-group">
+								<div class="col-md-offset-4 col-md-5">
+									<button type="button"  ng-click="initializeMemberWeekStats()" id="initializememberweekstatbutton" class="btn btn-primary">Initialize Member Week Stats</button>
+								</div>
+							</div> <!-- end of form group -->
+						</div> <!-- end of panel body -->
+					</div> <!-- end of panel warning -->								
+				</form> <!-- end of form horizontal -->
+
+
+		</div> <!-- end of panel -->
+	</div> <!-- end of column 12 -->
+
+</div> <!-- end of row -->
+
+<!-- dialogs -->
+<div class="modal fade" id="weeklyBuildsDialogModal" tabindex="-1" role="dialog" aria-labelledby="weeklyBuildsDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="weeklyBuildsDialogModalTitle">Run Results</h4>
+      </div>
+      <div class="modal-body">
+        <p id="weeklyBuildsDialogModalBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
