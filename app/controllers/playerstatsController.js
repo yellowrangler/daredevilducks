@@ -123,8 +123,8 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
-        $scope.current.showexperts = 1;
-        $scope.current.showexpertsTitle = "Hide Experts";
+        $scope.current.showexperts = 0;
+        $scope.current.showexpertsTitle = "Show Experts";
 
         //
         // get member groups
@@ -285,8 +285,8 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         $scope.current.gametypeid = 1;
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
-        $scope.current.showexperts = 1;
-        $scope.current.showexpertsTitle = "Hide Experts";
+        $scope.current.showexperts = 0;
+        $scope.current.showexpertsTitle = "Show Experts";
 
         //
         // get member groups
@@ -400,8 +400,8 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
     init();
     function init() {
         $scope.current = {};
-        $scope.current.showexperts = 1;
-        $scope.current.showexpertsTitle = "Hide Experts";
+        $scope.current.showexperts = 0;
+        $scope.current.showexpertsTitle = "Show Experts";
 
         $(window).scroll(function(){
             if ($(".floatingImgDiv").length)
