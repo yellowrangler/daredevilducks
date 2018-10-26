@@ -1,13 +1,18 @@
 <?php
 
 $emailtopwriteup = "
-<p>Week 5 is in the books!  
+<p>Week 7 is in the books!  
 </p>	
 <p>	
-The Patriots continued to look strong as they dispatched the Colts on a short week at home. However, they still look dysfunctional in their secondary as the Colt receivers did us a favor by dropping as many as they caught! The Bills continued to surprise as they beat the Titans with a late field goal. The Giants and the Panthers played in the Stinker Bowl. Panthers won but is wasn't pretty. The Bengals beat the Dolphins showing to many (including me) that the Bengals may be for real. The Browns continue to improve as they beat the Ravens in Cleveland. The Lions beat the Packers in Detroit. The Chiefs slapped the Jaguars vaulted defense on their way to a big win. The Jets in the upset of the week, eviscerated the hopeless looking Broncos. The Steelers came back in fine form pummeling the Falcons in Pittsburgh. James Conner looked strong again gaining over 100 yards, which cant be good for Le Veon Bell. The Chargers beat their kissing cousins, the Raiders. The Vikings beat the Eagles in a close contest. The Cardinals won their first of the season as they beat the 49ers. The Rams squeaked by the Seahawks. The Texans beat the Cowboys in another close match. And in the last game the Saints crushed the Redskins.
+The Patriots were again last man standing in their win against the Bears. It was their first away win and it was not a particularly strong defensive outing. But a win is a win so... The Broncos bounced back with a beating on the Cardinals. The Chargers squeaked past the Titans in their game across the pond. The Colts beat the hapless Bills. The Texans beat the Jaguars and Bortles was benched. The Lions scratched their way past the Dolphins. The Vikings plundered the low flying Jets. The Panthers pounced on the Eagles, and the Buccaneers bordered and defeated the Browns. The Saints got heavenly guidance as they dispatched the Ravens. And the Redskins scalped the Cowboys. The Rams dominated the 49ers and the Chiefs overwhelmed the Bengals. The Monday night snoozer (Is it just me or are these ESPN announcers a bunch of babbling know nothings?), the Falcons clawed the New York Peewees.
 <br /><br />
   All in all a good week of football!
 </p>
+
+<p>
+	Special shout out goes to 4Horsemen as he was 14 wins and 0 losses for this week!
+</p> 
+
 <p>
 	We had another great turnout this week. Thank you all again for participating. We hope you are having fun!
 </p>
@@ -15,12 +20,16 @@ The Patriots continued to look strong as they dispatched the Colts on a short we
 <p style='padding-top: 15px;'>
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
+
 <p>
-	The Statistics from week 5 for week 6 will be available soon!
+	The Statistics from week 7 will be available soon!
 </p>
-<!-- <p>
-	The Statistics from week 5 for week 6 are available thanks to the hard work of Wildcat Wonder!
-</p> -->
+
+<!--
+<p>
+	The Statistics from week 7 are available thanks to the hard work of Wildcat Wonder!
+</p> 
+-->
 
 <p>
 The stats are below! Read em and weep (I know I do)!

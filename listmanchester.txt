@@ -1,0 +1,3182 @@
+.:
+total 124
+drwxrwxr-x 14 tarryc tarryc  4096 Oct  3 14:33 app
+drwxrwxr-x  2 tarryc tarryc  4096 Jan 23  2017 charts
+drwxrwxr-x  3 tarryc tarryc  4096 Jan 11  2018 css
+-rwxrwxr-x  1 tarryc tarryc     0 Jan 23  2017 daisy.txt
+drwxrwxr-x  5 tarryc tarryc  4096 Aug 12 13:26 data
+drwxrwxr-x  6 tarryc tarryc  4096 Jan 31  2016 documents
+drwxrwxr-x  2 tarryc tarryc  4096 Oct  9 22:09 emailforms
+drwxrwxr-x  6 tarryc tarryc  4096 Dec 30  2016 Fireworks
+drwxrwxr-x  7 tarryc tarryc 20480 Aug 12 19:55 img
+-rwxrwxr-x  1 tarryc tarryc 27687 Feb 12  2018 index.html
+-rwxrwxr-x  1 tarryc tarryc  4960 Jan 31  2016 index-repair.html
+-rwxrwxr-x  1 tarryc tarryc 10849 Jan 31  2016 index-working.html
+-rw-rw-r--  1 tarryc tarryc     0 Oct 17 16:25 listmanchester.txt
+-rw-rw-r--  1 tarryc tarryc     0 Oct 19  2016 manchester.txt
+drwxr-xr-x  8 tarryc tarryc  4096 Oct  3 14:40 mobile
+drwxr-xr-x  3 tarryc tarryc  4096 Feb 28  2016 prizes
+-rwxrwxr-x  1 tarryc tarryc   148 Jan 31  2016 README.md
+drwxrwxr-x  2 tarryc tarryc  4096 Aug 11 19:58 rubyscripts
+drwxrwxr-x  8 tarryc tarryc  4096 Dec 30  2016 script
+drwxrwxr-x  2 tarryc tarryc  4096 Nov 22  2017 sql
+drwxrwxr-x  2 tarryc tarryc  4096 Oct 25  2016 support
+
+./app:
+total 64
+drwxrwxr-x 4 tarryc tarryc 12288 Aug 11 17:44 ajax
+drwxrwxr-x 3 tarryc tarryc  4096 Sep 23  2017 class
+drwxrwxr-x 2 tarryc tarryc  4096 Aug 12 17:46 controllers
+-rwxrwxr-x 1 tarryc tarryc  6465 Jan  6  2018 dddApp.js
+drwxrwxr-x 3 tarryc tarryc  4096 Jan 31  2016 directives
+drwxrwxr-x 2 tarryc tarryc  4096 Jan 31  2016 dist
+drwxrwxr-x 2 tarryc tarryc  4096 Jan  6  2018 factories
+drwxrwxr-x 2 tarryc tarryc  4096 Jan 31  2016 load
+drwxrwxr-x 8 tarryc tarryc  4096 Feb 12  2018 mobile
+drwxrwxr-x 2 tarryc tarryc  4096 Aug 12 19:55 partials
+drwxrwxr-x 2 tarryc tarryc  4096 Aug 11 20:10 services
+drwxrwxr-x 2 tarryc tarryc  4096 Jan 23  2017 stats
+drwxrwxr-x 2 tarryc tarryc  4096 Jan 31  2016 validations
+
+./app/ajax:
+total 640
+-rwxrwxr-x 1 tarryc tarryc  3266 Jan 31  2016 addgameinfo.php
+-rwxrwxr-x 1 tarryc tarryc  7534 Jan  6  2018 addmembergameteampick.php
+-rwxrwxr-x 1 tarryc tarryc  4518 Oct 25  2016 addmembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  5039 Oct 13  2016 addmember.php
+-rwxrwxr-x 1 tarryc tarryc   544 Jan 31  2016 ajaxlist.csv
+-rwxrwxr-x 1 tarryc tarryc  9625 Oct  3 14:33 buildemail-gameweek.php
+-rwxrwxr-x 1 tarryc tarryc   227 Oct 19  2016 buildemail.php
+-rwxrwxr-x 1 tarryc tarryc  4548 Jan 31  2016 buildgameweeks2014.php
+-rwxrwxr-x 1 tarryc tarryc  3689 Jan 31  2016 buildgameweeks2015-orig.php
+-rwxrwxr-x 1 tarryc tarryc  4549 Jan 31  2016 buildgameweeks2015.php
+-rwxr--r-- 1 tarryc tarryc  4548 Aug 24  2016 buildgameweeks2016.php
+-rwxrwxr-x 1 tarryc tarryc  4549 Sep  2  2017 buildgameweeks2017.php
+-rw-rw-r-- 1 tarryc tarryc  4549 Aug 11 17:44 buildgameweeks2018.php
+-rwxrwxr-x 1 tarryc tarryc  3689 Jan 31  2016 buildgameweeks.php
+-rwxrwxr-x 1 tarryc tarryc  7690 Jan 31  2016 buildgameweekstats-old.php
+-rwxrwxr-x 1 tarryc tarryc 19042 Sep  9  2016 buildmemberstats.php
+-rwxrwxr-x 1 tarryc tarryc 13413 Oct 27  2017 buildmemberweekstats.php
+-rwxrwxr-x 1 tarryc tarryc   849 Sep  3  2017 buildmysqldump.php
+-rwxrwxr-x 1 tarryc tarryc 28102 Jan 31  2016 buildteamstats.php
+-rwxrwxr-x 1 tarryc tarryc  8571 Jan 31  2016 buildteamweekstats-orig.php
+-rwxrwxr-x 1 tarryc tarryc 25786 Jan 14  2017 buildteamweekstats.php
+-rwxrwxr-x 1 tarryc tarryc   849 Oct 15  2016 buildwebstats.php
+-rwxrwxr-x 1 tarryc tarryc  3813 Jan 31  2016 changetemppassword.php
+-rwxrwxr-x 1 tarryc tarryc  2104 Jan 31  2016 convertdaydatetime.php
+drwxrwxrwx 2 tarryc tarryc 12288 Oct 17 13:11 dbsql
+-rwxrwxr-x 1 tarryc tarryc  2715 Oct 25  2016 deletemembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  2111 Oct 10  2016 deletemember.php
+-rwxrwxr-x 1 tarryc tarryc  3486 Jan 31  2016 getadminteamweeklyranking.php
+-rw-rw-r-- 1 tarryc tarryc  2241 Sep  1  2017 getallmemberadmin.php
+-rwxrwxr-x 1 tarryc tarryc  2019 Oct 25  2016 getallmembergroupmembers.php
+-rwxrwxr-x 1 tarryc tarryc  2292 Oct 25  2016 getallmembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  2215 Oct 25  2016 getallmembergroups.php
+-rwxrwxr-x 1 tarryc tarryc  2294 Oct 16  2016 getallmember.php
+-rw-rw-r-- 1 tarryc tarryc  2084 Sep  1  2017 getallmembersadmin.php
+-rwxrwxr-x 1 tarryc tarryc  2111 Oct 16  2016 getallmembers.php
+-rwxrwxr-x 1 tarryc tarryc  2728 Feb  9  2016 getcurrentseasonweek.php
+-rwxrwxr-x 1 tarryc tarryc  1657 Jan 31  2016 getcurrentweek.php
+-rw-rw-r-- 1 tarryc tarryc  3964 Sep 13  2017 getlatepickbeforemembers.php
+-rwxrwxr-x 1 tarryc tarryc  3962 Sep 11  2017 getlatepickdayofmembers.php
+-rwxrwxr-x 1 tarryc tarryc  4287 Sep 11  2017 getlatepickmembers.php
+-rwxrwxr-x 1 tarryc tarryc  3904 Nov  1  2017 getleadermembers.php
+-rwxrwxr-x 1 tarryc tarryc  2294 Sep 10  2016 getmember.php
+-rw-rw-r-- 1 tarryc tarryc  4523 Sep  7  2017 getmemberpicklist.php
+-rwxrwxr-x 1 tarryc tarryc  6214 Sep 25  2017 getmemberprofiledialog.php
+-rwxrwxr-x 1 tarryc tarryc  2318 Sep 11  2017 getmembers.php
+-rwxr--r-- 1 tarryc tarryc  3606 Nov 27  2016 getmemberteampicklistdialog.php
+-rwxr--r-- 1 tarryc tarryc  2340 Oct 23  2016 getmemberweekstats-orig.php
+-rwxrwxr-x 1 tarryc tarryc  3517 Nov  1  2017 getmemberweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  1978 Jan 31  2016 getnetworks.php
+-rwxrwxr-x 1 tarryc tarryc  2595 Jan 31  2016 getnflbyeweekmemberteams.php
+-rwxrwxr-x 1 tarryc tarryc  2683 Feb  9  2016 getnflcurrentseasonweek.php
+-rwxrwxr-x 1 tarryc tarryc  3123 Jan 31  2016 getnflgamesteams.php
+-rwxrwxr-x 1 tarryc tarryc  1994 Jan 31  2016 getnflgametypes.php
+-rwxrwxr-x 1 tarryc tarryc  3898 Oct 31  2017 getnflgameweekmemberteampicks.php
+-rw-rw-r-- 1 tarryc tarryc  2343 Nov 18  2017 getnflgameweekmemberteamsexpired.php
+-rwxrwxr-x 1 tarryc tarryc  5706 Oct 31  2017 getnflgameweekmemberteams.php
+-rwxrwxr-x 1 tarryc tarryc  3385 Jan  6  2018 getnflgameweekteams.php
+-rwxrwxr-x 1 tarryc tarryc  2079 Jan 31  2016 getNFLpostseasonstatus.php
+-rwxrwxr-x 1 tarryc tarryc  1963 Jan 31  2016 getnflrss.php
+-rwxrwxr-x 1 tarryc tarryc  2102 Jan 31  2016 getnflseasons.php
+-rwxrwxr-x 1 tarryc tarryc  2235 Jan 31  2016 getnflseasonweeks.php
+-rwxrwxr-x 1 tarryc tarryc  2128 Jan 31  2016 getnflteam.php
+-rwxrwxr-x 1 tarryc tarryc  2099 Jan 31  2016 getnflteams.php
+-rwxrwxr-x 1 tarryc tarryc  6971 Sep 11  2016 getnflteamstats.php
+-rwxrwxr-x 1 tarryc tarryc   339 Jan 31  2016 getnow.php
+-rwxrwxr-x 1 tarryc tarryc  2629 Jan 31  2016 getrequestitems.php
+-rwxrwxr-x 1 tarryc tarryc   724 Jan 23  2017 getrss.php
+-rw-rw-r-- 1 tarryc tarryc  4685 Dec 28  2017 getteamhead2head.php
+-rwxrwxr-x 1 tarryc tarryc  3861 Nov  6  2016 getteampowerrankings.php
+-rwxrwxr-x 1 tarryc tarryc  2723 Jan 31  2016 getteamseasoninfo.php
+-rwxrwxr-x 1 tarryc tarryc  3325 Nov  6  2016 getteamspowerrankings.php
+-rwxrwxr-x 1 tarryc tarryc  3732 Nov  6  2016 getteamsstatscurrentweek.php
+-rwxrwxr-x 1 tarryc tarryc  5904 Nov  6  2016 getteamstatsdialog.php
+-rwxrwxr-x 1 tarryc tarryc  6277 Oct 25  2016 getteamweekyranking.php
+-rwxrwxr-x 1 tarryc tarryc  8253 Jan 31  2016 importteamweeklyrankfile.php
+-rwxrwxr-x 1 tarryc tarryc  3818 Jan 31  2016 initializegameweekstats-old.php
+-rwxrwxr-x 1 tarryc tarryc  7351 Jan 31  2016 initializememberweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  7202 Jan 31  2016 initializeteamweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  3155 Sep 10  2016 login.php
+drwxrwxr-x 2 tarryc tarryc  4096 Sep 26  2017 logs
+-rwxrwxr-x 1 tarryc tarryc  1956 Jan 31  2016 mailer.php
+-rwxrwxr-x 1 tarryc tarryc  4531 Sep  1  2017 makegametimestamp.php
+-rwxrwxr-x 1 tarryc tarryc  4100 Oct 16  2016 memberupdatemember.php
+-rwxrwxr-x 1 tarryc tarryc 13279 Jan 23  2017 news.xml
+-rwxrwxr-x 1 tarryc tarryc  4235 Jan 31  2016 registeremail.php
+-rwxrwxr-x 1 tarryc tarryc   768 Jan 31  2016 runphpmodule.php
+-rwxrwxr-x 1 tarryc tarryc  7678 Jan 31  2016 saveadminteamweeklyranking.php
+-rwxrwxr-x 1 tarryc tarryc  3232 Jan  6  2018 savegamedatetimeweekteamsinfo.php
+-rw-rw-r-- 1 tarryc tarryc  2678 Oct  3  2017 savegameweekteamsnetworkinfo.php
+-rwxrwxr-x 1 tarryc tarryc  2673 Jan  6  2018 savegameweekteamsscoreinfo.php
+-rwxrwxr-x 1 tarryc tarryc  2090 Jan 31  2016 savememberavatar.php
+-rwxrwxr-x 1 tarryc tarryc  2001 Jan 31  2016 sendemail2members-orininal.php
+-rwxrwxr-x 1 tarryc tarryc   569 Jan 31  2016 sendemail2members.php
+-rw-rw-r-- 1 tarryc tarryc   770 Sep 25  2017 sendsms2member.php
+-rwxrwxr-x 1 tarryc tarryc  1235 Jan 31  2016 testdate.php
+-rwxrwxr-x 1 tarryc tarryc   310 Jan 31  2016 testmail.php
+-rwxrwxr-x 1 tarryc tarryc    76 Jan 31  2016 testpear.php
+-rwxrwxr-x 1 tarryc tarryc    63 Jan 31  2016 test.php
+-rw-rw-r-- 1 tarryc tarryc  2669 Sep 25  2017 testsms.php
+-rwxrwxr-x 1 tarryc tarryc  4357 Jan 31  2016 updategameinfo.php
+-rwxrwxr-x 1 tarryc tarryc  2890 Oct 25  2016 updatemembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  4231 Oct 16  2016 updatemember.php
+-rwxrwxr-x 1 tarryc tarryc  2667 Jan 31  2016 updateteaminfo.php
+-rwxrwxr-x 1 tarryc tarryc  3603 Jan 31  2016 updateteamseasoninfo.php
+-rwxrwxr-x 1 tarryc tarryc  1667 Jan 31  2016 uploadavatar.php
+
+./app/ajax/dbsql:
+total 1056336
+-rwxrwxr-x 1 tarryc tarryc  4437559 Oct 27  2017 a.sql
+-rwxrwxr-x 1 tarryc tarryc  3816736 Oct 27  2017 b.sql
+-rwxrwxrwx 1 tarryc tarryc     7464 Jan 31  2016 buildgamebyetbl.sql
+-rwxrwxrwx 1 tarryc tarryc  2998743 Jan 31  2016 ddd-dump-01012016222229.sql
+-rwxrwxrwx 1 tarryc tarryc  2644521 Jan 31  2016 ddd-dump-01012016224844.sql
+-rwxrwxr-x 1 tarryc tarryc  5345220 Jan 23  2017 ddd-dump-01012017203639.sql
+-rwxrwxrwx 1 tarryc tarryc  2648842 Jan 31  2016 ddd-dump-0102201615287.sql
+-rwxrwxr-x 1 tarryc tarryc  5345618 Jan 23  2017 ddd-dump-01022017181943.sql
+-rw-r--r-- 1 apache apache 10151305 Jan  2  2018 ddd-dump-0102201817357.sql
+-rwxrwxrwx 1 tarryc tarryc  2675272 Jan 31  2016 ddd-dump-0103201617338.sql
+-rwxrwxrwx 1 tarryc tarryc  2677029 Jan 31  2016 ddd-dump-010320162015.sql
+-rwxrwxr-x 1 tarryc tarryc  5346976 Jan 23  2017 ddd-dump-01032017201919.sql
+-rw-r--r-- 1 apache apache 10157071 Jan  3  2018 ddd-dump-01032018155924.sql
+-rwxrwxrwx 1 tarryc tarryc  2677031 Jan 31  2016 ddd-dump-01042016112824.sql
+-rwxrwxrwx 1 tarryc tarryc  2684051 Jan 31  2016 ddd-dump-01052016225121.sql
+-rw-r--r-- 1 apache apache 10179834 Jan  6  2018 ddd-dump-01062018103426.sql
+-rw-r--r-- 1 apache apache 10184352 Jan  6  2018 ddd-dump-01062018153748.sql
+-rwxrwxr-x 1 tarryc tarryc  5387503 Jan 23  2017 ddd-dump-01072017161852.sql
+-rwxrwxr-x 1 tarryc tarryc  5389219 Jan 23  2017 ddd-dump-01082017122423.sql
+-rwxrwxr-x 1 tarryc tarryc  5399611 Jan 23  2017 ddd-dump-0108201721139.sql
+-rwxrwxrwx 1 tarryc tarryc  2710010 Jan 31  2016 ddd-dump-0109201620353.sql
+-rwxrwxr-x 1 tarryc tarryc  5403317 Jan 23  2017 ddd-dump-0109201711844.sql
+-rwxrwxrwx 1 tarryc tarryc  2731644 Jan 31  2016 ddd-dump-01112016205633.sql
+-rw-r--r-- 1 apache apache 10263867 Jan 11  2018 ddd-dump-0111201813384.sql
+-rw-rw-r-- 1 tarryc tarryc 10233420 Jan 11  2018 ddd-dump-01112018134816.sql
+-rwxrwxr-x 1 tarryc tarryc  5427849 Jan 23  2017 ddd-dump-0114201713552.sql
+-rw-r--r-- 1 apache apache 10301311 Jan 14  2018 ddd-dump-01142018174628.sql
+-rwxrwxr-x 1 tarryc tarryc  5568450 Jan 23  2017 ddd-dump-0116201714119.sql
+-rwxrwxrwx 1 tarryc tarryc  2759227 Jan 31  2016 ddd-dump-01172016173058.sql
+-rwxrwxrwx 1 tarryc tarryc  2762001 Jan 31  2016 ddd-dump-01172016195524.sql
+-rwxrwxr-x 1 tarryc tarryc  5592793 Jan 23  2017 ddd-dump-01182017152118.sql
+-rwxrwxrwx 1 tarryc tarryc  2763293 Jan 31  2016 ddd-dump-0119201611511.sql
+-rwxrwxrwx 1 tarryc tarryc  2765018 Jan 31  2016 ddd-dump-0119201614540.sql
+-rwxrwxrwx 1 tarryc tarryc  2779167 Jan 31  2016 ddd-dump-0121201617159.sql
+-rw-r--r-- 1 apache apache  5607964 Jan 22  2017 ddd-dump-01222017221246.sql
+-rw-r--r-- 1 apache apache 10337452 Jan 22  2018 ddd-dump-01222018125448.sql
+-rw-r--r-- 1 apache apache  5611459 Jan 23  2017 ddd-dump-0123201716714.sql
+-rw-r--r-- 1 apache apache  5619650 Feb  2  2017 ddd-dump-020220171109.sql
+-rw-r--r-- 1 apache apache  5622406 Feb  2  2017 ddd-dump-0202201711292.sql
+-rw-r--r-- 1 apache apache  5632555 Feb  5  2017 ddd-dump-0205201723569.sql
+-rw-r--r-- 1 apache apache 10376918 Feb 11  2018 ddd-dump-02112018185932.sql
+-rw-r--r-- 1 apache apache 10378217 Mar  6  2018 ddd-dump-03062018211421.sql
+-rwxrwxrwx 1 tarryc tarryc  2852797 Jul 10  2016 ddd-dump-0710201694916.sql
+-rw-r--r-- 1 apache apache  5638402 Jul 30  2017 ddd-dump-073020171746.sql
+-rw-r--r-- 1 apache apache 11415806 Aug 13 09:23 ddd-dump-081320189232-start-2018.sql
+-rw-r--r-- 1 apache apache  5638402 Aug 18  2017 ddd-dump-08182017181155.sql
+-rw-r--r-- 1 apache apache  5719289 Aug 18  2017 ddd-dump-08182017183332.sql
+-rwxrwxr-x 1 tarryc tarryc  2852797 Jan 23  2017 ddd-dump-08232016105149.sql
+-rwxrwxr-x 1 tarryc tarryc  2852797 Jan 23  2017 ddd-dump-08232016131324.sql
+-rwxrwxr-x 1 tarryc tarryc  2946185 Jan 23  2017 ddd-dump-08242016142425.sql
+-rwxrwxr-x 1 tarryc tarryc  2946665 Jan 23  2017 ddd-dump-08242016145016.sql
+-rwxrwxr-x 1 tarryc tarryc  2946665 Jan 23  2017 ddd-dump-08242016145824.sql
+-rwxrwxr-x 1 tarryc tarryc  2946665 Jan 23  2017 ddd-dump-08252016123546.sql
+-rwxrwxr-x 1 tarryc tarryc  3538232 Jan 23  2017 ddd-dump-08302016173125.sql
+-rwxrwxr-x 1 tarryc tarryc  3543117 Jan 23  2017 ddd-dump-09012016192015.sql
+-rw-r--r-- 1 apache apache  6563505 Sep  1  2017 ddd-dump-09012017202853.sql
+-rw-r--r-- 1 apache apache  6575173 Sep  2  2017 ddd-dump-09022017155025.sql
+-rw-r--r-- 1 apache apache  6575173 Sep  2  2017 ddd-dump-090220171630.sql
+-rw-r--r-- 1 apache apache 11432629 Sep  2 21:14 ddd-dump-0902201820146.sql
+-rw-r--r-- 1 apache apache  6676299 Sep  3  2017 ddd-dump-09032017153857.sql
+-rw-r--r-- 1 apache apache  6676476 Sep  3  2017 ddd-dump-09032017181911.sql
+-rw-r--r-- 1 apache apache  6751942 Sep  5  2017 ddd-dump-09052017193615.sql
+-rwxrwxr-x 1 tarryc tarryc  3581320 Jan 23  2017 ddd-dump-09082016233211.sql
+-rw-r--r-- 1 apache apache  6875894 Sep  8  2017 ddd-dump-0908201702151.sql
+-rw-r--r-- 1 apache apache  6875894 Sep  8  2017 ddd-dump-09082017104234.sql
+-rwxrwxr-x 1 tarryc tarryc  3581320 Jan 23  2017 ddd-dump-090920160224.sql
+-rw-r--r-- 1 apache apache 11657046 Sep  9 23:37 ddd-dump-0909201822370.sql
+-rwxrwxr-x 1 tarryc tarryc  3664542 Jan 23  2017 ddd-dump-0910201613274.sql
+-rw-r--r-- 1 apache apache  7023992 Sep 11  2017 ddd-dump-09112017-checkpoint.sql
+-rw-r--r-- 1 apache apache 11663185 Sep 11 12:22 ddd-dump-0911201811223-endwk1.sql
+-rw-r--r-- 1 apache apache  7079886 Sep 13  2017 ddd-dump-09132017192523.sql
+-rwxrwxr-x 1 tarryc tarryc  3789278 Jan 23  2017 ddd-dump-09142016141050.sql
+-rwxrwxr-x 1 tarryc tarryc  3804103 Jan 23  2017 ddd-dump-0914201620928.sql
+-rw-r--r-- 1 apache apache  7175154 Sep 14  2017 ddd-dump-09142017checkpoint.sql
+-rwxrwxr-x 1 tarryc tarryc  3823953 Jan 23  2017 ddd-dump-0915201610524.sql
+-rwxrwxr-x 1 tarryc tarryc  3872262 Jan 23  2017 ddd-dump-09192016154014.sql
+-rwxrwxr-x 1 tarryc tarryc  3872455 Jan 23  2017 ddd-dump-0919201615506.sql
+-rwxrwxr-x 1 tarryc tarryc  3877286 Jan 23  2017 ddd-dump-09202016131316.sql
+-rwxrwxr-x 1 tarryc tarryc  3887020 Jan 23  2017 ddd-dump-0920201615431.sql
+-rwxrwxr-x 1 tarryc tarryc  3966576 Jan 23  2017 ddd-dump-09242016181055.sql
+-rwxrwxr-x 1 tarryc tarryc  3979656 Jan 23  2017 ddd-dump-09252016164129.sql
+-rw-r--r-- 1 apache apache 12063206 Sep 25 12:17 ddd-dump-09252018121731.sql
+-rwxrwxr-x 1 tarryc tarryc  3981536 Jan 23  2017 ddd-dump-09262016124839.sql
+-rwxrwxr-x 1 tarryc tarryc  3981844 Jan 23  2017 ddd-dump-09262016233251.sql
+-rwxrwxr-x 1 tarryc tarryc  3981848 Jan 23  2017 ddd-dump-0926201623369.sql
+-rwxrwxr-x 1 tarryc tarryc  3997116 Jan 23  2017 ddd-dump-0927201618017.sql
+-rw-r--r-- 1 apache apache  7545181 Sep 28  2017 ddd-dump-0928201723550.sql
+-rwxrwxr-x 1 tarryc tarryc  4054358 Jan 23  2017 ddd-dump-0930201616355.sql
+-rwxrwxr-x 1 tarryc tarryc  4084129 Jan 23  2017 ddd-dump-10032016114540.sql
+-rwxrwxr-x 1 tarryc tarryc  4090537 Jan 23  2017 ddd-dump-10032016115216.sql
+-rw-r--r-- 1 apache apache 12283394 Oct  3 14:04 ddd-dump-1003201814426.sql
+-rwxrwxr-x 1 tarryc tarryc  4094686 Jan 23  2017 ddd-dump-1004201618155.sql
+-rw-r--r-- 1 apache apache 12377124 Oct  6 17:56 ddd-dump-10062018175630.sql
+-rwxrwxr-x 1 tarryc tarryc  4160689 Jan 23  2017 ddd-dump-1007201692420.sql
+-rwxrwxr-x 1 tarryc tarryc  4160689 Jan 23  2017 ddd-dump-1007201692658.sql
+-rwxrwxr-x 1 tarryc tarryc  4178975 Jan 23  2017 ddd-dump-10092016235853.sql
+-rwxrwxr-x 1 tarryc tarryc  4178975 Jan 23  2017 ddd-dump-1009201623598.sql
+-rwxrwxr-x 1 tarryc tarryc  4179007 Jan 23  2017 ddd-dump-1010201616194.sql
+-rwxrwxr-x 1 tarryc tarryc  4191811 Jan 23  2017 ddd-dump-10102016234317.sql
+-rwxrwxr-x 1 tarryc tarryc  4191807 Jan 23  2017 ddd-dump-10102016234541.sql
+-rwxrwxr-x 1 tarryc tarryc  4204458 Jan 23  2017 ddd-dump-10112016141238.sql
+-rwxrwxr-x 1 tarryc tarryc  4254798 Jan 23  2017 ddd-dump-10132016234359.sql
+-rwxrwxr-x 1 tarryc tarryc  4254798 Jan 23  2017 ddd-dump-10132016234538.sql
+-rwxrwxr-x 1 tarryc tarryc  4288907 Jan 23  2017 ddd-dump-10162016225012.sql
+-rwxrwxr-x 1 tarryc tarryc  4288909 Jan 23  2017 ddd-dump-10162016225549.sql
+-rw-r--r-- 1 apache apache 12617189 Oct 17 12:50 ddd-dump-10172018125046.sql
+-rwxrwxrwx 1 tarryc tarryc  1183685 Jan 31  2016 ddd-dump-10182015194358.sql
+-rwxrwxr-x 1 tarryc tarryc  4302813 Jan 23  2017 ddd-dump-101820161472.sql
+-rwxrwxr-x 1 tarryc tarryc  4319597 Jan 23  2017 ddd-dump-10192016162643.sql
+-rwxrwxr-x 1 tarryc tarryc  4321610 Jan 23  2017 ddd-dump-10232016125829.sql
+-rwxrwxr-x 1 tarryc tarryc  4385491 Jan 23  2017 ddd-dump-1025201695933.sql
+-rw-r--r-- 1 apache apache  8239114 Oct 26  2017 ddd-dump-10262017123225.sql
+-rwxrwxr-x 1 tarryc tarryc  4430973 Jan 23  2017 ddd-dump-10272016195046.sql
+-rwxrwxr-x 1 tarryc tarryc  4476908 Jan 23  2017 ddd-dump-110120161870.sql
+-rwxrwxr-x 1 tarryc tarryc  4486642 Jan 23  2017 ddd-dump-11012016202324.sql
+-rwxrwxr-x 1 tarryc tarryc  4553047 Jan 23  2017 ddd-dump-1105201617330.sql
+-rwxrwxr-x 1 tarryc tarryc  4574893 Jan 23  2017 ddd-dump-11062016221554.sql
+-rwxrwxr-x 1 tarryc tarryc  4574901 Jan 23  2017 ddd-dump-1106201622165.sql
+-rwxrwxr-x 1 tarryc tarryc  4597760 Jan 23  2017 ddd-dump-11092016142211.sql
+-rwxrwxr-x 1 tarryc tarryc  4632122 Jan 23  2017 ddd-dump-1111201616442.sql
+-rwxrwxr-x 1 tarryc tarryc  4662820 Jan 23  2017 ddd-dump-1113201620045.sql
+-rwxrwxr-x 1 tarryc tarryc  4667582 Jan 23  2017 ddd-dump-1114201694230.sql
+-rwxrwxr-x 1 tarryc tarryc  4669731 Jan 23  2017 ddd-dump-11152016115412.sql
+-rw-r--r-- 1 apache apache  8708599 Nov 15  2017 ddd-dump-11152017122150.sql
+-rw-r--r-- 1 apache apache  8796634 Nov 16  2017 ddd-dump-11162017195731.sql
+-rw-r--r-- 1 apache apache  8819734 Nov 18  2017 ddd-dump-1118201783449.sql
+-rwxrwxr-x 1 tarryc tarryc  4757729 Jan 23  2017 ddd-dump-11222016135310.sql
+-rw-r--r-- 1 apache apache  8961072 Nov 22  2017 ddd-dump-1122201721401.sql
+-rwxrwxr-x 1 tarryc tarryc  4851402 Jan 23  2017 ddd-dump-1127201620222.sql
+-rwxrwxr-x 1 tarryc tarryc  4857672 Jan 23  2017 ddd-dump-1129201611346.sql
+-rwxrwxr-x 1 tarryc tarryc  4924599 Jan 23  2017 ddd-dump-1202201611243.sql
+-rwxrwxr-x 1 tarryc tarryc  4956837 Jan 23  2017 ddd-dump-1204201616322.sql
+-rwxrwxr-x 1 tarryc tarryc  4957269 Jan 23  2017 ddd-dump-1205201614315.sql
+-rwxrwxrwx 1 tarryc tarryc  1931978 Jan 31  2016 ddd-dump-12062015175732.sql
+-rwxrwxrwx 1 tarryc tarryc  1918955 Jan 31  2016 ddd-dump-12062015221641.sql
+-rwxrwxr-x 1 tarryc tarryc  4976648 Jan 23  2017 ddd-dump-12062016133453.sql
+-rwxrwxr-x 1 tarryc tarryc  4979140 Jan 23  2017 ddd-dump-1206201615146.sql
+-rwxrwxrwx 1 tarryc tarryc  2145611 Jan 31  2016 ddd-dump-12072015165530.sql
+-rwxrwxrwx 1 tarryc tarryc  2166518 Jan 31  2016 ddd-dump-12102015232448.sql
+-rwxrwxr-x 1 tarryc tarryc  5056924 Jan 23  2017 ddd-dump-1211201620642.sql
+-rw-r--r-- 1 apache apache  9515266 Dec 12  2017 ddd-dump-1212201720752.sql
+-rwxrwxrwx 1 tarryc tarryc  2195597 Jan 31  2016 ddd-dump-12132015233532.sql
+-rwxrwxr-x 1 tarryc tarryc  5082023 Jan 23  2017 ddd-dump-121320161873.sql
+-rwxrwxrwx 1 tarryc tarryc  2195843 Jan 31  2016 ddd-dump-12142015124111.sql
+-rwxrwxrwx 1 tarryc tarryc  2195843 Jan 31  2016 ddd-dump-12142015141630.sql
+-rwxrwxrwx 1 tarryc tarryc  2195843 Jan 31  2016 ddd-dump-1214201515295.sql
+-rwxrwxrwx 1 tarryc tarryc  2395992 Jan 31  2016 ddd-dump-12162015134912.sql
+-rwxrwxrwx 1 tarryc tarryc  2666036 Jan 31  2016 ddd-dump-12162015174726.sql
+-rw-r--r-- 1 apache apache  9708951 Dec 17  2017 ddd-dump-1217201721355.sql
+-rwxrwxr-x 1 tarryc tarryc  5158880 Jan 23  2017 ddd-dump-1219201693627.sql
+-rwxrwxrwx 1 tarryc tarryc  2760056 Jan 31  2016 ddd-dump-1220201517106.sql
+-rwxrwxrwx 1 tarryc tarryc  2768771 Jan 31  2016 ddd-dump-12202015174126.sql
+-rwxrwxrwx 1 tarryc tarryc  2777991 Jan 31  2016 ddd-dump-12202015211216.sql
+-rwxrwxrwx 1 tarryc tarryc  2770143 Jan 31  2016 ddd-dump-1220201521518.sql
+-rwxrwxr-x 1 tarryc tarryc  5164762 Jan 23  2017 ddd-dump-12202016203048.sql
+-rwxrwxr-x 1 tarryc tarryc  5174561 Jan 23  2017 ddd-dump-12202016203859.sql
+-rwxrwxrwx 1 tarryc tarryc  2788387 Jan 31  2016 ddd-dump-122120159427.sql
+-rwxrwxrwx 1 tarryc tarryc  2796331 Jan 31  2016 ddd-dump-12222015101210.sql
+-rwxrwxrwx 1 tarryc tarryc  2850733 Jan 31  2016 ddd-dump-1225201522231.sql
+-rwxrwxr-x 1 tarryc tarryc  5251417 Jan 23  2017 ddd-dump-12252016161547.sql
+-rw-r--r-- 1 apache apache  9906621 Dec 25  2017 ddd-dump-122520171852.sql
+-rwxrwxrwx 1 tarryc tarryc  2869488 Jan 31  2016 ddd-dump-1226201514657.sql
+-rwxrwxr-x 1 tarryc tarryc  5255014 Jan 23  2017 ddd-dump-1226201612332.sql
+-rwxrwxrwx 1 tarryc tarryc  2898217 Jan 31  2016 ddd-dump-12272015173144.sql
+-rwxrwxr-x 1 tarryc tarryc  5265045 Jan 23  2017 ddd-dump-1227201615449.sql
+-rwxrwxr-x 1 tarryc tarryc  5266779 Jan 23  2017 ddd-dump-12272016222154.sql
+-rwxrwxr-x 1 tarryc tarryc  5302247 Jan 23  2017 ddd-dump-12292016152616.sql
+-rwxrwxrwx 1 tarryc tarryc  2955284 Jan 31  2016 ddd-dump-12302015104454.sql
+-rwxrwxrwx 1 tarryc tarryc  2947560 Jan 31  2016 ddd-dump-1230201511335.sql
+-rw-r--r-- 1 tarryc tarryc  5638402 Aug 18  2017 ddd-dump-bkup-2017.sql
+-rw-r--r-- 1 apache apache  7395391 Sep 24  2017 ddd-dump-checkpoint-09242017.sql
+-rw-r--r-- 1 apache apache  7435572 Sep 26  2017 ddd-dump-checkpoint-09262017.sql
+-rw-r--r-- 1 apache apache  7645917 Oct  3  2017 ddd-dump-checkpoint-10032017201333.sql
+-rw-r--r-- 1 apache apache  7739138 Oct  5  2017 ddd-dump-checkpoint-10052017202914.sql
+-rw-r--r-- 1 apache apache  7756196 Oct  6  2017 ddd-dump-checkpoint-10062017132436.sql
+-rw-r--r-- 1 apache apache  8897469 Nov 21  2017 ddd-dump-checkpoint-1121201712259.sql
+-rwxrwxr-x 1 tarryc tarryc  3524239 Sep 10  2016 ddd-dump-check-point-b4-fixes-08302016.sql
+-rw-r--r-- 1 apache apache  7815068 Oct 10  2017 ddd-dump-checkpoint-b4-install-memberupdatechange-10102017172944.sql
+-rw-r--r-- 1 apache apache  8325594 Oct 31  2017 ddd-dump-checkpoint-b4-movegame-10312017134241.sql
+-rw-r--r-- 1 apache apache     1441 Oct 27  2017 ddd-dump-checkpoint-before
+-rw-r--r-- 1 apache apache  8290769 Oct 27  2017 ddd-dump-checkpoint-before-new-buildmemberweekly-update-1027201716500.sql
+-rw-r--r-- 1 apache apache 10233420 Jan  9  2018 ddd-dump-daisy-01092018174737.sql
+-rw-r--r-- 1 apache apache 11883494 Sep 19 16:19 ddd-dump-daisy-09192018.sql
+-rw-r--r-- 1 apache apache  8204830 Oct 25  2017 ddd-dump-ddd-checkpoint-1025201718303.sql
+-rw-r--r-- 1 apache apache 10378217 Aug  9 17:41 ddd-dump-dump-2018-start.sql
+-rw-r--r-- 1 apache apache 10309507 Jan 15  2018 ddd-dump-fordaisy-01152018235714.sql
+-rw-r--r-- 1 apache apache  7087608 Sep 13  2017 ddd-dump-fordaisy09132017.sql
+-rw-r--r-- 1 apache apache 12631274 Oct 17 13:11 ddd-dump-importForDaisy10172018.sql
+-rwxr--r-- 1 tarryc tarryc  2852797 Aug 23  2016 ddd-dump-nfl2015-bkup.sql
+-rw-r--r-- 1 apache apache 10376918 Feb 11  2018 ddd-dump-season-ending-0211201820647.sql
+-rw-r--r-- 1 apache apache 10363511 Jan 22  2018 ddd-dump-snapshot-01222018175248.sql
+-rw-r--r-- 1 apache apache  8253498 Oct 26  2017 ddd-dump-turksandcaicos-1026201716170.sql
+-rw-r--r-- 1 apache apache  6927505 Sep 10  2017 ddd-dump-useme09102017.sql
+-rw-r--r-- 1 apache apache  6940182 Sep 11  2017 ddd-dump-useme09152017.sql
+-rw-r--r-- 1 apache apache  7638524 Oct  2  2017 ddd-dump-usethis-10022017161320.sql
+-rw-r--r-- 1 apache apache  7234594 Sep 19  2017 ddd-dump-weekend2-0919201794843.sql
+-rwxrwxrwx 1 tarryc tarryc   168879 Jan 31  2016 gamestbl.sql
+-rwxrwxr-x 1 tarryc tarryc    22901 Oct 10  2016 membertbl-profile-new.sql
+-rwxrwxrwx 1 tarryc tarryc    11852 Jan 31  2016 membertbl.sql
+-rwxrwxrwx 1 tarryc tarryc      987 Jan 31  2016 nflrsstbl.sql
+-rwxrwxrwx 1 tarryc tarryc    12334 Jan 31  2016 teamseasontbl.sql
+-rwxrwxrwx 1 tarryc tarryc   440878 Jan 31  2016 teamstats-12052015.sql
+-rwxrwxrwx 1 tarryc tarryc   669901 Jan 31  2016 teamstatstabl.sql
+-rwxrwxrwx 1 tarryc tarryc    11843 Jan 31  2016 teamstbl.sql
+
+./app/ajax/logs:
+total 33900
+-rwxrwxr-x 1 tarryc tarryc      690 Jan 31  2016 access.log
+-rwxrwxrwx 1 tarryc tarryc 34702345 Oct 14 09:49 error.log
+
+./app/class:
+total 32
+-rwxrwxr-x 1 tarryc tarryc  586 Jan 31  2016 class.AccessLog.php
+-rwxrwxr-x 1 tarryc tarryc  582 Jan 31  2016 class.ErrorLog.php
+-rwxrwxr-x 1 tarryc tarryc 1365 Jan 31  2016 class.Log.php
+-rwxrwxr-x 1 tarryc tarryc 4139 Aug 31  2017 class.MailerDDD.php
+-rw-rw-r-- 1 tarryc tarryc 2150 Sep 23  2017 class.MailerDDDsms.php
+-rwxrwxr-x 1 tarryc tarryc 2748 Jan 31  2016 class.MailerHA.php
+drwxrwxr-x 2 tarryc tarryc 4096 Feb  2  2016 logs
+
+./app/class/logs:
+total 0
+-rwxrwxr-x 1 tarryc tarryc 0 Jan 31  2016 access.log
+-rwxrwxr-x 1 tarryc tarryc 0 Jan 31  2016 error.log
+
+./app/controllers:
+total 376
+-rwxrwxr-x 1 tarryc tarryc 68396 Jan  6  2018 adminController.js
+-rwxrwxr-x 1 tarryc tarryc  2134 Sep  5 14:06 awardsController.js
+-rwxrwxr-x 1 tarryc tarryc 28219 Jan 31  2016 controllers-ag-grid.js
+-rwxrwxr-x 1 tarryc tarryc 87075 Jan 31  2016 controllers-new.js
+-rwxrwxr-x 1 tarryc tarryc 41763 Jan 31  2016 controllers-wip.js
+-rwxrwxr-x 1 tarryc tarryc   357 Nov  4  2016 faqsController.js
+-rwxrwxr-x 1 tarryc tarryc   186 Jan  9  2017 fireworksController.js
+-rwxrwxr-x 1 tarryc tarryc    51 Nov  1  2016 firstController.js
+-rwxrwxr-x 1 tarryc tarryc 48162 Nov 18  2017 gamesController.js
+-rwxrwxr-x 1 tarryc tarryc    32 Nov  1  2016 lastController.js
+-rwxrwxr-x 1 tarryc tarryc 11571 Aug 11 20:10 parenthomeController.js
+-rwxrwxr-x 1 tarryc tarryc 16842 Oct  6 17:55 playerstatsController.js
+-rwxrwxr-x 1 tarryc tarryc 47536 Feb 11  2018 teamsController.js
+
+./app/directives:
+total 8
+-rwxrwxr-x 1 tarryc tarryc 2830 Jan 31  2016 directives.js
+drwxrwxr-x 2 tarryc tarryc 4096 Jan 31  2016 templates
+
+./app/directives/templates:
+total 8
+-rwxrwxr-x 1 tarryc tarryc 2220 Jan 31  2016 statelistdisplay.html
+-rwxrwxr-x 1 tarryc tarryc  159 Jan 31  2016 yesnolistdisplay.html
+
+./app/dist:
+total 696
+-rwxrwxr-x 1 tarryc tarryc   5034 Jan 31  2016 angular-grid.css
+-rwxrwxr-x 1 tarryc tarryc  62135 Jan 31  2016 angular-grid.d.ts
+-rwxrwxr-x 1 tarryc tarryc 440610 Jan 31  2016 angular-grid.js
+-rwxrwxr-x 1 tarryc tarryc   4092 Jan 31  2016 angular-grid.min.css
+-rwxrwxr-x 1 tarryc tarryc 168014 Jan 31  2016 angular-grid.min.js
+-rwxrwxr-x 1 tarryc tarryc   3907 Jan 31  2016 theme-dark.css
+-rwxrwxr-x 1 tarryc tarryc   3297 Jan 31  2016 theme-dark.min.css
+-rwxrwxr-x 1 tarryc tarryc   4516 Jan 31  2016 theme-fresh.css
+-rwxrwxr-x 1 tarryc tarryc   3878 Jan 31  2016 theme-fresh.min.css
+
+./app/factories:
+total 28
+-rwxrwxr-x 1 tarryc tarryc   374 Nov  1  2016 loginfactory.js
+-rwxrwxr-x 1 tarryc tarryc  6575 Sep 13  2017 membersfactory.js
+-rwxrwxr-x 1 tarryc tarryc  2836 Sep  7  2017 scriptsfactory.js
+-rwxrwxr-x 1 tarryc tarryc 10142 Jan  6  2018 teamsfactory.js
+
+./app/load:
+total 4
+-rwxrwxr-x 1 tarryc tarryc 429 Jan 31  2016 keyrequestsendemail.html
+
+./app/mobile:
+total 32
+drwxrwxr-x 12 tarryc tarryc 4096 Jan  6  2018 app
+drwxrwxr-x  2 tarryc tarryc 4096 Jun  9 18:13 css
+drwxrwxr-x  4 tarryc tarryc 4096 Oct  4  2016 data
+drwxrwxr-x  2 tarryc tarryc 4096 Oct 10  2016 emailforms
+drwxrwxr-x  6 tarryc tarryc 4096 Jan  7  2017 Fireworks
+-rwxrwxr-x  1 tarryc tarryc 6740 Feb 12  2018 index.html
+drwxrwxr-x  3 tarryc tarryc 4096 Jan  5  2017 script
+
+./app/mobile/app:
+total 56
+drwxrwxr-x 4 tarryc tarryc 12288 Jan  6  2018 ajax
+drwxrwxr-x 3 tarryc tarryc  4096 Sep 14  2016 class
+drwxrwxr-x 2 tarryc tarryc  4096 Aug 12 18:25 controllers
+-rwxrwxr-x 1 tarryc tarryc  6506 Jan  6  2018 dddAppMobile.js
+drwxrwxr-x 3 tarryc tarryc  4096 Sep 14  2016 directives
+drwxrwxr-x 2 tarryc tarryc  4096 Sep 14  2016 dist
+drwxrwxr-x 2 tarryc tarryc  4096 Jan  6  2018 factories
+drwxrwxr-x 2 tarryc tarryc  4096 Sep 14  2016 load
+drwxrwxr-x 2 tarryc tarryc  4096 Aug 12 18:25 partials
+drwxrwxr-x 2 tarryc tarryc  4096 Sep 28  2017 services
+drwxrwxr-x 2 tarryc tarryc  4096 Sep 14  2016 validations
+
+./app/mobile/app/ajax:
+total 572
+-rwxrwxr-x 1 tarryc tarryc  7534 Jan  6  2018 addmembergameteampick.php
+-rwxrwxr-x 1 tarryc tarryc  4518 Oct 25  2016 addmembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  5039 Oct 13  2016 addmember.php
+-rwxrwxr-x 1 tarryc tarryc 13415 Oct  3 14:33 buildemail-gameweek.php
+-rwxrwxr-x 1 tarryc tarryc   227 Oct 25  2016 buildemail.php
+-rwxrwxr-x 1 tarryc tarryc  4548 Oct  4  2016 buildgameweeks2014.php
+-rwxrwxr-x 1 tarryc tarryc  3689 Oct  4  2016 buildgameweeks2015-orig.php
+-rwxrwxr-x 1 tarryc tarryc  4549 Oct  4  2016 buildgameweeks2015.php
+-rwxrwxr-x 1 tarryc tarryc  4548 Oct  4  2016 buildgameweeks2016.php
+-rwxrwxr-x 1 tarryc tarryc  3689 Oct  4  2016 buildgameweeks.php
+-rwxrwxr-x 1 tarryc tarryc  7690 Oct  4  2016 buildgameweekstats-old.php
+-rwxrwxr-x 1 tarryc tarryc 19042 Oct  4  2016 buildmemberstats.php
+-rwxrwxr-x 1 tarryc tarryc 12595 Oct 27  2017 buildmemberweekstats.php
+-rwxrwxr-x 1 tarryc tarryc   849 Jan  6  2018 buildmysqldump.php
+-rwxrwxr-x 1 tarryc tarryc 28102 Oct  4  2016 buildteamstats.php
+-rwxrwxr-x 1 tarryc tarryc  8571 Oct  4  2016 buildteamweekstats-orig.php
+-rwxrwxr-x 1 tarryc tarryc 24098 Dec 29  2016 buildteamweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  3813 Sep 14  2016 changetemppassword.php
+-rwxrwxr-x 1 tarryc tarryc  2104 Sep 14  2016 convertdaydatetime.php
+drwxrwxrwx 2 tarryc tarryc  4096 Sep 20 23:46 dbsql
+-rwxrwxr-x 1 tarryc tarryc  2715 Oct 25  2016 deletemembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  2111 Oct 10  2016 deletemember.php
+-rwxrwxr-x 1 tarryc tarryc  3486 Sep 14  2016 getadminteamweeklyranking.php
+-rw-rw-r-- 1 tarryc tarryc  2241 Sep  2  2017 getallmemberadmin.php
+-rwxrwxr-x 1 tarryc tarryc  2019 Oct 25  2016 getallmembergroupmembers.php
+-rwxrwxr-x 1 tarryc tarryc  2292 Oct 25  2016 getallmembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  2215 Oct 25  2016 getallmembergroups.php
+-rwxrwxr-x 1 tarryc tarryc  2294 Oct 16  2016 getallmember.php
+-rw-rw-r-- 1 tarryc tarryc  2084 Sep  2  2017 getallmembersadmin.php
+-rwxrwxr-x 1 tarryc tarryc  2111 Oct 16  2016 getallmembers.php
+-rwxrwxr-x 1 tarryc tarryc  2728 Sep 14  2016 getcurrentseasonweek.php
+-rwxrwxr-x 1 tarryc tarryc  1657 Sep 14  2016 getcurrentweek.php
+-rw-rw-r-- 1 tarryc tarryc  3964 Oct 24  2017 getlatepickbeforemembers.php
+-rwxrwxr-x 1 tarryc tarryc  3962 Oct 24  2017 getlatepickdayofmembers.php
+-rwxrwxr-x 1 tarryc tarryc  4228 Sep 14  2016 getlatepickmembers.php
+-rwxrwxr-x 1 tarryc tarryc  3916 Nov  1  2017 getleadermembers.php
+-rwxrwxr-x 1 tarryc tarryc  2294 Sep 14  2016 getmember.php
+-rw-rw-r-- 1 tarryc tarryc  4334 Sep  7  2017 getmemberpicklist.php
+-rwxrwxr-x 1 tarryc tarryc  6219 Sep 25  2017 getmemberprofiledialog.php
+-rwxrwxr-x 1 tarryc tarryc  2111 Sep 14  2016 getmembers.php
+-rwxr--r-- 1 tarryc tarryc  3621 Nov 27  2016 getmemberteampicklistdialog.php
+-rwxrwxr-x 1 tarryc tarryc  3524 Nov  1  2017 getmemberweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  1978 Sep 14  2016 getnetworks.php
+-rwxrwxr-x 1 tarryc tarryc  2595 Sep 14  2016 getnflbyeweekmemberteams.php
+-rwxrwxr-x 1 tarryc tarryc  2683 Sep 14  2016 getnflcurrentseasonweek.php
+-rwxrwxr-x 1 tarryc tarryc  3123 Sep 14  2016 getnflgamesteams.php
+-rwxrwxr-x 1 tarryc tarryc  1994 Sep 14  2016 getnflgametypes.php
+-rwxrwxr-x 1 tarryc tarryc  3899 Oct 31  2017 getnflgameweekmemberteampicks.php
+-rw-rw-r-- 1 tarryc tarryc  2343 Nov 18  2017 getnflgameweekmemberteamsexpired.php
+-rwxrwxr-x 1 tarryc tarryc  5676 Oct 31  2017 getnflgameweekmemberteams.php
+-rwxrwxr-x 1 tarryc tarryc  3385 Jan  6  2018 getnflgameweekteams.php
+-rwxrwxr-x 1 tarryc tarryc  2079 Sep 14  2016 getNFLpostseasonstatus.php
+-rwxrwxr-x 1 tarryc tarryc  1963 Sep 14  2016 getnflrss.php
+-rwxrwxr-x 1 tarryc tarryc  2102 Sep 14  2016 getnflseasons.php
+-rwxrwxr-x 1 tarryc tarryc  2235 Sep 14  2016 getnflseasonweeks.php
+-rwxrwxr-x 1 tarryc tarryc  2128 Sep 14  2016 getnflteam.php
+-rwxrwxr-x 1 tarryc tarryc  2099 Sep 14  2016 getnflteams.php
+-rwxrwxr-x 1 tarryc tarryc  6971 Sep 14  2016 getnflteamstats.php
+-rwxrwxr-x 1 tarryc tarryc   339 Sep 14  2016 getnow.php
+-rwxrwxr-x 1 tarryc tarryc  2629 Sep 14  2016 getrequestitems.php
+-rwxrwxr-x 1 tarryc tarryc   724 Jan 23  2017 getrss.php
+-rwxrwxr-x 1 tarryc tarryc  3890 Nov  3  2016 getteampowerrankings.php
+-rwxrwxr-x 1 tarryc tarryc  2723 Sep 14  2016 getteamseasoninfo.php
+-rwxrwxr-x 1 tarryc tarryc  3354 Nov  3  2016 getteamspowerrankings.php
+-rwxrwxr-x 1 tarryc tarryc  3732 Nov  3  2016 getteamsstatscurrentweek.php
+-rwxrwxr-x 1 tarryc tarryc  5904 Nov  6  2016 getteamstatsdialog.php
+-rwxrwxr-x 1 tarryc tarryc  6277 Oct 25  2016 getteamweekyranking.php
+-rwxrwxr-x 1 tarryc tarryc  8253 Sep 14  2016 importteamweeklyrankfile.php
+-rwxrwxr-x 1 tarryc tarryc  3818 Sep 14  2016 initializegameweekstats-old.php
+-rwxrwxr-x 1 tarryc tarryc  7351 Sep 14  2016 initializememberweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  7202 Sep 14  2016 initializeteamweekstats.php
+-rwxrwxr-x 1 tarryc tarryc  3155 Sep 14  2016 login.php
+drwxrwxr-x 2 tarryc tarryc  4096 Jan 23  2017 logs
+-rwxrwxr-x 1 tarryc tarryc  1956 Sep 14  2016 mailer.php
+-rwxrwxr-x 1 tarryc tarryc  4355 Sep  2  2017 makegametimestamp.php
+-rwxrwxr-x 1 tarryc tarryc  4100 Oct 13  2016 memberupdatemember.php
+-rwxrwxr-x 1 tarryc tarryc  4235 Sep 14  2016 registeremail.php
+-rwxrwxr-x 1 tarryc tarryc   768 Sep 14  2016 runphpmodule.php
+-rwxrwxr-x 1 tarryc tarryc  7678 Sep 14  2016 saveadminteamweeklyranking.php
+-rwxrwxr-x 1 tarryc tarryc  3103 Jan  6  2018 savegamedatetimeweekteamsinfo.php
+-rw-rw-r-- 1 tarryc tarryc  2678 Oct  6  2017 savegameweekteamsnetworkinfo.php
+-rwxrwxr-x 1 tarryc tarryc  2673 Jan  6  2018 savegameweekteamsscoreinfo.php
+-rwxrwxr-x 1 tarryc tarryc  2090 Sep 14  2016 savememberavatar.php
+-rwxrwxr-x 1 tarryc tarryc  2001 Sep 14  2016 sendemail2members-orininal.php
+-rwxrwxr-x 1 tarryc tarryc   569 Sep 14  2016 sendemail2members.php
+-rwxrwxr-x 1 tarryc tarryc  1235 Sep 14  2016 testdate.php
+-rwxrwxr-x 1 tarryc tarryc   310 Sep 14  2016 testmail.php
+-rwxrwxr-x 1 tarryc tarryc    76 Sep 14  2016 testpear.php
+-rwxrwxr-x 1 tarryc tarryc    63 Sep 14  2016 test.php
+-rwxrwxr-x 1 tarryc tarryc  6113 Oct 10  2016 untitled.php
+-rwxrwxr-x 1 tarryc tarryc  4357 Sep 14  2016 updategameinfo.php
+-rwxrwxr-x 1 tarryc tarryc  2890 Oct 25  2016 updatemembergroup.php
+-rwxrwxr-x 1 tarryc tarryc  4198 Oct 13  2016 updatemember.php
+-rwxrwxr-x 1 tarryc tarryc  2667 Sep 14  2016 updateteaminfo.php
+-rwxrwxr-x 1 tarryc tarryc  3603 Sep 14  2016 updateteamseasoninfo.php
+
+./app/mobile/app/ajax/dbsql:
+total 27844
+-rw-r--r-- 1 apache apache 12005374 Sep 20 23:46 ddd-dump-0920201823455.sql
+-rw-rw-r-- 1 tarryc tarryc  8253384 Jan  6  2018 ddd-dump-11012017191025.sql
+-rw-rw-r-- 1 tarryc tarryc  8253384 Jan  6  2018 ddd-dump-findme-1101201719853.sql
+
+./app/mobile/app/ajax/logs:
+total 4
+-rwxrwxr-x 1 tarryc tarryc 690 Sep 14  2016 access.log
+-rwxrwxr-x 1 tarryc tarryc   0 Jan 23  2017 error.log
+
+./app/mobile/app/class:
+total 24
+-rwxrwxr-x 1 tarryc tarryc  586 Sep 14  2016 class.AccessLog.php
+-rwxrwxr-x 1 tarryc tarryc  582 Sep 14  2016 class.ErrorLog.php
+-rwxrwxr-x 1 tarryc tarryc 1365 Sep 14  2016 class.Log.php
+-rwxrwxr-x 1 tarryc tarryc 3625 Sep 14  2016 class.MailerDDD.php
+-rwxrwxr-x 1 tarryc tarryc 2748 Sep 14  2016 class.MailerHA.php
+drwxrwxr-x 2 tarryc tarryc 4096 Sep 14  2016 logs
+
+./app/mobile/app/class/logs:
+total 0
+-rwxrwxr-x 1 tarryc tarryc 0 Sep 14  2016 access.log
+-rwxrwxr-x 1 tarryc tarryc 0 Sep 14  2016 error.log
+
+./app/mobile/app/controllers:
+total 380
+-rwxrwxr-x 1 tarryc tarryc 67412 Jan  6  2018 adminController.js
+-rwxrwxr-x 1 tarryc tarryc  1988 Sep  5 14:16 awardsController.js
+-rwxrwxr-x 1 tarryc tarryc 28219 Sep 14  2016 controllers-ag-grid.js
+-rwxrwxr-x 1 tarryc tarryc 87075 Sep 14  2016 controllers-new.js
+-rwxrwxr-x 1 tarryc tarryc 41763 Sep 14  2016 controllers-wip.js
+-rwxrwxr-x 1 tarryc tarryc   357 Nov  4  2016 faqsController.js
+-rwxrwxr-x 1 tarryc tarryc   158 Feb  4  2017 fireworksController.js
+-rwxrwxr-x 1 tarryc tarryc    51 Nov  1  2016 firstController.js
+-rwxrwxr-x 1 tarryc tarryc 45908 Nov 22  2017 gamesController.js
+-rwxrwxr-x 1 tarryc tarryc   133 Jan 10  2017 happyholidaysController.js
+-rwxrwxr-x 1 tarryc tarryc    38 Nov  1  2016 lastController.js
+-rw-rw-r-- 1 tarryc tarryc   429 Sep 26  2017 newsopinionController.js
+-rwxrwxr-x 1 tarryc tarryc  7640 Dec  6  2017 parenthomeController.js
+-rwxrwxr-x 1 tarryc tarryc 13286 Nov  1  2017 playerstatsController.js
+-rwxrwxr-x 1 tarryc tarryc 51241 Feb 11  2018 teamsController.js
+
+./app/mobile/app/directives:
+total 8
+-rwxrwxr-x 1 tarryc tarryc 2848 Sep 14  2016 directives.js
+drwxrwxr-x 2 tarryc tarryc 4096 Sep 14  2016 templates
+
+./app/mobile/app/directives/templates:
+total 8
+-rwxrwxr-x 1 tarryc tarryc 2220 Sep 14  2016 statelistdisplay.html
+-rwxrwxr-x 1 tarryc tarryc  159 Sep 14  2016 yesnolistdisplay.html
+
+./app/mobile/app/dist:
+total 696
+-rwxrwxr-x 1 tarryc tarryc   5034 Sep 14  2016 angular-grid.css
+-rwxrwxr-x 1 tarryc tarryc  62135 Sep 14  2016 angular-grid.d.ts
+-rwxrwxr-x 1 tarryc tarryc 440610 Sep 14  2016 angular-grid.js
+-rwxrwxr-x 1 tarryc tarryc   4092 Sep 14  2016 angular-grid.min.css
+-rwxrwxr-x 1 tarryc tarryc 168014 Sep 14  2016 angular-grid.min.js
+-rwxrwxr-x 1 tarryc tarryc   3907 Sep 14  2016 theme-dark.css
+-rwxrwxr-x 1 tarryc tarryc   3297 Sep 14  2016 theme-dark.min.css
+-rwxrwxr-x 1 tarryc tarryc   4516 Sep 14  2016 theme-fresh.css
+-rwxrwxr-x 1 tarryc tarryc   3878 Sep 14  2016 theme-fresh.min.css
+
+./app/mobile/app/factories:
+total 48
+-rwxrwxr-x 1 tarryc tarryc 16791 Oct 25  2016 factories.js
+-rwxrwxr-x 1 tarryc tarryc   380 Nov  1  2016 loginfactory.js
+-rwxrwxr-x 1 tarryc tarryc  6294 Sep  2  2017 membersfactory.js
+-rwxrwxr-x 1 tarryc tarryc  2857 Jan  6  2018 scriptsfactory.js
+-rwxrwxr-x 1 tarryc tarryc 10146 Jan  6  2018 teamsfactory.js
+
+./app/mobile/app/load:
+total 4
+-rwxrwxr-x 1 tarryc tarryc 429 Sep 14  2016 keyrequestsendemail.html
+
+./app/mobile/app/partials:
+total 368
+-rwxrwxr-x 1 tarryc tarryc  2288 Nov  1  2016 addavatar.html
+-rwxrwxr-x 1 tarryc tarryc  3306 Oct 25  2016 addmembergroup.html
+-rwxrwxr-x 1 tarryc tarryc 10084 Dec  6  2017 addmember.html
+-rwxrwxr-x 1 tarryc tarryc 19179 Sep 26  2017 faqs.html
+-rwxrwxr-x 1 tarryc tarryc  1261 Aug 12 18:25 fireworks.html
+-rwxrwxr-x 1 tarryc tarryc  7634 Nov  1  2016 gameinfo.html
+-rw-rw-r-- 1 tarryc tarryc  4607 Oct  6  2017 gamenetworkinfo.html
+-rwxrwxr-x 1 tarryc tarryc  6718 Oct  4  2016 gameranking.html
+-rwxrwxr-x 1 tarryc tarryc  5372 Jan  6  2018 gameteamdatetimeinfo.html
+-rw-rw-r-- 1 tarryc tarryc  4864 Oct  6  2017 gameteamscoresinfo.html
+-rwxrwxr-x 1 tarryc tarryc  5342 Oct  4  2016 gameweeks.html
+-rwxrwxr-x 1 tarryc tarryc  2695 Sep  5 14:34 halloffame.html
+-rwxrwxr-x 1 tarryc tarryc  1745 Jan 10  2017 happyholidays.html
+-rwxrwxr-x 1 tarryc tarryc 11026 Feb 11  2018 home.html
+-rwxrwxr-x 1 tarryc tarryc  6334 Oct 20  2016 leaderboard.html
+-rwxrwxr-x 1 tarryc tarryc  2478 Sep 26  2016 login.html
+-rwxrwxr-x 1 tarryc tarryc  8603 Sep 10  2017 memberupdatemember.html
+-rwxrwxr-x 1 tarryc tarryc  3539 Oct 10  2016 memberweekly.html
+-rwxrwxr-x 1 tarryc tarryc  2132 Sep 14  2016 memberweekly-original.html
+-rw-rw-r-- 1 tarryc tarryc   448 Jan  4  2018 newsopinion.html
+-rwxrwxr-x 1 tarryc tarryc  3199 Jan 23  2017 nflnews.html
+-rwxrwxr-x 1 tarryc tarryc  2364 Sep 14  2016 nflnews-new.html
+-rwxrwxr-x 1 tarryc tarryc  2402 Sep 14  2016 nflnews-orig.html
+-rwxrwxr-x 1 tarryc tarryc 15219 Oct 30  2017 pickgames2.html
+-rwxrwxr-x 1 tarryc tarryc  8005 Sep 14  2016 pickgames2-old.html
+-rwxrwxr-x 1 tarryc tarryc  2128 Sep 14  2016 pickgames-ag-grid.html
+-rwxrwxr-x 1 tarryc tarryc  8278 Sep 14  2016 pickgames.html
+-rwxrwxr-x 1 tarryc tarryc  4842 Jun  9 18:13 playerstatsmemberweekly.html
+-rwxrwxr-x 1 tarryc tarryc  4740 Jun  9 18:13 playerstatstotalpercentage.html
+-rwxrwxr-x 1 tarryc tarryc  4798 Jun  9 18:13 playerstatstotalwins.html
+-rwxrwxr-x 1 tarryc tarryc  1704 Nov  1  2016 playoffstandings.html
+-rwxrwxr-x 1 tarryc tarryc  5793 Dec  6  2017 sendplayeremail.html
+-rwxrwxr-x 1 tarryc tarryc  1627 Oct 16  2016 teamdiscovery.html
+-rwxrwxr-x 1 tarryc tarryc  6361 Oct  4  2016 teaminfo.html
+-rwxrwxr-x 1 tarryc tarryc  2763 Nov  1  2016 teamseasoninfo.html
+-rwxrwxr-x 1 tarryc tarryc 12806 Sep 25  2017 teamstandings.html
+-rwxrwxr-x 1 tarryc tarryc  3487 Nov  5  2016 teamstatscharts.html
+-rwxrwxr-x 1 tarryc tarryc   320 Sep 14  2016 teamstats.html
+-rwxrwxr-x 1 tarryc tarryc 13260 Sep 26  2017 teamweeklyranking.html
+-rwxrwxr-x 1 tarryc tarryc  3728 Oct 25  2016 updatemembergroup.html
+-rwxrwxr-x 1 tarryc tarryc 11485 Dec  6  2017 updatemember.html
+-rwxrwxr-x 1 tarryc tarryc  3670 Sep 14  2016 viewallpicks.html
+-rwxrwxr-x 1 tarryc tarryc   431 Sep 14  2016 viewgames.html
+-rwxrwxr-x 1 tarryc tarryc 13405 Dec  6  2017 viewselectpickgames.html
+-rwxrwxr-x 1 tarryc tarryc 11675 Dec  6  2017 viewtotalpickgames.html
+-rwxrwxr-x 1 tarryc tarryc 10817 Sep 14  2016 weeklybuilds.html
+-rwxrwxr-x 1 tarryc tarryc 12105 Nov  1  2017 weeklyscripts.html
+
+./app/mobile/app/services:
+total 44
+-rwxrwxr-x 1 tarryc tarryc 1271 Nov  3  2016 chartservice.js
+-rwxrwxr-x 1 tarryc tarryc   84 Nov  3  2016 dddservice.js
+-rwxrwxr-x 1 tarryc tarryc 8402 Sep 14  2016 dddservice-old.js
+-rwxrwxr-x 1 tarryc tarryc 3168 Nov  3  2016 loginservice.js
+-rwxrwxr-x 1 tarryc tarryc  383 Nov  3  2016 msgservice.js
+-rwxrwxr-x 1 tarryc tarryc 5263 Sep 28  2017 selectlistservice.js
+-rwxrwxr-x 1 tarryc tarryc 7404 Nov  3  2016 teamservice.js
+
+./app/mobile/app/validations:
+total 4
+-rwxrwxr-x 1 tarryc tarryc 2382 Sep 14  2016 validate.js
+
+./app/mobile/css:
+total 20
+-rwxrwxr-x 1 tarryc tarryc  1082 Sep 14  2016 basic.css
+-rwxrwxr-x 1 tarryc tarryc 13337 Jun  9 18:13 dddMobile.css
+
+./app/mobile/data:
+total 440
+-rwxrwxr-x 1 tarryc tarryc 18977 Oct  4  2016 ddd-dump-tammy.sql
+drwxrwxr-x 2 tarryc tarryc  4096 Oct  4  2016 importfiles
+-rwxrwxr-x 1 tarryc tarryc 16995 Oct  4  2016 nfl2014.csv
+-rwxrwxr-x 1 tarryc tarryc 50046 Oct  4  2016 nfl2014.json
+-rwxrwxr-x 1 tarryc tarryc 14649 Oct  4  2016 nfl2014-scores.csv
+-rwxrwxr-x 1 tarryc tarryc 50075 Oct  4  2016 nfl2014-scores.json
+-rwxrwxr-x 1 tarryc tarryc 16995 Oct  4  2016 nfl2014season.csv
+-rwxrwxr-x 1 tarryc tarryc 50313 Oct  4  2016 nfl2014-test.json
+-rwxrwxr-x 1 tarryc tarryc 35820 Oct  4  2016 nfl2015.json
+-rwxrwxr-x 1 tarryc tarryc  9945 Oct  4  2016 nfl-2015-schedule.csv
+-rwxrwxr-x 1 tarryc tarryc 36249 Oct  4  2016 nfl2016.json
+-rwxrwxr-x 1 tarryc tarryc 10060 Oct  4  2016 nfl-2016-schedule.csv
+drwxrwxr-x 2 tarryc tarryc  4096 Oct  4  2016 teamweekranking2015
+-rwxrwxr-x 1 tarryc tarryc 22900 Oct  4  2016 years_2014_games.csv
+-rwxrwxr-x 1 tarryc tarryc 80270 Oct  4  2016 years_2014_games.json
+
+./app/mobile/data/importfiles:
+total 160
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w10After.csv
+-rwxrwxr-x 1 tarryc tarryc 1579 Oct  4  2016 teamweekrank2015w10P.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w11After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w11Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w12After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w12Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w13After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w13Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w14After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w14Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w15After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w15Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w16After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w16Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w17After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w17Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w18After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w18Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w19After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w19Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1516 Oct  4  2016 teamweekrank2015w1.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2015w20Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w2.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w3.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w4.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w5.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w6.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w7.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w8A.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w9A.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Oct  4  2016 teamweekrank2015w9P.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w1After.csv
+-rwxrwxr-x 1 tarryc tarryc 1396 Oct  4  2016 teamweekrank2016w1Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w2After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w2Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w3After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w3Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w4After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w4Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w5Before.csv
+
+./app/mobile/data/teamweekranking2015:
+total 72
+-rwxrwxr-x 1 tarryc tarryc 16543 Oct  4  2016 Off Def Total Weekly Stat-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Oct  4  2016 Team Week 2 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1392 Oct  4  2016 Team Week 3 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Oct  4  2016 Team Week 4 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1616 Oct  4  2016 Team Week 5 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Oct  4  2016 Team Week 6 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Oct  4  2016 Team Week 7 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1371 Oct  4  2016 Team Week 8 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1580 Oct  4  2016 teamweekrank2015w10After.csv
+-rwxrwxr-x 1 tarryc tarryc  1580 Oct  4  2016 teamweekrank2015w11Before.csv
+-rwxrwxr-x 1 tarryc tarryc  1548 Oct  4  2016 teamweekrank2015w1.csv
+-rwxrwxr-x 1 tarryc tarryc 11553 Oct  4  2016 teamweekrank2015w1.json
+
+./app/mobile/emailforms:
+total 68
+-rwxrwxr-x 1 tarryc tarryc  420 Oct 10  2016 avatar-change-email.html
+-rwxrwxr-x 1 tarryc tarryc 1035 Oct 10  2016 avatar-login-change-email.html
+-rwxrwxr-x 1 tarryc tarryc 5104 Oct  4  2016 gameweek-email.html
+-rwxrwxr-x 1 tarryc tarryc 3529 Oct  4  2016 gameweek-long-email.html
+-rwxrwxr-x 1 tarryc tarryc 4021 Oct  4  2016 gameweek-short-email.html
+-rwxrwxr-x 1 tarryc tarryc  536 Oct  4  2016 latepicksdayof-email.html
+-rwxrwxr-x 1 tarryc tarryc  619 Oct  4  2016 latepicks-email.html
+-rwxrwxr-x 1 tarryc tarryc 1011 Oct 10  2016 login-change-email.html
+-rwxrwxr-x 1 tarryc tarryc  504 Oct  4  2016 oops-email.html
+-rwxrwxr-x 1 tarryc tarryc 1905 Oct  4  2016 product-info.html
+-rwxrwxr-x 1 tarryc tarryc  509 Oct  4  2016 sitedown-email.html
+-rwxrwxr-x 1 tarryc tarryc  606 Oct  4  2016 siteproblems-email.html
+-rwxrwxr-x 1 tarryc tarryc  549 Oct  4  2016 teamweeklyrankings-email.html
+-rwxrwxr-x 1 tarryc tarryc 3938 Oct  4  2016 welcome-email.html
+-rwxrwxr-x 1 tarryc tarryc 5059 Oct  4  2016 welcome-new-season-email.html
+
+./app/mobile/Fireworks:
+total 36
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 css
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 images
+-rwxr--r-- 1 tarryc tarryc  1336 Jan  7  2017 index.html
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 js
+-rwxr--r-- 1 tarryc tarryc 11357 Dec 30  2016 LICENSE
+-rwxr--r-- 1 tarryc tarryc   423 Dec 30  2016 README.md
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 third_party
+
+./app/mobile/Fireworks/css:
+total 4
+-rwxr--r-- 1 tarryc tarryc 811 Jan  7  2017 fireworks.css
+
+./app/mobile/Fireworks/images:
+total 8
+-rwxr--r-- 1 tarryc tarryc 363 Dec 30  2016 big-glow.png
+-rwxr--r-- 1 tarryc tarryc 245 Dec 30  2016 small-glow.png
+
+./app/mobile/Fireworks/js:
+total 12
+-rwxr--r-- 1 tarryc tarryc 10856 Jan  7  2017 fireworks.js
+
+./app/mobile/Fireworks/third_party:
+total 4
+-rwxr--r-- 1 tarryc tarryc 383 Jan  7  2017 requestanimframe.js
+
+./app/mobile/script:
+total 152
+drwxrwxr-x 5 tarryc tarryc  4096 Sep 14  2016 bwip-js
+-rwxrwxr-x 1 tarryc tarryc  7456 Jan  5  2017 dddMobile.js
+-rwxrwxr-x 1 tarryc tarryc  9302 Sep 14  2016 jqFancyTransitions.1.8.js
+-rwxrwxr-x 1 tarryc tarryc  1525 Sep 14  2016 jquery.rotate.js
+-rwxrwxr-x 1 tarryc tarryc 21170 Sep 14  2016 jquery.slides.js
+-rwxrwxr-x 1 tarryc tarryc   551 Sep 14  2016 rssfeed.js
+-rwxrwxr-x 1 tarryc tarryc 96186 Sep 14  2016 typeahead.js
+
+./app/mobile/script/bwip-js:
+total 684
+-rwxrwxr-x 1 tarryc tarryc 628258 Sep 14  2016 barcode-2013-01-25.ps
+-rwxrwxr-x 1 tarryc tarryc  25729 Sep 14  2016 bwip.js
+drwxrwxr-x 2 tarryc tarryc   4096 Sep 14  2016 bwipp
+-rwxrwxr-x 1 tarryc tarryc   5940 Sep 14  2016 demo.html
+drwxrwxr-x 2 tarryc tarryc   4096 Sep 14  2016 fonts
+drwxrwxr-x 2 tarryc tarryc   4096 Sep 14  2016 lib
+-rwxrwxr-x 1 tarryc tarryc   2639 Sep 14  2016 LICENSE
+-rwxrwxr-x 1 tarryc tarryc  11352 Sep 14  2016 node-bwipjs
+-rwxrwxr-x 1 tarryc tarryc    429 Sep 14  2016 node-demo
+
+./app/mobile/script/bwip-js/bwipp:
+total 5732
+-rwxrwxr-x 1 tarryc tarryc  80664 Sep 14  2016 auspost.js
+-rwxrwxr-x 1 tarryc tarryc 187938 Sep 14  2016 azteccode.js
+-rwxrwxr-x 1 tarryc tarryc  35168 Sep 14  2016 bc412.js
+-rwxrwxr-x 1 tarryc tarryc  38810 Sep 14  2016 channelcode.js
+-rwxrwxr-x 1 tarryc tarryc 197741 Sep 14  2016 codablockf.js
+-rwxrwxr-x 1 tarryc tarryc  52029 Sep 14  2016 code11.js
+-rwxrwxr-x 1 tarryc tarryc 151059 Sep 14  2016 code128.js
+-rwxrwxr-x 1 tarryc tarryc 244535 Sep 14  2016 code16k.js
+-rwxrwxr-x 1 tarryc tarryc  44637 Sep 14  2016 code2of5.js
+-rwxrwxr-x 1 tarryc tarryc  22727 Sep 14  2016 code32.js
+-rwxrwxr-x 1 tarryc tarryc  31921 Sep 14  2016 code39ext.js
+-rwxrwxr-x 1 tarryc tarryc  46062 Sep 14  2016 code39.js
+-rwxrwxr-x 1 tarryc tarryc 286025 Sep 14  2016 code49.js
+-rwxrwxr-x 1 tarryc tarryc  33920 Sep 14  2016 code93ext.js
+-rwxrwxr-x 1 tarryc tarryc  45571 Sep 14  2016 code93.js
+-rwxrwxr-x 1 tarryc tarryc 139569 Sep 14  2016 codeone.js
+-rwxrwxr-x 1 tarryc tarryc  21305 Sep 14  2016 daft.js
+-rwxrwxr-x 1 tarryc tarryc  27731 Sep 14  2016 databarexpandedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc 378371 Sep 14  2016 databarexpanded.js
+-rwxrwxr-x 1 tarryc tarryc  26579 Sep 14  2016 databarexpandedstackedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8896 Sep 14  2016 databarexpandedstacked.js
+-rwxrwxr-x 1 tarryc tarryc  18965 Sep 14  2016 databarlimitedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc  97740 Sep 14  2016 databarlimited.js
+-rwxrwxr-x 1 tarryc tarryc  28809 Sep 14  2016 databaromnicomposite.js
+-rwxrwxr-x 1 tarryc tarryc 160662 Sep 14  2016 databaromni.js
+-rwxrwxr-x 1 tarryc tarryc  26415 Sep 14  2016 databarstackedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8832 Sep 14  2016 databarstacked.js
+-rwxrwxr-x 1 tarryc tarryc  26457 Sep 14  2016 databarstackedomnicomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8852 Sep 14  2016 databarstackedomni.js
+-rwxrwxr-x 1 tarryc tarryc  28864 Sep 14  2016 databartruncatedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8842 Sep 14  2016 databartruncated.js
+-rwxrwxr-x 1 tarryc tarryc 190111 Sep 14  2016 datamatrix.js
+-rwxrwxr-x 1 tarryc tarryc  13218 Sep 14  2016 ean13composite.js
+-rwxrwxr-x 1 tarryc tarryc  68586 Sep 14  2016 ean13.js
+-rwxrwxr-x 1 tarryc tarryc  22072 Sep 14  2016 ean14.js
+-rwxrwxr-x 1 tarryc tarryc  29095 Sep 14  2016 ean2.js
+-rwxrwxr-x 1 tarryc tarryc  33220 Sep 14  2016 ean5.js
+-rwxrwxr-x 1 tarryc tarryc  13751 Sep 14  2016 ean8composite.js
+-rwxrwxr-x 1 tarryc tarryc  59920 Sep 14  2016 ean8.js
+-rwxrwxr-x 1 tarryc tarryc  19746 Sep 14  2016 flattermarken.js
+-rwxrwxr-x 1 tarryc tarryc  29091 Sep 14  2016 gs1-128composite.js
+-rwxrwxr-x 1 tarryc tarryc  53871 Sep 14  2016 gs1-128.js
+-rwxrwxr-x 1 tarryc tarryc 294311 Sep 14  2016 gs1-cc.js
+-rwxrwxr-x 1 tarryc tarryc  45834 Sep 14  2016 gs1datamatrix.js
+-rwxrwxr-x 1 tarryc tarryc  14480 Sep 14  2016 hibccodablockf.js
+-rwxrwxr-x 1 tarryc tarryc  22672 Sep 14  2016 hibccode128.js
+-rwxrwxr-x 1 tarryc tarryc  23187 Sep 14  2016 hibccode39.js
+-rwxrwxr-x 1 tarryc tarryc  14480 Sep 14  2016 hibcdatamatrix.js
+-rwxrwxr-x 1 tarryc tarryc  15619 Sep 14  2016 hibcmicropdf417.js
+-rwxrwxr-x 1 tarryc tarryc  15569 Sep 14  2016 hibcpdf417.js
+-rwxrwxr-x 1 tarryc tarryc  14440 Sep 14  2016 hibcqrcode.js
+-rwxrwxr-x 1 tarryc tarryc  23899 Sep 14  2016 identcode.js
+-rwxrwxr-x 1 tarryc tarryc  47925 Sep 14  2016 interleaved2of5.js
+-rwxrwxr-x 1 tarryc tarryc  49065 Sep 14  2016 isbn.js
+-rwxrwxr-x 1 tarryc tarryc  43802 Sep 14  2016 ismn.js
+-rwxrwxr-x 1 tarryc tarryc  38471 Sep 14  2016 issn.js
+-rwxrwxr-x 1 tarryc tarryc  16682 Sep 14  2016 itf14.js
+-rwxrwxr-x 1 tarryc tarryc  48108 Sep 14  2016 japanpost.js
+-rwxrwxr-x 1 tarryc tarryc  31898 Sep 14  2016 kix.js
+-rwxrwxr-x 1 tarryc tarryc  23899 Sep 14  2016 leitcode.js
+-rwxrwxr-x 1 tarryc tarryc 205276 Sep 14  2016 maxicode.js
+-rwxrwxr-x 1 tarryc tarryc 154107 Sep 14  2016 micropdf417.js
+-rwxrwxr-x 1 tarryc tarryc  53407 Sep 14  2016 msi.js
+-rwxrwxr-x 1 tarryc tarryc 112059 Sep 14  2016 onecode.js
+-rwxrwxr-x 1 tarryc tarryc 139341 Sep 14  2016 pdf417.js
+-rwxrwxr-x 1 tarryc tarryc  23753 Sep 14  2016 pharmacode2.js
+-rwxrwxr-x 1 tarryc tarryc  22133 Sep 14  2016 pharmacode.js
+-rwxrwxr-x 1 tarryc tarryc  42935 Sep 14  2016 planet.js
+-rwxrwxr-x 1 tarryc tarryc  49281 Sep 14  2016 plessey.js
+-rwxrwxr-x 1 tarryc tarryc 118733 Sep 14  2016 posicode.js
+-rwxrwxr-x 1 tarryc tarryc  43942 Sep 14  2016 postnet.js
+-rwxrwxr-x 1 tarryc tarryc  20443 Sep 14  2016 pzn.js
+-rwxrwxr-x 1 tarryc tarryc 408265 Sep 14  2016 qrcode.js
+-rwxrwxr-x 1 tarryc tarryc  42256 Sep 14  2016 rationalizedCodabar.js
+-rwxrwxr-x 1 tarryc tarryc  10403 Sep 14  2016 raw.js
+-rwxrwxr-x 1 tarryc tarryc  84252 Sep 14  2016 renlinear.js
+-rwxrwxr-x 1 tarryc tarryc  22727 Sep 14  2016 renmatrix.js
+-rwxrwxr-x 1 tarryc tarryc   8166 Sep 14  2016 renmaximatrix.js
+-rwxrwxr-x 1 tarryc tarryc  42845 Sep 14  2016 royalmail.js
+-rwxrwxr-x 1 tarryc tarryc  22076 Sep 14  2016 sscc18.js
+-rwxrwxr-x 1 tarryc tarryc  11934 Sep 14  2016 symbol.js
+-rwxrwxr-x 1 tarryc tarryc  51154 Sep 14  2016 telepen.js
+-rwxrwxr-x 1 tarryc tarryc  13208 Sep 14  2016 upcacomposite.js
+-rwxrwxr-x 1 tarryc tarryc  65359 Sep 14  2016 upca.js
+-rwxrwxr-x 1 tarryc tarryc  15739 Sep 14  2016 upcecomposite.js
+-rwxrwxr-x 1 tarryc tarryc  79732 Sep 14  2016 upce.js
+
+./app/mobile/script/bwip-js/fonts:
+total 420
+-rwxrwxr-x 1 tarryc tarryc  5010 Sep 14  2016 ocrb10-01.js
+-rwxrwxr-x 1 tarryc tarryc  7585 Sep 14  2016 ocrb10-02.js
+-rwxrwxr-x 1 tarryc tarryc  9997 Sep 14  2016 ocrb10-03.js
+-rwxrwxr-x 1 tarryc tarryc 13583 Sep 14  2016 ocrb10-04.js
+-rwxrwxr-x 1 tarryc tarryc 16542 Sep 14  2016 ocrb10-05.js
+-rwxrwxr-x 1 tarryc tarryc 19070 Sep 14  2016 ocrb10-06.js
+-rwxrwxr-x 1 tarryc tarryc 21766 Sep 14  2016 ocrb10-07.js
+-rwxrwxr-x 1 tarryc tarryc 24217 Sep 14  2016 ocrb10-08.js
+-rwxrwxr-x 1 tarryc tarryc 27207 Sep 14  2016 ocrb10-09.js
+-rwxrwxr-x 1 tarryc tarryc 29792 Sep 14  2016 ocrb10-10.js
+-rwxrwxr-x 1 tarryc tarryc  5277 Sep 14  2016 ocrb12-01.js
+-rwxrwxr-x 1 tarryc tarryc  9114 Sep 14  2016 ocrb12-02.js
+-rwxrwxr-x 1 tarryc tarryc 12675 Sep 14  2016 ocrb12-03.js
+-rwxrwxr-x 1 tarryc tarryc 16296 Sep 14  2016 ocrb12-04.js
+-rwxrwxr-x 1 tarryc tarryc 19889 Sep 14  2016 ocrb12-05.js
+-rwxrwxr-x 1 tarryc tarryc 23231 Sep 14  2016 ocrb12-06.js
+-rwxrwxr-x 1 tarryc tarryc 26647 Sep 14  2016 ocrb12-07.js
+-rwxrwxr-x 1 tarryc tarryc 29738 Sep 14  2016 ocrb12-08.js
+-rwxrwxr-x 1 tarryc tarryc 33173 Sep 14  2016 ocrb12-09.js
+-rwxrwxr-x 1 tarryc tarryc 36562 Sep 14  2016 ocrb12-10.js
+
+./app/mobile/script/bwip-js/lib:
+total 196
+-rwxrwxr-x 1 tarryc tarryc   5774 Sep 14  2016 baropts.js
+-rwxrwxr-x 1 tarryc tarryc   3003 Sep 14  2016 canvas.js
+-rwxrwxr-x 1 tarryc tarryc    830 Sep 14  2016 dn-arrow.gif
+-rwxrwxr-x 1 tarryc tarryc 160724 Sep 14  2016 jquery-1.4.1.js
+-rwxrwxr-x 1 tarryc tarryc    467 Sep 14  2016 needyoffset.js
+-rwxrwxr-x 1 tarryc tarryc   8741 Sep 14  2016 symdesc.js
+-rwxrwxr-x 1 tarryc tarryc    832 Sep 14  2016 up-arrow.gif
+
+./app/partials:
+total 396
+-rwxrwxr-x 1 tarryc tarryc  2241 Jan 11  2018 addavatar.html
+-rwxrwxr-x 1 tarryc tarryc  3200 Jan 11  2018 addmembergroup.html
+-rwxrwxr-x 1 tarryc tarryc 10056 Jan 11  2018 addmember.html
+-rwxrwxr-x 1 tarryc tarryc  5566 Jan 31  2016 deleteme.html
+-rwxrwxr-x 1 tarryc tarryc  2210 Jan 31  2016 editorial.html
+-rwxrwxr-x 1 tarryc tarryc 19367 Sep 26  2017 faqs.html
+-rwxrwxr-x 1 tarryc tarryc  3005 Aug 12 18:06 fireworks.html
+-rwxrwxr-x 1 tarryc tarryc  7589 Jan 11  2018 gameinfo.html
+-rw-rw-r-- 1 tarryc tarryc  4950 Jan 11  2018 gamenetworkinfo.html
+-rwxrwxr-x 1 tarryc tarryc  6663 Jan 11  2018 gameranking.html
+-rwxrwxr-x 1 tarryc tarryc  5534 Jan 11  2018 gameteamdatetimeinfo.html
+-rw-rw-r-- 1 tarryc tarryc  5071 Jan 11  2018 gameteamscoresinfo.html
+-rwxrwxr-x 1 tarryc tarryc  5290 Jan 31  2016 gameweeks.html
+-rwxrwxr-x 1 tarryc tarryc  2809 Sep  5 14:35 halloffame.html
+-rwxrwxr-x 1 tarryc tarryc  3213 Aug 12 17:46 home.html
+-rwxrwxr-x 1 tarryc tarryc  2347 Feb  6  2017 homejessiebrian.html
+-rw-rw-r-- 1 tarryc tarryc  2421 Oct 17 12:52 inewsopinion.html
+-rw-rw-r-- 1 tarryc tarryc  3117 Jan  9  2018 inewsopinion-regularseason.html
+-rwxrwxr-x 1 tarryc tarryc  5754 Oct 10  2016 leaderboard.html
+-rwxrwxr-x 1 tarryc tarryc  3072 Dec  5  2016 login.html
+-rwxrwxr-x 1 tarryc tarryc 12481 Sep 10  2017 memberupdatemember.html
+-rwxrwxr-x 1 tarryc tarryc  3925 Aug 12 17:46 memberweekly.html
+-rwxrwxr-x 1 tarryc tarryc  2132 Jan 31  2016 memberweekly-original.html
+-rwxrwxr-x 1 tarryc tarryc  3258 Aug 12 17:46 nflnews.html
+-rwxrwxr-x 1 tarryc tarryc  2364 Jan 31  2016 nflnews-new.html
+-rwxrwxr-x 1 tarryc tarryc  2402 Jan 31  2016 nflnews-orig.html
+-rwxrwxr-x 1 tarryc tarryc 15695 Nov 27  2017 pickgames2.html
+-rwxrwxr-x 1 tarryc tarryc  8005 Jan 31  2016 pickgames2-old.html
+-rwxrwxr-x 1 tarryc tarryc  2128 Jan 31  2016 pickgames-ag-grid.html
+-rwxrwxr-x 1 tarryc tarryc  8278 Jan 31  2016 pickgames.html
+-rwxrwxr-x 1 tarryc tarryc  5290 Sep 16 17:17 playerstatsmemberweekly.html
+-rwxrwxr-x 1 tarryc tarryc  4933 Aug 12 19:55 playerstatstotalpercentage.html
+-rwxrwxr-x 1 tarryc tarryc  4966 Aug 12 19:55 playerstatstotalwins.html
+-rwxrwxr-x 1 tarryc tarryc  1656 Nov  1  2016 playoffstandings.html
+-rwxrwxr-x 1 tarryc tarryc  6099 Jan 11  2018 sendplayeremail.html
+-rwxrwxr-x 1 tarryc tarryc  1923 Jan  4  2018 teamdiscovery.html
+-rwxrwxr-x 1 tarryc tarryc  6319 Jan 11  2018 teaminfo.html
+-rwxrwxr-x 1 tarryc tarryc  2768 Jan 11  2018 teamseasoninfo.html
+-rwxrwxr-x 1 tarryc tarryc 20200 Jan  3  2018 teamstandings.html
+-rwxrwxr-x 1 tarryc tarryc  3419 Nov  3  2016 teamstatscharts.html
+-rwxrwxr-x 1 tarryc tarryc   320 Jan 31  2016 teamstats.html
+-rwxrwxr-x 1 tarryc tarryc 17088 Aug 12 19:55 teamweeklyranking.html
+-rwxrwxr-x 1 tarryc tarryc  3624 Jan 11  2018 updatemembergroup.html
+-rwxrwxr-x 1 tarryc tarryc 11431 Jan 11  2018 updatemember.html
+-rwxrwxr-x 1 tarryc tarryc  3670 Jan 31  2016 viewallpicks.html
+-rwxrwxr-x 1 tarryc tarryc   431 Jan 31  2016 viewgames.html
+-rwxrwxr-x 1 tarryc tarryc 14821 Aug 12 17:46 viewselectpickgames.html
+-rwxrwxr-x 1 tarryc tarryc 11815 Aug 12 19:55 viewtotalpickgames.html
+-rwxrwxr-x 1 tarryc tarryc 10817 Jan 31  2016 weeklybuilds.html
+-rwxrwxr-x 1 tarryc tarryc  4221 Jan 31  2016 weeklyscripts-deleteme.html
+-rwxrwxr-x 1 tarryc tarryc 11927 Jan 11  2018 weeklyscripts.html
+
+./app/services:
+total 44
+-rwxrwxr-x 1 tarryc tarryc 1265 Nov  3  2016 chartservice.js
+-rwxrwxr-x 1 tarryc tarryc   74 Nov  3  2016 dddservice.js
+-rwxrwxr-x 1 tarryc tarryc 8402 Jan 31  2016 dddservice-old.js
+-rwxrwxr-x 1 tarryc tarryc 3371 Nov 19  2016 loginservice.js
+-rwxrwxr-x 1 tarryc tarryc  376 Nov  3  2016 msgservice.js
+-rwxrwxr-x 1 tarryc tarryc 5257 Sep 28  2017 selectlistservice.js
+-rwxrwxr-x 1 tarryc tarryc 7470 Aug 11 20:10 teamservice.js
+
+./app/stats:
+total 880
+-rwxrwxr-x 1 tarryc tarryc  58554 Oct 15  2016 ddd-webstats-10152016.html
+-rwxrwxr-x 1 tarryc tarryc    349 Oct 19  2016 rungoaccess
+-rwxrwxr-x 1 tarryc tarryc 108603 Jan 23  2017 webstats-10152016.html
+-rwxrwxr-x 1 tarryc tarryc 107946 Jan 23  2017 webstats-10192016.html
+-rwxrwxr-x 1 tarryc tarryc 610595 Jan 23  2017 webstats-current.html
+
+./app/validations:
+total 4
+-rwxrwxr-x 1 tarryc tarryc 2382 Jan 31  2016 validate.js
+
+./charts:
+total 12
+-rwxrwxr-x 1 tarryc tarryc 935 Jan 23  2017 leaders_chart_totalpercent.csv
+-rwxrwxr-x 1 tarryc tarryc 936 Jan 23  2017 leaders_chart_weekpercent.csv
+-rwxrwxr-x 1 tarryc tarryc 806 Jan 23  2017 leaders_chart_wins.csv
+
+./css:
+total 168
+-rwxrwxr-x 1 tarryc tarryc  1082 Jan 31  2016 basic.css
+-rwxrwxr-x 1 tarryc tarryc 15814 Jan 11  2018 ddd.css
+drwxrwxr-x 2 tarryc tarryc  4096 Jan 31  2016 dropzone
+-rwxrwxr-x 1 tarryc tarryc 63400 Jan 31  2016 dropzone-amd-module.js
+-rwxrwxr-x 1 tarryc tarryc 12587 Jan 31  2016 dropzone.css
+-rwxrwxr-x 1 tarryc tarryc 28687 Jan 31  2016 ui-grid-stable.css
+-rwxrwxr-x 1 tarryc tarryc  9065 Jan 31  2016 ui-grid.svg
+-rwxrwxr-x 1 tarryc tarryc  8564 Jan 31  2016 ui-grid.ttf
+-rwxrwxr-x 1 tarryc tarryc  4792 Jan 31  2016 ui-grid.woff
+
+./css/dropzone:
+total 20
+-rwxrwxr-x 1 tarryc tarryc  1082 Jan 31  2016 basic.css
+-rwxrwxr-x 1 tarryc tarryc 12587 Jan 31  2016 dropzone.css
+
+./data:
+total 21004
+drwxrwxr-x 2 tarryc tarryc     4096 Aug 11 17:44 2018-nfl-games
+-rw-rw-r-- 1 tarryc tarryc    37611 Aug 11 17:44 csv2json.json
+-rw-rw-r-- 1 tarryc tarryc 10378217 Aug 11 17:44 ddd-dump-dump-2018-start.sql
+-rw-rw-r-- 1 tarryc tarryc 10378217 Aug 11 17:45 ddd-dump-manchester-nfl2018.sql
+-rwxrwxr-x 1 tarryc tarryc    18977 Jan 31  2016 ddd-dump-tammy.sql
+drwxrwxr-x 2 tarryc tarryc    16384 Oct 17 12:50 importfiles
+-rwxrwxr-x 1 tarryc tarryc    16995 Jan 31  2016 nfl2014.csv
+-rwxrwxr-x 1 tarryc tarryc    86318 Aug 11 17:44 nfl2014.json
+-rwxrwxr-x 1 tarryc tarryc    14649 Jan 31  2016 nfl2014-scores.csv
+-rwxrwxr-x 1 tarryc tarryc    50075 Jan 31  2016 nfl2014-scores.json
+-rwxrwxr-x 1 tarryc tarryc    16995 Jan 31  2016 nfl2014season.csv
+-rwxrwxr-x 1 tarryc tarryc    50313 Jan 31  2016 nfl2014-test.json
+-rwxrwxr-x 1 tarryc tarryc    35820 Jan 31  2016 nfl2015.json
+-rwxrwxr-x 1 tarryc tarryc     9945 Jan 31  2016 nfl-2015-schedule.csv
+-rwxr--r-- 1 tarryc tarryc    36249 Aug 23  2016 nfl2016.json
+-rwxr--r-- 1 tarryc tarryc    10060 Aug 23  2016 nfl-2016-schedule.csv
+-rwxr--r-- 1 tarryc tarryc    10085 Aug 18  2017 nfl2017.csv
+-rw-rw-r-- 1 tarryc tarryc    10102 Aug 11 17:44 nfl2018.csv
+-rw-rw-r-- 1 tarryc tarryc        0 Aug 11 17:44 nfl2018.json
+-rw-rw-r-- 1 tarryc tarryc   178584 Aug 12 13:26 Sheet 1-Daredevilducks PHP and Ruby Modules.numbers
+drwxrwxr-x 2 tarryc tarryc     4096 Jan 31  2016 teamweekranking2015
+-rwxrwxr-x 1 tarryc tarryc    22900 Jan 31  2016 years_2014_games.csv
+-rwxrwxr-x 1 tarryc tarryc    80270 Jan 31  2016 years_2014_games.json
+
+./data/2018-nfl-games:
+total 36
+-rw-rw-r-- 1 tarryc tarryc 19979 Aug 11 17:44 Sheet 1-Table 1.csv
+-rw-rw-r-- 1 tarryc tarryc 15977 Aug 11 17:44 Sheet 2-Table 1.csv
+
+./data/importfiles:
+total 516
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w10After.csv
+-rwxrwxr-x 1 tarryc tarryc 1579 Jan 31  2016 teamweekrank2015w10P.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w11After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w11Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w12After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w12Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w13After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w13Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w14After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w14Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w15After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w15Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w16After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w16Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w17After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w17Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w18After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w18Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w19After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w19Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1516 Jan 31  2016 teamweekrank2015w1.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 31  2016 teamweekrank2015w20Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w2.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w3.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w4.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w5.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w6.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w7.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w8A.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w9A.csv
+-rwxrwxr-x 1 tarryc tarryc 1548 Jan 31  2016 teamweekrank2015w9P.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Nov 17  2016 teamweekrank2016w10After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Nov  9  2016 teamweekrank2016w10Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Nov 22  2016 teamweekrank2016w11After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Nov 17  2016 teamweekrank2016w11Before.csv
+-rwxr--r-- 1 tarryc tarryc 1581 Dec  2  2016 teamweekrank2016w12After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Nov 22  2016 teamweekrank2016w12Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Dec  6  2016 teamweekrank2016w13After.csv
+-rwxr--r-- 1 tarryc tarryc 1581 Dec  2  2016 teamweekrank2016w13Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1579 Dec 13  2016 teamweekrank2016w14After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Dec  6  2016 teamweekrank2016w14Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Dec 20  2016 teamweekrank2016w15After.csv
+-rwxrwxr-x 1 tarryc tarryc 1579 Dec 13  2016 teamweekrank2016w15Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Dec 27  2016 teamweekrank2016w16After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Dec 20  2016 teamweekrank2016w16Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Jan  3  2017 teamweekrank2016w17After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Dec 27  2016 teamweekrank2016w17Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 14  2017 teamweekrank2016w18After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 14  2017 teamweekrank2016w18Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 18  2017 teamweekrank2016w19After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 14  2017 teamweekrank2016w19Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Sep 20  2016 teamweekrank2016w1After.csv
+-rwxrwxr-x 1 tarryc tarryc 1396 Sep  8  2016 teamweekrank2016w1Before.csv
+-rwxr--r-- 1 tarryc tarryc  261 Feb  2  2017 teamweekrank2016w20After-b.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Feb  2  2017 teamweekrank2016w20After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Jan 18  2017 teamweekrank2016w20Before.csv
+-rwxr--r-- 1 tarryc tarryc  260 Feb  2  2017 teamweekrank2016w21Before-b.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Feb  2  2017 teamweekrank2016w21Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Sep 20  2016 teamweekrank2016w2After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Sep 15  2016 teamweekrank2016w2Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Sep 27  2016 teamweekrank2016w3After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Sep 20  2016 teamweekrank2016w3Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w4After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Sep 27  2016 teamweekrank2016w4Before.csv
+-rwxr--r-- 1 tarryc tarryc 1579 Oct 11  2016 teamweekrank2016w5After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Oct  4  2016 teamweekrank2016w5Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Oct 18  2016 teamweekrank2016w6After.csv
+-rwxr--r-- 1 tarryc tarryc 1579 Oct 11  2016 teamweekrank2016w6Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Oct 25  2016 teamweekrank2016w7After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Oct 18  2016 teamweekrank2016w7Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Nov  1  2016 teamweekrank2016w8After.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Oct 25  2016 teamweekrank2016w8Before.csv
+-rwxr--r-- 1 tarryc tarryc 1580 Nov  9  2016 teamweekrank2016w9After.csv
+-rwxrwxr-x 1 tarryc tarryc 1580 Nov  1  2016 teamweekrank2016w9Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Nov 16  2017 TeamWeekRank2017W10After.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Nov  9  2017 TeamWeekRank2017W10Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Nov 22  2017 TeamWeekRank2017W11After.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Nov 16  2017 TeamWeekRank2017W11Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Nov 30  2017 TeamWeekRank2017W12After.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Nov 22  2017 TeamWeekRank2017W12Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Dec  6  2017 TeamWeekRank2017W13After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Nov 30  2017 TeamWeekRank2017W13Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Dec 12  2017 TeamWeekRank2017W14After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Dec  6  2017 TeamWeekRank2017W14Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Dec 20  2017 TeamWeekRank2017W15After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Dec 12  2017 TeamWeekRank2017W15Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Dec 27  2017 TeamWeekRank2017W16After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Dec 20  2017 TeamWeekRank2017W16Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Jan  2  2018 TeamWeekRank2017W17After.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Dec 27  2017 TeamWeekRank2017W17Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Jan  9  2018 TeamWeekRank2017W18After.csv
+-rwxrwxr-x 1 tarryc tarryc 1583 Jan  2  2018 TeamWeekRank2017W18Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Jan 22  2018 TeamWeekRank2017W19After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Jan  9  2018 TeamWeekRank2017W19Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1551 Sep 13  2017 teamweekrank2017w1After.csv
+-rw-rw-r-- 1 tarryc tarryc 1367 Sep 13  2017 teamweekrank2017w1Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Jan 22  2018 TeamWeekRank2017W20After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Jan 22  2018 TeamWeekRank2017W20Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1580 Feb 11  2018 TeamWeekRank2017W21After.csv
+-rw-rw-r-- 1 tarryc tarryc 1583 Jan 22  2018 TeamWeekRank2017W21Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1549 Sep 19  2017 teamweekrank2017W2After.csv
+-rw-rw-r-- 1 tarryc tarryc 1551 Sep 13  2017 teamweekrank2017w2Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1549 Sep 26  2017 teamweekrank2017W3After.csv
+-rw-rw-r-- 1 tarryc tarryc 1549 Sep 19  2017 teamweekrank2017W3Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1551 Oct  5  2017 teamweekrank2017W4After.csv
+-rw-rw-r-- 1 tarryc tarryc 1549 Sep 26  2017 teamweekrank2017W4Before.csv
+-rw-rw-r-- 1 tarryc tarryc 1551 Oct 10  2017 teamweekrank2017W5After.csv
+-rw-rw-r-- 1 tarryc tarryc 1551 Oct  5  2017 teamweekrank2017W5Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Oct 19  2017 TeamWeekRank2017W6After.csv
+-rw-rw-r-- 1 tarryc tarryc 1551 Oct 10  2017 teamweekrank2017W6Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Oct 24  2017 TeamWeekRank2017W7After.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Oct 19  2017 TeamWeekRank2017W7Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Oct 31  2017 TeamWeekRank2017W8After.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Oct 24  2017 TeamWeekRank2017W8Before.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Nov  9  2017 TeamWeekRank2017W9After.csv
+-rwxrwxr-x 1 tarryc tarryc 1551 Oct 31  2017 TeamWeekRank2017W9Before.csv
+-rw-r--r-- 1 tarryc tarryc 1568 Sep 11 22:45 teamweekrank2018w1After.csv
+-rw-r--r-- 1 tarryc tarryc 1518 Sep  5 14:02 teamweekrank2018w1Before.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Sep 19 18:54 TeamWeekRank2018W2After.csv
+-rw-r--r-- 1 tarryc tarryc 1567 Sep 11 22:45 teamweekrank2018w2Before.csv
+-rw-r--r-- 1 tarryc tarryc 1550 Sep 25 15:09 TeamWeekRank2018W3After.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Sep 19 18:54 TeamWeekRank2018W3Before.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Oct  3 14:04 TeamWeekRank2018W4After.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Sep 25 15:09 TeamWeekRank2018W4Before.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Oct 10 23:58 TeamWeekRank2018W5After.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Oct  3 14:04 TeamWeekRank2018W5Before.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Oct 17 12:50 TeamWeekRank2018W6After.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Oct 10 23:58 TeamWeekRank2018W6Before.csv
+-rw-r--r-- 1 tarryc tarryc 1551 Oct 17 12:50 TeamWeekRank2018W7Before.csv
+
+./data/teamweekranking2015:
+total 72
+-rwxrwxr-x 1 tarryc tarryc 16543 Jan 31  2016 Off Def Total Weekly Stat-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Jan 31  2016 Team Week 2 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1392 Jan 31  2016 Team Week 3 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Jan 31  2016 Team Week 4 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1616 Jan 31  2016 Team Week 5 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Jan 31  2016 Team Week 6 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1591 Jan 31  2016 Team Week 7 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1371 Jan 31  2016 Team Week 8 Stats-Table 1.csv
+-rwxrwxr-x 1 tarryc tarryc  1580 Jan 31  2016 teamweekrank2015w10After.csv
+-rwxrwxr-x 1 tarryc tarryc  1580 Jan 31  2016 teamweekrank2015w11Before.csv
+-rwxrwxr-x 1 tarryc tarryc  1548 Jan 31  2016 teamweekrank2015w1.csv
+-rwxrwxr-x 1 tarryc tarryc 11553 Jan 31  2016 teamweekrank2015w1.json
+
+./documents:
+total 3844
+-rwxrwxr-x 1 tarryc tarryc  184134 Jan 31  2016 DareDevil Duck NFL Create Player Letter.docx
+drwxrwxr-x 2 tarryc tarryc    4096 Jan 31  2016 docs
+drwxrwxr-x 3 tarryc tarryc    4096 Jan 31  2016 images
+-rwxrwxr-x 1 tarryc tarryc 3734644 Jan 31  2016 nfl season 2014.pdf
+drwxrwxr-x 4 tarryc tarryc    4096 Jan 31  2016 screens
+drwxrwxr-x 2 tarryc tarryc    4096 Jan 31  2016 tvlogos
+
+./documents/docs:
+total 16
+-rwxrwxr-x 1 tarryc tarryc 13191 Jan 31  2016 NFL Team Offical Website Links.docx
+
+./documents/images:
+total 11444
+-rwxrwxr-x 1 tarryc tarryc  132989 Jan 31  2016 Button - Dare Devil Website - Hall of Fame No Line.png
+-rwxrwxr-x 1 tarryc tarryc   89990 Jan 31  2016 Button - Dare Devil Website - Player Stats 4 No Line.png
+drwxrwxr-x 2 tarryc tarryc    4096 Jan 31  2016 doctored
+-rwxrwxr-x 1 tarryc tarryc  275335 Jan 31  2016 Donald Duck as Post Man - Profile Scrn.png
+-rwxrwxr-x 1 tarryc tarryc 1586392 Jan 31  2016 Donald Duck Cartoon Think Sept Calender 2012 - Game Week Scrn.png
+-rwxrwxr-x 1 tarryc tarryc  299095 Jan 31  2016 Donald Duck Number 1 - Pick Week Scrn.png
+-rwxrwxr-x 1 tarryc tarryc   71107 Jan 31  2016 Donald Duck on PC Data - Team Stat Scrn.png
+-rwxrwxr-x 1 tarryc tarryc  754007 Jan 31  2016 Donald Duck Reviewing Book  - LeaderBd Scrn.png
+-rwxrwxr-x 1 tarryc tarryc  131196 Jan 31  2016 Donald Duck Snap His Fingers - LeaderBd Scrn.png
+-rwxrwxr-x 1 tarryc tarryc 8350863 Jan 31  2016 Donald Duck Thinking 1 - Profile Scrn.png
+
+./documents/images/doctored:
+total 11220
+-rwxrwxr-x 1 tarryc tarryc  275335 Jan 31  2016 Donald Duck as Post Man - Profile Scrn.png
+-rwxrwxr-x 1 tarryc tarryc 1586392 Jan 31  2016 Donald Duck Cartoon Think Sept Calender 2012 - Game Week Scrn.png
+-rwxrwxr-x 1 tarryc tarryc  299095 Jan 31  2016 Donald Duck Number 1 - Pick Week Scrn.png
+-rwxrwxr-x 1 tarryc tarryc   71107 Jan 31  2016 Donald Duck on PC Data - Team Stat Scrn.png
+-rwxrwxr-x 1 tarryc tarryc  754007 Jan 31  2016 Donald Duck Reviewing Book  - LeaderBd Scrn.png
+-rwxrwxr-x 1 tarryc tarryc  131196 Jan 31  2016 Donald Duck Snap His Fingers - LeaderBd Scrn.png
+-rwxrwxr-x 1 tarryc tarryc 8350863 Jan 31  2016 Donald Duck Thinking 1 - Profile Scrn.png
+
+./documents/screens:
+total 1400
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 byeteams
+-rwxrwxr-x 1 tarryc tarryc 227466 Jan 31  2016 NFL Website Game Week - 2015-07-29.pdf
+-rwxrwxr-x 1 tarryc tarryc 125218 Jan 31  2016 NFL Website Leaderboard Regular Screen - 2015-08-24.pdf
+-rwxrwxr-x 1 tarryc tarryc 150126 Jan 31  2016 NFL Website Leaderboard Screen - 2015-08-02.pdf
+-rwxrwxr-x 1 tarryc tarryc 271175 Jan 31  2016 NFL Website Picks for Week vs Others Screen - 2015-08-23.pdf
+-rwxrwxr-x 1 tarryc tarryc 187582 Jan 31  2016 NFL Website Profile Screen - 2015-07-22.pdf
+-rwxrwxr-x 1 tarryc tarryc 139042 Jan 31  2016 NFL Website Team Stats Screen Stacked - 2015-08-04.pdf
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 screenforsystemdown
+-rwxrwxr-x 1 tarryc tarryc 314190 Jan 31  2016 sitedown.xcf
+
+./documents/screens/byeteams:
+total 1432
+-rwxrwxr-x 1 tarryc tarryc 305528 Jan 31  2016 NFL Website Pick Team for Week Screen - 2015-07-29.pdf
+-rwxrwxr-x 1 tarryc tarryc 556243 Jan 31  2016 Pick Team Week Scrn - Donald Duck Sleeping in Hammck.png
+-rwxrwxr-x 1 tarryc tarryc 600304 Jan 31  2016 Pick Team Week Scrn - Donald Duck Sleeping in Hammck.xcf
+
+./documents/screens/screenforsystemdown:
+total 324
+-rwxrwxr-x 1 tarryc tarryc 205897 Jan 31  2016 NFL Website Repair Screen - 2015-09-11.pdf
+-rwxrwxr-x 1 tarryc tarryc 122637 Jan 31  2016 Picture for Down - OFF Scrn.png
+
+./documents/tvlogos:
+total 704
+-rwxrwxr-x 1 tarryc tarryc 195148 Jan 31  2016 abc.png
+-rwxrwxr-x 1 tarryc tarryc  31338 Jan 31  2016 cbs.png
+-rwxrwxr-x 1 tarryc tarryc  32466 Jan 31  2016 espn.png
+-rwxrwxr-x 1 tarryc tarryc 260285 Jan 31  2016 fox.png
+-rwxrwxr-x 1 tarryc tarryc  60158 Jan 31  2016 nbc.png
+-rwxrwxr-x 1 tarryc tarryc 132783 Jan 31  2016 nfl.png
+
+./emailforms:
+total 92
+-rwxrwxr-x 1 tarryc tarryc  604 Sep  3  2017 avatar-change-email.html
+-rwxrwxr-x 1 tarryc tarryc 1291 Sep  2  2017 avatar-login-change-email.html
+-rwxrwxr-x 1 tarryc tarryc 2231 Sep  2  2017 end-of-season-email.html
+-rwxrwxr-x 1 tarryc tarryc 5021 Sep  2  2017 gameweek-email.html
+-rwxrwxr-x 1 tarryc tarryc 3529 Sep 12  2016 gameweek-long-email.html
+-rwxrwxr-x 1 tarryc tarryc 4021 Sep 12  2016 gameweek-short-email.html
+-rwxrwxr-x 1 tarryc tarryc  112 Oct  3 14:03 igameweek-bottom-email.php
+-rwxrwxr-x 1 tarryc tarryc 2024 Oct 17 12:52 igameweek-top-email.php
+-rwxrwxr-x 1 tarryc tarryc  687 Jan  6  2017 ipchange-email.html
+-rw-rw-r-- 1 tarryc tarryc  899 Sep 13  2017 latepicksdaybefore-email.html
+-rwxrwxr-x 1 tarryc tarryc  793 Sep  2  2017 latepicksdayof-email.html
+-rwxrwxr-x 1 tarryc tarryc  866 Sep  2  2017 latepicks-email.html
+-rwxrwxr-x 1 tarryc tarryc 1220 Sep  2  2017 login-change-email.html
+-rwxrwxr-x 1 tarryc tarryc  686 Sep  2  2017 oops-email.html
+-rwxrwxr-x 1 tarryc tarryc 1905 Sep 12  2016 product-info.html
+-rwxrwxr-x 1 tarryc tarryc  702 Sep  2  2017 sitedown-email.html
+-rwxrwxr-x 1 tarryc tarryc  811 Sep  2  2017 siteproblems-email.html
+-rwxrwxr-x 1 tarryc tarryc 1031 Sep 11 23:09 teamweeklyrankings-email.html
+-rwxrwxr-x 1 tarryc tarryc 6283 Sep  4 12:10 welcome-email.html
+-rwxrwxr-x 1 tarryc tarryc 6439 Aug 12 20:15 welcome-new-season-email.html
+
+./Fireworks:
+total 36
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 css
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 images
+-rwxr--r-- 1 tarryc tarryc  1336 Dec 30  2016 index.html
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 js
+-rwxr--r-- 1 tarryc tarryc 11357 Dec 30  2016 LICENSE
+-rwxr--r-- 1 tarryc tarryc   423 Dec 30  2016 README.md
+drwxr-xr-x 2 tarryc tarryc  4096 Dec 30  2016 third_party
+
+./Fireworks/css:
+total 4
+-rwxr--r-- 1 tarryc tarryc 810 Dec 30  2016 fireworks.css
+
+./Fireworks/images:
+total 8
+-rwxr--r-- 1 tarryc tarryc 363 Dec 30  2016 big-glow.png
+-rwxr--r-- 1 tarryc tarryc 245 Dec 30  2016 small-glow.png
+
+./Fireworks/js:
+total 12
+-rwxr--r-- 1 tarryc tarryc 10854 Jan  7  2017 fireworks.js
+
+./Fireworks/third_party:
+total 4
+-rwxr--r-- 1 tarryc tarryc 382 Dec 30  2016 requestanimframe.js
+
+./img:
+total 204376
+-rwxrwxr-x 1 tarryc tarryc    3284 Oct 20  2016 afc.png
+drwxrwxrwx 3 tarryc tarryc   12288 Oct 13 20:18 avatars
+-rwxrwxr-x 1 tarryc tarryc  239125 Jan 31  2016 avatarsddt.png
+-rwxrwxr-x 1 tarryc tarryc     363 Jan  7  2017 big-glow.png
+-rwxrwxr-x 1 tarryc tarryc   71619 Feb  8  2017 brady-bellicheck.jpg
+-rwxrwxr-x 1 tarryc tarryc  362244 Feb  8  2017 brady-bellicheck.png
+-rwxrwxr-x 1 tarryc tarryc  872575 Feb  8  2017 brady-bellicheck.xcf
+-rwxrwxr-x 1 tarryc tarryc   52342 Feb  6  2017 Brady-Goodell.jpg
+-rwxrwxr-x 1 tarryc tarryc  317279 Feb  6  2017 Brady-Goodell.png
+-rwxrwxr-x 1 tarryc tarryc 1003819 Feb  6  2017 Brady-Goodell.xcf
+drwxrwxr-x 2 tarryc tarryc    4096 Dec  6  2017 buttons
+-rwxrwxr-x 1 tarryc tarryc   63380 Jan 31  2016 cbs-logo.png
+-rwxrwxr-x 1 tarryc tarryc   97965 Jan 31  2016 cbs-logo.xcf
+-rw-rw-r-- 1 tarryc tarryc  330523 Dec  6  2017 Christmas2017HomePage.png
+-rw-rw-r-- 1 tarryc tarryc  538315 Dec  6  2017 Christmas2017HomePage.xcf
+-rw-rw-r-- 1 tarryc tarryc  481734 Dec  6  2017 Christmas2017MembersPicksfortheWeek.png
+-rw-rw-r-- 1 tarryc tarryc  752387 Dec  6  2017 Christmas2017MembersPicksfortheWeek.xcf
+-rw-rw-r-- 1 tarryc tarryc  308822 Dec  6  2017 Christmas2017NFLNews.png
+-rw-rw-r-- 1 tarryc tarryc  494210 Dec  6  2017 Christmas2017NFLNews.xcf
+-rw-rw-r-- 1 tarryc tarryc  456305 Dec  6  2017 Christmas2017TotalMembersTeamPicksforWeek.png
+-rw-rw-r-- 1 tarryc tarryc  724561 Dec  6  2017 Christmas2017TotalMembersTeamPicksforWeek.xcf
+-rw-rw-r-- 1 tarryc tarryc  444938 Dec  6  2017 Christmas2017TotalPercentageLeaders.png
+-rw-rw-r-- 1 tarryc tarryc  573158 Dec  6  2017 Christmas2017TotalPercentageLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  520674 Dec  6  2017 Christmas2017TotalWinLeaders.png
+-rw-rw-r-- 1 tarryc tarryc  775188 Dec  6  2017 Christmas2017TotalWinLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  423952 Dec  6  2017 Christmas2017WeeklyTotalLeaders.png
+-rw-rw-r-- 1 tarryc tarryc  617200 Dec  6  2017 Christmas2017WeeklyTotalLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc    8394 Nov  4  2016 DareDevilDuckInfoButton.png
+-rwxrwxr-x 1 tarryc tarryc   19657 Nov  4  2016 DareDevilDuckInfoButton.xcf
+-rwxrwxr-x 1 tarryc tarryc 6466726 Jan 31  2016 Dare Devil Duck Logo - Jess 21015-11-28.xcf
+-rwxrwxr-x 1 tarryc tarryc   17620 Jan 31  2016 ddd-icon.png
+-rwxr--r-- 1 tarryc tarryc 2152905 Oct 25  2016 ddd-Jess.png
+-rwxrwxr-x 1 tarryc tarryc  152488 Nov 19  2016 ddd-Jess-small.png
+-rwxrwxr-x 1 tarryc tarryc  260652 Nov 19  2016 ddd-Jess-small.xcf
+-rwxrwxr-x 1 tarryc tarryc 6466695 Nov 19  2016 ddd-Jess.xcf
+-rwxrwxr-x 1 tarryc tarryc   15064 Jan 31  2016 ddd_lb_bot.png
+-rwxrwxr-x 1 tarryc tarryc    5933 Jan 31  2016 ddd_lb_top.png
+-rwxrwxr-x 1 tarryc tarryc  145639 Jan 31  2016 dddpickteams.png
+-rwxrwxr-x 1 tarryc tarryc   13381 Jan 31  2016 ddd-small-footer.png
+-rwxrwxr-x 1 tarryc tarryc   73613 Jan 31  2016 ddd-totalpicks.png
+-rwxrwxr-x 1 tarryc tarryc    6454 Jan 31  2016 ddd-url-img.ico
+-rwxrwxr-x 1 tarryc tarryc    4174 Jan 31  2016 ddd-url-img.png
+-rwxrwxr-x 1 tarryc tarryc    6994 Jan 31  2016 ddd-url-img.xcf
+-rwxrwxr-x 1 tarryc tarryc  468050 Oct 25  2016 DonaldDuckApplePlayerPickbyWeek.png
+-rwxrwxr-x 1 tarryc tarryc  646730 Oct 25  2016 DonaldDuckApplePlayerPickbyWeek.xcf
+-rwxr--r-- 1 tarryc tarryc  161150 Aug 30  2016 DonaldDuckBeach.png
+-rwxr--r-- 1 tarryc tarryc  223703 Aug 30  2016 DonaldDuckBeach.xcf
+-rwxrwxr-x 1 tarryc tarryc  405857 Dec 10  2016 DonaldDuckChristmas2016HomeScrn.png
+-rwxrwxr-x 1 tarryc tarryc  765403 Dec 10  2016 DonaldDuckChristmas2016HomeScrn.xcf
+-rwxrwxr-x 1 tarryc tarryc  300752 Dec 10  2016 DonaldDuckChristmas2016NFLNews.png
+-rwxrwxr-x 1 tarryc tarryc  464014 Dec 10  2016 DonaldDuckChristmas2016NFLNews.xcf
+-rwxrwxr-x 1 tarryc tarryc  382598 Dec 10  2016 DonaldDuckChristmas2016PlayersPickforWeekbyTeam.png
+-rwxrwxr-x 1 tarryc tarryc  517311 Dec 10  2016 DonaldDuckChristmas2016PlayersPickforWeekbyTeam.xcf
+-rwxrwxr-x 1 tarryc tarryc  497384 Dec 10  2016 DonaldDuckChristmas2016PlayersPickforWeek.png
+-rwxrwxr-x 1 tarryc tarryc  805019 Dec 10  2016 DonaldDuckChristmas2016PlayersPickforWeek.xcf
+-rwxrwxr-x 1 tarryc tarryc  479538 Dec 10  2016 DonaldDuckChristmas2016TotalPercentageLeader.png
+-rwxrwxr-x 1 tarryc tarryc  654275 Dec 10  2016 DonaldDuckChristmas2016TotalPercentageLeader.xcf
+-rwxrwxr-x 1 tarryc tarryc  520163 Dec 10  2016 DonaldDuckChristmas2016TotalWinLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  790663 Dec 10  2016 DonaldDuckChristmas2016TotalWinLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  446524 Dec 10  2016 DonaldDuckChristmas2016WeeklyTotalLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  605536 Dec 10  2016 DonaldDuckChristmas2016WeeklyTotalLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  329495 Aug 12 17:46 DonaldDuckFall2018News.png
+-rw-rw-r-- 1 tarryc tarryc  482893 Aug 12 17:46 DonaldDuckFall2018News.xcf
+-rwxrwxr-x 1 tarryc tarryc   41577 Jan 31  2016 Donald Duck Flying-orig.jpg
+-rwxrwxr-x 1 tarryc tarryc 2152905 Jan 31  2016 Donald Duck Flying.png
+-rwxrwxr-x 1 tarryc tarryc  205120 Jan 31  2016 DonaldDuckFlying.png
+-rwxrwxr-x 1 tarryc tarryc    7498 Jan 31  2016 DonaldDuckFlying-small-orig.png
+-rwxrwxr-x 1 tarryc tarryc    9414 Jan 31  2016 DonaldDuckFlying-small.png
+-rwxrwxr-x 1 tarryc tarryc   11796 Jan 31  2016 Donald Duck Flying-small.xcf
+-rwxrwxr-x 1 tarryc tarryc  282510 Jan 31  2016 Donald Duck Flying.xcf
+-rwxrwxr-x 1 tarryc tarryc  326765 Oct 30  2016 DonaldDuckHalloweenTotalPercentageLeader.png
+-rwxrwxr-x 1 tarryc tarryc  624457 Oct 30  2016 DonaldDuckHalloweenTotalPercentageLeader.xcf
+-rwxrwxr-x 1 tarryc tarryc  405998 Oct 30  2016 DonaldDuckHalloweenTotalWinLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  678322 Oct 30  2016 DonaldDuckHalloweenTotalWinLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  327676 Oct 29  2016 DonaldDuckHalloweenWeeklyTotalLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  589848 Oct 29  2016 DonaldDuckHalloweenWeeklyTotalLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  772732 Aug 12 17:46 Donald Duck Look for 2018 Season 1.xcf
+-rw-rw-r-- 1 tarryc tarryc  396573 Aug 12 17:46 DonaldDuckLookfor2018Season.png
+-rwxrwxr-x 1 tarryc tarryc  527129 Dec 29  2016 DonaldDuckNewYear2017HomeScrn.png
+-rwxrwxr-x 1 tarryc tarryc  825587 Dec 29  2016 DonaldDuckNewYear2017HomeScrn.xcf
+-rwxrwxr-x 1 tarryc tarryc  301743 Dec 29  2016 DonaldDuckNewYear2017PlayersPickforWeekbyTeam.png
+-rwxrwxr-x 1 tarryc tarryc  486197 Dec 29  2016 DonaldDuckNewYear2017PlayersPickforWeekbyTeam.xcf
+-rwxrwxr-x 1 tarryc tarryc  406734 Dec 29  2016 DonaldDuckNewYear2017PlayersPickforWeek.png
+-rwxrwxr-x 1 tarryc tarryc  703048 Dec 29  2016 DonaldDuckNewYear2017PlayersPickforWeek.xcf
+-rwxrwxr-x 1 tarryc tarryc  556026 Dec 29  2016 DonaldDuckNewYear2017TotalPercentageLeader.png
+-rwxrwxr-x 1 tarryc tarryc  735890 Dec 29  2016 DonaldDuckNewYear2017 TotalPercentageLeader.xcf
+-rwxrwxr-x 1 tarryc tarryc  580550 Dec 29  2016 DonaldDuckNewYear2017TotalWinLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  790280 Dec 29  2016 DonaldDuckNewYear2017TotalWinLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  323970 Dec 29  2016 DonaldDuckNewYear2017WeeklyTotalLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  469444 Dec 29  2016 DonaldDuckNewYear2017 WeeklyTotalLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  377824 Dec 28  2017 DonaldDuckNewYear2018HomeScrn.png
+-rw-rw-r-- 1 tarryc tarryc  618785 Dec 28  2017 DonaldDuckNewYear2018HomeScrn.xcf
+-rw-rw-r-- 1 tarryc tarryc  295587 Dec 28  2017 DonaldDuckNewYear2018PlayersPickforWeekbyTeam.png
+-rw-rw-r-- 1 tarryc tarryc  541826 Dec 28  2017 DonaldDuckNewYear2018PlayersPickforWeekbyTeam.xcf
+-rw-rw-r-- 1 tarryc tarryc  420054 Dec 28  2017 DonaldDuckNewYear2018PlayersPickforWeek.png
+-rw-rw-r-- 1 tarryc tarryc  729595 Dec 28  2017 DonaldDuckNewYear2018PlayersPickforWeek.xcf
+-rw-rw-r-- 1 tarryc tarryc  554749 Dec 28  2017 DonaldDuckNewYear2018TotalPercentageLeader.png
+-rw-rw-r-- 1 tarryc tarryc  766392 Dec 28  2017 DonaldDuckNewYear2018TotalPercentageLeader.xcf
+-rw-rw-r-- 1 tarryc tarryc  506816 Dec 28  2017 DonaldDuckNewYear2018TotalWinLeaders.png
+-rw-rw-r-- 1 tarryc tarryc  792961 Dec 28  2017 DonaldDuckNewYear2018TotalWinLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  333834 Dec 28  2017 DonaldDuckNewYear2018WeeklyTotalLeaders.png
+-rw-rw-r-- 1 tarryc tarryc  492259 Dec 28  2017 DonaldDuckNewYear2018WeeklyTotalLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  231029 Dec 13  2016 DonaldDuckSleepingHammck2016.png
+-rwxrwxr-x 1 tarryc tarryc  352442 Dec 13  2016 DonaldDuckSleepingHammck2016.xcf
+-rwxrwxr-x 1 tarryc tarryc  241152 Oct 30  2017 DonaldDuckSleepinginHammck2017.png
+-rw-rw-r-- 1 tarryc tarryc 1589458 Feb 11  2018 DonaldDuckSpring2018HomePage.png
+-rw-rw-r-- 1 tarryc tarryc 4655390 Feb 11  2018 DonaldDuckSpring2018HomePage.xcf
+-rw-rw-r-- 1 tarryc tarryc  925785 Feb 11  2018 DonaldDuckSpring2018News.png
+-rw-rw-r-- 1 tarryc tarryc 1811646 Feb 11  2018 DonaldDuckSpring2018News.xcf
+-rw-rw-r-- 1 tarryc tarryc 1104634 Feb 11  2018 DonaldDuckSpring2018PlayersPicforWeek.png
+-rw-rw-r-- 1 tarryc tarryc 2243437 Feb 11  2018 DonaldDuckSpring2018PlayersPicforWeek.xcf
+-rw-rw-r-- 1 tarryc tarryc  964496 Feb 11  2018 DonaldDuckSpring2018TeamWeeklyRankinbg.png
+-rw-rw-r-- 1 tarryc tarryc 1629631 Feb 11  2018 DonaldDuckSpring2018TeamWeeklyRankinbg.xcf
+-rw-rw-r-- 1 tarryc tarryc 1229554 Feb 11  2018 DonaldDuckSpring2018TotalPercentageLeader.png
+-rw-rw-r-- 1 tarryc tarryc 2338127 Feb 11  2018 DonaldDuckSpring2018TotalPercentageLeader.xcf
+-rw-rw-r-- 1 tarryc tarryc 1351891 Feb 11  2018 DonaldDuckSpring2018TotalWinLeaders.png
+-rw-rw-r-- 1 tarryc tarryc 1916398 Feb 11  2018 DonaldDuckSpring2018TotalWinLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  839521 Feb 11  2018 DonaldDuckSpring2018TotMembePick4Week.png
+-rw-rw-r-- 1 tarryc tarryc 1525953 Feb 11  2018 DonaldDuckSpring2018TotMembePick4Week.xcf
+-rw-rw-r-- 1 tarryc tarryc  941631 Feb 11  2018 DonaldDuckSpring2018WeeklyTotalLeaders.png
+-rw-rw-r-- 1 tarryc tarryc 1688114 Feb 11  2018 DonaldDuckSpring2018WeeklyTotalLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  399089 Nov  4  2016 DonaldDuckThanksgiving-NFLNews.png
+-rwxrwxr-x 1 tarryc tarryc  615874 Nov  4  2016 DonaldDuckThanksgiving-NFLNews.xcf
+-rwxrwxr-x 1 tarryc tarryc  336623 Nov  4  2016 DonaldDuckThanksgiving-PlayersPicforWeek.png
+-rwxrwxr-x 1 tarryc tarryc  539632 Nov  4  2016 DonaldDuckThanksgiving-PlayersPicforWeek.xcf
+-rwxrwxr-x 1 tarryc tarryc  288590 Nov  4  2016 DonaldDuckThanksgiving-PlayersPickforWeekbyTeam.png
+-rwxrwxr-x 1 tarryc tarryc  405404 Nov  4  2016 DonaldDuckThanksgiving-PlayersPickforWeekbyTeam.xcf
+-rwxrwxr-x 1 tarryc tarryc  519328 Nov  4  2016 DonaldDuckThanksgiving-TotalPercentageLeader.png
+-rwxrwxr-x 1 tarryc tarryc  890316 Nov  4  2016 DonaldDuckThanksgiving-TotalPercentageLeader.xcf
+-rwxrwxr-x 1 tarryc tarryc  547062 Nov  4  2016 DonaldDuckThanksgiving-TotalWinLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  784630 Nov  4  2016 DonaldDuckThanksgiving-TotalWinLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  329500 Nov  4  2016 DonaldDuckThanksgiving-WeeklyTotalLeaders.png
+-rwxrwxr-x 1 tarryc tarryc  451880 Nov  4  2016 DonaldDuckThanksgiving-WeeklyTotalLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc  154093 Sep 26  2017 DonaldDuckUSAFlag.png
+-rw-rw-r-- 1 tarryc tarryc  228895 Sep 26  2017 DonaldDuckUSAFlag.xcf
+-rwxrwxr-x 1 tarryc tarryc  378645 Jan 15  2017 Donald-Duck-Winter-2017-Players-Pick-for-Week1.png
+-rwxrwxr-x 1 tarryc tarryc  516037 Jan 15  2017 Donald-Duck-Winter-2017-Players-Pick-for-Week1.xcf
+-rwxrwxr-x 1 tarryc tarryc  424651 Jan 15  2017 Donald-Duck-Winter-2017-Players-Pick-for-Week-by-Team 1.png
+-rwxrwxr-x 1 tarryc tarryc  554721 Jan 15  2017 Donald-Duck-Winter-2017-Players-Pick-for-Week-by-Team 1.xcf
+-rwxrwxr-x 1 tarryc tarryc  415687 Jan 15  2017 Donald-Duck-Winter-2017-Players-Pick-for-Week-by-Team.png
+-rwxrwxr-x 1 tarryc tarryc  380137 Jan 15  2017 Donald-Duck-Winter-2017-Players-Pick-for-Week.png
+-rwxrwxr-x 1 tarryc tarryc  324996 Jan 15  2017 Donald-Duck-Winter-2017-Total-Percentage-Leader1.png
+-rwxrwxr-x 1 tarryc tarryc  326191 Jan 15  2017 Donald-Duck-Winter-2017-Total-Percentage-Leader.png
+-rwxrwxr-x 1 tarryc tarryc  436505 Jan 15  2017 Donald-Duck-Winter-2017-Total-Percentage-Leader.xcf
+-rwxrwxr-x 1 tarryc tarryc  215827 Jan 15  2017 Donald-Duck-Winter-2017-Total-Win-Leaders1.png
+-rwxrwxr-x 1 tarryc tarryc  241025 Jan 15  2017 Donald-Duck-Winter-2017-Total-Win-Leaders.png
+-rwxrwxr-x 1 tarryc tarryc  305492 Jan 15  2017 Donald-Duck-Winter-2017-Total-Win-Leaders.xcf
+-rwxrwxr-x 1 tarryc tarryc  416662 Jan 15  2017 Donald-Duck-Winter-2017-Weekly-Total-Leaders1.png
+-rwxrwxr-x 1 tarryc tarryc  396669 Jan 15  2017 Donald-Duck-Winter-2017-Weekly-Total-Leaders.png
+-rwxrwxr-x 1 tarryc tarryc  556354 Jan 15  2017 Donald-Duck-Winter-2017-Weekly-Total-Leaders.xcf
+-rw-rw-r-- 1 tarryc tarryc 1174131 Jan  9  2018 DonaldDuckWinter2018HomePageA.png
+-rw-rw-r-- 1 tarryc tarryc 4357086 Jan  9  2018 DonaldDuckWinter2018HomePageA.xcf
+-rw-rw-r-- 1 tarryc tarryc 1139459 Jan  9  2018 DonaldDuckWinter2018HomePageB.png
+-rw-rw-r-- 1 tarryc tarryc 1737381 Jan 11  2018 DonaldDuckWinter2018HomePageB.xcf
+-rw-rw-r-- 1 tarryc tarryc 1789053 Jan 16  2018 DonaldDuckWinter2018News.png
+-rw-rw-r-- 1 tarryc tarryc 1506341 Jan  9  2018 DonaldDuckWinter2018PlayersPickforWeek.png
+-rw-rw-r-- 1 tarryc tarryc 2683212 Jan  9  2018 DonaldDuckWinter2018PlayersPickforWeek.xcf
+-rw-rw-r-- 1 tarryc tarryc 1227015 Jan  9  2018 DonaldDuckWinter2018TotalPercentageLeader.png
+-rw-rw-r-- 1 tarryc tarryc 1984797 Jan  9  2018 DonaldDuckWinter2018TotalPercentageLeader.xcf
+-rw-rw-r-- 1 tarryc tarryc 1821241 Jan  9  2018 DonaldDuckWinter2018TotalWinLeaders.png
+-rw-rw-r-- 1 tarryc tarryc 3351394 Jan  9  2018 DonaldDuckWinter2018TotalWinLeaders.xcf
+-rw-rw-r-- 1 tarryc tarryc 1036954 Jan  9  2018 DonaldDuckWinter2018WeeklyTotalLeaders.png
+-rw-rw-r-- 1 tarryc tarryc 1734384 Jan  9  2018 DonaldDuckWinter2018WeeklyTotalLeaders.xcf
+-rwxrwxr-x 1 tarryc tarryc   84553 Jan 31  2016 download.xcf
+-rwxrwxr-x 1 tarryc tarryc   56060 Jan 31  2016 espn-logo.jpg
+-rwxrwxr-x 1 tarryc tarryc   18765 Jan 31  2016 espn-logo.png
+-rwxrwxr-x 1 tarryc tarryc   43384 Jan 31  2016 ESPN-logo.xcf
+-rwxrwxr-x 1 tarryc tarryc   16463 Dec  5  2016 feedback-ddd.png
+-rwxrwxr-x 1 tarryc tarryc   38897 Jan 31  2016 frenchflag.png
+-rwxr--r-- 1 tarryc tarryc  655930 Feb 11  2016 FrontPageStartof2016Final.png
+-rwxrwxr-x 1 tarryc tarryc  722937 Jan 31  2016 FrontPageStartof2016.png
+-rwxrwxr-x 1 tarryc tarryc  997375 Jan 31  2016 FrontPageStartof2016.xcf
+-rw-rw-r-- 1 tarryc tarryc 1074938 Nov 22  2017 FrontPageThanksgiving2017.png
+-rw-rw-r-- 1 tarryc tarryc 1752718 Nov 22  2017 FrontPageThanksgiving2017.xcf
+drwxrwxr-x 2 tarryc tarryc    4096 Aug 12 17:46 halloffame
+-rwxrwxr-x 1 tarryc tarryc  423463 Jan 23  2017 HomePageEnd2016Season2.png
+-rwxrwxr-x 1 tarryc tarryc  423463 Jan 23  2017 HomePageEnd2016Season.png
+-rwxrwxr-x 1 tarryc tarryc  619322 Jan 23  2017 HomePageEnd2016Season.xcf
+-rwxrwxr-x 1 tarryc tarryc    2998 Nov  4  2016 infozig.png
+-rwxrwxr-x 1 tarryc tarryc  144363 Feb  4  2017 jessbrianengaged.png
+-rwxrwxr-x 1 tarryc tarryc  243285 Feb  4  2017 jessbrianengaged.xcf
+-rwxrwxr-x 1 tarryc tarryc  121733 Jan 31  2016 lb-bottom-dd.png
+-rwxrwxr-x 1 tarryc tarryc   38888 Jan 31  2016 lb-bottom.png
+-rwxrwxr-x 1 tarryc tarryc   63938 Jan 31  2016 lb-bottom.xcf
+-rwxrwxr-x 1 tarryc tarryc   22984 Jan 31  2016 lb-top.png
+-rwxrwxr-x 1 tarryc tarryc   35619 Jan 31  2016 lb-top.xcf
+-rwxr--r-- 1 tarryc tarryc  275912 Feb 20  2016 LeaderBdScrnBottomPicLastWeek2015.png
+-rwxr--r-- 1 tarryc tarryc  425172 Feb 11  2016 LeaderBdTopEnd2015Season.png
+-rw-rw-r-- 1 tarryc tarryc  139178 Sep 26  2017 newsandopinion.png
+-rw-rw-r-- 1 tarryc tarryc  205300 Sep 26  2017 newsandopinion.xcf
+-rwxrwxr-x 1 tarryc tarryc  409591 Jan 31  2016 NewYear2016FrontPage.png
+-rwxrwxr-x 1 tarryc tarryc  929502 Jan 31  2016 NewYear2016FrontPage.xcf
+-rwxrwxr-x 1 tarryc tarryc    2990 Oct 20  2016 nfc.png
+-rwxrwxr-x 1 tarryc tarryc   41534 Jan 31  2016 nfl-badge.png
+-rwxrwxr-x 1 tarryc tarryc   84552 Jan 31  2016 nfl-badge.xcf
+drwxrwxr-x 3 tarryc tarryc    4096 Jan  4  2018 nflicons
+-rwxrwxr-x 1 tarryc tarryc  175953 Jan 23  2017 NFLNewsScrn2017.png
+-rwxrwxr-x 1 tarryc tarryc  257260 Jan 23  2017 NFLNewsScrn2017.xcf
+-rwxrwxr-x 1 tarryc tarryc  178981 Jan 31  2016 NFLNewsScrn.png
+-rwxrwxr-x 1 tarryc tarryc  279345 Jan 31  2016 NFLNewsScrn.xcf
+-rwxr--r-- 1 tarryc tarryc  653300 Feb  9  2016 NFLPlayOffBracket2014C.png
+-rwxrwxr-x 1 tarryc tarryc 1217979 Jan 31  2016 NFLPlayOffBracket2014C.xcf
+-rwxrwxr-x 1 tarryc tarryc  625846 Jan 31  2016 NFLPlayOffBracket2014D.png
+-rwxrwxr-x 1 tarryc tarryc  453492 Jan 31  2016 NFLPlayOffBracket2015DD.png
+-rwxrwxr-x 1 tarryc tarryc  449679 Jan 31  2016 NFLPlayOffBracket2015D.png
+-rwxrwxr-x 1 tarryc tarryc  518237 Jan 31  2016 NFLPlayOffBracket2015E.png
+-rwxrwxr-x 1 tarryc tarryc 1135848 Jan 31  2016 NFLPlayOffBracket2015E.xcf
+-rwxrwxr-x 1 tarryc tarryc  560420 Jan 31  2016 NFLPlayOffBracket2015F.png
+-rwxrwxr-x 1 tarryc tarryc 1200050 Jan 31  2016 NFLPlayOffBracket2015F.xcf
+-rwxrwxr-x 1 tarryc tarryc  574373 Jan 31  2016 NFLPlayOffBracket2015G.png
+-rwxrwxr-x 1 tarryc tarryc 1223846 Jan 31  2016 NFLPlayOffBracket2015G.xcf
+-rwxr--r-- 1 tarryc tarryc  663972 Feb  9  2016 NFLPlayOffBracket2015H.png
+-rwxrwxr-x 1 tarryc tarryc  505890 Jan 10  2017 NFLPlayOffBracketSuperbowl512017B.png
+-rwxrwxr-x 1 tarryc tarryc 1078545 Jan 10  2017 NFLPlayOffBracketSuperbowl512017B.xcf
+-rwxrwxr-x 1 tarryc tarryc  575776 Jan 18  2017 NFLPlayOffBracketSuperbowl512017C.png
+-rwxrwxr-x 1 tarryc tarryc 1175021 Jan 18  2017 NFLPlayOffBracketSuperbowl512017C.xcf
+-rwxrwxr-x 1 tarryc tarryc  590915 Jan 23  2017 NFLPlayOffBracketSuperbowl512017D2.png
+-rwxrwxr-x 1 tarryc tarryc 1202684 Jan 23  2017 NFLPlayOffBracketSuperbowl512017D2.xcf
+-rwxrwxr-x 1 tarryc tarryc  588656 Jan 23  2017 NFLPlayOffBracketSuperbowl512017D.png
+-rwxrwxr-x 1 tarryc tarryc 1196159 Jan 23  2017 NFLPlayOffBracketSuperbowl512017D.xcf
+-rwxrwxr-x 1 tarryc tarryc  640234 Feb  6  2017 NFL-PlayOff-Bracket-Superbowl-51-2017E.png
+-rwxrwxr-x 1 tarryc tarryc 1275769 Feb  6  2017 NFL-PlayOff-Bracket-Superbowl-51-2017E.xcf
+-rwxr--r-- 1 tarryc tarryc  458324 Jan  3  2017 NFLPlayOffBracketSuperbowl51-2017.png
+-rwxr--r-- 1 tarryc tarryc 1024589 Jan  3  2017 NFLPlayOffBracketSuperbowl51-2017.xcf
+-rw-rw-r-- 1 tarryc tarryc  507857 Dec 27  2017 NFLPlayOffBracketSuperbowl522018A2.png
+-rw-rw-r-- 1 tarryc tarryc 1159055 Dec 27  2017 NFLPlayOffBracketSuperbowl522018A2.xcf
+-rw-rw-r-- 1 tarryc tarryc  501858 Dec 21  2017 NFLPlayOffBracketSuperbowl52-2018A.png
+-rw-rw-r-- 1 tarryc tarryc 1150465 Dec 21  2017 NFLPlayOffBracketSuperbowl52-2018A.xcf
+-rw-rw-r-- 1 tarryc tarryc  501650 Jan  2  2018 NFLPlayOffBracketSuperbowl522018B.png
+-rw-rw-r-- 1 tarryc tarryc 1162870 Jan  2  2018 NFLPlayOffBracketSuperbowl522018B.xcf
+-rw-rw-r-- 1 tarryc tarryc 1596697 Jan  9  2018 NFLPlayOffBracketSuperbowl522018C.png
+-rw-rw-r-- 1 tarryc tarryc 3408558 Jan  9  2018 NFLPlayOffBracketSuperbowl522018C.xcf
+-rw-rw-r-- 1 tarryc tarryc 1723127 Jan 16  2018 NFLPlayOffBracketSuperbowl522018D.png
+-rw-rw-r-- 1 tarryc tarryc 1833749 Jan 22  2018 NFLPlayOffBracketSuperbowl52-2018E.png
+-rw-rw-r-- 1 tarryc tarryc 3768389 Jan 22  2018 NFLPlayOffBracketSuperbowl52-2018E.xcf
+-rw-rw-r-- 1 tarryc tarryc 1763662 Feb 11  2018 NFLPlayOffBracketSuperbowl522018F.png
+-rw-rw-r-- 1 tarryc tarryc 3336450 Feb 11  2018 NFLPlayOffBracketSuperbowl522018F.xcf
+-rwxrwxr-x 1 tarryc tarryc  551945 Jan 31  2016 NFPlayOffBracket2014B.png
+-rwxrwxr-x 1 tarryc tarryc  443622 Jan 31  2016 NFPlayOffBracket2015B.png
+-rwxrwxr-x 1 tarryc tarryc 1023558 Jan 31  2016 NFPlayOffBracket2015B.xcf
+-rwxr--r-- 1 tarryc tarryc  251758 Aug 30  2016 OlympicOverFootballTime.png
+-rwxr--r-- 1 tarryc tarryc  300921 Aug 30  2016 OlympicOverFootballTime.xcf
+-rwxrwxr-x 1 tarryc tarryc 6558879 Jan 31  2016 paris-france-eiffel.png
+-rwxrwxr-x 1 tarryc tarryc   32479 Jan 31  2016 patriots.png
+-rwxrwxr-x 1 tarryc tarryc   44377 Jan 31  2016 patriots.xcf
+-rwxrwxr-x 1 tarryc tarryc    3642 Oct 10  2016 phone-mobile.png
+-rwxrwxr-x 1 tarryc tarryc   14365 Oct 10  2016 phone-mobile.xcf
+-rwxr--r-- 1 tarryc tarryc  275010 Feb 11  2016 PicksforWeekbyTeamScrnFinal.png
+-rwxrwxr-x 1 tarryc tarryc  275010 Jan 31  2016 PicksforWeekbyTeamScrnPlayoffs.png
+-rwxrwxr-x 1 tarryc tarryc  407535 Jan 31  2016 PicksforWeekbyTeamScrnPlayoffs.xcf
+-rwxrwxr-x 1 tarryc tarryc  393219 Jan 31  2016 pickteamsbye.png
+-rwxrwxr-x 1 tarryc tarryc  247295 Jan 31  2016 PictureLeaderBdBottomcrn.png
+-rwxrwxr-x 1 tarryc tarryc  371561 Jan 31  2016 PictureLeaderBdBottomcrn.xcf
+-rwxrwxr-x 1 tarryc tarryc  159031 Jan 31  2016 PictureLeaderBdTopScrn.png
+-rwxrwxr-x 1 tarryc tarryc  239611 Jan 31  2016 PictureLeaderBdTopScrn.xcf
+-rwxrwxr-x 1 tarryc tarryc  334124 Jan 31  2016 PictureNewYearLeaderboardScrn.png
+-rwxrwxr-x 1 tarryc tarryc  480427 Aug 31  2017 PlayerPickforWeekbyTeam2017.png
+-rw-rw-r-- 1 tarryc tarryc  850697 Aug 31  2017 PlayerPickforWeekbyTeam2017.xcf
+-rwxrwxr-x 1 tarryc tarryc  267093 Aug 31  2017 PlayersPickfortheWeek2017.png
+-rw-rw-r-- 1 tarryc tarryc  437140 Aug 31  2017 PlayersPickfortheWeek2017.xcf
+-rw-rw-r-- 1 tarryc tarryc  377622 Aug 12 17:46 PlayersPickfortheWeekFall2018.png
+-rw-rw-r-- 1 tarryc tarryc  556285 Aug 12 17:46 PlayersPickfortheWeekFall2018.xcf
+-rwxrwxr-x 1 tarryc tarryc  362738 Jan 31  2016 playerweeklynewyear.png
+-rwxr--r-- 1 tarryc tarryc  348850 Feb 20  2016 PlayerWeeklyTotEndof2015.png
+-rwxrwxr-x 1 tarryc tarryc   62235 Jan 31  2016 PlayOffCodeChart2.png
+-rwxrwxr-x 1 tarryc tarryc  135570 Jan 31  2016 PlayOffCodeChart2.xcf
+-rwxrwxr-x 1 tarryc tarryc   87417 Jan 31  2016 postman.png
+-rwxrwxr-x 1 tarryc tarryc  136667 Jan 31  2016 profilebio.png
+-rw-rw-r-- 1 tarryc tarryc  342062 Aug 12 17:46 Sabrina2ndWin5Crop.xcf
+-rw-rw-r-- 1 tarryc tarryc  353923 Aug 12 17:46 Sabrina2ndWinCrop.xcf
+-rwxrwxr-x 1 tarryc tarryc   86804 Jan 31  2016 Screen Shot 2015-05-24 at 5.17.59 PM.png
+-rwxrwxr-x 1 tarryc tarryc   74592 Jan 31  2016 Screen Shot 2015-05-24 at 5.18.29 PM.png
+-rwxrwxr-x 1 tarryc tarryc  179169 Jan 31  2016 sitedown.png
+-rwxrwxr-x 1 tarryc tarryc     245 Jan  7  2017 small-glow.png
+-rwxrwxr-x 1 tarryc tarryc   60483 Jan 31  2016 teamstandingspostseasonkey.png
+-rwxrwxr-x 1 tarryc tarryc  129895 Jan 31  2016 teamstandingspostseasonkey.xcf
+-rw-rw-r-- 1 tarryc tarryc  308533 Aug 12 19:55 TeamWeeklyRankingFall2018.png
+-rw-rw-r-- 1 tarryc tarryc  467191 Aug 12 19:55 TeamWeeklyRankingFall2018.xcf
+-rwxrwxr-x 1 tarryc tarryc   73613 Jan 31  2016 teamweeklyranking.png
+-rw-rw-r-- 1 tarryc tarryc   43933 Sep  9  2017 teamweeklyranking-small.png
+-rw-rw-r-- 1 tarryc tarryc   71913 Sep  9  2017 teamweeklyranking-small.xcf
+-rwxrwxr-x 1 tarryc tarryc  126144 Jan 31  2016 teamweeklyranking.xcf
+-rwxrwxr-x 1 tarryc tarryc  314574 Jan 31  2016 thanksgivingleaderboard.png
+-rwxrwxr-x 1 tarryc tarryc  269477 Jan 31  2016 thanksgivingpickteams.png
+-rwxrwxr-x 1 tarryc tarryc  110146 Jan 31  2016 thinking.png
+-rw-rw-r-- 1 tarryc tarryc  648568 Aug 12 19:55 TotalMembersTeamPicksWeekFall2018.png
+-rw-rw-r-- 1 tarryc tarryc  878667 Aug 12 19:55 TotalMembersTeamPicksWeekFall2018.xcf
+-rwxrwxr-x 1 tarryc tarryc  266813 Aug 31  2017 TotalPercentageLeaderDDPose2017.png
+-rw-rw-r-- 1 tarryc tarryc  420466 Aug 31  2017 TotalPercentageLeaderDDPose2017.xcf
+-rw-rw-r-- 1 tarryc tarryc  173722 Aug 12 19:55 TotalPercentageLeaderFall2018.png
+-rw-rw-r-- 1 tarryc tarryc  351083 Aug 12 19:55 TotalPercentageLeaderFall2018.xcf
+-rwxrwxr-x 1 tarryc tarryc  455073 Jan 31  2016 totalteampicksweek-bot.png
+-rwxrwxr-x 1 tarryc tarryc  330070 Jan 31  2016 totalteampicksweek-top.png
+-rwxrwxr-x 1 tarryc tarryc  241158 Aug 31  2017 TotalWinsLeaderDDMathCalcul.png
+-rw-rw-r-- 1 tarryc tarryc  329346 Aug 31  2017 TotalWinsLeaderDDMathCalcul.xcf
+-rw-rw-r-- 1 tarryc tarryc  334702 Aug 12 19:55 TotalWinsLeaderFall2018.png
+-rw-rw-r-- 1 tarryc tarryc  612101 Aug 12 19:55 TotalWinsLeaderFall2018.xcf
+drwxrwxr-x 2 tarryc tarryc    4096 Jan 31  2016 tvicons
+-rwxrwxr-x 1 tarryc tarryc  142437 Jan 31  2016 viewselectpicks.png
+-rwxrwxr-x 1 tarryc tarryc  255248 Jan 31  2016 viewselectpicks.xcf
+-rwxrwxr-x 1 tarryc tarryc  127452 Jan 31  2016 weeklystats.png
+-rwxrwxr-x 1 tarryc tarryc  178334 Jan 31  2016 weeklystats.xcf
+-rwxrwxr-x 1 tarryc tarryc  268631 Aug 31  2017 WeeklyTotalLeaders2017.png
+-rw-rw-r-- 1 tarryc tarryc  449338 Aug 31  2017 WeeklyTotalLeaders2017.xcf
+-rw-rw-r-- 1 tarryc tarryc 1570670 Sep 16 17:22 WeeklyTotalLeadersFall2018.png
+-rw-rw-r-- 1 tarryc tarryc  747497 Aug 12 17:46 WeeklyTotalLeadersFall2018.xcf
+-rwxrwxr-x 1 tarryc tarryc  117397 Jan 31  2016 weeklytotals.png
+-rwxrwxr-x 1 tarryc tarryc  281224 Jan 31  2016 WeeklyTotalsScrn.png
+-rwxrwxr-x 1 tarryc tarryc  515308 Jan 31  2016 WeeklyTotalsScrn.xcf
+-rwxrwxr-x 1 tarryc tarryc  480123 Jan 31  2016 xmashomepage.png
+-rwxrwxr-x 1 tarryc tarryc  786054 Jan 31  2016 xmashomepage.xcf
+-rwxrwxr-x 1 tarryc tarryc  353709 Jan 31  2016 xmas-lb-bottom-dd.png
+-rwxrwxr-x 1 tarryc tarryc  531086 Jan 31  2016 xmas-lb-bottom-dd.xcf
+-rwxrwxr-x 1 tarryc tarryc  391617 Jan 31  2016 xmas-lb-top.png
+-rwxrwxr-x 1 tarryc tarryc  527351 Jan 31  2016 xmas-lb-top.xcf
+-rw-rw-r-- 1 tarryc tarryc   27629 Dec  6  2017 xmasstreeStopNew.png
+-rw-rw-r-- 1 tarryc tarryc   39619 Dec  6  2017 xmasstreeStopNew.xcf
+-rwxrwxr-x 1 tarryc tarryc  365766 Jan 31  2016 xmas-totalteampicksweek-top.png
+-rwxrwxr-x 1 tarryc tarryc  553118 Jan 31  2016 xmas-totalteampicksweek-top.xcf
+-rwxrwxr-x 1 tarryc tarryc   32877 Dec 19  2016 xmastree.png
+-rwxrwxr-x 1 tarryc tarryc   26947 Dec 20  2016 xmastreeStop.png
+-rwxrwxr-x 1 tarryc tarryc  414035 Jan 31  2016 xmas-weeklytotals.png
+-rwxrwxr-x 1 tarryc tarryc  589197 Jan 31  2016 xmas-weeklytotals.xcf
+
+./img/avatars:
+total 31160
+-rwxrwxrwx 1 tarryc tarryc 215754 Jan 31  2016 airstream.png
+-rwxrwxrwx 1 tarryc tarryc 388856 Jan 31  2016 airstream.xcf
+-rw-rw-r-- 1 tarryc tarryc 171969 Sep  7  2017 BillEvans.png
+-rw-rw-r-- 1 tarryc tarryc 323499 Sep  7  2017 BillEvans.xcf
+-rwxrwxr-x 1 tarryc tarryc 167330 Jan 23  2017 BobbiePereira.png
+-rwxr--r-- 1 tarryc tarryc 258057 Sep 15  2016 BobbiePereira.xcf
+-rwxrwxrwx 1 tarryc tarryc  85417 Jan 31  2016 bobby.png
+-rwxrwxrwx 1 tarryc tarryc  39922 Jan 31  2016 bonnie.png
+-rwxrwxrwx 1 tarryc tarryc  65611 Jan 31  2016 bonnie.xcf
+-rwxrwxrwx 1 tarryc tarryc 161688 Aug 30  2016 brian-avatar-brady.png
+-rwxrwxrwx 1 tarryc tarryc 330158 Aug 30  2016 brian-avatar-brady.xcf
+-rw-rw-r-- 1 tarryc tarryc 166049 Sep  5  2017 BrianBurgin.png
+-rw-rw-r-- 1 tarryc tarryc 399107 Sep  5  2017 BrianBurgin.xcf
+-rwxrwxrwx 1 tarryc tarryc  40505 Jan 31  2016 brian.png
+-rwxrwxrwx 1 tarryc tarryc  74725 Jan 31  2016 brian.xcf
+-rwxrwxr-x 1 tarryc tarryc  83727 Jan 23  2017 CarolineDavisAvatar.png
+-rwxr--r-- 1 tarryc tarryc 129230 Oct 10  2016 CarolineDavisAvatar.xcf
+-rw-rw-r-- 1 tarryc tarryc  77079 Sep  7  2017 CarolJamieson.png
+-rw-rw-r-- 1 tarryc tarryc 109635 Sep  7  2017 CarolJamieson.xcf
+-rw-rw-r-- 1 tarryc tarryc  36728 Sep 11  2017 CBSSportsAnalyst.png
+-rw-rw-r-- 1 tarryc tarryc  93461 Sep 11  2017 CBSSportsAnalyst.xcf
+-rw-rw-r-- 1 tarryc tarryc 242091 Oct 10  2017 ChrisBurgin.png
+-rw-rw-r-- 1 tarryc tarryc 202904 Sep  7  2017 ChrisEliopoulos.png
+-rw-rw-r-- 1 tarryc tarryc 335895 Sep  7  2017 ChrisEliopoulos.xcf
+-rwxrwxrwx 1 tarryc tarryc 134641 Jan 31  2016 chuck.png
+-rwxrwxrwx 1 tarryc tarryc 228373 Jan 31  2016 chuck.xcf
+-rwxrwxrwx 1 tarryc tarryc 218852 Sep 13  2016 CindyRancourt.png
+-rwxrwxrwx 1 tarryc tarryc 386552 Sep 13  2016 CindyRancourt.xcf
+-rw-r--r-- 1 apache apache 173675 Sep 16 12:32 Craig Donnelly Avatar 2 A.png
+-rw-r--r-- 1 apache apache  53961 Sep 20 18:14 CraigDonnellyAvatarB.png
+-rwxrwxrwx 1 tarryc tarryc 116263 Jan 31  2016 dannyg.png
+-rwxrwxrwx 1 tarryc tarryc 182034 Jan 31  2016 dannyg.xcf
+-rwxrwxrwx 1 tarryc tarryc 157848 Jan 31  2016 davida.png
+-rwxrwxrwx 1 tarryc tarryc 392265 Jan 31  2016 davida.xcf
+-rw-rw-r-- 1 tarryc tarryc  57113 Sep  3  2017 DavidDonnelly.png
+-rw-rw-r-- 1 tarryc tarryc 114579 Sep  3  2017 DavidDonnelly.xcf
+-rwxrwxrwx 1 tarryc tarryc 239125 Jan 31  2016 ddt.png
+-rwxrwxrwx 1 tarryc tarryc 153844 Jan 31  2016 default.png
+-rwxrwxrwx 1 tarryc tarryc 206018 Jan 31  2016 default.xcf
+-rw-rw-r-- 1 tarryc tarryc  80910 Aug 31  2017 DianeH.png
+-rw-rw-r-- 1 tarryc tarryc 132254 Aug 31  2017 DianeH.xcf
+-rwxrwxrwx 1 tarryc tarryc 143838 Jan 31  2016 Donald Duck Flying on Lightening Bolt 2.png
+-rwxrwxrwx 1 tarryc tarryc 129874 Jan 31  2016 Donald Duck Flying on Lightening Bolt.jpg
+-rwxrwxrwx 1 tarryc tarryc 153034 Jan 31  2016 donald.png
+-rwxrwxrwx 1 tarryc tarryc 283304 Jan 31  2016 donald.xcf
+-rw-rw-r-- 1 tarryc tarryc 121158 Sep 13  2017 EllenNelton.png
+-rw-rw-r-- 1 tarryc tarryc 201300 Sep 13  2017 EllenNelton.xcf
+-rwxrwxr-x 1 tarryc tarryc  87422 Aug 31  2017 EllenP.png
+-rw-rw-r-- 1 tarryc tarryc 130557 Aug 31  2017 EllenP.xcf
+-rw-rw-r-- 1 tarryc tarryc 164354 Sep  7  2017 ElliotCutler.png
+-rw-rw-r-- 1 tarryc tarryc 249212 Sep  7  2017 ElliotCutler.xcf
+-rw-rw-r-- 1 tarryc tarryc  30510 Sep 11  2017 ESPNSportsAnalyst.png
+-rw-rw-r-- 1 tarryc tarryc  79003 Sep 11  2017 ESPNSportsAnalyst.xcf
+-rw-rw-r-- 1 tarryc tarryc  79846 Oct  5  2017 FrankSchornagle.png
+-rwxrwxr-x 1 tarryc tarryc  61743 Oct 30  2017 FredK.png
+-rwxrwxrwx 1 tarryc tarryc 236925 Jan 31  2016 gary2.png
+-rwxrwxrwx 1 tarryc tarryc 389668 Jan 31  2016 gary2.xcf
+-rwxrwxrwx 1 tarryc tarryc 129947 Jan 31  2016 gary.png
+-rwxrwxrwx 1 tarryc tarryc 300093 Jan 31  2016 gary.xcf
+-rw-r--r-- 1 apache apache 276274 Sep 25 13:04 GeryDelgadoAvatar.png
+-rw-rw-r-- 1 tarryc tarryc 131357 Sep 23  2017 HealtcareWarrior.png
+-rw-rw-r-- 1 tarryc tarryc 187139 Sep 23  2017 HealtcareWarrior.xcf
+-rw-r--r-- 1 apache apache 436830 Oct 13 20:15 HollyFitchAvatar2A.png
+-rwxrwxr-x 1 tarryc tarryc 142355 Jan 23  2017 HollyFitch.png
+-rw-r--r-- 1 apache apache 305816 Oct 13 20:10 JasonShuris10132018.png
+-rwxrwxrwx 1 tarryc tarryc 177570 Jan 31  2016 jasonshuris.png
+-rw-rw-r-- 1 tarryc tarryc  66240 Sep  7  2017 JeffRoberts.png
+-rw-rw-r-- 1 tarryc tarryc 155325 Sep  7  2017 JeffRoberts.xcf
+-rwxrwxrwx 1 tarryc tarryc 163020 Jan 31  2016 jessica.png
+-rwxrwxrwx 1 tarryc tarryc 394100 Jan 31  2016 jessica.xcf
+-rwxrwxrwx 1 tarryc tarryc 116279 Jan 31  2016 judd.png
+-rwxrwxrwx 1 tarryc tarryc 269126 Jan 31  2016 judd.xcf
+-rw-r--r-- 1 apache apache 195678 Oct  6 17:48 JudsonJamiesonAvatar2.png
+-rwxrwxr-x 1 tarryc tarryc  84364 Sep  7  2017 KarenHillier.png
+-rw-rw-r-- 1 tarryc tarryc 145512 Sep  7  2017 KarenHillier.xcf
+-rw-rw-r-- 1 tarryc tarryc  63236 Aug 31  2017 KatherineMacKay.png
+-rw-rw-r-- 1 tarryc tarryc 127266 Aug 31  2017 KatherineMacKay.xcf
+-rwxrwxrwx 1 tarryc tarryc  88774 Jan 31  2016 kaya.png
+-rw-rw-r-- 1 tarryc tarryc 127566 Sep  6  2017 KellyGaitens.png
+-rw-rw-r-- 1 tarryc tarryc 206901 Sep  6  2017 KellyGaitens.xcf
+-rw-rw-r-- 1 tarryc tarryc 233220 Sep  7  2017 KellyMacKay.png
+-rw-rw-r-- 1 tarryc tarryc 368689 Sep  7  2017 KellyMacKay.xcf
+-rwxrwxrwx 1 tarryc tarryc  64992 Jan 31  2016 kiver.png
+-rwxrwxrwx 1 tarryc tarryc 132437 Jan 31  2016 kiver.xcf
+-rwxrwxrwx 1 tarryc tarryc 179329 Jan 31  2016 kris.png
+-rwxrwxrwx 1 tarryc tarryc 398858 Jan 31  2016 kris.xcf
+-rw-rw-r-- 1 tarryc tarryc 172351 Sep 25  2017 LasVegasInsider.png
+-rw-rw-r-- 1 tarryc tarryc 257815 Sep 25  2017 LasVegasInsider.xcf
+-rwxrwxrwx 1 tarryc tarryc  97562 Jan 31  2016 laura2.png
+-rwxrwxrwx 1 tarryc tarryc 170762 Jan 31  2016 laura2.xcf
+-rw-rw-r-- 1 tarryc tarryc  61062 Sep  3  2017 lauracutler2.png
+-rw-rw-r-- 1 tarryc tarryc 111962 Sep  2  2017 lauracutler2.xcf
+-rw-rw-r-- 1 tarryc tarryc  71588 Sep  2  2017 LauraCutler.png
+-rw-rw-r-- 1 tarryc tarryc 117138 Sep  2  2017 LauraCutler.xcf
+-rwxrwxrwx 1 tarryc tarryc 103784 Jan 31  2016 laura.png
+-rwxrwxrwx 1 tarryc tarryc 342329 Jan 31  2016 laura.xcf
+-rwxrwxrwx 1 tarryc tarryc 131451 Jan 31  2016 leah.png
+-rwxrwxrwx 1 tarryc tarryc 194074 Jan 31  2016 leah.xcf
+-rw-rw-r-- 1 tarryc tarryc 168107 Oct  5  2017 LindaK.png
+-rwxrwxrwx 1 tarryc tarryc 190880 Jan 31  2016 lisadavid.png
+-rwxrwxrwx 1 tarryc tarryc 244621 Jan 31  2016 lisadavid.xcf
+-rwxrwxrwx 1 tarryc tarryc 115467 Jan 31  2016 lori.png
+-rwxrwxrwx 1 tarryc tarryc 334319 Jan 31  2016 lori.xcf
+-rw-rw-r-- 1 tarryc tarryc 210554 Dec 12  2017 LuLuAvatar.png
+-rw-rw-r-- 1 tarryc tarryc 312326 Dec 12  2017 LuLuAvatar.xcf
+-rw-rw-r-- 1 tarryc tarryc  79598 Sep  3  2017 MarcCheck.png
+-rw-rw-r-- 1 tarryc tarryc 119455 Sep  3  2017 MarcCheck.xcf
+-rwxrwxr-x 1 tarryc tarryc 126104 Jan 23  2017 marc.png
+-rwxr--r-- 1 tarryc tarryc 107451 Sep 14  2016 Mary Ann Avatar 1 A.xcf
+-rwxrwxr-x 1 tarryc tarryc  62842 Jan 23  2017 MaryAnn.png
+-rwxrwxr-x 1 tarryc tarryc  83917 Sep  2  2017 NancyPutnam.png
+-rw-rw-r-- 1 tarryc tarryc 133051 Sep  2  2017 NancyPutnam.xcf
+-rw-rw-r-- 1 tarryc tarryc  53975 Sep  6  2017 NateJoy.png
+-rw-rw-r-- 1 tarryc tarryc  95617 Sep  6  2017 NateJoy.xcf
+-rwxrwxrwx 1 tarryc tarryc 129962 Jan 31  2016 nedlisa.png
+-rwxrwxrwx 1 tarryc tarryc 213697 Jan 31  2016 nedlisa.xcf
+-rw-rw-r-- 1 tarryc tarryc  48854 Sep 11  2017 NFLNetworkSportsAnalyst.png
+-rw-rw-r-- 1 tarryc tarryc 111555 Sep 11  2017 NFLNetworkSportsAnalyst.xcf
+-rw-rw-r-- 1 tarryc tarryc 195705 Sep  4  2017 NikiDaveAitken.png
+-rw-rw-r-- 1 tarryc tarryc 308544 Sep  4  2017 NikiDaveAitken.xcf
+-rw-rw-r-- 1 tarryc tarryc 109417 Sep  7  2017 OscarGuzman2.png
+-rw-rw-r-- 1 tarryc tarryc 158370 Sep  7  2017 OscarGuzman2.xcf
+-rw-r--r-- 1 apache apache 210400 Sep 16 12:33 Pam Peck Avatar 1 A.png
+-rwxrwxrwx 1 tarryc tarryc 147346 Sep 13  2016 PatMacdonald.png
+-rwxrwxrwx 1 tarryc tarryc 323971 Sep 13  2016 PatMacdonald.xcf
+-rwxrwxr-x 1 tarryc tarryc 113112 Jan 23  2017 PatMacKayAvatar.png
+-rwxr--r-- 1 tarryc tarryc 163710 Oct 10  2016 PatMacKayAvatar.xcf
+-rw-r--r-- 1 apache apache  85588 Dec  9  2017 PatrickRoberts.png
+-rw-rw-r-- 1 tarryc tarryc 526922 Jan  5  2018 PatrickTranaAvatar.png
+-rw-r--r-- 1 apache apache 277244 Oct 13 20:18 PaulaBishopAvatar10132018.png
+-rwxrwxr-x 1 tarryc tarryc  95934 Jan 23  2017 PaulaBishopAvatarA.png
+-rw-r--r-- 1 apache apache  63729 Aug 28  2017 PeggyDixon.png
+-rwxrwxr-x 1 tarryc tarryc 108238 Jan 23  2017 pete.png
+-rw-rw-r-- 1 tarryc tarryc  72498 Sep 11  2017 PetePriscoCBS.png
+-rw-rw-r-- 1 tarryc tarryc 136949 Sep 11  2017 PetePriscoCBS.xcf
+-rw-rw-r-- 1 tarryc tarryc  47553 Sep 11  2017 peteprisco.png
+drwxrwxrwx 2 tarryc tarryc   4096 Jan 31  2016 prev
+-rwxrwxrwx 1 tarryc tarryc 329473 Jan 31  2016 redbird.png
+-rwxrwxr-x 1 tarryc tarryc 102515 Jan 23  2017 RobCraig.png
+-rwxr--r-- 1 tarryc tarryc 154119 Sep 14  2016 RobCraig.xcf
+-rw-r--r-- 1 apache apache 388037 Oct 13 20:14 RolandJoyAvatar10132018.png
+-rwxrwxr-x 1 tarryc tarryc  69317 Jan 23  2017 SabrinaHunzelmanAvatar.png
+-rwxrwxrwx 1 tarryc tarryc  52396 Jan 31  2016 sabrina.png
+-rwxrwxrwx 1 tarryc tarryc  82808 Jan 31  2016 sabrina.xcf
+-rwxrwxrwx 1 tarryc tarryc  10352 Jan 31  2016 sandyavatar.jpg
+-rwxrwxrwx 1 tarryc tarryc 135705 Jan 31  2016 sandyavatar.png
+-rwxrwxrwx 1 tarryc tarryc 236607 Jan 31  2016 sandyavatar.xcf
+-rw-rw-r-- 1 tarryc tarryc 233171 Oct  8  2017 SandyKennedy1.png
+-rw-rw-r-- 1 tarryc tarryc 324664 Oct  8  2017 SandyKennedy1.xcf
+-rw-rw-r-- 1 tarryc tarryc  41721 Oct  8  2017 SandyKennedy2.png
+-rw-rw-r-- 1 tarryc tarryc  72300 Oct  8  2017 SandyKennedy2.xcf
+-rw-rw-r-- 1 tarryc tarryc 235201 Sep  2  2017 SandyShaw.png
+-rw-rw-r-- 1 tarryc tarryc 411999 Sep  2  2017 SandyShaw.xcf
+-rw-r--r-- 1 apache apache 306934 Oct 13 20:17 SandyTherrienAvatar10132018.png
+-rw-rw-r-- 1 tarryc tarryc  95521 Sep 24  2017 SandyTherrien.png
+-rw-rw-r-- 1 tarryc tarryc 143399 Sep 24  2017 SandyTherrien.xcf
+-rw-r--r-- 1 apache apache 468900 Oct 13 20:02 ScottWilliamsonAvatar10132018.png
+-rw-rw-r-- 1 tarryc tarryc 157629 Sep 23  2017 ScottWilliamson.png
+-rw-rw-r-- 1 tarryc tarryc 254417 Sep 23  2017 ScottWilliamson.xcf
+-rwxrwxrwx 1 tarryc tarryc  91253 Jan 31  2016 stevep.png
+-rwxrwxrwx 1 tarryc tarryc 135536 Jan 31  2016 stevep.xcf
+-rw-r--r-- 1 apache apache 193981 Oct 13 20:06 SteveTherrieAvatar10132018.png
+-rwxrwxr-x 1 tarryc tarryc  78550 Jan 23  2017 SteveTherrien.png
+-rwxrwxrwx 1 tarryc tarryc 160597 Sep 13  2016 SteveTherrien.xcf
+-rwxrwxr-x 1 tarryc tarryc 169186 Aug 31  2017 SueD.png
+-rw-rw-r-- 1 tarryc tarryc 393828 Aug 31  2017 SueD.xcf
+-rwxrwxr-x 1 tarryc tarryc  49057 Jan 23  2017 SummervilleAvatar.png
+-rwxrwxrwx 1 tarryc tarryc 148427 Jan 31  2016 tammy.png
+-rwxrwxrwx 1 tarryc tarryc 269857 Jan 31  2016 tammy.xcf
+-rw-r--r-- 1 apache apache 200929 Oct 13 20:05 TanyaGormaAvatar10132018.png
+-rw-r--r-- 1 apache apache 232489 Aug 25  2017 TanyaGormanAvatar.png
+-rwxrwxrwx 1 tarryc tarryc 193618 Jan 31  2016 tanya.png
+-rwxrwxrwx 1 tarryc tarryc 354271 Jan 31  2016 tanya.xcf
+-rwxrwxr-x 1 tarryc tarryc  15111 Oct 30  2017 TeamRankings.png
+-rw-r--r-- 1 apache apache 142485 Sep  2 19:30 TobyMcCormackAvatar.png
+-rw-rw-r-- 1 tarryc tarryc 326386 Sep  7  2017 WendyCutler Avatar.xcf
+-rw-rw-r-- 1 tarryc tarryc 212986 Sep  7  2017 WendyCutler.png
+-rwxrwxrwx 1 tarryc tarryc 175109 Jan 31  2016 will.png
+-rwxrwxrwx 1 tarryc tarryc 338310 Jan 31  2016 will.xcf
+
+./img/avatars/prev:
+total 1480
+-rwxrwxrwx 1 tarryc tarryc 301232 Jan 31  2016 bonnie.png
+-rwxrwxrwx 1 tarryc tarryc 564992 Jan 31  2016 bonnie.xcf
+-rwxrwxrwx 1 tarryc tarryc 230084 Jan 31  2016 chuck.png
+-rwxrwxrwx 1 tarryc tarryc 400741 Jan 31  2016 chuck.xcf
+-rwxrwxrwx 1 tarryc tarryc  10352 Jan 31  2016 sandyavatar.jpg
+
+./img/buttons:
+total 1384
+-rwxrwxr-x 1 tarryc tarryc  12437 Oct 10  2016 admin-mobile.png
+-rwxrwxr-x 1 tarryc tarryc  15940 Oct 10  2016 admin-mobile.xcf
+-rwxrwxr-x 1 tarryc tarryc  26304 Jan 31  2016 admin.png
+-rwxrwxr-x 1 tarryc tarryc  39851 Jan 31  2016 admin.xcf
+-rwxrwxr-x 1 tarryc tarryc  12298 Oct 10  2016 games-mobile.png
+-rwxrwxr-x 1 tarryc tarryc  17021 Oct 10  2016 games-mobile.xcf
+-rwxrwxr-x 1 tarryc tarryc  25121 Jan 31  2016 games.png
+-rwxrwxr-x 1 tarryc tarryc  39511 Jan 31  2016 games.xcf
+-rwxrwxr-x 1 tarryc tarryc  10187 Oct 10  2016 halloffame-mobile.png
+-rwxrwxr-x 1 tarryc tarryc  13609 Oct 10  2016 halloffame-mobile.xcf
+-rwxrwxr-x 1 tarryc tarryc  25196 Jan 31  2016 halloffame.png
+-rwxrwxr-x 1 tarryc tarryc  39091 Jan 31  2016 halloffame.xcf
+-rwxrwxr-x 1 tarryc tarryc 373598 Jan 31  2016 home-original.xcf
+-rwxrwxr-x 1 tarryc tarryc  21105 Jan 31  2016 home.png
+-rwxrwxr-x 1 tarryc tarryc  28230 Jan 31  2016 home.xcf
+-rwxrwxr-x 1 tarryc tarryc  11482 Oct 10  2016 memberstats-mobile.png
+-rwxrwxr-x 1 tarryc tarryc  17948 Oct 10  2016 memberstats-mobile.xcf
+-rw-rw-r-- 1 tarryc tarryc  28139 Dec  6  2017 memberstatsnew.png
+-rw-rw-r-- 1 tarryc tarryc  46172 Dec  6  2017 memberstatsnew.xcf
+-rwxrwxr-x 1 tarryc tarryc  27841 Jan 31  2016 memberstats.png
+-rwxrwxr-x 1 tarryc tarryc  45924 Jan 31  2016 memberstats.xcf
+-rw-rw-r-- 1 tarryc tarryc  12992 Sep 26  2017 newsandopinion-mobile.png
+-rw-rw-r-- 1 tarryc tarryc  16939 Sep 26  2017 newsandopinion-mobile.xcf
+-rw-rw-r-- 1 tarryc tarryc 139178 Sep 26  2017 newsandopinion.png
+-rw-rw-r-- 1 tarryc tarryc 205300 Sep 26  2017 newsandopinion.xcf
+-rwxrwxr-x 1 tarryc tarryc  13061 Oct 10  2016 team-mobile.png
+-rwxrwxr-x 1 tarryc tarryc  17794 Oct 10  2016 team-mobile.xcf
+-rwxrwxr-x 1 tarryc tarryc  27179 Jan 31  2016 team.png
+-rwxrwxr-x 1 tarryc tarryc  40722 Jan 31  2016 team.xcf
+
+./img/halloffame:
+total 4464
+-rwxrwxr-x 1 tarryc tarryc 233343 Jan 31  2016 ddd_cup_2014.png
+-rwxr--r-- 1 tarryc tarryc 195058 Aug 30  2016 HallofFameAngryDonald.png
+-rwxr--r-- 1 tarryc tarryc 378818 Aug 30  2016 Hall of Fame Angry Donald.xcf
+-rwxr--r-- 1 tarryc tarryc 251022 Feb 20  2016 HallofFamePicture2.png
+-rwxr--r-- 1 tarryc tarryc 251827 Feb 20  2016 HallofFamePicture.png
+-rwxrwxr-x 1 tarryc tarryc 179513 Sep  2  2017 MomKissCup.png
+-rwxrwxr-x 1 tarryc tarryc 350086 Sep  2  2017 MomKissCup.xcf
+-rwxrwxr-x 1 tarryc tarryc 170808 Sep  2  2017 MomVictor.png
+-rwxrwxr-x 1 tarryc tarryc 375362 Sep  2  2017 MomVictor.xcf
+-rw-rw-r-- 1 tarryc tarryc 230335 Aug 12 17:46 Sabrina2ndWin5Crop.png
+-rw-rw-r-- 1 tarryc tarryc 342062 Aug 12 17:46 Sabrina2ndWin5Crop.xcf
+-rw-rw-r-- 1 tarryc tarryc 223846 Aug 12 17:46 Sabrina2ndWinCrop.png
+-rwxrwxr-x 1 tarryc tarryc 164316 Sep  2  2017 SabrinaDisapointment.png
+-rwxrwxr-x 1 tarryc tarryc 358006 Sep  2  2017 SabrinaDisapointment.xcf
+-rwxrwxr-x 1 tarryc tarryc 171661 Sep  2  2017 SabrinaWinner.png
+-rwxrwxr-x 1 tarryc tarryc 360179 Sep  2  2017 SabrinaWinner.xcf
+-rwxrwxr-x 1 tarryc tarryc 127452 Jan 31  2016 thiscouldbeyou.png
+-rw-rw-r-- 1 tarryc tarryc 175636 Sep  2  2017 thiscouldbeyou.xcf
+
+./img/nflicons:
+total 4888
+-rwxrwxr-x 1 tarryc tarryc  79691 Jan 31  2016 ari.png
+-rwxrwxr-x 1 tarryc tarryc  65554 Jan  4  2018 atl.png
+-rw-rw-r-- 1 tarryc tarryc 129668 Jan  4  2018 atl.xcf
+-rwxrwxr-x 1 tarryc tarryc 399725 Jan 31  2016 bal.png
+-rwxrwxr-x 1 tarryc tarryc  76893 Jan 31  2016 buf.png
+-rwxrwxr-x 1 tarryc tarryc 148297 Jan 31  2016 car.png
+-rwxrwxr-x 1 tarryc tarryc 110691 Jan 31  2016 chi.png
+-rwxrwxr-x 1 tarryc tarryc  72479 Jan 31  2016 cin.png
+-rwxrwxr-x 1 tarryc tarryc 209859 Jan  4  2018 cle.png
+-rw-rw-r-- 1 tarryc tarryc 330118 Jan  4  2018 cle.xcf
+-rwxrwxr-x 1 tarryc tarryc  47085 Jan 31  2016 dal.png
+-rwxrwxr-x 1 tarryc tarryc  65385 Jan 31  2016 den.png
+-rwxrwxr-x 1 tarryc tarryc 138294 Jan 31  2016 det.png
+-rwxrwxr-x 1 tarryc tarryc  94937 Jan 31  2016 gb.png
+-rwxrwxr-x 1 tarryc tarryc  46847 Jan 31  2016 hou.png
+-rwxrwxr-x 1 tarryc tarryc  49944 Jan 31  2016 ind.png
+-rwxrwxr-x 1 tarryc tarryc 197201 Jan 31  2016 jac.png
+-rwxrwxr-x 1 tarryc tarryc  74083 Jan 31  2016 kc.png
+-rwxrwxr-x 1 tarryc tarryc  97217 Jan 31  2016 mia.png
+-rwxrwxr-x 1 tarryc tarryc  87389 Jan  4  2018 min.png
+-rw-rw-r-- 1 tarryc tarryc 149250 Jan  4  2018 min.xcf
+-rwxrwxr-x 1 tarryc tarryc  56966 Jan 31  2016 ne.png
+-rwxrwxr-x 1 tarryc tarryc  70455 Jan 31  2016 no.png
+-rwxrwxr-x 1 tarryc tarryc   5426 Oct 10  2016 noselect.png
+-rwxrwxr-x 1 tarryc tarryc  16533 Oct 10  2016 noselect.xcf
+-rwxrwxr-x 1 tarryc tarryc  23865 Jan  4  2018 nyg.png
+-rw-rw-r-- 1 tarryc tarryc 132483 Jan  4  2018 nyg.xcf
+-rwxrwxr-x 1 tarryc tarryc  65514 Jan 31  2016 nyj.png
+-rwxrwxr-x 1 tarryc tarryc  53074 Jan 31  2016 oak.png
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 orig
+-rwxrwxr-x 1 tarryc tarryc  93159 Jan 31  2016 phi.png
+-rwxrwxr-x 1 tarryc tarryc  55616 Jan 31  2016 pit.png
+-rwxrwxr-x 1 tarryc tarryc  75704 Jan  4  2018 sd.png
+-rw-rw-r-- 1 tarryc tarryc 123376 Jan  4  2018 sd.xcf
+-rwxrwxr-x 1 tarryc tarryc 139851 Jan  4  2018 sea.png
+-rw-rw-r-- 1 tarryc tarryc 292893 Jan  4  2018 sea.xcf
+-rwxrwxr-x 1 tarryc tarryc  74056 Jan  4  2018 sf.png
+-rw-rw-r-- 1 tarryc tarryc 146949 Jan  4  2018 sf.xcf
+-rwxrwxr-x 1 tarryc tarryc   6067 Jan 31  2016 stl-orig.png
+-rwxrwxr-x 1 tarryc tarryc  81166 Jan  4  2018 stl.png
+-rw-rw-r-- 1 tarryc tarryc 144492 Jan  4  2018 stl.xcf
+-rwxrwxr-x 1 tarryc tarryc  99460 Jan  4  2018 tb.png
+-rw-rw-r-- 1 tarryc tarryc 155591 Jan  4  2018 tb.xcf
+-rwxrwxr-x 1 tarryc tarryc 220862 Jan 31  2016 ten.png
+-rwxrwxr-x 1 tarryc tarryc 103756 Jan 31  2016 was.png
+
+./img/nflicons/orig:
+total 264
+-rwxrwxr-x 1 tarryc tarryc  5358 Jan 31  2016 ari.png
+-rwxrwxr-x 1 tarryc tarryc  5955 Jan 31  2016 atl.png
+-rwxrwxr-x 1 tarryc tarryc  7964 Jan 31  2016 bal.png
+-rwxrwxr-x 1 tarryc tarryc  4778 Jan 31  2016 buf.png
+-rwxrwxr-x 1 tarryc tarryc  7144 Jan 31  2016 car.png
+-rwxrwxr-x 1 tarryc tarryc  5693 Jan 31  2016 chi.png
+-rwxrwxr-x 1 tarryc tarryc  5250 Jan 31  2016 cin.png
+-rwxrwxr-x 1 tarryc tarryc  3091 Jan 31  2016 cle.png
+-rwxrwxr-x 1 tarryc tarryc  5365 Jan 31  2016 dal.png
+-rwxrwxr-x 1 tarryc tarryc  4655 Jan 31  2016 den.png
+-rwxrwxr-x 1 tarryc tarryc  6255 Jan 31  2016 det.png
+-rwxrwxr-x 1 tarryc tarryc  4736 Jan 31  2016 gb.png
+-rwxrwxr-x 1 tarryc tarryc  5875 Jan 31  2016 hou.png
+-rwxrwxr-x 1 tarryc tarryc  5007 Jan 31  2016 ind.png
+-rwxrwxr-x 1 tarryc tarryc 10333 Jan 31  2016 jac.png
+-rwxrwxr-x 1 tarryc tarryc  5819 Jan 31  2016 kc.png
+-rwxrwxr-x 1 tarryc tarryc  8576 Jan 31  2016 mia.png
+-rwxrwxr-x 1 tarryc tarryc 10064 Jan 31  2016 min.png
+-rwxrwxr-x 1 tarryc tarryc  4800 Jan 31  2016 ne.png
+-rwxrwxr-x 1 tarryc tarryc  5674 Jan 31  2016 no.png
+-rwxrwxr-x 1 tarryc tarryc  4400 Jan 31  2016 nyg.png
+-rwxrwxr-x 1 tarryc tarryc  5279 Jan 31  2016 nyj.png
+-rwxrwxr-x 1 tarryc tarryc  5330 Jan 31  2016 oak.png
+-rwxrwxr-x 1 tarryc tarryc  6892 Jan 31  2016 phi.png
+-rwxrwxr-x 1 tarryc tarryc  4761 Jan 31  2016 pit.png
+-rwxrwxr-x 1 tarryc tarryc  5732 Jan 31  2016 sd.png
+-rwxrwxr-x 1 tarryc tarryc  4296 Jan 31  2016 sea.png
+-rwxrwxr-x 1 tarryc tarryc  6654 Jan 31  2016 sf.png
+-rwxrwxr-x 1 tarryc tarryc  6067 Jan 31  2016 stl.png
+-rwxrwxr-x 1 tarryc tarryc  7192 Jan 31  2016 tb.png
+-rwxrwxr-x 1 tarryc tarryc  7518 Jan 31  2016 ten.png
+-rwxrwxr-x 1 tarryc tarryc  6836 Jan 31  2016 was.png
+
+./img/tvicons:
+total 216
+-rwxrwxr-x 1 tarryc tarryc 29891 Jan 31  2016 abc.png
+-rwxrwxr-x 1 tarryc tarryc 11031 Jan 31  2016 cbs.png
+-rwxrwxr-x 1 tarryc tarryc 21274 Jan 31  2016 default.png
+-rwxrwxr-x 1 tarryc tarryc  7834 Jan 31  2016 espn.png
+-rwxrwxr-x 1 tarryc tarryc 45562 Jan 31  2016 fox.png
+-rwxrwxr-x 1 tarryc tarryc 15823 Jan 31  2016 nbc.png
+-rwxrwxr-x 1 tarryc tarryc 17746 Jan 31  2016 nfl.png
+-rwxrwxr-x 1 tarryc tarryc 13813 Jan 31  2016 yahootv.png
+-rwxrwxr-x 1 tarryc tarryc 39980 Jan 31  2016 yahootv.xcf
+
+./mobile:
+total 32
+drwxr-xr-x 12 tarryc tarryc 4096 Oct  3 14:43 app
+drwxr-xr-x  2 tarryc tarryc 4096 Oct  3 14:40 css
+drwxr-xr-x  4 tarryc tarryc 4096 Oct  3 14:40 data
+drwxr-xr-x  2 tarryc tarryc 4096 Oct  3 14:40 emailforms
+drwxr-xr-x  2 tarryc tarryc 4096 Oct  3 14:40 Fireworks
+-rw-r--r--  1 tarryc tarryc 6871 Oct  3 14:40 index.html
+drwxr-xr-x  3 tarryc tarryc 4096 Oct  3 14:40 script
+
+./mobile/app:
+total 56
+drwxr-xr-x 4 tarryc tarryc 12288 Oct  3 14:45 ajax
+drwxr-xr-x 3 tarryc tarryc  4096 Oct  3 14:45 class
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:43 controllers
+-rw-r--r-- 1 tarryc tarryc  6692 Oct  3 14:40 dddAppMobile.js
+drwxr-xr-x 3 tarryc tarryc  4096 Oct  3 14:46 directives
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:42 dist
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:42 factories
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:43 load
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:43 partials
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:42 services
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:42 validations
+
+./mobile/app/ajax:
+total 588
+-rw-r--r-- 1 tarryc tarryc  7839 Oct  3 14:41 addmembergameteampick.php
+-rw-r--r-- 1 tarryc tarryc  4701 Oct  3 14:41 addmembergroup.php
+-rw-r--r-- 1 tarryc tarryc  5298 Oct  3 14:41 addmember.php
+-rw-r--r-- 1 tarryc tarryc 13415 Oct  3 14:49 buildemail-gameweek.php
+-rw-r--r-- 1 tarryc tarryc   242 Oct  3 14:40 buildemail.php
+-rw-r--r-- 1 tarryc tarryc  4777 Oct  3 14:40 buildgameweeks2014.php
+-rw-r--r-- 1 tarryc tarryc  3881 Oct  3 14:41 buildgameweeks2015-orig.php
+-rw-r--r-- 1 tarryc tarryc  4778 Oct  3 14:42 buildgameweeks2015.php
+-rw-r--r-- 1 tarryc tarryc  4777 Oct  3 14:42 buildgameweeks2016.php
+-rw-r--r-- 1 tarryc tarryc  3881 Oct  3 14:41 buildgameweeks.php
+-rw-r--r-- 1 tarryc tarryc  8016 Oct  3 14:41 buildgameweekstats-old.php
+-rw-r--r-- 1 tarryc tarryc 19716 Oct  3 14:41 buildmemberstats.php
+-rw-r--r-- 1 tarryc tarryc 13086 Oct  3 14:40 buildmemberweekstats.php
+-rw-r--r-- 1 tarryc tarryc   896 Oct  3 14:42 buildmysqldump.php
+-rw-r--r-- 1 tarryc tarryc 29060 Oct  3 14:41 buildteamstats.php
+-rw-r--r-- 1 tarryc tarryc  8904 Oct  3 14:41 buildteamweekstats-orig.php
+-rw-r--r-- 1 tarryc tarryc 24939 Oct  3 14:41 buildteamweekstats.php
+-rw-r--r-- 1 tarryc tarryc  3983 Oct  3 14:41 changetemppassword.php
+-rw-r--r-- 1 tarryc tarryc  2212 Oct  3 14:40 convertdaydatetime.php
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:45 dbsql
+-rw-r--r-- 1 tarryc tarryc  2823 Oct  3 14:40 deletemembergroup.php
+-rw-r--r-- 1 tarryc tarryc  2212 Oct  3 14:41 deletemember.php
+-rw-r--r-- 1 tarryc tarryc  3629 Oct  3 14:41 getadminteamweeklyranking.php
+-rw-r--r-- 1 tarryc tarryc  2356 Oct  3 14:42 getallmemberadmin.php
+-rw-r--r-- 1 tarryc tarryc  2118 Oct  3 14:41 getallmembergroupmembers.php
+-rw-r--r-- 1 tarryc tarryc  2408 Oct  3 14:41 getallmembergroup.php
+-rw-r--r-- 1 tarryc tarryc  2319 Oct  3 14:41 getallmembergroups.php
+-rw-r--r-- 1 tarryc tarryc  2409 Oct  3 14:41 getallmember.php
+-rw-r--r-- 1 tarryc tarryc  2193 Oct  3 14:41 getallmembersadmin.php
+-rw-r--r-- 1 tarryc tarryc  2221 Oct  3 14:41 getallmembers.php
+-rw-r--r-- 1 tarryc tarryc  2851 Oct  3 14:42 getcurrentseasonweek.php
+-rw-r--r-- 1 tarryc tarryc  1736 Oct  3 14:40 getcurrentweek.php
+-rw-r--r-- 1 tarryc tarryc  4132 Oct  3 14:40 getlatepickbeforemembers.php
+-rw-r--r-- 1 tarryc tarryc  4131 Oct  3 14:41 getlatepickdayofmembers.php
+-rw-r--r-- 1 tarryc tarryc  4411 Oct  3 14:41 getlatepickmembers.php
+-rw-r--r-- 1 tarryc tarryc  4095 Oct  3 14:41 getleadermembers.php
+-rw-r--r-- 1 tarryc tarryc  2409 Oct  3 14:40 getmember.php
+-rw-r--r-- 1 tarryc tarryc  4523 Oct  3 14:41 getmemberpicklist.php
+-rw-r--r-- 1 tarryc tarryc  6493 Oct  3 14:42 getmemberprofiledialog.php
+-rw-r--r-- 1 tarryc tarryc  2221 Oct  3 14:41 getmembers.php
+-rw-r--r-- 1 tarryc tarryc  3785 Oct  3 14:41 getmemberteampicklistdialog.php
+-rw-r--r-- 1 tarryc tarryc  3673 Oct  3 14:42 getmemberweekstats.php
+-rw-r--r-- 1 tarryc tarryc  2075 Oct  3 14:41 getnetworks.php
+-rw-r--r-- 1 tarryc tarryc  2715 Oct  3 14:42 getnflbyeweekmemberteams.php
+-rw-r--r-- 1 tarryc tarryc  2799 Oct  3 14:40 getnflcurrentseasonweek.php
+-rw-r--r-- 1 tarryc tarryc  3259 Oct  3 14:42 getnflgamesteams.php
+-rw-r--r-- 1 tarryc tarryc  2091 Oct  3 14:41 getnflgametypes.php
+-rw-r--r-- 1 tarryc tarryc  4063 Oct  3 14:41 getnflgameweekmemberteampicks.php
+-rw-r--r-- 1 tarryc tarryc  2458 Oct  3 14:42 getnflgameweekmemberteamsexpired.php
+-rw-r--r-- 1 tarryc tarryc  5881 Oct  3 14:41 getnflgameweekmemberteams.php
+-rw-r--r-- 1 tarryc tarryc  3524 Oct  3 14:42 getnflgameweekteams.php
+-rw-r--r-- 1 tarryc tarryc  2176 Oct  3 14:42 getNFLpostseasonstatus.php
+-rw-r--r-- 1 tarryc tarryc  2060 Oct  3 14:42 getnflrss.php
+-rw-r--r-- 1 tarryc tarryc  2202 Oct  3 14:42 getnflseasons.php
+-rw-r--r-- 1 tarryc tarryc  2341 Oct  3 14:42 getnflseasonweeks.php
+-rw-r--r-- 1 tarryc tarryc  2228 Oct  3 14:42 getnflteam.php
+-rw-r--r-- 1 tarryc tarryc  2200 Oct  3 14:41 getnflteams.php
+-rw-r--r-- 1 tarryc tarryc  7282 Oct  3 14:42 getnflteamstats.php
+-rw-r--r-- 1 tarryc tarryc   358 Oct  3 14:41 getnow.php
+-rw-r--r-- 1 tarryc tarryc  2743 Oct  3 14:41 getrequestitems.php
+-rw-r--r-- 1 tarryc tarryc   762 Oct  3 14:42 getrss.php
+-rw-r--r-- 1 tarryc tarryc  4059 Oct  3 14:41 getteampowerrankings.php
+-rw-r--r-- 1 tarryc tarryc  2875 Oct  3 14:41 getteamseasoninfo.php
+-rw-r--r-- 1 tarryc tarryc  3488 Oct  3 14:42 getteamspowerrankings.php
+-rw-r--r-- 1 tarryc tarryc  3897 Oct  3 14:41 getteamsstatscurrentweek.php
+-rw-r--r-- 1 tarryc tarryc  6114 Oct  3 14:40 getteamstatsdialog.php
+-rw-r--r-- 1 tarryc tarryc  6500 Oct  3 14:41 getteamweekyranking.php
+-rw-r--r-- 1 tarryc tarryc  8572 Oct  3 14:42 importteamweeklyrankfile.php
+-rw-r--r-- 1 tarryc tarryc  3990 Oct  3 14:40 initializegameweekstats-old.php
+-rw-r--r-- 1 tarryc tarryc  7608 Oct  3 14:41 initializememberweekstats.php
+-rw-r--r-- 1 tarryc tarryc  7480 Oct  3 14:42 initializeteamweekstats.php
+-rw-r--r-- 1 tarryc tarryc  3303 Oct  3 14:41 login.php
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:45 logs
+-rw-r--r-- 1 tarryc tarryc  2009 Oct  3 14:41 mailer.php
+-rw-r--r-- 1 tarryc tarryc  4529 Oct  3 14:40 makegametimestamp.php
+-rw-r--r-- 1 tarryc tarryc  4291 Oct  3 14:42 memberupdatemember.php
+-rw-r--r-- 1 tarryc tarryc  4385 Oct  3 14:41 registeremail.php
+-rw-r--r-- 1 tarryc tarryc   812 Oct  3 14:41 runphpmodule.php
+-rw-r--r-- 1 tarryc tarryc  8008 Oct  3 14:41 saveadminteamweeklyranking.php
+-rw-r--r-- 1 tarryc tarryc  3239 Oct  3 14:41 savegamedatetimeweekteamsinfo.php
+-rw-r--r-- 1 tarryc tarryc  2795 Oct  3 14:41 savegameweekteamsnetworkinfo.php
+-rw-r--r-- 1 tarryc tarryc  2791 Oct  3 14:41 savegameweekteamsscoreinfo.php
+-rw-r--r-- 1 tarryc tarryc  2190 Oct  3 14:40 savememberavatar.php
+-rw-r--r-- 1 tarryc tarryc  2081 Oct  3 14:40 sendemail2members-orininal.php
+-rw-r--r-- 1 tarryc tarryc   600 Oct  3 14:41 sendemail2members.php
+-rw-r--r-- 1 tarryc tarryc  1292 Oct  3 14:41 testdate.php
+-rw-r--r-- 1 tarryc tarryc   325 Oct  3 14:41 testmail.php
+-rw-r--r-- 1 tarryc tarryc    79 Oct  3 14:40 testpear.php
+-rw-r--r-- 1 tarryc tarryc    66 Oct  3 14:41 test.php
+-rw-r--r-- 1 tarryc tarryc  6389 Oct  3 14:42 untitled.php
+-rw-r--r-- 1 tarryc tarryc  4539 Oct  3 14:41 updategameinfo.php
+-rw-r--r-- 1 tarryc tarryc  3005 Oct  3 14:41 updatemembergroup.php
+-rw-r--r-- 1 tarryc tarryc  4396 Oct  3 14:41 updatemember.php
+-rw-r--r-- 1 tarryc tarryc  2791 Oct  3 14:41 updateteaminfo.php
+-rw-r--r-- 1 tarryc tarryc  3796 Oct  3 14:41 updateteamseasoninfo.php
+
+./mobile/app/ajax/dbsql:
+total 27984
+-rw-r--r-- 1 tarryc tarryc 12063169 Oct  3 14:45 ddd-dump-0920201823455.sql
+-rw-r--r-- 1 tarryc tarryc  8291797 Oct  3 14:45 ddd-dump-11012017191025.sql
+-rw-r--r-- 1 tarryc tarryc  8291797 Oct  3 14:46 ddd-dump-findme-1101201719853.sql
+
+./mobile/app/ajax/logs:
+total 4
+-rw-r--r-- 1 tarryc tarryc 690 Oct  3 14:45 access.log
+-rw-r--r-- 1 tarryc tarryc   0 Oct  3 14:45 error.log
+
+./mobile/app/class:
+total 24
+-rw-r--r-- 1 tarryc tarryc  608 Oct  3 14:42 class.AccessLog.php
+-rw-r--r-- 1 tarryc tarryc  605 Oct  3 14:42 class.ErrorLog.php
+-rw-r--r-- 1 tarryc tarryc 1426 Oct  3 14:42 class.Log.php
+-rw-r--r-- 1 tarryc tarryc 3755 Oct  3 14:42 class.MailerDDD.php
+-rw-r--r-- 1 tarryc tarryc 2859 Oct  3 14:42 class.MailerHA.php
+drwxr-xr-x 2 tarryc tarryc 4096 Oct  3 14:46 logs
+
+./mobile/app/class/logs:
+total 0
+-rw-r--r-- 1 tarryc tarryc 0 Oct  3 14:46 access.log
+-rw-r--r-- 1 tarryc tarryc 0 Oct  3 14:46 error.log
+
+./mobile/app/controllers:
+total 384
+-rw-r--r-- 1 tarryc tarryc 69387 Oct  3 14:42 adminController.js
+-rw-r--r-- 1 tarryc tarryc  1988 Oct  3 14:42 awardsController.js
+-rw-r--r-- 1 tarryc tarryc 29052 Oct  3 14:43 controllers-ag-grid.js
+-rw-r--r-- 1 tarryc tarryc 89704 Oct  3 14:42 controllers-new.js
+-rw-r--r-- 1 tarryc tarryc 43042 Oct  3 14:43 controllers-wip.js
+-rw-r--r-- 1 tarryc tarryc   370 Oct  3 14:42 faqsController.js
+-rw-r--r-- 1 tarryc tarryc   166 Oct  3 14:43 fireworksController.js
+-rw-r--r-- 1 tarryc tarryc    52 Oct  3 14:42 firstController.js
+-rw-r--r-- 1 tarryc tarryc 47267 Oct  3 14:42 gamesController.js
+-rw-r--r-- 1 tarryc tarryc   140 Oct  3 14:43 happyholidaysController.js
+-rw-r--r-- 1 tarryc tarryc    38 Oct  3 14:43 lastController.js
+-rw-r--r-- 1 tarryc tarryc   446 Oct  3 14:43 newsopinionController.js
+-rw-r--r-- 1 tarryc tarryc  7913 Oct  3 14:42 parenthomeController.js
+-rw-r--r-- 1 tarryc tarryc 13715 Oct  6 18:24 playerstatsController.js
+-rw-r--r-- 1 tarryc tarryc 52748 Oct  3 14:43 teamsController.js
+
+./mobile/app/directives:
+total 8
+-rw-r--r-- 1 tarryc tarryc 2848 Oct  3 14:42 directives.js
+drwxr-xr-x 2 tarryc tarryc 4096 Oct  3 14:46 templates
+
+./mobile/app/directives/templates:
+total 8
+-rw-r--r-- 1 tarryc tarryc 2273 Oct  3 14:46 statelistdisplay.html
+-rw-r--r-- 1 tarryc tarryc  162 Oct  3 14:46 yesnolistdisplay.html
+
+./mobile/app/dist:
+total 704
+-rw-r--r-- 1 tarryc tarryc   5288 Oct  3 14:42 angular-grid.css
+-rw-r--r-- 1 tarryc tarryc  62135 Oct  3 14:42 angular-grid.d.ts
+-rw-r--r-- 1 tarryc tarryc 449571 Oct  3 14:42 angular-grid.js
+-rw-r--r-- 1 tarryc tarryc   4092 Oct  3 14:42 angular-grid.min.css
+-rw-r--r-- 1 tarryc tarryc 168019 Oct  3 14:42 angular-grid.min.js
+-rw-r--r-- 1 tarryc tarryc   4089 Oct  3 14:42 theme-dark.css
+-rw-r--r-- 1 tarryc tarryc   3297 Oct  3 14:42 theme-dark.min.css
+-rw-r--r-- 1 tarryc tarryc   4707 Oct  3 14:42 theme-fresh.css
+-rw-r--r-- 1 tarryc tarryc   3878 Oct  3 14:42 theme-fresh.min.css
+
+./mobile/app/factories:
+total 48
+-rw-r--r-- 1 tarryc tarryc 17364 Oct  3 14:42 factories.js
+-rw-r--r-- 1 tarryc tarryc   394 Oct  3 14:42 loginfactory.js
+-rw-r--r-- 1 tarryc tarryc  6505 Oct  3 14:42 membersfactory.js
+-rw-r--r-- 1 tarryc tarryc  2951 Oct  3 14:42 scriptsfactory.js
+-rw-r--r-- 1 tarryc tarryc 10481 Oct  3 14:42 teamsfactory.js
+
+./mobile/app/load:
+total 4
+-rw-r--r-- 1 tarryc tarryc 442 Oct  3 14:43 keyrequestsendemail.html
+
+./mobile/app/partials:
+total 372
+-rw-r--r-- 1 tarryc tarryc  2333 Oct  3 14:43 addavatar.html
+-rw-r--r-- 1 tarryc tarryc  3369 Oct  3 14:43 addmembergroup.html
+-rw-r--r-- 1 tarryc tarryc 10266 Oct  3 14:43 addmember.html
+-rw-r--r-- 1 tarryc tarryc 19179 Oct  3 14:43 faqs.html
+-rw-r--r-- 1 tarryc tarryc  1292 Oct  3 14:43 fireworks.html
+-rw-r--r-- 1 tarryc tarryc  7779 Oct  3 14:43 gameinfo.html
+-rw-r--r-- 1 tarryc tarryc  4708 Oct  3 14:43 gamenetworkinfo.html
+-rw-r--r-- 1 tarryc tarryc  6861 Oct  3 14:43 gameranking.html
+-rw-r--r-- 1 tarryc tarryc  5492 Oct  3 14:43 gameteamdatetimeinfo.html
+-rw-r--r-- 1 tarryc tarryc  4972 Oct  3 14:43 gameteamscoresinfo.html
+-rw-r--r-- 1 tarryc tarryc  5461 Oct  3 14:43 gameweeks.html
+-rw-r--r-- 1 tarryc tarryc  2695 Oct  3 14:43 halloffame.html
+-rw-r--r-- 1 tarryc tarryc  1770 Oct  3 14:43 happyholidays.html
+-rw-r--r-- 1 tarryc tarryc 11136 Oct  3 14:43 home.html
+-rw-r--r-- 1 tarryc tarryc  6465 Oct  3 14:43 leaderboard.html
+-rw-r--r-- 1 tarryc tarryc  2540 Oct  3 14:43 login.html
+-rw-r--r-- 1 tarryc tarryc  8757 Oct  3 14:43 memberupdatemember.html
+-rw-r--r-- 1 tarryc tarryc  3630 Oct  3 14:43 memberweekly.html
+-rw-r--r-- 1 tarryc tarryc  2191 Oct  3 14:43 memberweekly-original.html
+-rw-r--r-- 1 tarryc tarryc   448 Oct  3 14:43 newsopinion.html
+-rw-r--r-- 1 tarryc tarryc  3273 Oct  3 14:43 nflnews.html
+-rw-r--r-- 1 tarryc tarryc  2425 Oct  3 14:43 nflnews-new.html
+-rw-r--r-- 1 tarryc tarryc  2465 Oct  3 14:43 nflnews-orig.html
+-rw-r--r-- 1 tarryc tarryc 15626 Oct  3 14:43 pickgames2.html
+-rw-r--r-- 1 tarryc tarryc  8191 Oct  3 14:43 pickgames2-old.html
+-rw-r--r-- 1 tarryc tarryc  2175 Oct  3 14:43 pickgames-ag-grid.html
+-rw-r--r-- 1 tarryc tarryc  8493 Oct  3 14:43 pickgames.html
+-rw-r--r-- 1 tarryc tarryc  4954 Oct  3 14:43 playerstatsmemberweekly.html
+-rw-r--r-- 1 tarryc tarryc  4842 Oct  3 14:43 playerstatstotalpercentage.html
+-rw-r--r-- 1 tarryc tarryc  4902 Oct  3 14:43 playerstatstotalwins.html
+-rw-r--r-- 1 tarryc tarryc  1744 Oct  3 14:43 playoffstandings.html
+-rw-r--r-- 1 tarryc tarryc  5923 Oct  3 14:43 sendplayeremail.html
+-rw-r--r-- 1 tarryc tarryc  1685 Oct  3 14:43 teamdiscovery.html
+-rw-r--r-- 1 tarryc tarryc  6483 Oct  3 14:43 teaminfo.html
+-rw-r--r-- 1 tarryc tarryc  2814 Oct  3 14:43 teamseasoninfo.html
+-rw-r--r-- 1 tarryc tarryc 13182 Oct  3 14:43 teamstandings.html
+-rw-r--r-- 1 tarryc tarryc  3570 Oct  3 14:43 teamstatscharts.html
+-rw-r--r-- 1 tarryc tarryc   332 Oct  3 14:43 teamstats.html
+-rw-r--r-- 1 tarryc tarryc 13637 Oct  3 14:43 teamweeklyranking.html
+-rw-r--r-- 1 tarryc tarryc  3793 Oct  3 14:43 updatemembergroup.html
+-rw-r--r-- 1 tarryc tarryc 11684 Oct  3 14:43 updatemember.html
+-rw-r--r-- 1 tarryc tarryc  3771 Oct  3 14:43 viewallpicks.html
+-rw-r--r-- 1 tarryc tarryc   443 Oct  3 14:43 viewgames.html
+-rw-r--r-- 1 tarryc tarryc 13794 Oct  3 14:43 viewselectpickgames.html
+-rw-r--r-- 1 tarryc tarryc 12022 Oct  3 14:43 viewtotalpickgames.html
+-rw-r--r-- 1 tarryc tarryc 11057 Oct  3 14:43 weeklybuilds.html
+-rw-r--r-- 1 tarryc tarryc 12352 Oct  3 14:43 weeklyscripts.html
+
+./mobile/app/services:
+total 44
+-rw-r--r-- 1 tarryc tarryc 1325 Oct  3 14:42 chartservice.js
+-rw-r--r-- 1 tarryc tarryc   84 Oct  3 14:42 dddservice.js
+-rw-r--r-- 1 tarryc tarryc 8402 Oct  3 14:42 dddservice-old.js
+-rw-r--r-- 1 tarryc tarryc 3316 Oct  3 14:42 loginservice.js
+-rw-r--r-- 1 tarryc tarryc  403 Oct  3 14:42 msgservice.js
+-rw-r--r-- 1 tarryc tarryc 5387 Oct  3 14:42 selectlistservice.js
+-rw-r--r-- 1 tarryc tarryc 7718 Oct  3 14:42 teamservice.js
+
+./mobile/app/validations:
+total 4
+-rw-r--r-- 1 tarryc tarryc 2519 Oct  3 14:42 validate.js
+
+./mobile/css:
+total 20
+-rw-r--r-- 1 tarryc tarryc  1121 Oct  3 14:40 basic.css
+-rw-r--r-- 1 tarryc tarryc 14218 Oct  3 14:40 dddMobile.css
+
+./mobile/data:
+total 440
+-rw-r--r-- 1 tarryc tarryc 19336 Oct  3 14:40 ddd-dump-tammy.sql
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:40 importfiles
+-rw-r--r-- 1 tarryc tarryc 16995 Oct  3 14:40 nfl2014.csv
+-rw-r--r-- 1 tarryc tarryc 50046 Oct  3 14:40 nfl2014.json
+-rw-r--r-- 1 tarryc tarryc 14649 Oct  3 14:40 nfl2014-scores.csv
+-rw-r--r-- 1 tarryc tarryc 50075 Oct  3 14:40 nfl2014-scores.json
+-rw-r--r-- 1 tarryc tarryc 16995 Oct  3 14:40 nfl2014season.csv
+-rw-r--r-- 1 tarryc tarryc 50313 Oct  3 14:40 nfl2014-test.json
+-rw-r--r-- 1 tarryc tarryc 35820 Oct  3 14:40 nfl2015.json
+-rw-r--r-- 1 tarryc tarryc  9945 Oct  3 14:40 nfl-2015-schedule.csv
+-rw-r--r-- 1 tarryc tarryc 36249 Oct  3 14:40 nfl2016.json
+-rw-r--r-- 1 tarryc tarryc 10060 Oct  3 14:40 nfl-2016-schedule.csv
+drwxr-xr-x 2 tarryc tarryc  4096 Oct  3 14:40 teamweekranking2015
+-rw-r--r-- 1 tarryc tarryc 22900 Oct  3 14:40 years_2014_games.csv
+-rw-r--r-- 1 tarryc tarryc 80270 Oct  3 14:40 years_2014_games.json
+
+./mobile/data/importfiles:
+total 160
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w10After.csv
+-rw-r--r-- 1 tarryc tarryc 1579 Oct  3 14:40 teamweekrank2015w10P.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w11After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w11Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w12After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w12Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w13After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w13Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w14After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w14Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w15After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w15Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w16After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w16Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w17After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w17Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w18After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w18Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w19After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w19Before.csv
+-rw-r--r-- 1 tarryc tarryc 1516 Oct  3 14:40 teamweekrank2015w1.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2015w20Before.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w2.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w3.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w4.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w5.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w6.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w7.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w8A.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w9A.csv
+-rw-r--r-- 1 tarryc tarryc 1548 Oct  3 14:40 teamweekrank2015w9P.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w1After.csv
+-rw-r--r-- 1 tarryc tarryc 1396 Oct  3 14:40 teamweekrank2016w1Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w2After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w2Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w3After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w3Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w4After.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w4Before.csv
+-rw-r--r-- 1 tarryc tarryc 1580 Oct  3 14:40 teamweekrank2016w5Before.csv
+
+./mobile/data/teamweekranking2015:
+total 72
+-rw-r--r-- 1 tarryc tarryc 16543 Oct  3 14:40 Off Def Total Weekly Stat-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1591 Oct  3 14:40 Team Week 2 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1392 Oct  3 14:40 Team Week 3 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1591 Oct  3 14:40 Team Week 4 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1616 Oct  3 14:40 Team Week 5 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1591 Oct  3 14:40 Team Week 6 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1591 Oct  3 14:40 Team Week 7 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1371 Oct  3 14:40 Team Week 8 Stats-Table 1.csv
+-rw-r--r-- 1 tarryc tarryc  1580 Oct  3 14:40 teamweekrank2015w10After.csv
+-rw-r--r-- 1 tarryc tarryc  1580 Oct  3 14:40 teamweekrank2015w11Before.csv
+-rw-r--r-- 1 tarryc tarryc  1548 Oct  3 14:40 teamweekrank2015w1.csv
+-rw-r--r-- 1 tarryc tarryc 11553 Oct  3 14:40 teamweekrank2015w1.json
+
+./mobile/emailforms:
+total 72
+-rw-r--r-- 1 tarryc tarryc  445 Oct  3 14:40 avatar-change-email.html
+-rw-r--r-- 1 tarryc tarryc 1067 Oct  3 14:40 avatar-login-change-email.html
+-rw-r--r-- 1 tarryc tarryc 5240 Oct  3 14:40 gameweek-email.html
+-rw-r--r-- 1 tarryc tarryc 3648 Oct  3 14:40 gameweek-long-email.html
+-rw-r--r-- 1 tarryc tarryc 4140 Oct  3 14:40 gameweek-short-email.html
+-rw-r--r-- 1 tarryc tarryc  559 Oct  3 14:40 latepicksdayof-email.html
+-rw-r--r-- 1 tarryc tarryc  642 Oct  3 14:40 latepicks-email.html
+-rw-r--r-- 1 tarryc tarryc 1043 Oct  3 14:40 login-change-email.html
+-rw-r--r-- 1 tarryc tarryc  529 Oct  3 14:40 oops-email.html
+-rw-r--r-- 1 tarryc tarryc 1940 Oct  3 14:40 product-info.html
+-rw-r--r-- 1 tarryc tarryc  534 Oct  3 14:40 sitedown-email.html
+-rw-r--r-- 1 tarryc tarryc  631 Oct  3 14:40 siteproblems-email.html
+-rw-r--r-- 1 tarryc tarryc  571 Oct  3 14:40 teamweeklyrankings-email.html
+-rw-r--r-- 1 tarryc tarryc 4015 Oct  3 14:40 welcome-email.html
+-rw-r--r-- 1 tarryc tarryc 5141 Oct  3 14:40 welcome-new-season-email.html
+
+./mobile/Fireworks:
+total 0
+
+./mobile/script:
+total 156
+drwxr-xr-x 5 tarryc tarryc  4096 Oct  3 14:44 bwip-js
+-rw-r--r-- 1 tarryc tarryc  7770 Oct  3 14:40 dddMobile.js
+-rw-r--r-- 1 tarryc tarryc  9614 Oct  3 14:40 jqFancyTransitions.1.8.js
+-rw-r--r-- 1 tarryc tarryc  1572 Oct  3 14:40 jquery.rotate.js
+-rw-r--r-- 1 tarryc tarryc 21768 Oct  3 14:40 jquery.slides.js
+-rw-r--r-- 1 tarryc tarryc   568 Oct  3 14:40 rssfeed.js
+-rw-r--r-- 1 tarryc tarryc 98636 Oct  3 14:40 typeahead.js
+
+./mobile/script/bwip-js:
+total 684
+-rw-r--r-- 1 tarryc tarryc 628258 Oct  3 14:40 barcode-2013-01-25.ps
+-rw-r--r-- 1 tarryc tarryc  26672 Oct  3 14:40 bwip.js
+drwxr-xr-x 2 tarryc tarryc   4096 Oct  3 14:45 bwipp
+-rw-r--r-- 1 tarryc tarryc   6156 Oct  3 14:40 demo.html
+drwxr-xr-x 2 tarryc tarryc   4096 Oct  3 14:44 fonts
+drwxr-xr-x 2 tarryc tarryc   4096 Oct  3 14:44 lib
+-rw-r--r-- 1 tarryc tarryc   2700 Oct  3 14:40 LICENSE
+-rw-r--r-- 1 tarryc tarryc  11774 Oct  3 14:40 node-bwipjs
+-rw-r--r-- 1 tarryc tarryc    449 Oct  3 14:40 node-demo
+
+./mobile/script/bwip-js/bwipp:
+total 5832
+-rw-r--r-- 1 tarryc tarryc  82282 Oct  3 14:44 auspost.js
+-rw-r--r-- 1 tarryc tarryc 191753 Oct  3 14:44 azteccode.js
+-rw-r--r-- 1 tarryc tarryc  35909 Oct  3 14:44 bc412.js
+-rw-r--r-- 1 tarryc tarryc  39660 Oct  3 14:45 channelcode.js
+-rw-r--r-- 1 tarryc tarryc 201772 Oct  3 14:44 codablockf.js
+-rw-r--r-- 1 tarryc tarryc  53097 Oct  3 14:44 code11.js
+-rw-r--r-- 1 tarryc tarryc 154038 Oct  3 14:44 code128.js
+-rw-r--r-- 1 tarryc tarryc 249443 Oct  3 14:44 code16k.js
+-rw-r--r-- 1 tarryc tarryc  45537 Oct  3 14:45 code2of5.js
+-rw-r--r-- 1 tarryc tarryc  23224 Oct  3 14:44 code32.js
+-rw-r--r-- 1 tarryc tarryc  32514 Oct  3 14:45 code39ext.js
+-rw-r--r-- 1 tarryc tarryc  47006 Oct  3 14:44 code39.js
+-rw-r--r-- 1 tarryc tarryc 289172 Oct  3 14:44 code49.js
+-rw-r--r-- 1 tarryc tarryc  34553 Oct  3 14:44 code93ext.js
+-rw-r--r-- 1 tarryc tarryc  46503 Oct  3 14:44 code93.js
+-rw-r--r-- 1 tarryc tarryc 142559 Oct  3 14:44 codeone.js
+-rw-r--r-- 1 tarryc tarryc  21769 Oct  3 14:45 daft.js
+-rw-r--r-- 1 tarryc tarryc  28387 Oct  3 14:45 databarexpandedcomposite.js
+-rw-r--r-- 1 tarryc tarryc 386288 Oct  3 14:45 databarexpanded.js
+-rw-r--r-- 1 tarryc tarryc  27192 Oct  3 14:44 databarexpandedstackedcomposite.js
+-rw-r--r-- 1 tarryc tarryc   9102 Oct  3 14:45 databarexpandedstacked.js
+-rw-r--r-- 1 tarryc tarryc  19401 Oct  3 14:45 databarlimitedcomposite.js
+-rw-r--r-- 1 tarryc tarryc  99822 Oct  3 14:45 databarlimited.js
+-rw-r--r-- 1 tarryc tarryc  29471 Oct  3 14:44 databaromnicomposite.js
+-rw-r--r-- 1 tarryc tarryc 164165 Oct  3 14:44 databaromni.js
+-rw-r--r-- 1 tarryc tarryc  27003 Oct  3 14:45 databarstackedcomposite.js
+-rw-r--r-- 1 tarryc tarryc   9038 Oct  3 14:44 databarstacked.js
+-rw-r--r-- 1 tarryc tarryc  27045 Oct  3 14:45 databarstackedomnicomposite.js
+-rw-r--r-- 1 tarryc tarryc   9058 Oct  3 14:44 databarstackedomni.js
+-rw-r--r-- 1 tarryc tarryc  29526 Oct  3 14:45 databartruncatedcomposite.js
+-rw-r--r-- 1 tarryc tarryc   9048 Oct  3 14:45 databartruncated.js
+-rw-r--r-- 1 tarryc tarryc 194076 Oct  3 14:44 datamatrix.js
+-rw-r--r-- 1 tarryc tarryc  13558 Oct  3 14:44 ean13composite.js
+-rw-r--r-- 1 tarryc tarryc  70074 Oct  3 14:44 ean13.js
+-rw-r--r-- 1 tarryc tarryc  22536 Oct  3 14:44 ean14.js
+-rw-r--r-- 1 tarryc tarryc  29731 Oct  3 14:44 ean2.js
+-rw-r--r-- 1 tarryc tarryc  33941 Oct  3 14:44 ean5.js
+-rw-r--r-- 1 tarryc tarryc  14099 Oct  3 14:44 ean8composite.js
+-rw-r--r-- 1 tarryc tarryc  61250 Oct  3 14:44 ean8.js
+-rw-r--r-- 1 tarryc tarryc  20183 Oct  3 14:44 flattermarken.js
+-rw-r--r-- 1 tarryc tarryc  29770 Oct  3 14:45 gs1-128composite.js
+-rw-r--r-- 1 tarryc tarryc  55016 Oct  3 14:45 gs1-128.js
+-rw-r--r-- 1 tarryc tarryc 300585 Oct  3 14:44 gs1-cc.js
+-rw-r--r-- 1 tarryc tarryc  46818 Oct  3 14:45 gs1datamatrix.js
+-rw-r--r-- 1 tarryc tarryc  14795 Oct  3 14:45 hibccodablockf.js
+-rw-r--r-- 1 tarryc tarryc  23143 Oct  3 14:44 hibccode128.js
+-rw-r--r-- 1 tarryc tarryc  23667 Oct  3 14:44 hibccode39.js
+-rw-r--r-- 1 tarryc tarryc  14795 Oct  3 14:45 hibcdatamatrix.js
+-rw-r--r-- 1 tarryc tarryc  15954 Oct  3 14:44 hibcmicropdf417.js
+-rw-r--r-- 1 tarryc tarryc  15904 Oct  3 14:45 hibcpdf417.js
+-rw-r--r-- 1 tarryc tarryc  14755 Oct  3 14:45 hibcqrcode.js
+-rw-r--r-- 1 tarryc tarryc  24401 Oct  3 14:44 identcode.js
+-rw-r--r-- 1 tarryc tarryc  48905 Oct  3 14:45 interleaved2of5.js
+-rw-r--r-- 1 tarryc tarryc  50101 Oct  3 14:45 isbn.js
+-rw-r--r-- 1 tarryc tarryc  44723 Oct  3 14:45 ismn.js
+-rw-r--r-- 1 tarryc tarryc  39288 Oct  3 14:45 issn.js
+-rw-r--r-- 1 tarryc tarryc  17033 Oct  3 14:45 itf14.js
+-rw-r--r-- 1 tarryc tarryc  49106 Oct  3 14:44 japanpost.js
+-rw-r--r-- 1 tarryc tarryc  32549 Oct  3 14:44 kix.js
+-rw-r--r-- 1 tarryc tarryc  24401 Oct  3 14:45 leitcode.js
+-rw-r--r-- 1 tarryc tarryc 209463 Oct  3 14:44 maxicode.js
+-rw-r--r-- 1 tarryc tarryc 156880 Oct  3 14:45 micropdf417.js
+-rw-r--r-- 1 tarryc tarryc  54536 Oct  3 14:44 msi.js
+-rw-r--r-- 1 tarryc tarryc 114257 Oct  3 14:44 onecode.js
+-rw-r--r-- 1 tarryc tarryc 141878 Oct  3 14:44 pdf417.js
+-rw-r--r-- 1 tarryc tarryc  24264 Oct  3 14:44 pharmacode2.js
+-rw-r--r-- 1 tarryc tarryc  22619 Oct  3 14:44 pharmacode.js
+-rw-r--r-- 1 tarryc tarryc  43821 Oct  3 14:45 planet.js
+-rw-r--r-- 1 tarryc tarryc  50292 Oct  3 14:44 plessey.js
+-rw-r--r-- 1 tarryc tarryc 121076 Oct  3 14:45 posicode.js
+-rw-r--r-- 1 tarryc tarryc  44852 Oct  3 14:45 postnet.js
+-rw-r--r-- 1 tarryc tarryc  20880 Oct  3 14:44 pzn.js
+-rw-r--r-- 1 tarryc tarryc 416852 Oct  3 14:45 qrcode.js
+-rw-r--r-- 1 tarryc tarryc  43127 Oct  3 14:45 rationalizedCodabar.js
+-rw-r--r-- 1 tarryc tarryc  10667 Oct  3 14:44 raw.js
+-rw-r--r-- 1 tarryc tarryc  86037 Oct  3 14:45 renlinear.js
+-rw-r--r-- 1 tarryc tarryc  23233 Oct  3 14:44 renmatrix.js
+-rw-r--r-- 1 tarryc tarryc   8388 Oct  3 14:44 renmaximatrix.js
+-rw-r--r-- 1 tarryc tarryc  43698 Oct  3 14:45 royalmail.js
+-rw-r--r-- 1 tarryc tarryc  22540 Oct  3 14:44 sscc18.js
+-rw-r--r-- 1 tarryc tarryc  12218 Oct  3 14:44 symbol.js
+-rw-r--r-- 1 tarryc tarryc  52136 Oct  3 14:44 telepen.js
+-rw-r--r-- 1 tarryc tarryc  13548 Oct  3 14:44 upcacomposite.js
+-rw-r--r-- 1 tarryc tarryc  66817 Oct  3 14:44 upca.js
+-rw-r--r-- 1 tarryc tarryc  16159 Oct  3 14:44 upcecomposite.js
+-rw-r--r-- 1 tarryc tarryc  81440 Oct  3 14:44 upce.js
+
+./mobile/script/bwip-js/fonts:
+total 420
+-rw-r--r-- 1 tarryc tarryc  5019 Oct  3 14:44 ocrb10-01.js
+-rw-r--r-- 1 tarryc tarryc  7594 Oct  3 14:44 ocrb10-02.js
+-rw-r--r-- 1 tarryc tarryc 10006 Oct  3 14:44 ocrb10-03.js
+-rw-r--r-- 1 tarryc tarryc 13592 Oct  3 14:44 ocrb10-04.js
+-rw-r--r-- 1 tarryc tarryc 16551 Oct  3 14:44 ocrb10-05.js
+-rw-r--r-- 1 tarryc tarryc 19079 Oct  3 14:44 ocrb10-06.js
+-rw-r--r-- 1 tarryc tarryc 21775 Oct  3 14:44 ocrb10-07.js
+-rw-r--r-- 1 tarryc tarryc 24226 Oct  3 14:44 ocrb10-08.js
+-rw-r--r-- 1 tarryc tarryc 27216 Oct  3 14:44 ocrb10-09.js
+-rw-r--r-- 1 tarryc tarryc 29801 Oct  3 14:44 ocrb10-10.js
+-rw-r--r-- 1 tarryc tarryc  5286 Oct  3 14:44 ocrb12-01.js
+-rw-r--r-- 1 tarryc tarryc  9123 Oct  3 14:44 ocrb12-02.js
+-rw-r--r-- 1 tarryc tarryc 12684 Oct  3 14:44 ocrb12-03.js
+-rw-r--r-- 1 tarryc tarryc 16305 Oct  3 14:44 ocrb12-04.js
+-rw-r--r-- 1 tarryc tarryc 19898 Oct  3 14:44 ocrb12-05.js
+-rw-r--r-- 1 tarryc tarryc 23240 Oct  3 14:44 ocrb12-06.js
+-rw-r--r-- 1 tarryc tarryc 26656 Oct  3 14:44 ocrb12-07.js
+-rw-r--r-- 1 tarryc tarryc 29747 Oct  3 14:44 ocrb12-08.js
+-rw-r--r-- 1 tarryc tarryc 33182 Oct  3 14:44 ocrb12-09.js
+-rw-r--r-- 1 tarryc tarryc 36571 Oct  3 14:44 ocrb12-10.js
+
+./mobile/script/bwip-js/lib:
+total 200
+-rw-r--r-- 1 tarryc tarryc   6174 Oct  3 14:44 baropts.js
+-rw-r--r-- 1 tarryc tarryc   3139 Oct  3 14:44 canvas.js
+-rw-r--r-- 1 tarryc tarryc    830 Oct  3 14:44 dn-arrow.gif
+-rw-r--r-- 1 tarryc tarryc 166802 Oct  3 14:44 jquery-1.4.1.js
+-rw-r--r-- 1 tarryc tarryc    493 Oct  3 14:44 needyoffset.js
+-rw-r--r-- 1 tarryc tarryc   8837 Oct  3 14:44 symdesc.js
+-rw-r--r-- 1 tarryc tarryc    832 Oct  3 14:44 up-arrow.gif
+
+./prizes:
+total 4
+drwxr-xr-x 2 tarryc tarryc 4096 Feb 28  2016 2015
+
+./prizes/2015:
+total 10224
+-rwxr--r-- 1 tarryc tarryc   79781 Feb 28  2016 2014 Shirt Sleeve - 2016-02-28.xcf
+-rwxr--r-- 1 tarryc tarryc   50969 Feb 28  2016 2014 Shirt Sleeve.png
+-rwxr--r-- 1 tarryc tarryc   78949 Feb 28  2016 2015 Shirt Sleeve - 2016-02-28.xcf
+-rwxr--r-- 1 tarryc tarryc   50139 Feb 28  2016 2015 Shirt Sleeve.png
+-rwxr--r-- 1 tarryc tarryc   82196 Feb 28  2016 Cutler Shirt - 2016-02-28.xcf
+-rwxr--r-- 1 tarryc tarryc   52688 Feb 28  2016 Cutler Shirt Sleeve.png
+-rwxr--r-- 1 tarryc tarryc   90193 Feb 28  2016 DareDevil Duck Arch for Logo in Shirt.png
+-rwxr--r-- 1 tarryc tarryc  128912 Feb 28  2016 DareDevil Duck Arch for Shirt - 2016-02-28.xcf
+-rwxr--r-- 1 tarryc tarryc  370481 Feb 28  2016 Dare Devil Duck Logo for Embroidery 1.xcf
+-rwxr--r-- 1 tarryc tarryc  358211 Feb 25  2016 Dare Devil Duck Logo for Embroidery orig.xcf
+-rwxr--r-- 1 tarryc tarryc 6466726 Feb 28  2016 Dare Devil Duck Logo - Jess 21015-11-28.xcf
+-rwxr--r-- 1 tarryc tarryc 2156239 Feb 28  2016 Dare Devil Duck Logo.png
+-rwxr--r-- 1 tarryc tarryc  137897 Feb 28  2016 Hunzelman Shirt - 2016-02-28.xcf
+-rwxr--r-- 1 tarryc tarryc   90337 Feb 28  2016 Hunzelman Shirt Sleeve.png
+-rwxr--r-- 1 tarryc tarryc  111531 Feb 25  2016 Year 1 Shirt 2014-2015.pdf
+-rwxr--r-- 1 tarryc tarryc  124622 Feb 25  2016 Year 2 Shirt 2015-2016.pdf
+
+./rubyscripts:
+total 10500
+-rwxrwxr-x 1 tarryc tarryc    37611 Aug 11 17:44 csv2json.json
+-rwxrwxr-x 1 tarryc tarryc      753 Jan 31  2016 csv2json.rb
+-rwxrwxr-x 1 tarryc tarryc      797 Jan 31  2016 csv2json-wrong.rb
+-rw-rw-r-- 1 tarryc tarryc 10378217 Aug 11 17:44 ddd-dump-nfl2018.sql
+-rwxrwxr-x 1 tarryc tarryc      326 Jan 31  2016 importdata.rb
+-rw-rw-r-- 1 tarryc tarryc        0 Aug 11 17:44 info.log
+-rwxrwxr-x 1 tarryc tarryc     3720 Jan 31  2016 makesql-nfl2015.rb
+-rwxr--r-- 1 tarryc tarryc     3610 Aug 24  2016 makesql-nfl2016.rb
+-rwxr--r-- 1 tarryc tarryc     3610 Aug 18  2017 makesql-nfl2017.rb
+-rw-rw-r-- 1 tarryc tarryc     3805 Aug 11 19:58 makesql-nfl2018.rb
+-rwxrwxr-x 1 tarryc tarryc     2043 Jan 31  2016 makesql-original.rb
+-rwxrwxr-x 1 tarryc tarryc     5129 Jan 31  2016 makesql.rb
+-rwxrwxr-x 1 tarryc tarryc     5129 Jan 31  2016 makesql-withscores.rb
+-rwxrwxr-x 1 tarryc tarryc      394 Jan 31  2016 mysql.rb
+-rwxrwxr-x 1 tarryc tarryc      989 Jan 31  2016 MYsqlService.rb
+-rwxrwxr-x 1 tarryc tarryc      602 Jan 31  2016 nfl2014-insert-bye.sql
+-rwxrwxr-x 1 tarryc tarryc    14771 Jan 31  2016 nfl2014-insert-play.sql
+-rwxrwxr-x 1 tarryc tarryc      554 Jan 31  2016 nfl2015-insert-bye.sql
+-rwxrwxr-x 1 tarryc tarryc    13548 Jan 31  2016 nfl2015-insert-play.sql
+-rwxrwxr-x 1 tarryc tarryc      549 Jan 23  2017 nfl2016-insert-bye.sql
+-rwxrwxr-x 1 tarryc tarryc    13529 Jan 23  2017 nfl2016-insert-play.sql
+-rwxr--r-- 1 tarryc tarryc    10085 Aug 18  2017 nfl2017.csv
+-rwxrw-r-- 1 tarryc tarryc      555 Aug 18  2017 nfl2017-insert-bye.sql
+-rw-rw-r-- 1 tarryc tarryc    13591 Aug 18  2017 nfl2017-insert-play.sql
+-rwxrw-r-- 1 tarryc tarryc    36080 Aug 18  2017 nfl2017.json
+-rw-rw-r-- 1 tarryc tarryc    10102 Aug 11 17:44 nfl2018-2.csv
+-rw-rw-r-- 1 tarryc tarryc    37608 Aug 11 17:44 nfl2018-2.json
+-rw-rw-r-- 1 tarryc tarryc    10102 Aug 11 17:44 nfl2018.csv
+-rw-rw-r-- 1 tarryc tarryc      551 Aug 11 19:58 nfl2018-insert-bye.sql
+-rw-rw-r-- 1 tarryc tarryc    13589 Aug 11 17:44 nfl2018-insert-play.sql
+-rw-rw-r-- 1 tarryc tarryc    37611 Aug 11 17:44 nfl2018.json
+-rwxrwxr-x 1 tarryc tarryc     1412 Jan 31  2016 teamrankweek1.csv
+-rwxrwxr-x 1 tarryc tarryc    10753 Jan 23  2017 teamrankweek1.json
+
+./script:
+total 708
+drwxrwxr-x 5 tarryc tarryc   4096 Jan 31  2016 bwip-js
+-rwxrwxr-x 1 tarryc tarryc  10636 Dec 30  2016 ddd.js
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 dropzone
+-rwxrwxr-x 1 tarryc tarryc  63014 Jan 31  2016 dropzone.js
+-rwxrwxr-x 1 tarryc tarryc  11100 Dec 30  2016 fireworks.js
+-rwxrwxr-x 1 tarryc tarryc   9302 Jan 31  2016 jqFancyTransitions.1.8.js
+-rwxrwxr-x 1 tarryc tarryc   1525 Jan 31  2016 jquery.rotate.js
+-rwxrwxr-x 1 tarryc tarryc  21170 Jan 31  2016 jquery.slides.js
+-rwxrwxr-x 1 tarryc tarryc   1868 Dec 19  2016 jquery.snow.js
+-rwxrwxr-x 1 tarryc tarryc    291 Dec 19  2016 jquery.snow.min.1.0.js.html
+-rwxrwxr-x 1 tarryc tarryc   1796 Dec 19  2016 jquery.snow.original.js
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 min
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 parallax-js
+-rwxrwxr-x 1 tarryc tarryc    382 Dec 30  2016 requestanimframe.js
+-rwxrwxr-x 1 tarryc tarryc    551 Jan 31  2016 rssfeed.js
+drwxrwxr-x 4 tarryc tarryc   4096 Dec 13  2016 snow
+-rwxrwxr-x 1 tarryc tarryc  96186 Jan 31  2016 typeahead.js
+-rwxrwxr-x 1 tarryc tarryc 450217 Jan 31  2016 ui-grid-stable.js
+drwxr-xr-x 4 tarryc tarryc   4096 Sep 25  2015 yamm3-master
+
+./script/bwip-js:
+total 684
+-rwxrwxr-x 1 tarryc tarryc 628258 Jan 31  2016 barcode-2013-01-25.ps
+-rwxrwxr-x 1 tarryc tarryc  25729 Jan 31  2016 bwip.js
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 bwipp
+-rwxrwxr-x 1 tarryc tarryc   5940 Jan 31  2016 demo.html
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 fonts
+drwxrwxr-x 2 tarryc tarryc   4096 Jan 31  2016 lib
+-rwxrwxr-x 1 tarryc tarryc   2639 Jan 31  2016 LICENSE
+-rwxrwxr-x 1 tarryc tarryc  11352 Jan 31  2016 node-bwipjs
+-rwxrwxr-x 1 tarryc tarryc    429 Jan 31  2016 node-demo
+
+./script/bwip-js/bwipp:
+total 5732
+-rwxrwxr-x 1 tarryc tarryc  80664 Jan 31  2016 auspost.js
+-rwxrwxr-x 1 tarryc tarryc 187938 Jan 31  2016 azteccode.js
+-rwxrwxr-x 1 tarryc tarryc  35168 Jan 31  2016 bc412.js
+-rwxrwxr-x 1 tarryc tarryc  38810 Jan 31  2016 channelcode.js
+-rwxrwxr-x 1 tarryc tarryc 197741 Jan 31  2016 codablockf.js
+-rwxrwxr-x 1 tarryc tarryc  52029 Jan 31  2016 code11.js
+-rwxrwxr-x 1 tarryc tarryc 151059 Jan 31  2016 code128.js
+-rwxrwxr-x 1 tarryc tarryc 244535 Jan 31  2016 code16k.js
+-rwxrwxr-x 1 tarryc tarryc  44637 Jan 31  2016 code2of5.js
+-rwxrwxr-x 1 tarryc tarryc  22727 Jan 31  2016 code32.js
+-rwxrwxr-x 1 tarryc tarryc  31921 Jan 31  2016 code39ext.js
+-rwxrwxr-x 1 tarryc tarryc  46062 Jan 31  2016 code39.js
+-rwxrwxr-x 1 tarryc tarryc 286025 Jan 31  2016 code49.js
+-rwxrwxr-x 1 tarryc tarryc  33920 Jan 31  2016 code93ext.js
+-rwxrwxr-x 1 tarryc tarryc  45571 Jan 31  2016 code93.js
+-rwxrwxr-x 1 tarryc tarryc 139569 Jan 31  2016 codeone.js
+-rwxrwxr-x 1 tarryc tarryc  21305 Jan 31  2016 daft.js
+-rwxrwxr-x 1 tarryc tarryc  27731 Jan 31  2016 databarexpandedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc 378371 Jan 31  2016 databarexpanded.js
+-rwxrwxr-x 1 tarryc tarryc  26579 Jan 31  2016 databarexpandedstackedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8896 Jan 31  2016 databarexpandedstacked.js
+-rwxrwxr-x 1 tarryc tarryc  18965 Jan 31  2016 databarlimitedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc  97740 Jan 31  2016 databarlimited.js
+-rwxrwxr-x 1 tarryc tarryc  28809 Jan 31  2016 databaromnicomposite.js
+-rwxrwxr-x 1 tarryc tarryc 160662 Jan 31  2016 databaromni.js
+-rwxrwxr-x 1 tarryc tarryc  26415 Jan 31  2016 databarstackedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8832 Jan 31  2016 databarstacked.js
+-rwxrwxr-x 1 tarryc tarryc  26457 Jan 31  2016 databarstackedomnicomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8852 Jan 31  2016 databarstackedomni.js
+-rwxrwxr-x 1 tarryc tarryc  28864 Jan 31  2016 databartruncatedcomposite.js
+-rwxrwxr-x 1 tarryc tarryc   8842 Jan 31  2016 databartruncated.js
+-rwxrwxr-x 1 tarryc tarryc 190111 Jan 31  2016 datamatrix.js
+-rwxrwxr-x 1 tarryc tarryc  13218 Jan 31  2016 ean13composite.js
+-rwxrwxr-x 1 tarryc tarryc  68586 Jan 31  2016 ean13.js
+-rwxrwxr-x 1 tarryc tarryc  22072 Jan 31  2016 ean14.js
+-rwxrwxr-x 1 tarryc tarryc  29095 Jan 31  2016 ean2.js
+-rwxrwxr-x 1 tarryc tarryc  33220 Jan 31  2016 ean5.js
+-rwxrwxr-x 1 tarryc tarryc  13751 Jan 31  2016 ean8composite.js
+-rwxrwxr-x 1 tarryc tarryc  59920 Jan 31  2016 ean8.js
+-rwxrwxr-x 1 tarryc tarryc  19746 Jan 31  2016 flattermarken.js
+-rwxrwxr-x 1 tarryc tarryc  29091 Jan 31  2016 gs1-128composite.js
+-rwxrwxr-x 1 tarryc tarryc  53871 Jan 31  2016 gs1-128.js
+-rwxrwxr-x 1 tarryc tarryc 294311 Jan 31  2016 gs1-cc.js
+-rwxrwxr-x 1 tarryc tarryc  45834 Jan 31  2016 gs1datamatrix.js
+-rwxrwxr-x 1 tarryc tarryc  14480 Jan 31  2016 hibccodablockf.js
+-rwxrwxr-x 1 tarryc tarryc  22672 Jan 31  2016 hibccode128.js
+-rwxrwxr-x 1 tarryc tarryc  23187 Jan 31  2016 hibccode39.js
+-rwxrwxr-x 1 tarryc tarryc  14480 Jan 31  2016 hibcdatamatrix.js
+-rwxrwxr-x 1 tarryc tarryc  15619 Jan 31  2016 hibcmicropdf417.js
+-rwxrwxr-x 1 tarryc tarryc  15569 Jan 31  2016 hibcpdf417.js
+-rwxrwxr-x 1 tarryc tarryc  14440 Jan 31  2016 hibcqrcode.js
+-rwxrwxr-x 1 tarryc tarryc  23899 Jan 31  2016 identcode.js
+-rwxrwxr-x 1 tarryc tarryc  47925 Jan 31  2016 interleaved2of5.js
+-rwxrwxr-x 1 tarryc tarryc  49065 Jan 31  2016 isbn.js
+-rwxrwxr-x 1 tarryc tarryc  43802 Jan 31  2016 ismn.js
+-rwxrwxr-x 1 tarryc tarryc  38471 Jan 31  2016 issn.js
+-rwxrwxr-x 1 tarryc tarryc  16682 Jan 31  2016 itf14.js
+-rwxrwxr-x 1 tarryc tarryc  48108 Jan 31  2016 japanpost.js
+-rwxrwxr-x 1 tarryc tarryc  31898 Jan 31  2016 kix.js
+-rwxrwxr-x 1 tarryc tarryc  23899 Jan 31  2016 leitcode.js
+-rwxrwxr-x 1 tarryc tarryc 205276 Jan 31  2016 maxicode.js
+-rwxrwxr-x 1 tarryc tarryc 154107 Jan 31  2016 micropdf417.js
+-rwxrwxr-x 1 tarryc tarryc  53407 Jan 31  2016 msi.js
+-rwxrwxr-x 1 tarryc tarryc 112059 Jan 31  2016 onecode.js
+-rwxrwxr-x 1 tarryc tarryc 139341 Jan 31  2016 pdf417.js
+-rwxrwxr-x 1 tarryc tarryc  23753 Jan 31  2016 pharmacode2.js
+-rwxrwxr-x 1 tarryc tarryc  22133 Jan 31  2016 pharmacode.js
+-rwxrwxr-x 1 tarryc tarryc  42935 Jan 31  2016 planet.js
+-rwxrwxr-x 1 tarryc tarryc  49281 Jan 31  2016 plessey.js
+-rwxrwxr-x 1 tarryc tarryc 118733 Jan 31  2016 posicode.js
+-rwxrwxr-x 1 tarryc tarryc  43942 Jan 31  2016 postnet.js
+-rwxrwxr-x 1 tarryc tarryc  20443 Jan 31  2016 pzn.js
+-rwxrwxr-x 1 tarryc tarryc 408265 Jan 31  2016 qrcode.js
+-rwxrwxr-x 1 tarryc tarryc  42256 Jan 31  2016 rationalizedCodabar.js
+-rwxrwxr-x 1 tarryc tarryc  10403 Jan 31  2016 raw.js
+-rwxrwxr-x 1 tarryc tarryc  84252 Jan 31  2016 renlinear.js
+-rwxrwxr-x 1 tarryc tarryc  22727 Jan 31  2016 renmatrix.js
+-rwxrwxr-x 1 tarryc tarryc   8166 Jan 31  2016 renmaximatrix.js
+-rwxrwxr-x 1 tarryc tarryc  42845 Jan 31  2016 royalmail.js
+-rwxrwxr-x 1 tarryc tarryc  22076 Jan 31  2016 sscc18.js
+-rwxrwxr-x 1 tarryc tarryc  11934 Jan 31  2016 symbol.js
+-rwxrwxr-x 1 tarryc tarryc  51154 Jan 31  2016 telepen.js
+-rwxrwxr-x 1 tarryc tarryc  13208 Jan 31  2016 upcacomposite.js
+-rwxrwxr-x 1 tarryc tarryc  65359 Jan 31  2016 upca.js
+-rwxrwxr-x 1 tarryc tarryc  15739 Jan 31  2016 upcecomposite.js
+-rwxrwxr-x 1 tarryc tarryc  79732 Jan 31  2016 upce.js
+
+./script/bwip-js/fonts:
+total 420
+-rwxrwxr-x 1 tarryc tarryc  5010 Jan 31  2016 ocrb10-01.js
+-rwxrwxr-x 1 tarryc tarryc  7585 Jan 31  2016 ocrb10-02.js
+-rwxrwxr-x 1 tarryc tarryc  9997 Jan 31  2016 ocrb10-03.js
+-rwxrwxr-x 1 tarryc tarryc 13583 Jan 31  2016 ocrb10-04.js
+-rwxrwxr-x 1 tarryc tarryc 16542 Jan 31  2016 ocrb10-05.js
+-rwxrwxr-x 1 tarryc tarryc 19070 Jan 31  2016 ocrb10-06.js
+-rwxrwxr-x 1 tarryc tarryc 21766 Jan 31  2016 ocrb10-07.js
+-rwxrwxr-x 1 tarryc tarryc 24217 Jan 31  2016 ocrb10-08.js
+-rwxrwxr-x 1 tarryc tarryc 27207 Jan 31  2016 ocrb10-09.js
+-rwxrwxr-x 1 tarryc tarryc 29792 Jan 31  2016 ocrb10-10.js
+-rwxrwxr-x 1 tarryc tarryc  5277 Jan 31  2016 ocrb12-01.js
+-rwxrwxr-x 1 tarryc tarryc  9114 Jan 31  2016 ocrb12-02.js
+-rwxrwxr-x 1 tarryc tarryc 12675 Jan 31  2016 ocrb12-03.js
+-rwxrwxr-x 1 tarryc tarryc 16296 Jan 31  2016 ocrb12-04.js
+-rwxrwxr-x 1 tarryc tarryc 19889 Jan 31  2016 ocrb12-05.js
+-rwxrwxr-x 1 tarryc tarryc 23231 Jan 31  2016 ocrb12-06.js
+-rwxrwxr-x 1 tarryc tarryc 26647 Jan 31  2016 ocrb12-07.js
+-rwxrwxr-x 1 tarryc tarryc 29738 Jan 31  2016 ocrb12-08.js
+-rwxrwxr-x 1 tarryc tarryc 33173 Jan 31  2016 ocrb12-09.js
+-rwxrwxr-x 1 tarryc tarryc 36562 Jan 31  2016 ocrb12-10.js
+
+./script/bwip-js/lib:
+total 196
+-rwxrwxr-x 1 tarryc tarryc   5774 Jan 31  2016 baropts.js
+-rwxrwxr-x 1 tarryc tarryc   3003 Jan 31  2016 canvas.js
+-rwxrwxr-x 1 tarryc tarryc    830 Jan 31  2016 dn-arrow.gif
+-rwxrwxr-x 1 tarryc tarryc 160724 Jan 31  2016 jquery-1.4.1.js
+-rwxrwxr-x 1 tarryc tarryc    467 Jan 31  2016 needyoffset.js
+-rwxrwxr-x 1 tarryc tarryc   8741 Jan 31  2016 symdesc.js
+-rwxrwxr-x 1 tarryc tarryc    832 Jan 31  2016 up-arrow.gif
+
+./script/dropzone:
+total 192
+-rwxrwxr-x 1 tarryc tarryc 63400 Jan 31  2016 dropzone-amd-module.js
+-rwxrwxr-x 1 tarryc tarryc 63014 Jan 31  2016 dropzone-diff.js
+-rwxrwxr-x 1 tarryc tarryc 63013 Jan 31  2016 dropzone.js
+
+./script/min:
+total 88
+-rwxrwxr-x 1 tarryc tarryc   751 Jan 31  2016 basic.min.css
+-rwxrwxr-x 1 tarryc tarryc 32872 Jan 31  2016 dropzone-amd-module.min.js
+-rwxrwxr-x 1 tarryc tarryc  9717 Jan 31  2016 dropzone.min.css
+-rwxrwxr-x 1 tarryc tarryc 32771 Jan 31  2016 dropzone.min.js
+
+./script/parallax-js:
+total 32
+-rwxrwxr-x 1 tarryc tarryc  1079 Jan 31  2016 LICENSE
+-rwxrwxr-x 1 tarryc tarryc 10791 Jan 31  2016 parallax.js
+-rwxrwxr-x 1 tarryc tarryc  6073 Jan 31  2016 parallax.min.js
+-rwxrwxr-x 1 tarryc tarryc  6004 Jan 31  2016 README.md
+
+./script/snow:
+total 8
+drwxrwxr-x 2 tarryc tarryc 4096 Jan 23  2017 font
+drwxrwxr-x 2 tarryc tarryc 4096 Dec 13  2016 js
+
+./script/snow/font:
+total 20
+-rwxrwxr-x 1 tarryc tarryc 16992 Jan 23  2017 snowflakes.ttf
+
+./script/snow/js:
+total 8
+-rwxrwxr-x 1 tarryc tarryc 5352 Dec 13  2016 snow.js
+
+./script/yamm3-master:
+total 60
+-rwxr--r-- 1 tarryc tarryc   497 Sep 25  2015 bower.json
+-rwxr--r-- 1 tarryc tarryc   486 Sep 25  2015 composer.json
+drwxr-xr-x 6 tarryc tarryc  4096 Sep 25  2015 demo
+-rwxr--r-- 1 tarryc tarryc  1935 Sep 25  2015 gulpfile.js
+-rwxr--r-- 1 tarryc tarryc 26137 Sep 25  2015 index.html
+-rwxr--r-- 1 tarryc tarryc  1072 Sep 25  2015 LICENSE.txt
+-rwxr--r-- 1 tarryc tarryc   436 Sep 25  2015 package.json
+-rwxr--r-- 1 tarryc tarryc  2193 Sep 25  2015 README.md
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 yamm
+
+./script/yamm3-master/demo:
+total 16
+drwxr-xr-x 4 tarryc tarryc 4096 Sep 25  2015 components
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 css
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 img
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 jade
+
+./script/yamm3-master/demo/components:
+total 8
+drwxr-xr-x 7 tarryc tarryc 4096 Sep 25  2015 bootstrap
+drwxr-xr-x 4 tarryc tarryc 4096 Sep 25  2015 jquery
+
+./script/yamm3-master/demo/components/bootstrap:
+total 60
+-rwxr--r-- 1 tarryc tarryc   903 Sep 25  2015 bower.json
+drwxr-xr-x 5 tarryc tarryc  4096 Sep 25  2015 dist
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 fonts
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 grunt
+-rwxr--r-- 1 tarryc tarryc 14424 Sep 25  2015 Gruntfile.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 js
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 less
+-rwxr--r-- 1 tarryc tarryc  1084 Sep 25  2015 LICENSE
+-rwxr--r-- 1 tarryc tarryc   761 Sep 25  2015 package.js
+-rwxr--r-- 1 tarryc tarryc  2227 Sep 25  2015 package.json
+-rwxr--r-- 1 tarryc tarryc  6737 Sep 25  2015 README.md
+
+./script/yamm3-master/demo/components/bootstrap/dist:
+total 12
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 css
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 fonts
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 js
+
+./script/yamm3-master/demo/components/bootstrap/dist/css:
+total 720
+-rwxr--r-- 1 tarryc tarryc 141622 Sep 25  2015 bootstrap.css
+-rwxr--r-- 1 tarryc tarryc 380986 Sep 25  2015 bootstrap.css.map
+-rwxr--r-- 1 tarryc tarryc 117305 Sep 25  2015 bootstrap.min.css
+-rwxr--r-- 1 tarryc tarryc  22608 Sep 25  2015 bootstrap-theme.css
+-rwxr--r-- 1 tarryc tarryc  43339 Sep 25  2015 bootstrap-theme.css.map
+-rwxr--r-- 1 tarryc tarryc  19963 Sep 25  2015 bootstrap-theme.min.css
+
+./script/yamm3-master/demo/components/bootstrap/dist/fonts:
+total 220
+-rwxr--r-- 1 tarryc tarryc  20127 Sep 25  2015 glyphicons-halflings-regular.eot
+-rwxr--r-- 1 tarryc tarryc 108738 Sep 25  2015 glyphicons-halflings-regular.svg
+-rwxr--r-- 1 tarryc tarryc  45404 Sep 25  2015 glyphicons-halflings-regular.ttf
+-rwxr--r-- 1 tarryc tarryc  23424 Sep 25  2015 glyphicons-halflings-regular.woff
+-rwxr--r-- 1 tarryc tarryc  18028 Sep 25  2015 glyphicons-halflings-regular.woff2
+
+./script/yamm3-master/demo/components/bootstrap/dist/js:
+total 108
+-rwxr--r-- 1 tarryc tarryc 67546 Sep 25  2015 bootstrap.js
+-rwxr--r-- 1 tarryc tarryc 35951 Sep 25  2015 bootstrap.min.js
+-rwxr--r-- 1 tarryc tarryc   484 Sep 25  2015 npm.js
+
+./script/yamm3-master/demo/components/bootstrap/fonts:
+total 220
+-rwxr--r-- 1 tarryc tarryc  20127 Sep 25  2015 glyphicons-halflings-regular.eot
+-rwxr--r-- 1 tarryc tarryc 108738 Sep 25  2015 glyphicons-halflings-regular.svg
+-rwxr--r-- 1 tarryc tarryc  45404 Sep 25  2015 glyphicons-halflings-regular.ttf
+-rwxr--r-- 1 tarryc tarryc  23424 Sep 25  2015 glyphicons-halflings-regular.woff
+-rwxr--r-- 1 tarryc tarryc  18028 Sep 25  2015 glyphicons-halflings-regular.woff2
+
+./script/yamm3-master/demo/components/bootstrap/grunt:
+total 28
+-rwxr--r-- 1 tarryc tarryc  781 Sep 25  2015 bs-commonjs-generator.js
+-rwxr--r-- 1 tarryc tarryc 1400 Sep 25  2015 bs-glyphicons-data-generator.js
+-rwxr--r-- 1 tarryc tarryc 6081 Sep 25  2015 bs-lessdoc-parser.js
+-rwxr--r-- 1 tarryc tarryc 1376 Sep 25  2015 bs-raw-files-generator.js
+-rwxr--r-- 1 tarryc tarryc 1340 Sep 25  2015 configBridge.json
+-rwxr--r-- 1 tarryc tarryc 1439 Sep 25  2015 sauce_browsers.yml
+
+./script/yamm3-master/demo/components/bootstrap/js:
+total 88
+-rwxr--r-- 1 tarryc tarryc  4806 Sep 25  2015 affix.js
+-rwxr--r-- 1 tarryc tarryc  2260 Sep 25  2015 alert.js
+-rwxr--r-- 1 tarryc tarryc  3274 Sep 25  2015 button.js
+-rwxr--r-- 1 tarryc tarryc  7141 Sep 25  2015 carousel.js
+-rwxr--r-- 1 tarryc tarryc  5963 Sep 25  2015 collapse.js
+-rwxr--r-- 1 tarryc tarryc  4697 Sep 25  2015 dropdown.js
+-rwxr--r-- 1 tarryc tarryc  9988 Sep 25  2015 modal.js
+-rwxr--r-- 1 tarryc tarryc  3163 Sep 25  2015 popover.js
+-rwxr--r-- 1 tarryc tarryc  4707 Sep 25  2015 scrollspy.js
+-rwxr--r-- 1 tarryc tarryc  3796 Sep 25  2015 tab.js
+-rwxr--r-- 1 tarryc tarryc 15348 Sep 25  2015 tooltip.js
+-rwxr--r-- 1 tarryc tarryc  1831 Sep 25  2015 transition.js
+
+./script/yamm3-master/demo/components/bootstrap/less:
+total 276
+-rwxr--r-- 1 tarryc tarryc  1518 Sep 25  2015 alerts.less
+-rwxr--r-- 1 tarryc tarryc  1201 Sep 25  2015 badges.less
+-rwxr--r-- 1 tarryc tarryc  1121 Sep 25  2015 bootstrap.less
+-rwxr--r-- 1 tarryc tarryc   594 Sep 25  2015 breadcrumbs.less
+-rwxr--r-- 1 tarryc tarryc  5659 Sep 25  2015 button-groups.less
+-rwxr--r-- 1 tarryc tarryc  3565 Sep 25  2015 buttons.less
+-rwxr--r-- 1 tarryc tarryc  5405 Sep 25  2015 carousel.less
+-rwxr--r-- 1 tarryc tarryc   764 Sep 25  2015 close.less
+-rwxr--r-- 1 tarryc tarryc  1401 Sep 25  2015 code.less
+-rwxr--r-- 1 tarryc tarryc   666 Sep 25  2015 component-animations.less
+-rwxr--r-- 1 tarryc tarryc  4764 Sep 25  2015 dropdowns.less
+-rwxr--r-- 1 tarryc tarryc 14935 Sep 25  2015 forms.less
+-rwxr--r-- 1 tarryc tarryc 19803 Sep 25  2015 glyphicons.less
+-rwxr--r-- 1 tarryc tarryc  1387 Sep 25  2015 grid.less
+-rwxr--r-- 1 tarryc tarryc  4215 Sep 25  2015 input-groups.less
+-rwxr--r-- 1 tarryc tarryc   984 Sep 25  2015 jumbotron.less
+-rwxr--r-- 1 tarryc tarryc  1079 Sep 25  2015 labels.less
+-rwxr--r-- 1 tarryc tarryc  3022 Sep 25  2015 list-group.less
+-rwxr--r-- 1 tarryc tarryc   780 Sep 25  2015 media.less
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 mixins
+-rwxr--r-- 1 tarryc tarryc  1102 Sep 25  2015 mixins.less
+-rwxr--r-- 1 tarryc tarryc  3565 Sep 25  2015 modals.less
+-rwxr--r-- 1 tarryc tarryc 14628 Sep 25  2015 navbar.less
+-rwxr--r-- 1 tarryc tarryc  4930 Sep 25  2015 navs.less
+-rwxr--r-- 1 tarryc tarryc  7650 Sep 25  2015 normalize.less
+-rwxr--r-- 1 tarryc tarryc   861 Sep 25  2015 pager.less
+-rwxr--r-- 1 tarryc tarryc  2001 Sep 25  2015 pagination.less
+-rwxr--r-- 1 tarryc tarryc  6151 Sep 25  2015 panels.less
+-rwxr--r-- 1 tarryc tarryc  3509 Sep 25  2015 popovers.less
+-rwxr--r-- 1 tarryc tarryc  2133 Sep 25  2015 print.less
+-rwxr--r-- 1 tarryc tarryc  1925 Sep 25  2015 progress-bars.less
+-rwxr--r-- 1 tarryc tarryc   546 Sep 25  2015 responsive-embed.less
+-rwxr--r-- 1 tarryc tarryc  4262 Sep 25  2015 responsive-utilities.less
+-rwxr--r-- 1 tarryc tarryc  3122 Sep 25  2015 scaffolding.less
+-rwxr--r-- 1 tarryc tarryc  4612 Sep 25  2015 tables.less
+-rwxr--r-- 1 tarryc tarryc  7812 Sep 25  2015 theme.less
+-rwxr--r-- 1 tarryc tarryc   753 Sep 25  2015 thumbnails.less
+-rwxr--r-- 1 tarryc tarryc  2937 Sep 25  2015 tooltip.less
+-rwxr--r-- 1 tarryc tarryc  5951 Sep 25  2015 type.less
+-rwxr--r-- 1 tarryc tarryc   747 Sep 25  2015 utilities.less
+-rwxr--r-- 1 tarryc tarryc 27053 Sep 25  2015 variables.less
+-rwxr--r-- 1 tarryc tarryc   527 Sep 25  2015 wells.less
+
+./script/yamm3-master/demo/components/bootstrap/less/mixins:
+total 124
+-rwxr--r-- 1 tarryc tarryc  257 Sep 25  2015 alerts.less
+-rwxr--r-- 1 tarryc tarryc  139 Sep 25  2015 background-variant.less
+-rwxr--r-- 1 tarryc tarryc  468 Sep 25  2015 border-radius.less
+-rwxr--r-- 1 tarryc tarryc 1080 Sep 25  2015 buttons.less
+-rwxr--r-- 1 tarryc tarryc  120 Sep 25  2015 center-block.less
+-rwxr--r-- 1 tarryc tarryc  605 Sep 25  2015 clearfix.less
+-rwxr--r-- 1 tarryc tarryc 2641 Sep 25  2015 forms.less
+-rwxr--r-- 1 tarryc tarryc 4388 Sep 25  2015 gradients.less
+-rwxr--r-- 1 tarryc tarryc 2784 Sep 25  2015 grid-framework.less
+-rwxr--r-- 1 tarryc tarryc 3094 Sep 25  2015 grid.less
+-rwxr--r-- 1 tarryc tarryc  579 Sep 25  2015 hide-text.less
+-rwxr--r-- 1 tarryc tarryc 1062 Sep 25  2015 image.less
+-rwxr--r-- 1 tarryc tarryc  161 Sep 25  2015 labels.less
+-rwxr--r-- 1 tarryc tarryc  533 Sep 25  2015 list-group.less
+-rwxr--r-- 1 tarryc tarryc  232 Sep 25  2015 nav-divider.less
+-rwxr--r-- 1 tarryc tarryc  364 Sep 25  2015 nav-vertical-align.less
+-rwxr--r-- 1 tarryc tarryc  148 Sep 25  2015 opacity.less
+-rwxr--r-- 1 tarryc tarryc  438 Sep 25  2015 pagination.less
+-rwxr--r-- 1 tarryc tarryc  537 Sep 25  2015 panels.less
+-rwxr--r-- 1 tarryc tarryc  191 Sep 25  2015 progress-bar.less
+-rwxr--r-- 1 tarryc tarryc  248 Sep 25  2015 reset-filter.less
+-rwxr--r-- 1 tarryc tarryc  196 Sep 25  2015 resize.less
+-rwxr--r-- 1 tarryc tarryc  343 Sep 25  2015 responsive-visibility.less
+-rwxr--r-- 1 tarryc tarryc  127 Sep 25  2015 size.less
+-rwxr--r-- 1 tarryc tarryc  159 Sep 25  2015 tab-focus.less
+-rwxr--r-- 1 tarryc tarryc  700 Sep 25  2015 table-row.less
+-rwxr--r-- 1 tarryc tarryc  116 Sep 25  2015 text-emphasis.less
+-rwxr--r-- 1 tarryc tarryc  162 Sep 25  2015 text-overflow.less
+-rwxr--r-- 1 tarryc tarryc 6650 Sep 25  2015 vendor-prefixes.less
+
+./script/yamm3-master/demo/components/jquery:
+total 16
+-rwxr--r--  1 tarryc tarryc  435 Sep 25  2015 bower.json
+drwxr-xr-x  2 tarryc tarryc 4096 Sep 25  2015 dist
+-rwxr--r--  1 tarryc tarryc 1099 Sep 25  2015 MIT-LICENSE.txt
+drwxr-xr-x 15 tarryc tarryc 4096 Sep 25  2015 src
+
+./script/yamm3-master/demo/components/jquery/dist:
+total 456
+-rwxr--r-- 1 tarryc tarryc 247387 Sep 25  2015 jquery.js
+-rwxr--r-- 1 tarryc tarryc  84355 Sep 25  2015 jquery.min.js
+-rwxr--r-- 1 tarryc tarryc 127542 Sep 25  2015 jquery.min.map
+
+./script/yamm3-master/demo/components/jquery/src:
+total 256
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 ajax
+-rwxr--r-- 1 tarryc tarryc 21168 Sep 25  2015 ajax.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 attributes
+-rwxr--r-- 1 tarryc tarryc   200 Sep 25  2015 attributes.js
+-rwxr--r-- 1 tarryc tarryc  5506 Sep 25  2015 callbacks.js
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 core
+-rwxr--r-- 1 tarryc tarryc 11580 Sep 25  2015 core.js
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 css
+-rwxr--r-- 1 tarryc tarryc 12346 Sep 25  2015 css.js
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 data
+-rwxr--r-- 1 tarryc tarryc  4942 Sep 25  2015 data.js
+-rwxr--r-- 1 tarryc tarryc  4414 Sep 25  2015 deferred.js
+-rwxr--r-- 1 tarryc tarryc   223 Sep 25  2015 deprecated.js
+-rwxr--r-- 1 tarryc tarryc  1776 Sep 25  2015 dimensions.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 effects
+-rwxr--r-- 1 tarryc tarryc 16914 Sep 25  2015 effects.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 event
+-rwxr--r-- 1 tarryc tarryc 24475 Sep 25  2015 event.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 exports
+-rwxr--r-- 1 tarryc tarryc  1393 Sep 25  2015 intro.js
+-rwxr--r-- 1 tarryc tarryc   574 Sep 25  2015 jquery.js
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 manipulation
+-rwxr--r-- 1 tarryc tarryc 15039 Sep 25  2015 manipulation.js
+-rwxr--r-- 1 tarryc tarryc  5588 Sep 25  2015 offset.js
+-rwxr--r-- 1 tarryc tarryc     5 Sep 25  2015 outro.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 queue
+-rwxr--r-- 1 tarryc tarryc  3063 Sep 25  2015 queue.js
+-rwxr--r-- 1 tarryc tarryc    33 Sep 25  2015 selector.js
+-rwxr--r-- 1 tarryc tarryc  4434 Sep 25  2015 selector-native.js
+-rwxr--r-- 1 tarryc tarryc   294 Sep 25  2015 selector-sizzle.js
+-rwxr--r-- 1 tarryc tarryc  3214 Sep 25  2015 serialize.js
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 sizzle
+drwxr-xr-x 3 tarryc tarryc  4096 Sep 25  2015 traversing
+-rwxr--r-- 1 tarryc tarryc  4535 Sep 25  2015 traversing.js
+drwxr-xr-x 2 tarryc tarryc  4096 Sep 25  2015 var
+-rwxr--r-- 1 tarryc tarryc  1496 Sep 25  2015 wrap.js
+
+./script/yamm3-master/demo/components/jquery/src/ajax:
+total 28
+-rwxr--r-- 1 tarryc tarryc 2516 Sep 25  2015 jsonp.js
+-rwxr--r-- 1 tarryc tarryc 1669 Sep 25  2015 load.js
+-rwxr--r-- 1 tarryc tarryc  222 Sep 25  2015 parseJSON.js
+-rwxr--r-- 1 tarryc tarryc  485 Sep 25  2015 parseXML.js
+-rwxr--r-- 1 tarryc tarryc 1271 Sep 25  2015 script.js
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 var
+-rwxr--r-- 1 tarryc tarryc 3488 Sep 25  2015 xhr.js
+
+./script/yamm3-master/demo/components/jquery/src/ajax/var:
+total 8
+-rwxr--r-- 1 tarryc tarryc 73 Sep 25  2015 nonce.js
+-rwxr--r-- 1 tarryc tarryc 40 Sep 25  2015 rquery.js
+
+./script/yamm3-master/demo/components/jquery/src/attributes:
+total 24
+-rwxr--r-- 1 tarryc tarryc 3320 Sep 25  2015 attr.js
+-rwxr--r-- 1 tarryc tarryc 4155 Sep 25  2015 classes.js
+-rwxr--r-- 1 tarryc tarryc 1854 Sep 25  2015 prop.js
+-rwxr--r-- 1 tarryc tarryc  893 Sep 25  2015 support.js
+-rwxr--r-- 1 tarryc tarryc 3839 Sep 25  2015 val.js
+
+./script/yamm3-master/demo/components/jquery/src/core:
+total 20
+-rwxr--r-- 1 tarryc tarryc 1210 Sep 25  2015 access.js
+-rwxr--r-- 1 tarryc tarryc 3401 Sep 25  2015 init.js
+-rwxr--r-- 1 tarryc tarryc  938 Sep 25  2015 parseHTML.js
+-rwxr--r-- 1 tarryc tarryc 2381 Sep 25  2015 ready.js
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 var
+
+./script/yamm3-master/demo/components/jquery/src/core/var:
+total 4
+-rwxr--r-- 1 tarryc tarryc 91 Sep 25  2015 rsingleTag.js
+
+./script/yamm3-master/demo/components/jquery/src/css:
+total 28
+-rwxr--r-- 1 tarryc tarryc  509 Sep 25  2015 addGetHookIf.js
+-rwxr--r-- 1 tarryc tarryc 1452 Sep 25  2015 curCSS.js
+-rwxr--r-- 1 tarryc tarryc 1867 Sep 25  2015 defaultDisplay.js
+-rwxr--r-- 1 tarryc tarryc  380 Sep 25  2015 hiddenVisibleSelectors.js
+-rwxr--r-- 1 tarryc tarryc 3198 Sep 25  2015 support.js
+-rwxr--r-- 1 tarryc tarryc  555 Sep 25  2015 swap.js
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 var
+
+./script/yamm3-master/demo/components/jquery/src/css/var:
+total 20
+-rwxr--r-- 1 tarryc tarryc  70 Sep 25  2015 cssExpand.js
+-rwxr--r-- 1 tarryc tarryc 410 Sep 25  2015 getStyles.js
+-rwxr--r-- 1 tarryc tarryc 355 Sep 25  2015 isHidden.js
+-rwxr--r-- 1 tarryc tarryc  45 Sep 25  2015 rmargin.js
+-rwxr--r-- 1 tarryc tarryc 113 Sep 25  2015 rnumnonpx.js
+
+./script/yamm3-master/demo/components/jquery/src/data:
+total 16
+-rwxr--r-- 1 tarryc tarryc  383 Sep 25  2015 accepts.js
+-rwxr--r-- 1 tarryc tarryc 4882 Sep 25  2015 Data.js
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 var
+
+./script/yamm3-master/demo/components/jquery/src/data/var:
+total 8
+-rwxr--r-- 1 tarryc tarryc 66 Sep 25  2015 data_priv.js
+-rwxr--r-- 1 tarryc tarryc 66 Sep 25  2015 data_user.js
+
+./script/yamm3-master/demo/components/jquery/src/effects:
+total 8
+-rwxr--r-- 1 tarryc tarryc  225 Sep 25  2015 animatedSelector.js
+-rwxr--r-- 1 tarryc tarryc 3028 Sep 25  2015 Tween.js
+
+./script/yamm3-master/demo/components/jquery/src/event:
+total 12
+-rwxr--r-- 1 tarryc tarryc  322 Sep 25  2015 ajax.js
+-rwxr--r-- 1 tarryc tarryc 1094 Sep 25  2015 alias.js
+-rwxr--r-- 1 tarryc tarryc  123 Sep 25  2015 support.js
+
+./script/yamm3-master/demo/components/jquery/src/exports:
+total 8
+-rwxr--r-- 1 tarryc tarryc 1006 Sep 25  2015 amd.js
+-rwxr--r-- 1 tarryc tarryc  641 Sep 25  2015 global.js
+
+./script/yamm3-master/demo/components/jquery/src/manipulation:
+total 12
+-rwxr--r-- 1 tarryc tarryc  240 Sep 25  2015 _evalUrl.js
+-rwxr--r-- 1 tarryc tarryc  975 Sep 25  2015 support.js
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 var
+
+./script/yamm3-master/demo/components/jquery/src/manipulation/var:
+total 4
+-rwxr--r-- 1 tarryc tarryc 59 Sep 25  2015 rcheckableType.js
+
+./script/yamm3-master/demo/components/jquery/src/queue:
+total 4
+-rwxr--r-- 1 tarryc tarryc 561 Sep 25  2015 delay.js
+
+./script/yamm3-master/demo/components/jquery/src/sizzle:
+total 4
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 dist
+
+./script/yamm3-master/demo/components/jquery/src/sizzle/dist:
+total 112
+-rwxr--r-- 1 tarryc tarryc 59443 Sep 25  2015 sizzle.js
+-rwxr--r-- 1 tarryc tarryc 18626 Sep 25  2015 sizzle.min.js
+-rwxr--r-- 1 tarryc tarryc 29161 Sep 25  2015 sizzle.min.map
+
+./script/yamm3-master/demo/components/jquery/src/traversing:
+total 8
+-rwxr--r-- 1 tarryc tarryc 2464 Sep 25  2015 findFilter.js
+drwxr-xr-x 2 tarryc tarryc 4096 Sep 25  2015 var
+
+./script/yamm3-master/demo/components/jquery/src/traversing/var:
+total 4
+-rwxr--r-- 1 tarryc tarryc 110 Sep 25  2015 rneedsContext.js
+
+./script/yamm3-master/demo/components/jquery/src/var:
+total 48
+-rwxr--r-- 1 tarryc tarryc 36 Sep 25  2015 arr.js
+-rwxr--r-- 1 tarryc tarryc 64 Sep 25  2015 class2type.js
+-rwxr--r-- 1 tarryc tarryc 63 Sep 25  2015 concat.js
+-rwxr--r-- 1 tarryc tarryc 92 Sep 25  2015 hasOwn.js
+-rwxr--r-- 1 tarryc tarryc 64 Sep 25  2015 indexOf.js
+-rwxr--r-- 1 tarryc tarryc 80 Sep 25  2015 pnum.js
+-rwxr--r-- 1 tarryc tarryc 61 Sep 25  2015 push.js
+-rwxr--r-- 1 tarryc tarryc 42 Sep 25  2015 rnotwhite.js
+-rwxr--r-- 1 tarryc tarryc 62 Sep 25  2015 slice.js
+-rwxr--r-- 1 tarryc tarryc 50 Sep 25  2015 strundefined.js
+-rwxr--r-- 1 tarryc tarryc 99 Sep 25  2015 support.js
+-rwxr--r-- 1 tarryc tarryc 86 Sep 25  2015 toString.js
+
+./script/yamm3-master/demo/css:
+total 4
+-rwxr--r-- 1 tarryc tarryc 947 Sep 25  2015 demo.css
+
+./script/yamm3-master/demo/img:
+total 24
+-rwxr--r-- 1 tarryc tarryc  4625 Sep 25  2015 190.jpg
+-rwxr--r-- 1 tarryc tarryc 10361 Sep 25  2015 260.jpg
+-rwxr--r-- 1 tarryc tarryc   239 Sep 25  2015 64x64.gif
+
+./script/yamm3-master/demo/jade:
+total 28
+-rwxr--r-- 1 tarryc tarryc 5749 Sep 25  2015 index.jade
+-rwxr--r-- 1 tarryc tarryc 5552 Sep 25  2015 navbar-fixed.jade
+-rwxr--r-- 1 tarryc tarryc 2861 Sep 25  2015 navbar-grid.jade
+-rwxr--r-- 1 tarryc tarryc 4740 Sep 25  2015 navbar-more.jade
+
+./script/yamm3-master/yamm:
+total 16
+-rwxr--r-- 1 tarryc tarryc 417 Sep 25  2015 yamm.css
+-rwxr--r-- 1 tarryc tarryc 664 Sep 25  2015 yamm.less
+-rwxr--r-- 1 tarryc tarryc 656 Sep 25  2015 _yamm.scss
+-rwxr--r-- 1 tarryc tarryc 487 Sep 25  2015 yamm.styl
+
+./sql:
+total 140
+-rwxrwxr-x 1 tarryc tarryc  3429 Oct 19  2016 buildcharts.sql
+-rwxrwxr-x 1 tarryc tarryc   534 Jan 31  2016 creategameweektbl.sql
+-rwxrwxr-x 1 tarryc tarryc 13127 Jan 31  2016 ddd-dump.sql
+-rwxrwxr-x 1 tarryc tarryc 10465 Jan 31  2016 ddd-insert.sql
+-rwxrwxr-x 1 tarryc tarryc  1118 Jan 31  2016 dddselects.sql
+-rwxrwxr-x 1 tarryc tarryc  1959 Jan 31  2016 ddd.sql
+-rwxrwxr-x 1 tarryc tarryc   391 Jan 31  2016 gamestblinsert.sql
+-rwxrwxr-x 1 tarryc tarryc  2160 Feb 26  2017 getpicks.sql
+-rw-rw-r-- 1 tarryc tarryc  1222 Sep 11  2017 memberfinance.sql
+-rwxrwxr-x 1 tarryc tarryc   888 Oct 25  2016 membergrouptables.sql
+-rwxrwxr-x 1 tarryc tarryc 22901 Oct 10  2016 membertbl-profile-new.sql
+-rwxrwxr-x 1 tarryc tarryc   602 Jan 31  2016 nfl2014-insert-bye.sql
+-rwxrwxr-x 1 tarryc tarryc 15465 Jan 31  2016 nfl2014-insert-play.sql
+-rwxrwxr-x 1 tarryc tarryc  1262 Jan 24  2017 nflrsstbl.sql
+-rwxrwxr-x 1 tarryc tarryc  1905 Nov 22  2017 sqlcommands.sql
+-rwxr--r-- 1 tarryc tarryc  2051 Jul 11  2016 survey.sql
+-rwxrwxr-x 1 tarryc tarryc   950 Jan 31  2016 teamrankstatstbl.sql
+-rwxrwxr-x 1 tarryc tarryc  6675 Jan 31  2016 teamstable.sql
+-rwxrwxr-x 1 tarryc tarryc  1115 Jan 31  2016 teamstatsunion.php
+-rwxrwxr-x 1 tarryc tarryc  1115 Jan 31  2016 teamstatsunion.sql
+-rwxrwxr-x 1 tarryc tarryc   896 Jan 31  2016 test.sql
+
+./support:
+total 792
+-rwxrwxr-x 1 tarryc tarryc 289681 Oct 25  2016 Screen Shot 2016-10-23 at 6.13.27 PM.png
+-rwxrwxr-x 1 tarryc tarryc 312680 Oct 25  2016 Screen Shot 2016-10-23 at 6.13.40 PM.png
+-rwxrwxr-x 1 tarryc tarryc 201049 Oct 25  2016 Screen Shot 2016-10-23 at 6.13.54 PM.png
