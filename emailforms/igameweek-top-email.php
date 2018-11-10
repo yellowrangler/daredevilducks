@@ -1,17 +1,19 @@
 <?php
 
 $emailtopwriteup = "
-<p>Week 7 is in the books!  
+<p>Week 9 is in the books! On to Week 10! 
 </p>	
 <p>	
-The Patriots were again last man standing in their win against the Bears. It was their first away win and it was not a particularly strong defensive outing. But a win is a win so... The Broncos bounced back with a beating on the Cardinals. The Chargers squeaked past the Titans in their game across the pond. The Colts beat the hapless Bills. The Texans beat the Jaguars and Bortles was benched. The Lions scratched their way past the Dolphins. The Vikings plundered the low flying Jets. The Panthers pounced on the Eagles, and the Buccaneers bordered and defeated the Browns. The Saints got heavenly guidance as they dispatched the Ravens. And the Redskins scalped the Cowboys. The Rams dominated the 49ers and the Chiefs overwhelmed the Bengals. The Monday night snoozer (Is it just me or are these ESPN announcers a bunch of babbling know nothings?), the Falcons clawed the New York Peewees.
+The Patriots beat the Packers in one of the best Patriot games for this season. The Patriots defense rose to the occasion and the offense scored enough to win. The 49ers beat the hapless Raiders. The Steelers beat the Ravens in a tough contest. The Bears crushed the Bills. The Panthers crushed the Buccaneers. The Chiefs beat the Browns and the Dolphins beat the Jest in a snooze fest. The Vikings pounded the Lions. The Falcons punished the Redskins. The Texans won a nail biter as Denver missed a last second field goal that would have won the game. The Chargers looked very impressive in their win over the Seahawks. And the Cowboys looked awful in their loss to the Titans.
 <br /><br />
   All in all a good week of football!
 </p>
 
+<!--
 <p>
-	Special shout out goes to 4Horsemen as he was 14 wins and 0 losses for this week!
+	Special shout out goes to Archie and SandyT as they were perfect for the week at 14 wins with 0 losses!
 </p> 
+-->
 
 <p>
 	We had another great turnout this week. Thank you all again for participating. We hope you are having fun!
@@ -21,15 +23,16 @@ The Patriots were again last man standing in their win against the Bears. It was
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
 
-<p>
-	The Statistics from week 7 will be available soon!
-</p>
-
 <!--
 <p>
-	The Statistics from week 7 are available thanks to the hard work of Wildcat Wonder!
-</p> 
+	The Statistics from week 9 will be available soon!
+</p>
 -->
+
+<p>
+	The Statistics from week 9 are available thanks to the hard work of Wildcat Wonder!
+</p> 
+
 
 <p>
 The stats are below! Read em and weep (I know I do)!
