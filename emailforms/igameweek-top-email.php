@@ -1,19 +1,22 @@
 <?php
 
-$emailtopwriteup = "
-<p>Week 9 is in the books! On to Week 10! 
-</p>	
+$emailtopwriteup = "	
 <p>	
-The Patriots beat the Packers in one of the best Patriot games for this season. The Patriots defense rose to the occasion and the offense scored enough to win. The 49ers beat the hapless Raiders. The Steelers beat the Ravens in a tough contest. The Bears crushed the Bills. The Panthers crushed the Buccaneers. The Chiefs beat the Browns and the Dolphins beat the Jest in a snooze fest. The Vikings pounded the Lions. The Falcons punished the Redskins. The Texans won a nail biter as Denver missed a last second field goal that would have won the game. The Chargers looked very impressive in their win over the Seahawks. And the Cowboys looked awful in their loss to the Titans.
+The Patriots looked like woeful against the Titans. One can only hope that this is a hiccup in the larger season. I am not so sure. The good news is that they enter the bye week. Lets hope they can find some focus. On the other hand, the Titans looked very good on both sides of the ball. This may be a turning point for their season. The Steelers eviscerated the Panthers in a rout. In this game the Steelers looked good. I mean really good as in super bowl good. Only time can tell. But they seem to be turning the corner of this season very nicely thank you. The Bears clubbed the fading Lions. The Saints pummeled the previously good looking Bengals. I would not be surprised at a Steelers Saints super bowl. The Browns defeated the disappointing Falcons. The Jaguars continue to unimpress with a loss to the resurging Colts. The Chiefs beat the Cardinals. For those who would ask why I pick the Steelers over the Chiefs to be super bowl bond; its because they have consistently found a way to fade. I hope I am wrong, I love Andy Reed; but thats my gut. The Bills embarrassed the Jets. The Redskins beat the Buccaneers in a snooze fest. The Chargers beat the embarrassed Raiders. The Packers got back on track by beating the Dolphins. The Rams squeaked by the Seahawks that featured the most outrageous non call for obvious grounding in the waning seconds of the game. Come on man! The Cowboys got some of their dignity back by beating the Eagles. And in the final game, the Giants got some help from the refs in their win over the 49ers.
 <br /><br />
-  All in all a good week of football!
+  All in all a great week of football!
 </p>
 
-<!--
+
 <p>
-	Special shout out goes to Archie and SandyT as they were perfect for the week at 14 wins with 0 losses!
+	Check out our new Thanksgiving Pictures! Additionally, if you click on the Thanksgiving image on the home page; you will get a pop-up of the same image larger and easier to see. Mobile users can see the same image by swiping their avatar at the bottom of the page to the left and selecting the Thanksgiving image. 
 </p> 
--->
+
+<p>
+	In these perilous days of polarization and ridicule - it is important to be thankful for all that we have. Especially the people we love.
+</p>
+
+<br />
 
 <p>
 	We had another great turnout this week. Thank you all again for participating. We hope you are having fun!
@@ -23,16 +26,15 @@ The Patriots beat the Packers in one of the best Patriot games for this season. 
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
 
+<p>
+	The Statistics from week 10 will be available soon!
+</p>
+
 <!--
 <p>
-	The Statistics from week 9 will be available soon!
-</p>
--->
-
-<p>
-	The Statistics from week 9 are available thanks to the hard work of Wildcat Wonder!
+	The Statistics from week 10 are available thanks to the hard work of Wildcat Wonder!
 </p> 
-
+-->
 
 <p>
 The stats are below! Read em and weep (I know I do)!

@@ -18,7 +18,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     }
 
     function showPicture() {
-        $('#homePicShowModalTitle').text("Playoff Brackets 2017!");
+        // $('#homePicShowModalTitle').text("Playoff Brackets 2017!");
         $('#homePicShowModal').modal();
     }
 

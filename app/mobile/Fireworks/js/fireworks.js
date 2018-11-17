@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-var Fireworks = (function() { 
+var Fireworks = (function() {
 
   // declare the variables we need
   var particles = [],
@@ -72,7 +72,7 @@ var Fireworks = (function() {
 
   function startFireworks() 
   {
-      interval = setInterval(function(){ runFireworks(); }, 2000);
+      interval = setInterval(function(){ runFireworks(); }, 500);
   }
 
   function stopFireworks() 

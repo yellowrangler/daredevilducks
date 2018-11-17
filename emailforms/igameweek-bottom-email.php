@@ -2,6 +2,6 @@
 
 $emailbottomwriteup = "
 <br />
-We hope all members had a Happy Halloween! On to Thanksgiving!
+We hope all members have a Happy Thanksgiving!
 ";
 ?>

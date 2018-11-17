@@ -10,9 +10,9 @@
             </div> <!-- end of col -->
 
             <form class="form-inline pageStandardOffset">
-              <div class="form-group">
+              <div style="padding-left:5px;padding-right:15px;" class="form-group">
                 <label for="nflrss">News Source</label>
-                <select style="padding-left:5px;"  class="customSelect form-control" ng-change="getNFLrssFeed()" ng-model="current.rsslinkid" id="nflrss" name="nflrss">
+                <select class="customSelect form-control" ng-change="getNFLrssFeed()" ng-model="current.rsslinkid" id="nflrss" name="nflrss">
                     <option ng-repeat="nflrss in nflrsss" ng-selected="current.rsslinkid == nflrss.id" value="{{nflrss.id}}">{{nflrss.rsssource}}</option>
                 </select>
               </div>  <!-- end of div -->

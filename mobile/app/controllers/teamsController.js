@@ -1370,11 +1370,36 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         // var data = "url=" + url;
         teamsFactory.getrss(data)
             .success( function(data) {
-                $scope.nflnews = data.channel.item;
+                // nfl rss does not use channel or item so must check first
+                $scope.nflnews = {};
+                var arrLength = 0;
+
+                var found = url.indexOf("www.nfl.com");
+                if (found > 0)
+                    arrLength = data.entry.length;
+                else
+                    arrLength = data.channel.item.length;
+
+                for (var idx = 0; idx < arrLength; idx++)
+                {
+                    if (found > 0)
+                    {
+                        var rssInfo = {};
+
+                        rssInfo.pubDate = data.entry[idx].published;
+                        rssInfo.description = data.entry[idx].summary;
+                        rssInfo.link = data.entry[idx].link['@attributes'].href;
+
+                        $scope.nflnews[idx]= rssInfo;
+                    }
+                    else
+                        $scope.nflnews[idx] = data.channel.item[idx];
+                }                   
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });
+                    
     }
 
     function loadNewsDetail(url, idx)
@@ -1403,21 +1428,19 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
 
     init();
     function init() {
+        $scope.current.rsslinkid = 1;
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
         $scope.newsdetail = "";
         $scope.newsurl = "";
         $scope.current.newsidx = -1;
-        $scope.current.rsslinkid = 8;
 
         // $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
         // $scope.newsurl = 'http://www.nfl.com/rss/rsslanding?searchString=home';
         // $scope.newsurl = 'http://sports.espn.go.com/espn/rss/nfl/news';
         // $scope.newsurl = 'http://www.rotowire.com/rss/news.htm?sport=nfl';
         // $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
-        getNFLrssFeed() 
-
-
+        getNFLrssFeed(); 
     };
 
     $scope.getNFLrssFeed = function () {
