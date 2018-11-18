@@ -56,8 +56,11 @@
 							<div>{{game.gametime}}</div>
 						</td>
 
-						<td class="left-column-text">
-							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+						<td class="left-column-text"
+						ng-init="hometeamimgsrc=game.hometeamiconname" 
+						ng-mouseover="hometeamimgsrc='statistics.png'" 
+						ng-mouseout="hometeamimgsrc=game.hometeamiconname">
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{hometeamimgsrc}}'>
 						</td>
 
 						<td class="left-column-text">
@@ -66,8 +69,11 @@
 
 						<td class="center-column-text" style="cursor:pointer;" ng-click="getMemberPickList(game.hometeamid,game.gamenbr)"  ng-class="compareScores( 'home', game.hometeamscore, game.awayteamscore) ? 'teamWon' : 'teamLost' ">{{game.teamcounthome}}</td>
 
-						<td class="left-column-text">
-							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>		
+						<td class="left-column-text"
+						ng-init="awayteamimgsrc=game.awayteamiconname"  
+						ng-mouseover="awayteamimgsrc='statistics.png'" 
+						ng-mouseout="awayteamimgsrc=game.awayteamiconname">
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{awayteamimgsrc}}'>		
 						</td>
 
 						<td class="left-column-text">

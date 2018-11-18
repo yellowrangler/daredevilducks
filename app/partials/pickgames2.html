@@ -74,10 +74,14 @@
 							 <div>{{game.gametime}}</div> 
 						</td>
 
-						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						<td id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " 
+							ng-init="hometeamimgsrc=game.hometeamiconname" 
+							ng-mouseover="hometeamimgsrc='statistics.png'" 
+							ng-mouseout="hometeamimgsrc=game.hometeamiconname">
 						    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
 						
-							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" 
+							ng-src='img/nflicons/{{hometeamimgsrc}}'>
 						</td>
 
 						<td style="cursor:pointer;" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
@@ -99,10 +103,13 @@
 						   {{game.hometies}}
 						</td>
 
-						<td id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
+						<td id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " 
+							ng-init="awayteamimgsrc=game.awayteamiconname" 
+							ng-mouseover="awayteamimgsrc='statistics.png'" 
+							ng-mouseout="awayteamimgsrc=game.awayteamiconname">
 						    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
 						
-							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{awayteamimgsrc}}'>
 						</td>
 
 						<td style="cursor:pointer;" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">

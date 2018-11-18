@@ -67,8 +67,11 @@
 							<div>{{game.gametime}}</div>
 						</td>
 
-						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.hometeamiconname}}'>
+						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" 
+						ng-init="hometeamimgsrc=game.hometeamiconname" 
+						ng-mouseover="hometeamimgsrc='statistics.png'" 
+						ng-mouseout="hometeamimgsrc=game.hometeamiconname">
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{hometeamimgsrc}}'>
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
@@ -89,8 +92,11 @@
 							   {{game.hometies}}
 						</td>
 
-						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
-							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{game.awayteamiconname}}'>
+						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'"
+						ng-init="awayteamimgsrc=game.awayteamiconname" 
+						ng-mouseover="awayteamimgsrc='statistics.png'" 
+						ng-mouseout="awayteamimgsrc=game.awayteamiconname">
+							<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='img/nflicons/{{awayteamimgsrc}}'>
 						</td>
 
 						<td class="left-column-text" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' ">
