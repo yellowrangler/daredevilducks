@@ -101,6 +101,17 @@ while($r = mysql_fetch_assoc($sql_result)) {
 //
 mysql_close($dbConn);
 
+
+// print "members array start <br><br>";
+// print_r($members);
+// print "members array end <br><br>";
+
+
+// print "members json start <br><br>";
+// $json = json_encode($members);
+// print_r($json);
+// print "members json end <br>";
+
 //
 // pass back info
 //

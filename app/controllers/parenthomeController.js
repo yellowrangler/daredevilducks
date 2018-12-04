@@ -17,8 +17,9 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         }  
     }
 
-    function showPicture() {
-        // $('#homePicShowModalTitle').text("Playoff Brackets 2017!");
+    function showPicture(title, picture) {
+        $('#homePicShowModalTitle').text(title);
+        $scope.showPictureSrc = "img/"+ picture;
         $('#homePicShowModal').modal();
     }
 
@@ -248,8 +249,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         letItSnow();
     }
 
-    $scope.showPicture = function (picture) {
-        showPicture(picture);   
+    $scope.showPicture = function (title, picture) {
+        showPicture(title, picture);   
     }
 }
 

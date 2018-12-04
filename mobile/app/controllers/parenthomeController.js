@@ -18,11 +18,17 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         $scope.memberavatar = loginService.getMemberAvatar();
     }
 
-    function showPicture() {
-        // $('#homePicShowModalTitle').text("Thank you Lord for all that we have!");
-        // // $('#homePicShowModalBody').text(body);
+    function showPicture(title, picture) {
+        $('#homePicShowModalTitle').text(title);
+        $scope.showPictureSrc = "../img/"+ picture;
         $('#homePicShowModal').modal();
     }
+
+    // function showPicture() {
+    //     // $('#homePicShowModalTitle').text("Thank you Lord for all that we have!");
+    //     // // $('#homePicShowModalBody').text(body);
+    //     $('#homePicShowModal').modal();
+    // }
 
     function letItSnow () 
     {
@@ -165,8 +171,8 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         letItSnow();
     }
 
-    $scope.showPicture = function (picture) {
-        showPicture(picture);   
+    $scope.showPicture = function (title, picture) {
+        showPicture(title, picture);   
     }
 }
 
