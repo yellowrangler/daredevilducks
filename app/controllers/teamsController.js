@@ -230,31 +230,23 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
     function setBracketImage ()
     {
-        switch ($scope.current.season)
-        {
-            case "2014":
-                $scope.bracketimg = "NFLPlayOffBracket2014C.png";
-                break;
+        var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
+        teamsFactory.getTeamBrackets(q)
+            .success( function(data) {
 
-            case "2015":
-                $scope.bracketimg = "NFLPlayOffBracket2015H.png";
-                break;
-
-            case "2016":
-                $scope.bracketimg = "NFL-PlayOff-Bracket-Superbowl-51-2017E.png";
-                break;
-
-            case "2017":
-                $scope.bracketimg = "NFLPlayOffBracketSuperbowl522018F.png";
-                break;  
-
-            case "2018":
-                $scope.bracketimg = "NFLPlayOffBracketPreSuperbowl532018B.png";
-                break;                    
-
-            default:
                 $scope.bracketimg = "";
-        }
+
+                if (data != "null")
+                {
+                    $scope.current.season = data.season; 
+                    $scope.current.week = data.week;
+
+                    $scope.bracketimg = data.imagename;
+                }
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
     }
 
     init();
@@ -265,20 +257,36 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         //
         setviewpadding();
 
-        $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
-        setBracketImage();
-
-        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
-        teamsFactory.getNFLTeamstats(data)
+        teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.teamstats = data;
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;  
+
+                teamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                    .success( function(data) {
+                        $scope.weeks = data; 
+
+                        var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
+                        teamsFactory.getTeamBrackets(q)
+                            .success( function(data) {
+                                $scope.current.season = data.season; 
+                                $scope.current.week = data.week;
+
+                                $scope.bracketimg = data.imagename;
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });        
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });  
             })
             .error( function(edata) {
                 alert(edata);
-            });
-
-        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+            });      
     };
 
     $scope.selectChange = function() {
