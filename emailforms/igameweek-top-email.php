@@ -2,7 +2,13 @@
 
 $emailtopwriteup = "	
 <p>	
-The Patriots played and looked focused in their win over the Vikings. The defense seems to be jelling and the offense got a lift from a balanced running and passing attack. Gronk played well, but he still looks to me like he is hurt. The Cowboys put it all together in a win over the surging Saints. The Ravens beat the disappointing Falcons. The Broncos beat the fading Bengals. The Rams pummeled the 'Next Year' Lions. The Packers lost to the Cardinals, and in so doing, lost their head coach who was fired. The Texans easily beat the spunky Browns. The Dolphins squeaked by the Bills. In a back and forth contest, the Giants beat the Trubisky-less Bears. The Buccaneers beat the Panthers - putting the playoff hopes of the Panthers in jeopardy. The Chiefs beat the Raiders and the Titans beat the Jets. The Seahawks crushed the 49ers. In the game of the week, the Chargers beat the Steelers. This game involved 3 consecutive offsides by the Steelers on the final play of the game. Offsides which may have cost the Steelers the game, as the first field goal attempt missed. In the final contest, the Eagles beat the Redskins.
+What an utter debacle! The Patriots defense again made screen doors on submarines look water tight. At least the screen doors will keep SOME of the water out. Miami for the most part scored at will. It is a pity because the defense every now and then showed flashes of competence. The offense looked good. The special teams unit were Jekyll and Hyde; blocking 2 punts and yet letting a final play that never should have made mid field score and give the Dolphins a win. It will be interesting to see how the boys from New England react. I find that outrageous misfortune either galvanizes resolve or crushes the spirit. 
+</p>
+<p>
+The Titans crushed the Jaguars. What happened to the Jaguars this year? The Jets beat the Bills in the battle of New York. The Browns beat the Panthers in a game that meant more to the Panthers then the Browns playoff wise. The Panthers are still in the hunt (see Wildcat Wonders playoff bracket) but sheesh. The Packers stayed relevant beating the Falcons. The Colts beat the Texans in Texas. The Chiefs beat the Ravens in a squeaker. The Saints got back on track, beating the Buccaneers. The Giants beat their division rivals Redskins. The Chargers continue to impress as they beat the Bengals. The 49ers beat the disappointing Broncos. The Lions beat the Cardinals. The resurgent Cowboys beat the Eagles. 
+</p>
+<p>
+In the upset of the week, the Raiders beat the Steelers. This was a shocking game to me as I had picked the Steelers to be a potential Super Bowl contender. But they are in trouble. They don't to seem to have any focus and that starts in the locker room. Another team that needs a little soul searching. The Bears beat the warm weather Rams in the very cold weather Chicago stadium. In the final game the Seahawks looked very good, beating a disappointing Vikings team.
 <br /><br />
   All in all a great week of football!
 </p> 
@@ -42,7 +48,7 @@ The Patriots played and looked focused in their win over the Vikings. The defens
 -->
 
 <p>
-	The Statistics from week 13 are available thanks to the hard work of Wildcat Wonder!
+	The Statistics from week 14 are available thanks to the hard work of Wildcat Wonder!
 </p> 
 
 

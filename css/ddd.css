@@ -1,3 +1,17 @@
+
+/*fonts*/
+
+@font-face {
+  font-family: 'beyondWonderland';
+  src: url('fonts/BeyondWonderland.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ChopinScript';
+  src: url('fonts/ChopinScript.ttf') format('truetype');
+}
+
+
 /* create sticky menu bar */
 .fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
 
@@ -133,10 +147,18 @@ color:#058689;
 border: 0 none;
 }
 
-.mainTitle {
+/*.mainTitle {
 	color:#6C0000;
 	font-size: 46px;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 700;
+	text-align:center;
+}
+*/
+.mainTitle {
+	color:#228B22;
+	font-size: 55px;
+	font-family: 'ChopinScript', sans-serif;
 	font-weight: 700;
 	text-align:center;
 }
