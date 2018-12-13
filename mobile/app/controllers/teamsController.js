@@ -1480,53 +1480,57 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
     function setBracketImage ()
     {
-        switch ($scope.current.season)
-        {
-            case "2014":
-                $scope.bracketimg = "NFLPlayOffBracket2014C.png";
-                break;
-
-            case "2015":
-                $scope.bracketimg = "NFLPlayOffBracket2015H.png";
-                break;  
-
-            case "2016":
-                $scope.bracketimg = "NFLPlayOffBracketSuperbowl512017C.png";
-                break;
-
-            case "2017":
-                $scope.bracketimg = "NFLPlayOffBracketSuperbowl522018F.png";
-                break;     
-
-            case "2018":
-                $scope.bracketimg = "NFLPlayOffBracketPreSuperbowl532018B.png";
-                break;                        
-
-            default:
-                $scope.bracketimg = ""; 
-        }
-    }
-
-    init();
-    function init() {
-        //
-        // this is not getting called at right time for definig top offset 
-        // in jquery ready. So adding it here
-        //
-        $scope.current.season = nflTeamsService.getCurrentSeason();
-
-        setBracketImage();
-        
-        var data = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid;
-        teamsFactory.getNFLTeamstats(data)
+        var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
+        teamsFactory.getTeamBrackets(q)
             .success( function(data) {
-                $scope.teamstats = data; 
+
+                $scope.bracketimg = "";
+
+                if (data != "null")
+                {
+                    $scope.current.season = data.season; 
+                    $scope.current.week = data.week;
+
+                    $scope.bracketimg = data.imagename;
+                }
             })
             .error( function(edata) {
                 alert(edata);
             });
+    }
 
+    init();
+    function init() {
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+        teamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;  
+
+                teamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                    .success( function(data) {
+                        $scope.weeks = data; 
+
+                        var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
+                        teamsFactory.getTeamBrackets(q)
+                            .success( function(data) {
+                                $scope.current.season = data.season; 
+                                $scope.current.week = data.week;
+
+                                $scope.bracketimg = data.imagename;
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });        
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });  
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
     };
 
     $scope.selectChange = function() {

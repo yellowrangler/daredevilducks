@@ -12,12 +12,20 @@
 		<div class="pageStandardOffset">
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
+
 					<div class="form-group horizontalFieldOffset">
-				    	<label for="season" class="control-label">Season </label>
-			            <select class="customSelect form-control" ng-change="selectChange()" ng-model="current.season" id="season" name="season">
-	            			<option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
-	        			</select>
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="selectChange()" ng-model="current.season"  id="season" name="season">
+			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
+			            </select>
 					</div> <!-- end of form-group -->
+
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="week" class="control-label">Week</label>
+			            <select class="customSelect form-control" ng-change="selectChange()" ng-model="current.week" id="week" name="week">
+				            <option ng-repeat="week in weeks" ng-selected="current.week == week.week" value="{{week.week}}">{{week.week}} = {{week.weekstart}} - {{week.weekend}}</option>
+			            </select>
+					</div> <!-- end of form-group -->   
 				</div> <!-- end of panel body -->			
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->	

@@ -1,6 +1,15 @@
 dddAppMobile.factory('teamsFactory', function($q, $http) {
     var factory = {};
 
+    factory.getTeamBrackets = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getteambrackets.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLTeams = function () {
         return $http({ 
             method: 'POST', 
