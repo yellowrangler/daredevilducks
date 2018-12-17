@@ -138,6 +138,28 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
                 nflTeamsService.addCurrentWeek($scope.current.week);
                 nflTeamsService.addCurrentSeason($scope.current.season);
+
+                teamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                    .success( function(data) {
+                        $scope.weeks = data; 
+
+                        var q = "week="+$scope.current.week+"&season="+$scope.current.season; 
+
+                        // get team bracket image for showpic. Remove this if decide to not show.                           
+                        teamsFactory.getTeamBrackets(q)
+                            .success( function(data) {
+                                $scope.current.season = data.season; 
+                                $scope.current.week = data.week;
+
+                                $scope.bracketimg = data.imagename;
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });        
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    }); 
             })
             .error( function(edata) {
                 alert(edata);
