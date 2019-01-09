@@ -70,6 +70,28 @@ $function = "select";
 include ('mysqlquery.php');
 
 //
+// See if we got anything. If not get whatever is below date
+//
+$rowcount=mysqli_num_rows($sql_result);
+if ($rowcount == 0)
+{
+  //---------------------------------------------------------------
+  // get images information
+  //---------------------------------------------------------------
+  $sql = "SELECT imagename, season, week, final 
+  FROM teambrackettbl 
+  WHERE season = $season
+  ORDER BY season, week DESC
+  LIMIT 1";
+
+  //
+  // sql query
+  //
+  $function = "select";
+  include ('mysqlquery.php');
+}
+
+//
 // get the bracket information
 //
 $r = mysqli_fetch_assoc($sql_result);

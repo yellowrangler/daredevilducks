@@ -1515,10 +1515,13 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
                         var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
                         teamsFactory.getTeamBrackets(q)
                             .success( function(data) {
-                                $scope.current.season = data.season; 
-                                $scope.current.week = data.week;
+                                if (data != "null")
+                                {
+                                    $scope.current.season = data.season; 
+                                    $scope.current.week = data.week;
 
-                                $scope.bracketimg = data.imagename;
+                                    $scope.bracketimg = data.imagename;
+                                }
                             })
                             .error( function(edata) {
                                 alert(edata);

@@ -2,9 +2,9 @@
 
 $emailbottomwriteup = "
 <br />
-We hope all members have a Merry Christmas! And a Happy Hanukkah!
+We hope all members had a Happy New Year!
 
 <br /><br /><br />
-There is NO Thursday Night Game and their are 2 Saturday games!
+There is NO Thursday Night Game and NO Monday Night Game.
 ";
 ?>

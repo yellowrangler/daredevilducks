@@ -229,10 +229,16 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                         // get team bracket image for showpic. Remove this if decide to not show.                           
                         teamsFactory.getTeamBrackets(q)
                             .success( function(data) {
-                                $scope.current.season = data.season; 
-                                $scope.current.week = data.week;
 
-                                $scope.bracketimg = data.imagename;
+                                $scope.bracketimg = "";
+
+                                if (data != "null")
+                                {
+                                    $scope.current.season = data.season; 
+                                    $scope.current.week = data.week;
+
+                                    $scope.bracketimg = data.imagename;
+                                }
                             })
                             .error( function(edata) {
                                 alert(edata);
