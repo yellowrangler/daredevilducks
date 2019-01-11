@@ -769,6 +769,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
     $scope.current.week = nflTeamsService.getCurrentWeek();
+    $scope.current.lastgamenbr = "";
     $scope.teams = {};
 
     var seasonHeaderCellTemplate = '<div ng-click="col.sort()" ng-class="{ ngSorted: !noSortVisible }">'+
@@ -779,6 +780,194 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                              '<div ng-show="col.allowResize" class="ngHeaderGrip"' +
                              ' ng-click="col.gripClick($event)" ng-mousedown="col.gripOnMouseDown($event)">'+
                              '</div>';
+
+    function validateGameFormData() {
+        var rc = 1;
+        var fieldsinerror = "";
+
+
+        if ( (fieldIsEmpty($scope.current.season)) || ($scope.current.season.length != 4) )
+        {
+            fieldsinerror = "season";
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.gametypeid)) || ($scope.current.gametypeid.length != 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", gametypeid";
+            }
+            else
+            {
+                fieldsinerror = "gametypeid";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.week)) || ($scope.current.week.length < 1 || $scope.current.week.length > 2) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", week";
+            }
+            else
+            {
+                fieldsinerror = "week";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.gamenbr)) || ($scope.current.gamenbr.length < 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", gamenbr";
+            }
+            else
+            {
+                fieldsinerror = "gamenbr";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.gamedate)) || ($scope.current.gamedate.length < 5) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", gamedate";
+            }
+            else
+            {
+                fieldsinerror = "gamedate";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.gameyear)) || ($scope.current.gameyear.length != 4) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", gameyear";
+            }
+            else
+            {
+                fieldsinerror = "gameyear";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.gameday)) || ($scope.current.gameday.length < 3) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", gameday";
+            }
+            else
+            {
+                fieldsinerror = "gameday";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.gametime)) || ($scope.current.gametime.length < 7) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", gametime";
+            }
+            else
+            {
+                fieldsinerror = "gametime";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.networkid)) || ($scope.current.networkid.length != 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", networkid";
+            }
+            else
+            {
+                fieldsinerror = "networkid";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.hometeamid)) || ($scope.current.hometeamid.length < 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", hometeamid";
+            }
+            else
+            {
+                fieldsinerror = "hometeamid";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.hometeamscore)) || ($scope.current.hometeamscore.length < 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", hometeamscore";
+            }
+            else
+            {
+                fieldsinerror = "hometeamscore";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.awayteamid)) || ($scope.current.awayteamid.length < 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", awayteamid";
+            }
+            else
+            {
+                fieldsinerror = "awayteamid";
+            }
+            
+            rc = -1;
+        }
+
+        if ( (fieldIsEmpty($scope.current.awayteamscore)) || ($scope.current.awayteamscore.length < 1) )
+        {
+            if (rc == -1)
+            {
+                fieldsinerror = fieldsinerror + ", awayteamscore";
+            }
+            else
+            {
+                fieldsinerror = "awayteamscore";
+            }
+            
+            rc = -1;
+        }
+
+        if (rc == -1)
+        {
+            alert("Error in Game Form: Fields in error: "+fieldsinerror);
+        }
+
+        return(rc);
+
+    }                
 
     init();
     function init() {
@@ -907,6 +1096,11 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                 // $scope.gridOptionsGames.colFilter.term = $scope.current.season;
                 $scope.nflgames = data;
                 $scope.gridOptionsGames.data = data;
+
+                // get last game nbr for current season
+                var nbr = $scope.nflgames.length;
+                $scope.current.lastgamenbr = $scope.nflgames[nbr - 1].gamenbr;
+               
             })
             .error( function(edata) {
                 alert(edata);
@@ -914,7 +1108,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     };
 
-    $scope.updateGameInfoRequest = function () {
+    $scope.saveGameInfoRequest = function () {
+        var rc = validateGameFormData();
+
+        if (rc == -1)
+        {
+            alert("Game Info has invalid values. No game information saved!");
+            return;
+        }
+
         var formstring = $("#gameForm").serialize();
 
         teamsFactory.updateGameInfo(formstring)
@@ -934,27 +1136,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
                     alert(edata);
                 });
 
-                alert("Game Info updated succesfully!");
-                // $("#gameForm")[0].reset();
-            }
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
-    }
-
-    $scope.newGameInfo = function () {
-        var formstring = $("#gameForm").serialize();
-
-        teamsFactory.updateGameInfo(formstring)
-        .success( function(data) {
-            if (data !== "ok")
-            {
-                alert("Error adding game - "+data);
-            }
-            else
-            {
-                alert("Game Info added succesfully!");
+                alert("Game Info saved succesfully!");
                 // $("#gameForm")[0].reset();
             }
         })
@@ -1786,16 +1968,12 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 getLatePickDayBeforeMembers();
                 break;    
                 
-                
             case "manual":
                 break;        
 
             default:
                 alert("Invalid email recipients! email recipients = "+emailrecipients);
         }
-
-
-       
     }
 
     function geteMailTemplate(url) {
