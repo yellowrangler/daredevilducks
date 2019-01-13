@@ -1108,6 +1108,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
 
     };
 
+    $scope.getGameNbr = function() {
+        var g = $scope.current.lastgamenbr;
+
+        g = g * 1;
+        g = g + 1;
+
+        $scope.current.gamenbr = g;
+    }
+
     $scope.saveGameInfoRequest = function () {
         var rc = validateGameFormData();
 

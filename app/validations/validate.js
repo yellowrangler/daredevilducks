@@ -1,5 +1,5 @@
 //
-// validate shipping form
+// validate Login form
 //
 
 function validateLoginForm()
@@ -13,6 +13,18 @@ function validateLoginForm()
 	if (err) return err;
 
 	return 0;
+}
+
+function fieldIsEmpty(field) 
+{
+	if (field === undefined || field === null)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
 }
 
 function simpleValidation(obj,alert,msg,lth_min,lth_max)

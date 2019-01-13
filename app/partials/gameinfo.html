@@ -58,8 +58,9 @@
 
 		            <div class="form-group">
 		              <label for="gamenbr" class="col-sm-4 control-label">Game Nbr</label>
-		              <div class="col-sm-7">
-		                <input type="text" class="form-control" id="gamenbr" name="gamenbr" placeholder="{{current.gamenbr}}" ng-model="current.gamenbr">
+		              <div class="col-sm-7" style="display:inline;">
+		                <input type="text" id="gamenbr" name="gamenbr" placeholder="{{current.gamenbr}}" ng-model="current.gamenbr">
+		                <button style="" class="btn btn-info btn-sm" ng-click="getGameNbr()" id="getGameNbr">Get Game Nbr</button>
 		              </div> <!-- end of col -->
 		            </div> <!-- end of form-group --> 
 

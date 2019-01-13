@@ -11,6 +11,20 @@
   src: url('fonts/ChopinScript.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'RothenburgDecorative';
+  src: url('fonts/RothenburgDecorative.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sentinel';
+  src: url('fonts/Sentinel.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GingerbreadHouse';
+  src: url('fonts/GingerbreadHouse.ttf') format('truetype');
+}
 
 /* create sticky menu bar */
 .fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
@@ -262,6 +276,20 @@ border: 0 none;
 	font-weight: 300;
 	font-size: 18px;
 	color: #b57f7f;
+}
+
+.didyouknowHeaders {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #b57f7f;
+}
+
+.didyouknowBody {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+	color: #999999;
 }
 
 .discoverCaption  {
@@ -886,6 +914,19 @@ border: 0 none;
     -moz-border-radius: 0 6px 6px;
     border-radius: 0 6px 6px 6px;
 }
+
+
+/*tc 2018*/
+/*.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown:hover {
+    background-color: #e7e7e7;
+}
+.dropdown-submenu>.dropdown-menu {
+    display: none;
+}*/
+/*tc end*/
 
 .dropdown-submenu:hover>.dropdown-menu {
     display: block;
