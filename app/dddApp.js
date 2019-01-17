@@ -126,6 +126,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'gameteamscoresinfoController',
                 templateUrl: 'app/partials/gameteamscoresinfo.html'
             })
+        .when('/teamsbracketsinfo',
+            {
+                controller: 'teamsbracketsinfoController',
+                templateUrl: 'app/partials/teamsbracketsinfo.html'
+            })
         .when('/gameranking',
             {
                 controller: 'gamerankingController',

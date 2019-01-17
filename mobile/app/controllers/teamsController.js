@@ -1481,7 +1481,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
     function setBracketImage ()
     {
         var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
-        teamsFactory.getTeamBrackets(q)
+        teamsFactory.getTeamBracketSmart(q)
             .success( function(data) {
 
                 $scope.bracketimg = "";
@@ -1513,7 +1513,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
                         $scope.weeks = data; 
 
                         var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
-                        teamsFactory.getTeamBrackets(q)
+                        teamsFactory.getTeamBracketSmart(q)
                             .success( function(data) {
                                 if (data != "null")
                                 {

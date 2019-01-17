@@ -1406,6 +1406,121 @@ controllers.gameteamscoresinfoController = function ($scope, $http, $location, m
     }
 }
 
+controllers.teamsbracketsinfoController = function ($scope, $http, $location, teamsFactory, nflTeamsService, loginService) {
+    $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
+    $scope.current.week = nflTeamsService.getCurrentWeek();
+
+    function saveTeamBracketInfo()
+    {
+        // var sdata = $("#teamsbracketForm").serialize();
+        var sdata = "season="+$scope.current.season+"&week="+$scope.current.week+"&bracket="+$scope.current.bracket+"&final="+$scope.current.final;
+
+        teamsFactory.saveTeamBracket(sdata)
+            .success( function(data) {
+                getTeamBracketsInfo();
+
+                $('#teamBracketInfoSavedDialogModalTitle').text("Success");
+                $('#teamBracketInfoSavedDialogModalBody').html(data);
+                $('#teamBracketInfoSavedDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        var i = 0;
+    }
+
+    function getTeamBracketsInfo() 
+    {
+        var senddata = "season="+$scope.current.season+"&week="+$scope.current.week;
+        teamsFactory.getTeamBrackets(senddata)
+        .success( function(data) {
+            $scope.current.bracket = "";
+            $scope.current.week = "";
+            $scope.current.final = "";
+            
+            $scope.teambrackets = data;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    function getTeamBracketInfo() 
+    {
+        // must get different weeks and bracket info 
+        // will also need this code for other changes from season to week 
+        // thisi needs to add bracket 
+        // still need show bracket and new bracket and save or
+        // when you choose week bring up bracket for week!!!!!
+        var senddata = "season="+$scope.current.season+"&bracket="+$scope.current.bracket;
+        teamsFactory.getTeamBracket(senddata)
+        .success( function(data) {
+            $scope.teambracket = data;
+            $scope.current.final = data.final;
+            $scope.current.week = data.week;
+            $scope.current.season = data.season;
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
+        teamsFactory.getCurrentSeasonWeek()
+        .success( function(data) {
+            $scope.current.season = data.season; 
+            $scope.current.week = data.week;
+
+            nflTeamsService.addCurrentWeek($scope.current.week);
+            nflTeamsService.addCurrentSeason($scope.current.season);
+            $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+            teamsFactory.getNFLTeamseasonweeks($scope.current.season)
+            .success( function(data) {
+                $scope.weeks = data; 
+                $scope.current.week = "";
+
+                var senddata = "season="+$scope.current.season;
+                teamsFactory.getTeamBrackets(senddata)
+                .success( function(data) {
+                    $scope.teambrackets = data;
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
+                
+            })
+            .error( function(edata) {
+                alert(edata);
+            });  
+        })
+        .error( function(edata) {
+            alert(edata);
+        }); 
+    }
+
+    $scope.saveTeamBracketInfo = function() {
+        saveTeamBracketInfo();
+    }
+
+    $scope.getTeamBracketsInfo = function () {
+        getTeamBracketsInfo();
+    }
+
+    $scope.getTeamBracketInfo = function () {
+        getTeamBracketInfo();
+    }
+}
+
 
 controllers.gameteamdatetimeinfoController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
     $scope.current = {};

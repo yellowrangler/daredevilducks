@@ -66,6 +66,7 @@
 		<div id="admin" class="collapse" aria-expanded="false">
 			<a href="#/teaminfo" class="btn btn-info btn-lg active btn-block left-column-text" role="button">Team Information</a>
 			<a href="#/teamseasoninfo" class="btn btn-info btn-lg active btn-block left-column-text" role="button">Team Season Information</a>
+			<a href="#/teamsbracketsinfo" class="btn btn-info btn-lg active btn-block left-column-text" role="button">Manage Team Brackets</a>
 			<a href="#/gameinfo" class="btn btn-info btn-lg active btn-block left-column-text" role="button">Game Day Informtion</a>
 			<a href="#/gamenetworkinfo" class="btn btn-info btn-lg active btn-block left-column-text" role="button">Set Game Networks</a>
 			<a href="#/gameteamscoresinfo" class="btn btn-info btn-lg active btn-block left-column-text" role="button">Set Game Scores</a>
@@ -95,11 +96,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="homePicShowModalTitle"></h4>
+        <h4 id="homePicShowModalTitle" class="modal-title" style="font-family:'ChopinScript',serif;font-size:28px;color:red;text-align:center" id="homePicModalTitle"></h4>
       </div>
       <div class="modal-body">
-        <p id="homePicShowModalBody">
-        	<img src="../img/DonaldDuckSpring2018HomePage.png" style="width:100%;text-align:center;" alt="Thank you Lord for all that we have!">
+        <p id="homePicModalBody">
+        	<img ng-src={{showPictureSrc}} style="width:100%;text-align:center;" alt="Thank you Lord for all that we have!">
         </p>
       </div>
       <div class="modal-footer">
