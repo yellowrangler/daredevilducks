@@ -2,9 +2,9 @@
 
 $emailbottomwriteup = "
 <br />
-We hope all members had a Happy New Year!
+We hope all members had a fantastic Season!
 
 <br /><br /><br />
-There are only Sunday Games.
+The Patriots are your 2018 Super Bowl Champs!
 ";
 ?>

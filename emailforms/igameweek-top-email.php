@@ -2,31 +2,33 @@
 
 $emailtopwriteup = "	
 <p>	
-The Playoff are here and what a great regular season we had. This is our favorite time of the year. Savor it as you watch it because it will be over in the blink of an eye.
+The Patriots are your 2018 Super Bowl Champions! Man I love the sound of that! This makes 6 Super Bowls tieing them with the Pittsburgh Steelers. In a age where football has been tinkered with to emphasize the offense, this was a throwback game; featuring the best defense I have seen from the Patriots since their first Super Bowl. This was the lowest scoring Super Bowl ever. Think about that. The Patriots held one of the highest scoring teams to 3 points. Booyah! Great Team. Great Chemistry. Dynasty.
 </p>
-<p>	
-The Chiefs crushed the Colts at the frozen Arrow Head field in Kansas City! It is very hard to see who can beat this offensive juggernaut. The Chiefs seem capable of scoring however many points are necessary to win. Their next opponent will be the New England Patriots for the AFC championship!
-</p>
-<p>	
-The Rams beat the Cowboys by exerting a familiar and regular pattern of running and passing. Dallas did there best to stay even, but in they end were overwhelmed. The Rams next meet the New Orleans Saints for the NFC championship!
-</p>
-<p>	
-The Patriots stuck it to all the naysayers and crushed the Chargers in a game where both the offense and defense performed flawlessly. Their next opponent will be the Kansan City Chiefs for the AFC championship!
-</p>
-<p>	
-The Saints beat the Eagles in the most closely contested playoff to date. Only a late fourth quarter interception sealed the win for the Saints. The Saints next meet the Los Angeles Rams for the NFC championship!
-</p>
-<p>	
-So there we have it. The number 1 and 2 teams from their respective conferences will duke it out for a chance to play in the Super Bowl. Seems like poetic symmetry.
-</p>
+
 <p>
-  All in all a great week of football!
+  All in all a superb season of football!
 </p> 
+
+<p>	
+This years Dare Devilducks winner is 4Horsemen! Congratulations 4Horsemen you have the additional distinction of being our first male winner as well. 
+</p>
+<p>	
+So there we have it. The Super Bowl is over. The football gods have spoken. Super Bowl LIII in the books and the Patriots are your Champions! Thank you all for joining us this year. We hope you all had fun. Because in the end, fun is what we are all about. Please join us again next year and tell your friends. Because more is always merrier!
+</p>
 
 <p style='padding-top: 15px;'>
 	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
 </p>
 
+<p>
+	Click on the large Dare Devilducks logo on the home page to see the final bracket! 
+</p>
+
+<p>	
+	Click on the Patriots Champions image on the home page to see the fireworks!
+</p> 
+
+<!-- 
 <p>
 	We added a new feature where if you hold the mouse over a team icon, a bar graph image appears. This is to emphasize the point that clicking on that team icon will bring up the teams statistics.
 </p> 
@@ -36,18 +38,17 @@ So there we have it. The number 1 and 2 teams from their respective conferences 
 </p>
 
 <p>
-	The Statistics and playoff bracket for week 19 will be available soon!
+	The Statistics week 20 and playoff bracket for week 21 will be available soon!
 </p>
 
-<!-- 
+
 <p>
 	The Statistics from week 19 are available thanks to the hard work of Wildcat Wonder!
 </p>
  --> 
 
-
 <p>
-The stats are below! Read em and weep (I know I do)!
+The FINAL stats are below! Read em and weep (I know I do)!
 </p>   
 ";
 ?>
