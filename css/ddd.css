@@ -161,15 +161,15 @@ color:#058689;
 border: 0 none;
 }
 
-/*.mainTitle {
+.mainTitle {
 	color:#6C0000;
 	font-size: 46px;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
 	text-align:center;
 }
-*/
-.mainTitle {
+
+.mainTitle2 {
 	color:#228B22;
 	font-size: 55px;
 	font-family: 'ChopinScript', sans-serif;
