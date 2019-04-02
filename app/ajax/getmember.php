@@ -37,38 +37,18 @@ $enterdate = $datetime;
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Member List request started" );
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
+if ($memberid != "")
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get member information.");
-
-	$rv = "";
-	exit($rv);
+	$modulecontent = "Unable to get  member information for memberid = $memberid";
 }
-
-if (!mysql_select_db($DBschema, $dbConn)) 
+else
 {
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get member information.");
-
-	$rv = "";
-	exit($rv);
+	$modulecontent = "Unable to get  member information for membername = $membername";
 }
+include ('mysqlconnect.php');
 
 //---------------------------------------------------------------
 // get nfl game type information
@@ -82,30 +62,22 @@ else
 	$sql = "SELECT *  FROM membertbl WHERE membername = '$membername'  AND status = 'active'";
 }
 
-// print $sql;
-
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get member $membername information.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -100;
-    $msgtext = "System Error: $sqlerr";
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 //
 // get the member information
 //
-$r = mysql_fetch_assoc($sql_result);
+$r = mysqli_fetch_assoc($sql_result);
 $member = $r;
 
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

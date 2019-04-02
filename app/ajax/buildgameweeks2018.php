@@ -114,30 +114,11 @@ $mysqlTS = date("Y-m-d H:i:s", $unixTS);
 $currenrTS = $mysqlTS;
 $year = date("Y",$currenrTS);
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	echo mysql_error();
-	exit();
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	echo mysql_error();
-	exit();
-}
+$modulecontent = "Unable to build game weeks $season.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -164,19 +145,23 @@ foreach ($weekstart as $idx => $weekvalue) {
 	// 
 	$sql = "SELECT * FROM gameweekstbl WHERE season = $season AND week = $week";
 
-	$sql_result_check = @mysql_query($sql, $dbConn);
-	if (!$sql_result_check)
-	{
-	    echo mysql_error();
-		exit();	
-	}	
+	//
+	// sql query
+	//
+	$function = "select";
+	$modulecontent = "Unable to build game weeks $season. sql = $sql.";
+	include ('mysqlquery.php');
 
-	$count = mysql_num_rows($sql_result_check);
+
+	$count = mysqli_num_rows($sql_result_check);
 	if ($count > 0)
 	{
 		// 
 		// do update
 		// 
+
+		$fucntion = "update";
+
 		$sql = "UPDATE gameweekstbl 
 			SET season = $season, 
 			gametypeid = $gametypeid, 
@@ -191,6 +176,9 @@ foreach ($weekstart as $idx => $weekvalue) {
 		// 
 		// do insert
 		// 
+
+		$fucntion = "insert";
+
 		$sql = "INSERT INTO gameweekstbl 
 		(season, gametypeid, week, weekstart, weekend, enterdate)  
 		VALUES ( $season, $gametypeid,
@@ -202,12 +190,11 @@ foreach ($weekstart as $idx => $weekvalue) {
 
 	echo "sql => " . $sql . "<br />";
 
-	$sql_result_insert_update = @mysql_query($sql, $dbConn);
-	if (!$sql_result_insert_update)
-	{
-		echo mysql_error();
-		exit();	
-	}
+	//
+	// sql query
+	//
+	$modulecontent = "Unable to build game weeks $season. sql = $sql.";
+	include ('mysqlquery.php');
 
 	$weekcount = $weekcount + 1;
 
@@ -216,7 +203,7 @@ foreach ($weekstart as $idx => $weekvalue) {
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 
 $msg = $msg . "For season: $season added $weekcount game weeks";

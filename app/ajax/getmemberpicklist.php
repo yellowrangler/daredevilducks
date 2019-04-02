@@ -48,41 +48,11 @@ else
 
 $msg = "Input variables: Season:$season week:$week<br /><br />";
 
-//------------------------------------------------------
-// db admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
-// $season = 2015;
-// week = 17;
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn)
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get member pick list.");
-
-	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to get member pick list.";
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn))
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get member pick list.");
-
-	$msg = $msg . "DB error: $dberr - Error selecting db Unable to get member pick list.";
-	exit($msg);
-}
+$modulecontent = "Unable to get  Unable to get member pick list.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -114,18 +84,12 @@ FROM
 ) AS QM
 LEFT JOIN membertbl M on QM.memberid = M.id";
 
-$sql_result_prime = @mysql_query($sql, $dbConn);
-if (!$sql_result_prime)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get member pick list.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -110;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to get member pick list.<br /> SQL: $sql";
-	exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+include('mysqlquery.php');
+$sql_result_prime = $sql_result;
 
 //
 // set variables
@@ -147,7 +111,7 @@ $picksStr = "Picks";
 $membernameStr = "Member Name";
 $msg = $msg . "&nbsp;" . str_replace('~', '&nbsp;', str_pad($picksStr, $pickStrLength, '~', STR_PAD_BOTH)) . str_replace('~', '&nbsp;', str_pad($membernameStr, $membernameStrLength, '~', STR_PAD_BOTH)) . "<br /><br />";
 
-while($row = mysql_fetch_assoc($sql_result_prime)) {
+while($row = mysqli_fetch_assoc($sql_result_prime)) {
 
 	// count active members
 	$totalmembers = $totalmembers + 1;
@@ -179,7 +143,7 @@ $msg = $msg . "<br />Totals members:$totalmembers Members who picked:$memberspic
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

@@ -68,14 +68,7 @@ else
 
 $msg = "Input variables: Season:$season weeksinregularseason:$weeksinregularseason weeksinplayoffseason: $weeksinplayoffseason<br />";
 
-//------------------------------------------------------
-// db admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
+$weeksinfullyear = $weeksinregularseason + $weeksinplayoffseason;
 
 //
 // set variables
@@ -111,28 +104,10 @@ $divties = 0;
 $divpercent = 0;
 
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update team week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to update team week stats.";
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update team week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error selecting db Unable to update team week stats.";
-	exit($msg);
-}
+$modulecontent = "Unable to get  update team week stats.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));	
@@ -145,20 +120,14 @@ COALESCE(MAX(week),1) AS weeks
 FROM gameweekstbl where season = $season
 AND weekend <= '$enterdateTS'";
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats - total weeks.");
-    $log->writeLog("SQL: $sql");
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to update team week stats - max weeks.";
+include ('mysqlquery.php');
 
-    $status = -200;
-    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total weeks. <br /> $sqlerr <br /> SQL: $sql";
-    exit($msg);
-}	
-
-$r = mysql_fetch_assoc($sql_result);
+$r = mysqli_fetch_assoc($sql_result);
 $weekstotal = $r[weeks];
 
 // echo "<br>timestamp: $enterdateTS<br/><br/>";
@@ -168,18 +137,14 @@ $weekstotal = $r[weeks];
 // Get list of all nfl teams
 //---------------------------------------------------------------
 $sql = "SELECT * FROM teamstbl ORDER BY conference ASC, division ASC, teamorder ASC";
-$sql_result_prime = @mysql_query($sql, $dbConn);
-if (!$sql_result_prime)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats.");
-    $log->writeLog("SQL: $sql");
 
-    $status = -100;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update team week stats. <br /> SQL: $sql";
-    exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to select team week stats - select by.";
+include ('mysqlquery.php');
+$sql_result_prime = $sql_result;
 
 //
 // display variables
@@ -189,7 +154,7 @@ $teamcount = 0;
 //
 // loop through all teams
 //
-while($row = mysql_fetch_assoc($sql_result_prime)) {
+while($row = mysqli_fetch_assoc($sql_result_prime)) {
 
 	// count teams
 	$teamcount = $teamcount + 1;
@@ -326,25 +291,20 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		// echo "<br />Wins select sql: $sql<br /><br /><br />";
 
-		$sql_r = @mysql_query($sql, $dbConn);
-		if (!$sql_r)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats - total wins.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -200;
-		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total wins. <br /> $sqlerr <br /> SQL: $sql";
-    		exit($msg);
-		}	
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select team week stats - total wins.";
+		include ('mysqlquery.php');
+		$sql_r = $sql_result;
 
 		//
 		// union 5 selects to get total, home, away, conf and div wins
 		//
 		$idx = 0;
 		$winsArray = array();
-		while($row = mysql_fetch_assoc($sql_r)) {
+		while($row = mysqli_fetch_assoc($sql_r)) {
 			$winsArray[$idx] = $row['wins'];
 			$regularseasonwinsArray[$idx] = $row['regularseasonwins'];
 			$postseasonwinsArray[$idx] = $row['postseasonwins'];
@@ -457,25 +417,20 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		// echo "<br />losses select sql: $sql<br /><br /><br />";
 
-		$sql_r = @mysql_query($sql, $dbConn);
-		if (!$sql_r)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats - total losses.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -200;
-		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total losses. <br /> $sqlerr <br /> SQL: $sql";
-    		exit($msg);
-		}	
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select team week stats - total losses.";
+		include ('mysqlquery.php');
+		$sql_r = $sql_result;
 
 		//
 		// union 5 selects to get total, home, away, conf and div losses
 		//
 		$idx = 0;
 		$lossesArray = array();
-		while($row = mysql_fetch_assoc($sql_r)) {
+		while($row = mysqli_fetch_assoc($sql_r)) {
 			$lossesArray[$idx] = $row['losses'];
 			$regularseasonlossesArray[$idx] = $row['regularseasonlosses'];
 			$postseasonlossesArray[$idx] = $row['postseasonlosses'];
@@ -608,25 +563,20 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		// echo "<br /><br />ties select sql: $sql<br /><br /><br />";
 
-		$sql_r = @mysql_query($sql, $dbConn);
-		if (!$sql_r)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team week stats - total ties.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -200;
-		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats - total ties. <br /> $sqlerr <br /> SQL: $sql";
-    		exit($msg);
-		}	
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select team week stats - total ties.";
+		include ('mysqlquery.php');
+		$sql_r = $sql_result;
 
 		//
 		// union 5 selects to get total, home, away, conf and div ties
 		//
 		$idx = 0;
 		$tiesArray = array();
-		while($row = mysql_fetch_assoc($sql_r)) {
+		while($row = mysqli_fetch_assoc($sql_r)) {
 			$tiesArray[$idx] = $row['ties'];
 			$regularseasontiesArray[$idx] = $row['regularseasonties'];
 			$postseasontiesArray[$idx] = $row['postseasonties'];
@@ -685,16 +635,28 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			$p = $wins / $games;
 			$percent = round($p, 3);
 
-			$p = $homewins / $homegames;
+			if ($homegames > 0)
+				$p = $homewins / $homegames;
+			else
+				$p = 0;
 			$homepercent = round($p, 3);
 
-			$p = $awaywins / $awaygames;
+			if ($awaygames > 0)
+				$p = $awaywins / $awaygames;
+			else
+				$p = 0;
 			$awaypercent = round($p, 3);
 
-			$p = $confwins / $confgames;
+			if ($confgames > 0)
+				$p = $confwins / $confgames;
+			else
+				$p = 0;
 			$confpercent = round($p, 3);
 
-			$p = $divwins / $divgames;
+			if ($divgames > 0)
+				$p = $divwins / $divgames;
+			else
+				$p = 0;
 			$divpercent = round($p, 3);
 		}
 			
@@ -765,22 +727,13 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			AND week = $week
 			AND season = $season";
 
-			// debug
-			// echo "sqlupdate = $sql<br />";
-
-		$sql_r = @mysql_query($sql, $dbConn);
-		if (!$sql_r)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update team week stats.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -250;
-		    $msg = $msg . "System Error: $sqlerr <br /> Error doing select to db Unable to update team week stats. <br /> $sqlerr <br /> SQL: $sql";
-    		exit($msg);
-		}
-
+		//
+		// sql query
+		//
+		$function = "update";
+		$modulecontent = "Unable to update team week stats.";
+		include ('mysqlquery.php');
+		$sql_r = $sql_result;
 	}  // end of for weeks
 
 	//
@@ -805,34 +758,57 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				season = $season, enterdate = '$enterdateTS' 
 				WHERE teamid = $teamid AND week = $week AND season = $season";
 
-				// debug
-				// echo "loopsql = $sql<br />";
+			//
+			// sql query
+			//
+			$function = "update";
+			$modulecontent = "Unable to update team week stats - rest of weeks.";
+			include ('mysqlquery.php');
+			$sql_r = $sql_result;	
+		}
+	}
 
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update extending to db Unable to update team week stats.");
-			    $log->writeLog("SQL: $sql");
+	//
+	// loop through playoff weeks
+	//
+	$start = "No start";
+	$week = $week - 1;
+	if ($week < $weeksinfullyear)
+	{
+		$start = $week;
+		for ($week = $start; $week <= $weeksinfullyear; $week++)
+		{
+			// 
+			// do update
+			// 
+			$sql = "UPDATE teamweekstatstbl 
+				SET totalgames = $games, week = $week, wins = $wins, losses = $losses, ties = $ties, percent = $percent,
+				hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
+				awaytotalgames = $awaygames, awaywins = $awaywins, awaylosses = $awaylosses, awayties = $awayties, awaypercent = $awaypercent,			
+				conftotalgames = $confgames, confwins = $confwins, conflosses = $conflosses, confties = $confties, confpercent = $confpercent,
+				divtotalgames = $divgames, divwins = $divwins, divlosses = $divlosses, divties = $divties, divpercent = $divpercent,
+				season = $season, enterdate = '$enterdateTS' 
+				WHERE teamid = $teamid AND week = $week AND season = $season";
 
-			    $status = -27750;
-			    $msg = $msg . "System Error: $sqlerr <br /> Error doing update extending to db Unable to update team week stats . <br /> $sqlerr <br /> SQL: $sql";
-	    		exit($msg);
-			}
-
+			//
+			// sql query
+			//
+			$function = "update";
+			$modulecontent = "Unable to update team week stats - playoff  weeks.";
+			include ('mysqlquery.php');
+			$sql_r = $sql_result;	
 		}
 	}
 		
 
 } // end of looping through teams
 
-$msg = $msg . "Totals Teams:$teamcount. <br />Weeks total: $weekstotal <br />Weeks run: $week <br />Weeks in regular Season: $weeksinregularseason";
+$msg = $msg . "Totals Teams:$teamcount. <br />Weeks total: $weekstotal <br />Weeks run: $week <br />Weeks in regular Season: $weeksinregularseason<br />Weeks in full Season: $weeksinfullyear";
 
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

@@ -28,38 +28,11 @@ $msgtext = "";
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to login for ddd membername $loginmembername.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to login for ddd membername $loginmembername.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to login for ddd membername $loginmembername.";
+include 'mysqlconnect.php';
 
 //---------------------------------------------------------------
 // Get memberid password for compare.
@@ -69,28 +42,23 @@ FROM membertbl
 WHERE status = 'active' AND screenname = '$loginscreenname'";
 // print $sql;
 
-$rc = 1;
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to login for ddd membername $loginmembername.");
-	$log->writeLog("SQL: $sql");
+//
+// sql query
+//
+$function = "select";
+include 'mysqlquery.php';
 
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr";
-}
+$rc = 1;
 
 //
 // check if we got any rows
 //
 if ($rc == 1)
 {
-	$count = mysql_num_rows($sql_result);
+	$count = mysqli_num_rows($sql_result);
 	if ($count == 1)
 	{
-		$row = mysql_fetch_assoc($sql_result);
+		$row = mysqli_fetch_assoc($sql_result);
 		$tblpassw = $row['passwd'];
 		$tblmemberid = $row['memberid'];
 		$tblscreenname = $row['screenname'];
@@ -127,7 +95,7 @@ if ($rc == 1)
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 	
 // print_r($regiterclientid);
 // print("I am here");

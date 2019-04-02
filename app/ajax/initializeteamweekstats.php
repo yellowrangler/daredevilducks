@@ -68,15 +68,6 @@ else
 
 $msg = "Input variables: Season:$season weeksinseason:$weeksinseason weeksinplayoffseason:$weeksinplayoffseason<br />";
 
-//------------------------------------------------------
-// db admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
 // set variables
 //
@@ -90,29 +81,12 @@ $games = 0;
 // $season = 2015;
 // $weeksinseason = 17;
 
+
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to initialize team week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to initialize team week stats.";
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to initialize team week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error selecting db Unable to initialize team week stats.";
-	exit($msg);
-}
+$modulecontent = "Unable to initialize team week stats.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));		
@@ -124,18 +98,12 @@ $sql = "SELECT id as teamid
 FROM  teamstbl 
 ORDER BY 'teamid'";
 
-$sql_result_prime = @mysql_query($sql, $dbConn);
-if (!$sql_result_prime)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize team week stats.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -100;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize team week stats.<br /> SQL: $sql";
-	exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+$sql_result_prime = $sql_result;
 
 //
 // display variables
@@ -143,7 +111,7 @@ if (!$sql_result_prime)
 $teamcount = 0;
 $teaminsertedcount = 0;
 
-while($row = mysql_fetch_assoc($sql_result_prime)) {
+while($row = mysqli_fetch_assoc($sql_result_prime)) {
 
 	// count teams
 	$teamcount = $teamcount + 1;
@@ -163,20 +131,14 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		FROM  teamweekstatstbl 
 		WHERE teamid = $teamid and season = $season and week = $week";
 
-		$sql_result_check = @mysql_query($sql, $dbConn);
-		if (!$sql_result_check)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize team week stats.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		include ('mysqlquery.php');
+		$sql_result_check = $sql_result;
 
-		    $status = -110;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize team week stats.<br /> SQL: $sql";
-			exit($msg);
-		}
-
-		$num_rows = mysql_num_rows($sql_result_check);
+		$num_rows = mysqli_num_rows($sql_result_check);
 
 		if ($num_rows == 0)
 		{
@@ -187,18 +149,13 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
 				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
 
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert team week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -260;
-			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize insert team week stats.<br /> SQL: $sql";
-				exit($msg);
-			}
+			//
+			// sql query
+			//
+			$function = "insert";
+			$modulecontent = "Unable to initialize team week stats. error during insert.";
+			include ('mysqlquery.php');
+			$sql_r = $sql_result;	
 
 			$teaminsertedcount = $teaminsertedcount + 1;
 		}
@@ -219,20 +176,15 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		FROM  teamweekstatstbl 
 		WHERE teamid = $teamid and season = $season and week = $week";
 
-		$sql_result_check = @mysql_query($sql, $dbConn);
-		if (!$sql_result_check)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize team week stats.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to initialize team week stats. error during select.";
+		include ('mysqlquery.php');
+		$sql_result_check = $sql_result;	
 
-		    $status = -110;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize team week stats.<br /> SQL: $sql";
-			exit($msg);
-		}
-
-		$num_rows = mysql_num_rows($sql_result_check);
+		$num_rows = mysqli_num_rows($sql_result_check);
 
 		if ($num_rows == 0)
 		{
@@ -243,18 +195,13 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
 				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
 
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert team week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -260;
-			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize insert team week stats.<br /> SQL: $sql";
-				exit($msg);
-			}
+			//
+			// sql query
+			//
+			$function = "insert";
+			$modulecontent = "Unable to initialize member week stats. error during insert.";
+			include ('mysqlquery.php');
+			$sql_r = $sql_result;		
 
 			$teaminsertedcount = $teaminsertedcount + 1;
 		}
@@ -268,7 +215,7 @@ $msg = $msg . "Totals Teams:$teamcount Teams Weeks Inserted:$teaminsertedcount."
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

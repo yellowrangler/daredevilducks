@@ -28,53 +28,23 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 // set msg text
 $msgtext = "ok";
 
-//------------------------------------------------------
-// connect to db
-//------------------------------------------------------
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update membergroup members for ddd membergroupname $membergroupid.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update membergroup members for ddd membergroupname $membergroupid.");
-
-	$rv = "";
-	exit($rv);
-}
+//
+// db connect
+//
+$modulecontent = "Unable to update membergroup members for ddd membergroupname $membergroupid.";
+include_once ('mysqlconnect.php');
 
 //---------------------------------------------------------------
 // Delete all the members and then add all members
 //---------------------------------------------------------------
 $sql = "DELETE FROM `membergroupmembertbl` WHERE membergroupid = '$membergroupid'";
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing delete to db Unable to delete membergroupmembertbl for ddd membergroupmembertbl $membergroupid.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "delete";
+$modulecontent = "Unable to delete membergroupmembertbl for ddd membergroupmembertbl $membergroupid.";
+include ('mysqlquery.php');
 
 //
 // loop through members and insert
@@ -85,31 +55,23 @@ foreach ($membergroupmemberids as $key => $memberid) {
 	//---------------------------------------------------------------
 	$sql = "INSERT INTO membergroupmembertbl
 		(membergroupid, memberid) 
-		VALUES ('$membergroupid', '$memberid')"; 
+		VALUES ('$membergroupid', '$memberid')";
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-		$log = new ErrorLog("logs/");
-		$sqlerr = mysql_error();
-		$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add membergroupmembertbl for ddd membergroupmembertbl $membergroupid $memberid.");
-		$log->writeLog("SQL: $sql");
-
-		$rc = -100;
-		$msgtext = "System Error: $sqlerr. sql = $sql";
-
-		exit($msgtext);
-	}	
+	//
+	// sql query
+	//
+	$function = "insert";
+	$modulecontent = "Unable to insert membergroupmembertbl for ddd membergroupmembertbl $membergroupid.";
+	include ('mysqlquery.php');
 }
 
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info
 //
-
 exit($msgtext);
 ?>

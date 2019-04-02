@@ -86,67 +86,36 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Add member request started" );
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update team for ddd team $name.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update team for ddd team $name.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to get admin member information.";
+include_once ('mysqlconnect.php');
 
 //---------------------------------------------------------------
 // update team season info 
 //---------------------------------------------------------------
-
 $sql = "SELECT teamid
 	FROM teamseasontbl 
 	WHERE season = $season AND teamid = $teamid";
 
-$sql_check_result = @mysql_query($sql, $dbConn);
-if (!$sql_check_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to select team for ddd teamseasontbl $teamid.");
-	$log->writeLog("SQL: $sql");
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to select team for ddd teamseasontbl $teamid.";
 
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
+include ('mysqlquery.php');
+$sql_check_result = $sql_result;
 
-	exit($msgtext);
-}
-
-$count = mysql_num_rows($sql_check_result);
+$count = mysqli_num_rows($sql_check_result);
 if ($count > 0)
 {
 	// 
 	// do update
 	// 
+	$function = "update";
+
 	$sql = "UPDATE teamseasontbl 
 		SET season = $season, 
 		teamid = $teamid, 
@@ -159,6 +128,8 @@ else
 	// 
 	// do insert
 	// 
+	$function = "insert";
+
 	$sql = "INSERT INTO teamseasontbl 
 	(season, teamid, postseasonstatus, enterdate)  
 	VALUES ( $season, 
@@ -167,27 +138,19 @@ else
 	'$enterdateTS' )";
 }
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update or insert to db Unable to update teamseasontbl for ddd team $teamid.");
-	$log->writeLog("SQL: $sql");
+//
+// sql query
+//
+$modulecontent = "Unable to update or insert team for ddd teamseasontbl $teamid.";
+include ('mysqlquery.php');
 
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info
 //
-
 exit($msgtext);
 ?>

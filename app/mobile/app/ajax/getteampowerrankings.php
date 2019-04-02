@@ -28,38 +28,11 @@ $maxrankweek = 0;
 // $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-    $log = new ErrorLog("logs/");
-    $dberr = mysql_error();
-    $log->writeLog("DB error: $dberr - Error mysql connect. Unable to get team weekly power rankings all season information.");
-
-    $rv = "";
-    exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-    $log = new ErrorLog("logs/");
-    $dberr = mysql_error();
-    $log->writeLog("DB error: $dberr - Error selecting db Unable to get team weekly power rankings all season information.");
-
-    $rv = "";
-    exit($rv);
-}
+$modulecontent = "Unable to get team weekly power rankings all season information.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -68,19 +41,15 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 // Get max week from team rank table
 //---------------------------------------------------------------
 $sql = "SELECT MAX(week) AS maxrankweek FROM teamweekranktbl WHERE season = $season";
-$sql_result_check = @mysql_query($sql, $dbConn);
-if (!$sql_result_check)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly power rankings all season information for max week.");
-    $log->writeLog("SQL: $sql");
 
-    $status = -100;
-    $msgtext = "System Error: $sqlerr";
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+$sql_result_check = $sql_result;
 
-$row = mysql_fetch_assoc($sql_result_check);
+$row = mysqli_fetch_assoc($sql_result_check);
 $maxrankweek = $row['maxrankweek'];
 
 //---------------------------------------------------------------
@@ -104,17 +73,11 @@ and week <= $maxrankweek
 // print $sql;
 // die();
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get team weekly power rankings all season information.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -100;
-    $msgtext = "System Error: $sqlerr";
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 //
 // fill the array
@@ -130,16 +93,16 @@ $pdp = array();
 $pdr = array();
 $weeks = array();
 
-while($r = mysql_fetch_assoc($sql_result)) {
-    $pot[] = 32 - $r[pot];
-    $pos[] = 32 - $r[pos];
-    $pop[] = 32 - $r[pop];
-    $por[] = 32 - $r[por];
+while($r = mysqli_fetch_assoc($sql_result)) {
+    $pot[] = 33 - $r[pot];
+    $pos[] = 33 - $r[pos];
+    $pop[] = 33 - $r[pop];
+    $por[] = 33 - $r[por];
 
-    $pdt[] = 32 - $r[pdt];
-    $pds[] = 32 - $r[pds];
-    $pdp[] = 32 - $r[pdp];
-    $pdr[] = 32 - $r[pdr];
+    $pdt[] = 33 - $r[pdt];
+    $pds[] = 33 - $r[pds];
+    $pdp[] = 33 - $r[pdp];
+    $pdr[] = 33 - $r[pdr];
     $weeks[] = "Week " . $r[week];
 }
 
@@ -160,7 +123,7 @@ $returnArray[8] = $weeks;
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

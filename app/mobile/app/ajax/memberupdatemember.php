@@ -100,43 +100,16 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 // $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Add member request started" );
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
+//
+// db connect
+//
+$modulecontent = "Unable to update membername for ddd member update membername $membername.";
+include_once ('mysqlconnect.php');
 
 //
-// connect to db
+// now encode string. Must be done  after mysqli connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update membername for ddd member update membername $membername.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update membername for ddd member update membername $membername.");
-
-	$rv = "";
-	exit($rv);
-}
-
-//
-// now encode string. Must be done  after mysql connect
-//
-$biography = mysql_real_escape_string($biography);
+$biography = mysqli_real_escape_string($dbConn, $biography);
 
 //---------------------------------------------------------------
 // update membername 
@@ -164,28 +137,19 @@ $sql = "UPDATE membertbl
 		enterdate = '$enterdateTS'
 	WHERE id = '$memberid'"; 
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update membername for ddd member update membername $membername.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "update";
+include ('mysqlquery.php');
 
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info
 //
-
 exit($msgtext);
 ?>

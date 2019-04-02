@@ -28,34 +28,11 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 // set msg text
 $msgtext = "ok";
 
-//------------------------------------------------------
-// connect to db
-//------------------------------------------------------
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to add membergroupname for ddd membergroupname $membergroupname.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to add membergroupname for ddd membergroupname $membergroupname.");
-
-	$rv = "";
-	exit($rv);
-}
+//
+// db connect
+//
+$modulecontent = "Unable to add membergroupname for ddd membergroupname $membergroupname.";
+include_once ('mysqlconnect.php');
 
 //---------------------------------------------------------------
 // check if membergroupname already exists
@@ -65,25 +42,17 @@ FROM membergrouptbl
 WHERE groupname = '$membergroupname'";
 // print $sql;
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to add membergroupname for ddd membergroupname $membergroupname.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 //
 // check if membergroupname already exists
 //
 $count = 0;
-$count = mysql_num_rows($sql_result);
+$count = mysqli_num_rows($sql_result);
 if ($count == 1)
 {
 	$msgtext = "Member Group name $membergroupname already is a member group!";
@@ -98,19 +67,12 @@ $sql = "INSERT INTO membergrouptbl
 	(groupname) 
 	VALUES ('$membergroupname')"; 
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add membergroupname for ddd membergroupname $membergroupname.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "insert";
+$modulecontent = "Unable to insert membergroupname for ddd membergroupname $membergroupname.";
+include ('mysqlquery.php');	
 
 //---------------------------------------------------------------
 // get id for just inserted membergroupname
@@ -120,24 +82,17 @@ FROM membergrouptbl
 WHERE groupname = '$membergroupname'";
 // print $sql;
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to add membergroupname for ddd membergroupname $membergroupname.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to select membergroupname for ddd membergroupname $membergroupname.";
+include ('mysqlquery.php');	
 
 //
 // get member group id for member group inserts
 //
-$membergroup = mysql_fetch_assoc($sql_result);
+$membergroup = mysqli_fetch_assoc($sql_result);
 $mebergroupid = $membergroup["id"];
 
 //
@@ -151,25 +106,18 @@ foreach ($membergroupmemberids as $key => $memberid) {
 		(membergroupid, memberid) 
 		VALUES ('$mebergroupid', '$memberid')"; 
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-		$log = new ErrorLog("logs/");
-		$sqlerr = mysql_error();
-		$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add membergroupmembertbl for ddd membergroupmembertbl $memberid.");
-		$log->writeLog("SQL: $sql");
-
-		$rc = -100;
-		$msgtext = "System Error: $sqlerr. sql = $sql";
-
-		exit($msgtext);
-	}	
+	//
+	// sql query
+	//
+	$function = "insert";
+	$modulecontent = "Unable to insert mebername into membergroupname for ddd membergroupname $membergroupname and membergroupmembertbl $memberid.";
+	include ('mysqlquery.php');	
 }
 
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 	
 // print_r($regiterclientid);
 // print("I am here");
@@ -177,7 +125,6 @@ mysql_close($dbConn);
 
 //
 // pass back info
-
 
 exit($msgtext);
 ?>

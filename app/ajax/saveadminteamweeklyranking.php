@@ -160,38 +160,11 @@ $teamRankRecordArray [$currentrecordcount] = $currentRowArray;
 // $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to get admin team weekly rankings information.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to get admin team weekly rankings information.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to get admin team weekly rankings information.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -232,20 +205,15 @@ foreach($teamRankRecordArray as $key => $rowArray) {
 	FROM  teamweekranktbl 
 	WHERE season = $season AND week = $week and teamid = $teamid";
 
-	$sql_result_check = @mysql_query($sql, $dbConn);
-	if (!$sql_result_check)
-	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to find team weekly ranking for $teamid.");
-	    $log->writeLog("SQL: $sql");
+	//
+	// sql query
+	//
+	$function = "select";
+	$modulecontent = "Unable to find team weekly ranking for $teamid.";
+	include ('mysqlquery.php');
+	$sql_result_check = $sql_result;
 
-	    $status = -100;
-	    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to find team weekly ranking for $teamid.<br /> SQL: $sql";
-		exit($msg);
-	}
-
-	$count = mysql_num_rows($sql_result_check);
+	$count = mysqli_num_rows($sql_result_check);
 	if ($count > 0)
 	{
 		// 
@@ -262,19 +230,14 @@ foreach($teamRankRecordArray as $key => $rowArray) {
 		// debug
 		// $msgtext = $msgtext .  "<br/> sql update:$sql<br/> ";
 
-		$sql_result_update = @mysql_query($sql, $dbConn);
-		if (!$sql_result_update)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update teamweekranktbl.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -250;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update teamweekranktbl.<br />SQL: $sql";
-			exit($msg);
-		}	
-
+		//
+		// sql query
+		//
+		$function = "update";
+		$modulecontent = "Unable to update teamweekranktbl for $teamid.";
+		include ('mysqlquery.php');
+		$sql_result_update = $sql_result;
+	
 		$nbrUpdated = $nbrUpdated + 1;
 	}
 	else
@@ -291,18 +254,13 @@ foreach($teamRankRecordArray as $key => $rowArray) {
 		// debug
 		// $msgtext = $msgtext .  "sql insert:$sql<br/>";
 
-		$sql_result_insert = @mysql_query($sql, $dbConn);
-		if (!$sql_result_insert)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert teamweekranktbl.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -260;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert teamweekranktbl.<br />SQL: $sql";
-			exit($msg);
-		}
+		//
+		// sql query
+		//
+		$function = "insert";
+		$modulecontent = "Unable to insert teamweekranktbl for $teamid.";
+		include ('mysqlquery.php');
+		$sql_result_insert = $sql_result;	 
 
 		$nbrInserted = $nbrInserted + 1;
 	}
@@ -313,7 +271,7 @@ foreach($teamRankRecordArray as $key => $rowArray) {
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // close message
@@ -321,10 +279,8 @@ mysql_close($dbConn);
 $msgtext = $msgtext . "<br /> Details: Season: $season. Week: $week. Team count: $teamcount.";
 $msgtext = $msgtext . "<br /> Totals: Rows read: $filerow. Number Inserted: $nbrInserted. Number Updated: $nbrUpdated.";
 
-
 //
 // pass back info
 //
 exit($msgtext);
-
 ?>

@@ -48,38 +48,11 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Update game request started" );
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to add game for ddd game $gameid.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to add game for ddd game $gameid.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to add game for ddd game $gameid.";
+include_once ('mysqlconnect.php');
 
 //
 // build gamedatetime
@@ -112,24 +85,16 @@ $sql = "INSERT INTO gamestbl ( season, week,
 		'$gamedatetime', '$enterdateTS'	)";
 }
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add game for ddd game $gameid.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "insert";
+include ('mysqlquery.php');
 
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

@@ -23,6 +23,12 @@ $msgtext = "Game Date Time for week Saved Succesfully!";
   
 $post = $_POST; 
 
+// print_r($gamenbr);
+// print_r($hometeamscore);
+// print_r($awayteamscore);
+// print_r($hometeamid);
+// print_r($awayteamid);
+
 //
 // get date time for this transaction
 //
@@ -39,39 +45,11 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 //
 $returnArrayLog = new AccessLog("logs/");
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to save game team date time.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to save game team date time.");
-
-	$rv = "";
-	exit($rv);
-}
-
+$modulecontent = "Unable to save game team date time.";
+include_once ('mysqlconnect.php');
 
 $gamecount = count($gamenbr);
 for ($i = 0; $i < $gamecount; $i++)
@@ -109,25 +87,18 @@ for ($i = 0; $i < $gamecount; $i++)
 
 	 // echo "SQL:" . $sql ."<br>" ;
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-		$log = new ErrorLog("logs/");
-		$sqlerr = mysql_error();
-		$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to save game team date time.");
-		$log->writeLog("SQL: $sql");
-
-		$rc = -100;
-		$msgtext = "System Error Home Team: $sqlerr. sql = $sql";
-
-		exit($msgtext);
-	}
+	//
+	// sql query
+	//
+	$function = "update";
+	$modulecontent = "Unable to update game team date time.";
+	include ('mysqlquery.php');
 } 
 
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

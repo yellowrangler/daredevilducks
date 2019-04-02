@@ -73,38 +73,11 @@ else
 
 $msg = "Input variables: Season:$season <br />";
 
-//------------------------------------------------------
-// db admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn)
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to update member week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to update member week stats.";
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn))
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to update member week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error selecting db Unable to update member week stats.";
-	exit($msg);
-}
+$modulecontent = "Unable to update member week stats.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -121,18 +94,14 @@ $postseasontotalgames = 0;
 // Get list of all dare devil ducks members
 //---------------------------------------------------------------
 $sql = "SELECT * FROM membertbl";
-$sql_result_prime = @mysql_query($sql, $dbConn);
-if (!$sql_result_prime)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats.");
-    $log->writeLog("SQL: $sql");
 
-    $status = -100;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats.<br /> SQL: $sql";
-	exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to get member list.";
+include ('mysqlquery.php');
+$sql_result_prime = $sql_result;
 
 //---------------------------------------------------------------
 // get total weeks to date
@@ -142,23 +111,17 @@ FROM gameweekstbl
 WHERE season = $season
 AND weekstart <= now()";
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - total weeks.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -200;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - total weeks.<br /> SQL: $sql";
-	exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to get max weeks list.";
+include ('mysqlquery.php');
 
 //
 // get total weeks
 //
-$r = mysql_fetch_assoc($sql_result);
+$r = mysqli_fetch_assoc($sql_result);
 $weekstotal = $r[weeks];
 
 // added 8/25/2016 if weeks is null
@@ -170,7 +133,7 @@ if ($weekstotal == null)
 //
 // loop through all members
 //
-while($row = mysql_fetch_assoc($sql_result_prime))
+while($row = mysqli_fetch_assoc($sql_result_prime))
 {
 
 	// count members
@@ -234,18 +197,13 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 	    AND NOT (G.hometeamscore = G.awayteamscore AND G.hometeamscore = 0 AND G.awayteamscore = 0)
 		ORDER BY G.gamedatetime";
 
-		$sql_result_week = @mysql_query($sql, $dbConn);
-		if (!$sql_result_week)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - count all.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -200;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - count all.<br /> SQL: $sql";
-			exit($msg);
-		}
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select member week stats - count all.";
+		include ('mysqlquery.php');
+		$sql_result_week = $sql_result;
 
 		//
 		// get games in week
@@ -257,27 +215,22 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		FROM gamestbl
 		WHERE season = $season and week = $week";
 
-		$sql_result_games = @mysql_query($sql, $dbConn);
-		if (!$sql_result_games)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - get games for week.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -200;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member week stats - get games for week.<br /> SQL: $sql";
-			exit($msg);
-		}
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select games for week stats - count gamenbr.";
+		include ('mysqlquery.php');
+		$sql_result_games = $sql_result;
 
 		//
 		// get total games played to date
 		//
 		$totalgames = 0;
-		$count = mysql_num_rows($sql_result_games);
+		$count = mysqli_num_rows($sql_result_games);
 		if ($count > 0)
 		{
-			$r = mysql_fetch_assoc($sql_result_games);
+			$r = mysqli_fetch_assoc($sql_result_games);
 			$totalgames = $r['totalgames'];
 		}
 		else
@@ -290,7 +243,7 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		// We now have all the games for the season week for the member.
 		// Lets loop through and do the math.
 		//
-		while ($r = mysql_fetch_assoc($sql_result_week))
+		while ($r = mysqli_fetch_assoc($sql_result_week))
 		{
 			//
 			// set up variablels
@@ -398,26 +351,23 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 		where memberid = $memberid AND season = $season
 		AND week = $week";
 
-		$sql_result_check_week = @mysql_query($sql, $dbConn);
-		if (!$sql_result_check_week)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update member week stats - count team id in stats table.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select games for week stats - count team id in stats table.";
+		include ('mysqlquery.php');
+		$sql_result_check_week = $sql_result;
 
-		    $status = -240;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to update member wek stats - count team id in stats table.<br />SQL: $sql";
-			exit($msg);
-		}
-
-		$count = mysql_num_rows($sql_result_check_week);
+		$count = mysqli_num_rows($sql_result_check_week);
 
 		if ($count > 0)
 		{
 			//
 			// do update
 			//
+			$function = "update";
+
 			$sql = "UPDATE memberweekstatstbl
 				SET totalgames = $totalgames, playerpickedgames = $playerpickedgames,
 				wins = $wins, losses = $losses, ties = $ties,
@@ -432,23 +382,19 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			//
 			// do insert
 			//
+			$function = "insert";
+
 			$sql = "INSERT INTO memberweekstatstbl
 				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, gametypeid, memberid)
 				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
 		}
 
-		$sql_result_insert_update = @mysql_query($sql, $dbConn);
-		if (!$sql_result_insert_update)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to insert or update member week stats.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -260;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to insert or update member week stats.<br />SQL: $sql";
-			exit($msg);
-		}
+		//
+		// sql query
+		//
+		$modulecontent = "Unable to insert or update member week stats.";
+		include ('mysqlquery.php');
+		$sql_result_insert_update = $sql_result;
 	} // end of outer week loop
 
 	//
@@ -461,42 +407,14 @@ while($row = mysql_fetch_assoc($sql_result_prime))
 			SET totalgames = 0, wins = 0, losses = 0, ties = 0, playerpickedpercent = 0, totalgamespercent = 0, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS' 
 			WHERE memberid = $memberid AND season = $season AND week = $week";
 
-		$sql_result_update = @mysql_query($sql, $dbConn);
-		if (!$sql_result_update)
-		{
-			$log = new ErrorLog("logs/");
-			$sqlerr = mysql_error();
-			$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update member week stats.");
-			$log->writeLog("SQL: $sql");
-
-			$status = -250;
-			$msgtext = "System Error: $sqlerr";
-		}
-
+		//
+		// sql query
+		//
+		$function = "update";
+		$modulecontent = "Unable to insert or update member week stats.";
+		include ('mysqlquery.php');
+		$sql_result_update = $sql_result;
 	} // end of for week loop
-
-	// Original
-	// $start = $week;
-	// for ($week = $start; $week <= $weeksinregularseason; $week++)
-	// {
-	// 	$sql = "UPDATE memberweekstatstbl
-	// 		SET totalgames = $totalgames, wins = $wins, losses = $losses, ties = $ties, playerpickedpercent = $playerpickedpercent, totalgamespercent = $totalgamespercent, season = $season, gametypeid = $gametypeid,  enterdate = '$enterdateTS'
-	// 		WHERE memberid = $memberid AND season = $season AND week = $week";
-	//
-	// 	$sql_result_update = @mysql_query($sql, $dbConn);
-	// 	if (!$sql_result_update)
-	// 	{
-	// 	    $log = new ErrorLog("logs/");
-	// 	    $sqlerr = mysql_error();
-	// 	    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to update member week stats.");
-	// 	    $log->writeLog("SQL: $sql");
-	//
-	// 	    $status = -250;
-	// 	    $msgtext = "System Error: $sqlerr";
-	// 	}
-	//
-	// } // end of for week loop
-
 } // end of looping through members
 
 $msg = $msg . "Totals Members:$membercount. Weeks:$weekstotal";
@@ -504,7 +422,7 @@ $msg = $msg . "Totals Members:$membercount. Weeks:$weekstotal";
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

@@ -19,15 +19,6 @@ else
 	$runphpmodule = $_POST["runphpmodule"];
 }
 
-// if (isset($_POST["runphpmoduleparm"]))
-// {
-// 	$runphpmoduleparm = $_POST["runphpmoduleparm"];
-// }
-
-// $output = shell_exec('php hello.php');
-// echo "<pre>$output</pre>";
-
-
 $execStr = 'php ' . $runphpmodule;
 
 $msg = "Input variables:runphpmodule: $runphpmodule <br />Run string:$execStr";

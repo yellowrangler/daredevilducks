@@ -61,34 +61,34 @@ include ('mysqlquery.php');
 $rowcount=mysqli_num_rows($sql_result);
 if ($rowcount == 0)
 {
-    $sql = "INSERT INTO teambrackettbl(imagename, season, week, final, enterdate) 
-        VALUES ('$bracket',$season,$week,$final,'$enterdateTS')";
+	$sql = "INSERT INTO teambrackettbl(imagename, season, week, final, enterdate) 
+		VALUES ('$bracket',$season,$week,$final,'$enterdateTS')";
 
-    //
-    // sql query
-    //
-    $function = "insert";
-    $modulecontent = "Unable to insert team bracket  for Season: $season and week: $week!";
-    include ('mysqlquery.php');
+	//
+	// sql query
+	//
+	$function = "insert";
+	$modulecontent = "Unable to insert team bracket  for Season: $season and week: $week!";
+	include ('mysqlquery.php');
 
 }
 else
 {
-    // ok so update
-    $sql = "UPDATE teambrackettbl 
-        SET imagename='$bracket',
-        season=$season,
-        week=$week,
-        final=$final,
-        enterdate='$enterdateTS' 
-        WHERE season = $season and week = $week";
+	// ok so update
+	$sql = "UPDATE teambrackettbl 
+		SET imagename='$bracket',
+		season=$season,
+		week=$week,
+		final=$final,
+		enterdate='$enterdateTS' 
+		WHERE season = $season and week = $week";
 
-    //
-    // sql query
-    //
-    $function = "update";
-    $modulecontent = "Unable to update team bracket  for Season: $season and week: $week!";
-    include ('mysqlquery.php');
+	//
+	// sql query
+	//
+	$function = "update";
+	$modulecontent = "Unable to update team bracket  for Season: $season and week: $week!";
+	include ('mysqlquery.php');
 }
 
 // 

@@ -12,15 +12,6 @@ $datetime = date("Y-m-d H:i:s");
 $enterdate = $datetime;
 
 //------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
-//------------------------------------------------------
 // get season
 //------------------------------------------------------
 $msg = "";
@@ -53,28 +44,10 @@ else
 }
 
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to makegametimestamp. season = $season.");
-
-	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to makegametimestamp. season = $season.";
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to makegametimestamp. season = $season.");
-
-	$msg = $msg . "DB error: $dberr - Error selecting db Unable to makegametimestamp. season = $season.";
-	exit($msg);
-}
+$modulecontent = "Unable to makegametimestamp. season = $season.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -83,24 +56,18 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 // Get game information
 //---------------------------------------------------------------
 $sql = "SELECT * FROM gamestbl where season = '$season'";
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to makegametimestamp. season = $season.");
-    $log->writeLog("SQL: $sql");
 
-    $status = -100;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to makegametimestamp. season = $season.<br /> SQL: $sql";
-	exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 //
 // update gametimestamp field
 //
 $totalgames = 0;
-while($r = mysql_fetch_assoc($sql_result)) {
+while($r = mysqli_fetch_assoc($sql_result)) {
 	$totalgames = $totalgames + 1;
 
 	// format required "sep 4 2014 8:30 pm";
@@ -147,17 +114,14 @@ while($r = mysql_fetch_assoc($sql_result)) {
 
 	$sql = "UPDATE gamestbl SET gamedatetime = '$gamedatetime', gametime = '$gametime', 
 		gameyear = '$year', enterdate = '$enterdateTS' WHERE id = $id";
-	$sql_result_update = @mysql_query($sql, $dbConn);
-	if (!$sql_result_update)
-	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to makegametimestamp. season = $season.");
-	    $log->writeLog("SQL: $sql");
 
-	    $status = -270;
-	    $msgtext = "System Error: $sqlerr";	
-	}
+	//
+	// sql query
+	//
+	$function = "update";
+	$modulecontent = "Unable to makegametimestamp. update season = $season.";	
+	include ('mysqlquery.php');
+	$sql_result_update = $sql_result;
 }
 
 $msg = $msg . "makegametimestamp successful. Total games $totalgames";
@@ -165,7 +129,7 @@ $msg = $msg . "makegametimestamp successful. Total games $totalgames";
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

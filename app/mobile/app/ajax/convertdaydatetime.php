@@ -1,5 +1,9 @@
 <?php
 
+include_once ('../class/class.Log.php');
+include_once ('../class/class.ErrorLog.php');
+include_once ('../class/class.AccessLog.php');
+
 //
 // get date time for this transaction
 //
@@ -11,30 +15,11 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $enterdate = $datetime;
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	echo mysql_error();
-	exit();
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	echo mysql_error();
-	exit();
-}
+$modulecontent = "Unable to convert day time.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -43,17 +28,18 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 // Get game information
 //---------------------------------------------------------------
 $sql = "SELECT * FROM gamestbl";
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	echo mysql_error();
-	exit();	
-}
+
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to select games.";
+include ('mysqlquery.php');
 
 //
 // update gametimestamp field
 //
-while($r = mysql_fetch_assoc($sql_result)) {
+while($r = mysqli_fetch_assoc($sql_result)) {
 	// format required "sep 4 2014 8:30 pm";
 	if ($r['gametime'] == "TBD")
 	{
@@ -86,19 +72,19 @@ while($r = mysql_fetch_assoc($sql_result)) {
 	enterdate = '$enterdateTS' WHERE id = $id";
 
 	echo "sql = " . $sql . "<br />";
-	
-	$sql_result_update = @mysql_query($sql, $dbConn);
-	if (!$sql_result_update)
-	{
-	    echo mysql_error();
-		exit();	
-	}
+
+	//
+	// sql query
+	//
+	$function = "update";
+	$modulecontent = "Unable to update games date time info.";
+	include ('mysqlquery.php');
 }
 
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

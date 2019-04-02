@@ -68,38 +68,11 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Add member request started" );
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to select team for ddd team $name.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to select team for ddd team $name.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to select team for ddd teamid $teamid.";
+include_once ('mysqlconnect.php');
 
 //---------------------------------------------------------------
 // update team season info 
@@ -109,27 +82,19 @@ $sql = "SELECT postseasonstatus
 FROM teamseasontbl 
 WHERE season = $season AND teamid = $teamid";
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to select team for ddd teamseasontbl $teamid.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 //
 // get season week
 // 
-$count = mysql_num_rows($sql_result);
+$count = mysqli_num_rows($sql_result);
 if ($count > 0)
 {
-	$r = mysql_fetch_assoc($sql_result);
+	$r = mysqli_fetch_assoc($sql_result);
 
 	$postseasonstatus = $r['postseasonstatus'];	
 }
@@ -143,7 +108,7 @@ $data = array('postseasonstatus' => $postseasonstatus);
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info
