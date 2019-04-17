@@ -40,11 +40,19 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
         $( "#hf2017" )
             .mouseover(function() {
-                 $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+                 $(this).attr("src", "../img/halloffame/paulabishophof-2017-2.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
-                });                    
+                $(this).attr("src", "../img/halloffame/paulabishophof-2017.png");
+                }); 
+
+        $( "#hf2018" )
+            .mouseover(function() {
+                 $(this).attr("src", "../img/halloffame/donomalleyhof-2018-2.png");
+                })
+            .mouseout(function() {
+                $(this).attr("src", "../img/halloffame/donomalleyhof-2018.png");
+                });                                              
         
         $( "#hfdefault" )
             .mouseover(function() {
