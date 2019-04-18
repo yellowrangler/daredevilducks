@@ -102,43 +102,16 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Add member request started" );
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to add membername for ddd membername $membername.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to add membername for ddd membername $membername.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to add membername for ddd membername $membername.";
+include_once ('mysqlconnect.php');
 
 //
 // now encode string. Must be done  after mysql connect
 //
-$biography = mysql_real_escape_string($biography);
+$biography = mysqli_real_escape_string($biography);
 
 //---------------------------------------------------------------
 // check if membername already exists
@@ -146,25 +119,17 @@ $biography = mysql_real_escape_string($biography);
 $sql = "SELECT * FROM membertbl WHERE membername = '$membername'";
 // print $sql;
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to add membername for ddd membername $membername.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr";
-
-	exit($msgtext);
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 //
 // check if member already exists
 //
 $count = 0;
-$count = mysql_num_rows($sql_result);
+$count = mysqli_num_rows($sql_result);
 if ($count == 1)
 {
 	$msgtext = "Member name $membername already is a member!";
@@ -227,25 +192,16 @@ $sql = "INSERT INTO membertbl
 	'$status',
 	'$enterdateTS')"; 
 
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-	$log = new ErrorLog("logs/");
-	$sqlerr = mysql_error();
-	$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add membername for ddd membername $membername.");
-	$log->writeLog("SQL: $sql");
-
-	$rc = -100;
-	$msgtext = "System Error: $sqlerr. sql = $sql";
-
-	exit($msgtext);
-}
-
+//
+// sql query
+//
+$function = "insert";
+include ('mysqlquery.php');
 
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 	
 // print_r($regiterclientid);
 // print("I am here");

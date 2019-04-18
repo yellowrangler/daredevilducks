@@ -44,15 +44,6 @@ else
 
 $msg = "Input variables: Season:$season weeksinregularseason:$weeksinregularseason weeksinplayoffseason:$weeksinplayoffseason<br />";
 
-//------------------------------------------------------
-// db admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
 // set variables
 //
@@ -70,28 +61,10 @@ $totalgamespercent = 0;
 // $weeksinseason = 17;
 
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to initialize member week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error mysql connect. Unable to initialize member week stats.";
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to initialize member week stats.");
-
-	$msg = $msg . "DB error: $dberr - Error selecting db Unable to initialize member week stats.";
-	exit($msg);
-}
+$modulecontent = "Unable to initialize member week stats.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));		
@@ -103,18 +76,12 @@ $sql = "SELECT id as memberid
 FROM  membertbl 
 ORDER BY 'memberid'";
 
-$sql_result_prime = @mysql_query($sql, $dbConn);
-if (!$sql_result_prime)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize member week stats.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -100;
-    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize member week stats.<br /> SQL: $sql";
-	exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+$sql_result_prime = $sql_result;
 
 //
 // display variables
@@ -122,7 +89,7 @@ if (!$sql_result_prime)
 $membercount = 0;
 $memberinsertedcount = 0;
 
-while($row = mysql_fetch_assoc($sql_result_prime)) {
+while($row = mysqli_fetch_assoc($sql_result_prime)) {
 
 	// count membercount
 	$membercount = $membercount + 1;
@@ -142,20 +109,14 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		FROM  memberweekstatstbl 
 		WHERE memberid = $memberid and season = $season and week = $week and gametypeid = $gametypeid";
 
-		$sql_result_check = @mysql_query($sql, $dbConn);
-		if (!$sql_result_check)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize member week stats.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		include ('mysqlquery.php');
+		$sql_result_check = $sql_result;
 
-		    $status = -110;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize member week stats.<br /> SQL: $sql";
-			exit($msg);
-		}
-
-		$num_rows = mysql_num_rows($sql_result_check);
+		$num_rows = mysqli_num_rows($sql_result_check);
 
 		if ($num_rows == 0)
 		{
@@ -166,19 +127,14 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				(totalgames, playerpickedgames, week, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, memberid, gametypeid) 
 				VALUES ($totalgames, $playerpickedgames, $week, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $memberid, $gametypeid)";
 
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert member week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -260;
-			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize insert member week stats.<br /> SQL: $sql";
-				exit($msg);
-			}
-
+			//
+			// sql query
+			//
+			$function = "insert";
+			$modulecontent = "Unable to initialize member week stats. error during insert.";
+			include ('mysqlquery.php');
+			$sql_r = $sql_result;
+	
 			$memberinsertedcount = $memberinsertedcount + 1;
 		}
 
@@ -199,20 +155,15 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		FROM  memberweekstatstbl 
 		WHERE memberid = $memberid and season = $season and week = $week and gametypeid = $gametypeid";
 
-		$sql_result_check = @mysql_query($sql, $dbConn);
-		if (!$sql_result_check)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to initialize member week stats.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to initialize member week stats. error during select.";
+		include ('mysqlquery.php');
+		$sql_result_check = $sql_result;
 
-		    $status = -110;
-		    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize member week stats.<br /> SQL: $sql";
-			exit($msg);
-		}
-
-		$num_rows = mysql_num_rows($sql_result_check);
+		$num_rows = mysqli_num_rows($sql_result_check);
 
 		if ($num_rows == 0)
 		{
@@ -223,18 +174,13 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 				(totalgames, playerpickedgames, week, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, memberid, gametypeid) 
 				VALUES ($totalgames, $playerpickedgames, $week, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $memberid, $gametypeid)";
 
-			$sql_r = @mysql_query($sql, $dbConn);
-			if (!$sql_r)
-			{
-			    $log = new ErrorLog("logs/");
-			    $sqlerr = mysql_error();
-			    $log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to initialize insert member week stats.");
-			    $log->writeLog("SQL: $sql");
-
-			    $status = -260;
-			    $msg = $msg . "SQL error: $sqlerr <br /> Error doing select to db Unable to initialize insert member week stats.<br /> SQL: $sql";
-				exit($msg);
-			}
+			//
+			// sql query
+			//
+			$function = "insert";
+			$modulecontent = "Unable to initialize member week stats. error during insert.";
+			include ('mysqlquery.php');
+			$sql_r = $sql_result;	
 
 			$memberinsertedcount = $memberinsertedcount + 1;
 		}
@@ -248,7 +194,7 @@ $msg = $msg . "Totals Members:$membercount Members Weeks Inserted:$memberinserte
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

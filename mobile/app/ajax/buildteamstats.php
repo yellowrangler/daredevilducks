@@ -32,38 +32,11 @@ else
 
 $msg = "Input variables: Season:$season<br />";
 
-//------------------------------------------------------
-// db admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$msg = $msg .  "DB error: $dberr - Error mysql connect. Unable to update team stats.";
-	$log->writeLog($msg);
-
-	exit($msg);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$msg = $msg .  "DB error: $dberr - Error selecting db Unable to update team stats.";
-	$log->writeLog($msg);
-
-	exit($msg);
-}
+$modulecontent = "Unable to update team stats.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -72,19 +45,14 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
 // Get list of all nfl teams
 //---------------------------------------------------------------
 $sql = "SELECT * FROM teamstbl ORDER BY conference ASC, division ASC, teamorder ASC";
-$sql_result_prime = @mysql_query($sql, $dbConn);
-if (!$sql_result_prime)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team stats.");
-    $log->writeLog("SQL: $sql");
 
-    $status = -100;
-    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats.<br /> SQL: $sql";
-
-    exit($msg);
-}
+//
+// sql query
+//
+$function = "select";
+$modulecontent = "Unable to select team stats.";
+include ('mysqlquery.php');
+$sql_result_prime = $sql_result;
 
 //
 // loop through all teams
@@ -126,9 +94,9 @@ $divpercentage = 0;
 //
 $teamcount = 0;
 
-while($row = mysql_fetch_assoc($sql_result_prime)) {
+while($row = mysqli_fetch_assoc($sql_result_prime)) {
 
-	// count teams
+	// // count teams
 	$teamcount = $teamcount + 1;
 
 	$teamid = $row['id'];
@@ -220,26 +188,19 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	// echo "<br />Wins select sql: $sql<br /><br /><br />";
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team stats - count wins.");
-	    $log->writeLog("SQL: $sql");
-
-	    $status = -210;
-	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count wins.<br /> SQL: $sql";
-
-	    exit($msg);
-	}	
+	//
+	// sql query
+	//
+	$function = "select";
+	$modulecontent = "Unable to select team stats - count wins.";
+	include ('mysqlquery.php');
 
 	//
 	// union 5 selects to get total, home, away, conf and div wins
 	//
 	$idx = 0;
 	$winsArray = array();
-	while($row = mysql_fetch_assoc($sql_result)) {
+	while($row = mysqli_fetch_assoc($sql_result)) {
 		$winsArray[$idx] = $row['wins'];
 		$regularseasonwinsArray[$idx] = $row['regularseasonwins'];
 		$postseasonwinsArray[$idx] = $row['postseasonwins'];
@@ -352,26 +313,19 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	// echo "<br />losses select sql: $sql<br /><br /><br />";
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team stats - count losses.");
-	    $log->writeLog("SQL: $sql");
-
-	    $status = -220;
-	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count losses.<br /> SQL: $sql";
-
-	    exit($msg);
-	}	
+	//
+	// sql query
+	//
+	$function = "select";
+	$modulecontent = "Unable to select team stats - count losses.";
+	include ('mysqlquery.php');
 
 	//
 	// union 5 selects to get total, home, away, conf and div losses
 	//
 	$idx = 0;
 	$lossesArray = array();
-	while($row = mysql_fetch_assoc($sql_result)) {
+	while($row = mysqli_fetch_assoc($sql_result)) {
 		$lossesArray[$idx] = $row['losses'];
 		$regularseasonlossesArray[$idx] = $row['regularseasonlosses'];
 		$postseasonlossesArray[$idx] = $row['postseasonlosses'];
@@ -504,26 +458,19 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 	// echo "<br /><br />ties select sql: $sql<br /><br /><br />";
 
-	$sql_result = @mysql_query($sql, $dbConn);
-	if (!$sql_result)
-	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team stats - count ties.");
-	    $log->writeLog("SQL: $sql");
-
-	    $status = -230;
-	    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team stats - count ties.<br /> SQL: $sql";
-
-	    exit($msg);
-	}	
+	//
+	// sql query
+	//
+	$function = "select";
+	$modulecontent = "Unable to select team stats - count ties.";
+	include ('mysqlquery.php');
 
 	// TC
 	// union 5 selects to get total, home, away, conf and div ties
 	//
 	$idx = 0;
 	$tiesArray = array();
-	while($row = mysql_fetch_assoc($sql_result)) {
+	while($row = mysqli_fetch_assoc($sql_result)) {
 		$tiesArray[$idx] = $row['ties'];
 		$regularseasontiesArray[$idx] = $row['regularseasonties'];
 		$postseasontiesArray[$idx] = $row['postseasonties'];
@@ -690,26 +637,21 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		$gametypeid = 1;
 		$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team total stats - count team id in stats table.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select team stats - count team id in stats table.";
+		include ('mysqlquery.php');
 
-		    $status = -240;
-		    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team total stats - count team id in stats table.<br /> SQL: $sql";
-
-		    exit($msg);
-		}	
-
-		$count = mysql_num_rows($sql_result);
+		$count = mysqli_num_rows($sql_result);
 		if ($count > 0)
 		{
 			// 
 			// do update
 			// 
+			$function = "update";
+
 			$sql = "UPDATE teamstatstbl 
 				SET totalgames = $games, wins = $wins, losses = $losses, ties = $ties, percent = $percent, 
 				hometotalgames = $homegames, homewins = $homewins, homelosses = $homelosses, hometies = $hometies, homepercent = $homepercent,
@@ -724,6 +666,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// 
 			// do insert
 			// 
+			$function = "insert";
+
 			$sql = "INSERT INTO teamstatstbl 
 				(totalgames, wins, losses, ties, percent, 
 				hometotalgames, homewins, homelosses, hometies, homepercent,
@@ -741,19 +685,11 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		// echo "<br />sql for total: $sql <br />";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing insert or update to db Unable to insert total team stats.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -260;
-		    $msg = $msg . "System Error: $sqlerr - Error doing insert or update to db Unable to insert total team stats.<br /> SQL: $sql";
-
-		    exit($msg);
-		}
+		//
+		// sql query
+		//
+		$modulecontent = "Unable to update or insert total team stats.";
+		include ('mysqlquery.php');
 	}
 
 	//
@@ -764,26 +700,21 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		$gametypeid = 2;
 		$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team regular stats - count team id in stats table.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select team regular stats - count team id in stats table.";
+		include ('mysqlquery.php');
 
-		    $status = -240;
-		    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team regular stats - count team id in stats table.<br /> SQL: $sql";
-
-		    exit($msg);
-		}	
-
-		$count = mysql_num_rows($sql_result);
+		$count = mysqli_num_rows($sql_result);
 		if ($count > 0)
 		{
 			// 
 			// do update
 			// 
+			$function = "update";
+
 			$sql = "UPDATE teamstatstbl 
 				SET totalgames = $regularseasongames, 
 				wins = $regularseasonwins, losses = $regularseasonlosses, ties = $regularseasonties, 
@@ -808,6 +739,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// 
 			// do insert
 			// 
+			$function = "insert";
+
 			$sql = "INSERT INTO teamstatstbl 
 				(totalgames, wins, losses, ties, percent, 
 				hometotalgames, homewins, homelosses, hometies, homepercent,
@@ -834,19 +767,11 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		// echo "<br />sql for regular: $sql <br />";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing insert or update to db Unable to insert regular team stats.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -260;
-		    $msg = $msg . "System Error: $sqlerr - Error doing insert or update to db Unable to insert regular team stats.<br /> SQL: $sql";
-
-		    exit($msg);
-		}
+		//
+		// sql query
+		//
+		$modulecontent = "Unable to update team regular stats.";
+		include ('mysqlquery.php');
 	}
 
 	//
@@ -857,26 +782,21 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 		$gametypeid = 3;
 		$sql = "SELECT * from teamstatstbl where teamid = $teamid AND season = $season AND gametypeid = $gametypeid";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to update team post stats - count team id in stats table.");
-		    $log->writeLog("SQL: $sql");
+		//
+		// sql query
+		//
+		$function = "select";
+		$modulecontent = "Unable to select team post stats - count team id in stats table.";
+		include ('mysqlquery.php');
 
-		    $status = -240;
-		    $msg = $msg . "System Error: $sqlerr - Error doing select to db Unable to update team post stats - count team id in stats table.<br /> SQL: $sql";
-
-		    exit($msg);
-		}	
-
-		$count = mysql_num_rows($sql_result);
+		$count = mysqli_num_rows($sql_result);
 		if ($count > 0)
 		{
 			// 
 			// do update
 			// 
+			$function = "update";
+
 			$sql = "UPDATE teamstatstbl 
 				SET totalgames = $postseasongames, 
 				wins = $postseasonwins, losses = $postseasonlosses, ties = $postseasonties, 
@@ -901,6 +821,8 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 			// 
 			// do insert
 			// 
+			$function = "insert";
+
 			$sql = "INSERT INTO teamstatstbl 
 				(totalgames, wins, losses, ties, percent, 
 				hometotalgames, homewins, homelosses, hometies, homepercent,
@@ -927,32 +849,24 @@ while($row = mysql_fetch_assoc($sql_result_prime)) {
 
 		// echo "<br />sql for post: $sql <br />";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-		    $log = new ErrorLog("logs/");
-		    $sqlerr = mysql_error();
-		    $log->writeLog("SQL error: $sqlerr - Error doing insert or update to db Unable to insert post team stats.");
-		    $log->writeLog("SQL: $sql");
-
-		    $status = -260;
-		    $msg = $msg . "System Error: $sqlerr - Error doing insert or update to db Unable to insert post team stats.<br /> SQL: $sql";
-
-		    exit($msg);
-		}
+		//
+		// sql query
+		//
+		$modulecontent = "Unable to insert or update team post stats - count team id in stats table.";
+		include ('mysqlquery.php');
 	}
 
 } // end of looping through teams
 
 $msg = $msg . "Totals Teams:$teamcount.";
+
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info
 //
 exit($msg);
-
 ?>

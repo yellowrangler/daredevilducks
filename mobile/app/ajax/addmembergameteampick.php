@@ -27,8 +27,9 @@ else
 	{
 		$log = new ErrorLog("logs/");
 		$msgtext = "Error: Bad data passed in!";
-		$log->writeLog("Data error: $msgtext - No Season. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+		$log->writeLog("Data error: $msgtext - No Season. Unable to add member game pick for ddd member. Contact Airdreamer!");
 		exit($msgtext);
+
 	}
 }
 
@@ -46,9 +47,8 @@ else
 	{
 		$log = new ErrorLog("logs/");
 		$msgtext = "Error: Bad data passed in!";
-		$log->writeLog("Data error: $msgtext - No week. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+		$log->writeLog("Data error: $msgtext - No week. Unable to add member game pick for ddd member. Contact Airdreamer!");
 		exit($msgtext);
-
 	}
 }
 
@@ -66,7 +66,7 @@ else
 	{
 		$log = new ErrorLog("logs/");
 		$msgtext = "Error: Bad data passed in!";
-		$log->writeLog("Data error: $msgtext - No memberid. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+		$log->writeLog("Data error: $msgtext - No memberid. Unable to add member game pick for ddd member. Contact Airdreamer!");
 		exit($msgtext);
 	}
 }
@@ -114,58 +114,25 @@ $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 //
 $returnArrayLog = new AccessLog("logs/");
 
-//------------------------------------------------------
-// get admin member info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect. Unable to add member game pick for ddd member $memberid.");
-
-	$rv = "";
-	exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-	$log = new ErrorLog("logs/");
-	$dberr = mysql_error();
-	$log->writeLog("DB error: $dberr - Error selecting db Unable to add member game pick for ddd member $memberid.");
-
-	$rv = "";
-	exit($rv);
-}
+$modulecontent = "Unable to add member game pick for ddd member $memberid.";
+include_once ('mysqlconnect.php');
 
 //
 // Get total games to pick for week
 //
 $sql = "SELECT count(*) AS gamescount FROM gamestbl WHERE season = $season and week = $week";
 
-$sql_result_check = @mysql_query($sql, $dbConn);
-if (!$sql_result_check)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select for game count. Unable to add member game pick.");
-    $log->writeLog("SQL: $sql");
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+$sql_result_check = $sql_result;
 
-    $status = -110;
-    $msgtext = "System Error: $sqlerr";
-    exit($msgtext);
-}
-
-$r = mysql_fetch_assoc($sql_result_check);
+$r = mysqli_fetch_assoc($sql_result_check);
 $gamescount = $r['gamescount'];
 
 //
@@ -177,7 +144,7 @@ if ($count > $gamescount)
 {
 	$log = new ErrorLog("logs/");
 	$msgtext = "Error: Too many teams picked! Contact Airdreamer!";
-	$log->writeLog("Format error: $msgtext - Error with format from JS. Picked: $count. Games: $gamescount. Unable to add member game pick for ddd member $memberid.");
+	$log->writeLog("Format error: $msgtext - Error with format from JS. Picked: $count. Games: $gamescount. ");
 
 	exit($msgtext);
 }
@@ -187,7 +154,7 @@ if ($count == 0)
 {
 	$log = new ErrorLog("logs/");
 	$msgtext = "Error: No teams picked!";
-	$log->writeLog("Format error: $msgtext - Error with format from JS. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+	$log->writeLog("Format error: $msgtext - Error with format from JS. $modulecontent. Contact Airdreamer!");
 
 	exit($msgtext);
 }
@@ -199,7 +166,7 @@ if (diffCount > 0)
 {
 	$log = new ErrorLog("logs/");
 		$msgtext = "Error: Duplicate teams picked!";
-	$log->writeLog("Format error: $msgtext - Error with format from JS. Unable to add member game pick for ddd member $memberid. Contact Airdreamer!");
+	$log->writeLog("Format error: $msgtext - Error with format from JS. $modulecontent. Contact Airdreamer!");
 
 	exit($msgtext);
 }
@@ -219,19 +186,14 @@ for ( $j = 0; $j < $count; $j++ )
 	FROM  memberpickstbl 
 	WHERE memberid = $memberid and season = $season and week = $week and gamenbr = $gamenbr";
 
-	$sql_result_check = @mysql_query($sql, $dbConn);
-	if (!$sql_result_check)
-	{
-	    $log = new ErrorLog("logs/");
-	    $sqlerr = mysql_error();
-	    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to add member game pick.");
-	    $log->writeLog("SQL: $sql");
+	//
+	// sql query
+	//
+	$function = "select";
+	include ('mysqlquery.php');
+	$sql_result_check = $sql_result;
 
-	    $status = -110;
-	    $msgtext = "System Error: $sqlerr";
-	}
-
-	$num_rows = mysql_num_rows($sql_result_check);
+	$num_rows = mysqli_num_rows($sql_result_check);
 
 	if ($num_rows == 0)
 	{
@@ -248,20 +210,13 @@ for ( $j = 0; $j < $count; $j++ )
 			'$memberid', 
 			'$teamid', 		
 			'$enterdateTS' )"; 
+			// print "this is insert sql: $sql";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-			$log = new ErrorLog("logs/");
-			$sqlerr = mysql_error();
-			$log->writeLog("SQL error: $sqlerr - Error doing insert to db Unable to add member game pick for ddd member $memberid.");
-			$log->writeLog("SQL: $sql");
-
-			$rc = -100;
-			$msgtext = "System Error: $sqlerr. sql = $sql";
-
-			exit($msgtext);
-		}
+		//
+		// sql query
+		//
+		$function = "insert";
+		include ('mysqlquery.php');
 	}
 	else
 	{
@@ -274,19 +229,11 @@ for ( $j = 0; $j < $count; $j++ )
 			 teamid='$teamid', enterdate='$enterdateTS'
 			 WHERE memberid = $memberid AND season = $season AND week = $week AND gamenbr = $gamenbr";
 
-		$sql_result = @mysql_query($sql, $dbConn);
-		if (!$sql_result)
-		{
-			$log = new ErrorLog("logs/");
-			$sqlerr = mysql_error();
-			$log->writeLog("SQL error: $sqlerr - Error doing update to db Unable to add member game pick for ddd member $memberid.");
-			$log->writeLog("SQL: $sql");
-
-			$rc = -100;
-			$msgtext = "System Error: $sqlerr. sql = $sql";
-
-			exit($msgtext);
-		}
+		//
+		// sql query
+		//
+		$function = "update";
+		include ('mysqlquery.php');
 	}
 } 
 
@@ -295,7 +242,7 @@ for ( $j = 0; $j < $count; $j++ )
 // 
 // close db connection
 // 
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info

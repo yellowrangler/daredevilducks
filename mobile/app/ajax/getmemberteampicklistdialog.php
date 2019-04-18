@@ -5,12 +5,84 @@ include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
 //
-// get post variables
+// get or post variables
 //
-$season = $_POST['season'];
-$week = $_POST['week'];
-$teamid = $_POST['teamid'];
-$gamenbr = $_POST['gamenbr'];
+if (isset($_POST["season"]))
+{
+  $season = $_POST["season"];
+}
+else
+{
+  if (isset($_GET["season"]))
+  {
+    $season = $_GET["season"];
+  }
+  else
+  {
+    $msg = $msg . "No season passed - terminated";
+    exit($msg);
+
+  }
+}
+
+if (isset($_POST["week"]))
+{
+  $week = $_POST["week"];
+}
+else
+{
+  if (isset($_GET["week"]))
+  {
+    $week = $_GET["week"];
+  }
+  else
+  {
+    $msg = $msg . "No week passed - terminated";
+    exit($msg);
+
+  }
+}
+
+if (isset($_POST["teamid"]))
+{
+  $teamid = $_POST["teamid"];
+}
+else
+{
+  if (isset($_GET["teamid"]))
+  {
+    $teamid = $_GET["teamid"];
+  }
+  else
+  {
+    $msg = $msg . "No teamid passed - terminated";
+    exit($msg);
+
+  }
+}
+
+if (isset($_POST["gamenbr"]))
+{
+  $gamenbr = $_POST["gamenbr"];
+}
+else
+{
+  if (isset($_GET["gamenbr"]))
+  {
+    $gamenbr = $_GET["gamenbr"];
+  }
+  else
+  {
+    $msg = $msg . "No gamenbr passed - terminated";
+    exit($msg);
+
+  }
+}
+
+// $season = $_POST['season'];
+// $week = $_POST['week'];
+// $teamid = $_POST['teamid'];
+// $gamenbr = $_POST['gamenbr'];
 
 // debug
 // $season = 2014;
@@ -30,38 +102,11 @@ $enterdate = $datetime;
 $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
-
 //
-// connect to db
+// db connect
 //
-$dbConn = @mysql_connect($DBhost, $DBuser, $DBpassword);
-if (!$dbConn) 
-{
-  $log = new ErrorLog("logs/");
-  $dberr = mysql_error();
-  $log->writeLog("DB error: $dberr - Error mysql connect. Unable to get nfl game team member pick list information.");
-
-  $rv = "";
-  exit($rv);
-}
-
-if (!mysql_select_db($DBschema, $dbConn)) 
-{
-  $log = new ErrorLog("logs/");
-  $dberr = mysql_error();
-  $log->writeLog("DB error: $dberr - Error selecting db Unable to get nfl game team member pick list information.");
-
-  $rv = "";
-  exit($rv);
-}
+$modulecontent = "Unable to get nfl game team member pick list picked information.";
+include_once ('mysqlconnect.php');
 
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($enterdate));
@@ -79,32 +124,21 @@ AND week = $week
 AND teamid = $teamid
 ORDER BY screenname";
 
-// echo "sql:$sql";
-// exit();
-
-$sql_result = @mysql_query($sql, $dbConn);
-if (!$sql_result)
-{
-    $log = new ErrorLog("logs/");
-    $sqlerr = mysql_error();
-    $log->writeLog("SQL error: $sqlerr - Error doing select to db Unable to get nfl game team member pick list picked information.");
-    $log->writeLog("SQL: $sql");
-
-    $status = -100;
-    $msgtext = "System Error: $sqlerr";
-}
-
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
 
 // var set
 $returnStr = "";
-
 
 //
 // fill the array
 //
 $count = 1;
 $member = array();
-while($r = mysql_fetch_assoc($sql_result)) {
+while($r = mysqli_fetch_assoc($sql_result)) {
   $screenname = $r[screenname];
   $memberavatar = $r[avatar];
 
@@ -117,12 +151,12 @@ while($r = mysql_fetch_assoc($sql_result)) {
     $returnStr = $returnStr . "
     <table style='width:95%;' class='table' >
     <tr >   
-        <td style='font-weight:bold;padding-left:1%;'>
+        <td style='font-weight:bold;padding-left:5%;'>
           <div style='text-align:center;'>
-            <img align='center' height='75' src='../img/nflicons/$teamiconname'> 
+            <img align='center' height='75' src='img/nflicons/$teamiconname'> 
           </div>
         </td>                   
-        <td style='font-weight:bold;font-size:25px;padding-top:20px;'>$teamname</td> 
+        <td style='font-weight:bold;font-size:40px;padding-top:20px;'>$teamname</td> 
     </tr>    
     </table>  
     "; 
@@ -135,9 +169,9 @@ while($r = mysql_fetch_assoc($sql_result)) {
     
   $returnStr = $returnStr . "
     <tr >    
-      <td style='padding-left:5%;'>
+      <td style='padding-left:15%;'>
         <div style='text-align:center;'>
-          <img align='right' height='75' src='../img/avatars/$memberavatar'> 
+          <img align='right' height='75' src='img/avatars/$memberavatar'> 
         </div>
       </td>  
       <td style='font-weight:bold;padding-top:20px;width:45%'>$screenname</td>                   
@@ -154,7 +188,7 @@ $returnStr = $returnStr . "
 //
 // close db connection
 //
-mysql_close($dbConn);
+mysqli_close($dbConn);
 
 //
 // pass back info
