@@ -9,6 +9,24 @@ $(document).ready( function(){
 	adjustNavbarImages();
 });  
 
+function objectCopy(src) {
+  let target = {};
+  for (let prop in src) {
+    if (src.hasOwnProperty(prop)) {
+      target[prop] = src[prop];
+    }
+  }
+  return target;
+}
+
+function objectArraySize(obj) {
+  	var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+}
+
 function setviewpadding()
 {	
 	// var navTypeMobile = isMobile();

@@ -82,6 +82,15 @@ dddApp.factory('scriptsFactory', function($q, $http) {
         })
     }
 
+    factory.importSurveyQuestionDataFile = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/importsurveyquestiondata.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.makeGameTimeStampandYear = function (data) {
         return $http({
             method: 'POST',

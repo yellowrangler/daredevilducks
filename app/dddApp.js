@@ -16,6 +16,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'homeController',
                 templateUrl: 'app/partials/home.html'
             }) 
+        .when('/survey',
+            {
+                controller: 'surveyController',
+                templateUrl: 'app/partials/survey.html'
+            }) 
         .when('/editorial',
             {
                 controller: 'editorialController',

@@ -122,6 +122,35 @@
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
+					<form id="importsurveyquestiondataForm" name="importsurveyquestiondataForm" class="form-horizontal">
+						<div style="background-color:#B0E0E6;" class="panel-heading" id="importsurveyquestiondataheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#importsurveyquestiondata">
+								Import Survey Question Data
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="importsurveyquestiondata" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="importsurveyquestiondatafile">Import File Name</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.importsurveyquestiondatafile" class="form-control" id="importsurveyquestiondatafile" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="importSurveyQuestionData()" id="importsurveyquestiondatabutton" class="btn btn-primary">Import File Name</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
 					<form id="dumpdatabaseForm" name="dumpdatabaseForm" class="form-horizontal">
 						<div style="background-color:#F0F0DB;" class="panel-heading" id="dumpdatabaseheading">
 							<h3 class="panel-title">

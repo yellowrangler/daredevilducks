@@ -1910,6 +1910,36 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
+    function importSurveyQuestionData()
+    {
+        var data = "";
+        var scriptData = "";
+
+        $("#scriptMessagesDisplay").html("");
+
+        //
+        // run import survey question data
+        //
+        sw.start();
+        startTime = sw.getLocalTimeStart();
+
+        $("#scriptMessagesDisplay").append("Start of Import Survey Question Data. Time:"+startTime+"<br />");
+        var scriptData = "importsurveyquestiondatafile="+$scope.current.importsurveyquestiondatafile;
+
+        scriptsFactory.importSurveyQuestionDataFile(scriptData)
+        .success( function(data) {
+            sw.stop();
+            stopTime = sw.getLocalTimeStop();
+            timeDiff = sw.getSecondsDiff();
+
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Import Survey Question Data. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
     function runGameTimeStampandYear()
     {
         var data = "";
@@ -1975,6 +2005,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
     $scope.importTeamWeeklyRank = function () {
         importTeamWeeklyRank();
+    }
+
+    $scope.importSurveyQuestionData = function () {
+        importSurveyQuestionData();
     }
 
     $scope.runGameTimeStampandYear = function () {
