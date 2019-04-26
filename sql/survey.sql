@@ -29,20 +29,6 @@ CREATE TABLE surveyquestiontbl (
 ) ENGINE=InnoDB DEFAULT CHARSET=big5;
 
 --
--- Table structure for table surveymembertbl
---
-DROP TABLE IF EXISTS surveymembertbl;
-CREATE TABLE surveymembertbl (
-  surveymemberid bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  memberid bigint(20) DEFAULT NULL,
-  surveyid bigint(20) DEFAULT NULL,
-  surveystatus varchar(255) DEFAULT NULL,
-  dateupdated datetime DEFAULT NULL,
-  PRIMARY KEY (surveymemberid)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=big5;
-
-
---
 -- Table structure for table surveymemberanswerstbl
 --
 DROP TABLE IF EXISTS surveymemberanswerstbl;

@@ -22,7 +22,7 @@
             <div class="col-md-3">
                 <div class="panel panel-default" style="border-color:#6C0000">
                     <div class="panel-heading" style="background-color:#6C0000">
-                        <h3 class="panel-title surveyPanelHeading">Question</h3>
+                        <h3 class="panel-title surveyPanelHeading">Question {{current.survey.questionnbr}} of {{current.survey.totalquestions}}</h3>
                     </div>
                     <div style="height:140px;overflow-y:scroll;" class="panel-body">
                         <span>{{current.survey.questiontext}}</span>
@@ -72,7 +72,7 @@
                 </div>
             </div> 
 
-            <div ng-if="current.survey.questionnbr" class="row" style="padding-top:35px;">
+            <div ng-if="current.survey.questionnbr" class="row" style="padding-top:15px;">
                 <div class="col-md-12">
                     <div class="form-group">
                         <div class="col-md-6 text-left">
@@ -84,7 +84,7 @@
                         </div>
 
                         <div ng-if="current.survey.questionnbr == current.survey.totalquestions" class="col-md-6 text-right">
-                           <button id="finishSurveyButton" data-ng-click="finishSurveyButton()" type="button" class="btn btn-primary">Finish</button>
+                           <button id="finishSurveyButton" data-ng-click="finishSurveyButton()" type="button" class="btn btn-success">Finish</button>
                         </div>
                     </div> <!-- end of form-group -->
                 </div> <!-- end of col-7 -->

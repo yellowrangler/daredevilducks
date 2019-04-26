@@ -1,0 +1,119 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption row">
+  <div class="col-md-12">
+    <h2 class="headerTitle">{{current.survey.surveyname}}</h2>
+  </div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div ng-if="current.firsttime" class="surveyStandardOffset">
+    <div class="row">
+        <div style="padding-top:35px;" class="col-md-12">
+            <p class="surveyHomePage">
+                Welcome to the Dare Devil Ducks {{current.survey.year}} Survey. What follows are a series of {{current.survey.totalquestions}} questions about your experience with our website. Your answers will help us manage and fine tune the website to improve on our members experience. 
+            </p>
+
+            <p class="surveyHomePage">
+                Thank you for participating! We look forward to your patronage in our next season of service! 
+            </p>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+</div> <!-- end of first time -->
+
+<div ng-if="!current.firsttime" class="surveyStandardOffset">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default" style="border-color:#6C0000">
+                <div class="panel-heading" style="background-color:#6C0000">
+                    <h3 class="panel-title surveyPanelHeading">Question {{current.survey.questionnbr}} of {{current.survey.totalquestions}}</h3>
+                </div>
+                <div style="" class="panel-body">
+                    <span>{{current.survey.questiontext}}</span>
+                </div>
+            </div>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+
+    <div class="row">        
+        <div class="col-md-12">
+            <div class="panel panel-default" style="border-color:#6C0000">
+                <div class="panel-heading" style="background-color:#6C0000">
+                    <h3 class="panel-title surveyPanelHeading">Description</h3>
+                </div>
+                <div class="panel-body">
+                    <span>{{current.survey.questiontip}}</span>
+                </div>
+            </div> 
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+
+    <div class="row">        
+        <div class="col-md-12">
+            <div class="panel panel-default" style="border-color:LightSeaGreen">
+                <div class="panel-heading" style="background-color:LightSeaGreen">
+                    <h3 class="panel-title surveyPanelHeading">Answer</h3>
+                </div>
+                <div style="" class="panel-body surveyYesNo">
+                    <div style="text-align:center;">
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="current.survey.answeryesno" name="answeryesno" id="yes" value="yes"> <span>Yes</span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="current.survey.answeryesno" name="answeryesno" id="no" value="no"> <span>No</span>
+                        </label>
+                    </div>    
+                </div>
+            </div>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+
+    <div class="row">        
+        <div class="col-md-12">
+            <div class="panel panel-default" style="border-color:LightSeaGreen">
+                <div class="panel-heading" style="background-color:LightSeaGreen">
+                    <h3 class="panel-title surveyPanelHeading">Answer Comment</h3>
+                </div>
+                <div style="" class="panel-body">
+                    <textarea class="form-control" ng-model="current.survey.answercomment" id="answercomment" name="answercomment" rows="4"></textarea>
+                </div>
+            </div>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+
+    <div ng-if="current.survey.questionnbr" class="row" style="padding-top:0px;padding-bottom:15px;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+               
+                    <button id="prevSurveyButton" data-ng-click="prevSurveyButton()" type="button" class="btn btn-primary">Prev</button>
+
+                    <span style="width:75px">&nbsp;</span>
+
+                    <button ng-if="current.survey.questionnbr < current.survey.totalquestions"id="nextSurveyButton" data-ng-click="nextSurveyButton()" type="button" class="btn btn-primary">Next</button>
+
+                    <button ng-if="current.survey.questionnbr == current.survey.totalquestions" id="finishSurveyButton" data-ng-click="finishSurveyButton()" type="button"  class="btn btn-success">Finish</button>
+             
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of not question number -->
+
+    <div class="row"> 
+        <div class="col-md-12">
+            <img style="border-color:LightSeaGreen; border-style:solid;border-width:2px;" class="img-responsive" align="center" ng-src='../img/survey/{{current.survey.questionpicurl}}'>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+
+</div> <!-- end of not first time -->
+
+<div ng-if="!current.survey.questionnbr" class="surveyStandardOffset" style="padding-top:35px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="text-center">
+                    <button tabindex="" id="startSurveyButton" data-ng-click="startSurveyButton()" type="button" class="btn btn-primary">Start</button>
+                    </div>
+            </div> <!-- end of form-group -->
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+</div> <!-- end of not question number -->
+
+<div style="padding-bottom:40px;">&nbsp;</div>

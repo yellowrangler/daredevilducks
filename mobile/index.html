@@ -19,7 +19,16 @@
 <link href="css/dddMobile.css" rel="stylesheet" />
 
 <!-- Vendor Libs -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-sanitize.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
 <script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.min.js"></script>
@@ -27,6 +36,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-sanitize.js"></script>
+ -->
 
 <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
 <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
@@ -44,6 +54,7 @@
 <!-- controllers  -->
 <script src="app/controllers/firstController.js"></script>
 <script src="app/controllers/parenthomeController.js"></script>
+<script src="app/controllers/surveyController.js"></script>
 <script src="app/controllers/gamesController.js"></script>
 <script src="app/controllers/playerstatsController.js"></script>
 <script src="app/controllers/teamsController.js"></script>
@@ -58,6 +69,8 @@
 <script src="app/factories/loginfactory.js"></script>
 <script src="app/factories/membersfactory.js"></script>
 <script src="app/factories/scriptsfactory.js"></script>
+<script src="app/factories/surveyfactory.js"></script>
+
 <script src="app/factories/teamsfactory.js"></script>
 <!-- services  -->
 <script src="app/services/msgservice.js"></script>
@@ -116,6 +129,14 @@
             </a>
         </article> 
     </div> <!-- end of container -->
+
+    <div style="padding-top:15px;padding-bottom:25px;"> 
+        <p class="didyouknowBody"> 
+            <a class="didyouknowBody" href="#/survey">
+                <span style="cursor: pointer;">2019 Dare Devil Ducks Survey</span> 
+            </a>
+        </p>
+    </div>
 
     <div style="padding-top:15px;padding-bottom:25px;">    
         <a href="#/faqs">

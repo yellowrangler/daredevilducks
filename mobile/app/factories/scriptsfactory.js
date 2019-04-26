@@ -2,8 +2,8 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     var factory = {};
 
     factory.initializeTeamWeekStats = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/initializeteamweekstats.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -20,8 +20,8 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     }
 
     factory.initializeMemberWeekStats = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/initializememberweekstats.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -29,8 +29,8 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     }
 
     factory.buildTeamStats = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/buildteamstats.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -38,8 +38,8 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     }
 
     factory.buildTeamWeekStats = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/buildteamweekstats.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -47,8 +47,8 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     }
 
     factory.buildMemberStats = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/buildmemberstats.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -56,8 +56,8 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     }
 
     factory.buildMemberWeekStats = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/buildmemberweekstats.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -74,17 +74,26 @@ dddAppMobile.factory('scriptsFactory', function($q, $http) {
     }
 
     factory.importTeamWeeklyRankFile = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/importteamweeklyrankfile.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
 
+    factory.importSurveyQuestionDataFile = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/importsurveyquestiondata.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.makeGameTimeStampandYear = function (data) {
-        return $http({ 
-            method: 'POST', 
+        return $http({
+            method: 'POST',
             url: "app/ajax/makegametimestamp.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
