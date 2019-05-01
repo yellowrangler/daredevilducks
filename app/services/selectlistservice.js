@@ -36,6 +36,7 @@ dddApp.service('selectListService', function () {
 
     var emtList = [ 
         { title :  "Welcome", url : "welcome-email.html", type : "normal", recipients : "manual" },
+        { title :  "Survey", url : "survey-email.html", type : "normal", recipients : "all" },
         { title :  "New Avatar", url : "avatar-change-email.html", type : "normal", recipients : "manual" },
         { title :  "New Avatar and Login", url : "avatar-login-change-email.html", type : "normal", recipients : "manual" },
         { title :  "New Login", url : "login-change-email.html", type : "normal", recipients : "manual" },
