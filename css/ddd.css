@@ -1,5 +1,25 @@
 
 /*fonts*/
+@font-face {
+    font-family: 'aileronthin';
+    src: url('fonts/aileron/Aileron-Thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronsemibold';
+    src: url('fonts/aileron/Aileron-SemiBold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronlight';
+    src: url('Aileron-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
   font-family: 'beyondWonderland';
@@ -241,7 +261,7 @@ border: 0 none;
 
 .headerFireworks {
 	color:#3ca4d7;
-	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 900;
 	font-variant: small-caps;
 	letter-spacing: 3px;
@@ -249,7 +269,7 @@ border: 0 none;
 
 .headerFireworks2 {
 	color:#6C0000;
-	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 900;
 	font-variant: small-caps;
 	font-style: normal;
@@ -258,7 +278,7 @@ border: 0 none;
 
 .headerTitle4 {
 	color:#3ca4d7;
-	font-family: 'aileronSemiBold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 900;
 	font-variant: small-caps;
 	letter-spacing: 3px;
@@ -1085,3 +1105,21 @@ border: 0 none;
     /*width: 500px;*/
     height: 300px;
 }
+
+.bracketModalTitle {
+	font-family: 'Lato', 
+	sans-serif;
+	font-weight: 900;
+	font-size: 35px;
+	color: #6C0000;
+	text-align:center
+}
+
+/*.bracketModalTitle {
+	font-family:'ChopinScript',
+	serif;
+	font-size:45px;
+	color:red;
+	text-align:center
+}*/
+
