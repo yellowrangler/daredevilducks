@@ -42,6 +42,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function loginlogoff(request) {
         var route = loginService.setLoginLogoffLabel("menubarlogin",1);
         getAvatar();
+
         loginService.setAvatarLabel("menubaravatar",1);
 
         checkRole();
@@ -267,6 +268,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         getAvatar();
     }
 
+    $scope.getScreenName = function () {
+        getScreenName();
+    }
+
     $scope.showAlert = function (title, body) {
         $('#parentAlertModalTitle').text(title);
         $('#parentAlertModalBody').text(body);
@@ -309,8 +314,9 @@ controllers.loginController = function ($scope, $http, $location, $window, login
                 {
                     loginService.addLogin(login);
 
-                    // get avatar
+                    // get avatar and screen name
                     $scope.$parent.showMemberAvatar();
+                    $scope.$parent.getScreenName();
 
                     // flip the label
                     var route = loginService.setLoginLogoffLabel("menubarlogin",0);

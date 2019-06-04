@@ -241,6 +241,23 @@ border: 0 none;
 .imgAvatarNavSmall {
 	height:75px;
 }
+
+.avatarTitle {
+	color:#6C0000;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	/*padding-right:10%;*/
+	text-align:center;
+	font-size: 22px;
+}
+
+.avatarTitleNoImage {
+	color:#6C0000;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	text-decoration:none;
+	font-weight:bold;
+	font-size: 22px;
+}
+
 .headerTitle {
 	color:#6C0000;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;

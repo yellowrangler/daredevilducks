@@ -219,11 +219,14 @@
             <ul  class="nav navbar-nav pull-right" >
                 <li style="text-align:center;padding-top:30px;padding-right:20px;">
                     <div>
-                    <a id="menubaravatarimage" name="menubaravatarimage" class="collapsableNavbar" href="#/memberupdatemember">
-                    <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
-                    </a>
-                    <br />
-                    <span style="color:teal;padding-right:16%;" id="menubaravatar" name="menubaravatar"></span>
+                        <a id="menubaravatarimage" name="menubaravatarimage" class="collapsableNavbar" href="#/memberupdatemember">
+                        <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
+                        </a>
+                       <!--  <br /> -->       
+                    </div>
+
+                    <div>
+                        <span class="avatarTitle" id="menubaravatar" name="menubaravatar"></span>  
                     </div>
                 </li>
             </ul>
@@ -364,13 +367,13 @@
             </ul>
 
             <ul  class="nav navbar-nav pull-right" >
-                <li style="text-align:center;padding-top:18px;padding-right:20px;">
+                <li style="text-align:center;padding-top:10px;padding-right:20px;">
                     <div ng-show="memberavatar != ''" >
-                        <a id="menubaravatarimageshort" name="menubaravatarimageshort" style="color:crimson;text-decoration:none;font-weight:bold;" class="collapsableNavbar" href="#/memberupdatemember">
+                        <a id="menubaravatarimageshort" name="menubaravatarimageshort" class="avatarTitleNoImage collapsableNavbar" href="#/memberupdatemember">
                             {{memberscreenname}}
                         </a>
-                        <br />
-                        <span id="menubaravatar" name="menubaravatar"></span>
+                       <!--  <br />
+                        <span id="menubaravatar" name="menubaravatar"></span> -->
                     </div>
                 </li>
             </ul>
