@@ -43,10 +43,10 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
         $( "#hf2017" )
             .mouseover(function() {
-                 $(this).attr("src", "img/halloffame/paulabishophof-2017-2.png");
+                 $(this).attr("src", "img/halloffame/PaulaBishopDDDWin7BScreenShot.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "img/halloffame/paulabishophof-2017.png");
+                $(this).attr("src", "img/halloffame/PaulaBishopDDDWin8AFix.png");
                 }); 
 
         $( "#hf2018" )
