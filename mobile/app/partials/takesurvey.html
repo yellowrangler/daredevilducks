@@ -1,0 +1,123 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
+<div class="pageCaption row">
+  <div class="col-md-12">
+    <h2 class="headerTitle">{{current.survey.surveyname}}</h2>
+  </div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div ng-if="current.firsttime" class="pageStandardOffset container">
+    <div style="padding-top:35px;padding-left:35px;" class="col-md-12">
+        <p class="surveyHomePage">
+            Welcome to the Dare Devil Ducks {{current.survey.year}} Survey. What follows are a series of {{current.survey.totalquestions}} questions about your experience with our website. Your answers will help us manage and fine tune the website to improve on our members experience. 
+        </p>
+
+        <p class="surveyHomePage">
+            Thank you for participating! We look forward to your patronage in our next season of service! 
+        </p>
+    </div> <!-- end of col -->
+
+    <div style="padding-top:35px;padding-left:35px;" class="col-md-12">
+        <div class="form-group">
+            <div class="col-md-offset-5 col-md-2 text-center">
+                <button tabindex="" id="startSurveyButton" data-ng-click="startSurveyButton()" type="button" class="btn btn-primary">Start</button>
+                </div>
+        </div> <!-- end of form-group -->
+    </div> <!-- end of col-7 -->
+</div> <!-- end of container -->
+
+<div style="padding-top:35px;padding-left:25px;padding-right:25px;" ng-if="!current.firsttime" class="pageStandardOffset container">
+    <div class="row">
+        <div style="padding-top:35px;display:inline;">
+            <div class="col-md-12">
+                <div class="panel panel-default" style="border-color:#6C0000">
+                    <div class="panel-heading" style="background-color:#6C0000">
+                        <h3 class="panel-title surveyPanelHeading">Question {{current.survey.questionnbr}} of {{current.survey.totalquestions}}</h3>
+                    </div>
+                    <div style="height:140px;overflow-y:scroll;" class="panel-body">
+                        <span>{{current.survey.questiontext}}</span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>        
+
+    <div class="row">
+        <div style="padding-top:35px;display:inline;">
+            <div class="col-md-12">
+                <div class="panel panel-default" style="border-color:#6C0000">
+                    <div class="panel-heading" style="background-color:#6C0000">
+                        <h3 class="panel-title surveyPanelHeading">Description</h3>
+                    </div>
+                    <div class="panel-body">
+                        <span>{{current.survey.questiontip}}</span>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>  
+
+    <div class="row">
+        <div style="padding-top:35px;display:inline;">
+            <div class="col-md-12">
+                <div class="panel panel-default" style="border-color:LightSeaGreen">
+                    <div class="panel-heading" style="background-color:LightSeaGreen">
+                        <h3 class="panel-title surveyPanelHeading">Answer</h3>
+                    </div>
+                    <div style="" class="panel-body surveyYesNo">
+                        <div style="text-align:center;">
+                            <label class="radio-inline">
+                                <input type="radio" ng-model="current.survey.answeryesno" name="answeryesno" id="yes" value="yes"> <span>Yes</span>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" ng-model="current.survey.answeryesno" name="answeryesno" id="no" value="no"> No
+                            </label>
+                        </div>    
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>                
+
+    <div class="row">
+        <div style="padding-top:35px;display:inline;">
+            <div class="col-md-12">
+                <div class="panel panel-default" style="border-color:LightSeaGreen">
+                    <div class="panel-heading" style="background-color:LightSeaGreen">
+                        <h3 class="panel-title surveyPanelHeading">Answer Comment</h3>
+                    </div>
+                    <div style="height:140px;overflow-y:scroll;" class="panel-body">
+                        <textarea class="form-control" ng-model="current.survey.answercomment" id="answercomment" name="answercomment" rows="4"></textarea>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>  
+
+    <div class="row">
+        <div style="padding-top:35px;display:inline;">
+            <div class="col-md-12">
+                <img style="border-color:LightSeaGreen; border-style:solid;border-width:2px;" class="img-responsive" align="center" ng-src='../img/survey/{{current.survey.questionpicurl}}'>
+            </div>  
+        </div>
+    </div> 
+    
+    <div ng-if="current.survey.questionnbr" style="padding-top:15px;" class="row">        
+       <!--  <div class="form-group"> -->
+            <div style="display:inline; float:left;" class="col-md-6 text-left">
+                <button id="prevSurveyButton" data-ng-click="prevSurveyButton()" type="button" class="btn btn-primary">Prev</button>
+            </div>
+
+            <div style="display:inline; float:right;" ng-if="current.survey.questionnbr < current.survey.totalquestions" class="col-md-6 text-right">
+               <button id="nextSurveyButton" data-ng-click="nextSurveyButton()" type="button" class="btn btn-primary">Next</button>
+            </div>
+
+            <div style="display:inline; float:right;" ng-if="current.survey.questionnbr == current.survey.totalquestions" class="col-md-6 text-right">
+               <button id="finishSurveyButton" data-ng-click="finishSurveyButton()" type="button" class="btn btn-success">Finish</button>
+            </div>
+        <!-- </div> -->
+    </div> <!-- end of row -->
+</div> <!-- end of container -->
+
+
+<div style="padding-bottom:110px;">&nbsp;</div>

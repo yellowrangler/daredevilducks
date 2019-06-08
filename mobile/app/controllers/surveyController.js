@@ -1,4 +1,4 @@
-controllers.surveyController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
+controllers.takesurveyController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
 	$scope.current = {};
 
     function getMemberSurveyInformation(idx) {
@@ -33,8 +33,8 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
 		$scope.current.firsttime = 0;
 
         getMemberSurveyInformation(0);
-		
 
+        $window.scrollTo(0, 0);
 	}
 
 	function prevSurveyButton() {
@@ -42,6 +42,8 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
 		{
 			var idx = $scope.current.survey.questionnbr - 2;
             getMemberSurveyInformation(idx);
+
+            $window.scrollTo(0, 0);
 		}
 	}
 
@@ -50,7 +52,7 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
 		{
             if ($scope.current.survey.answeryesno.length == 0)
             {
-                $scope.$parent.showAlert("Required Data Missing!", "You must answer the survey question by selecting a 'Yes' or 'No'!");
+                alert("Required Data Missing!", "You must answer the survey question by selecting a 'Yes' or 'No'!");
 
             }
             else
@@ -63,10 +65,12 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
                     {
                         var idx = $scope.current.survey.questionnbr;
                         getMemberSurveyInformation(idx);
+
+                        $window.scrollTo(0, 0);
                     }
                     else
                     {
-                        $scope.$parent.showAlert("Error saving your answer!", data);
+                        alert("Error saving your answer!", data);
                     }
                 })
                 .error( function(edata) {
@@ -80,7 +84,7 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
     function finishSurveyButton() {
         if ($scope.current.survey.answeryesno.length == 0)
         {
-            $scope.$parent.showAlert("Required Data Missing!", "You must answer the survey question by selecting a 'Yes' or 'No'!");
+            alert("Required Data Missing!", "You must answer the survey question by selecting a 'Yes' or 'No'!");
 
         }
         else
@@ -91,13 +95,13 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
             .success( function(data) {
                 if (data == "ok")
                 {
-                    $scope.$parent.showAlert("Survey Finished!", "Thank you for participating in our Dare Devil Ducks survey!");
+                    alert("Survey Finished!", "Thank you for participating in our Dare Devil Ducks survey!");
 
                     $location.path("#home");
                 }
                 else
                 {
-                    $scope.$parent.showAlert("Error saving your answer!", data);
+                    alert("Error saving your answer!", data);
                 }
             })
             .error( function(edata) {
@@ -114,7 +118,10 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
-            alert ("You must login!")
+            // new code
+           alert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
             $location.path("#home");
         }
 
@@ -164,4 +171,28 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
     $scope.finishSurveyButton = function() {
         finishSurveyButton();
     }
+}
+
+
+controllers.surveyresultsController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
+    $scope.current = {};
+
+    init();
+    function init() {
+        $window.scrollTo(0, 0);
+
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+        {
+            // new code
+            alert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
+            $location.path("#home");
+        }
+
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+    };
+
 }

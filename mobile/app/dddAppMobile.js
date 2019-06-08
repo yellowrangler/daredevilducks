@@ -16,10 +16,15 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'homeController',
                 templateUrl: 'app/partials/home.html'
             })
-        .when('/survey',
+        .when('/takesurvey',
             {
-                controller: 'surveyController',
-                templateUrl: 'app/partials/survey.html'
+                controller: 'takesurveyController',
+                templateUrl: 'app/partials/takesurvey.html'
+            }) 
+        .when('/surveyresults',
+            {
+                controller: 'surveyresultsController',
+                templateUrl: 'app/partials/surveyresults.html'
             }) 
         .when('/faqs',
             {
