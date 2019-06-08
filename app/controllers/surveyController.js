@@ -1,4 +1,4 @@
-controllers.surveyController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
+controllers.takesurveyController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
 	$scope.current = {};
 
     function getMemberSurveyInformation(idx) {
@@ -167,4 +167,28 @@ controllers.surveyController = function ($scope, $http, $location, $window, memb
     $scope.finishSurveyButton = function() {
         finishSurveyButton();
     }
+}
+
+
+controllers.surveyresultsController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
+    $scope.current = {};
+
+    init();
+    function init() {
+        $window.scrollTo(0, 0);
+
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+        {
+            // new code
+            $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
+             
+            // alert ("You must login in order to continue!")
+            $location.path("#home");
+        }
+
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+    };
+
 }
