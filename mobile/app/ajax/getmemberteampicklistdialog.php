@@ -153,7 +153,7 @@ while($r = mysqli_fetch_assoc($sql_result)) {
     <tr >   
         <td style='font-weight:bold;padding-left:5%;'>
           <div style='text-align:center;'>
-            <img align='center' height='75' src='img/nflicons/$teamiconname'> 
+            <img align='center' height='75' src='../img/nflicons/$teamiconname'> 
           </div>
         </td>                   
         <td style='font-weight:bold;font-size:40px;padding-top:20px;'>$teamname</td> 
@@ -171,7 +171,7 @@ while($r = mysqli_fetch_assoc($sql_result)) {
     <tr >    
       <td style='padding-left:15%;'>
         <div style='text-align:center;'>
-          <img align='right' height='75' src='img/avatars/$memberavatar'> 
+          <img align='right' height='75' src='../img/avatars/$memberavatar'> 
         </div>
       </td>  
       <td style='font-weight:bold;padding-top:20px;width:45%'>$screenname</td>                   

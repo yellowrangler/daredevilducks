@@ -73,7 +73,7 @@ dddApp.service('selectListService', function () {
         { value : "AL", title : "Alabama" },
         { value : "AK", title : "Alaskan" },
         { value : "AZ", title : "Arizona" },
-        { value : "AR", title : "Arkansas" },
+        { value : "AR", title : "Arkansa" },
         { value : "CA", title : "California" },
         { value : "CO", title : "Colorado" },
         { value : "CT", title : "Connecticut" },

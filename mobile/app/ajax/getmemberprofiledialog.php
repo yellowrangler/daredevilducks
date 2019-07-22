@@ -130,7 +130,7 @@ $returnStr = $returnStr . "
 		<td style='font-weight:bold;padding-top:20px;width:125px;'>$memberscreenname</td>			
 		<td style=''>
 			<div style='text-align:center;'>
-				<img align='left' height='175' src='img/avatars/$memberavatar'> 
+				<img align='left' height='175' src='../img/avatars/$memberavatar'> 
 			</div>
 		</td>										
 	</tr>	
