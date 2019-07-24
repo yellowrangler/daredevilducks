@@ -56,6 +56,11 @@ $function = "select";
 include ('mysqlquery.php');
 
 //
+// now encode string. Must be done  after mysqli connect
+//
+$answercomment = mysqli_real_escape_string($dbConn, $answercomment);
+
+//
 // get the member information
 //
 $count = mysqli_num_rows($sql_result);
