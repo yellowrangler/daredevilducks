@@ -86,6 +86,12 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 	$mysqlTS = date("Y-m-d H:i:s", $unixTS);
 	$enddateTS = $mysqlTS;
 
+	// 
+	// current date time
+	// 
+	$datetime = date("Y-m-d H:i:s");
+	$enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
+
 	$gametypeid = $seasonweeksValue['gametypeid'];
 
 	// 
@@ -115,8 +121,6 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 			weekend = '$enddateTS', 
 			enterdate = '$enterdateTS' 
 			WHERE season = $season AND week = $week";
-
-		echo "sql => " . $sql . $lr;
 	}
 	else
 	{
@@ -131,9 +135,7 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 		$week, 
 		'$startdateTS', 
 		'$enddateTS',
-		'$enterdateTS' )";
-
-		echo "sql => " . $sql . $lr;	
+		'$enterdateTS' )";	
 	}
 
 	//
@@ -141,6 +143,8 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 	//
 	// $modulecontent = "Unable to do $function for gameweek for season = $sesson and week = $week.";
 	// include ('mysqlquery.php');
+
+	echo $sql . $lr;
 
 	$seasonweekscount = $seasonweekscount + 1;
 }

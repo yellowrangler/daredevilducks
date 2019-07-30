@@ -152,7 +152,7 @@ foreach($seasonArray as $byeKey => $byeValue)
 
 	$byecount = $byecount + 1;
 
-	echo "sql => " . $sql . $lr;
+	echo $sql . $lr;
 }
 
 print  "$lr";

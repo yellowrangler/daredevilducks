@@ -190,7 +190,7 @@ foreach($seasonArray as $gameKey => $gameValue)
 			awayteamscore='$awayteamscore',
 			gametypeid='$gametypeid',
 			gamedatetime='$gamedatetime',
-			enterdate='$enterdate'
+			enterdate='$enterdateTS'
 			WHERE season = $season 
 			AND week = $week 
 			AND gamenbr = $gamenbr 
@@ -244,7 +244,7 @@ foreach($seasonArray as $gameKey => $gameValue)
 
 	$gamecount = $gamecount + 1;
 
-	echo "sql => " . $sql . $lr;
+	echo $sql . $lr;
 }
 
 print  "$lr";
