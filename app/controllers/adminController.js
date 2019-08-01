@@ -1940,6 +1940,86 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
+    function runNewSeasonSetup()
+    {
+        var data = "";
+        var scriptData = "";
+
+        $("#scriptMessagesDisplay").html("");
+
+        gw.start();
+        startTime = gw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").html("Start of New Season Setup. Time:"+startTime+"<br /><br />");
+
+        //
+        // run importnewseasongames
+        //
+        sw.start();
+        startTime = sw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").append("Start of New Season Games Setup. Time:"+startTime+"<br />");
+        scriptData = "csvfile="+$scope.current.gamecsv;
+
+        scriptsFactory.importNewSeasonGames(scriptData)
+        .success( function(data) {
+            sw.stop();
+            stopTime = sw.getLocalTimeStop();
+            timeDiff = sw.getSecondsDiff();
+
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br />End of Import New Season Games. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+
+            //
+            // run newseasonsetupbye
+            //
+            sw.start();
+            startTime = sw.getLocalTimeStart();
+            $("#scriptMessagesDisplay").append("<br /><br />Start of New Season Byes Setup. Time:"+startTime+"<br />");
+            scriptData = "csvfile="+$scope.current.byecsv;
+
+            scriptsFactory.importNewSeasonByes(scriptData)
+            .success( function(data) {
+                sw.stop();
+                stopTime = sw.getLocalTimeStop();
+                timeDiff = sw.getSecondsDiff();
+
+                $("#scriptMessagesDisplay").append(data);
+                $("#scriptMessagesDisplay").append("<br />End of Import New Season Byes. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+
+                //
+                // run newseasongameweeks
+                //
+                sw.start();
+                startTime = sw.getLocalTimeStart();
+                $("#scriptMessagesDisplay").append("<br /><br />Start of New Season Byes Setup. Time:"+startTime+"<br />");
+                scriptData = "csvfile="+$scope.current.byecsv;
+
+                scriptsFactory.importNewSeasonGameWeeks(scriptData)
+                .success( function(data) {
+                    sw.stop();
+                    stopTime = sw.getLocalTimeStop();
+                    timeDiff = sw.getSecondsDiff();
+
+                    $("#scriptMessagesDisplay").append(data);
+                    $("#scriptMessagesDisplay").append("<br />End of Import New Season Game Weeks. Time:"+stopTime+". Interval:"+ timeDiff +" seconds");
+
+                    gw.stop();
+                    stopTime = gw.getLocalTimeStop();
+                    timeDiff = gw.getSecondsDiff();
+                    $("#scriptMessagesDisplay").append("<br /><br />End of New Season Setup. Total Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
+                })
+                .error( function(edata) {
+                    alert(edata);
+                });
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
     function runGameTimeStampandYear()
     {
         var data = "";
@@ -2005,6 +2085,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
     $scope.importTeamWeeklyRank = function () {
         importTeamWeeklyRank();
+    }
+
+    $scope.runNewSeasonSetup = function () {
+        runNewSeasonSetup();
     }
 
     $scope.importSurveyQuestionData = function () {

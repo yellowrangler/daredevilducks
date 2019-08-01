@@ -91,10 +91,37 @@ dddApp.factory('scriptsFactory', function($q, $http) {
         })
     }
 
-    factory.makeGameTimeStampandYear = function (data) {
+    factory.importSurveyQuestionDataFile = function (data) {
         return $http({
             method: 'POST',
-            url: "app/ajax/makegametimestamp.php",
+            url: "app/ajax/importsurveyquestiondata.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.importNewSeasonGames = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/importnewseasongames.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.importNewSeasonByes = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/importnewseasonbyes.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.importNewSeasonGameWeeks = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/importnewseasongameweeks.php",
             data: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })

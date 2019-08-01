@@ -10,8 +10,8 @@ include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
-// $csvfiledirectory = "../../data/importfiles/";
-$csvfiledirectory = "../../rubyscripts/";
+$csvfiledirectory = "../../data/importfiles/";
+// $csvfiledirectory = "../../rubyscripts/";
 
 // $lr = "\n";
 $lr = "<br>";
@@ -19,16 +19,24 @@ $lr = "<br>";
 //
 // get input
 //
-$csvfile = ""; 
-if( isset($_GET["csvfile"]) )
+$csvfile = "";
+if (isset($_POST["csvfile"]))
 {
-	$csvfile = $_GET['csvfile']; 
+	$csvfile = $_POST["csvfile"];
 }
 else
 {
-	$msgtext = "Invalid parm csvfile";
-	exit($msgtext);
+	if (isset($_GET["csvfile"]))
+	{
+		$csvfile = $_GET["csvfile"];
+	}
+	else
+	{
+		$msgtext = "Invalid parm csvfile";
+		exit($msgtext);
+	}
 }
+
 
 //---------------------------------------------------------------
 // csv file

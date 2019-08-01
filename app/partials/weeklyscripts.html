@@ -223,6 +223,49 @@
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
+					<form id="newseasonsetupForm" name="newseasonsetupForm" class="form-horizontal">
+						<div style="background-color:#F22525;color:white;" class="panel-heading" id="newseasonsetupheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#newseasonsetupgroup" data-target="#newseasonsetup">
+								New Season Setup
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="newseasonsetup" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="newseasonsetupgame">Games CSV File</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.gamecsv" class="form-control" id="newseasonsetupgame" name="newseasonsetupgame" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="newseasonsetupbye">Byes CSV File</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.byecsv" class="form-control" id="newseasonsetupbye" name="newseasonsetupbye" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="newseasongameweeks">Game Weeks CSV File</label>
+									<div class="col-md-7">
+										<input type="text" ng-model="current.weekscsv" class="form-control" id="newseasongameweeks" name="newseasongameweeks" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="runNewSeasonSetup()" id="newseasonsetupbutton" class="btn btn-primary">Setup New Season</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form default -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
 					<form id="creategametimestampandyearForm" name="creategametimestampandyearForm" class="form-horizontal">
 						<div style="background-color:#ADDDCF;" class="panel-heading" id="creategametimestampandyearheading">
 							<h3 class="panel-title">
