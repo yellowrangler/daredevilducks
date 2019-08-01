@@ -15,13 +15,14 @@ $csvfiledirectory = "../../data/importfiles/";
 
 // $lr = "\n";
 $lr = "<br>";
-
+$dontShowSql = 0;
 //
 // get input
 //
 $csvfile = "";
 if (isset($_POST["csvfile"]))
 {
+	$dontShowSql = 1;
 	$csvfile = $_POST["csvfile"];
 }
 else
@@ -151,7 +152,10 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 	// $modulecontent = "Unable to do $function for gameweek for season = $sesson and week = $week.";
 	// include ('mysqlquery.php');
 
-	echo $sql . $lr;
+	if ($dontShowSql == 0)
+	{
+		echo $sql . $lr;
+	}
 
 	$seasonweekscount = $seasonweekscount + 1;
 }

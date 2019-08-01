@@ -15,6 +15,7 @@ $csvfiledirectory = "../../data/importfiles/";
 
 // $lr = "\n";
 $lr = "<br>";
+$dontShowSql = 0;
 
 //
 // get input
@@ -22,6 +23,7 @@ $lr = "<br>";
 $csvfile = "";
 if (isset($_POST["csvfile"]))
 {
+	$dontShowSql = 1;
 	$csvfile = $_POST["csvfile"];
 }
 else
@@ -251,7 +253,10 @@ foreach($seasonArray as $gameKey => $gameValue)
 
 	$gamecount = $gamecount + 1;
 
-	echo $sql . $lr;
+	if ($dontShowSql == 0)
+	{
+		echo $sql . $lr;
+	}
 }
 
 print  "$lr";
