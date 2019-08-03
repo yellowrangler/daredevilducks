@@ -1991,7 +1991,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
                 sw.start();
                 startTime = sw.getLocalTimeStart();
                 $("#scriptMessagesDisplay").append("<br /><br />Start of New Season Byes Setup. Time:"+startTime+"<br />");
-                scriptData = "csvfile="+$scope.current.byecsv;
+                scriptData = "csvfile="+$scope.current.weekscsv;
 
                 scriptsFactory.importNewSeasonGameWeeks(scriptData)
                 .success( function(data) {

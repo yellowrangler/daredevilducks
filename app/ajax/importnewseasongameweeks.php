@@ -149,8 +149,8 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 	//
 	// sql query
 	//
-	// $modulecontent = "Unable to do $function for gameweek for season = $sesson and week = $week.";
-	// include ('mysqlquery.php');
+	$modulecontent = "Unable to do $function for gameweek for season = $sesson and week = $week.";
+	include ('mysqlquery.php');
 
 	if ($dontShowSql == 0)
 	{
@@ -161,7 +161,11 @@ foreach($seasonArray as $seasonweeksKey => $seasonweeksValue)
 }
 
 print  "$lr";
+print "Record Count = $seasonweekscount";
+$seasonweekscount = $seasonweekscount - 1;
+print  "$lr";
 print "Season Week Count = $seasonweekscount";
+
 print  "$lr";
 
 ?>

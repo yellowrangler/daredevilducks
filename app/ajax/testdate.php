@@ -5,33 +5,61 @@
 //
 $datetime = date("Y-m-d H:i:s");
 
-$gamedate = "Jan 11";
-$season = "2014";
-$gametime = "4:05 PM";
+$gameday = "Thu";
+$gamedate = "Sept 5";
+$season = "2019";
+$gameyear = "2019";
+$gametime = "8:20 PM";
+
 //
 // build gamedatetime
 //
-$datetime = "Sun " .$gamedate . " " . $season . " " .$gametime;
+$datetime = $gameday . " " . $gamedate . " " . $gameyear . " " .$gametime;
 $unixTS = strtotime($datetime);
 $mysqlTS = date("Y-m-d H:i:s", $unixTS);
 $gamedatetime = $mysqlTS;
 
+print "gamedatetime from gameday: $gameday  gamedate1: $gamedate  gamedate2: $gamedate  gametime: $gametime season: $season gameyear: $gameyear = gamedatetime: $gamedatetime";
+echo "<br/>"; 
+echo "<br/>"; 
+
+
+$gamedate = "9/5/19";
+$season = "2019";
+$gametime = "8:20 PM";
+
+//
+// make gamedatetime from m/d/yy
+//
+$datetime = $gamedate . " " . $gametime;
+
+$unixTS = strtotime($datetime);
+$mysqlTS = date("Y-m-d H:i:s", $unixTS);
+$gameday = date("D", $unixTS);
+$gameyear = date("Y", $unixTS);
+$gamedatetime = $mysqlTS;
+$gamedate2 = date("M j", $unixTS);
+
+print "gamedatetime from gameday: $gameday gamedate1: $gamedate gamedate2: $gamedate2   gametime: $gametime season: $season gameyear: $gameyear = gamedatetime: $gamedatetime";
+echo "<br/>"; 
+echo "<br/>"; 
+
 //
 // convert date components to be consistent
 //
-$datetimestr = strtotime($gamedatetime);
-$gameday = date("D",$datetimestr); 
-$gametime = date("g:i a",$datetimestr); 
-$gamedate = date("M j",$datetimestr);
+// $datetimestr = strtotime($gamedatetime);
+// $gameday = date("D",$datetimestr); 
+// $gametime = date("g:i a",$datetimestr); 
+// $gamedate = date("M j",$datetimestr);
 
-echo "datetime: " . $datetime; 
-echo "<br/>"; 
-echo "gameday: " . $gameday; 
-echo "<br/>"; 
-echo "gametime: " . $gametime; 
-echo "<br/>"; 
-echo "gamedate: " . $gamedate; 
-echo "<br/>"; 
+// echo "datetime: " . $datetime; 
+// echo "<br/>"; 
+// echo "gameday: " . $gameday; 
+// echo "<br/>"; 
+// echo "gametime: " . $gametime; 
+// echo "<br/>"; 
+// echo "gamedate: " . $gamedate; 
+// echo "<br/>"; 
 
 
 // // set variables

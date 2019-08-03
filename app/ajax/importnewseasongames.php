@@ -84,6 +84,13 @@ foreach($seasonArray as $gameKey => $gameValue)
 	// 
 	// these are the games
 	// 
+	$gametypeid = $gameValue['gametypeid'];
+	if ($gametypeid == '3')
+	{
+		// print "<br>$gametypeid Continue</br>";
+		// print "<br>" . print_r($gameValue)  . "</br>";
+		continue;
+	}
 
 	// 
 	// get home and visiting team id from team name
@@ -136,21 +143,29 @@ foreach($seasonArray as $gameKey => $gameValue)
 	$season = $gameValue['season'];
 	$week = $gameValue['week'];
 	$gamenbr = $gamecount;
-	$gameday = $gameValue['day'];
 	$gamedate = $gameValue['date'];
-	$gameyear = $gameValue['gameyear'];
 	$gametime = $gameValue['time'];
 	$awayteamscore = 0;
 	$hometeamscore = 0;
-	$gametypeid = $gameValue['gametypeid'];
 
 	// 
-	// Make gamedatetime
+	// Make gamedatetime, gameday and game year
 	// 
-	$datetime = $gameday . " " . $gamedate . " " . $gameyear . " " .$gametime;
+	$datetime = $gamedate . " " . $gametime;
 	$unixTS = strtotime($datetime);
 	$mysqlTS = date("Y-m-d H:i:s", $unixTS);
+
 	$gamedatetime = $mysqlTS;
+	$gameday = date("D", $unixTS);
+	$gameyear = date("Y", $unixTS);
+	$gamedate = date("M j", $unixTS);
+
+	// $gameday = $gameValue['day'];
+	// $gameyear = $gameValue['gameyear'];
+	// $datetime = $gameday . " " . $gamedate . " " . $gameyear . " " .$gametime;
+	// $unixTS = strtotime($datetime);
+	// $mysqlTS = date("Y-m-d H:i:s", $unixTS);
+	// $gamedatetime = $mysqlTS;
 
 	// 
 	// current date time
@@ -205,7 +220,8 @@ foreach($seasonArray as $gameKey => $gameValue)
 			AND gamenbr = $gamenbr 
 			AND id = $gameid";
 	}
-	else {
+	else 
+	{
 		// 
 		// do insert
 		// 
@@ -248,17 +264,20 @@ foreach($seasonArray as $gameKey => $gameValue)
 	//
 	// sql query
 	//
-	// $modulecontent = "Unable to do $function for game details for season = $sesson and week = $week.";
-	// include ('mysqlquery.php');
+	$modulecontent = "Unable to do $function for game details for season = $sesson and week = $week.";
+	include ('mysqlquery.php');
 
 	$gamecount = $gamecount + 1;
 
 	if ($dontShowSql == 0)
 	{
-		echo $sql . $lr;
+		echo "<pre>" . $sql . "</pre>" . $lr;
 	}
 }
 
+print  "$lr";
+print "Record Count = $gamecount";
+$gamecount = $gamecount - 1;
 print  "$lr";
 print "Game Count = $gamecount";
 print  "$lr";

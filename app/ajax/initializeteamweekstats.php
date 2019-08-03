@@ -78,6 +78,11 @@ $ties = 0;
 $percentage = 0.0;
 $week = 0;
 $games = 0;
+$homepercent = 0;
+$awaypercent = 0;
+$confpercent = 0;
+$divpercent = 0;
+
 // $season = 2015;
 // $weeksinseason = 17;
 
@@ -146,8 +151,8 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 			// do insert team
 			// 
 			$sql = "INSERT INTO teamweekstatstbl 
-				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
-				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
+				(totalgames, week, wins, losses, ties, percent, homepercent, awaypercent, confpercent, divpercent, season, enterdate, teamid) 
+				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $homepercent, $awaypercent, $confpercent, $divpercent, $season, '$enterdateTS', $teamid)";
 
 			//
 			// sql query
@@ -192,8 +197,8 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 			// do insert team
 			// 
 			$sql = "INSERT INTO teamweekstatstbl 
-				(totalgames, week, wins, losses, ties, percent, season, enterdate, teamid) 
-				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $season, '$enterdateTS', $teamid)";
+				(totalgames, week, wins, losses, ties, percent,  homepercent, awaypercent, confpercent, divpercent, season, enterdate, teamid) 
+				VALUES ($totalgames, $week, $wins, $losses, $ties, $percentage, $homepercent, $awaypercent, $confpercent, $divpercent, $season, '$enterdateTS', $teamid)";
 
 			//
 			// sql query

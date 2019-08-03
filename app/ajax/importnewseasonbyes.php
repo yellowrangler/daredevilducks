@@ -157,8 +157,8 @@ foreach($seasonArray as $byeKey => $byeValue)
 	//
 	// sql query
 	//
-	// $modulecontent = "Unable to do $function for game byes for season = $sesson and week = $week.";
-	// include ('mysqlquery.php');
+	$modulecontent = "Unable to do $function for game byes for season = $sesson and week = $week.";
+	include ('mysqlquery.php');
 
 	$byecount = $byecount + 1;
 
@@ -169,6 +169,9 @@ foreach($seasonArray as $byeKey => $byeValue)
 }
 
 print  "$lr";
-print "Game Count = $byecount";
+print "Record Count = $byecount";
+$byecount = $byecount - 1;
+print  "$lr";
+print "Bye Count = $byecount";
 print  "$lr";
 ?>
