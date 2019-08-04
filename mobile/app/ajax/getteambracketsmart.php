@@ -92,6 +92,31 @@ if ($rowcount == 0)
 }
 
 //
+// See if we still have nothibg the we are last season
+//
+$rowcount=mysqli_num_rows($sql_result);
+if ($rowcount == 0)
+{
+  $season = $season - 1;
+
+  //---------------------------------------------------------------
+  // get images information
+  //---------------------------------------------------------------
+  $sql = "SELECT imagename, season, week, final 
+  FROM teambrackettbl 
+  WHERE season = $season
+  ORDER BY season, week DESC
+  LIMIT 1";
+
+  //
+  // sql query
+  //
+  $function = "select";
+  include ('mysqlquery.php');
+}
+
+
+//
 // get the bracket information
 //
 $r = mysqli_fetch_assoc($sql_result);
