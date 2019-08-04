@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="dddAppMobile">
+<head>
+<title>Dare Devil Ducks League</title>
+<meta name="description" content="Dare Devil Ducks League Mobile">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="shortcut icon" href="img/ddd-url-img.ico" /> 
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="..//css/ui-grid-stable.css" rel="stylesheet">
+<link rel="stylesheet" href="..//css/dropzone/basic.css">
+<link rel="stylesheet" href="..//css/dropzone/dropzone.css">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<link href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700'|Damion|Pacifico|Lusitana|Tangerine|Cormorant+Garamond|Balthazar|Indie+Flower|Josefin+Sans|Lato:100,300,400,700|Open+Sans:300,300i" type="text/css" rel="stylesheet" >
+<!-- <link href="css/fireworks.css" rel="stylesheet"> -->
+<link href="css/dddMobile.css" rel="stylesheet" />
+
+<!-- Vendor Libs -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-sanitize.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-sanitize.js"></script>
+ -->
+
+<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+<script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+<!-- UI Libs -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- App libs -->
+<script src="app/dddAppMobile.js"></script>
+
+<!-- controllers  -->
+<script src="app/controllers/firstController.js"></script>
+<script src="app/controllers/parenthomeController.js"></script>
+<script src="app/controllers/surveyController.js"></script>
+<script src="app/controllers/gamesController.js"></script>
+<script src="app/controllers/playerstatsController.js"></script>
+<script src="app/controllers/teamsController.js"></script>
+<script src="app/controllers/awardsController.js"></script>
+<script src="app/controllers/newsopinionController.js"></script>
+<script src="app/controllers/adminController.js"></script>
+<script src="app/controllers/faqsController.js"></script>
+<script src="app/controllers/surveyController.js"></script>
+<script src="app/controllers/fireworksController.js"></script>
+<script src="app/controllers/happyholidaysController.js"></script>
+<script src="app/controllers/lastController.js"></script>
+<!-- factories  -->
+<script src="app/factories/loginfactory.js"></script>
+<script src="app/factories/membersfactory.js"></script>
+<script src="app/factories/scriptsfactory.js"></script>
+<script src="app/factories/surveyfactory.js"></script>
+
+<script src="app/factories/teamsfactory.js"></script>
+<!-- services  -->
+<script src="app/services/msgservice.js"></script>
+<script src="app/services/loginservice.js"></script>
+<script src="app/services/teamservice.js"></script>
+<script src="app/services/chartservice.js"></script>
+<script src="app/services/selectlistservice.js"></script>
+
+<script src="app/directives/directives.js"></script>
+<script src="app/validations/validate.js"></script>
+
+<script src="script/dddMobile.js"></script>
+</head>
+
+<body style="background:white;overflow-y: scroll;" data-ng-controller="dddParentController" >
+
+<div id="nav-bar-menu-bar" style="height:70px;padding-top:10px;" class="customNavbar navbar navbar-default navbar-fixed-top">
+    <a style="text-decoration:none;" href="#/home">
+    	<img style="height:50px;display:inline;padding-left:15px;" class="" src="../img/ddd-Jess-small.png">
+    	<span class="mainTitle" style="padding-left:10px;font-size:30px;display:inline-block;vertical-align:middle;">Daredevil Ducks</span>
+	</a>
+</div>
+
+<div id="ddd-view" style="background:white;" data-ng-view="" class="topPagePosition"></div>
+
+<div class="ddd-footer" style="text-align:center;">
+    <div class="horizontalContainer">
+        <article>
+            <a id="menubaravatarimage" name="menubaravatarimage" href="#/memberupdatemember">
+            <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="../img/avatars/{{memberavatar}}">
+            </a>
+            <br />
+            <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
+        </article>
+
+        
+        <!-- <article>
+            <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
+                <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmasstreeStopNew.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
+            </a>
+
+            <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext"></div>
+        </article> -->
+
+        
+       <!--  <article>
+            <a href="#fireworks">
+                <img ng-src="../img/patriots2018champions.png" style="height:125px;text-align:center;" alt="Go Fireworks!"> 
+            </a>
+        </article> -->
+       
+
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Patriots 2018 Champs!','SpringHomePage2019.png')">
+                <img ng-src='../img/SpringHomePage2019.png'  style="height:100px;text-align:center;" alt="Season Over"> 
+            </a>
+        </article> 
+    </div> <!-- end of container -->
+
+    <div style="padding-top:15px;padding-bottom:25px;">    
+        <a href="#/faqs">
+            <img style="height:30px;vertical-align:top" src="../img/DareDevilDuckInfoButton.png" alt="information" class="img-circle">
+        </a>
+
+        <a style="padding-left:5px;" href="mailto:daredevilducks.xyz@gmail.com?Subject=Daredevil%20Ducks%20Feedback">
+            <img style="height:30px;vertical-align:top" src="../img/feedback-ddd.png" alt="information" class="img-circle">
+        </a>
+    </div>
+</div> <!-- end of footer -->
+
+</body>
+</html>

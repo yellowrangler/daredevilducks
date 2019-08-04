@@ -1,3 +1,25 @@
+/*fonts*/
+@font-face {
+    font-family: 'aileronthin';
+    src: url('fonts/aileron/Aileron-Thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronsemibold';
+    src: url('fonts/aileron/Aileron-SemiBold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronlight';
+    src: url('Aileron-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
   font-family: 'beyondWonderland';
   src: url('fonts/BeyondWonderland.ttf') format('truetype');
@@ -168,17 +190,29 @@ border: 0 none;
 
 .siteDownTitle {
 	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 40px;
+	font-style: italic;
+
+	/*color:#6C0000;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
-	text-align:center; 
+	text-align:center;*/
 }
 
 .siteDownText p {
-	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;	 
+	color:teal;
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 20px;
+	text-align:center;
+
+	/*color:#6C0000;
+	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
-	text-align:center; 
-	font-size:18px;
+	text-align:center;
+	font-size:18px;*/
 }
 
 .imgButtonNav {

@@ -199,17 +199,29 @@ border: 0 none;
 
 .siteDownTitle {
 	color:#6C0000;
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 40px;
+	font-style: italic;
+
+	/*color:#6C0000;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
-	text-align:center;
+	text-align:center;*/
 }
 
 .siteDownText p {
-	color:#6C0000;
+	color:teal;
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 20px;
+	text-align:center;
+
+	/*color:#6C0000;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
 	text-align:center;
-	font-size:18px;
+	font-size:18px;*/
 }
 
 .imgButtonNav {
