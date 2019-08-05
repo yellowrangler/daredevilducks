@@ -9,7 +9,7 @@ left join membertbl M on M.id = SA.memberid;
 select distinct memberid, membername, 
 (select count(surveyquestionid) 
 from surveymemberanswerstbl 
-where memberid = SA.memberid) as questionsanswered
+where memberid = SA.memberid and SA.surveyid = 1) as questionsanswered
 from surveymemberanswerstbl SA
 left join membertbl M on M.id = SA.memberid;
 
@@ -21,4 +21,4 @@ where
 from surveyquestiontbl) = 
 (select count(surveyquestionid) 
 from surveymemberanswerstbl 
-where memberid = SA.memberid);
+where memberid = SA.memberid and and SA.surveyid = 1);

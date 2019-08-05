@@ -215,7 +215,6 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
             .error( function(edata) {
                 alert(edata);
             }); 
-
     };
 
 }

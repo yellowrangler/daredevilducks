@@ -1,15 +1,38 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
 <div class="pageCaption row">
   <div class="col-md-12">
     <h2 class="headerTitle">Survey Results</h2>
   </div> <!-- end of column -->
 </div> <!-- end of row -->
 
-<div class="pageStandardOffset row">
-    <div style="padding-top:35px;" class="col-md-offset-3 col-md-7">
-        <p class="surveyHomePage">
-            Coming soon!
-        </p>
+<div class="surveyStandardOffset row">
+    <div style="padding-top:15px;" class="col-md-offset-1 col-md-7">
+        <span class="surveyHomePage">
+            Number of Members:
+        </span>
+        <span style="color:black;font-weight:700;">
+			{{current.membercount}}
+        </span>
+    </div> <!-- end of col -->        
+    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+        <span class="surveyHomePage">
+           Members who Started the Survey:
+        </span>
+        <span style="color:black;font-weight:700;">
+        	{{current.memberswhostartedsurveycount}}
+        </span>
+    </div> <!-- end of col -->
+
+    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+        <span class="surveyHomePage">
+            Members who Completed the Survey:
+        </span>
+        <span style="color:black;font-weight:700;">
+        	{{current.memberswhofinishedsurveycount}}
+        </span>
     </div> <!-- end of col -->
 </div> <!-- end of row -->
 
-<div style="padding-bottom:350px;">&nbsp;</div>
+
+<div style="padding-bottom:140px;">&nbsp;</div>
