@@ -189,6 +189,33 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        surveyFactory.getCurrentSurveyData()
+            .success( function(data) {
+                $scope.current.survey = data; 
+
+                var q = "surveyid="+$scope.current.survey.surveyid;
+                surveyFactory.getSurveyResultsMemberQuestionSummarydata(q)
+                .success( function(data) {
+                    $scope.getSurveyResultsMemberQuestionSummary = data; 
+
+                    $scope.current.memberswhostarted = data['memberswhostarted'];
+                    $scope.current.memberswhofinished = data['memberswhofinished'];
+                    $scope.current.memberswhostartedsurveycount = data['memberswhostartedsurveycount'];
+                    $scope.current.memberswhofinishedsurveycount = data['memberswhofinishedsurveycount'];
+                    $scope.current.membercount = data['membercount'];
+
+                    
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+
     };
 
 }

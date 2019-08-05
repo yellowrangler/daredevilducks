@@ -37,6 +37,15 @@ dddApp.factory('surveyFactory', function($q, $http) {
         })
     }
 
+    factory.getSurveyResultsMemberQuestionSummarydata = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/getsurveyresultsmemberquestionsummarydata.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.updateSurveyMemberData = function (data) {
         return $http({
             method: 'POST',
