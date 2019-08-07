@@ -203,9 +203,9 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                     $scope.current.memberswhofinished = data['memberswhofinished'];
                     $scope.current.memberswhostartedsurveycount = data['memberswhostartedsurveycount'];
                     $scope.current.memberswhofinishedsurveycount = data['memberswhofinishedsurveycount'];
+                    $scope.current.memberswhostillactivesurveycount = data['memberswhostillactivesurveycount'];
+                    $scope.current.memberswhohavenottakensurveycount = data['memberswhohavenottakensurveycount'];
                     $scope.current.membercount = data['membercount'];
-
-                    
                 })
                 .error( function(edata) {
                     alert(edata);

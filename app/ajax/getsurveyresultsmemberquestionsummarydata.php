@@ -132,6 +132,17 @@ $membercount = $r['membercount'];
 //
 mysqli_close($dbConn);
 
+// 
+// Get still active survey
+// 
+$memberswhostillactivesurveycount = $memberswhostartedsurveycount - $memberswhofinishedsurveycount;
+
+// 
+// Get members who have not taken survey
+// 
+$memberswhohavenottakensurveycount = $membercount - $memberswhostartedsurveycount;
+
+
 //---------------------------------------------------------------
 // now assemble the information  
 //---------------------------------------------------------------
@@ -142,6 +153,8 @@ $membersurveysummary['memberswhostarted'] = $memberswhostarted;
 $membersurveysummary['memberswhofinishedsurveycount'] = $memberswhofinishedsurveycount;
 $membersurveysummary['memberswhofinished'] = $memberswhofinished;
 
+$membersurveysummary['memberswhostillactivesurveycount'] = $memberswhostillactivesurveycount;
+$membersurveysummary['memberswhohavenottakensurveycount'] = $memberswhohavenottakensurveycount;
 $membersurveysummary['membercount'] = $membercount;
 
 //

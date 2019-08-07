@@ -15,7 +15,7 @@
     </div> <!-- end of col -->        
     <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
         <span class="surveyHomePage">
-           Members who Started the Survey:
+           Surveys Started:
         </span>
         <span style="color:black;font-weight:700;">
         	{{current.memberswhostartedsurveycount}}
@@ -24,11 +24,30 @@
 
     <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
         <span class="surveyHomePage">
-            Members who Completed the Survey:
+            Completed Surveys:
         </span>
         <span style="color:black;font-weight:700;">
         	{{current.memberswhofinishedsurveycount}}
         </span>
+    </div> <!-- end of col -->   
+    
+    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+        <span class="surveyHomePage">
+            Still active Surveys:
+        </span>
+        <span style="color:black;font-weight:700;">
+        	{{current.memberswhostillactivesurveycount}}
+        </span>
+    </div> <!-- end of col --> 
+
+    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+        <span class="surveyHomePage">
+            Members not started Survey
+        </span>
+        <span style="color:black;font-weight:700;">
+        	{{current.memberswhohavenottakensurveycount}}
+        </span>
+    </div> <!-- end of col -->     
 </div> <!-- end of row -->
 
 <!-- <div style="padding-top:20px;" class="row">
