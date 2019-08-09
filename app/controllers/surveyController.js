@@ -173,6 +173,15 @@ controllers.takesurveyController = function ($scope, $http, $location, $window, 
 controllers.surveyresultsController = function ($scope, $http, $location, $window, membersFactory, surveyFactory, loginService) {
     $scope.current = {};
 
+    function getResponcePercent(votes)
+    {
+        var percent = 0;
+
+        percent = ($scope.current.questioncount / votes) * 100;
+
+        return percent;
+    }
+
     init();
     function init() {
         $window.scrollTo(0, 0);
@@ -206,6 +215,28 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                     $scope.current.memberswhostillactivesurveycount = data['memberswhostillactivesurveycount'];
                     $scope.current.memberswhohavenottakensurveycount = data['memberswhohavenottakensurveycount'];
                     $scope.current.membercount = data['membercount'];
+
+                    $scope.current.questioncount = data['questioncount'];
+
+                    surveyFactory.getCurrentSurveyData()
+                    .success( function(data) {
+                        $scope.current.survey = data; 
+
+                        var q = "surveyid="+$scope.current.survey.surveyid;
+                        surveyFactory.getSurveyResultsMemberQuestionDetaildata(q)
+                        .success( function(data) {
+                            $scope.getSurveyResultsMemberQuestionDetails = data; 
+
+                            
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        }); 
+
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    }); 
                 })
                 .error( function(edata) {
                     alert(edata);
@@ -216,5 +247,9 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                 alert(edata);
             }); 
     };
+
+    $scope.getResponcePercent = function (votes) {
+        getResponcePercent(votes);
+    }
 
 }

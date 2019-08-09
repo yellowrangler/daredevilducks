@@ -1,56 +1,100 @@
 <div class="pageNavbarOffset">&nbsp;</div>
 
-<div class="pageCaption row">
-  <div class="col-md-12">
-    <h2 class="headerTitle">Survey Results</h2>
-  </div> <!-- end of column -->
-</div> <!-- end of row -->
+    <div class="pageCaption row">
+      <div class="col-md-12">
+        <h2 class="headerTitle">Survey Results</h2>
+      </div> <!-- end of column -->
+    </div> <!-- end of row -->
 
-<div class="surveyStandardOffset row">
-    <div style="padding-top:15px;" class="col-md-offset-1 col-md-7">
-        <span class="surveyHomePage">
-            Number of Members:
-        </span>
-        <span style="color:black;font-weight:700;">
-            {{current.membercount}}
-        </span>
-    </div> <!-- end of col -->        
-    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
-        <span class="surveyHomePage">
-           Surveys Started:
-        </span>
-        <span style="color:black;font-weight:700;">
-            {{current.memberswhostartedsurveycount}}
-        </span>
-    </div> <!-- end of col -->
+    <div class="surveyStandardOffset row">
+        <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+            <span class="surveyHomePage">
+                Number of Members:
+            </span>
+            <span style="color:black;font-weight:700;">
+                {{current.membercount}}
+            </span>
+        </div> <!-- end of col -->        
+        <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+            <span class="surveyHomePage">
+               Surveys Started:
+            </span>
+            <span style="color:black;font-weight:700;">
+                {{current.memberswhostartedsurveycount}}
+            </span>
+        </div> <!-- end of col -->
 
-    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
-        <span class="surveyHomePage">
-            Completed Surveys:
-        </span>
-        <span style="color:black;font-weight:700;">
-            {{current.memberswhofinishedsurveycount}}
-        </span>
-    </div> <!-- end of col -->   
+        <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+            <span class="surveyHomePage">
+                Completed Surveys:
+            </span>
+            <span style="color:black;font-weight:700;">
+                {{current.memberswhofinishedsurveycount}}
+            </span>
+        </div> <!-- end of col -->   
+        
+        <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+            <span class="surveyHomePage">
+                Still active Surveys:
+            </span>
+            <span style="color:black;font-weight:700;">
+                {{current.memberswhostillactivesurveycount}}
+            </span>
+        </div> <!-- end of col --> 
+
+        <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
+            <span class="surveyHomePage">
+                Members not started Survey
+            </span>
+            <span style="color:black;font-weight:700;">
+                {{current.memberswhohavenottakensurveycount}}
+            </span>
+        </div> <!-- end of col -->   
+
+        <div style="padding-top:25px;" class="col-md-offset-1 col-md-7">
+            <span class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 20em; width:5%;">Yes</span> 
+        </div> <!-- end of col --> 
+
+        <div style="padding-top:25px;" class="col-md-offset-1 col-md-7">
+            <span class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 20em; width:5%;">No</span> 
+        </div> <!-- end of col -->  
+
+
+
+         
+    </div> <!-- end of row -->
+
+    <div style="padding-top:20px;" class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default panelOverrideNoBorder">
+                <div class="panel-body ">
+                    <table class="table pickGameTable" >
+                        <tr class="tableTitle">
+                            <th style="width:5%;">Nbr</th>
+                            <th style="width:95%;">Questions & Results</th>                                            
+                        </tr>
+
+                        <tr ng-repeat="getSurveyResultsMemberQuestionDetail in getSurveyResultsMemberQuestionDetails">
+                            <td style="width:2%;" class="center-column-text">
+                                <span style="color:#b57f7f;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.surveyquestionid }}</span>
+                            </td>
+                            <td style="width:95%;" class="left-column-text">
+                                <span style="color:#b57f7f;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.questiontext }}</span>
+                            
+                                <br />
+                                <br />
+
+                                <span class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.yesvotes  / current.questioncount) * 100 }}%;">{{ getSurveyResultsMemberQuestionDetail.yesvotes }}</span>
+                                <br />
+                                <span class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="font-size:18px;min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.novotes / current.questioncount ) * 100}}%;">{{ getSurveyResultsMemberQuestionDetail.novotes }}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div> 
+            </div> 
+        </div>
+    </div>
+
     
-    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
-        <span class="surveyHomePage">
-            Still active Surveys:
-        </span>
-        <span style="color:black;font-weight:700;">
-            {{current.memberswhostillactivesurveycount}}
-        </span>
-    </div> <!-- end of col --> 
-
-    <div style="padding-top:5px;" class="col-md-offset-1 col-md-7">
-        <span class="surveyHomePage">
-            Members not started Survey
-        </span>
-        <span style="color:black;font-weight:700;">
-            {{current.memberswhohavenottakensurveycount}}
-        </span>
-    </div> <!-- end of col -->     
-</div> <!-- end of row -->
-
 
 <div style="padding-bottom:140px;">&nbsp;</div>

@@ -28,6 +28,15 @@ dddAppMobile.factory('surveyFactory', function($q, $http) {
         })
     }
 
+    factory.getSurveyResultsMemberQuestionDetaildata = function (data) {
+        return $http({
+            method: 'POST',
+            url: "app/ajax/getsurveyresultsmemberquestiondetaildata.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getSurveyMemberQuestionData = function (data) {
         return $http({
             method: 'POST',

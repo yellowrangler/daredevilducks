@@ -37,10 +37,18 @@ include ('mysqlconnect.php');
 //---------------------------------------------------------------
 // get member survey information 
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM surveymemberanswerstbl 
-WHERE memberid = '$memberid' 
-AND surveyid = '$surveyid' 
-AND surveyquestionid = '$questionid'";
+$sql = "SELECT surveyquestionid, questiontext, 
+	(SELECT COUNT(memberid)  
+	FROM surveymemberanswerstbl SQA
+	WHERE SQ.surveyquestionid = SQA.surveyquestionid  AND 
+	surveyquestionanswerresponce = 'yes' AND 
+	surveyid = $surveyid) AS yesvotes, 
+	(SELECT count(memberid)  
+	FROM surveymemberanswerstbl SQA
+	WHERE SQ.surveyquestionid = SQA.surveyquestionid  AND 
+	surveyquestionanswerresponce = 'no' AND 
+	surveyid = $surveyid) AS novotes
+from surveyquestiontbl SQ where surveyid = $surveyid";
 
 //
 // sql query
@@ -49,16 +57,26 @@ $function = "select";
 include ('mysqlquery.php');
 
 //
+// get the member question responce information
+//
+//
 // get the member information
 //
 $count = mysqli_num_rows($sql_result);
-if ($count == 1)
+if ($count > 0)
 {
-	$membersurvey = mysqli_fetch_assoc($sql_result);
+	//
+	// fill the array
+	//
+	$membersurveyresponcedetails = array();
+	while($r = mysqli_fetch_assoc($sql_result)) {
+	    $membersurveyresponcedetails[] = $r;
+	}
+
 }
 else
 {
-	$membersurvey = "";
+	$membersurveyresponcedetails = "";
 }
 
 //
@@ -69,5 +87,5 @@ mysqli_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($membersurvey));
+exit(json_encode($membersurveyresponcedetails));
 ?>

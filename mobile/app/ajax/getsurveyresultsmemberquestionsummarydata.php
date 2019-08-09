@@ -72,15 +72,32 @@ else
 // print_r($memberswhostarted);
 
 //---------------------------------------------------------------
+// get survey question count
+//---------------------------------------------------------------
+$sql = "SELECT COUNT(surveyquestionid) as questioncount 
+		FROM surveyquestiontbl 
+		WHERE surveyid = $surveyid";
+
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+
+$r = mysqli_fetch_assoc($sql_result);
+$questioncount = $r['questioncount'];
+
+
+//---------------------------------------------------------------
 // get member number for total members who finished survey  
 //---------------------------------------------------------------
 $sql = "SELECT DISTINCT memberid, membername
 	FROM surveymemberanswerstbl SA
 	LEFT JOIN membertbl M ON M.id = SA.memberid
-	WHERE (SELECT COUNT(surveyquestionid) FROM surveyquestiontbl) = 
+	WHERE $questioncount = 
 		(SELECT COUNT(surveyquestionid) 
-			FROM surveymemberanswerstbl 
-			WHERE memberid = SA.memberid AND SA.surveyid = $surveyid)";
+			FROM surveymemberanswerstbl SMA
+			WHERE SMA.memberid = SA.memberid AND SA.surveyid = $surveyid)";
 
 //
 // sql query
@@ -156,6 +173,8 @@ $membersurveysummary['memberswhofinished'] = $memberswhofinished;
 $membersurveysummary['memberswhostillactivesurveycount'] = $memberswhostillactivesurveycount;
 $membersurveysummary['memberswhohavenottakensurveycount'] = $memberswhohavenottakensurveycount;
 $membersurveysummary['membercount'] = $membercount;
+$membersurveysummary['questioncount'] = $questioncount;
+
 
 //
 // pass back info

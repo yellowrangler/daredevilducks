@@ -1,2 +1,96 @@
 2019-08-09 13:17:45 : SQL error: test logging - sqlerror - Error function: test log - function msg: test error logging - module content
 2019-08-09 13:17:45 : SQL: test error log - sql
+2019-08-09 15:06:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:06:10 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 31
+and season = 2019
+and week <= 
+
+2019-08-09 15:06:24 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:06:24 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 11
+and season = 2019
+and week <= 
+
+2019-08-09 15:06:40 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:06:40 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 11
+and season = 2019
+and week <= 
+
+2019-08-09 15:48:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:48:10 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 8
+and season = 2019
+and week <= 
+
+2019-08-09 15:48:36 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:48:36 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = 26
+and season = 2019
+and week <= 
+
+2019-08-09 15:49:09 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:49:09 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = 25
+and season = 2019
+and week <= 
+
+2019-08-09 15:49:19 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings all season information.
+2019-08-09 15:49:19 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 5
+and season = 2019
+and week <= 
+
