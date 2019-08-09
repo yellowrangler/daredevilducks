@@ -49,9 +49,20 @@ class Log
         $this->time = time();
         $this->datetime = date("Y-m-d H:i:s", $this->time);
         $this->buffer = $this->datetime." : ".$msg."\n";
-       
-        $this->fp = fopen($this->fileDirectory.$this->fileName, "a");
-        fwrite($this->fp, $this->buffer);
+
+        $fullyqualifiedlogName = $this->fileDirectory.$this->fileName;
+
+        // print "fully qualified log name = $fullyqualifiedlogName   ";
+
+        $this->fp = fopen($fullyqualifiedlogName, "a");
+
+        if (fwrite($this->fp, $this->buffer) === FALSE) {
+            echo "Cannot write to file ($fullyqualifiedlogName)";
+            exit;
+        }
+
+        // $rv = fwrite($this->fp, $this->buffer);
+
         fclose($this->fp);
     }
     

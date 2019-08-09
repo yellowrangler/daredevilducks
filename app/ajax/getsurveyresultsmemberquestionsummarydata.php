@@ -79,8 +79,8 @@ $sql = "SELECT DISTINCT memberid, membername
 	LEFT JOIN membertbl M ON M.id = SA.memberid
 	WHERE (SELECT COUNT(surveyquestionid) FROM surveyquestiontbl) = 
 		(SELECT COUNT(surveyquestionid) 
-			FROM surveymemberanswerstbl 
-			WHERE memberid = SA.memberid AND SA.surveyid = $surveyid)";
+			FROM surveymemberanswerstbl SMA
+			WHERE SMA.memberid = SA.memberid AND SA.surveyid = $surveyid)";
 
 //
 // sql query
