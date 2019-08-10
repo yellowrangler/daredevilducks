@@ -199,6 +199,39 @@ else
 	$memberswhohavenottaken = "";
 }
 
+//---------------------------------------------------------------
+// get survey question data for people who have started survey
+//---------------------------------------------------------------
+$sql = 'SELECT  memberid,  avatar, screenname, surveyquestionid, surveyquestionanswercomment
+FROM surveymemberanswerstbl SA
+LEFT JOIN membertbl M ON M.id = SA.memberid
+WHERE SA.surveyid = 1 AND surveyquestionanswercomment <> ""';
+
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+
+//
+// get the member information
+//
+$membercommentscount = mysqli_num_rows($sql_result);
+if ($membercommentscount > 0)
+{
+	//
+	// fill the array
+	//
+	$membercomments = array();
+	while($r = mysqli_fetch_assoc($sql_result)) {
+	    $membercomments[] = $r;
+	}
+
+}
+else
+{
+	$membercomments = "";
+}
 
 //---------------------------------------------------------------
 // get total member number  
@@ -271,8 +304,11 @@ $membersurveysummary['memberswhostillactive'] = $memberswhostillactive;
 $membersurveysummary['memberswhohavenottakensurveycount'] = $memberswhohavenottakensurveycount;
 $membersurveysummary['memberswhohavenottaken'] = $memberswhohavenottaken;
 
-$membersurveysummary['members'] = $members;
+$membersurveysummary['membercommentscount'] = $membercommentscount;
+$membersurveysummary['membercomments'] = $membercomments;
+
 $membersurveysummary['membercount'] = $membercount;
+$membersurveysummary['members'] = $members;
 
 $membersurveysummary['questioncount'] = $questioncount;
 

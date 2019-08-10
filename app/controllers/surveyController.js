@@ -182,6 +182,47 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
         return percent;
     }
 
+    function getMemberSurveyComments(questionid) 
+    {
+        var returnStr = "";
+        var count = 0;
+
+        returnStr = returnStr + "<table class='table pickGameTable' >";
+        returnStr = returnStr + "<tr class='tableTitle'>";
+        returnStr = returnStr + "<th>Member</th>";
+        returnStr = returnStr + "<th>Comments</th>";                        
+        returnStr = returnStr + "</tr>";
+
+        $.each($scope.current.membercomments, function(key, value) {
+
+            if (value.surveyquestionid != questionid)
+            {
+                return;
+            }
+
+            returnStr = returnStr + "<tr>";
+            returnStr = returnStr + "<td class='center-column-text'>";
+            returnStr = returnStr + "<img align='center' height='75' src='img/avatars/"; 
+            returnStr = returnStr + value.avatar; 
+            returnStr = returnStr + "'>";             
+            returnStr = returnStr + "</td>";
+            returnStr = returnStr + "<td class='left-column-text'>";
+            returnStr = returnStr + "<span style='color:#b57f7f;font-weight:700;' class='surveyQuestionResponeItems'>";
+            returnStr = returnStr + value.surveyquestionanswercomment;
+            returnStr = returnStr + "</span>";
+            returnStr = returnStr + "</td>";     
+            returnStr = returnStr + "</tr>";
+
+            count = count + 1;
+        });
+
+        returnStr = returnStr + "</table>";
+
+        $('#memberSurveyCommentsDialogModalTitle').text("Members Survey Commentsy");
+        $('#memberSurveyCommentsDialogModalBody').html(returnStr);  
+        $('#memberSurveyCommentsDialogModal').modal();
+    }
+
     function getMemberSurveyList(surveytype)
     {
 
@@ -432,6 +473,9 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                     $scope.current.memberswhohavenottakensurveycount = data['memberswhohavenottakensurveycount'];
                     $scope.current.memberswhohavenottaken = data['memberswhohavenottaken'];
 
+                    $scope.current.membercomments = data['membercomments'];
+                    $scope.current.membercommentscount = data['membercommentscount'];
+
                     $scope.current.members = data['members'];
                     $scope.current.membercount = data['membercount'];
 
@@ -473,6 +517,10 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
 
     $scope.getMemberSurveyList = function (surveytype) {
         getMemberSurveyList(surveytype);
+    }
+
+    $scope.getMemberSurveyComments = function (questionid) {
+        getMemberSurveyComments(questionid);
     }
 
 }
