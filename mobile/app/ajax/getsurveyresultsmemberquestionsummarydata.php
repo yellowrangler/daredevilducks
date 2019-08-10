@@ -36,7 +36,7 @@ include ('mysqlconnect.php');
 //---------------------------------------------------------------
 // get member number for total members who started survey  
 //---------------------------------------------------------------
-$sql = "SELECT DISTINCT memberid, membername, 
+$sql = "SELECT DISTINCT memberid, membername, avatar, screenname,
 	(SELECT COUNT(surveyquestionid) 
 		FROM surveymemberanswerstbl 
 		WHERE memberid = SA.memberid AND SA.surveyid = $surveyid) AS questionsanswered
@@ -91,7 +91,7 @@ $questioncount = $r['questioncount'];
 //---------------------------------------------------------------
 // get member number for total members who finished survey  
 //---------------------------------------------------------------
-$sql = "SELECT DISTINCT memberid, membername
+$sql = "SELECT DISTINCT memberid, membername, avatar, screenname
 	FROM surveymemberanswerstbl SA
 	LEFT JOIN membertbl M ON M.id = SA.memberid
 	WHERE $questioncount = 
@@ -126,9 +126,84 @@ else
 }
 
 //---------------------------------------------------------------
+// get member number for total members who are active in survey  
+//---------------------------------------------------------------
+$sql = "SELECT DISTINCT memberid, membername, avatar, screenname
+	FROM surveymemberanswerstbl SA
+	LEFT JOIN membertbl M ON M.id = SA.memberid
+	WHERE $questioncount > 
+		(SELECT COUNT(surveyquestionid) 
+			FROM surveymemberanswerstbl SMA
+			WHERE SMA.memberid = SA.memberid AND SA.surveyid = $surveyid)";
+
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+
+//
+// get the member information
+//
+$memberswhostillactivesurveycount = mysqli_num_rows($sql_result);
+if ($memberswhostillactivesurveycount > 0)
+{
+	//
+	// fill the array
+	//
+	$memberswhostillactive = array();
+	while($r = mysqli_fetch_assoc($sql_result)) {
+	    $memberswhostillactive[] = $r;
+	}
+
+}
+else
+{
+	$memberswhostillactive = "";
+}
+
+//---------------------------------------------------------------
+// get member number for total members who not started survey  
+//---------------------------------------------------------------
+$sql = "SELECT id AS memberid, membername, avatar, screenname
+	FROM membertbl M
+	WHERE M.id NOT IN
+		(SELECT DISTINCT memberid AS id
+		FROM surveymemberanswerstbl SA
+		WHERE SA.surveyid = $surveyid) 
+		AND status = 'active' AND role != 'expert';";
+
+//
+// sql query
+//
+$function = "select";
+include ('mysqlquery.php');
+
+//
+// get the member information
+//
+$memberswhohavenottakensurveycount = mysqli_num_rows($sql_result);
+if ($memberswhohavenottakensurveycount > 0)
+{
+	//
+	// fill the array
+	//
+	$memberswhohavenottaken = array();
+	while($r = mysqli_fetch_assoc($sql_result)) {
+	    $memberswhohavenottaken[] = $r;
+	}
+
+}
+else
+{
+	$memberswhohavenottaken = "";
+}
+
+
+//---------------------------------------------------------------
 // get total member number  
 //---------------------------------------------------------------
-$sql = "SELECT COUNT(*) as membercount
+$sql = "SELECT id as memberid, membername, avatar, screenname
 	FROM membertbl 
 	WHERE status = 'active' AND role != 'expert'";
 
@@ -141,23 +216,43 @@ include ('mysqlquery.php');
 //
 // get the member information
 //
-$r = mysqli_fetch_assoc($sql_result);
-$membercount = $r['membercount'];
+$membercount = mysqli_num_rows($sql_result);
+if ($membercount > 0)
+{
+	//
+	// fill the array
+	//
+	$members = array();
+	while($r = mysqli_fetch_assoc($sql_result)) {
+	    $members[] = $r;
+	}
+
+}
+else
+{
+	$members = "";
+}
+
+// //
+// // get the member information
+// //
+// $r = mysqli_fetch_assoc($sql_result);
+// $membercount = $r['membercount'];
 
 //
 // close db connection
 //
 mysqli_close($dbConn);
 
-// 
-// Get still active survey
-// 
-$memberswhostillactivesurveycount = $memberswhostartedsurveycount - $memberswhofinishedsurveycount;
+// // 
+// // Get still active survey
+// // 
+// $memberswhostillactivesurveycount = $memberswhostartedsurveycount - $memberswhofinishedsurveycount;
 
-// 
-// Get members who have not taken survey
-// 
-$memberswhohavenottakensurveycount = $membercount - $memberswhostartedsurveycount;
+// // 
+// // Get members who have not taken survey
+// // 
+// $memberswhohavenottakensurveycount = $membercount - $memberswhostartedsurveycount;
 
 
 //---------------------------------------------------------------
@@ -171,8 +266,14 @@ $membersurveysummary['memberswhofinishedsurveycount'] = $memberswhofinishedsurve
 $membersurveysummary['memberswhofinished'] = $memberswhofinished;
 
 $membersurveysummary['memberswhostillactivesurveycount'] = $memberswhostillactivesurveycount;
+$membersurveysummary['memberswhostillactive'] = $memberswhostillactive;
+
 $membersurveysummary['memberswhohavenottakensurveycount'] = $memberswhohavenottakensurveycount;
+$membersurveysummary['memberswhohavenottaken'] = $memberswhohavenottaken;
+
+$membersurveysummary['members'] = $members;
 $membersurveysummary['membercount'] = $membercount;
+
 $membersurveysummary['questioncount'] = $questioncount;
 
 

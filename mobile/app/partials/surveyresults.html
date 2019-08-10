@@ -11,7 +11,7 @@
             <span class="surveyHomePage">
                 Number of Members:
             </span>
-            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;">
+            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;cursor:pointer;" ng-click="getMemberSurveyList('members')">
                 {{current.membercount}}
             </span>
         </div> <!-- end of col -->        
@@ -19,7 +19,7 @@
             <span class="surveyHomePage">
                Surveys Started:
             </span>
-            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;">
+            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;cursor:pointer;" ng-click="getMemberSurveyList('started')">
                 {{current.memberswhostartedsurveycount}}
             </span>
         </div> <!-- end of col -->
@@ -28,7 +28,7 @@
             <span class="surveyHomePage">
                 Completed Surveys:
             </span>
-            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;">
+            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;cursor:pointer;" ng-click="getMemberSurveyList('finished')">
                 {{current.memberswhofinishedsurveycount}}
             </span>
         </div> <!-- end of col -->   
@@ -37,7 +37,7 @@
             <span class="surveyHomePage">
                 Still active Surveys:
             </span>
-            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;">
+            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;cursor:pointer;" ng-click="getMemberSurveyList('active')">
                 {{current.memberswhostillactivesurveycount}}
             </span>
         </div> <!-- end of col --> 
@@ -46,7 +46,7 @@
             <span class="surveyHomePage">
                 Members not started Survey:
             </span>
-            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;">
+            <span class="surveyHomePage" style="padding-left:10px;color:#B6A98C;cursor:pointer;" ng-click="getMemberSurveyList('nottaken')">
                 {{current.memberswhohavenottakensurveycount}}
             </span>
         </div> <!-- end of col -->   
@@ -90,6 +90,22 @@
         </div>
     </div>
 
+<!-- Dialogs -->
+<div class="modal fade" id="memberSurveyListDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberSurveyListDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberSurveyListDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberSurveyListDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
     
 
 <div style="padding-bottom:140px;">&nbsp;</div>
