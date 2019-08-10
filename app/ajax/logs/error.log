@@ -94,3 +94,50 @@ WHERE teamid = 5
 and season = 2019
 and week <= 
 
+2019-08-10 14:13:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings current week information.
+2019-08-10 14:13:41 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 23
+and season = 2019
+and week = 
+
+2019-08-10 14:13:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings current week information.
+2019-08-10 14:13:41 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 24
+and season = 2019
+and week = 
+
+2019-08-10 15:25:02 : SQL error: Unknown column 'memberid' in 'field list' - Error function: select msg: Unable to get survey results member question summary data for surveyid = 1
+2019-08-10 15:25:02 : SQL: SELECT memberid, membername, avatar, screenname
+	FROM membertbl 
+	WHERE status = 'active' AND role != 'expert'
+2019-08-10 15:25:18 : SQL error: Unknown column 'memberid' in 'field list' - Error function: select msg: Unable to get survey results member question summary data for surveyid = 1
+2019-08-10 15:25:18 : SQL: SELECT memberid, membername, avatar, screenname
+	FROM membertbl 
+	WHERE status = 'active' AND role != 'expert'
+2019-08-10 15:44:35 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 0' at line 6 - Error function: select msg: Unable to get survey results member question summary data for surveyid = 1
+2019-08-10 15:44:35 : SQL: SELECT DISTINCT memberid, membername, avatar, screenname
+	FROM surveymemberanswerstbl SA
+	LEFT JOIN membertbl M ON M.id = SA.memberid
+	WHERE (SELECT COUNT(surveyquestionid) 
+			FROM surveymemberanswerstbl SMA
+			WHERE SMA.memberid = SA.memberid AND SA.surveyid = 1) == 0

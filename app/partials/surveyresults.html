@@ -11,7 +11,7 @@
                 <span class="surveyQuestionResponeHomePage">
                     Number of Members:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;" class="surveyQuestionResponeHomePage">
+                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('members')">
         			{{current.membercount}}
                 </span>
             </div> <!-- end of col -->        
@@ -19,7 +19,7 @@
                 <span class="surveyQuestionResponeHomePage">
                    Surveys Started:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;" class="surveyQuestionResponeHomePage">
+                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('started')">
                 	{{current.memberswhostartedsurveycount}}
                 </span>
             </div> <!-- end of col -->
@@ -28,7 +28,7 @@
                 <span class="surveyQuestionResponeHomePage">
                     Completed Surveys:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;" class="surveyQuestionResponeHomePage">
+                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('finished')">
                 	{{current.memberswhofinishedsurveycount}}
                 </span>
             </div> <!-- end of col -->   
@@ -49,16 +49,16 @@
                 <span class="surveyQuestionResponeHomePage">
                     Active Surveys:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;" class="surveyQuestionResponeHomePage">
+                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('active')">
                 	{{current.memberswhostillactivesurveycount}}
                 </span>
             </div> <!-- end of col --> 
 
             <div style="padding-top:5px;" class="col-md-12">
                 <span class="surveyQuestionResponeHomePage">
-                    Members not started Survey
+                    Members not started Survey:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;" class="surveyQuestionResponeHomePage">
+                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('nottaken')">
                 	{{current.memberswhohavenottakensurveycount}}
                 </span>
             </div> <!-- end of col -->  
@@ -85,18 +85,6 @@
 							<span style="color:#b57f7f;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.questiontext }}</span>
 						</td>
 
-						<!-- <td class="center-column-text">
-                            <span style="color:#248C47;font-weight:700;" class="surveyQuestionResponeItems">
-							YES 
-                            </span>
-                            <span style="color:#248C47;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.yesvotes }}</span>
-                            <br />
-                            <span style="color:#E66262;font-weight:700;" class="surveyQuestionResponeItems">
-                            NO
-                            </span>
-                            <span style="color:#E66262;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.novotes }}</span>
-						</td>  -->
-
                         <td style="width:40%;" class="right-column-text">
                             <span class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.yesvotes  / current.questioncount) * 100 }}%;">{{ getSurveyResultsMemberQuestionDetail.yesvotes }}</span>
                             <br />
@@ -108,5 +96,22 @@
 		</div> 
 	</div>
 </div>
+
+<!-- Dialogs -->
+<div class="modal fade" id="memberSurveyListDialogModal" tabindex="-1" role="dialog" aria-labelledby="memberSurveyListDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="memberSurveyListDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="memberSurveyListDialogModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
 
 <div style="padding-bottom:70px;">&nbsp;</div>

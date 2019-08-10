@@ -182,6 +182,218 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
         return percent;
     }
 
+    function getMemberSurveyList(surveytype)
+    {
+
+        switch (surveytype)
+        {
+            case 'members':
+                var returnStr = "";
+                var count = 0;
+                
+                returnStr = returnStr + "<table style='width:95%;' class='table' >";
+                returnStr = returnStr + "<tr >";
+
+                returnStr = returnStr + "<td style='font-weight:bold;padding-left:5%;'>";
+                returnStr = returnStr + "<div style='text-align:center;'>";
+                returnStr = returnStr + "<img align='center' height='75' src='img/buttons/Button-DareDevilWebsite-Survey.png'>";
+                returnStr = returnStr + "</div>";
+                returnStr = returnStr + "</td>";                   
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>All Members</td>" 
+                returnStr = returnStr + "</tr>";    
+                returnStr = returnStr + "</table>";  
+   
+                $.each($scope.current.members, function(key, value) {
+                    returnStr = returnStr + "<table style='width:95%;padding-top:55px;' class='table' >";
+                    returnStr = returnStr + "<tr >";    
+                    returnStr = returnStr + "<td style='padding-left:15%;'>";
+                    returnStr = returnStr + "<div style='text-align:center;'>";
+                    returnStr = returnStr + "<img align='right' height='75' src='img/avatars/"; 
+                    returnStr = returnStr + value.avatar; 
+                    returnStr = returnStr + "'>"; 
+                    returnStr = returnStr + "</div>";
+                    returnStr = returnStr + "</td>";  
+                    returnStr = returnStr + "<td style='font-weight:bold;padding-top:20px;width:45%'>"; 
+                    returnStr = returnStr + value.screenname;; 
+                    returnStr = returnStr + "</td>";                   
+                    returnStr = returnStr + "</tr>";
+  
+                    count = count + 1;
+                });
+
+                returnStr = returnStr + "</table>";
+
+                $('#memberSurveyListDialogModalTitle').text("Members who should take Survey!");
+                $('#memberSurveyListDialogModalBody').html(returnStr);  
+                $('#memberSurveyListDialogModal').modal();
+                break;
+
+            case 'started':
+                var returnStr = "";
+                var count = 0;
+                
+                returnStr = returnStr + "<table style='width:95%;' class='table' >";
+                returnStr = returnStr + "<tr >";
+
+                returnStr = returnStr + "<td style='font-weight:bold;padding-left:5%;'>";
+                returnStr = returnStr + "<div style='text-align:center;'>";
+                returnStr = returnStr + "<img align='center' height='75' src='img/buttons/Button-DareDevilWebsite-Survey.png'>";
+                returnStr = returnStr + "</div>";
+                returnStr = returnStr + "</td>";                   
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Started</td>" 
+                returnStr = returnStr + "</tr>";    
+                returnStr = returnStr + "</table>";  
+   
+                $.each($scope.current.memberswhostarted, function(key, value) {
+                    returnStr = returnStr + "<table style='width:95%;padding-top:55px;' class='table' >";
+                    returnStr = returnStr + "<tr >";    
+                    returnStr = returnStr + "<td style='padding-left:15%;'>";
+                    returnStr = returnStr + "<div style='text-align:center;'>";
+                    returnStr = returnStr + "<img align='right' height='75' src='img/avatars/"; 
+                    returnStr = returnStr + value.avatar; 
+                    returnStr = returnStr + "'>"; 
+                    returnStr = returnStr + "</div>";
+                    returnStr = returnStr + "</td>";  
+                    returnStr = returnStr + "<td style='font-weight:bold;padding-top:20px;width:45%'>"; 
+                    returnStr = returnStr + value.screenname;; 
+                    returnStr = returnStr + "</td>";                   
+                    returnStr = returnStr + "</tr>";
+  
+                    count = count + 1;
+                });
+
+                returnStr = returnStr + "</table>";
+
+                $('#memberSurveyListDialogModalTitle').text("Members who started Survey");
+                $('#memberSurveyListDialogModalBody').html(returnStr);  
+                $('#memberSurveyListDialogModal').modal();
+                break; 
+
+            case 'finished':
+                var returnStr = "";
+                var count = 0;
+                
+                returnStr = returnStr + "<table style='width:95%;' class='table' >";
+                returnStr = returnStr + "<tr >";
+
+                returnStr = returnStr + "<td style='font-weight:bold;padding-left:5%;'>";
+                returnStr = returnStr + "<div style='text-align:center;'>";
+                returnStr = returnStr + "<img align='center' height='75' src='img/buttons/Button-DareDevilWebsite-Survey.png'>";
+                returnStr = returnStr + "</div>";
+                returnStr = returnStr + "</td>";                   
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Finished</td>" 
+                returnStr = returnStr + "</tr>";    
+                returnStr = returnStr + "</table>";  
+   
+                $.each($scope.current.memberswhofinished, function(key, value) {
+                    returnStr = returnStr + "<table style='width:95%;padding-top:55px;' class='table' >";
+                    returnStr = returnStr + "<tr >";    
+                    returnStr = returnStr + "<td style='padding-left:15%;'>";
+                    returnStr = returnStr + "<div style='text-align:center;'>";
+                    returnStr = returnStr + "<img align='right' height='75' src='img/avatars/"; 
+                    returnStr = returnStr + value.avatar; 
+                    returnStr = returnStr + "'>"; 
+                    returnStr = returnStr + "</div>";
+                    returnStr = returnStr + "</td>";  
+                    returnStr = returnStr + "<td style='font-weight:bold;padding-top:20px;width:45%'>"; 
+                    returnStr = returnStr + value.screenname;; 
+                    returnStr = returnStr + "</td>";                   
+                    returnStr = returnStr + "</tr>";
+  
+                    count = count + 1;
+                });
+
+                returnStr = returnStr + "</table>";
+
+                $('#memberSurveyListDialogModalTitle').text("Members who finished Survey");
+                $('#memberSurveyListDialogModalBody').html(returnStr);  
+                $('#memberSurveyListDialogModal').modal();
+                break; 
+
+            case 'active':
+                var returnStr = "";
+                var count = 0;
+                
+                returnStr = returnStr + "<table style='width:95%;' class='table' >";
+                returnStr = returnStr + "<tr >";
+
+                returnStr = returnStr + "<td style='font-weight:bold;padding-left:5%;'>";
+                returnStr = returnStr + "<div style='text-align:center;'>";
+                returnStr = returnStr + "<img align='center' height='75' src='img/buttons/Button-DareDevilWebsite-Survey.png'>";
+                returnStr = returnStr + "</div>";
+                returnStr = returnStr + "</td>";                   
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Active</td>" 
+                returnStr = returnStr + "</tr>";    
+                returnStr = returnStr + "</table>";  
+   
+                $.each($scope.current.memberswhostillactive, function(key, value) {
+                    returnStr = returnStr + "<table style='width:95%;padding-top:55px;' class='table' >";
+                    returnStr = returnStr + "<tr >";    
+                    returnStr = returnStr + "<td style='padding-left:15%;'>";
+                    returnStr = returnStr + "<div style='text-align:center;'>";
+                    returnStr = returnStr + "<img align='right' height='75' src='img/avatars/"; 
+                    returnStr = returnStr + value.avatar; 
+                    returnStr = returnStr + "'>"; 
+                    returnStr = returnStr + "</div>";
+                    returnStr = returnStr + "</td>";  
+                    returnStr = returnStr + "<td style='font-weight:bold;padding-top:20px;width:45%'>"; 
+                    returnStr = returnStr + value.screenname;; 
+                    returnStr = returnStr + "</td>";                   
+                    returnStr = returnStr + "</tr>";
+  
+                    count = count + 1;
+                });
+
+                returnStr = returnStr + "</table>";
+
+                $('#memberSurveyListDialogModalTitle').text("Members with active Survey");
+                $('#memberSurveyListDialogModalBody').html(returnStr);  
+                $('#memberSurveyListDialogModal').modal();
+                break;      
+
+            case 'nottaken':
+                var returnStr = "";
+                var count = 0;
+                
+                returnStr = returnStr + "<table style='width:95%;' class='table' >";
+                returnStr = returnStr + "<tr >";
+
+                returnStr = returnStr + "<td style='font-weight:bold;padding-left:5%;'>";
+                returnStr = returnStr + "<div style='text-align:center;'>";
+                returnStr = returnStr + "<img align='center' height='75' src='img/buttons/Button-DareDevilWebsite-Survey.png'>";
+                returnStr = returnStr + "</div>";
+                returnStr = returnStr + "</td>";                   
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Not Started</td>" 
+                returnStr = returnStr + "</tr>";    
+                returnStr = returnStr + "</table>";  
+   
+                $.each($scope.current.memberswhohavenottaken, function(key, value) {
+                    returnStr = returnStr + "<table style='width:95%;padding-top:55px;' class='table' >";
+                    returnStr = returnStr + "<tr >";    
+                    returnStr = returnStr + "<td style='padding-left:15%;'>";
+                    returnStr = returnStr + "<div style='text-align:center;'>";
+                    returnStr = returnStr + "<img align='right' height='75' src='img/avatars/"; 
+                    returnStr = returnStr + value.avatar; 
+                    returnStr = returnStr + "'>"; 
+                    returnStr = returnStr + "</div>";
+                    returnStr = returnStr + "</td>";  
+                    returnStr = returnStr + "<td style='font-weight:bold;padding-top:20px;width:45%'>"; 
+                    returnStr = returnStr + value.screenname;; 
+                    returnStr = returnStr + "</td>";                   
+                    returnStr = returnStr + "</tr>";
+  
+                    count = count + 1;
+                });
+
+                returnStr = returnStr + "</table>";
+
+                $('#memberSurveyListDialogModalTitle').text("Members who have not started Survey");
+                $('#memberSurveyListDialogModalBody').html(returnStr);  
+                $('#memberSurveyListDialogModal').modal();
+                break;              
+        }      
+    }
+
     init();
     function init() {
         $window.scrollTo(0, 0);
@@ -208,12 +420,19 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                 .success( function(data) {
                     $scope.getSurveyResultsMemberQuestionSummary = data; 
 
-                    $scope.current.memberswhostarted = data['memberswhostarted'];
-                    $scope.current.memberswhofinished = data['memberswhofinished'];
                     $scope.current.memberswhostartedsurveycount = data['memberswhostartedsurveycount'];
-                    $scope.current.memberswhofinishedsurveycount = data['memberswhofinishedsurveycount'];
+                    $scope.current.memberswhostarted = data['memberswhostarted'];
+
+                    $scope.current.memberswhofinishedsurveycount = data['memberswhofinishedsurveycount'];                    
+                    $scope.current.memberswhofinished = data['memberswhofinished'];
+
                     $scope.current.memberswhostillactivesurveycount = data['memberswhostillactivesurveycount'];
+                    $scope.current.memberswhostillactive = data['memberswhostillactive'];
+
                     $scope.current.memberswhohavenottakensurveycount = data['memberswhohavenottakensurveycount'];
+                    $scope.current.memberswhohavenottaken = data['memberswhohavenottaken'];
+
+                    $scope.current.members = data['members'];
                     $scope.current.membercount = data['membercount'];
 
                     $scope.current.questioncount = data['questioncount'];
@@ -250,6 +469,10 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
 
     $scope.getResponcePercent = function (votes) {
         getResponcePercent(votes);
+    }
+
+    $scope.getMemberSurveyList = function (surveytype) {
+        getMemberSurveyList(surveytype);
     }
 
 }
