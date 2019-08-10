@@ -58,7 +58,7 @@ $function = "select";
 include ('mysqlquery.php');
 
 $surveyquestionanswers = array();
-$count = 0;
+$count = 1;
 while($r = mysqli_fetch_assoc($sql_result)) {
     $surveyquestionanswers[] = $r;
 
@@ -106,14 +106,14 @@ foreach ($surveyquestionanswers as $key => $value) {
 
 		// print "$lf SQL = $sql  $lf "; 
 
-	    $count++;
-
 	//
 	// sql query
 	//
 	$function = "update";
 	$modulecontent = "Unable to $function surveyquestiontbl.";
 	include ("mysqlquery.php");	
+
+	$count++;
 }
 
 print "$lf $lf Records updated from array Count = $count $lf  $lf "; 
