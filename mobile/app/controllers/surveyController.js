@@ -222,7 +222,7 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
 
         returnStr = returnStr + "</table>";
 
-        $('#memberSurveyCommentsDialogModalTitle').text("Members Survey Commentsy");
+        $('#memberSurveyCommentsDialogModalTitle').text("Members Survey Comments");
         $('#memberSurveyCommentsDialogModalBody').html(returnStr);  
         $('#memberSurveyCommentsDialogModal').modal();
     }
@@ -244,7 +244,7 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                 returnStr = returnStr + "<img align='center' height='75' src='../img/buttons/Button-DareDevilWebsite-Survey.png'>";
                 returnStr = returnStr + "</div>";
                 returnStr = returnStr + "</td>";                   
-                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>All Members</td>" 
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Members</td>" 
                 returnStr = returnStr + "</tr>";    
                 returnStr = returnStr + "</table>";  
    
@@ -408,7 +408,7 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
                 returnStr = returnStr + "<img align='center' height='75' src='../img/buttons/Button-DareDevilWebsite-Survey.png'>";
                 returnStr = returnStr + "</div>";
                 returnStr = returnStr + "</td>";                   
-                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Not Started</td>" 
+                returnStr = returnStr + "<td style='font-weight:bold;font-size:40px;padding-top:20px;'>Tardy!</td>" 
                 returnStr = returnStr + "</tr>";    
                 returnStr = returnStr + "</table>";  
    

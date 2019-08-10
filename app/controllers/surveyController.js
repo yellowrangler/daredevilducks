@@ -218,7 +218,7 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
 
         returnStr = returnStr + "</table>";
 
-        $('#memberSurveyCommentsDialogModalTitle').text("Members Survey Commentsy");
+        $('#memberSurveyCommentsDialogModalTitle').text("Members Survey Comments");
         $('#memberSurveyCommentsDialogModalBody').html(returnStr);  
         $('#memberSurveyCommentsDialogModal').modal();
     }
