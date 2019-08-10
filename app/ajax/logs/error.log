@@ -141,3 +141,17 @@ and week =
 	WHERE (SELECT COUNT(surveyquestionid) 
 			FROM surveymemberanswerstbl SMA
 			WHERE SMA.memberid = SA.memberid AND SA.surveyid = 1) == 0
+2019-08-10 20:20:51 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Season Schedule', 
+		dateupdated = '2019-07-29 17:28:59' 
+		WHERE memberid = 2' at line 7 - Error function: update msg: Unable to update surveyquestiontbl.
+2019-08-10 20:20:51 : SQL: UPDATE surveymemberanswerstbl 
+		SET surveyquestionanswerid = 432,
+		surveyid = 1, 
+		memberid = 2, 
+		surveyquestionid = '25',
+		surveyquestionanswerresponce = 'yes', 
+		surveyquestionanswercomment = 'Would like to change the screen title to = Team's Season Schedule', 
+		dateupdated = '2019-07-29 17:28:59' 
+		WHERE memberid = 2 
+		AND surveyid = 1
+		AND surveyquestionid = 25
