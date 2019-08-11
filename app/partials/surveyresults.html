@@ -11,7 +11,7 @@
                 <span class="surveyQuestionResponeHomePage">
                     Number of Members:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('members')">
+                <span style="padding-left:10px;color:#FF6E3B;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('members')">
         			{{current.membercount}}
                 </span>
             </div> <!-- end of col -->        
@@ -19,7 +19,7 @@
                 <span class="surveyQuestionResponeHomePage">
                    Surveys Started:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('started')">
+                <span style="padding-left:10px;color:#FF6E3B;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('started')">
                 	{{current.memberswhostartedsurveycount}}
                 </span>
             </div> <!-- end of col -->
@@ -28,17 +28,17 @@
                 <span class="surveyQuestionResponeHomePage">
                     Completed Surveys:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('finished')">
+                <span style="padding-left:10px;color:#FF6E3B;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('finished')">
                 	{{current.memberswhofinishedsurveycount}}
                 </span>
             </div> <!-- end of col -->   
 
              <div style="padding-top:35px;" class="col-md-4">
-                <span class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 2em; width:60px;">Yes</span> 
+                <span class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="background-color:#4682B4;font-size:18px; min-width: 2em; width:60px;">Yes</span> 
             </div> <!-- end of col --> 
 
             <div style="padding-top:35px;" class="col-md-4">
-                <span class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 2em; width:60px;">No</span> 
+                <span class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="background-color:#FF6E3B;font-size:18px; min-width: 2em; width:60px;">No</span> 
             </div> <!-- end of col --> 
         </div> <!-- end of row -->
     </div>
@@ -49,7 +49,7 @@
                 <span class="surveyQuestionResponeHomePage">
                     Active Surveys:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('active')">
+                <span style="padding-left:10px;color:#FF6E3B;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('active')">
                 	{{current.memberswhostillactivesurveycount}}
                 </span>
             </div> <!-- end of col --> 
@@ -58,7 +58,7 @@
                 <span class="surveyQuestionResponeHomePage">
                     Members not started Survey:
                 </span>
-                <span style="padding-left:10px;color:#B6A98C;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('nottaken')">
+                <span style="padding-left:10px;color:#FF6E3B;font-weight:700;cursor:pointer;" class="surveyQuestionResponeHomePage" ng-click="getMemberSurveyList('nottaken')">
                 	{{current.memberswhohavenottakensurveycount}}
                 </span>
             </div> <!-- end of col -->  
@@ -79,16 +79,16 @@
 
 					<tr ng-repeat="getSurveyResultsMemberQuestionDetail in getSurveyResultsMemberQuestionDetails">
                         <td class="center-column-text">
-                            <span style="color:#b57f7f;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.surveyquestionid }}</span>
+                            <span style="color:#00BBC0;font-weight:700;" class="surveyQuestionResponeItems">{{ getSurveyResultsMemberQuestionDetail.surveyquestionid }}</span>
                         </td>
 						<td style="width:50%;" class="left-column-text">
-							<span style="color:#b57f7f;font-weight:700;cursor:pointer;" class="surveyQuestionResponeItems" ng-click="getMemberSurveyComments(getSurveyResultsMemberQuestionDetail.surveyquestionid)">{{ getSurveyResultsMemberQuestionDetail.questiontext }}</span>
+							<span style="color:#00BBC0;font-weight:700;cursor:pointer;" class="surveyQuestionResponeItems" ng-click="getMemberSurveyComments(getSurveyResultsMemberQuestionDetail.surveyquestionid)">{{ getSurveyResultsMemberQuestionDetail.questiontext }}</span>
 						</td>
 
                         <td style="width:40%;" class="right-column-text">
-                            <span class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="font-size:18px; min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.yesvotes  / current.questioncount) * 100 }}%;">{{ getSurveyResultsMemberQuestionDetail.yesvotes }}</span>
+                            <span class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color:#4682B4;font-size:18px; min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.yesvotes  / current.questioncount) * 100 }}%;">{{ getSurveyResultsMemberQuestionDetail.yesvotes }}</span>
                             <br />
-                            <span class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="font-size:18px;min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.novotes / current.questioncount ) * 100}}%;">{{ getSurveyResultsMemberQuestionDetail.novotes }}</span>
+                            <span class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color:#FF6E3B;font-size:18px;min-width: 2em; width:{{ (getSurveyResultsMemberQuestionDetail.novotes / current.questioncount ) * 100}}%;">{{ getSurveyResultsMemberQuestionDetail.novotes }}</span>
                         </td>
                     </tr>
 				</table>
