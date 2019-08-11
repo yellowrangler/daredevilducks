@@ -24,7 +24,7 @@ else
 }
 
 
-$mySqlStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd";
+$mySqlStr = "mysqldump --extended-insert=TRUE --complete-insert=TRUE -u tarryc -ptarryc ddd";
 $fileNameStr = "dbsql/ddd-dump-$dumpdatabaselabel.sql";
 $execStr = $mySqlStr . " > " . $fileNameStr;
 
