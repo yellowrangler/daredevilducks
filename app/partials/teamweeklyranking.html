@@ -1,72 +1,53 @@
 <div class="pageCaption row">
-	<div class="col-md-3">
-		<h2 class="headerTitle">Team Weekly Ranking</h2>
+	<div class="col-md-12">
+		<h2 style="display:inline;" class="headerTitle">Team Weekly Ranking</h2>
+		<img style="display:inline;float:right;padding-right:8%;height:25px;vertical-align:top;cursor:pointer;" src="img/DareDevilDuckInfoButton.png"  ng-click="showHelp()" alt="information" class="">
 
-		<div class="pageStandardOffset">
-			<div style="padding-top:15px;">
+	</div> <!-- end of column -->
+</div> <!-- end of row -->
+
+<div class="row pageStandardOffset">
+	<div style="" class="col-md-12">
+		<div class="row">
+			<div style="" class="col-md-2">
 				<a ng-href="{{current.team.teamurl}}" target="_blank">
 					<img height="85" ng-src='img/nflicons/{{current.team.teamiconname}}'>
 				</a>
+			</div> <!-- end of column -->
+
+			<div  class="col-md-4">
+				<div style="font-size:20px;">
+					<label for="teamid" class="">Team</label>
+			        <select class="customSelect" ng-change="getTeamWeekRank(current.teamid)" ng-model="current.teamid" id="teamid" name="teamid">
+			            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
+		        	</select>
+				</div>
+					
+				<div style="font-size:20px;padding-top:25px;">
+					<label style="" for="season" class="">Season </label>
+					<select class="customSelect" ng-change="getTeamWeekRank()" ng-model="current.season" id="season" name="season">
+						<option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
+					</select>
+				</div>
+
+				<div style="padding-top:45px;" >
+		        	<span class="left-column-text" style="padding:5px;font-size:18px;font-weight:700;padding-right:20px;">Keys for Ranking:</span>
+
+			        <span class="center-column-text offenceText" style="font-weight:bold;font-size:18px;padding:5px;">Offence</span>
+
+			        <span class="center-column-text defenceText" style="font-weight:bold;font-size:18px;padding:5px;">Defense</span>    
+				</div>
+			</div> <!-- end of column -->
+
+			<div class="col-md-4">
+				<img height="200" style="padding-left:15%;" align="top" ng-src="img/FallTeamWeeklyRanking2019.png">
 			</div>
-		</div> <!-- end of panelOffset -->
+		</div> <!-- end of row -->
 	</div> <!-- end of column -->
-
-	<form id="teamweeklyrankForm" name="teamweeklyrankForm" class="form-inline">
-	<div class="col-md-6">
-		<div class="pageStandardOffset">
-			<div class="panel panel-default panelOverrideNoBorder">
-				<div class="panel-body">
-					<div style="padding-top:60px;" class="form-group horizontalFieldOffset">
-						<label for="teamid" class="control-label">Team</label>
-				        <select class="customSelect form-control" ng-change="getTeamWeekRank(current.teamid)" ng-model="current.teamid" id="teamid" name="teamid">
-				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
-				        </select>
-
-				        <div style="padding-top:25px;width:240px;margin:0;" >
-				        	<span class="left-column-text control-label" style="padding:5px;">Keys for Ranking:</span>
-
-					        <span class="center-column-text offenceText" style="font-weight:bold;font-size:15px;padding:5px;">Offence</span>
-					    </div> 
-					</div> <!-- end of form-group -->
-
-					<div style="padding-top:60px;" class="form-group horizontalFieldOffset">
-						<label for="season" class="control-label">Season </label>
-						<select class="customSelect form-control" ng-change="getTeamWeekRank()" ng-model="current.season" id="season" name="season">
-							<option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
-						</select>
-
-						<div style="padding-top:25px;width:width:75px;margin:0;" >    
-					        <span class="center-column-text defenceText" style="font-weight:bold;font-size:15px;padding:5px;">Defense</span>
-				        </div> 
-					</div> <!-- end of form-group -->
-
-				</div> <!-- end of panel body -->
-			</div> <!-- end of panel -->
-		</div> <!-- end of panelOffset -->
-	</div> <!-- end of col 9 -->
-
-	<div class="col-md-2">
-		<div style="display:block;">
-			<img style="height:150px;float:right;padding-right:25px;"  class="centeredImage" ng-src="img/FallTeamWeeklyRanking2019.png">
-		</div>
+</div> <!-- end of row -->	
 
 
-		<!-- <div style="clear:both;padding-top:25px;">
-
-			<div class="center-column-text offenceText"  style="width:80%;font-weight:bold;font-size:13px;padding1px;margin:0;" >
-		        Offence
-		    </div>  
-
-			<div class="center-column-text defenceText"  style="width:80%;font-weight:bold;font-size:13px;padding1px;margin:0;" >    
-		        Defence
-	        </div> 
-        </div> -->
-	
-	</div>
-</div> <!-- end of row -->
-
-
-<div class="pageStandardOffset row">
+<div style="paddimg-top:35px;" class="pageStandardOffset row">
 	<div class="col-md-10">
 		<div class="panel panel-default panelOverrideNoBorder">
 			<div class="panelBodyOverride">

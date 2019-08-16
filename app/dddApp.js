@@ -45,7 +45,12 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'pickgames2Controller',
                 templateUrl: 'app/partials/pickgames2.html'
-            })      
+            })  
+        .when('/pickgameshelp',
+            {
+                controller: 'helpController',
+                templateUrl: 'app/partials/help/pickgameshelp.html'
+            })          
         .when('/viewselectpickgames',
             {
                 controller: 'viewselectpickgamesController',

@@ -1157,6 +1157,62 @@ border: 0 none;
 	text-align:center
 }
 
+.tooltip-inner {
+  background-color: #00acd6 !important;
+  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+  color: #fff;
+}
+
+.tooltip.top .tooltip-arrow {
+  border-top-color: #00acd6;
+}
+
+.tooltip.right .tooltip-arrow {
+  border-right-color: #00acd6;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #00acd6;
+}
+
+.tooltip.left .tooltip-arrow {
+  border-left-color: #00acd6;
+}
+
+.helpSubTitle {
+    color: #3ca4d7;
+    font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-size: 24px;
+    letter-spacing: 3px;
+    padding-bottom:15px;
+}
+
+.helpSubTitle2 {
+    color: #00BBC0;
+    font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding-bottom:5px;
+}
+
+.helpText p,li {
+    color: #4682B4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.helpStandardOffset {
+	padding-left:95px;
+	padding-right:65px;
+}
+
+
+
 /*.bracketModalTitle {
 	font-family:'ChopinScript',
 	serif;

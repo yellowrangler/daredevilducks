@@ -155,3 +155,170 @@ and week =
 		WHERE memberid = 2 
 		AND surveyid = 1
 		AND surveyquestionid = 25
+2019-08-12 23:00:40 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings current week information.
+2019-08-12 23:00:40 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 23
+and season = 2019
+and week = 
+
+2019-08-12 23:00:40 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings current week information.
+2019-08-12 23:00:40 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 24
+and season = 2019
+and week = 
+
+2019-08-13 17:57:41 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly rankings information.
+2019-08-13 17:57:41 : SQL: SELECT 
+G.week as week,
+G.gamenbr as gamenbr,
+TH.id as hometeamid,
+TH.location as hometeamlocation, 
+TH.name as hometeamname, 
+TH.teamurl as hometeamurl, 
+TH.teamiconname as hometeamiconname, 
+G.hometeamscore as hometeamscore, 
+TSH.wins as hometeamwins, 
+TSH.losses as hometeamlosses, 
+TSH.ties as hometeamties,
+TRH.powerranking as hometeampowerranking, 
+TRH.offencetotal as hometeamoffencetotal, 
+TRH.offencescoring as hometeamoffencescoring, 
+TRH.offencepassing as hometeamoffencepassing, 
+TRH.offencerushing as hometeamoffencerushing, 
+TRH.defencetotal as hometeamdefencetotal, 
+TRH.defencescoring as hometeamdefencescoring, 
+TRH.defencepassing as hometeamdefencepassing, 
+TRH.defencerushing as hometeamdefencerushing, 
+TA.id as awayteamid,
+TA.location as awayteamlocation, 
+TA.name as awayteamname, 
+TA.teamurl as awayteamurl, 
+TA.teamiconname as awayteamiconname, 
+G.awayteamscore as awayteamscore, 
+TSA.wins as awayteamwins, 
+TSA.losses as awayteamlosses, 
+TSA.ties as awayteamties,
+TRA.powerranking as awayteampowerranking, 
+TRA.offencetotal as awayteamoffencetotal, 
+TRA.offencescoring as awayteamoffencescoring, 
+TRA.offencepassing as awayteamoffencepassing, 
+TRA.offencerushing as awayteamoffencerushing, 
+TRA.defencetotal as awayteamdefencetotal, 
+TRA.defencescoring as awayteamdefencescoring, 
+TRA.defencepassing as awayteamdefencepassing, 
+TRA.defencerushing as awayteamdefencerushing
+FROM gamestbl G 
+LEFT JOIN teamweekstatstbl TSH ON G.hometeamid = TSH.teamid
+	AND G.season = TSH.season AND G.week = TSH.week
+LEFT JOIN teamweekstatstbl TSA ON G.awayteamid = TSA.teamid	
+	AND G.season = TSA.season AND G.week = TSA.week	
+LEFT JOIN teamweekranktbl TRH on TRH.season = TSH.season AND
+	TRH.week = TSH.week AND TRH.teamid = TSH.teamid
+LEFT JOIN teamweekranktbl TRA on TRA.season = TSA.season AND
+	TRA.week = TSA.week AND TRA.teamid = TSA.teamid	
+LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
+LEFT JOIN teamstbl TA ON G.awayteamid = TA.id	
+LEFT JOIN gamebyetbl GB ON GB.season = G.season AND GB.week = G.week AND GB.teamid = undefined	
+WHERE (G.hometeamid = undefined OR G.awayteamid = undefined)
+AND G.season = 2018 
+AND G.week <= 21
+
+UNION
+
+SELECT 
+GB.week as week,
+'B' as gamenbr,
+GB.teamid as hometeamid,
+T.location as hometeamlocation, 
+T.name as hometeamname, 
+T.teamurl as hometeamurl, 
+T.teamiconname as hometeamiconname, 
+' ' as hometeamscore, 
+' ' as hometeamwins, 
+' ' as hometeamlosses, 
+' ' as hometeamties,
+' ' as hometeampowerranking, 
+' ' as hometeamoffencetotal, 
+' ' as hometeamoffencescoring, 
+' ' as hometeamoffencepassing, 
+' ' as hometeamoffencerushing, 
+' ' as hometeamdefencetotal, 
+' ' as hometeamdefencescoring, 
+' ' as hometeamdefencepassing, 
+' ' as hometeamdefencerushing, 
+' ' as awayteamid,
+'BYE' as awayteamlocation, 
+' ' as awayteamname, 
+' ' as awayteamurl, 
+'B' as awayteamiconname, 
+' ' as awayteamscore, 
+' ' as awayteamwins, 
+' ' as awayteamlosses, 
+' ' as awayteamties,
+' ' as awayteampowerranking, 
+' ' as awayteamoffencetotal, 
+' ' as awayteamoffencescoring, 
+' ' as awayteamoffencepassing, 
+' ' as awayteamoffencerushing, 
+' ' as awayteamdefencetotal, 
+' ' as awayteamdefencescoring, 
+' ' as awayteamdefencepassing, 
+' ' as awayteamdefencerushing
+FROM gamebyetbl GB 
+LEFT JOIN teamstbl T ON GB.teamid = T.id
+WHERE GB.season = 2018  AND GB.week <= 21 AND GB.teamid = undefined
+ORDER BY week ASC
+2019-08-13 17:57:41 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get nfl single team information.
+2019-08-13 17:57:41 : SQL: SELECT * FROM teamstbl WHERE id = undefined
+2019-08-15 22:37:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings current week information.
+2019-08-15 22:37:04 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 23
+and season = 2019
+and week = 
+
+2019-08-15 22:37:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get team weekly power rankings current week information.
+2019-08-15 22:37:04 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = 24
+and season = 2019
+and week = 
+

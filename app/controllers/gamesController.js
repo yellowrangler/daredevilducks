@@ -551,6 +551,8 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
         $scope.current = {};
         $scope.teamstats = {};
 
+        // $('[data-toggle="pagehelptooltip"]').tooltip();  
+
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -672,6 +674,10 @@ controllers.pickgames2Controller = function ($scope, $http, $location, membersFa
 
     $scope.getTeamStats = function (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
         getTeamStats(hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
+    }
+
+    $scope.showHelp = function () {
+        $location.path("/pickgameshelp");
     }
     
 }

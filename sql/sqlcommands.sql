@@ -6,7 +6,7 @@ mysqldump --extended-insert=FALSE -u tarryc -p ddd > ddd-dump-08082015.sql
 mysqldump --complete-insert -u tarryc -p ddd > ddd-dump-08082015.sql
 mysqldump --complete-insert --skip-extended-insert -u tarryc -p ddd > ddd-dump-08092015.sql
 
-mysql -u mysql -u tarryc -p ddd < app/ajax/dbsql/ddd-dump-checkpoint-1121201712259.sql
+mysql -u tarryc -p ddd < app/ajax/dbsql/ddd-dump-checkpoint-1121201712259.sql
 
 SELECT table_schema "Data Base Name", sum( data_length + index_length) / 1024 / 1024
 "Data Base Size in MB" FROM information_schema.TABLES GROUP BY table_schema ;
