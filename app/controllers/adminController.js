@@ -355,33 +355,54 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
 
 controllers.updatemembergroupController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
 
-    function updatemembergroup() {
+    function updatemembergroup(newmembergroupmembers) {
 
         var formstring = $("#updatemembergroupForm").serialize();
         var formstringClean = encodeURIComponent(formstring);
-        membersFactory.updateMemberGroup(formstring)
+        // membersFactory.updateMemberGroup(formstring)
+        // .success( function(data) {
+        //     if (data !== "ok")
+        //     {
+        //         alert("Error updating member group - "+data);
+        //     }
+        //     else
+        //     {
+        //         alert("Member group updated succesfully!");
+        //         // $("#addmemberForm")[0].reset();
+        //     }
+
+        // })
+        // .error( function(edata) {
+        //     alert(edata);
+        // });
+
+    }
+
+    function deleteMemberGroupMember(membergroupmember) {
+        var q = "membergroupid="+membergroupmember.membergroupid+"&memberid="+membergroupmember.memberid;
+        membersFactory.deleteMemberGroupMember(q)
         .success( function(data) {
             if (data !== "ok")
             {
-                alert("Error updating member group - "+data);
+                alert("Error deleting member group member- "+data);
             }
             else
             {
-                alert("Member group updated succesfully!");
-                // $("#addmemberForm")[0].reset();
-            }
+                alert("Member deleted succesfully!");
 
+                resetUpdateMemberGroupForm();
+            }
         })
         .error( function(edata) {
             alert(edata);
         });
-
     }
 
     function deletemembergroup() {
-        var formstring = $("#updatemembergroupForm").serialize();
+        membergroupid = $("#membergroupid").val();
+        var qdata = "membergroupid="+membergroupid;
 
-        membersFactory.deleteMemberGroup(formstring)
+        membersFactory.deleteMemberGroup(qdata)
         .success( function(data) {
             if (data !== "ok")
             {
@@ -390,7 +411,8 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
             else
             {
                 alert("Member group deleted succesfully!");
-                $("#updatemembergroupForm")[0].reset();
+                
+                resetUpdateMemberGroupForm();
             }
         })
         .error( function(edata) {
@@ -423,82 +445,60 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         });
     }
 
-    function deleteMemberGroupMember(membergroupmember)
+    function getAllMemberGroupsAndMembers(groupid, groupname)
     {
-        $.each($scope.membergroupmembers, function(i){
-            if($scope.membergroupmembers[i].id === membergroupmember.id) {
-                $scope.membergroupmembers.splice(i,1);
-                return false;
-            }
-        });
-    }
+        $scope.current.membergroupid = groupid;
+        $scope.current.groupname = groupname;
 
-    function addNewMemberGroupMember() {
-        var newItemNo = $scope.membergroupmembers.length+1;
-        $scope.membergroupmembers.push({'id':newItemNo});
-    };
-
-    function getAllMemberGroupsAndMembers(groupid)
-    {
-        var cleanData = encodeURIComponent(groupid);
-        var membergroupid = "membergroupid="+cleanData;
-        membersFactory.getAllMemberGroup(membergroupid)
+        var membergroupid = "membergroupid="+$scope.current.membergroupid;
+        membersFactory.getAllMemberGroupMembers(membergroupid)
         .success( function(data) {
-            $scope.current = data;
-
-            var membergroupid = "membergroupid="+$scope.current.membergroupid;
-            membersFactory.getAllMemberGroupMembers(membergroupid)
-            .success( function(data) {
-                //
-                // first delete the mebers from prev list
-                //
-                for (var i = $scope.membergroupmembers.length - 1; i >= 0; i--)
-                {
-                    deleteMemberGroupMember($scope.membergroupmembers[i]);
-                }
-
-                //
-                // get our new list
-                //
-                $scope.membergroupmeberslist = data;
-
-                //
-                // now add and update
-                //
-                for (var i = 0; i < $scope.membergroupmeberslist.length; i++)
-                {
-                    addNewMemberGroupMember();
-
-                    $scope.membergroupmembers[i].id = i + 1;
-                    $scope.membergroupmembers[i].memberid = $scope.membergroupmeberslist[i].memberid;
-                }
-            })
-            .error( function(edata) {
-                alert(edata);
-            });
+            $scope.membergroupmembers = data;
         })
         .error( function(edata) {
             alert(edata);
         });
-
     }
 
-    init();
-    function init() {
-        //
-        // this is not getting called at right time for definig top offset
-        // in jquery ready. So adding it here
-        //
-        setviewpadding();
+    function setNewMemberGroupMember(idx, memberid) {
+        var newmemberlist = $scope.newmembergroupmembers;
+
+        for (i = 0; i < newmemberlist.length; i++)
+        {
+            if (newmemberlist[i].idx == idx)
+            {
+                newmemberlist[i].memberid = memberid;
+                break;
+            }
+
+        }
+
+        $scope.newmembergroupmembers = newmemberlist;
+    };
+
+    function resetUpdateMemberGroupForm()
+    {
+        $("#updatemembergroupForm")[0].reset();  
+
+        $scope.membergroup = {};
+        $scope.membergroup.membergroupid = 0;
+        $scope.current.newmember = 0; 
 
         $scope.current = {};
-        $scope.membergroupmeberslist = {};
+        $scope.current.membergroupid = 0;
+        $scope.current.groupname = "";
+        $scope.membergroups = {};
+        $scope.current.newmembers = {};
+
+        $scope.newmembergroupmembers = [];
         $scope.membergroupmembers =  [
             {
                 id: "0",
                 memberid: "0"
             }
         ];
+
+        $scope.newmembergroupmembers = {};
 
         membersFactory.getAllMemberGroups()
             .success( function(data) {
@@ -514,7 +514,18 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
             })
             .error( function(edata) {
                 alert(edata);
-            });
+            }); 
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
+        resetUpdateMemberGroupForm();
     };
 
     $scope.getMemberGroupMemberSelectedId = function(row, selectmemberid) {
@@ -522,33 +533,63 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         if (selectmemberid == memberid)
         {
             return true;
+
         }
     };
 
-    $scope.addNewMemberGroupMember = function() {
-        addNewMemberGroupMember();
-    };
+    $scope.addNewMemberGroupMemberEmpty = function() {
+        $scope.current.newmember = 1;
 
-    $scope.deleteMemberGroupMember = function(membergroupmember) {
-        deleteMemberGroupMember(membergroupmember);
-    }
-
-    $scope.showMemberGroupMemberLabel = function(membergroupmember) {
-        if (membergroupmember.id == 1)
-            return true;
+        var idx = $scope.newmembergroupmembers.length;
+        if (isEmpty(idx))
+        {
+            $scope.newmembergroupmembers =  [  {  idx: "1", memberid: "0"  } ];
+        }
         else
-            return false;
+        {
+            idx = idx + 1;
+            $scope.newmembergroupmembers.push({'idx': idx, 'memberid':0});
+        }
+        
     };
+
+    $scope.setNewMemberGroupMember = function(idx, memberid) {
+        setNewMemberGroupMember(idx, memberid);
+    };
+
 
     $scope.showMemberGroupMemberSelect = function(membergroupmember) {
-        if (membergroupmember.id == 0)
+        if (membergroupmember.membergroupmemberid == 0)
+            return false;
+        else
+            return true;
+    }
+
+    $scope.showMemberGroupMemberNew = function () {
+        if ($scope.current.newmember == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    $scope.showDeleteGroupButton = function(membergroupmember) {
+        if ($scope.current.membergroupid == 0)
             return false;
         else
             return true;
     }
 
     $scope.showDeleteMemberGroupMember = function(membergroupmember) {
-        if (membergroupmember.id != 1  && membergroupmember.id != 0)
+        if (membergroupmember.membergroupmemberid != 1  && membergroupmember.memberid != 0)
+            return true;
+    }
+
+    $scope.showMemberGroupMemberNew = function(newmembergroupmember) {
+        if (newmembergroupmember.membergroupmemberid != 1  && newmembergroupmember.memberid != 0)
             return true;
     }
 
@@ -564,17 +605,30 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         getAllMember(memberid, membergroupmember);
     }
 
-    $scope.updatemembergroup = function() {
-        updatemembergroup();
-    }
-
-    $scope.deletemembergroup = function() {
-        deletemembergroup();
-    }
-
     $scope.getAllMemberGroupMembers = function() {
         getAllMemberGroupMembers();
     }
+
+    $scope.updatemembergroup = function(newmembergroupmembers) {
+        updatemembergroup(newmembergroupmembers);
+    }
+
+    $scope.deleteMemberGroupMember = function(membergroupmember) {
+        var resp = confirm("Please confirm you wish  to delete member "+membergroupmember.membername+" from group "+$scope.current.groupname+"!");
+        if (resp)
+        {
+            deleteMemberGroupMember(membergroupmember);
+        }
+    }
+
+    $scope.deletemembergroup = function() {
+        var resp = confirm("Please confirm you wish  to delete group!");
+        if (resp)
+        {
+            deletemembergroup();
+        }
+    }
+
 }
 
 controllers.teaminfoController = function ($scope, $http, $log, $location, uiGridConstants, nflTeamsService, teamsFactory) {

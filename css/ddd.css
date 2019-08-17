@@ -225,8 +225,8 @@ border: 0 none;
 }
 
 .imgButtonNav {
-	width:80%;
-	height:80%;
+	width:75%;
+	height:75%;
 	/*text-align: center;*/
 	/*padding-left:18%;*/
 }
@@ -1199,7 +1199,14 @@ border: 0 none;
     padding-bottom:5px;
 }
 
-.helpText p,li {
+.helpText p {
+    color: #4682B4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.helpText li {
     color: #4682B4;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;

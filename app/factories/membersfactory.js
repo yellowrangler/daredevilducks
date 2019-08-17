@@ -117,6 +117,16 @@ dddApp.factory('membersFactory', function($q, $http) {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
+
+    factory.deleteMemberGroupMember = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/deletemembergroupmember.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getAllMemberGroupMembers = function (data) {
         return $http({ 
             method: 'POST', 

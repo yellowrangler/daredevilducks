@@ -3,8 +3,8 @@
         <div class="pageCaption">
             <div style="padding-bottom:0px;">
                 <h2 style="display:inline;" class="headerTitle">Pick Your Teams Help</h2>
-                <div style="display:inlinex;float:right;padding-right:20%;">
-                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/pickgames')" id="goBack" name="goBack" >Return tp Pick Games</button>
+                <div style="display:inlinex;float:right;float:right;padding-right:4%;">
+                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/pickgames')" id="goBack" name="goBack" >Return tp Pick Your Teams</button>
                 </div> <!-- end of panel body -->
             </div>  
         </div>
@@ -20,7 +20,7 @@
         <div class="helpText">
             <p>The Pick Your Teams page is where a member picks his or her teams for a particular week in a particular season.</p>
 
-            <p>You are presented with a list displaying team pairs (home and away) for the week. You select a team by clicking on the <span style="color:#FF6E3B;font-weight:700;">Team Name.</span></p>
+            <p>You are presented with a list displaying team pairs (home and away) for the week. You select a team by clicking on the <span style="color:#FF6E3B;font-weight:700;">Team Name.</span>. A selected team turns <span style="color:white;background:maroon;">maroon</span>.</p>
 
             <p>You can select as many or as few teams as you wish. Just be sure to have selected all teams for the week prior to the start of the game. Any selections made after a game starts will be blocked.</p>
 
@@ -64,9 +64,9 @@
 
             <p>This example shows two lines from the <span style="color:#FF6E3B;font-weight:700;">Pick Your Teams</span> list.</p>
 
-            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Game Day</span>. It displays the network that is showing the game and the day and time that the game is being played. Trying to make a pick after this day and time be blocked.</p>
+            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Game Day</span>. It displays the network that is showing the game and the day and time that the game is being played. Trying to make a pick after this day and time will be blocked.</p>
 
-            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Home Team</span>. It displays the team icon and team name of the home team for this game. To pick the home team you must select the <span style="color:#FF6E3B;font-weight:700;">Team Name</span>. If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
+            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Home Team</span>. It displays the team icon and team name of the home team for this game. To pick the home team you must select the <span style="color:#FF6E3B;font-weight:700;">Team Name</span>. The selected team will turns <span style="color:white;background:maroon;">maroon</span> to show that it has been selected.  If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
 
              <p>The third column is <span style="color:#FF6E3B;font-weight:700;">Score</span>. It displays the home team score after the game has been played. A team score with a green background signifies a win for that team.</p>
 
@@ -85,8 +85,8 @@
 
         <div style="padding-bottom:35px;" class="helpText">
             <div class="row ">
-                <div class="col-md-5">
-                    <p><img ng-src="img/help/pickgamesmodalstats.png" align="top"></p>
+                <div style="padding-top:15px;" class="col-md-5">
+                    <p><img ng-src="img/help/pickgamesmodalstats.png" align="center"></p>
                 </div>
 
                 <div class="col-md-6">
@@ -103,16 +103,20 @@
 
                     <p>Overall record is the teams W L T record across the entire league. Home record is the teams W L T record against other teams at home. Away record is the teams W L T record against other teams when away. Conference record is the teams W L T record against other teams inside their conference. Division record is the teams W L T record against other teams inside their division.</p>
 
-                    <p>The second section charts standings. Each team is compared offense to defense (O/D or D/O). The two teams are identified by a key with coloring. This uses the data from <span style="color:#FF6E3B;font-weight:700;">Team Rankings</span> with higher scores being better.</p>
+                    <p>The second section charts rankings. Each team is compared offense to defense (O/D or D/O). The two teams are identified by a key with coloring. This uses the data from <span style="color:#FF6E3B;font-weight:700;">Team Rankings</span> with higher scores being better.</p>
 
-                    <p>The Third, Fourth and Fifth sections display three sets of power rankings broken into:</p>
+                    <p>The Third, Fourth and Fifth sections display three sets of competitive rankings broken into:</p>
                     <ul>
                         <li>Power Ranking</li>
                         <li>Offensive Ranking record</li>
                         <li>Defensive Ranking record</li>
                     </ul>
 
-                    <p> The ratings in these sections vary from the chart rankings in that with these numbers, a lower number is better. Power rankings are the combined ranking inclusive of offense and defense for each team.The following for <span style="color:#FF6E3B;font-weight:700;">Offensive</span> and <span style="color:#FF6E3B;font-weight:700;">Defense</span> rankings are further split into:</p>
+                    <p> The ratings for these three sections vary from the previous chart rankings in that with these numbers, a lower number is better.</p> 
+
+                    <p><span style="color:#FF6E3B;font-weight:700;">Power Rankings</span> are the combined rankings inclusive of offense and defense for each team.</p>
+
+                    <p>The following rankings for <span style="color:#FF6E3B;font-weight:700;">Offensive</span> and <span style="color:#FF6E3B;font-weight:700;">Defense</span> are further split into:</p>
 
                     <ul>
                         <li>Overall</li>
@@ -121,14 +125,22 @@
                         <li>Rushing</li>
                     </ul>
 
-                    <p><span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all defense or offense. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you score for offense AND how well you stopped scoring for defense. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you pass for offense AND how well you stopped the pass for defense. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you rush for offense AND how well you stopped rushing for defense.</p>
+                </div> <!-- end of col --> 
+            </div>  <!-- end of row -->  
+
+            <div style="padding-top:15px;" class="row ">
+                <div class="col-md-12">
+
+                    <p>The <span style="color:#FF6E3B;font-weight:700;">Offense</span> section. <span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all ranked areas. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you score against your competition. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you pass (completions, yards, etc) against your competition. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you rush against your competition.</p>
+
+                    <p>The <span style="color:#FF6E3B;font-weight:700;">Defense</span> section. <span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all ranked areas. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you stopped scoring against your competition. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you stopped the pass against your competition. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you stopped the rush against your competition.</p>
                 </div>
             </div>         
         </div>
     </div> <!-- end of col --> 
 </div> <!-- end of row -->    
 
-<div style="padding-top:40px;" class="row">
+<div style="padding-top:0px;" class="row">
     <div class="col-md-12 helpStandardOffset">
         <div class="helpSubTitle">
             Other Resources

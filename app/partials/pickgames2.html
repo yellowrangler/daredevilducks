@@ -2,20 +2,14 @@
 <div class="pageCaption row">
 	<div class="col-md-12">
 			<h2 style="display:inline;padding-right:30px;" class="headerTitle">Pick Your Teams</h2>
-			<img style="display:inline;float:right;padding-right:8%;height:25px;vertical-align:top;cursor:pointer;" ng-click="showHelp()" src="img/DareDevilDuckInfoButton.png"> 
+			<img ng-init="helpimg='HelpButton4Circle.png'" 
+				 ng-mouseover="helpimg='HelpButton3Circle.png'" 
+				 ng-mouseout="helpimg='HelpButton4Circle.png'"
+				 style="display:inline;float:right;padding-right:8%;height:50px;vertical-align:top;cursor:pointer;" 
+				 ng-click="showHelp()" 
+				 src="img/help/{{helpimg}}"> 
 	</div> 
-
-	<!-- <div style="padding-top:0px;display:inline;" class="col-md-12">
-		<div style="display:inline; s" >
-			<img style="height:25px;vertical-align:top;cursor:pointer;" src="img/DareDevilDuckInfoButton.png"  ng-click="showHelp()" alt="information" class="img-circle">
-		</div>
-
-		<div style="padding-left:5px;padding-top:15px;display:inline;" >
-			<h2 style="display:inline;" class="headerTitle">Pick Your Teams</h2>
-		</div> -->
-
-		
-	</div> <!-- end of column -->
+</div> <!-- end of column -->
 
 </div> <!-- end of row -->	
 
@@ -30,8 +24,17 @@
 
 					<div class="form-group horizontalFieldOffset">
 						<label for="memberid" class="control-label">Member</label>
-				        <select class="customSelect form-control" ng-change="getMemberWeekPicks('member')" ng-model="current.memberid" id="memberid" name="memberid" ng-disabled="checkRole()">
-				            <option ng-selected="current.memberid == member.id"  ng-repeat="member in members" value="{{member.id}}">{{member.screenname}}</option>
+				        <select 
+				        	class="customSelect form-control" 
+				        	ng-change="getMemberWeekPicks('member')" 
+				        	ng-model="current.memberid" id="memberid" 
+				        	name="memberid" 
+				        	ng-disabled="checkRole()">
+				            <option 
+				            	ng-selected="current.memberid == member.id"  
+				            	ng-repeat="member in members" 
+				            	value="{{member.id}}">{{member.screenname}}
+				            </option>
 				        </select>
 					</div> <!-- end of form-group -->
 
