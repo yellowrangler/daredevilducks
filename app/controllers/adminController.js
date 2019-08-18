@@ -242,51 +242,10 @@ controllers.updatememberController = function ($scope, $http, $location, members
 
 controllers.addmembergroupController = function ($scope, $http, $location, membersFactory) {
 
-    function deleteMemberGroupMember(membergroupmember)
+    function addnewmembergroup() 
     {
-        $.each($scope.membergroupmembers, function(i){
-            if($scope.membergroupmembers[i].id === membergroupmember.id) {
-                $scope.membergroupmembers.splice(i,1);
-                return false;
-            }
-        });
-    }
-
-    function initMemberGroups()
-    {
-        $scope.membergroupmembers =  [
-            {
-                id: "1",
-                memberid: "0"
-            }
-        ];
-
-        membersFactory.getAllMembers()
-            .success( function(data) {
-                $scope.members = data;
-            })
-            .error( function(edata) {
-                alert(edata);
-            });
-    }
-
-    init();
-    function init() {
-
-        initMemberGroups();
-
-        setviewpadding();
-
-    };
-
-    $scope.addnewmembergroup = function(membergroupmembers) {
         var formstring = $("#addmembergroupForm").serialize();
         var formstringClean = encodeURIComponent(formstring);
-
-        for (var i = membergroupmembers.length - 2; i >= 0; i--)
-        {
-            deleteMemberGroupMember(membergroupmembers[i]);
-        }
 
         membersFactory.addMemberGroup(formstring)
         .success( function(data) {
@@ -296,12 +255,9 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
             }
             else
             {
-                //  reset variables
-                $scope.members = {};
-
                 $("#addmembergroupForm")[0].reset();
 
-                alert("Member Group Name and Members added succesfully!");
+                alert("Member Group Name created succesfully!");
 
                 initMemberGroups();
             }
@@ -312,69 +268,41 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
         });
     }
 
-    $scope.getAllMember = function(memberid, membergroupmember) {
-        membergroupmember.memberid = memberid;
+    init();
+    function init() {
 
-        var cleanData = encodeURIComponent(memberid);
-        var memberid = "memberid="+cleanData;
-        membersFactory.getAllMember(memberid)
-        .success( function(data) {
-            $scope.current = data;
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
+        setviewpadding();
 
-    }
-
-    $scope.addNewMemberGroupMember = function() {
-        var newItemNo = $scope.membergroupmembers.length+1;
-        $scope.membergroupmembers.push({'id':newItemNo});
     };
 
-    $scope.deleteMemberGroupMember = function(membergroupmember) {
-        deleteMemberGroupMember(membergroupmember);
+    $scope.addnewmembergroup = function() {
+        addnewmembergroup();
     }
 
-    $scope.showMemberGroupMemberLabel = function(membergroupmember) {
-        if (membergroupmember.id == 1)
-            return true;
-        else
-            return false;
-    };
-
-    $scope.showDeleteMemberGroupMember = function(membergroupmember) {
-        if (membergroupmember.id != 1)
-            return true;
-    }
-
-    $scope.showAddMemberGroupMember = function(membergroupmember) {
-      return membergroupmember.id === $scope.membergroupmembers[$scope.membergroupmembers.length-1].id;
-    };
 }
 
 controllers.updatemembergroupController = function ($scope, $http, $location, membersFactory, nflTeamsService) {
 
     function updatemembergroup(newmembergroupmembers) {
+        var newmembers = JSON.stringify(newmembergroupmembers);
+        var q = "newmembers="+newmembers;
+        membersFactory.updateMemberGroup(q)
+        .success( function(data) {
+            if (data !== "ok")
+            {
+                alert("Error updating member group - "+data);
+            }
+            else
+            {
+                alert("Member group updated succesfully!");
+                
+                resetUpdateMemberGroupForm();
+            }
 
-        var formstring = $("#updatemembergroupForm").serialize();
-        var formstringClean = encodeURIComponent(formstring);
-        // membersFactory.updateMemberGroup(formstring)
-        // .success( function(data) {
-        //     if (data !== "ok")
-        //     {
-        //         alert("Error updating member group - "+data);
-        //     }
-        //     else
-        //     {
-        //         alert("Member group updated succesfully!");
-        //         // $("#addmemberForm")[0].reset();
-        //     }
-
-        // })
-        // .error( function(edata) {
-        //     alert(edata);
-        // });
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
 
     }
 
@@ -396,6 +324,28 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         .error( function(edata) {
             alert(edata);
         });
+    }
+
+    function deleteNewMemberGroupMember(idx) {
+        var currentnewmemberlist = $scope.newmembergroupmembers;
+        var newnewmemberlist = [];
+
+        var k = 0;
+        for (i = 0; i < currentnewmemberlist.length; i++)
+        {
+            if (currentnewmemberlist[i].idx == idx)
+            {
+                break;
+            }
+
+            newnewmemberlist[k].idx = k + 1;
+            newnewmemberlist[k].membergroupid = currentnewmemberlist[i].membergroupid;
+            newnewmemberlist[k].$$hashKey = currentnewmemberlist[i].$$hashKey;
+
+            k = k + 1;
+        }
+
+        $scope.newmembergroupmembers = newnewmemberlist;
     }
 
     function deletemembergroup() {
@@ -447,6 +397,8 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
 
     function getAllMemberGroupsAndMembers(groupid, groupname)
     {
+        resetNewMembers();
+
         $scope.current.membergroupid = groupid;
         $scope.current.groupname = groupname;
 
@@ -480,25 +432,22 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
     {
         $("#updatemembergroupForm")[0].reset();  
 
+        resetNewMembers();
+
         $scope.membergroup = {};
-        $scope.membergroup.membergroupid = 0;
-        $scope.current.newmember = 0; 
+        $scope.membergroup.membergroupid = 0; 
 
         $scope.current = {};
         $scope.current.membergroupid = 0;
         $scope.current.groupname = "";
         $scope.membergroups = {};
-        $scope.current.newmembers = {};
 
-        $scope.newmembergroupmembers = [];
         $scope.membergroupmembers =  [
             {
                 id: "0",
                 memberid: "0"
             }
         ];
-
-        $scope.newmembergroupmembers = {};
 
         membersFactory.getAllMemberGroups()
             .success( function(data) {
@@ -515,6 +464,12 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
             .error( function(edata) {
                 alert(edata);
             }); 
+    }
+
+    function resetNewMembers()
+    {
+        $scope.newmembergroupmembers = {}; 
+        $scope.current.newmember = 0;  
     }
 
     init();
@@ -543,12 +498,12 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         var idx = $scope.newmembergroupmembers.length;
         if (isEmpty(idx))
         {
-            $scope.newmembergroupmembers =  [  {  idx: "1", memberid: "0"  } ];
+            $scope.newmembergroupmembers =  [  {  idx: "1", membergroupid: $scope.current.membergroupid, memberid: "0"  } ];
         }
         else
         {
             idx = idx + 1;
-            $scope.newmembergroupmembers.push({'idx': idx, 'memberid':0});
+            $scope.newmembergroupmembers.push({'idx': idx, 'membergroupid': $scope.current.membergroupid, 'memberid':0});
         }
         
     };
@@ -627,6 +582,10 @@ controllers.updatemembergroupController = function ($scope, $http, $location, me
         {
             deletemembergroup();
         }
+    }
+
+    $scope.deleteNewMemberGroupMember = function (idx) {
+        deleteNewMemberGroupMember(idx);
     }
 
 }

@@ -1,6 +1,6 @@
 <div class="pageCaption row">
   <div class="col-md-12">
-    <h3 class="headerTitle4">Add Member Group</h3>
+    <h3 class="headerTitle4">Create Member Group</h3>
   </div> <!-- end of column -->
 </div> <!-- end of row -->
 
@@ -13,47 +13,18 @@
         <div class="panel panel-default">
           <div class="subpanelCaption panel-heading">Member Group Information</div>
           <div style="padding:10px;" class="form-horizontal">
-              <div class="form-group" >
+              <div style="padding-top:10px;" class="form-group" >
                 <label for="membergroupname" class="col-md-2 control-label">Group Name</label>
                 <div class="col-md-4">
                     <input tabindex="1" type="text" class="form-control" id="membergroupname" name="membergroupname" placeholder="Member Group name">
                 </div>
-
-                <div class="col-md-4">
-                    <span >
-                        <button class="btn btn-success btn-sm" ng-click="addNewMemberGroupMember()">Add Member
-                        </button>
-                    </span>
-                </div>
-              </div> <!-- end of form-group -->  
-
-              <div class="form-group" data-ng-repeat="membergroupmember in membergroupmembers">
-                  <div ng-show="showMemberGroupMemberLabel(membergroupmember)" class="col-md-2"> 
-                      <label for="membergroupmember" style="float:right;" class="control-label">Members</label>
-                  </div>   
-                  <div ng-hide="showMemberGroupMemberLabel(membergroupmember)" class="col-md-2"> 
-                      <label for="member" class="control-label">&nbsp;</label>
-                  </div> 
-                  <div class="col-md-4">
-                      <select class="form-control" ng-change="getAllMember(member.memberid,membergroupmember)" ng-model="member.memberid" id="memberid" name="memberid[]">
-                    <option ng-repeat="member in members" value="{{member.id}}">{{member.membername}}</option>
-                  </select>
-                  </div> <!-- end of col -->
-
-                  <div class="col-md-4">
-                    <span ng-show="showDeleteMemberGroupMember(membergroupmember)" ng-click="deleteMemberGroupMember(membergroupmember)" style="color:red;" class="btn glyphicon glyphicon-trash"></span>
-                </div>
+              
+                <button tabindex="15" id="addnewmembergroupbutton" data-ng-click="addnewmembergroup()" type="button" class="btn btn-primary">Add New Member Group</button>
               </div> <!-- end of form-group -->
-            </div> <!-- end of form-group -->
           </div> <!-- end of form-horizontal -->
 
           <div style="padding:10px;" class="form-horizontal">
-            <div class="form-group">
-              <div class="col-md-5">
-                <button tabindex="15" id="addnewmembergroupbutton" data-ng-click="addnewmembergroup(membergroupmembers)" type="button" class="btn btn-primary">Add Member Group</button>
-              </div>
-              </div> <!-- end of form-group -->
-          </div> <!-- end of form-horizontal -->
+            
         </div> <!-- end of panel panel -->              
           
       </form>

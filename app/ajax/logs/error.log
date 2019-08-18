@@ -322,3 +322,7 @@ WHERE teamid = 24
 and season = 2019
 and week = 
 
+2019-08-18 15:45:31 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.' at line 1 - Error function: delete msg: Unable to delete membergroupname for ddd membergroupname 11.
+2019-08-18 15:45:31 : SQL: DELETE FROM `membergroupmembertbl` WHERE membergroupid = '11'.
+2019-08-18 15:46:57 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.' at line 1 - Error function: delete msg: Unable to delete membergroupname for ddd membergroupname 11.
+2019-08-18 15:46:57 : SQL: DELETE FROM `membergroupmembertbl` WHERE membergroupid = '11'.

@@ -77,14 +77,14 @@
                     </div> <!-- end of col --> 
 
                     <div class="col-md-1">
-                        <span ng-click="deleteMemberGroupMember(membergroupmember)" style="display:inline;color:green;text-align:left;" class="btn glyphicon glyphicon-trash"></span>
+                        <span ng-click="deleteNewMemberGroupMember(newmembergroupmember.idx)" style="display:inline;color:green;text-align:left;" class="btn glyphicon glyphicon-trash"></span>
                     </div>
                 </div> <!-- end of form-group -->
             </div> <!-- end of panel panel -->
 
             <div style="padding-top:25px;padding-bottom:50px;" class="form-group">
                 <div class="col-md-offset-2 col-md-3">
-                    <button tabindex="18" id="updatemembergroupbutton" data-ng-click="updatemembergroup(newmembergroupmembers)" type="button" class="btn btn-primary">Update Member Group</button>
+                    <button tabindex="18" id="updatemembergroupbutton" data-ng-click="updatemembergroup(newmembergroupmembers)" type="button" class="btn btn-primary">Save New Member(s)</button>
                 </div>
        
                 <div ng-if="showDeleteGroupButton()" class="col-md-offset-2 col-md-3">

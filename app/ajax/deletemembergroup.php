@@ -32,7 +32,7 @@ include_once ('mysqlconnect.php');
 //---------------------------------------------------------------
 // Delete all the members from member group member table
 //---------------------------------------------------------------
-$sql = "DELETE FROM `membergroupmembertbl` WHERE membergroupid = '$membergroupid'.";
+$sql = "DELETE FROM membergroupmembertbl WHERE membergroupid = '$membergroupid'";
 
 //
 // sql query
@@ -43,7 +43,7 @@ include ('mysqlquery.php');
 //---------------------------------------------------------------
 // Delete the member group table
 //---------------------------------------------------------------
-$sql = "DELETE FROM `membergrouptbl` WHERE id = '$membergroupid'";
+$sql = "DELETE FROM membergrouptbl WHERE id = '$membergroupid'";
 
 //
 // sql query
