@@ -98,7 +98,7 @@ dddApp.config(function ($routeProvider) {
             }) 
         .when('/playerstatsmemberweeklyhelp',
             {
-                controller: 'playerstatsmemberweeklyController',
+                controller: 'helpController',
                 templateUrl: 'app/partials/help/playerstatsmemberweeklyhelp.html'
             }) 
         .when('/teamstandings',
