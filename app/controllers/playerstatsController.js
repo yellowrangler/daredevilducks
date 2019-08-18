@@ -157,6 +157,10 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
     $scope.getMemberProfile = function(memberid) {
         getMemberProfile(memberid);
     }
+
+    $scope.showHelp = function () {
+        $location.path("/playerstatstotalwinshelp");
+    }
 }
 
 controllers.playerstatstotalpercentageController = function ($scope, $http, $location, nflTeamsService, teamsFactory, membersFactory, loginService) {

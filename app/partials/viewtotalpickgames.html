@@ -1,8 +1,15 @@
 <div class="pageCaption row">
 	<div class="col-md-12">
-		<h2 class="headerTitle">Total Members Team picks for Week</h2>
-	</div> <!-- end of column -->
-</div> <!-- end of row -->	
+		<h2 style="display:inline;padding-right:30px;" class="headerTitle">Total Members Team picks for Week</h2>
+		<img ng-init="helpimg='HelpButton4Circle.png'" 
+			 ng-mouseover="helpimg='HelpButton3Circle.png'" 
+			 ng-mouseout="helpimg='HelpButton4Circle.png'"
+			 style="display:inline;float:right;padding-right:8%;height:50px;vertical-align:top;cursor:pointer;" 
+			 ng-click="showHelp()" 
+			 src="img/help/{{helpimg}}"> 
+	</div> 
+</div> <!-- end of row -->
+
 
 <div class="row">
 	<form id="pickweekForm" name="pickweekForm" style="padding:0px;" class="form-inline">

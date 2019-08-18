@@ -2,9 +2,9 @@
     <div style="padding-bottom:0px;"  class="col-md-12">
         <div class="pageCaption">
             <div style="padding-bottom:0px;">
-                <h2 style="display:inline;" class="headerTitle">Pick Your Teams Help</h2>
+                <h2 style="display:inline;" class="headerTitle">Member's picks for week Help</h2>
                 <div style="display:inlinex;float:right;float:right;padding-right:4%;">
-                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/pickgames')" id="goBack" name="goBack" >Return to Pick Your Teams</button>
+                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/viewselectpickgames')" id="goBack" name="goBack" >Return to Member's picks for week</button>
                 </div> <!-- end of panel body -->
             </div>  
         </div>
@@ -18,15 +18,13 @@
         </div>
 
         <div class="helpText">
-            <p>The <span style="color:#FF6E3B;font-weight:700;">Pick Your Teams</span> page is where a member picks his or her teams for a particular week in a particular season.</p>
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Member's picks for week</span> page is where a member can view the picks of any member for a particular week in a particular season.</p>
 
-            <p>You are presented with a list displaying team pairs (home and away) for the week. You select a team by clicking on the <span style="color:#FF6E3B;font-weight:700;">Team Name.</span>. A selected team turns <span style="color:white;background:maroon;">maroon</span>.</p>
+            <p>You select the member you wish to view from the <span style="color:#FF6E3B;font-weight:700;">Member</span> drop down list. The selected members icon will appear to the left. If you click on the members icon a window will pop up with that members information.</p> 
 
-            <p>You can select as many or as few teams as you wish. Just be sure to have selected all teams for the week prior to the start of the game. Any selections made after a game starts will be blocked.</p>
+            <p>You can further refine your selection by picking <span style="color:#FF6E3B;font-weight:700;">Season</span> or <span style="color:#FF6E3B;font-weight:700;">Week</span> from their respective drop down lists.  These will automatically default to the current season and week. As soon as any selection is made the list of picked teams appears. This list will reflect the criteria selected above.</p>
 
-            <p>After you have made your picks, you MUST save them by selecting the <span style="color:#FF6E3B;font-weight:700;">Save Picks</span> button. At that point a dialog box will appear that tells you how many teams you have picked out of how many were required to be picked.</p> 
-
-            <p>There are tools that you can use to help you make a pick. If you place your mouse cursor over any team icon, you will see the icon turn into a picture of a graph <img ng-src="img/nflicons/statistics.png" height="18" align="top">. This is to remind you that  selecting the team icon will bring up a window with competative information regarding the two teams playing each other!</p>
+            <p>The list displays team pairs (home and away) for the week. Selected team are <span style="color:white;background:maroon;">maroon</span>. Team scores in <span style="color:white;background:#006600;">green</span> are the winners. If you place your mouse cursor over any team icon, you will see the icon turn into a picture of a graph <img ng-src="img/nflicons/statistics.png" height="18" align="top">. Selecting the team icon will bring up a window with competitive information regarding the two teams playing each other!</p>
         </div>
     </div> <!-- end of col --> 
 </div> <!-- end of row --> 
@@ -38,41 +36,37 @@
         </div>
 
         <div class="helpSubTitle2">
-            Selecting and saving your team picks
+            Selecting Members and viewing the results
         </div>
 
         <div style="padding-bottom:40px;" class="helpText">
-            <p><img ng-src="img/help/pickgamesbuttons.png" align="top"></p>
+            <p><img ng-src="img/help/viewselectpickgamesbuttons.png" align="top"></p>
 
-            <p>This is where you select the season and week for your team picks. Its also where you save your picks.</p>
+            <p>This is where you select the Member whose picks you wish to see. You can further refine with options to select season and week.</p>
 
-            <p>First your avatar is displayed . Next is your screen name. Both of these items are not changeable by you at this time.</p>
+            <p>First the selected member's avatar is displayed (It will default to you). Selecting the Members icon will display a pop up of the Members details.</p>
 
-            <p>This is followed by 2 drop down lists. The first, is for selecting the season. This will automatically be set to the current season. But you can change it to see how you did in previous seasons. The second, is for selecting the game week. This will automatically be set to the current game week. But you can change it to look at previous weeks OR go to future weeks to make selections for a different week. In fact, you could make picks for every regular season game.</p>
-
-            <p>The last item is the <span style="color:#FF6E3B;font-weight:700;">Save Picks</span> button. Selecting this button will save all your picks for the season and week. <span style="color:#FF6E3B;font-weight:700;">REMEMBER</span> - You Must save your picks</p>
+            <p>Next is your member screen name. This is followed by 2 drop down lists. The first, is for selecting the season. This will automatically be set to the current season. But you can change it to see how the selected member did in previous seasons. The second, is for selecting the game week. This will automatically be set to the current game week. But you can change it to look at previous weeks OR go to future weeks to make selections for a different week.</p>
         </div>
 
         <div class="helpSubTitle2">
-            Picking your teams
+            Understanding the Teams List
         </div>
 
         <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
-            <p><img ng-src="img/help/pickgamesselectlist.png" align="top"></p>
+            <p><img style="height:129px;" ng-src="img/help/viewselectpickgamesteamslist.png" align="top"></p>
 
-            <p style="padding-top:15px;">This is where you pick your teams for the selected season and week. This is also where you can view competitive information regarding the two teams playing each other</p>
+            <p style="padding-top:15px;">Displayed are the teams playing for the season and week for the selected member. This example shows two lines from the list.</p>
 
-            <p>This example shows two lines from the <span style="color:#FF6E3B;font-weight:700;">Pick Your Teams</span> list.</p>
+            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Game Day</span>. It displays the game and the day and time that the game is being played.</p>
 
-            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Game Day</span>. It displays the network that is showing the game and the day and time that the game is being played. Trying to make a pick after this day and time will be blocked.</p>
-
-            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Home Team</span>. It displays the team icon and team name of the home team for this game. To pick the home team you must select the <span style="color:#FF6E3B;font-weight:700;">Team Name</span>. The selected team will turns <span style="color:white;background:maroon;">maroon</span> to show that it has been selected.  If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
+            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Home Team</span>. It displays the team icon and team name of the home team for this game. The selected team will appear <span style="color:white;background:maroon;">maroon</span> to show that it has been selected.  If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
 
              <p>The third column is <span style="color:#FF6E3B;font-weight:700;">Score</span>. It displays the home team score after the game has been played. A team score with a <span style="color:white;background:#006600;">green</span> background signifies a win for that team.</p>
 
             <p>The fourth column <span style="color:#FF6E3B;font-weight:700;">W L T</span> is the wins, losses and ties of the home team. </p>
 
-            <p>The fifth column is <span style="color:#FF6E3B;font-weight:700;">Away Team</span>. It displays the team icon and team name of the away team for this game. To pick the away team you must select the <span style="color:#FF6E3B;font-weight:700;">Team Name</span>. If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
+            <p>The fifth column is <span style="color:#FF6E3B;font-weight:700;">Away Team</span>. It displays the team icon and team name of the away team for this game. If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
 
             <p>The sixth column is <span style="color:#FF6E3B;font-weight:700;">Score</span>. It displays the away team score after the game has been played. A team score with a <span style="color:white;background:#006600;">green</span> background signifies a win for that team.</p>
 
@@ -83,7 +77,7 @@
             Competitive Information Pop-up
         </div>
 
-        <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
+        <div style="padding-bottom:35px;" class="helpText">
             <div class="row ">
                 <div style="padding-top:15px;" class="col-md-5">
                     <p><img ng-src="img/help/pickgamesmodalstats.png" align="center"></p>
@@ -140,20 +134,6 @@
     </div> <!-- end of col --> 
 </div> <!-- end of row -->    
 
-<div style="padding-top:0px;" class="row">
-    <div class="col-md-12 helpStandardOffset">
-        <div class="helpSubTitle">
-            Other Resources
-        </div>
-
-        <div class="helpText">
-            <p>Check out <a target="_blank" style="color:#990033;font-weight:bold;" href="https://youtu.be/YG9ZleppJwo">this</a> video about how to login and make your game picks from a desktopm computer.</p>
-
-            <p>Check out <a target="_blank" style="color:#990033;font-weight:bold;" href="https://youtu.be/9gR7SYGm2VM">this</a> video about how to login and make gamepicks from a mobile device. </p>
-           
-        </div>
-    </div> <!-- end of col --> 
-</div> <!-- end of row -->  
 
 <div style="padding:15px;" class="row">
          

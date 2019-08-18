@@ -1,4 +1,4 @@
-controllers.pickgames2Controller = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
+controllers.pickgamesController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
 
     //
     // this returnd false if admin true if other

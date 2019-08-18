@@ -258,8 +258,6 @@ controllers.addmembergroupController = function ($scope, $http, $location, membe
                 $("#addmembergroupForm")[0].reset();
 
                 alert("Member Group Name created succesfully!");
-
-                initMemberGroups();
             }
 
         })

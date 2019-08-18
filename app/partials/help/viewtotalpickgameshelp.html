@@ -1,0 +1,151 @@
+<div class="pageCaption row">
+    <div style="padding-bottom:0px;"  class="col-md-12">
+        <div class="pageCaption">
+            <div style="padding-bottom:0px;">
+                <h2 style="display:inline;" class="headerTitle">Total Members Team picks for Week Help</h2>
+                <div style="display:inlinex;float:right;float:right;padding-right:4%;">
+                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/viewtotalpickgames')" id="goBack" name="goBack" >Return to Total Members Team picks for Week</button>
+                </div> <!-- end of panel body -->
+            </div>  
+        </div>
+    </div> <!-- end of col -->
+</div> <!-- end of row -->   
+
+<div class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Summary
+        </div>
+
+        <div class="helpText">
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Total Members Team picks for Week</span> page is where a member can view the total member picks for each team for a particular week in a particular season. This is a great way to see how other members are picking!</p>
+
+            <p>You can select the <span style="color:#FF6E3B;font-weight:700;">Season</span> and <span style="color:#FF6E3B;font-weight:700;">Week</span> from their respective drop down lists.  These will automatically default to the current season and week. As soon as any selection is made the list of picked teams appears.</p>
+
+            <p>The list displays team pairs (home and away) for the week. The total member picks for each team are reflected under the <span style="color:#FF6E3B;font-weight:700;">Picks</span> column. Team picks in <span style="color:white;background:#006600;">green</span> are the winners. If you place your mouse cursor over any team icon, you will see the icon turn into a picture of a graph <img ng-src="img/nflicons/statistics.png" height="18" align="top">. Selecting the team icon will bring up a window with competitive information regarding the two teams playing each other!</p>
+
+            <p>Clicking on the <span style="color:#FF6E3B;font-weight:700;">Picks</span> number for any team brings up a list of all the members who made that team pick!</p>
+        </div>
+    </div> <!-- end of col --> 
+</div> <!-- end of row --> 
+
+<div style="padding-top:40px;" class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Details
+        </div>
+
+        <div class="helpSubTitle2">
+            Selecting and viewing the results
+        </div>
+
+        <div style="padding-bottom:40px;" class="helpText">
+            <p><img ng-src="img/help/viewtotalpickgamesbuttons.png" align="top"></p>
+
+            <p>This is where you can select the <span style="color:#FF6E3B;font-weight:700;">Season and</span> <span style="color:#FF6E3B;font-weight:700;">Week</span>. These values default to current season and week.</p>
+
+            <p>The <span style="color:white;background:#006600;">Winner</span> item reminds us that numbers under the <span style="color:white;background:#FF6E3B;">Picks</span> column in green are winners!</p>
+        </div>
+
+        <div class="helpSubTitle2">
+            Understanding the Teams List with Picks
+        </div>
+
+        <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
+            <p><img style="height:129px;" ng-src="img/help/viewtotalpickgamesteamslist.png" align="top"></p>
+
+            <p style="padding-top:15px;">Displayed are the teams playing for the season and week with total member picks. This example shows two lines from the list.</p>
+
+            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Game Day</span>. It displays the game and the day and time that the game is being played.</p>
+
+            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Home Team</span>. It displays the team icon and team name of the home team for this game. If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
+
+             <p>The third column is <span style="color:#FF6E3B;font-weight:700;">Picks</span>. It displays the total member picks for the home team. A team Pick with a <span style="color:white;background:#006600;">green</span> background signifies a win for the home team. Clicking on the team <span style="color:#FF6E3B;font-weight:700;">Picks</span> displays a pop up of all members who made those home team picks. That pop up will be be touched on later below.</p>
+
+            <p>The fourth column is the <span style="color:#FF6E3B;font-weight:700;">Away Team</span>. It displays the team icon and team name of the away team for this game. If you select the <span style="color:#FF6E3B;font-weight:700;">Team Icon</span> a window will pop up with competitive information regarding the two teams. These strategic stats will be touched on later below.</p>
+
+            <p>The fifth column is <span style="color:#FF6E3B;font-weight:700;">Picks</span>. It displays the total member picks for the away team. A team Pick with a <span style="color:white;background:#006600;">green</span> background signifies a win for the away team. Clicking on the team <span style="color:#FF6E3B;font-weight:700;">Picks</span> displays a pop up of all members who made those away team picks. That pop up will be be touched on later below.</p></p>
+        </div>
+
+        <div class="helpSubTitle2">
+            Member Picks List Pop-up
+        </div>
+
+        <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
+            <div class="row ">
+                <div style="padding-top:15px;" class="col-md-3">
+                    <img class="centeredImage" style="height:200px;" ng-src="img/help/viewtotalpickgamesmemberlistmodalstats.png">
+                </div>
+                <div style="padding-top:15px;" class="col-md-8">
+                    <p>This pop-up displays a list of all the members that made a pick for the team associated with the <span style="color:#FF6E3B;font-weight:700;">Picks</span> column.</p>
+                </div>
+            </div>
+        </div>   
+
+        <div class="helpSubTitle2">
+            Competitive Information Pop-up
+        </div>
+
+        <div style="padding-bottom:35px;" class="helpText">
+            <div class="row ">
+                <div style="padding-top:15px;" class="col-md-5">
+                    <p><img ng-src="img/help/pickgamesmodalstats.png" align="center"></p>
+                </div>
+
+                <div class="col-md-6">
+                    <p>This pop-up displays competitive statistics about the two teams involved in the game. This gives you a clear depiction of how the two teams compare via Standings, Competitive chart of team offense and defense, Power rankings from the pros and a numeric representation of the offensive and defensive rankings. Let's walk down the sections</p>
+
+                    <p>First section details standings. The two team icons appear over the team  W L T <span style="color:#FF6E3B;font-weight:700;">Standings</span> column. The standings display the W L T information for:</p>
+                    <ul>
+                        <li>Overall record</li>
+                        <li>Home record</li>
+                        <li>Away record</li>
+                        <li>Conference record</li>
+                        <li>Division record</li>
+                    </ul>
+
+                    <p>Overall record is the teams W L T record across the entire league. Home record is the teams W L T record against other teams at home. Away record is the teams W L T record against other teams when away. Conference record is the teams W L T record against other teams inside their conference. Division record is the teams W L T record against other teams inside their division.</p>
+
+                    <p>The second section charts rankings. Each team is compared offense to defense (O/D or D/O). The two teams are identified by a key with coloring. This uses the data from <span style="color:#FF6E3B;font-weight:700;">Team Rankings</span> with higher scores being better.</p>
+
+                    <p>The Third, Fourth and Fifth sections display three sets of competitive rankings broken into:</p>
+                    <ul>
+                        <li>Power Ranking</li>
+                        <li>Offensive Ranking record</li>
+                        <li>Defensive Ranking record</li>
+                    </ul>
+
+                    <p> The ratings for these three sections vary from the previous chart rankings in that with these numbers, a lower number is better.</p> 
+
+                    <p><span style="color:#FF6E3B;font-weight:700;">Power Rankings</span> are the combined rankings inclusive of offense and defense for each team.</p>
+
+                    <p>The following rankings for <span style="color:#FF6E3B;font-weight:700;">Offensive</span> and <span style="color:#FF6E3B;font-weight:700;">Defense</span> are further split into:</p>
+
+                    <ul>
+                        <li>Overall</li>
+                        <li>Scoring</li>
+                        <li>Passing</li>
+                        <li>Rushing</li>
+                    </ul>
+
+                </div> <!-- end of col --> 
+            </div>  <!-- end of row -->  
+
+            <div style="padding-top:15px;" class="row ">
+                <div class="col-md-12">
+
+                    <p>The <span style="color:#FF6E3B;font-weight:700;">Offense</span> section. <span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all ranked areas. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you score against your competition. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you pass (completions, yards, etc) against your competition. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you rush against your competition.</p>
+
+                    <p>The <span style="color:#FF6E3B;font-weight:700;">Defense</span> section. <span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all ranked areas. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you stopped scoring against your competition. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you stopped the pass against your competition. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you stopped the rush against your competition.</p>
+                </div>
+            </div>         
+        </div>
+    </div> <!-- end of col --> 
+</div> <!-- end of row -->    
+
+
+<div style="padding:15px;" class="row">
+         
+</div> <!-- end of row -->
+
+<div class="row" style="padding-bottom:0px;">&nbsp;</div><!-- end of row -->  

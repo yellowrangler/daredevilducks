@@ -43,8 +43,8 @@ dddApp.config(function ($routeProvider) {
             })        
         .when('/pickgames',
             {
-                controller: 'pickgames2Controller',
-                templateUrl: 'app/partials/pickgames2.html'
+                controller: 'pickgamesController',
+                templateUrl: 'app/partials/pickgames.html'
             })  
         .when('/pickgameshelp',
             {
@@ -56,15 +56,30 @@ dddApp.config(function ($routeProvider) {
                 controller: 'viewselectpickgamesController',
                 templateUrl: 'app/partials/viewselectpickgames.html'
             }) 
+        .when('/viewselectpickgameshelp',
+            {
+                controller: 'helpController',
+                templateUrl: 'app/partials/help/viewselectpickgameshelp.html'
+            }) 
         .when('/viewtotalpickgames',
             {
                 controller: 'viewtotalpickgamesController',
                 templateUrl: 'app/partials/viewtotalpickgames.html'
             }) 
+        .when('/viewtotalpickgameshelp',
+            {
+                controller: 'helpController',
+                templateUrl: 'app/partials/help/viewtotalpickgameshelp.html'
+            }) 
         .when('/playerstatstotalwins',
             {
                 controller: 'playerstatstotalwinsController',
                 templateUrl: 'app/partials/playerstatstotalwins.html'
+            }) 
+        .when('/playerstatstotalwinshelp',
+            {
+                controller: 'helpController',
+                templateUrl: 'app/partials/help/playerstatstotalwinshelp.html'
             }) 
         .when('/playerstatstotalpercentage',
             {

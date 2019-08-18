@@ -1,4 +1,4 @@
-controllers.pickgames2Controller = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
+controllers.pickgamesController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
     
     //
     // this returnd false if admin true if other
@@ -1081,6 +1081,10 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
 
         return status;
     }
+
+    $scope.showHelp = function () {
+        $location.path("/viewselectpickgameshelp");
+    }
 }
 
 controllers.viewtotalpickgamesController = function ($scope, $http, $location, teamsFactory, nflTeamsService, loginService) {
@@ -1417,6 +1421,10 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         status = compareScores(venue, homescore, awayscore);
 
         return status;
+    }
+
+    $scope.showHelp = function () {
+        $location.path("/viewtotalpickgameshelp");
     }
 
 }
