@@ -85,11 +85,21 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'playerstatstotalpercentageController',
                 templateUrl: 'app/partials/playerstatstotalpercentage.html'
-            }) 
+            })
+        .when('/playerstatstotalpercentagehelp',
+            {
+                controller: 'helpController',
+                templateUrl: 'app/partials/help/playerstatstotalpercentagehelp.html'
+            })     
         .when('/playerstatsmemberweekly',
             {
                 controller: 'playerstatsmemberweeklyController',
                 templateUrl: 'app/partials/playerstatsmemberweekly.html'
+            }) 
+        .when('/playerstatsmemberweeklyhelp',
+            {
+                controller: 'playerstatsmemberweeklyController',
+                templateUrl: 'app/partials/help/playerstatsmemberweeklyhelp.html'
             }) 
         .when('/teamstandings',
             {

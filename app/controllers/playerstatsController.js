@@ -323,6 +323,10 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
     $scope.getMemberProfile = function(memberid) {
         getMemberProfile(memberid);
     }
+
+    $scope.showHelp = function () {
+        $location.path("/playerstatstotalpercentagehelp");
+    }
 }
 
 controllers.playerstatsmemberweeklyController = function ($scope, $http, $location, membersFactory, nflTeamsService, teamsFactory, loginService) {
@@ -501,5 +505,9 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
 
     $scope.getMemberProfile = function(memberid) {
         getMemberProfile(memberid);
+    }
+
+    $scope.showHelp = function () {
+        $location.path("/playerstatsmemberweeklyhelp");
     }
 }
