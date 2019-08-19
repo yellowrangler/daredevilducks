@@ -126,6 +126,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'teamweeklyrankingController',
                 templateUrl: 'app/partials/teamweeklyranking.html'
             })
+        .when('/teamweeklyrankinghelp',
+            {
+                controller: 'helpController',
+                templateUrl: 'app/partials/help/teamweeklyrankinghelp.html'
+            })
         .when('/teamstatscharts',
             {
                 controller: 'teamstatschartsController',

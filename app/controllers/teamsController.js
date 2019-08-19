@@ -1465,4 +1465,8 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         toggleSort();
     }
 
+    $scope.showHelp = function () {
+        $location.path("/teamweeklyrankinghelp");
+    }
+
 }

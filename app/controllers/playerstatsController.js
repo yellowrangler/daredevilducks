@@ -325,7 +325,7 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
     }
 
     $scope.showHelp = function () {
-        $location.path("/playerstatstotalpercentagehelp");
+        $location.path("/teamweeklyrankinghelp");
     }
 }
 

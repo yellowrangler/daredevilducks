@@ -1,0 +1,113 @@
+<div class="pageCaption row">
+    <div style="padding-bottom:0px;"  class="col-md-12">
+        <div class="pageCaption">
+            <div style="padding-bottom:0px;">
+                <h2 style="display:inline;" class="headerTitle">Team Weekly Ranking Help</h2>
+                <div style="display:inlinex;float:right;float:right;padding-right:4%;">
+                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/teamweeklyranking')" id="goBack" name="goBack" >Return to Team Weekly Ranking</button>
+                </div> <!-- end of panel body -->
+            </div>  
+        </div>
+    </div> <!-- end of col -->
+</div> <!-- end of row -->    
+
+<div class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Summary
+        </div>
+
+        <div class="helpText">
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Team Weekly Ranking</span> page is where a member can view a seleted <span style="color:#FF6E3B;font-weight:700;">Team</span> rankings <span style="color:#FF6E3B;font-weight:700;">for the Season selected</span>.</p>
+
+            <p>You can select a <span style="color:#FF6E3B;font-weight:700;">Team</span> and <span style="color:#FF6E3B;font-weight:700;">Season</span> from drop down lists.</p> 
+
+            <p>The list will contain every game (including post games when defined) in the season selected for the team selected. The list will display the teams record for the week including scores. This will be followed by <span style="color:#FF6E3B;font-weight:700;"><span style="color:#FF6E3B;font-weight:700;">Power Rank</span>, <span style="color:#FF6E3B;font-weight:700;">Offence Ranks</span> and <span style="color:#FF6E3B;font-weight:700;">Defense Rank</span>. Theh last two further broken into <span style="color:#FF6E3B;font-weight:700;">Over All</span>, <span style="color:#FF6E3B;font-weight:700;">Score</span>, <span style="color:#FF6E3B;font-weight:700;">Pass</span> and <span style="color:#FF6E3B;font-weight:700;">Rush</span></p>
+
+            <p>The ranking list displays all seleted team games in week order. This can be reversed by selecting the <span style="color:#FF6E3B;font-weight:700;">Week</span> button.</p>
+
+            <p>The Teams list scrolls inside and beneath the headers. We did this so that the headers would stay in place while the list data scrolled</p> 
+
+        </div>
+    </div> <!-- end of col --> 
+</div> <!-- end of row --> 
+
+<div style="padding-top:40px;" class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Details
+        </div>
+
+        <div class="helpSubTitle2">
+            Selecting and viewing the results
+        </div>
+
+        <div style="padding-bottom:40px;" class="helpText">
+            <p><img ng-src="img/help/teamweeklyrankingbuttons.png" align="top"></p>
+
+            <p>This is where you can select <span style="color:#FF6E3B;font-weight:700;">Team</span> and  <span style="color:#FF6E3B;font-weight:700;">Season</span>.</p>
+
+            <p>Selecting the Team icon will take you to the Teams official website.</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Team</span> defaults to your favorate team if you have designeated one in your members profile (which you can updateby clicking your avatar on the top right corner of your Daredevil Ducks web page). Changing the Team will bring up rankings associated with that seaason.</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Season</span> defaults to the current season. Changing the season will bring up rankings associated with that team.</p>
+        </div>
+
+        <div class="helpSubTitle2">
+            Understanding the Ranking List
+        </div>
+
+        <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
+            <p><img  ng-src="img/help/teamweeklyrankinglist.png" align="top"></p>
+
+             <p>The Teams list scrolls inside and beneath the headers. We did this so that the headers would stay in place while the list data scrolled</p> 
+
+            <p style="padding-top:15px;">Displayed are the selected teams weekly rankings for the selected <span style="color:#FF6E3B;font-weight:700;">Season</span> and <span style="color:#FF6E3B;font-weight:700;">Team</span>. This example shows four lines from the list. Each Week consists of two lines</p>
+
+            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Week</span>. It displays the week number of the complete season in descending orders. You can toggle the order by clicking on the <span class="glyphicon glyphicon-sort-by-attributes"></span>.</p>
+
+            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Top - Home Bottom - Away</span>. It displays the teams competing for the selected season and week. The team in <span style="color:white;background:maroon;">maroon</span> is your selected team. A team score with a <span style="color:white;background:#006600;">green</span> background signifies a win for that team.</p>
+
+            <p>The third column is <span style="color:#FF6E3B;font-weight:700;">Score</span>. It displays the score for the selected season and week. Clicking on the members icon will display a pop up with that members information.</p>
+
+            <p>The fourth column is <span style="color:#FF6E3B;font-weight:700;">W L T</span>. It displays the team W = Wins, L = Losses and T = ties for the selected <span style="color:#FF6E3B;font-weight:700;">Season</span> and week. </p>
+
+            <p>The fifth column is <span style="color:#FF6E3B;font-weight:700;">Power Rank</span> which represents the combined rankings inclusive of offense and defense for the two teams.<span style="color:#FF6E3B;font-weight:700;">Lower number is better!</span></p>
+
+            <p>The sixth column is <span style="color:#FF6E3B;font-weight:700;">Offense</span> designated by it's color. <span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all ranked areas. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you score against your competition. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you pass (completions, yards, etc) against your competition. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you rush against your competition. <span style="color:#FF6E3B;font-weight:700;">Lower number is better!</span></p>
+
+            <p>The seventh column is <span style="color:#FF6E3B;font-weight:700;">Defense</span> designated by it's color. <span style="color:#FF6E3B;font-weight:700;">Overall</span> is a combined number across all ranked areas. <span style="color:#FF6E3B;font-weight:700;">Scoring</span> is how well you stopped scoring against your competition. <span style="color:#FF6E3B;font-weight:700;">Passing</span> is how well you stopped the pass against your competition. <span style="color:#FF6E3B;font-weight:700;">Rushing</span> is how well you stopped the rush against your competition. <span style="color:#FF6E3B;font-weight:700;">Lower number is better!</span></p>
+        </div>
+
+    </div> <!-- end of col --> 
+</div> <!-- end of row -->    
+
+<div style="padding-top:0px;" class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Other Resources
+        </div>
+
+        <div class="helpText">
+            <p>This Information displays the Rankings for the team selected, for each week.</p>
+
+            <p>Team Rankings.com’s Predictive Power Ratings Model uses the Predictive power ratings described in the first three parts of this series.  To summarize, a computer algorithm iteratively analyzes data on every NFL game result this season.  In the end, every team receives a simple numerical rating (e.g. 92.4 or 104.7) indicative of its actual, documented, proven track record at outscoring opponents.</p>
+
+            <p>Offensive Rankings are based on the highest to lowest Average of Yards Gained by each Team.</p>
+
+            <p>Defensive Rankings are based on the lowest to highest Average of Yards Gained by the Team’s Opponents.</p>
+
+            <p>The Offensive & Defensive Statistical Data is provided by SportsDirect Inc. via Team Rankings, LLC .  They are for the previous week’s game.</p>
+
+            <p>Hopefully this gives you a better idea of how to select the winning team for each game.</p>
+           
+        </div>
+    </div> <!-- end of col --> 
+</div> <!-- end of row -->  
+
+<div style="padding:15px;" class="row">
+         
+</div> <!-- end of row -->
+
+<div class="row" style="padding-bottom:0px;">&nbsp;</div><!-- end of row -->  
