@@ -894,6 +894,16 @@ border: 0 none;
 	width:'100%';
 }
 
+.center {
+	text-align: center;
+	/*clear: left;*/
+    margin-right: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+
 /* all page css */
 .topPagePosition {
 	padding-top:85px;

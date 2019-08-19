@@ -10,92 +10,39 @@
 	<div class="row" style="padding-top:30px;">
 		<div style="padding-top:40px;" class="col-md-5">
 			<div>
-
 				<a id="showpicture" name="showpicture" href="" ng-click="showPicture('Final Playoff Bracket',bracket)">
 	                <img style="width:100%;" src="img/ddd-Jess.png" alt="daredevil ducks mascot" class="img-rounded">
 	            </a>
-
-				<!-- <a href="#fireworks">
-					<img style="width:100%;" src="img/ddd-Jess.png" alt="daredevil ducks mascot" class="img-rounded">
-				</a> -->
 			</div>
 
 			<p style="padding-top: 40px;">
 				<a id="loginHomeButton" class="btn btn-primary btn-lg" ng-click="homepagelogin()" role="button">Login</a>
 			</p>
 
-			<br />
+			<div style="padding-top: 30px;" id="newsopinion" class="newsOpinion" ng-include="'app/partials/idddupdates.html'">
+		    </div> <!-- end of newsopinion -->
 
-			<!-- <div style="padding-top: 35px;">
-				<p class="headerTitle3" style="padding-top:5px;text-align:center; font-size:30px;">Welcome to 2018 Season!</p>
-			</div> -->
-
-			
-
-			<div style="padding-top:35px;">
-				<!-- <a id="showpicture" name="showpicture" href="" ng-click="showPicture()">
-	                <img style="width:100%;" src="img/ThanksgivingHomeScreen2018-noborder.png" alt="playoff bracket" class="img-rounded">
-	            </a> -->
-
-				<!-- <p class="headerTitle3" style="font-weight: 300;font-size:30px;letter-spacing:6px;text-align:center">Patriots Champions!</p> -->
-
-				<a id="showpicture" name="showpicture" href="#fireworks">
-	                <img style="width:100%;" src="img/FallHomePage2019.png" alt="New Season" class="img-rounded">
-	            </a>
-
-	           <!--  <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Patriots 2018 Champions!','patriots2018champions.png')">
-	                <img style="width:100%;" src="img/patriots2018champions.png" alt="NewYear" class="img-rounded">
-	            </a> -->
-			</div>
-
-		<!-- 	<div style="padding-top: 35px;">
-				<p style="padding-top: 15px;">
-					<span class="didyouknowHeaders">Did you know!</span>
-				</p>
-
-				<p class="didyouknowBody">
-					Did you know that you can pick your teams for a game from your mobile device? 
-				</p>
-				<p class="didyouknowBody">
-					Check out <a target="_blank" style="color:#990033;font-weight:bold;" href="https://youtu.be/9gR7SYGm2VM">this</a> video about how to login from a mobile devices and make your game picks. 
-				</p>
-				
-			</div> -->
+			<div style="padding-top: 30px;" id="newsopinion" class="newsOpinion" ng-include="'app/partials/ididyouknow.html'">
+		    </div> <!-- end of didyouknow -->
 		</div> <!-- end of col 6 -->
 
 		<div class="col-md-offset-1 col-md-6" style="padding-top:15px;" >
-		      <div class="">
+		    <div class="">
 		        <h3 class="headerTitle2">League News & Opinion</h3>
-		      </div>
+		    </div>
 
-		      <div id="newsopinion" class="newsOpinion" ng-include="'app/partials/inewsopinion.html'">
-		      	<!-- style="display:block;overflow-y:auto;height:{{current.homeNewsOpinionesize}}px;"> -->
-		      </div> <!-- end of panel body -->
+		    <div id="newsopinion" class="newsOpinion" ng-include="'app/partials/inewsopinion.html'">
+		    </div> <!-- end of newsopinion -->	
 
-		      <div style="padding-top: 15px;">
-				<p style="padding-top: 15px;">
-					<span class="didyouknowHeaders">Did you know!</span>
-				</p>
-
-				<p class="didyouknowBody">
-					Please take our 2019 Dare Devil Ducks Survey. 
-		             &nbsp;This will help us improve your viewing experience!
-				</p>
-
-				<p class="didyouknowBody">
-					Check out <a target="_blank" style="color:#990033;font-weight:bold;" href="https://youtu.be/9gR7SYGm2VM">this</a> video about how to login from a mobile device and make your game picks. 
-				</p>
+		    <div>
+				<a id="showpicture" name="showpicture" href="#fireworks">
+	                <img style="width:75%;" src="img/FallHomePage2019.png" alt="New Season" class="img-responsive center-block">
+	            </a>
 			</div>
 		</div> <!-- end of col 6 -->
 	</div> <!-- end of row -->
 </div> <!-- end of jumbo -->
 
-<!-- <div style="float:left; padding-right:20px;">
-	<a id="anchorMessage" class="anchorMessage" href="#/editorial" >
-		<img style="height:45px;" src="img/frenchflag.png" alt="FRENCH FLAG">&nbsp;We stand with the People of France
-	</a>
-</div>
- -->
 <div style="padding-top:35px;">&nbsp;</div>
 
 </div> <!-- end of container -->

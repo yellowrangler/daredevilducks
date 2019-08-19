@@ -523,4 +523,8 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
         getMemberSurveyComments(questionid);
     }
 
+    $scope.showHelp = function () {
+        $location.path("/surveyresultshelp");
+    }
+
 }
