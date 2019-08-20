@@ -3,9 +3,12 @@
         <div class="pageCaption">
             <div style="padding-bottom:0px;">
                 <h2 style="display:inline;" class="headerTitle">Member's picks for week Help</h2>
-                <div style="display:inlinex;float:right;float:right;padding-right:4%;">
-                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/viewselectpickgames')" id="goBack" name="goBack" >Return to Member's picks for week</button>
-                </div> <!-- end of panel body -->
+                <img ng-init="helpimg='DonalDuckSoldierCanadiangoback.png'" 
+                     ng-mouseover="helpimg='DonalDuckSoldierCanadiangoback.png'" 
+                     ng-mouseout="helpimg='DonalDuckSoldierCanadiangoback.png'"
+                     style="display:inline;float:right;padding-right:8%;height:50px;vertical-align:top;cursor:pointer;" 
+                     ng-click="goBack('/viewselectpickgames')" 
+                     src="img/help/{{helpimg}}">
             </div>  
         </div>
     </div> <!-- end of col -->
@@ -54,7 +57,7 @@
         </div>
 
         <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
-            <p><img style="height:129px;" ng-src="img/help/viewselectpickgamesteamslist.png" align="top"></p>
+            <p><img style="" ng-src="img/help/viewselectpickgamesteamslist.png" align="top"></p>
 
             <p style="padding-top:15px;">Displayed are the teams playing for the season and week for the selected member. This example shows two lines from the list.</p>
 

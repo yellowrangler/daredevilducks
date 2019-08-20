@@ -3,9 +3,12 @@
         <div class="pageCaption">
             <div style="padding-bottom:0px;">
                 <h2 style="display:inline;" class="headerTitle">Pick Your Teams Help</h2>
-                <div style="display:inlinex;float:right;float:right;padding-right:4%;">
-                    <button style="font-weight:500;" class="btn btn-info btn-sm" ng-click="goBack('/pickgames')" id="goBack" name="goBack" >Return to Pick Your Teams</button>
-                </div> <!-- end of panel body -->
+                    <img ng-init="helpimg='DonalDuckSoldierCanadiangoback.png'" 
+                     ng-mouseover="helpimg='DonalDuckSoldierCanadiangoback.png'" 
+                     ng-mouseout="helpimg='DonalDuckSoldierCanadiangoback.png'"
+                     style="display:inline;float:right;padding-right:8%;height:50px;vertical-align:top;cursor:pointer;" 
+                     ng-click="goBack('/pickgames')" 
+                     src="img/help/{{helpimg}}">
             </div>  
         </div>
     </div> <!-- end of col -->
