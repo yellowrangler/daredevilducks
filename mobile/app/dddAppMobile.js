@@ -48,7 +48,7 @@ dddAppMobile.config(function ($routeProvider) {
             })                   
         .when('/pickgames',
             {
-                controller: 'pickgames2Controller',
+                controller: 'pickgamesController',
                 templateUrl: 'app/partials/pickgames.html'
             })      
         .when('/viewselectpickgames',
