@@ -8,9 +8,8 @@ include_once ('../class/class.AccessLog.php');
 // post input
 //
 $membergroupid = $_POST['membergroupid'];
+$memberid = $_POST['memberid'];
 
-// print_r($_POST);
-// die();
 
 //
 // get date time for this transaction
@@ -26,30 +25,20 @@ $msgtext = "ok";
 //
 // db connect
 //
-$modulecontent = "Unable to delete membergroupname for ddd membergroupname $membergroupid.";
+$modulecontent = "Unable to delete member from membergroupname for memberid $memberid and membergroupid $membergroupid $membergroupid.";
 include_once ('mysqlconnect.php');
 
 //---------------------------------------------------------------
 // Delete all the members from member group member table
 //---------------------------------------------------------------
-$sql = "DELETE FROM membergroupmembertbl WHERE membergroupid = '$membergroupid'";
+$sql = "DELETE FROM membergroupmembertbl 
+		WHERE membergroupid = '$membergroupid'
+		AND memberid = '$memberid'";
 
 //
 // sql query
 //
 $function = "delete";
-include ('mysqlquery.php');
-
-//---------------------------------------------------------------
-// Delete the member group table
-//---------------------------------------------------------------
-$sql = "DELETE FROM membergrouptbl WHERE id = '$membergroupid'";
-
-//
-// sql query
-//
-$function = "delete";
-$modulecontent = "Unable to delete membergrouptbl for ddd membergrouptbl $membergroupid.";
 include ('mysqlquery.php');
 
 // 

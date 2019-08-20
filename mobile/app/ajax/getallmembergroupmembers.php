@@ -35,8 +35,10 @@ include_once ('mysqlconnect.php');
 //---------------------------------------------------------------
 // get meber group members
 //---------------------------------------------------------------
-$sql = "SELECT *  
-FROM membergroupmembertbl 
+$sql = "SELECT MGM.id as membergroupmemberid, membergroupid, memberid, membername, screenname, avatar  
+FROM membergroupmembertbl MGM
+LEFT JOIN membergrouptbl MG ON MG.id = MGM.membergroupid
+LEFT JOIN membertbl M ON M.id = MGM.memberid
 WHERE membergroupid = '$membergroupid'";
 // print $sql;
 
@@ -63,5 +65,4 @@ mysqli_close($dbConn);
 // pass back info
 //
 exit(json_encode($membergroupmembers));
-
 ?>

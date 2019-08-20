@@ -7,15 +7,8 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
-$membergroupid = $_POST['membergroupid'];
-
-$membergroupmemberids = array();
-foreach ($_POST['memberid'] as $key => $value) {
-	$membergroupmemberids[$key] = $value;
-}
-
-// print_r($_POST);
-// die();
+$newmembers = array();
+$newmembers = json_decode($_POST['newmembers'], true);
 
 //
 // get date time for this transaction
@@ -31,31 +24,21 @@ $msgtext = "ok";
 //
 // db connect
 //
-$modulecontent = "Unable to update membergroup members for ddd membergroupname $membergroupid.";
+$modulecontent = "Unable to add new membergroup members for ddd membergroupname $membergroupid.";
 include_once ('mysqlconnect.php');
-
-//---------------------------------------------------------------
-// Delete all the members and then add all members
-//---------------------------------------------------------------
-$sql = "DELETE FROM `membergroupmembertbl` WHERE membergroupid = '$membergroupid'";
-
-//
-// sql query
-//
-$function = "delete";
-$modulecontent = "Unable to delete membergroupmembertbl for ddd membergroupmembertbl $membergroupid.";
-include ('mysqlquery.php');
 
 //
 // loop through members and insert
 //
-foreach ($membergroupmemberids as $key => $memberid) {
-	//---------------------------------------------------------------
-	// insert new membergroup members
-	//---------------------------------------------------------------
+foreach ($newmembers as $key => $value) {
+	$membergroupid = $value['membergroupid'];
+	$memberid = $value['memberid'];
+
 	$sql = "INSERT INTO membergroupmembertbl
-		(membergroupid, memberid) 
-		VALUES ('$membergroupid', '$memberid')";
+	(membergroupid, memberid) 
+	VALUES ('$membergroupid', '$memberid')";
+
+	// print "sql = $sql <br>";
 
 	//
 	// sql query

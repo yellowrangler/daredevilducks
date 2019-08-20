@@ -9,11 +9,6 @@ include_once ('../class/class.AccessLog.php');
 //
 $membergroupname = $_POST['membergroupname'];
 
-$membergroupmemberids = array();
-foreach ($_POST['memberid'] as $key => $value) {
-	$membergroupmemberids[$key] = $value;
-}
-
 // print_r($membergroupids);
 // die();
 
@@ -96,35 +91,12 @@ $membergroup = mysqli_fetch_assoc($sql_result);
 $mebergroupid = $membergroup["id"];
 
 //
-// loop through members and insert
-//
-foreach ($membergroupmemberids as $key => $memberid) {
-	//---------------------------------------------------------------
-	// insert new membergroup members
-	//---------------------------------------------------------------
-	$sql = "INSERT INTO membergroupmembertbl
-		(membergroupid, memberid) 
-		VALUES ('$mebergroupid', '$memberid')"; 
-
-	//
-	// sql query
-	//
-	$function = "insert";
-	$modulecontent = "Unable to insert mebername into membergroupname for ddd membergroupname $membergroupname and membergroupmembertbl $memberid.";
-	include ('mysqlquery.php');	
-}
-
-//
 // close db connection
 //
 mysqli_close($dbConn);
 	
-// print_r($regiterclientid);
-// print("I am here");
-// die();	
-
 //
 // pass back info
-
+//
 exit($msgtext);
 ?>
