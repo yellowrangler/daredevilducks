@@ -49,7 +49,7 @@ try {
     echo "/n Exception /n";
 }
 
-// var_dump ( libxml_get_errors () );
+var_dump ( libxml_get_errors () );
 $jsonContent = json_encode($rssContent);
 exit ($jsonContent);
 ?>
