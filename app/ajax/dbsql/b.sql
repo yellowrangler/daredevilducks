@@ -5564,10 +5564,11 @@ CREATE TABLE `nflrsstbl` (
 LOCK TABLES `nflrsstbl` WRITE;
 /*!40000 ALTER TABLE `nflrsstbl` DISABLE KEYS */;
 INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (1,'NFL','http://www.nfl.com/rss/rsslanding?searchString=home');
-INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (2,'ESPN','http://sports.espn.go.com/espn/rss/nfl/news');
+INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (2,'ESPN','https://www.espn.com/espn/rss/nfl/news');
 INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (3,'Rotowire','http://www.rotowire.com/rss/news.htm?sport=nfl');
 INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (4,'FOX','http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl');
 INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (5,'Boston Globe','http://www.boston.com/tag/new-england-patriots/?feed=rss');
+INSERT INTO `nflrsstbl` (`id`, `rsssource`, `rsslink`) VALUES (6,'Bleacher Report','http%3A%2F%2Fbleacherreport.com/articles/feed?tag_id=16');
 /*!40000 ALTER TABLE `nflrsstbl` ENABLE KEYS */;
 UNLOCK TABLES;
 

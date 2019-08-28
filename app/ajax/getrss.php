@@ -30,32 +30,50 @@ else
 	}
 }
 
-function display_xml_error($error, $xml)
+function xmlRss($url)
 {
-    $return  = $xml[$error->line - 1] . "\n";
-    $return .= str_repeat('-', $error->column) . "^\n";
+	try {
+	  $rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
+	  if ($rssContent === false)
+	  {
+	  	$errors = libxml_get_errors();
+	    foreach($errors as $error) {
+	        // echo "\t", $error->message;
+	        echo display_xml_error($error, $xml);
 
-    switch ($error->level) {
-        case LIBXML_ERR_WARNING:
-            $return .= "Warning $error->code: ";
-            break;
-         case LIBXML_ERR_ERROR:
-            $return .= "Error $error->code: ";
-            break;
-        case LIBXML_ERR_FATAL:
-            $return .= "Fatal Error $error->code: ";
-            break;
-    }
+	        echo "rssContent = $rssContent";
+	    }
 
-    $return .= trim($error->message) .
-               "\n  Line: $error->line" .
-               "\n  Column: $error->column";
+	    libxml_clear_errors();
+	  }
+	} catch (Exception $e) {
+	    echo "/n Exception /n";
+	}
 
-    if ($error->file) {
-        $return .= "\n  File: $error->file";
-    }
 
-    return "$return\n\n--------------------------------------------\n\n";
+	return json_encode($rssContent);
+
+	// var_dump ( libxml_get_errors () );
+}
+
+function curlRss($url)
+{
+	// create curl resource 
+    $ch = curl_init(); 
+
+    // set url 
+    curl_setopt($ch, CURLOPT_URL, $url); 
+
+    //return the transfer as a string 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+    // $output contains the output string 
+    $output = curl_exec($ch); 
+
+    // close curl resource to free up system resources 
+    curl_close($ch);    
+
+	return $output;
 }
 
 //
@@ -63,27 +81,7 @@ function display_xml_error($error, $xml)
 //
 $datetime = date("Y-m-d H:i:s");
 
-libxml_use_internal_errors(true);
-// $rssurl = rawurlencode($url);
-try {
-  $rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
-  if ($rssContent === false)
-  {
-  	$errors = libxml_get_errors();
-    foreach($errors as $error) {
-        // echo "\t", $error->message;
-        echo display_xml_error($error, $xml);
+$jsonContent = xmlRss($url);
 
-        echo "rssContent = $rssContent";
-    }
-
-    libxml_clear_errors();
-  }
-} catch (Exception $e) {
-    echo "/n Exception /n";
-}
-
-// var_dump ( libxml_get_errors () );
-$jsonContent = json_encode($rssContent);
 exit ($jsonContent);
 ?>
