@@ -73,6 +73,8 @@ try {
     foreach($errors as $error) {
         // echo "\t", $error->message;
         echo display_xml_error($error, $xml);
+
+        echo "rssContent = $rssContent";
     }
 
     libxml_clear_errors();
