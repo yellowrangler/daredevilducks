@@ -12,6 +12,23 @@ include_once ('../class/class.AccessLog.php');
 // get post variable
 //
 $url = $_POST['url'];
+if (isset($_POST["url"]))
+{
+	$url = $_POST["url"];
+}
+else
+{
+	if (isset($_GET["url"]))
+	{
+		$url = $_GET["url"];
+	}
+	else
+	{
+		$msg = $msg . "No url passed - getrss terminated";
+		exit($msg);
+
+	}
+}
 
 //
 // get date time for this transaction
