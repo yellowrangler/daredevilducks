@@ -5,11 +5,7 @@ include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
 //
-// functions
-//
-
-//
-// get post variable
+// get post and get variable
 //
 $url = $_POST['url'];
 if (isset($_POST["url"]))
@@ -30,6 +26,39 @@ else
 	}
 }
 
+//
+// functions
+//
+function display_xml_error($error, $xml)
+{
+	echo "Inside display_xml_error!";
+
+    $return  = $xml[$error->line - 1] . "\n";
+    $return .= str_repeat('-', $error->column) . "^\n";
+
+    switch ($error->level) {
+        case LIBXML_ERR_WARNING:
+            $return .= "Warning $error->code: ";
+            break;
+         case LIBXML_ERR_ERROR:
+            $return .= "Error $error->code: ";
+            break;
+        case LIBXML_ERR_FATAL:
+            $return .= "Fatal Error $error->code: ";
+            break;
+    }
+
+    $return .= trim($error->message) .
+               "\n  Line: $error->line" .
+               "\n  Column: $error->column";
+
+    if ($error->file) {
+        $return .= "\n  File: $error->file";
+    }
+
+    return "$return\n\n--------------------------------------------\n\n";
+}
+
 function xmlRss($url)
 {
 	try {
@@ -38,10 +67,7 @@ function xmlRss($url)
 	  {
 	  	$errors = libxml_get_errors();
 	    foreach($errors as $error) {
-	        // echo "\t", $error->message;
 	        echo display_xml_error($error, $xml);
-
-	        echo "rssContent = $rssContent";
 	    }
 
 	    libxml_clear_errors();

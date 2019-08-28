@@ -183,11 +183,6 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         $scope.newsurl = "";
         $scope.current.newsidx = -1;
 
-        // $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
-        // $scope.newsurl = 'http://www.nfl.com/rss/rsslanding?searchString=home';
-        // $scope.newsurl = 'http://sports.espn.go.com/espn/rss/nfl/news';
-        // $scope.newsurl = 'http://www.rotowire.com/rss/news.htm?sport=nfl';
-        // $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
         getNFLrssFeed();
 
         setviewpadding();
