@@ -35,5 +35,4 @@ try {
 // var_dump ( libxml_get_errors () );
 $jsonContent = json_encode($rssContent);
 exit ($jsonContent);
-
 ?>
