@@ -35,7 +35,8 @@ dddAppMobile.service('selectListService', function () {
     ];
 
     var emtList = [ 
-        { title :  "Welcome", url : "welcome-email.html", type : "normal", recipients : "manual" },
+        { title :  "New Member Welcome - Have info", url : "welcome-haveinfo-email.html", type : "normal", recipients : "manual" },
+        { title :  "New Member Welcome - Need Info", url : "welcome-needinfo-email.html", type : "normal", recipients : "manual" },        
         { title :  "New Avatar", url : "avatar-change-email.html", type : "normal", recipients : "manual" },
         { title :  "New Avatar and Login", url : "avatar-login-change-email.html", type : "normal", recipients : "manual" },
         { title :  "New Login", url : "login-change-email.html", type : "normal", recipients : "manual" },
