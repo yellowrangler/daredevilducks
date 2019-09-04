@@ -100,6 +100,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     init();
     function init() {
+        $scope.imagePath = "img";
         $scope.isSnowing = 0;
         $scope.intervalVariable = "";
         AnimateTextColor("letitsnowtext",

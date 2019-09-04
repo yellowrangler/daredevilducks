@@ -91,8 +91,8 @@
 .newsOpinionHeaders {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	font-size: 18px;
-	color: #b57f7f;
+	font-size: 22px;
+	color: #00BBC0;
 }
 
 .cursiveTangerine {
@@ -941,17 +941,25 @@ border: 0 none;
 }
 
 .didyouknowHeaders {
-	font-family: 'Lato', sans-serif;
+	/*font-family: 'Lato', sans-serif;
 	font-weight: 900;
 	font-size: 20px;
-	color: #b57f7f;
+	color: #b57f7f;*/
+	color:#00BBC0;
+	font-family: 'aileronthin', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 24px;
 }
 
 .didyouknowBody {
-	font-family: 'Lato', sans-serif;
+	/*font-family: 'Lato', sans-serif;
 	font-weight: 900;
-	font-size: 20px;
-	color: #6C0000;
+	font-size: 17px;
+	color: #999999;*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 17px;
 }
 
 .surveyHomePage {

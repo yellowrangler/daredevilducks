@@ -2,9 +2,10 @@
 
 $emailtopwriteup = "	
 <p>	
-The Patriots are your 2018 Super Bowl Champions! Man I love the sound of that! This makes 6 Super Bowls tieing them with the Pittsburgh Steelers. In a age where football has been tinkered with to emphasize the offense, this was a throwback game; featuring the best defense I have seen from the Patriots since their first Super Bowl. This was the lowest scoring Super Bowl ever. Think about that. The Patriots held one of the highest scoring teams to 3 points. Booyah! Great Team. Great Chemistry. Dynasty.
+The 2019 football season is finally here! Are you ready for some football! Yea, me too! This thursday is the opening game for the 2019 Season featuring Green Bay and Chicago. Please remember to vote for your teams. 
 </p>
 
+<!-- 
 <p>
   All in all a superb season of football!
 </p> 
@@ -28,7 +29,6 @@ So there we have it. The Super Bowl is over. The football gods have spoken. Supe
 	Click on the Patriots Champions image on the home page to see the fireworks!
 </p> 
 
-<!-- 
 <p>
 	We added a new feature where if you hold the mouse over a team icon, a bar graph image appears. This is to emphasize the point that clicking on that team icon will bring up the teams statistics.
 </p> 
@@ -45,10 +45,11 @@ So there we have it. The Super Bowl is over. The football gods have spoken. Supe
 <p>
 	The Statistics from week 19 are available thanks to the hard work of Wildcat Wonder!
 </p>
- --> 
+
 
 <p>
 The FINAL stats are below! Read em and weep (I know I do)!
-</p>   
+</p> 
+ -->   
 ";
 ?>
