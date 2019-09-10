@@ -3,6 +3,6 @@
 $emailbottomwriteup = "
 <br />
 
-The Season Begins!
+Please take the Daredevild Ducks survey if you have not already!
 ";
 ?>

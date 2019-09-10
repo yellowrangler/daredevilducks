@@ -2,54 +2,47 @@
 
 $emailtopwriteup = "	
 <p>	
-The 2019 football season is finally here! Are you ready for some football! Yea, me too! This thursday is the opening game for the 2019 Season featuring Green Bay and Chicago. Please remember to vote for your teams. 
-</p>
-
-<!-- 
-<p>
-  All in all a superb season of football!
-</p> 
-
-<p>	
-This years Dare Devilducks winner is 4Horsemen! Congratulations 4Horsemen you have the additional distinction of being our first male winner as well. 
-</p>
-<p>	
-So there we have it. The Super Bowl is over. The football gods have spoken. Super Bowl LIII in the books and the Patriots are your Champions! Thank you all for joining us this year. We hope you all had fun. Because in the end, fun is what we are all about. Please join us again next year and tell your friends. Because more is always merrier!
-</p>
-
-<p style='padding-top: 15px;'>
-	<span style='font-family: \"Lato\", sans-serif;font-weight: 300;font-size: 18px;color: #b57f7f;' >Daredevil Ducks Updates</span>
+This year represents the one-hundredth NFL season. We are sure to be subjected to copious amounts of NFL nostalgia throughout these games. Be prepared for many journeys in Mr Peabody's wayback machine (if you dont understand the reference your too young).
 </p>
 
 <p>
-	Click on the large Dare Devilducks logo on the home page to see the final bracket! 
-</p>
-
-<p>	
-	Click on the Patriots Champions image on the home page to see the fireworks!
+The first week of the 2019 season is finally tucked away. Not the best played week in football, but there were some great finishes! We started with the Packers against da Bears. Not a pretty game as neither team looked dominant. The difference was Rodgers ability to connect with Graham for the only touchdown. Green Bay wins. The Redskins and Eagles battled back and forth. Both teams looked good to me. Eagles outlast Redskins to win. The Bills and Jets was a sloppy game to watch. It had a nail biter ending, with the Bills winning by scoring last and recovering a Jets fumble with twelve seconds left.
 </p> 
 
 <p>
-	We added a new feature where if you hold the mouse over a team icon, a bar graph image appears. This is to emphasize the point that clicking on that team icon will bring up the teams statistics.
+The Vikings spanked an anemic looking Atlanta. The Ravens embarrassed Miami, leaving pundits to anoint Miami as most likely to receive the number one college draft pick. The Chiefs looked very good as they crushed the undisciplined Jaguars. The Titans spoiled the Browns home opener intercepting Mayfield three times on their way to a 43 to 13 win. The Rams beat the Panthers in a close contest. The Seahawks beat the Bengals by 1. The Chargers beat the Luck-less Colts. The 49ers beat the Buccaneers. The Cowboys crushed the Giants.
 </p> 
 
 <p>
-	Wildcat Wonder added a new chart which shows and will continue to show; where teams stand with respect to the playoffs. Including 1st round byes, Wild Cards and 'In the Hunt'. You will find this new chart on the 'Team Playoff Brackets' page under 'Teams' AND by clicking on the large Daredevil ducks icon on the home page.
-</p>
-
-<p>
-	The Statistics week 20 and playoff bracket for week 21 will be available soon!
-</p>
-
-
-<p>
-	The Statistics from week 19 are available thanks to the hard work of Wildcat Wonder!
-</p>
-
-
-<p>
-The FINAL stats are below! Read em and weep (I know I do)!
+The Lions tied the Cardinals in a game where the Lions had the game won. The Patriots looked steady in their win as they easily handled the Steelers. It was a momentous evening as the Patriots had their sixth super bowl banner raised prior to kickoff! The Texans lost to the Saints in the weeks most exciting game. The Saints won on a last second 58 yard field goal by Lutz. The Raiders beat the Broncos in the final contest.
 </p> 
- -->   
+
+<p>
+  All in all a superb week of football!
+</p> 
+
+<!--
+<p>
+	The Statistics week 1 will be available soon!
+</p>
+ -->
+
+<p>
+	The Statistics from week 1 are available thanks to the hard work of Wildcat Wonder!
+</p>
+
+<p>
+We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>Bright Eyes</span>, <span style='color:#FF6E3B;font-weight:700;'>Gzzer1</span> and <span style='color:#FF6E3B;font-weight:700;'>Hail Mary</span> are in first place on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! They are followed by many others in second and third place. 
+</p>
+
+<!--
+<p>
+<span style='font-weight:bold; color:#228b22;'>18 Wheeler</span> and <span style='font-weight:bold; color:#228b22;'>NFL Amateur</span> have also taken command of first place (100%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board.
+</p>
+-->
+
+<p>
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Bright Eyes</span>, <span style='color:#FF6E3B;font-weight:700;'>Gzzer1</span> and <span style='color:#FF6E3B;font-weight:700;'>Hail Mary</span> in first place followed by a host of others tied for second. Way to go folks!
+</p>
 ";
 ?>
