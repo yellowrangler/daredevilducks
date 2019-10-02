@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-The third week of the 2019 season is in the bag. Team identities are being sculpted. Making picks will require more energy from those tiny gray cells!
+The fourth week of the 2019 season is in the bag. Making picks will require even more energy from those tiny gray cells!
 </p> 
 
 <p>
-The Jaguars won their first and looked much better as they pummeled the hapless Titans. The Lions beat the Eagles but still need to stop making foolish mistakes. The Patriots routed the leaderless Jets. The Vikings put together a fine win against a pesky Raiders team. The Chiefs beat the Ravens in a slug fest. The Colts beat the struggling Falcons. The Packers beat the now 0 - 3 Broncos.  
+The Eagles beat the Packers in a thrilling contest to start the week. The Titans beat a mercurial Falcons team in Atlanta. After anointing the Raven's Lamar Jackson as the next coming quarterback, he and his Ravens were soundly defeated by the Browns. The Patriots beat the Bills in an ugly contest, but an ugly win is still a win! The Chiefs beat the Lions in a badly officiated game.
 </p> 
 
 <p>
-The Cowboys crushed a pathetic Dolphins team. The surprising Bills beat the Bengals to remain tied with the Patriots at 3 - 0. Those two will play next week. Two go in - one comes out! The Giants scraped by the Buccaneers with a last second field goal. The Panthers without their starting quarterback beat the Cardinals. The 49ers beat the Steelers in a game fraught with turnovers.
+The Panthers upset the Texans, and the Raiders upset the Colts. The Chargers beat the hapless Dolphins. The Giants beat a disappointing Redskins team. The Seahawks beat the Cardinals. In one of the largest scoring affairs, the Buccaneers beat the LA Rams. The Bears beat the disappointing Vikings.
 </p> 
 
 <p>
-The Saints without their starting quarterback beat the Seahawks. The Texans were last man standing in a back and forth contest against the Chargers. The Rams squeaked by the Browns and in the final game of the week; da Bears pounded the Redskins.
+The Jaguars beat the Broncos and the Saints, without Brees, beat the tough talking Cowboys. In the final game of the week the Steelers looked good as they crushed the Bengals to get their first win of the season.
 </p> 
 
 <p>
@@ -22,7 +22,7 @@ The Saints without their starting quarterback beat the Seahawks. The Texans were
 </p> 
 
 <p>
-We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>Bright Eyes</span> continues her hold on first place on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Scotsman357</span> and <span style='color:#FF6E3B;font-weight:700;'>Team Remington</span> in second place. With a host of others in third place. 
+We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span>, <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> and <span style='color:#FF6E3B;font-weight:700;'>Triple Option ERF</span> are our new first place leaders on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! They are followed by <span style='color:#FF6E3B;font-weight:700;'>Bright Eyes</span>, <span style='color:#FF6E3B;font-weight:700;'>Dr Joy</span>, <span style='color:#FF6E3B;font-weight:700;'>Hygenius</span> and <span style='color:#FF6E3B;font-weight:700;'>Team Remington</span> in second place. With a host of others in third place. 
 </p>
 
 <!--
@@ -32,7 +32,11 @@ We had another great turnout this week. Thank you all again for participating. <
 -->
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Gzzer1</span> and <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> in first place followed by a host of others tied for second. Way to go folks!
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in first place followed by <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span>, <span style='color:#FF6E3B;font-weight:700;'>SandyLand</span>, <span style='color:#FF6E3B;font-weight:700;'>Snow Angel</span> and <span style='color:#FF6E3B;font-weight:700;'>Triple Option ERF</span> in second place with <span style='color:#FF6E3B;font-weight:700;'>Dr Joy</span>, and <span style='color:#FF6E3B;font-weight:700;'>Hail Mary</span> in Third. Way to go folks!
 </p>
+
+<p>
+The full stats are below! Read em and weep (I know I do)!
+</p> 
 ";
 ?>
