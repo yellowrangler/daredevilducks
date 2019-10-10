@@ -2,27 +2,27 @@
 
 $emailtopwriteup = "	
 <p>
-The fourth week of the 2019 season is in the bag. Making picks will require even more energy from those tiny gray cells!
+The fifth week of the 2019 season is in the bag. The Daredevil Ducks rankings continue to churn!
 </p> 
 
 <p>
-The Eagles beat the Packers in a thrilling contest to start the week. The Titans beat a mercurial Falcons team in Atlanta. After anointing the Raven's Lamar Jackson as the next coming quarterback, he and his Ravens were soundly defeated by the Browns. The Patriots beat the Bills in an ugly contest, but an ugly win is still a win! The Chiefs beat the Lions in a badly officiated game.
+The Seahawks beat the Rams in a squeaker! The Cam Newton-less Panthers beat the mighty Minshew Jaguars. The Cardinals got their first win over the hopeless Bengals. The Texans tortured the flightless Falcons and Bree-less Saints boarded and defeated the Buccaneers (Yar).
 </p> 
 
 <p>
-The Panthers upset the Texans, and the Raiders upset the Colts. The Chargers beat the hapless Dolphins. The Giants beat a disappointing Redskins team. The Seahawks beat the Cardinals. In one of the largest scoring affairs, the Buccaneers beat the LA Rams. The Bears beat the disappointing Vikings.
+The Vikings crushed the Giants. The Raiders skinned the Bears in Jolly Olde England. The winless Jets stayed that way as they were grounded by the Eagles. The Ravens beat the Steelers in a close contest. The Bills edged past the Titans and the Patriots beat the Jay Gruden out of the Redskins!
 </p> 
 
 <p>
-The Jaguars beat the Broncos and the Saints, without Brees, beat the tough talking Cowboys. In the final game of the week the Steelers looked good as they crushed the Bengals to get their first win of the season.
+The Broncos got their first win of the season over the lackluster Chargers. The Packers beat the Cowboys in a thrilling contest. The Colts upset the Chiefs at (Ma)home and in the last game of the week the 49ers dismantled the Browns.
 </p> 
 
 <p>
-  All in all a superb week of football!
+ All in all a superb week of football!
 </p> 
 
 <p>
-We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span>, <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> and <span style='color:#FF6E3B;font-weight:700;'>Triple Option ERF</span> are our new first place leaders on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! They are followed by <span style='color:#FF6E3B;font-weight:700;'>Bright Eyes</span>, <span style='color:#FF6E3B;font-weight:700;'>Dr Joy</span>, <span style='color:#FF6E3B;font-weight:700;'>Hygenius</span> and <span style='color:#FF6E3B;font-weight:700;'>Team Remington</span> in second place. With a host of others in third place. 
+We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> is our new first place leader on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in second place. With a <span style='color:#FF6E3B;font-weight:700;'>Hail Mary</span> and <span style='color:#FF6E3B;font-weight:700;'>Team Remington</span>in third place. 
 </p>
 
 <!--
@@ -32,7 +32,11 @@ We had another great turnout this week. Thank you all again for participating. <
 -->
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in first place followed by <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span>, <span style='color:#FF6E3B;font-weight:700;'>SandyLand</span>, <span style='color:#FF6E3B;font-weight:700;'>Snow Angel</span> and <span style='color:#FF6E3B;font-weight:700;'>Triple Option ERF</span> in second place with <span style='color:#FF6E3B;font-weight:700;'>Dr Joy</span>, and <span style='color:#FF6E3B;font-weight:700;'>Hail Mary</span> in Third. Way to go folks!
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Ginger</span> in first place followed by <span style='color:#FF6E3B;font-weight:700;'>East Coaster</span>, <span style='color:#FF6E3B;font-weight:700;'>Red Gorillaz</span> and <span style='color:#FF6E3B;font-weight:700;'>SandyT</span> in second place with a host of people in Third. Way to go folks! 
+</p>
+
+<p>
+Don't give up if you are not making the grade! It is still verrrrrry early...	
 </p>
 
 <p>
