@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-The fifth week of the 2019 season is in the bag. The Daredevil Ducks rankings continue to churn!
+The sixth week of the 2019 season is in the bag. The Daredevil Ducks rankings continue to churn!
 </p> 
 
 <p>
-The Seahawks beat the Rams in a squeaker! The Cam Newton-less Panthers beat the mighty Minshew Jaguars. The Cardinals got their first win over the hopeless Bengals. The Texans tortured the flightless Falcons and Bree-less Saints boarded and defeated the Buccaneers (Yar).
+The Patriots beat the Giants in a game featuring the the Patriots defense! The offense looked a little anemic; but what the heck - a win is a win. The Panthers continue to look good with out Cam, as they beat the Buccaneers. The Ravens beat the now 0 and 6 Bengals. The Seahawks put it together in fine fashion to beat the Browns in Cleveland. The Saints with Bridgewater beat the Jaguars.
 </p> 
 
 <p>
-The Vikings crushed the Giants. The Raiders skinned the Bears in Jolly Olde England. The winless Jets stayed that way as they were grounded by the Eagles. The Ravens beat the Steelers in a close contest. The Bills edged past the Titans and the Patriots beat the Jay Gruden out of the Redskins!
+In a stunner, the Texans beat the Chiefs in Kansas. The Redskins picked up their first win against the Dolphins in Miami. The Vikings crushed the Eagles. The Falcons found another way to loose to the Cardinals. The 49ers stayed unbeaten as they took out the Rams. In another stunner, the Jets beat the vaulted Cowboys.
 </p> 
 
 <p>
-The Broncos got their first win of the season over the lackluster Chargers. The Packers beat the Cowboys in a thrilling contest. The Colts upset the Chiefs at (Ma)home and in the last game of the week the 49ers dismantled the Browns.
+The Steelers looked very good in their win over the disappointing Chargers. And in the final game, the Packers beat the Lions in a game with a slew of controversial calls that largely favored the Packers.
 </p> 
 
 <p>
@@ -22,7 +22,7 @@ The Broncos got their first win of the season over the lackluster Chargers. The 
 </p> 
 
 <p>
-We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> is our new first place leader on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in second place. With a <span style='color:#FF6E3B;font-weight:700;'>Hail Mary</span> and <span style='color:#FF6E3B;font-weight:700;'>Team Remington</span>in third place. 
+We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> keeps her strong grip as our first place leader on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in second place. With a host of others in third place. 
 </p>
 
 <!--
@@ -32,11 +32,11 @@ We had another great turnout this week. Thank you all again for participating. <
 -->
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Ginger</span> in first place followed by <span style='color:#FF6E3B;font-weight:700;'>East Coaster</span>, <span style='color:#FF6E3B;font-weight:700;'>Red Gorillaz</span> and <span style='color:#FF6E3B;font-weight:700;'>SandyT</span> in second place with a host of people in Third. Way to go folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Ginger</span>, <span style='color:#FF6E3B;font-weight:700;'>GrammyGrams</span>,  <span style='color:#FF6E3B;font-weight:700;'>Lady Luck</span> and <span style='color:#FF6E3B;font-weight:700;'>RunningCat</span> in first place followed a host of people in Second and Third. Way to go folks! 
 </p>
 
 <p>
-Don't give up if you are not making the grade! It is still verrrrrry early...	
+Again, Don't give up if you are not making the grade! It is still verrrrrry early...	
 </p>
 
 <p>
