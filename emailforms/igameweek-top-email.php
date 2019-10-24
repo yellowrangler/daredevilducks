@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-The sixth week of the 2019 season is in the bag. The Daredevil Ducks rankings continue to churn!
+The seventh week of the 2019 season is in the bag. The Daredevil Ducks rankings continue to churn!
 </p> 
 
 <p>
-The Patriots beat the Giants in a game featuring the the Patriots defense! The offense looked a little anemic; but what the heck - a win is a win. The Panthers continue to look good with out Cam, as they beat the Buccaneers. The Ravens beat the now 0 and 6 Bengals. The Seahawks put it together in fine fashion to beat the Browns in Cleveland. The Saints with Bridgewater beat the Jaguars.
+The Chiefs crushed the Broncos in a game where Mahomes was injured. The Rams got a much needed win over the hapless Falcons. Expect coaching changes soon. Atlanta is a great sports town and they deserve better. The Bills defeated the winless Dolphins in spite of a good showing by Fitz-magic. The Jaguars continued the Bengals winless streak in Cincinnati.     
 </p> 
 
 <p>
-In a stunner, the Texans beat the Chiefs in Kansas. The Redskins picked up their first win against the Dolphins in Miami. The Vikings crushed the Eagles. The Falcons found another way to loose to the Cardinals. The 49ers stayed unbeaten as they took out the Rams. In another stunner, the Jets beat the vaulted Cowboys.
+The Vikings behind Cousins looked very good in their win over the Lions. The Lions never seem to be able to finish the deal; always a bridesmaid never a bride! The Packers thumped the Raiders. In an upset of sorts, the Colts at home beat the much ballyhooed Texans. The Cardinals beat the Giants in the battle of the bottom dwellers. The 49ers beat the Redskins a low scoring affair in Washington. The highlight of the game was the 49ers Nick Bosa body surfing across the monsoon soaked field looking like a kid on a slip and slide.
 </p> 
 
 <p>
-The Steelers looked very good in their win over the disappointing Chargers. And in the final game, the Packers beat the Lions in a game with a slew of controversial calls that largely favored the Packers.
+The disappointing Chargers lost to the Titans. The Saints continued winning without Brees, beating the Bears who got their starting quarterback, Trubisky back. The Ravens spanked the Seahawks in a game featuring the running prowess of Lamar Jackson. The Cowboys decisively beat the Eagles in Dallas. In the final contest, the Patriots embarrassed the Jets.
 </p> 
 
 <p>
@@ -22,7 +22,7 @@ The Steelers looked very good in their win over the disappointing Chargers. And 
 </p> 
 
 <p>
-We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> keeps her strong grip as our first place leader on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in second place. With a host of others in third place. 
+We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> continues to keep her strong grip as our first place leader on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in second place. With a host of others in third place. 
 </p>
 
 <!--
@@ -32,11 +32,11 @@ We had another great turnout this week. Thank you all again for participating. <
 -->
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>Ginger</span>, <span style='color:#FF6E3B;font-weight:700;'>GrammyGrams</span>,  <span style='color:#FF6E3B;font-weight:700;'>Lady Luck</span> and <span style='color:#FF6E3B;font-weight:700;'>RunningCat</span> in first place followed a host of people in Second and Third. Way to go folks! 
+For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>PatrickR</span> in first place followed by <span style='color:#FF6E3B;font-weight:700;'>Lady Luck</span>,  <span style='color:#FF6E3B;font-weight:700;'>LindaK</span>, <span style='color:#FF6E3B;font-weight:700;'>Red Bird</span> and <span style='color:#FF6E3B;font-weight:700;'>Smokey SouWester</span> in Second, followed a host of people in Third. Way to go folks! 
 </p>
 
 <p>
-Again, Don't give up if you are not making the grade! It is still verrrrrry early...	
+Don't get spooked! Everyone still has a ghost of a chance!	
 </p>
 
 <p>
