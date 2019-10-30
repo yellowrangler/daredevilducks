@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-The seventh week of the 2019 season is in the bag. The Daredevil Ducks rankings continue to churn!
+The eigth week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
 </p> 
 
 <p>
-The Chiefs crushed the Broncos in a game where Mahomes was injured. The Rams got a much needed win over the hapless Falcons. Expect coaching changes soon. Atlanta is a great sports town and they deserve better. The Bills defeated the winless Dolphins in spite of a good showing by Fitz-magic. The Jaguars continued the Bengals winless streak in Cincinnati.     
+The Vikings beat the Redskins. The Seahawks eased by the Falcons. The Eagles championed the Bills. The Chargers finally got the football gods on their side by beating the Bears. The Bears had the game in hand with seconds left on the clock only to miss a makable field goal.
 </p> 
 
 <p>
-The Vikings behind Cousins looked very good in their win over the Lions. The Lions never seem to be able to finish the deal; always a bridesmaid never a bride! The Packers thumped the Raiders. In an upset of sorts, the Colts at home beat the much ballyhooed Texans. The Cardinals beat the Giants in the battle of the bottom dwellers. The 49ers beat the Redskins a low scoring affair in Washington. The highlight of the game was the 49ers Nick Bosa body surfing across the monsoon soaked field looking like a kid on a slip and slide.
+The Lions beat the struggling Giants. The Texans beat the Raiders in a close contest. The Jaguars shot down the insipid Jets. The Rams beat the Bengals - keeping the Bengals season at a perfect 0 wins. The Saints crushed the Cardinals. The Titans beat the fading Buccaneers. The 49rs beat the Panthers, keeping their perfect record intact. The Colts beat the disappointing Broncos.
 </p> 
 
 <p>
-The disappointing Chargers lost to the Titans. The Saints continued winning without Brees, beating the Bears who got their starting quarterback, Trubisky back. The Ravens spanked the Seahawks in a game featuring the running prowess of Lamar Jackson. The Cowboys decisively beat the Eagles in Dallas. In the final contest, the Patriots embarrassed the Jets.
+The Patriots continued their winning ways by dispatching the Browns in Foxborough. The Packers beat the Mahome-less Chiefs in Kansas. And in the final game, the Steelers beat the winless Dolphins.
 </p> 
 
 <p>
@@ -22,21 +22,11 @@ The disappointing Chargers lost to the Titans. The Saints continued winning with
 </p> 
 
 <p>
-We had another great turnout this week. Thank you all again for participating. <span style='color:#FF6E3B;font-weight:700;'>NFL Amateur</span> continues to keep her strong grip as our first place leader on the <span style='font-weight:bold; color:maroon;'> Total Games Won Leader</span> board! She is followed by <span style='color:#FF6E3B;font-weight:700;'>Exploding Brain</span> in second place. With a host of others in third place. 
-</p>
-
-<!--
-<p>
-<span style='font-weight:bold; color:#228b22;'>Bright Eyes</span> and <span style='font-weight:bold; color:#228b22;'>Dr Joy</span> have also taken command of first place (100%) of the <span style='font-weight:bold; color:blue;'>Total Percentage Leader</span> Board.
-</p>
--->
+Ok folks, it's gutcheck time! We are at the mid point of the season. Time to start getting your stratigies finely honed. Time for the cream to rise to the top! You get the point - Do your JOB!
+</p> 
 
 <p>
-For <span style='font-weight:bold; color:#228b22;'>Player Weekly Totals</span> bragging rights we have <span style='color:#FF6E3B;font-weight:700;'>PatrickR</span> in first place followed by <span style='color:#FF6E3B;font-weight:700;'>Lady Luck</span>,  <span style='color:#FF6E3B;font-weight:700;'>LindaK</span>, <span style='color:#FF6E3B;font-weight:700;'>Red Bird</span> and <span style='color:#FF6E3B;font-weight:700;'>Smokey SouWester</span> in Second, followed a host of people in Third. Way to go folks! 
-</p>
-
-<p>
-Don't get spooked! Everyone still has a ghost of a chance!	
+<span style='color:#FF6E3B;font-weight:700;'>Click on the Halloween Image on the home page and get a Halloween Treat!</span>
 </p>
 
 <p>
