@@ -2,19 +2,23 @@
 
 $emailtopwriteup = "	
 <p>
-The eigth week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
+The 10th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
 </p> 
 
 <p>
-The Vikings beat the Redskins. The Seahawks eased by the Falcons. The Eagles championed the Bills. The Chargers finally got the football gods on their side by beating the Bears. The Bears had the game in hand with seconds left on the clock only to miss a makable field goal.
+Yikes! We at Daredevil Ducks apologize to our members for missing our usually captivating breakdown for last weeks games. We will try and DO OUR JOB better in the weeks to come! 
 </p> 
 
 <p>
-The Lions beat the struggling Giants. The Texans beat the Raiders in a close contest. The Jaguars shot down the insipid Jets. The Rams beat the Bengals - keeping the Bengals season at a perfect 0 wins. The Saints crushed the Cardinals. The Titans beat the fading Buccaneers. The 49rs beat the Panthers, keeping their perfect record intact. The Colts beat the disappointing Broncos.
+The Raiders beat the disappearing Chargers. The Bears beat the cowardly Lions. The Ravens eviscerated the winless Bengals. The Browns squeaked by the Bills. The Packers beat the Panthers with a great deal of help from the referees.
 </p> 
 
 <p>
-The Patriots continued their winning ways by dispatching the Browns in Foxborough. The Packers beat the Mahome-less Chiefs in Kansas. And in the final game, the Steelers beat the winless Dolphins.
+In an upset of sorts, the Falcons beat the Saints. In the battle for New York, the Jets beat the Giants. The Buccaneers eased by the Cardinals. In another upset, the Titans beat the suddenly struggling Chiefs. The Dolphins beat the Brissett-less Colts, and the Steelers won over the fading Rams.
+</p> 
+
+<p>
+In the final two games (and best in my opinion) The Vikings beat the Cowboys in Dallas. And on Monday night, the Seahawks beat the undefeated 49ers in a thrilling overtime match.
 </p> 
 
 <p>
@@ -22,7 +26,7 @@ The Patriots continued their winning ways by dispatching the Browns in Foxboroug
 </p> 
 
 <p>
-Ok folks, it's gutcheck time! We are at the mid point of the season. Time to start getting your stratigies finely honed. Time for the cream to rise to the top! You get the point - Do your JOB!
+Ok folks, it's double down gutcheck time! We are past the mid point of the season. Time to start getting your strategies finely honed. Time for the cream to rise to the top! You get the point - Do your JOB!
 </p> 
 
 <p>
