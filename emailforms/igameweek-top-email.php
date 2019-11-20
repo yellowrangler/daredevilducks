@@ -2,23 +2,23 @@
 
 $emailtopwriteup = "	
 <p>
-The 10th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
+The 11th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
 </p> 
 
 <p>
-Yikes! We at Daredevil Ducks apologize to our members for missing our usually captivating breakdown for last weeks games. We will try and DO OUR JOB better in the weeks to come! 
+I hope everyone had a fine Halloween! Here comes Thanksgiving and soon after that Christmas. This year has been a great year for football, and this week was no exception.   
 </p> 
 
 <p>
-The Raiders beat the disappearing Chargers. The Bears beat the cowardly Lions. The Ravens eviscerated the winless Bengals. The Browns squeaked by the Bills. The Packers beat the Panthers with a great deal of help from the referees.
+The Browns beat the Steelers in a game that featured helmets being ripped off and then used as a club! Tough division loss for the Steelers. In the battle of the young guns, Lamar Jackson and his Ravens won out over the Texans. The rejuvenated Falcons beat the Panthers. The Cowboys eased by the hopeless home team Lions. Brissetts Colts bludgeoned the hopeless Jaguars ruining Nick Foles return.
 </p> 
 
 <p>
-In an upset of sorts, the Falcons beat the Saints. In the battle for New York, the Jets beat the Giants. The Buccaneers eased by the Cardinals. In another upset, the Titans beat the suddenly struggling Chiefs. The Dolphins beat the Brissett-less Colts, and the Steelers won over the fading Rams.
+The Bills squished the fish, as they beat the 2 and 8 Dolphins. The Vikings mounted a remarkable comeback to embarrass the Broncos. The Saints crushed the Buccaneers with Winston giving up 4 interceptions. One has to wonder how much longer the Buccaneers are going to require his services. The Jets beat up on the 1 and 9 Redskins. The 49ers beat the much improved Cardinals. The Raiders beat the winless Bengals. I mean who hasn't! 
 </p> 
 
 <p>
-In the final two games (and best in my opinion) The Vikings beat the Cowboys in Dallas. And on Monday night, the Seahawks beat the undefeated 49ers in a thrilling overtime match.
+The Patriots defense prevented the Eagles from scoring in the second half, as they beat them by 7. Even though the Pats offense looked iffy; remember that the on field conditions were atrocious and while their offensive numbers sounded bad the numbers that counted looked good! The Rams beat the fading Bears. In the final contest, the Chiefs beat the Chargers in a game that found Rivers  unable to make key plays.
 </p> 
 
 <p>
@@ -26,7 +26,7 @@ In the final two games (and best in my opinion) The Vikings beat the Cowboys in 
 </p> 
 
 <p>
-Ok folks, it's double down gutcheck time! We are past the mid point of the season. Time to start getting your strategies finely honed. Time for the cream to rise to the top! You get the point - Do your JOB!
+Ok folks, there is still time to make a run. Start getting your strategies finely honed. Time for the cream to rise to the top! You get the point - Do your JOB!
 </p> 
 
 <p>

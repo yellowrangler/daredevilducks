@@ -50,7 +50,7 @@ dddApp.config(function ($routeProvider) {
             {
                 controller: 'spookyController',
                 templateUrl: 'app/partials/spooky.html'
-            })            
+            })                
         .when('/pickgames',
             {
                 controller: 'pickgamesController',
