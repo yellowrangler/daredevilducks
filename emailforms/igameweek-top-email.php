@@ -30,7 +30,7 @@ Ok folks, there is still time to make a run. Start getting your strategies finel
 </p> 
 
 <p>
-<span style='color:#FF6E3B;font-weight:700;'>Click on the Halloween Image on the home page and get a Halloween Treat!</span>
+<span style='color:#FF6E3B;font-weight:700;'>Click on the Thanksgiving Image on the home page and get a Thanksgiving feast!</span>
 </p>
 
 <p>
