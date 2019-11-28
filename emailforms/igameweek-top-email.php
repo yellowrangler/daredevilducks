@@ -2,23 +2,23 @@
 
 $emailtopwriteup = "	
 <p>
-The 11th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
+The 12th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
 </p> 
 
 <p>
-I hope everyone had a fine Halloween! Here comes Thanksgiving and soon after that Christmas. This year has been a great year for football, and this week was no exception.   
+I hope everyone is ready for Thanksgiving! Football is fun, but it will never hold a candle to friends and family. There is so much for us all to be thankful for. On to football.
 </p> 
 
 <p>
-The Browns beat the Steelers in a game that featured helmets being ripped off and then used as a club! Tough division loss for the Steelers. In the battle of the young guns, Lamar Jackson and his Ravens won out over the Texans. The rejuvenated Falcons beat the Panthers. The Cowboys eased by the hopeless home team Lions. Brissetts Colts bludgeoned the hopeless Jaguars ruining Nick Foles return.
+The Texans corralled the Colts in a close game. The Buccaneers crushed the mercurial Falcons. The Bills rode the Broncos to victory. The Bears beat the Giants in the booooring game of the week. And the Steelers beat the Bengals and changed their starting quarterback.
 </p> 
 
 <p>
-The Bills squished the fish, as they beat the 2 and 8 Dolphins. The Vikings mounted a remarkable comeback to embarrass the Broncos. The Saints crushed the Buccaneers with Winston giving up 4 interceptions. One has to wonder how much longer the Buccaneers are going to require his services. The Jets beat up on the 1 and 9 Redskins. The 49ers beat the much improved Cardinals. The Raiders beat the winless Bengals. I mean who hasn't! 
+The Browns squished the fish, as the Dolphins lost yet again. The Saints squeaked by the Panthers in a very competitive endeavor. In the upset of the week, the Jets pounded the Raiders. The Redskins won only their second game as they eased past the Lions. The Titans have finally found their quarterback in Ryan Tannehill. They easily dispatched the Jaguars. In the game of the week, the Patriots played well enough to beat the less-then-promised Cowboys. The 49ers looked very super bowl-ish as they crushed the Packers in San Fransisco. 
 </p> 
 
 <p>
-The Patriots defense prevented the Eagles from scoring in the second half, as they beat them by 7. Even though the Pats offense looked iffy; remember that the on field conditions were atrocious and while their offensive numbers sounded bad the numbers that counted looked good! The Rams beat the fading Bears. In the final contest, the Chiefs beat the Chargers in a game that found Rivers  unable to make key plays.
+The Seahawks won a low scoring contest over the fading Eagles. In the final contest, the Ravens embarrassed the Rams. In that game the Ravens looked quite super bowl-ish themselves.
 </p> 
 
 <p>
@@ -26,8 +26,9 @@ The Patriots defense prevented the Eagles from scoring in the second half, as th
 </p> 
 
 <p>
-Ok folks, there is still time to make a run. Start getting your strategies finely honed. Time for the cream to rise to the top! You get the point - Do your JOB!
+There is still time to make a run. Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
 </p> 
+
 
 <p>
 <span style='color:#FF6E3B;font-weight:700;'>Click on the Thanksgiving Image on the home page and get a Thanksgiving feast!</span>
