@@ -6,19 +6,23 @@ The 12th week of the 2019 season is in the bag. The Daredevil Ducks rankings sti
 </p> 
 
 <p>
-I hope everyone is ready for Thanksgiving! Football is fun, but it will never hold a candle to friends and family. There is so much for us all to be thankful for. On to football.
+I hope everyone survived their Thanksgiving! But there is more coming, as Christmas is just around the corner! On to football.
 </p> 
 
 <p>
-The Texans corralled the Colts in a close game. The Buccaneers crushed the mercurial Falcons. The Bills rode the Broncos to victory. The Bears beat the Giants in the booooring game of the week. And the Steelers beat the Bengals and changed their starting quarterback.
+In the first of the Thanksgiving trifectas, the Bears beat the cowardly Lions. In an upset of sorts, the Bills beat the Cowboys in Dallas. In the final Thanksgiving game, the Saints clinched their NFC South title with a win over the Falcons.
 </p> 
 
 <p>
-The Browns squished the fish, as the Dolphins lost yet again. The Saints squeaked by the Panthers in a very competitive endeavor. In the upset of the week, the Jets pounded the Raiders. The Redskins won only their second game as they eased past the Lions. The Titans have finally found their quarterback in Ryan Tannehill. They easily dispatched the Jaguars. In the game of the week, the Patriots played well enough to beat the less-then-promised Cowboys. The 49ers looked very super bowl-ish as they crushed the Packers in San Fransisco. 
+In the game of the week, the Ravens beat the 49ers in a back and forth affair, where a last second field goal produced the win. The Redskins beat the Ron Rivera out of the Panthers. The winless Bengals got their first win by decisively beating the Jets. The Titans looked good beating the Colts. The Buccaneers beat the Jaguars. The Chiefs crushed the collapsing Raiders. The Dolphins beat the disappointing Eagles in Miami. The Packers crushed the going-no-where Giants.
 </p> 
 
 <p>
-The Seahawks won a low scoring contest over the fading Eagles. In the final contest, the Ravens embarrassed the Rams. In that game the Ravens looked quite super bowl-ish themselves.
+The Rams finally put a complete game together as they easily dispatched the Cardinals. The Broncos with a new quarterback beat the fading Chargers with a last second field goal. The Steelers beat the Browns in their second meeting. The Texans beat a sluggish Patriots team.
+</p>
+
+<p>
+In the final contest, the Seahawks bested the Vikings in a squeaker.
 </p> 
 
 <p>
@@ -26,12 +30,12 @@ The Seahawks won a low scoring contest over the fading Eagles. In the final cont
 </p> 
 
 <p>
-There is still time to make a run. Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
+There is still time to make a run, but the noose is closing! Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
 </p> 
 
 
 <p>
-<span style='color:#FF6E3B;font-weight:700;'>Click on the Thanksgiving Image on the home page and get a Thanksgiving feast!</span>
+<span style='color:#FF6E3B;font-weight:700;'>Click on the Christmas Image on the home page and get a Christmas thank you!</span>
 </p>
 
 <p>
