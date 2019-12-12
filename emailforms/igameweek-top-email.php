@@ -2,35 +2,32 @@
 
 $emailtopwriteup = "	
 <p>
-The 12th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
+The 14th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
 </p> 
 
 <p>
-I hope everyone survived their Thanksgiving! But there is more coming, as Christmas is just around the corner! On to football.
+Winter is officially here (snow - not the December Solstice), Christmas continues to surge relentlessly towards us! And in the midst of it all is football!
 </p> 
 
 <p>
-In the first of the Thanksgiving trifectas, the Bears beat the cowardly Lions. In an upset of sorts, the Bills beat the Cowboys in Dallas. In the final Thanksgiving game, the Saints clinched their NFC South title with a win over the Falcons.
+In the first match of the week, the Bears beat the stumbling 6 and 7 Cowboys. Strangely enough, the Cowboys can still win their Division and get a bye for the first round of the playoffs - if they beat the Eagles later in the season. The Falcons beat the plummeting Panthers. The Ravens beat the Bills in a thriller. The Browns just managed to squeak past the Bengals. The Packers beat the Redskins.
 </p> 
 
 <p>
-In the game of the week, the Ravens beat the 49ers in a back and forth affair, where a last second field goal produced the win. The Redskins beat the Ron Rivera out of the Panthers. The winless Bengals got their first win by decisively beating the Jets. The Titans looked good beating the Colts. The Buccaneers beat the Jaguars. The Chiefs crushed the collapsing Raiders. The Dolphins beat the disappointing Eagles in Miami. The Packers crushed the going-no-where Giants.
+In an upset of sorts, the Broncos crushed the Texans. The Vikings plundered the anemic Lions. In the game of the week, the 49ers beat the Saints with a last second field goal. The Jets beat the Dolphins, and the Buccaneers beat the Colts. The Chargers found their game as they pummeled the Jaguars. The Steelers beat the Cardinals. In a game marred by bad officiating, the Chiefs beat the Patriots in Foxborough.
 </p> 
 
 <p>
-The Rams finally put a complete game together as they easily dispatched the Cardinals. The Broncos with a new quarterback beat the fading Chargers with a last second field goal. The Steelers beat the Browns in their second meeting. The Texans beat a sluggish Patriots team.
+The rejuvenated Titans torched the Raiders. The Rams showed grit as they beat the Seahawks. And in the final game of the week, the Eagles beat the Giants in overtime. 
 </p>
-
-<p>
-In the final contest, the Seahawks bested the Vikings in a squeaker.
-</p> 
 
 <p>
  All in all a superb week of football!
 </p> 
 
+
 <p>
-There is still time to make a run, but the noose is closing! Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
+There is still time to make a run for some, but the noose is closing! Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
 </p> 
 
 
