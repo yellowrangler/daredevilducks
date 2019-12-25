@@ -2,32 +2,31 @@
 
 $emailtopwriteup = "	
 <p>
-The 15th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
+The 16th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
 </p> 
 
 <p>
-Christmas is right around the corner. Time to bring family and friends together to celebrate the birth of Christ. Time also for these darn referees to start getting their collective act together and start making consistent calls! God bless all our members and let us pray for Peace on Earth! On to football!
+I hope you all are having, or had a very merry Christmas! I can't believe that we are in the last week of the 2019 regular season! 
 </p> 
 
 <p>
-The Ravens continued there relentless carnage on the NFL as they punished the Jets. The Seahawks beat the Panthers to tie the 49ers for first place in their division. The Patriots beat the hapless Bengals in Foxborough. The Buccaneers beat the Lions to even their record. The Packers beat the Bears.
+The Texans beat the Buccaneers in a close contest. The Patriots beat the surging Bills to take the AFC East for the eleventh straight year! The 49ers beat the Rams. The Broncos beat the Lions and the Raiders beat the Chargers.
 </p> 
 
 <p>
-The Chiefs beat the Broncos is a snow-globe. The Giants beat the Dolphins. The Bills beat the Steelers in Pittsburgh. The Bills are for real! The Texans beat the Titans in a close game marred by more bad refereeing. The Eagles beat the Redskins to stay alive in the divisional hunt. The Cardinals clipped the mercurial Browns. In their last game in Oakland, the Raiders lost to the Jaguars. The Cowboys finally looked like the team they have been hyped to be - as they crushed the Rams. In an upset, the Falcons beat the 49ers. The Vikings beat the disappearing Chargers.
+The mercurial Falcons beat the Jaguars. The NFL's juggernaut team the Ravens, pummeled the Browns. The Colts stampeded the Panthers. The Dolphins beat the Bengals in overtime, winning the game, but loosing the first pick in the draft. The Jets beat a struggling Steelers team. In an entertaining contest, the Saints beat the Titans. The Giants beat the Redskins. The Cowboys lost another must win game against the Eagles. In the upset of the week, the Cardinals beat the Seahawks. The Chiefs crushed the Bears.
 </p> 
 
 <p>
-And in the final game of the week, the Saints put a whooping on the fading Colts. 
+And in the final game of the week, the Packers beat the Vikings. 
 </p>
 
 <p>
  All in all a superb week of football!
 </p> 
 
-
 <p>
-There is very little time to make a run for some, but the noose is closing! Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
+There is very very very little time to make a run for some, the noose is closing! Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
 </p> 
 
 
