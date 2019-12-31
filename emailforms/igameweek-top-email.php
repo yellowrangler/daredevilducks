@@ -2,23 +2,27 @@
 
 $emailtopwriteup = "	
 <p>
-The 16th week of the 2019 season is in the bag. The Daredevil Ducks rankings still continue to churn!
+The regular season is in the books! On to the playoffs!
 </p> 
 
 <p>
-I hope you all are having, or had a very merry Christmas! I can't believe that we are in the last week of the 2019 regular season! 
+I hope you all are having, or had a Happy New Year! This week is the round 1 Wild Card Weekend (week 18). Lets review what happened last week.
 </p> 
 
 <p>
-The Texans beat the Buccaneers in a close contest. The Patriots beat the surging Bills to take the AFC East for the eleventh straight year! The 49ers beat the Rams. The Broncos beat the Lions and the Raiders beat the Chargers.
+The Ravens, without Lamar Jackson, beat the Steelers. The end of a frustrating season for a great franchise. The Jets beat the Bills in a meaningless game. The Saints crushed the Panthers. The Bengals beat the hapless, leaderless and now coachless Browns. The Cowboys scalped the Indians; bringing to mind the phrase - too little, too late! 
 </p> 
 
 <p>
-The mercurial Falcons beat the Jaguars. The NFL's juggernaut team the Ravens, pummeled the Browns. The Colts stampeded the Panthers. The Dolphins beat the Bengals in overtime, winning the game, but loosing the first pick in the draft. The Jets beat a struggling Steelers team. In an entertaining contest, the Saints beat the Titans. The Giants beat the Redskins. The Cowboys lost another must win game against the Eagles. In the upset of the week, the Cardinals beat the Seahawks. The Chiefs crushed the Bears.
+The Packers beat the Lions. The Titans beat the Texans earning them a place in the playoffs. The Colts lost to the Jaguars.  The Chiefs beat the Chargers to secure a bye and the number 2 seed. The Bears beat the Vikings in Minnesota. One has to think that the Vikings aren't going anywhere if they can't beat the Bears at home.
 </p> 
 
 <p>
-And in the final game of the week, the Packers beat the Vikings. 
+The Patriots looked awful in a loss to Miami in Foxborough. A Patriots win would have given them a bye and second seed. The Pats better dig deep if they want to advance any further. The Eagles crushed the Giants to secure a playoff berth. The Falcons came from behind to beat the Buccaneers. The Raiders lost to the Broncos and the Rams beat the Cardinals.
+</p> 
+
+<p>
+And in the final game of the week, the 49ers beat the Seahawks to secure the division title and first seed. 
 </p>
 
 <p>
@@ -26,12 +30,11 @@ And in the final game of the week, the Packers beat the Vikings.
 </p> 
 
 <p>
-There is very very very little time to make a run for some, the noose is closing! Get your strategies under control. Time for the cream to rise to the top! You get the point - Do your JOB!
+The number one spot is crowded! It is now a small fraternity of those who can be a Daredevil ducks champion. To those few, pick wisely as the number of games is coming to a dramatic close. Good luck to all! To the rest of us (including myself), enjoy the sprint to the finish!
 </p> 
 
-
 <p>
-<span style='color:#FF6E3B;font-weight:700;'>Click on the Christmas Image on the home page and get a Christmas thank you!</span>
+<span style='color:#FF6E3B;font-weight:700;'>Click on the New Years Image on the home page and get a New Year message!</span>
 </p>
 
 <p>
