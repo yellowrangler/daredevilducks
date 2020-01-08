@@ -2,35 +2,35 @@
 
 $emailtopwriteup = "	
 <p>
-The regular season is in the books! On to the playoffs!
+The Wild Card Weekend is over! On to the Divisional Playoffs!
 </p> 
 
 <p>
-I hope you all are having, or had a Happy New Year! This week is the round 1 Wild Card Weekend (week 18). Lets review what happened last week.
+I hope you all had a Happy New Year! This week is the round 2 Divisional Playoffs (week 19). Lets review what happened last week.
 </p> 
 
 <p>
-The Ravens, without Lamar Jackson, beat the Steelers. The end of a frustrating season for a great franchise. The Jets beat the Bills in a meaningless game. The Saints crushed the Panthers. The Bengals beat the hapless, leaderless and now coachless Browns. The Cowboys scalped the Indians; bringing to mind the phrase - too little, too late! 
+In the first Saturday game the Texans won in a real nail biter over the impressive Bills. Deshaun Watson looked every part the franchise player, as he took control when it counted. Josh Allen showed remarkable skills but made some classic mistakes at crunch time. A great game none the less! 
 </p> 
 
 <p>
-The Packers beat the Lions. The Titans beat the Texans earning them a place in the playoffs. The Colts lost to the Jaguars.  The Chiefs beat the Chargers to secure a bye and the number 2 seed. The Bears beat the Vikings in Minnesota. One has to think that the Vikings aren't going anywhere if they can't beat the Bears at home.
+In the second Saturday game, the Titans, behind the punishing running of Henry,  rolled over the hapless Patriots. The Patriots did shut Henry down in the second half, but were unable to take advantage of a first and goal which resulted in a field goal. Now Patriots nation is left to ponder the state of the team moving forward.
 </p> 
 
 <p>
-The Patriots looked awful in a loss to Miami in Foxborough. A Patriots win would have given them a bye and second seed. The Pats better dig deep if they want to advance any further. The Eagles crushed the Giants to secure a playoff berth. The Falcons came from behind to beat the Buccaneers. The Raiders lost to the Broncos and the Rams beat the Cardinals.
+In the first Sunday game, the Vikings pulled an upset of sorts by beating the Saints in New Orleans in Overtime. Cousins looked poised and was on target as he showed he could win a playoff game. The Vikings defense did the rest. Pressing the Saints offense into 2 turnovers. 
 </p> 
 
 <p>
-And in the final game of the week, the 49ers beat the Seahawks to secure the division title and first seed. 
-</p>
-
-<p>
- All in all a superb week of football!
+In the second Sunday game, the Seahawks beat the Eagles. The Eagles lost their starting quarterback when his head was slammed into the ground during a tackle. No call by the refs. Damn if I can figure out what constitutes a penalty any more. 
 </p> 
 
 <p>
-The number one spot is crowded! It is now a small fraternity of those who can be a Daredevil ducks champion. To those few, pick wisely as the number of games is coming to a dramatic close. Good luck to all! To the rest of us (including myself), enjoy the sprint to the finish!
+ All in all a superb week of football! 
+</p> 
+
+<p>
+It is now a small fraternity of those who can be a Daredevil ducks champion. To those few, pick wisely as the number of games is coming to a dramatic close. Good luck to all! To the rest of us (including myself), enjoy the sprint to the finish!
 </p> 
 
 <p>
