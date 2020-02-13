@@ -57,6 +57,14 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
                 $(this).attr("src", "img/halloffame/donomalleyhof-2018.png");
                 });                    
         
+        $( "#hf2019" )
+            .mouseover(function() {
+                 $(this).attr("src", "img/halloffame/HallofFamePicture2.png");
+                })
+            .mouseout(function() {
+                $(this).attr("src", "img/halloffame/HallofFamePicture2.png");
+                });                    
+        
         $( "#hfdefault" )
             .mouseover(function() {
                 $(this).attr("src", "img/halloffame/HallofFameAngryDonald.png");
