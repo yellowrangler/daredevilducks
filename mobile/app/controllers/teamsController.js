@@ -1247,6 +1247,26 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
             });                          
     }
 
+    function toggleSort ()
+    {
+        if ($scope.current.toggleSort == "DESC")
+        {
+            $("#teamRankSort").addClass("glyphicon-sort-by-attributes").removeClass("glyphicon-sort-by-attributes-alt");
+
+            $scope.current.toggleSort = "ASC";
+
+        }
+        else if ($scope.current.toggleSort == "ASC")
+        {
+            $("#teamRankSort").addClass("glyphicon-sort-by-attributes-alt").removeClass("glyphicon-sort-by-attributes");
+
+            $scope.current.toggleSort = "DESC";
+        }
+
+        getTeamWeekRank($scope.current.teamid);
+
+    }
+
     init();
     function init() {
         $scope.current = {};
