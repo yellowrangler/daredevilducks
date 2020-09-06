@@ -106,10 +106,12 @@ $datetime = date("Y-m-d H:i:s");
 // create time stamp versions for insert to mysql
 $enterdateTS = date("Y-m-d H:i:s", strtotime($datetime));
 
-// print_r($_POST);
-// die();
+// print "game array  ";
+// print_r($gameArray);
+// print "  team array  ";
+// print_r($teamArray);
 
-//
+// 
 // messaging
 //
 $returnArrayLog = new AccessLog("logs/");
@@ -160,13 +162,17 @@ if ($count == 0)
 }
 
 // if duplicate teams picked out you go
-$teamDiffArray = array_diff_assoc( $teamArray, array_unique( $teamArray ) );
+$teamUniqueArray = Array();
+$teamDiffArray = Array();
+$teamUniqueArray = array_unique( $teamArray );
+$teamDiffArray = array_diff_assoc( $teamArray, $teamUniqueArray);
 $diffCount = count($teamDiffArray);  
-if (diffCount > 0)
+
+if ($diffCount > 0)
 {
 	$log = new ErrorLog("logs/");
-		$msgtext = "Error: Duplicate teams picked!";
-	$log->writeLog("Format error: $msgtext - Error with format from JS. $modulecontent. Contact Airdreamer!");
+	$msgtext = "Error: Duplicate teams picked!";
+	// $log->writeLog("Format error: $msgtext - Error with format from JS. $modulecontent. Contact Airdreamer!");
 
 	exit($msgtext);
 }
