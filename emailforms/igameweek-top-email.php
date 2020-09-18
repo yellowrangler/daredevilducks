@@ -2,32 +2,26 @@
 
 $emailtopwriteup = "	
 <p>
-The Conference playoff Weekend is over! On to the Super Bowl!
+End of the first week of the Season!
 </p> 
 
 <p>
-This week is the Super Bowl (week 21). Lets review what happened last week.
-</p> 
-
-<p>
-In the first Sunday game the Chiefs won over the Titans. The Titans put in a valiant effort and actually had the lead early on in the game. But the Chiefs just played too well; and in the end overwhelmed the Titans. A great game! 
-</p> 
-
-<p>
-In the second Sunday game, the 49ers beat the Packers. This was never a close game. The Packers earned respectability with a couple of very late charges but fell short. Rogers looked bored and unengaged in this mans view. Still it was a game worth watching, as the 49ers - normally a passing team - ran the ball most of the game with great results.
-</p> 
-
-<p>
- All in all a superb week of football! 
-</p> 
-
-<p>
-It is now a very very small fraternity of those who can be a Daredevil ducks champion. Only <span style='color:#FF6E3B;font-weight:700;'>Team Remington</span> and <span style='color:#FF6E3B;font-weight:700;'>Empty Nesters</span> have any shot at the title! Good luck to all! To the rest of us (including myself), enjoy the sprint to the finish!
-</p> 
-
-<p>
-<span style='color:#FF6E3B;font-weight:700;'>Click on the Winter Image on the home page and get a New Year message!</span>
+A crazy first week was had by all. As expected, picking first week teams proved elusive. In the opener, the super bowl champion Chiefs took on the vaulted Texans. Offense ruled the day as the Chiefs out lasted the Texans to start their quest for back to back super bowls.  Seattle beat Atlanta, the Bills beat the Jets, the Ravens pummeled the Browns, the Raiders squeaked by  the Panthers and Packers beat the Vikings in a back and forth contest 
 </p>
+
+
+<p>
+The Patriots behind running Cam Newton beat the Dolphins at Foxborough. Just doesn't seem right - no Brady and a running quarterback! Tell me it ain't so. The Washington's (will it really be possible to pick a name that offends no one? Whats the fun in that?) beat the Eagles in another back and forth contest. The Chargers beat the Bengals in a snooze fest. The Saints beat the Tom Brady lead Buccaneers. In a surprise of sorts, the Cardinals beat the 49ers. The Rams beat the Cowboys. The Steelers looked impressive beating the Giants. Antonio who! Ha! In the final game the Titans squeaked by the Broncos.
+</p>
+
+<p>
+  All in all a fun week of football!
+</p>
+
+
+<p>
+Don't dispair if you did not do well. It is only the first week!   
+</p> 
 
 <p>
 The full stats are below! Read em and weep (I know I do)!

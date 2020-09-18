@@ -3,6 +3,6 @@
 $emailbottomwriteup = "
 <br />
 
-Please take the Daredevild Ducks survey if you have not already! This means you new folks too! Help us improve our website.
+Sorry this weeks email was late. We will endeavor to persevere next week!
 ";
 ?>
