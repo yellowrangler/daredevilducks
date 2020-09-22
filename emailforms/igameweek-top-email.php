@@ -6,7 +6,7 @@ End to the second week of the Season!
 </p> 
 
 <p>
-In the first game, the winless Browns beat the winless Bengals in a back and forth effort. The Bears continued their winning streak by beating the still winless Giants. The Cowboys poached the game away from the luckless Falcons by recovering a squibbed onside kick that became a field goal game winning kick. The Packers came back and drilled the cowardly Lions. The Colts trampled the Vikings, while the Bills squeaked by the Dolphins.
+In the first game, the winless Browns beat the winless Bengals in a back and forth effort. The Bears continued their winning streak by beating the still winless Giants. The Cowboys poached the game away from the luckless Falcons by recovering a squibbed onside kick that became a game winning field goal kick. The Packers came back and drilled the cowardly Lions. The Colts trampled the Vikings, while the Bills squeaked by the Dolphins.
 </p>
 
 
