@@ -2,25 +2,25 @@
 
 $emailtopwriteup = "	
 <p>
-End of the first week of the Season!
+End to the second week of the Season!
 </p> 
 
 <p>
-A crazy first week was had by all. As expected, picking first week teams proved elusive. In the opener, the super bowl champion Chiefs took on the vaulted Texans. Offense ruled the day as the Chiefs out lasted the Texans to start their quest for back to back super bowls.  Seattle beat Atlanta, the Bills beat the Jets, the Ravens pummeled the Browns, the Raiders squeaked by  the Panthers and Packers beat the Vikings in a back and forth contest 
+In the first game, the winless Browns beat the winless Bengals in a back and forth effort. The Bears continued their winning streak by beating the still winless Giants. The Cowboys poached the game away from the luckless Falcons by recovering a squibbed onside kick that became a field goal game winning kick. The Packers came back and drilled the cowardly Lions. The Colts trampled the Vikings, while the Bills squeaked by the Dolphins.
 </p>
 
 
 <p>
-The Patriots behind running Cam Newton beat the Dolphins at Foxborough. Just doesn't seem right - no Brady and a running quarterback! Tell me it ain't so. The Washington's (will it really be possible to pick a name that offends no one? Whats the fun in that?) beat the Eagles in another back and forth contest. The Chargers beat the Bengals in a snooze fest. The Saints beat the Tom Brady lead Buccaneers. In a surprise of sorts, the Cardinals beat the 49ers. The Rams beat the Cowboys. The Steelers looked impressive beating the Giants. Antonio who! Ha! In the final game the Titans squeaked by the Broncos.
+The 49ers bludgeoned the Jets but lost some valuable players in the process. The Rams beat the Eagles, the Steelers beat the Broncos and the Tom Brady Buccaneers beat the Panthers. The Titans beat the Jaguars and the undefeated Cardinals beat the Washington TBDs. The Ravens beat the winless Texans, the Chiefs survived a nail bitter against the Chargers and the Patriots lost to the Seahawks in Seattle. In the final contest, the undefeated Raiders beat the Saints.
 </p>
 
 <p>
-  All in all a fun week of football!
+  All in all a great week of football!
 </p>
 
 
 <p>
-Don't dispair if you did not do well. It is only the first week!   
+Don't dispair if you did not do well. It is still early in the season! Plenty of time too move up!  
 </p> 
 
 <p>
