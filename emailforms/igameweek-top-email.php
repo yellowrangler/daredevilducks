@@ -2,22 +2,21 @@
 
 $emailtopwriteup = "	
 <p>
-End to the third week of the Season!
+End to the fourth week of the Season!
 </p> 
 
 <p>
-In the first game, the winless Dolphins beat the Jaguars. Atlanta lost another heart breaker to the undefeated Bears. The Bills continued their winning streak by beating the Rams. The Browns at home smoked the Washingtons. The Titans eased by the 0 and 3 Vikings. The Patriots got back into their winning ways with a beating of the Raiders. The 49ers beat the lowley Giants.
+In the first game, the winless Broncos beat the winless Jets. The Panthers beat the Cardinals. The Colts beat the undefeated Bears, while the Bengals beat the Jaguars. The Browns corralled the Cowboys, and the Saints beat the Lions. The Vikings beat the Texans which resulted in the firing of O'Brien. The Seahawks stayed perfect by harpooning the Dolphins. The Tom Brady Buccaneers in a second half comeback beat the Chargers. The Ravens beat Washington and the Rams beat the Giants.
 </p>
 
 
 <p>
-The Eagles and the Bengals played to a tie. The Steelers beat the still winless Texans, and the Colts beat the  winless Jets. The Panthers beat the Chargers, the Lions beat the Cardinals and The Tom Brady Buccaneers beat the Broncos. Seattle beat Dallas, Green bay beat the Saints and in the last game of the week the Chiefs beat the Ravens.
+The Bills kept their undefeated hopes alive with a win against the Raiders. The Eagles beat the 49ers and the Chiefs beat the Patriots. In the final game, the Packers beat Atlanta. 
 </p>
 
 <p>
   All in all a great week of football!
 </p>
-
 
 <p>
 Don't dispair if you did not do well. It is still early in the season! Plenty of time too move up!  
