@@ -2,20 +2,20 @@
 
 $emailtopwriteup = "	
 <p>
-End to the fifth week of the Season!
+End to the sixth week of the Season!
 </p> 
 
 <p>
-The combination of the corona virus and the genius of Roger Goodell have conspired to make games magically appear and disappear. You may see some anomalous behavior such as a Tuesday night game being shown as a Monday night contest. There may be times when games just aren't played at all. Fear not! We at Daredevil Ducks are doing all that we can to stay on top of this. 
+Can it really be week 7 already? Yikes. It has been a strange and curious trip to say the least. 
 </p>
 
 <p>
-In the Thursday night opener, the Bears eked out a win over the Tom Brady Buccaneers. The winless Falcons lost again, this time to the now 3 and 2 Panthers. The Ravens crushed the Bengals and Texans won their first against the Jaguars. The Raiders stunned the Chiefs with a big win in Kansas. The lowly Jets lost to the Cardinals. The Steelers stayed unbeaten in a win over the Eagles.
+In the first game, which in this week was a Sunday game, the Patriots looked offensively anemic in their loss to the 2 and 3 Broncos. The Colts beat the Bengals in a close contest. The Lions hammered the Jaguars. The Falcons beat the disappointing Vikings.The Bears beat the Panthers, while the Giants beat the Washingtons. 
 </p>
 
 
 <p>
-The Rams beat the 1 and 4 Washingtons. The Dolphins stunned the world, nay galaxy by crushing the 49ers! The Browns continue to stay relevant corralling the Colts. The Cowboys beat the winless Giants. But lost their starting quarterback, Dak Prescott, for the season. The Seahawks squeaked by the Vikings. The covid virus took out the Patriots and Broncos. The Saints beat the Chargers. And in the final game of the week, Titans crushed the Bills!
+The Steelers continue to look like the comeback kid, as they easily dispatched the Browns. The Titans beat Houston and the Fitzpatrick led Dolphins crushed the hapless Jets. In a stunner to me, the Tom Brady Buccaneers beat the Packers. The 49ers beat the Rams and the Chiefs came from behind to beat the Bills. In the final contest, the Cardinals crushed the fading Cowboys.
 </p>
 
 <p>
