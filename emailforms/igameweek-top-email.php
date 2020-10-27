@@ -2,20 +2,20 @@
 
 $emailtopwriteup = "	
 <p>
-End to the sixth week of the Season!
+End to the seventh week of the Season!
 </p> 
 
 <p>
-Can it really be week 7 already? Yikes. It has been a strange and curious trip to say the least. 
+Spooky, Yes? Trees turning color and the temperature is starting to dip. Must be football season!
 </p>
 
 <p>
-In the first game, which in this week was a Sunday game, the Patriots looked offensively anemic in their loss to the 2 and 3 Broncos. The Colts beat the Bengals in a close contest. The Lions hammered the Jaguars. The Falcons beat the disappointing Vikings.The Bears beat the Panthers, while the Giants beat the Washingtons. 
+In the first game, two bottom dwellers slugged it out. In the end the Eagles beat the Giants. In the contest of the two teams that always seem to find a way to loose in the end; the Lions held on to beat the Falcons. The Steelers continued to remain perfect by beating the Titans in a lively contest. The Browns beat the Bengals in a very watchable back and forth affair. The Packers beat the Texans, the Saints beat the Panthers and the Bills beat the Jets. The Washingtons beat the quickly fading Cowboys. 
 </p>
 
 
 <p>
-The Steelers continue to look like the comeback kid, as they easily dispatched the Browns. The Titans beat Houston and the Fitzpatrick led Dolphins crushed the hapless Jets. In a stunner to me, the Tom Brady Buccaneers beat the Packers. The 49ers beat the Rams and the Chiefs came from behind to beat the Bills. In the final contest, the Cardinals crushed the fading Cowboys.
+The Chargers handily beat the Jaguars. The Chiefs massacred the Broncos. The 49ers crushed the Patriots. The Tom Brady Buccaneers continue to impress, as they boarded and sank the Raiders. In the upset of the week the Cardinals eeked by the Seahawks. In the final contest, the Rams pummeled the Bears.
 </p>
 
 <p>
