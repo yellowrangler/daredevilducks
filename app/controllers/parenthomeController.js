@@ -93,6 +93,37 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         
     }
 
+    function toggleHalloweenNav () 
+    {
+        if ($scope.isHalloweenNav == 0)
+        {
+           
+            $('.collapsableNavbarShortOverride').css('background','#FF6E3B');
+            $('.customNavbar').css('background','#FF6E3B');
+
+            AnimateTextColor("toggleHalloweenNavText",
+                "Click Pumpkin to change colors for Halloween!",
+                "#FF6E3B",
+                100);
+            
+
+            $scope.isHalloweenNav = 1;
+        }
+        else
+        {
+            $('.collapsableNavbarShortOverride').css('background','#e7e7e7');
+            $('.customNavbar').css('background','');
+
+            AnimateTextColor("toggleHalloweenNavText",
+                "Click Pumpkin to restore colors!",
+                "NavajoWhite",
+                100);
+
+            $scope.isHalloweenNav = 0;
+        }
+        
+    }
+
     function stopSnowAnimation()
     {
         clearInterval($scope.intervalVariable); 
@@ -102,11 +133,16 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function init() {
         $scope.imagePath = "img";
         $scope.isSnowing = 0;
+        $scope.isHalloweenNav = 0;
         $scope.intervalVariable = "";
         AnimateTextColor("letitsnowtext",
                 "Click Tree Start snow!",
                 "NavajoWhite",
                 500);
+        AnimateTextColor("toggleHalloweenNavText",
+                "Click Pumpkin to change colors for Halloween!",
+                "#FF6E3B",
+                100);
 
         $scope.current = {};
         $scope.bigNavbar = true;
@@ -283,6 +319,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
     $scope.letItSnow = function() {
         letItSnow();
+    }
+
+    $scope.toggleHalloweenNav = function() {
+        toggleHalloweenNav();
     }
 
     $scope.showPicture = function (title, picture) {
