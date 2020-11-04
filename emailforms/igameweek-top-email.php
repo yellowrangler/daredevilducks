@@ -2,7 +2,7 @@
 
 $emailtopwriteup = "	
 <p>
-End to the eigth week of the Season!
+End to the eighth week of the Season!
 </p> 
 
 <p>
