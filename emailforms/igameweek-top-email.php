@@ -2,20 +2,20 @@
 
 $emailtopwriteup = "	
 <p>
-End to the seventh week of the Season!
+End to the eigth week of the Season!
 </p> 
 
 <p>
-Spooky, Yes? Trees turning color and the temperature is starting to dip. Must be football season!
+Let us all take the time to pause and be Thankful for all that we have!
 </p>
 
 <p>
-In the first game, two bottom dwellers slugged it out. In the end the Eagles beat the Giants. In the contest of the two teams that always seem to find a way to loose in the end; the Lions held on to beat the Falcons. The Steelers continued to remain perfect by beating the Titans in a lively contest. The Browns beat the Bengals in a very watchable back and forth affair. The Packers beat the Texans, the Saints beat the Panthers and the Bills beat the Jets. The Washingtons beat the quickly fading Cowboys. 
+In the first game, the Falcons beat the Panthers. In a squeaker the Bills beat the Patriots. The Bengals are starting to come together as they beat the Titans. The Raiders boarded and ravaged the Browns. The Colts beat the very disappointing Lions. The Vikings upset the Packers in Green Bay. The Chiefs scalped the low flying Jets and the Dolphins, with their new first round pick quarterback, beat the Rams.
 </p>
 
 
 <p>
-The Chargers handily beat the Jaguars. The Chiefs massacred the Broncos. The 49ers crushed the Patriots. The Tom Brady Buccaneers continue to impress, as they boarded and sank the Raiders. In the upset of the week the Cardinals eeked by the Seahawks. In the final contest, the Rams pummeled the Bears.
+The Steelers stayed undefeated by beating their divisional nemesis, the Ravens. The Broncos came from behind to shock the Chargers. The Saints beat the Bears, the Seahwks beat the 49ers and Eagles beat the Cowboys. In the final contest, the Tom Brady Buccaneers beat the New York Giants.
 </p>
 
 <p>
