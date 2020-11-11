@@ -2,7 +2,7 @@
 
 $emailtopwriteup = "	
 <p>
-End to the eighth week of the Season!
+End to the ninth week of the Season!
 </p> 
 
 <p>
@@ -10,12 +10,12 @@ Let us all take the time to pause and be Thankful for all that we have!
 </p>
 
 <p>
-In the first game, the Falcons beat the Panthers. In a squeaker the Bills beat the Patriots. The Bengals are starting to come together as they beat the Titans. The Raiders boarded and ravaged the Browns. The Colts beat the very disappointing Lions. The Vikings upset the Packers in Green Bay. The Chiefs scalped the low flying Jets and the Dolphins, with their new first round pick quarterback, beat the Rams.
+In the first game, the Packers beat the 49ers. The Falcons beat the Broncos. The Bills in a bit of an upset, beat the Seahawks. The Ravens beat the Colts. The Texans beat the Jaguars and the Chiefs beat the Panthers. The Vikings crushed the Lions and the Titans beat the Bears.
 </p>
 
 
 <p>
-The Steelers stayed undefeated by beating their divisional nemesis, the Ravens. The Broncos came from behind to shock the Chargers. The Saints beat the Bears, the Seahwks beat the 49ers and Eagles beat the Cowboys. In the final contest, the Tom Brady Buccaneers beat the New York Giants.
+The Giants beat the Washingtons. The Raiders beat the fading Chargers. The Dolphins squeaked by the Cardinals while the Steelers continued their undefeated ways by beating the Cowboys in what only can be characterized as an ugly win. But a win is a win. The Tom Brady Buccaneers had their asses kicked by the Saints. And in the final game, the Patriots edged by the winless Jets.
 </p>
 
 <p>
