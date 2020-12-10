@@ -273,7 +273,7 @@ while($leaderweek = mysqli_fetch_assoc($sql_result)) {
       $prevValue = $wins;
     }
     
-    if ($rank > $toprankingnumberweeklys)
+    if ($rank > $toprankingnumberweekly)
     {
       break;
     }
