@@ -70,6 +70,7 @@ $winstable = "
 // get the query results
 //
 $rank = 1;
+$toprankingnumber = 1;
 $prevValue = "";
 while($leaderwins = mysqli_fetch_assoc($sql_result)) {
     $member = $leaderwins['screenname'];
@@ -243,7 +244,7 @@ include ('mysqlquery.php');
 $leaderweektable = "
 <div style='width:70%;'>
 <p>
-  <span style='font-weight:bold; color:#228b22;'>The Top 3 Leaders for the current week on Player Weekly Totals are:</span>
+  <span style='font-weight:bold; color:#228b22;'>The Top Leader for the current week on Player Weekly Totals is:</span>
 <p>
 <table style='width:100%;'>
   <tr style='background-color:#228b22;color:white;'>
