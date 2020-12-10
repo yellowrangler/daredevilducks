@@ -6,6 +6,7 @@
 $nextweek = $week + 1;
 // $toprankingnumber = 5;
 $toprankingnumber = 3;
+$toprankingnumberweekly = 1;
 
 include ('../../emailforms/igameweek-top-email.php');
 include ('../../emailforms/igameweek-bottom-email.php');
@@ -70,7 +71,6 @@ $winstable = "
 // get the query results
 //
 $rank = 1;
-$toprankingnumber = 1;
 $prevValue = "";
 while($leaderwins = mysqli_fetch_assoc($sql_result)) {
     $member = $leaderwins['screenname'];
@@ -273,7 +273,7 @@ while($leaderweek = mysqli_fetch_assoc($sql_result)) {
       $prevValue = $wins;
     }
     
-    if ($rank > $toprankingnumber)
+    if ($rank > $toprankingnumberweekly)
     {
       break;
     }
