@@ -12,10 +12,6 @@ In the first upset of the week, the Giants beat the Seahawks. The Packers beat t
   All in all a great week of football!
 </p>
 
-// <p>
-// Don't despair if you did not do well. It is still early in the season! Plenty of time too move up!  
-// </p> 
-
 <p>
 Better start honing your skills. There are only 4 weeks left in the Season! 
 </p> 
