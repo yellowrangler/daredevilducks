@@ -2,10 +2,10 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game, the Lions beat the Bears. The Dolphins beat the Bengals. The Browns looked impressive beating the Titans. The Vikings beat the Jaguars in a squeaker. The Raiders beat the sill winless Jets. The Colts worked hard to beat the Texans. The Saints without Brees beat the Falcons, and the Rams beat the Cardinals.</p>
+In the first game, The Rams beat the lowly Patriots. The Broncos beat the Panthers, and the Bears beat the Texans. What happened to the Texans this year? The Cowboys beat the Bengals. Green bay eked by the Lions. And the Chiefs came back again against the Dolphins. Arizona beat up on the Giants and the Tom Brady Buccaneers beat the Vikings.</p>
 
 <p>
-In the first upset of the week, the Giants beat the Seahawks. The Packers beat the Eagles. The Patriots crushed the helpless Chargers. The Chiefs beat the Broncos in a close contest. In the second upset of the week, the Washingtons beat the undefeated Steelers. The Bills beat the 49ers and in the last game, the Ravens beat the Cowboys.
+The Colts put big points on the board in their win over the Raiders. The Seahawks beat the still winless Jets and the Chargers beat the Falcons. The Eagles beat the Drew-less Saints and the Washingtons beat the 49ers. In a bit of a surprise, the Bills beat the Steelers giving the Steelers 2 consecutive losses. In the final game, a truly back and fourth contest found the Ravens winning over the Browns as last team scoring.
 </p>
 
 <p>
@@ -13,7 +13,7 @@ In the first upset of the week, the Giants beat the Seahawks. The Packers beat t
 </p>
 
 <p>
-Better start honing your skills. There are only 4 weeks left in the Season! 
+The end is near! There are only 3 weeks left in the Season! Only a select few have a legitamate chance to win it all. To you few think deep and pick wisely! 
 </p> 
 
 <p>
