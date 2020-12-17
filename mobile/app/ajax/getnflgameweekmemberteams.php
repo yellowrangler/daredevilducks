@@ -136,7 +136,11 @@ LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
 LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
 LEFT JOIN gameweekstbl GW ON GW.week = G.week AND GW.season = G.season
 LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
-LEFT JOIN memberpickstbl MP ON (MP.teamid = G.hometeamid OR MP.teamid = G.awayteamid) AND MP.week = G.week AND MP.season = G.season AND MP.memberid ='$memberid'
+LEFT JOIN memberpickstbl MP ON (MP.teamid = G.hometeamid OR MP.teamid = G.awayteamid) 
+AND MP.week = G.week 
+AND MP.season = G.season 
+AND MP.gamenbr = G.gamenbr
+AND MP.memberid ='$memberid'
 LEFT JOIN teamweekstatstbl TSH ON TSH.teamid = G.hometeamid AND TSH.week = G.week AND TSH.season = G.season
 LEFT JOIN teamweekstatstbl TSA ON TSA.teamid = G.awayteamid AND TSA.week = G.week AND TSA.season = G.season
 WHERE G.season = '$season'
