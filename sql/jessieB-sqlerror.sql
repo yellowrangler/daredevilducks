@@ -126,4 +126,125 @@ select * from gametbl where hometeamid = 23 and awayteamid = 10
 
 select * from memberpickstbl where season = 2020 and week = 14 and memberid = 16 and (teamid = 23 or teamid = 10)
 
+select * from memberpickstbl m
+left join gamestbl g on g.gamenbr = m.gamenbr and g.season = m.season and g.week = m.week
+where m.season = 2020 and m.week = 14 and memberid = 16
+
+DELETE FROM `memberpickstbl` WHERE season = 2020 and week = 14 and memberid = 16
 23 & 10
+
+SELECT memberid, QM.membername as membername, email, phonenumber, screenname, picks
+FROM
+(
+	SELECT memberid, membername, COUNT(*) as picks
+	FROM memberpickstbl MP
+	LEFT JOIN membertbl M on MP.memberid = M.id
+	WHERE season = 2020 and week = 15
+	GROUP BY membername, memberid
+
+	UNION
+
+	SELECT  DISTINCT id as memberid, membername, CAST('0' AS INT) as picks
+	FROM membertbl
+	WHERE id NOT IN
+	(
+		SELECT  memberid as id
+		FROM memberpickstbl MP
+		LEFT JOIN membertbl M on MP.memberid = M.id
+		WHERE season = 2020 and week = 15
+	)
+	AND status = 'active'
+) AS QM
+LEFT JOIN membertbl M on QM.memberid = M.id
+
+
+
+
+SELECT DISTINCT gamenbr, memberid, membername
+FROM   memberpickstbl MP
+left join on gamestbl G on G.gamenbr = MP.gamenbr
+LEFT JOIN membertbl M on M.id = MP.memberid
+LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
+LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
+where season = 2020 and week = 15
+and gamenbr NOT IN
+(
+    select DISTINCT gamenbr
+    FROM gamestbl
+    where season = 2020 and week = 15
+)
+
+
+
+left join memberpickstbl MP on MP.season = G.season and MP.week = G2.week and MP2.gamenbr = G2.gamenbr
+left join membertbl M2 ON M2.id = MP2.memberid
+
+WHERE  colA NOT IN (SELECT DISTINCT colB FROM mytable);
+
+from gamestbl G
+left join memberpickstbl MP on MP.season = G.season and MP.week = G.week and MP.gamenbr = G.gamenbr
+left join membertbl M ON M.id = MP.memberid
+WHERE G.season = 2020 and G.week = 15
+
+
+
+SELECT DISTINCT gamenbr
+FROM   gamestbl
+where season = 2020 and week = 15
+and gamenbr NOT IN
+(
+    select DISTINCT gamenbr
+    FROM memberpickstbl
+    where season = 2020 and week = 15
+)
+
+SELECT DISTINCT gamenbr
+FROM   memberpickstbl
+where season = 2020 and week = 15
+and gamenbr NOT IN
+(
+    select DISTINCT gamenbr
+    FROM gamestbl
+    where season = 2020 and week = 15
+)
+
+
+/// this works to find bad member picks gamenbr
+SELECT DISTINCT gamenbr, memberid, membername
+FROM   memberpickstbl MP
+LEFT JOIN membertbl M on M.id = MP.memberid
+where season = 2020 and week = 15
+and gamenbr NOT IN
+(
+    select DISTINCT gamenbr
+    FROM gamestbl
+    where season = 2020 and week = 15
+)
+
+SELECT DISTINCT gamenbr, memberid, membername, T.name as teamname, MP.id as mempickid
+FROM   memberpickstbl MP
+LEFT JOIN membertbl M on M.id = MP.memberid
+LEFT JOIN teamstbl T on T.id = MP.teamid
+where season = 2020 and week = 15
+and gamenbr NOT IN
+(
+    select DISTINCT gamenbr
+    FROM gamestbl
+    where season = 2020 and week = 15
+);
+
+select MP.gamenbr, T.name, MP.season, MP.week, M.membername, MP.id
+from memberpickstbl MP
+left join gamestbl G on G.season = MP.season and G.week = MP.week 
+left join teamstbl T on T.id = MP.teamid
+left join membertbl M on M.id = MP.memberid;
+
+
+
+
+
+
+
+
+
+

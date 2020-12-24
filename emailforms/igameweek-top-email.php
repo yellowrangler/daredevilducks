@@ -2,10 +2,11 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game, The Rams beat the lowly Patriots. The Broncos beat the Panthers, and the Bears beat the Texans. What happened to the Texans this year? The Cowboys beat the Bengals. Green bay eked by the Lions. And the Chiefs came back again against the Dolphins. Arizona beat up on the Giants and the Tom Brady Buccaneers beat the Vikings.</p>
+In the first game, the Chargers beat the fading Raiders. The Bill's stampeded the Broncos. The Packers put the Panthers in cold storage. The Colts beat the Texans. The Titans crushed the Lions, the Tom Brady Buccaneers beat the Falcons and the Ravens beat the Jaguars. The Dolphins beat the disappointing Patriots and the Bears mauled the Vikings.
+</p>
 
 <p>
-The Colts put big points on the board in their win over the Raiders. The Seahawks beat the still winless Jets and the Chargers beat the Falcons. The Eagles beat the Drew-less Saints and the Washingtons beat the 49ers. In a bit of a surprise, the Bills beat the Steelers giving the Steelers 2 consecutive losses. In the final game, a truly back and fourth contest found the Ravens winning over the Browns as last team scoring.
+The Seahawks squeaked past the Washingtons. The Cowboys lassoed the 49ers. The Jets won their first game against the Rams. The Cardinals beat the Eagles. The Chiefs inched by the Saints, and the Browns dominated the Giants. In the final game of the week, the Bengals with their 3rd string quarterback gave the Steelers their third straight loss.
 </p>
 
 <p>
@@ -13,7 +14,7 @@ The Colts put big points on the board in their win over the Raiders. The Seahawk
 </p>
 
 <p>
-The end is near! There are only 3 weeks left in the Season! Only a select few have a legitamate chance to win it all. To you few think deep and pick wisely! 
+The end is near! There are only 2 weeks left in the Season! Only a select few have a legitamate chance to win it all. To you few think deep and pick wisely! 
 </p> 
 
 <p>
