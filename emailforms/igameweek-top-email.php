@@ -2,11 +2,11 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game, the Chargers beat the fading Raiders. The Bill's stampeded the Broncos. The Packers put the Panthers in cold storage. The Colts beat the Texans. The Titans crushed the Lions, the Tom Brady Buccaneers beat the Falcons and the Ravens beat the Jaguars. The Dolphins beat the disappointing Patriots and the Bears mauled the Vikings.
+In the first game, the Saints beat up on the Vikings in a high scoring contest. The Tom Brady Buccaneers put such a whomping on the cowardly Lions that Brady got pulled in the 3rd quarter! The 49ers beat the Cardinals. In the most exciting finish of the day, the Dolphins behind FitzMagic pulled off a miracle ending as the Raiders were bordered and burned in the waning seconds of the game! The Jets beat the Browns for their second win in a row. The Ravens beat the Giants, and the Bengals beat the Texans.
 </p>
 
 <p>
-The Seahawks squeaked past the Washingtons. The Cowboys lassoed the 49ers. The Jets won their first game against the Rams. The Cardinals beat the Eagles. The Chiefs inched by the Saints, and the Browns dominated the Giants. In the final game of the week, the Bengals with their 3rd string quarterback gave the Steelers their third straight loss.
+The Bears kept their playoff hopes alive by beating the Jaguars. The Chiefs came back, as is quickly becoming their signiture, to beat the Falcons. The Steelers took the AFC North by beating the Colts. The Chargers beat the Broncos. The Panthers beat the Washingtons. The Seahawks beat the Rams, the Cowboys beat the Eagles and the Packers beat the Titans. In the last game of the week the Bills crushed the embarrassing Patriots.
 </p>
 
 <p>
@@ -14,7 +14,7 @@ The Seahawks squeaked past the Washingtons. The Cowboys lassoed the 49ers. The J
 </p>
 
 <p>
-The end is near! There are only 2 weeks left in the Season! Only a select few have a legitamate chance to win it all. To you few think deep and pick wisely! 
+The end is near! There is only 1 weeks left in the Regular Season! Only a select few have a legitamate chance to win it all. To you few think deep and pick wisely! 
 </p> 
 
 <p>
