@@ -2,11 +2,11 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game, the Saints beat up on the Vikings in a high scoring contest. The Tom Brady Buccaneers put such a whomping on the cowardly Lions that Brady got pulled in the 3rd quarter! The 49ers beat the Cardinals. In the most exciting finish of the day, the Dolphins behind FitzMagic pulled off a miracle ending as the Raiders were bordered and burned in the waning seconds of the game! The Jets beat the Browns for their second win in a row. The Ravens beat the Giants, and the Bengals beat the Texans.
+In the first game, the Bills secured a division title as they beat the Dolphins. The Ravens beat the Bengals. The Browns ended the longest playoff drought of any team by beatung the Steelers. The Vikings squeeked by the Lions. The Patriots beat the Jets; who in turn fired their head coach. The Giants beat the Cowboys. The Tom Brady Buccaneers beat the Falcons. The Saints beat the Panthers, the Packsres beat the Bears and the Titans beat the Texans in a thriller. 
 </p>
 
 <p>
-The Bears kept their playoff hopes alive by beating the Jaguars. The Chiefs came back, as is quickly becoming their signiture, to beat the Falcons. The Steelers took the AFC North by beating the Colts. The Chargers beat the Broncos. The Panthers beat the Washingtons. The Seahawks beat the Rams, the Cowboys beat the Eagles and the Packers beat the Titans. In the last game of the week the Bills crushed the embarrassing Patriots.
+The Colts beat the Jaguars. The Chargers beat the Chiefs. The Raiders beat the Broncos. The Rams beat the Cardinals and the Seahawks beat the 49ers. In the most peculiar game of the week, the Washingtons beat the Eagles. This was in a game where the Eagles had a chance to win and put in their third string quarter back, esentially conceding the game to the Washingtons. Had the Washingtons not won the Giants would have taken the division title. Vvery strange. But what the hell, what hasnt been in 20201 (yea it was played in 2021, but it is technically the 2020 season.)
 </p>
 
 <p>
@@ -14,8 +14,13 @@ The Bears kept their playoff hopes alive by beating the Jaguars. The Chiefs came
 </p>
 
 <p>
-The end is near! There is only 1 weeks left in the Regular Season! Only a select few have a legitamate chance to win it all. To you few think deep and pick wisely! 
-</p> 
+This officially ends the regular season. To be honest there has been nothing 'Regular' about it! In the playoffs its one and done. So all teams will be giving it their all! So hold on to your seats as the fun really starts! On to Wild Card Weekend!
+</p>
+
+<p>
+But now the number of games diminishes and the winning picks become more elusive. So picking becomes more critical. Good look to the few that still have a chance to reign supreme at the end of the Season! 
+</p>
+
 
 <p>
 The full stats are below! Read em and weep (I know I do)!
