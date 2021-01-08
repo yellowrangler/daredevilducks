@@ -70,7 +70,7 @@ try {
     <body>
     <div style='display:block;margin:0 auto;padding:0px;width:98%;'>
 
-    <div style='background-color:#00BBC0;padding-top:6px;padding-bottom:10px;padding-left:0px;width:100%;height:60px;' id='headerlogo'>
+    <div style='background-color:#F1948A;padding-top:6px;padding-bottom:10px;padding-left:0px;width:100%;height:60px;' id='headerlogo'>
     <img style='float:left;padding-left:10px;padding-top:10px;padding-top:10px;' src='cid:logoImg' />
     <span style='float:left;font-size:16px;padding-left:10px;padding-top:25px;font-weight:bold;'>Dare Devil Ducks League News</span>
     </div>
