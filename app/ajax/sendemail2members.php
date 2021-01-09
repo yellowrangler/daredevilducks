@@ -72,7 +72,7 @@ try {
 
     <div style='background-color:#F1948A;padding-top:6px;padding-bottom:10px;padding-left:0px;width:100%;height:60px;' id='headerlogo'>
     <img style='float:left;padding-left:10px;padding-top:10px;padding-top:10px;' src='cid:logoImg' />
-    <span style='float:left;font-size:16px;padding-left:10px;padding-top:25px;font-weight:bold;'>Dare Devil Ducks League News</span>
+    <span style='float:left;font-size:16px;padding-left:10px;padding-top:25px;font-weight:bold;'>League News</span>
     </div>
 
     <div style='clear:both;padding-top:15px;'>
@@ -83,7 +83,7 @@ try {
     </body>
     </html>";
 
-    $mail->Subject = "Send email using Gmail SMTP and PHPMailer";
+    $mail->Subject = "Dare Devil Ducks League News";
     $mail->Body = $body;
     // $mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
 
