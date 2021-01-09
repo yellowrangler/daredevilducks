@@ -71,8 +71,8 @@ try {
     <div style='display:block;margin:0 auto;padding:0px;width:98%;'>
 
     <div style='background-color:#F1948A;padding-top:6px;padding-bottom:10px;padding-left:0px;width:100%;height:60px;' id='headerlogo'>
-    <img style='float:left;padding-left:10px;padding-top:10px;padding-top:10px;' src='cid:logoImg' />
-    <span style='float:left;font-size:16px;padding-left:10px;padding-top:25px;font-weight:bold;'>League News</span>
+    <img style='float:left;padding-left:10px;padding-top:6px;' src='cid:logoImg' />
+    <span style='float:left;font-size:20px;padding-left:10px;padding-top:18px;font-weight:bold;'>League News</span>
     </div>
 
     <div style='clear:both;padding-top:15px;'>
