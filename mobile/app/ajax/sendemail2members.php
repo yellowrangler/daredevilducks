@@ -38,13 +38,13 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    $mail->SMTPOptions = array(
-		'ssl' => array(
-		'verify_peer' => false,
-		'verify_peer_name' => false,
-		'allow_self_signed' => true
-		)
-	);
+ //    $mail->SMTPOptions = array(
+	// 	'ssl' => array(
+	// 	'verify_peer' => false,
+	// 	'verify_peer_name' => false,
+	// 	'allow_self_signed' => true
+	// 	)
+	// );
 
     $mail->Username = $mailaccount; // YOUR gmail email account name
     $mail->Password = $mailpassword; // YOUR gmail password
@@ -83,7 +83,7 @@ try {
     </body>
     </html>";
 
-    $mail->Subject = "Dare Devil Ducks League News";
+    $mail->Subject = $subject;
     $mail->Body = $body;
     // $mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
 

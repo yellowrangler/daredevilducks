@@ -307,10 +307,16 @@ $email = "Daredevil Ducks - Week $week is over. Prepare for week $nextweek!\n
 
 $email = $email . $emailtopwriteup;
 
+// $email = $email .
+// "<div id='tablecontainer' style='width:100%;'>" .
+// $winstable . "\n" . 
+// $totalpercenttable . "\n" . 
+// $leaderweektable . "\n"  .
+// "</div>";
+
 $email = $email .
 "<div id='tablecontainer' style='width:100%;'>" .
 $winstable . "\n" . 
-$totalpercenttable . "\n" . 
 $leaderweektable . "\n"  .
 "</div>";
 

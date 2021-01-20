@@ -83,7 +83,7 @@ try {
     </body>
     </html>";
 
-    $mail->Subject = "Dare Devil Ducks League News";
+    $mail->Subject = $subject;
     $mail->Body = $body;
     // $mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
 
