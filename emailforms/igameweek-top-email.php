@@ -2,15 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game, the Bills beat the Colts pushing their magical seson to the next game. Then the Rams beat the Seahawks in Seattle. The Tom Bradey Buccaaneers beat the Washingtons, keeping their playoff run allive. The Ravens beat the Titans in a close game. The Saints crushed the Bears. In the upset of Wild Card weekend, the heavily favored Steelers were beaten by the resiliant Browns!
+In the first game, the Packers decisively beat the Rams. Then the Bills beat the Ravens. The Cinderella Browns turned into pumpkins as they were defeated by the Chiefs! In the final game the Tom Brady Buccaneers beat the Saints for the first time this season. 
 </p>
 
 <p>
-  All in all a great week of football!
+	So now the table is set. The Packers and Buccaneers will play for the NFC title. While the Bills and the Chiefs will play for the AFC title. Whoever survives those two matches will play for overall dominance in the Super Bowl!
 </p>
 
 <p>
-This officially ends the Wild Card Weekend. On to Divisionsal Supremacy Weekend!
+  All in all another great week of football!
+</p>
+
+<p>
+This officially ends the Divisionals. On to Conference Supremacy Weekend!
 </p>
 
 <p>
