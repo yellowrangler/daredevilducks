@@ -2,27 +2,22 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game, the Tom Brady Buccaneers beat the Packers in Green Bay. It was a great contest coming down to the last seconds. 
+In their best game of the season, the Tom Brady Buccaneers beat the high scoring and heavenly favored Kansas City Chiefs. Patrick Mahomes and the Chiefs who had never had a sub 2 digit score, were consistently mauled by the Buccaneer defense. Meanwhile, Tom Brady, with a steady hand, made no mistakes and lead the Buccaneers consistently down field for scores. For Chiefs fans this was a disaster, for Buccaneer fans a dream come true. While a Wuhan virus plagued season may take some of the luster off the year for some, it was still a great game. Forget the Tom Brady story, this was a Buccaneers team that played with great heart against a Chiefs team that was not prepared! 
 </p>
 
 <p>
-In the second game, the Chiefs beat the Bills in Kansas City. The Bills never got started as the Chiefs offense and defense dominated.
+  All in all another great year of football!
 </p>
 
 <p>
-So now the final table is set. The Super Bowl combatants will be the Tom Brady Buccaneers representing the NFC against the Kansas City Chiefs representing the AFC. This is the second straight Super Bowl for the Chiefs. And this will be the first time any team has both hosted and played in Super Bowl.
+<span style='color:black;font-weight:700;'>This year we have three (count em 3) Champions! Please raise your glasses and bow your head to </span><span style='color:#FF6E3B;font-weight:700;'>Alaskan Fisherman</span>
+, <span style='color:#FF6E3B;font-weight:700;'>SandyR</span>.  <span style='color:black;font-weight:700;'>and</span> <span style='color:#FF6E3B;font-weight:700;'>Skinny</span>!
 </p>
 
-<p>
-  All in all another great week of football!
-</p>
+<br />
 
 <p>
-This officially ends the Conference finals. On to the Super Bowl!
-</p>
-
-<p>
-This is it. The cream has risen to the top. Two will go in and only one will come out! Good luck to the few that still have a chance to reign supreme at the end of the Season! 
+<span style='color:#6997DD;font-weight:700;'>Congratulations to the Tampa Bay Buccaneers! Our 2020 Super Bowl Champions!</span>
 </p>
 
 <p>
