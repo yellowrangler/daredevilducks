@@ -62,28 +62,12 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
                 $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
                 }); 
 
-        $( "#hf2020a" )
+        $( "#hf2020" )
             .mouseover(function() {
-                 $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+                 $(this).attr("src", "../img/halloffame/HallofFameWinners20201.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
-                }); 
-
-        $( "#hf2020b" )
-            .mouseover(function() {
-                 $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
-                })
-            .mouseout(function() {
-                $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
-                });                    
-        
-        $( "#hf2020c" )
-            .mouseover(function() {
-                 $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
-                })
-            .mouseout(function() {
-                $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+                $(this).attr("src", "../img/halloffame/HallofFameWinners20201.png");
                 });                                                                  
         
         $( "#hfdefault" )

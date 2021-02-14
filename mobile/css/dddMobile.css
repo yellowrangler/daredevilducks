@@ -726,6 +726,12 @@ border: 0 none;
 	font-size: 18px;
 }
 
+.hallFameParagraphCaptionHeader {
+	font-size: 20px;
+	font-weight:500;
+	color:#00BBC0;
+}
+
 /*banner stuff*/
 .bannerText  {
 	font-size: 24px;
