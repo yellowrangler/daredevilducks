@@ -59,10 +59,10 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
         
         $( "#hf2019" )
             .mouseover(function() {
-                 $(this).attr("src", "img/halloffame/HallofFamePicture2.png");
+                 $(this).attr("src", "img/halloffame/Tanya-Temp-Hall-of-Fame-Pic.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "img/halloffame/HallofFamePicture2.png");
+                $(this).attr("src", "img/halloffame/Tanya-Temp-Hall-of-Fame-Pic.png");
                 });       
 
         $( "#hf2020" )

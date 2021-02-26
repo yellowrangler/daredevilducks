@@ -64,10 +64,10 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
         $( "#hf2020" )
             .mouseover(function() {
-                 $(this).attr("src", "../img/halloffame/HallofFameWinners20201.png");
+                 $(this).attr("src", "../img/halloffame/Tanya-Temp-Hall-of-Fame-Pic.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "../img/halloffame/HallofFameWinners20201.png");
+                $(this).attr("src", "../img/halloffame/Tanya-Temp-Hall-of-Fame-Pic.png");
                 });                                                                  
         
         $( "#hfdefault" )
