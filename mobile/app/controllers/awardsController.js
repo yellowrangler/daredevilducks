@@ -10,7 +10,7 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
     function init() {
         //
         // this is not getting called at right time for definig top offset 
-        // in jquery ready. So adding it here
+        // in jquery ready. So adding it here oye
         //
 
 
