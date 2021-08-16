@@ -91,16 +91,24 @@ foreach($seasonArray as $byeKey => $byeValue)
 	// 
 	$sql = "";
 	$sql = "select id as teamid from teamstbl where name ='" . $byeValue['team'] . "'";
+	
+	// print  "$lr";
+	// print "Team Name sql = $sql";
+	// print  "$lr";
 
 	//
 	// sql query
 	//
 	$function = "select";
-	$modulecontent = "Unable to access ddd bye team info for new season. key = " . $byeValue['hometeam'];
+	$modulecontent = "Unable to access ddd bye team info for new season. key = " . $byeValue['team'];
 	include ("mysqlquery.php");
 
 	$r = mysqli_fetch_assoc($sql_result);
 	$teamid = $r['teamid'];
+
+	// print  "$lr";
+	// print "Team id = $teamid";
+	// print  "$lr";
 
 	// 
 	// build the detail insert sql

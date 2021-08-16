@@ -1,0 +1,303 @@
+1,Cowboys,Buccaneers,8:20 PM,NBC
+1,Steelers,Bills,1 PM,CBS
+1,Jets,Panthers,1 PM,CBS
+1,Jaguars,Texans,1 PM,CBS
+1,Cardinals,Titans,1 PM,CBS
+1,Chargers,Washington,1 PM,CBS
+1,Vikings,Bengals,1 PM,FOX
+1,49ers,Lions,1 PM,FOX
+1,Eagles,Falcons,1 PM,FOX
+1,Seahawks,Colts,1 PM,FOX
+1,Browns,Chiefs,4:25 PM,CBS
+1,Dolphins,Patriots,4:25 PM,CBS
+1,Broncos,Giants,4:25 PM,FOX
+1,Packers,Saints,4:25 PM,FOX
+1,Bears,Rams,8:20 PM,NBC
+1,Ravens,Raiders,8:15 PM,ESPN
+2,Giants,Washington,8:20 PM,NFLN
+2,Patriots,Jets,1 PM,CBS
+2,Texans,Browns,1 PM,CBS
+2,Broncos,Jaguars,1 PM,CBS
+2,Raiders,Steelers,1 PM,CBS
+2,Bills,Dolphins,1 PM,FOX
+2,Bengals,Bears,1 PM,FOX
+2,Rams,Colts,1 PM,FOX
+2,49ers,Eagles,1 PM,FOX
+2,Saints,Panthers,1 PM,FOX
+2,Vikings,Cardinals,4:05 PM,FOX
+2,Falcons,Buccaneers,4:05 PM,FOX
+2,Cowboys,Chargers,4:25 PM,CBS
+2,Titans,Seahawks,4:25 PM,CBS
+2,Chiefs,Ravens,8:20 PM,NBC
+2,Lions,Packers,8:15 PM,ESPN
+3,Panthers,Texans,8:20 PM,NFLN
+3,Ravens,Lions,1 PM,CBS
+3,Chargers,Chiefs,1 PM,CBS
+3,Bengals,Steelers,1 PM,CBS
+3,Colts,Titans,1 PM,CBS
+3,Saints,Patriots,1 PM,FOX
+3,Falcons,Giants,1 PM,FOX
+3,Cardinals,Jaguars,1 PM,FOX
+3,Washington,Bills,1 PM,FOX
+3,Bears,Browns,1 PM,FOX
+3,Jets,Broncos,4:05 PM,CBS
+3,Dolphins,Raiders,4:05 PM,CBS
+3,Seahawks,Vikings,4:25 PM,FOX
+3,Buccaneers,Rams,4:25 PM,FOX
+3,Packers,49ers,8:20 PM,NBC
+3,Eagles,Cowboys,8:15 PM,ESPN
+4,Jaguars,Bengals,8:20 PM,NFLN
+4,Titans,Jets,1 PM,CBS
+4,Texans,Bills ,1 PM,CBS
+4,Colts,Dolphins,1 PM,CBS
+4,Browns,Vikings,1 PM,CBS
+4,Chiefs,Eagles,1 PM,CBS
+4,Giants,Saints,1 PM,FOX
+4,Washington,Falcons,1 PM,FOX
+4,Lions,Bears,1 PM,FOX
+4,Panthers,Cowboys,1 PM,FOX
+4,Cardinals,Rams,4:05 PM,FOX
+4,Seahawks,49ers,4:05 PM,FOX
+4,Steelers,Packers,4:25 PM,CBS
+4,Ravens,Broncos,4:25 PM,CBS
+4,Buccaneers,Patriots,8:20 PM,NBC
+4,Raiders,Chargers,8:15 PM,ESPN
+5,Rams,Seahawks,8:20 PM,FOX/NFLN/Amazon
+5,Jets,Falcons (London),9:30 AM,NFLN
+5,Patriots,Texans,1 PM,CBS
+5,Titans,Jaguars,1 PM,CBS
+5,Dolphins,Buccaneers,1 PM,CBS
+5,Saints,Washington,1 PM,CBS
+5,Lions,Vikings,1 PM,FOX
+5,Eagles,Panthers,1 PM,FOX
+5,Packers,Bengals,1 PM,FOX
+5,Broncos,Steelers,1 PM,FOX
+5,Bears,Raiders,4:05 PM,CBS
+5,Browns,Chargers,4:05 PM,CBS
+5,49ers,Cardinals,4:25 PM,FOX
+5,Giants,Cowboys,4:25 PM,FOX
+5,Bills,Chiefs,8:20 PM,NBC
+5,Colts,Ravens,8:15 PM,ESPN
+6,Buccaneers,Eagles,8:20 PM,FOX/NFLN/Amazon
+6,Dolphins,Jaguars (London),9:30 AM,CBS
+6,Chargers,Ravens,1 PM,CBS
+6,Chiefs,Washington,1 PM,CBS
+6,Texans,Colts,1 PM,CBS
+6,Vikings,Panthers,1 PM,FOX
+6,Packers,Bears,1 PM,FOX
+6,Rams,Giants,1 PM,FOX
+6,Bengals,Lions,1 PM,FOX
+6,Cardinals,Browns,4:05 PM,FOX
+6,Raiders,Broncos,4:25 PM,CBS
+6,Cowboys,Patriots,4:25 PM,CBS
+6,Seahawks,Steelers,8:20 PM,NBC
+6,Bills,Titans,8:15 PM,ESPN
+7,Broncos,Browns,8:20 PM,FOX/NFLN/Amazon
+7,Jets,Patriots,1 PM,CBS
+7,Bengals,Ravens| 1 PM,CBS
+7,Chiefs,Titans,1 PM,CBS
+7,Washington,Packers,1 PM,FOX
+7,Falcons,Dolphins,1 PM,FOX
+7,Panthers,Giants,1 PM,FOX
+7,Eagles,Raiders,4:05 PM,FOX
+7,Lions,Rams,4:05 PM,FOX
+7,Texans,Cardinals,4:25 PM,CBS
+7,Bears,Buccaneers,4:25 PM,CBS
+7,Colts,49ers,8:20 PM,NBC
+7,Saints,Seahawks,8:15 PM,ESPN
+8,Packers,Cardinals,8:20 PM,FOX/NFLN/Amazon
+8,Bengals,Jets,1 PM,CBS
+8,Dolphins,Bills,1 PM,CBS
+8,Steelers,Browns,1 PM,CBS
+8,Bengals,Jets,1 PM,CBS
+8,Titans,Colts,1 PM,CBS
+8,Panthers,Falcons,1 PM,FOX
+8,49ers,Bears,1 PM,FOX
+8,Eagles,Lions,1 PM,FOX
+8,Rams,Texans,1 PM,FOX
+8,Patriots,Chargers,4:05 PM,CBS
+8,Jaguars,Seahawks| 4:05 PM,CBS
+8,Washington,Broncos,4:25 PM,FOX
+8,Buccaneers,Saints,4:25 PM,FOX
+8,Cowboys,Vikings,8:20 PM,NBC
+8,Giants,Chiefs,8:15 PM,ESPN
+9,Jets,Colts,8:20 PM,FOX/NFLN/Amazon
+9,Patriots,Panthers,1 PM,CBS
+9,Raiders,Giants ,1 PM,CBS
+9,Browns,Bengals ,1 PM,CBS
+9,Bills,Jaguars,1 PM,CBS
+9,Falcons,Saints,1 PM,FOX
+9,Vikings,Ravens,1 PM,FOX
+9,Broncos,Cowboys,1 PM,FOX
+9,Texans,Dolphins,1 PM,FOX
+9,Falcons,Saints,1 PM,FOX
+9,Chargers,Eagles,4:05 PM,CBS
+9,Packers,Chiefs,4:25 PM,CBS
+9,Cardinals,49ers,4:25 PM,FOX
+9,Titans,Rams,8:20 PM,NBC
+9,Bears,Steelers,8:15 PM,ESPN
+10,Ravens,Dolphins,8:20 PM,FOX/NFLN/Amazon
+10,Saints,Titans,1 PM,CBS
+10,Bills,Jets,1 PM,CBS
+10,Browns,Patriots,1 PM,CBS
+10,Jaguars,Colts,1 PM,CBS
+10,Saints,Titans,1 PM,CBS
+10,Falcons,Cowboys,1 PM,FOX
+10,Lions,Steelers,1 PM,FOX
+10,Buccaneers,Washington,1 PM,FOX
+10,Panthers,Cardinals,4:05 PM,FOX
+10,Vikings,Chargers,4:05 PM,FOX
+10,Seahawks,Packers,4:25 PM,CBS
+10,Eagles,Broncos,4:25 PM,CBS
+10,Chiefs,Raiders,8:20 PM,NBC
+10,Rams,49ers,8:15 PM,ESPN
+11,Patriots,Falcons,8:20 PM,FOX/NFLN/Amazon
+11,Dolphins,Jets,1 PM,CBS
+11,Colts,Bills,1 PM,CBS
+11,Ravens,Bears,1 PM,CBS
+11,Texans,Titans,1 PM,CBS
+11,Saints,Eagles,1 PM,FOX
+11,Packers,Vikings,1 PM,FOX
+11,Washington,Panthers,1 PM,FOX
+11,Lions,Browns,1 PM,FOX
+11,49ers,Jaguars,1 PM,FOX
+11,Bengals,Raiders,4:05 PM,CBS
+11,Cowboys,Chiefs,4:25 PM,FOX
+11,Cardinals,Seahawks,4:25 PM,FOX
+11,Steelers,Chargers,8:20 PM,NBC
+11,Giants,Buccaneers,8:15 PM,ESPN
+12,Bears,Lions,12:30 PM,FOX
+12,Raiders,Cowboys,4:30 PM,CBS
+12,Bills,Saints,8:20 PM,NBC
+12,Jets,Texans,1 PM,CBS
+12,Titans,Patriots,1 PM,CBS
+12,Falcons,Jaguars,1 PM,CBS
+12,Steelers,Bengals,1 PM,CBS
+12,Titans,Patriots,1 PM,CBS
+12,Buccaneers,Colts,1 PM,FOX
+12,Panthers,Dolphins,1 PM,FOX
+12,Eagles,Giants,1 PM,FOX
+12,Chargers,Broncos,4:05 PM,CBS
+12,Vikings,49ers,4:25 PM,FOX
+12,Rams,Packers,4:25 PM,FOX
+12,Browns,Ravens,8:20 PM,NBC
+12,Seahawks,Washington,8:15 PM,ESPN
+13,Cowboys,Saints,8:20 PM,FOX/NFLN/Amazon
+13,Chargers,Bengals,1 PM,CBS
+13,Vikings,Lions,1 PM,CBS
+13,Colts,Texans,1 PM,CBS
+13,Broncos,Chiefs,1 PM,CBS
+13,Buccaneers,Falcons,1 PM,FOX
+13,Cardinals,Bears,1 PM,FOX
+13,Giants,Dolphins,1 PM,FOX
+13,Washington,Raiders,4:05 PM,FOX
+13,Jaguars,Rams,4:25 PM,CBS
+13,Ravens,Steelers,4:25 PM,CBS
+13,49ers,Seahawks,8:20 PM,NBC
+13,Patriots,Bills,8:15 PM,ESPN
+14,Steelers,Vikings,8:20 PM,FOX/NFLN/Amazon
+14,49ers,Bengals,1 PM,CBS
+14,Ravens,Browns,1 PM,CBS
+14,Raiders,Chiefs,1 PM,CBS
+14,Jaguars,Titans,1 PM,CBS
+14,Falcons,Panthers,1 PM,FOX
+14,Cowboys,Washington,1 PM,FOX
+14,Saints,Jets,1 PM,FOX
+14,Seahawks,Texans,1 PM,FOX
+14,Giants,Chargers,4:05 PM,FOX
+14,Lions,Broncos,4:05 PM,FOX
+14,Bills,Buccaneers,4:25 PM,CBS
+14,Bears,Packers,8:20 PM,NBC
+14,Rams,Cardinals,8:15 PM,ESPN
+
+NFL 2021 Week 15 Schedule
+Chiefs,Chargers,8:20 PM,FOX/NFLN/Amazon
+TBD,4:30 PM,NFLN
+TBD,8:15 PM,NFLN
+
+Date and time tbc
+
+Jets,Dolphins
+Patriots,Colts
+Panthers,Bills
+Washington,Eagles
+Raiders,Browns
+
+Sunday,December 19
+
+Texans,Jaguars,1 PM,CBS
+Titans,Steelers,1 PM,CBS
+Cardinals,Lions,1 PM,FOX
+Packers,Ravens,1 PM,FOX
+Cowboys,Giants,1 PM,FOX
+Falcons,49ers,4:05 PM,CBS
+Bengals,Broncos,4:05 PM,CBS
+Seahawks,Rams,4:25 PM,FOX
+Saints,Buccaneers,8:20 PM,NBC
+
+Monday Night Football,December 20
+
+Vikings,Bears,8:15 PM,ESPN
+
+NFL 2021 Week 16 2021 Schedule
+16,49ers,Titans,8:20 PM,NFLN
+16,Browns,Packers,4:30 PM,FOX/NFLN/Amazon
+16,Colts,Cardinals,8:15 PM,NFLN
+16,Jaguars,Jets,1 PM,CBS
+16,Bills,Patriots,1 PM,CBS
+16,Chargers,Texans,1 PM,CBS
+16,Ravens,Bengals,1 PM,CBS
+16,Buccaneers,Panthers,1 PM,FOX
+16,Lions,Falcons,1 PM,FOX
+16,Rams,Vikings,1 PM,FOX
+16,Giants,Eagles,1 PM,FOX
+16,Bears,Seahawks,4:05 PM,FOX
+16,Broncos,Raiders,4:25 PM,CBS
+16,Steelers,Chiefs,4:25 PM,CBS
+16,Washington,Cowboys,8:20 PM,NBC
+16,Dolphins,Saints,8:15 PM,ESPN
+
+NFL 2021 Week 17 Schedule
+17,Jaguars,Patriots,1 PM,CBS
+17,Giants,Bears,1 PM,CBS
+17,Raiders,Colts,1 PM,CBS
+17,Chiefs,Bears,1 PM,CBS
+17,Dolphins,Titans,1 PM,CBS
+17,Panthers,Saints,1 PM,FOX
+17,Buccaneers,Jets,1 PM,FOX
+17,Falcons,Bills,1 PM,FOX
+17,Cardinals,Cowboys,1 PM,FOX
+17,Eagles,Washington,1 PM,FOX
+17,Broncos,Chargers,4:05 PM,CBS
+17,Texans,49ers,4:05 PM,CBS
+17,Rams,Ravens,4:25 PM,FOX
+17,Lions,Seahawks,4:25 PM,FOX
+17,Vikings,Packers,8:20 PM,NBC
+17,Browns,Steelers,8:15 PM,ESPN
+
+NFL 2021 Week 18 Schedule
+
+Saturday,January 8
+
+TBD,4:30 PM,ESPN/ABC
+TBD,8:15 PM,ESPN/ABC
+
+Sunday,January 9
+
+Jets,Bills,1 PM,CBS
+Patriots,Dolphins,1 PM,CBS
+Steelers,Ravens,1 PM,CBS
+Colts,Jaguars,1 PM,CBS
+Bengals,Browns,1 PM,CBS
+Titans,Texans,1 PM,CBS
+Saints,Falcons,1 PM,FOX
+Packers,Lions,1 PM,FOX
+Panthers,Buccaneers,1 PM,FOX
+Bears,Vikings,1 PM,FOX
+Washington,Giants,1 PM,FOX
+Cowboys,Eagles,1 PM,FOX
+Chiefs,Broncos,4:25 PM,CBS
+Chargers,Raiders,4:25 PM,CBS
+Seahawks,Cardinals,4:25 PM,FOX
+49ers,Rams,4:25 PM,FOX
+TBD,8:20 PM,NBC

@@ -87,8 +87,6 @@ foreach($seasonArray as $gameKey => $gameValue)
 	$gametypeid = $gameValue['gametypeid'];
 	if ($gametypeid == '3')
 	{
-		// print "<br>$gametypeid Continue</br>";
-		// print "<br>" . print_r($gameValue)  . "</br>";
 		continue;
 	}
 
@@ -159,13 +157,6 @@ foreach($seasonArray as $gameKey => $gameValue)
 	$gameday = date("D", $unixTS);
 	$gameyear = date("Y", $unixTS);
 	$gamedate = date("M j", $unixTS);
-
-	// $gameday = $gameValue['day'];
-	// $gameyear = $gameValue['gameyear'];
-	// $datetime = $gameday . " " . $gamedate . " " . $gameyear . " " .$gametime;
-	// $unixTS = strtotime($datetime);
-	// $mysqlTS = date("Y-m-d H:i:s", $unixTS);
-	// $gamedatetime = $mysqlTS;
 
 	// 
 	// current date time
