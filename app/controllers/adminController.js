@@ -2069,7 +2069,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         //
         setviewpadding();
 
-        $scope.current.weeksinregularseason = 17;
+        $scope.current.weeksinregularseason = 18;
         $scope.current.weeksinplayoffseason = 4;
         $scope.current.season = nflTeamsService.getCurrentSeason();
         $scope.current.dumpdatabaselabel = getCurrentDateTimeStr();
