@@ -2,22 +2,23 @@
 
 $emailtopwriteup = "	
 <p>
-In their best game of the season, the Tom Brady Buccaneers beat the high scoring and heavenly favored Kansas City Chiefs. Patrick Mahomes and the Chiefs who had never had a sub 2 digit score, were consistently mauled by the Buccaneer defense. Meanwhile, Tom Brady, with a steady hand, made no mistakes and lead the Buccaneers consistently down field for scores. For Chiefs fans this was a disaster, for Buccaneer fans a dream come true. While a Wuhan virus plagued season may take some of the luster off the year for some, it was still a great game. Forget the Tom Brady story, this was a Buccaneers team that played with great heart against a Chiefs team that was not prepared! 
+This week got started with the Buccaneers hosting the Cowboys in a back and fourth affair. In the end the Tom Brady lead Buccaneers eked out the win!
 </p>
 
 <p>
-  All in all another great year of football!
+The Texans beat the Jaguars in Trevor Lawrence's debut. The Chargers beat the Washington's in a game where Ryan Fitzpatrick received an early game ending injury. The Seahawks beat the Colts. The Panthers lead by the Jets last year quarterback (Sam Darnold), beat the still hapless Jets with their new first round quarterback (Zach Wilson). The Bengals beat the Vikings in a competitive match up.
 </p>
 
 <p>
-<span style='color:black;font-weight:700;'>This year we have three (count em 3) Champions! Please raise your glasses and bow your head to </span><span style='color:#FF6E3B;font-weight:700;'>Alaskan Fisherman</span>
-, <span style='color:#FF6E3B;font-weight:700;'>SandyR</span>.  <span style='color:black;font-weight:700;'>and</span> <span style='color:#FF6E3B;font-weight:700;'>Skinny</span>!
+The Cardinals crushed the Titans. The 49er's got a lot of points on the scoreboard early in their game against the Lions. The Lions came back but fell short as the 49er's won the day. The Steeler's beat the Bills in a game that featured a terrible Steeler's team in the first half followed by a great Steeler's team in the second.
 </p>
 
-<br />
+<p>
+The Eagles crushed the Falcons. The Chiefs beat the Browns in closer contest then the score indicated! The Saints eviscerated the hapless Packers. The Broncos beat the Giants. The Dolphins beat the Patriots in a closely fought contest featuring Mack Jones for the Pats. The Rams beat the Bears. And in the final game of the week the Raiders beat the Ravens in overtime!
+</p>
 
 <p>
-<span style='color:#6997DD;font-weight:700;'>Congratulations to the Tampa Bay Buccaneers! Our 2020 Super Bowl Champions!</span>
+  <span style='font-weight:bold; color:#FF6E3B;'>All in all a great week of football!</span>
 </p>
 
 <p>
