@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-This week got started with the Buccaneers hosting the Cowboys in a back and fourth affair. In the end the Tom Brady lead Buccaneers eked out the win!
+This week got started with the Washingtons hosting the Giants in another back and fourth affair. In the end the Washingtons were just too much as they eked out a one point win!
 </p>
 
 <p>
-The Texans beat the Jaguars in Trevor Lawrence's debut. The Chargers beat the Washington's in a game where Ryan Fitzpatrick received an early game ending injury. The Seahawks beat the Colts. The Panthers lead by the Jets last year quarterback (Sam Darnold), beat the still hapless Jets with their new first round quarterback (Zach Wilson). The Bengals beat the Vikings in a competitive match up.
+The Patriots got their first win over the hapless Jets. The Broncos stretched there record to 2 and 0 after beating the Jaguars. The Bills got their first win of the season by pummeling the Dolphins. The 49ers edged the Eagles as the Rams did the same to the Colts. The Raiders stayed unbeaten by beating the Steelers in Pittsburgh. 
 </p>
 
 <p>
-The Cardinals crushed the Titans. The 49er's got a lot of points on the scoreboard early in their game against the Lions. The Lions came back but fell short as the 49er's won the day. The Steeler's beat the Bills in a game that featured a terrible Steeler's team in the first half followed by a great Steeler's team in the second.
+The Bears beat the Bengals for their first win. The Browns thrashed the leaderless Texans. The Panthers humiliated the Saints as Winstons issues around protecting the ball resurfaced. The Cardinals squeaked by the Vikings in a great back and forth affair. The Buccaneers stayed perfect by beating the Falcons. The Titans beat the Seahawks in a great game that featured the Titans coming back and winning in overtime!
 </p>
 
 <p>
-The Eagles crushed the Falcons. The Chiefs beat the Browns in closer contest then the score indicated! The Saints eviscerated the hapless Packers. The Broncos beat the Giants. The Dolphins beat the Patriots in a closely fought contest featuring Mack Jones for the Pats. The Rams beat the Bears. And in the final game of the week the Raiders beat the Ravens in overtime!
+The Cowboys got their first win over the Chargers. The Ravens beat the hyped Chiefs. In the last game of the week, the Packers got their first win by crushing the Lions!
 </p>
 
 <p>

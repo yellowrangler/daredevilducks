@@ -20,7 +20,7 @@ mysqlcommandfull = mysqlcommand + mysqldbnameprefix + mysqldbnamemiddle + mysqld
 
 print mysqlcommandfull
 while True: 
-	answer = raw_input('Do you want to run this command ?') 
+	answer = raw_input('Do you want to run this command to update ddd database ?') 
 	Fl = answer[0].lower() 
 	if Fl not in ['y','n']: 
 	   print('Please answer with yes or no!') 
