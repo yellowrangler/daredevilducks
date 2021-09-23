@@ -9,15 +9,20 @@ import datetime
 mysqlcommand = "mysqldump --skip-opt --add-drop-table --extended-insert --create-options -u tarryc -p ddd >"
 mysqldbnameprefix = "ddd-"
 mysqldbnamesuffix = "-python.sql"
-mysqldbnamemiddle = ""
+mysqldbnamedate = ""
+mysqldbnameuserpass = ""
 cmd = ""
 
 # get todays date with no slashes
 current_day = datetime.date.today()
 formatted_date = datetime.date.strftime(current_day, "%m%d%Y")
-mysqldbnamemiddle = formatted_date
+mysqldbnamedate = formatted_date
 
-cmd = mysqlcommand + mysqldbnameprefix + mysqldbnamemiddle + mysqldbnamesuffix
+if (len(sys.argv) == 2):
+	mysqldbnameuserpass = sys.argv[1]
+	cmd = mysqlcommand + mysqldbnameprefix + mysqldbnamedate + "-" + mysqldbnameuserpass + mysqldbnamesuffix
+else:
+	cmd = mysqlcommand + mysqldbnameprefix + mysqldbnamedate + mysqldbnamesuffix
 
 print "The following command will now be run, ok? (yes/no)"
 print cmd
