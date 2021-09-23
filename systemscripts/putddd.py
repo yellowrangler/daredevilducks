@@ -12,7 +12,7 @@ mysqlcommand = "mysql -u tarryc -p ddd < "
 file_list = []
 cmd = "no file selected"
 
-file_list = glob.glob('ddd-*.sql')
+file_list = glob.glob('ddd-*python.sql')
 l = len(file_list)
 i = 0
 while (i < l):
@@ -32,9 +32,7 @@ print cmd
 answer = raw_input('Do you want to use this file to update ddd database (yes/no) ?') 
 Fl = answer[0].lower() 
 if Fl == 'y':  
-	print "Command run"
+	returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
+	print'returned value:', returned_value
 
-
-# returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
-# print'returned value:', returned_value
 quit()
