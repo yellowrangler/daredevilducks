@@ -3,36 +3,38 @@
 
 import sys
 import subprocess
+import glob
 
 # global variables
 
 mysqlcommand = "mysql -u tarryc -p ddd < "
-mysqldbnameprefix = "ddd-"
-mysqldbnamesuffix = "-small.sql"
-mysqldbnamemiddle = ""
-mysqlcommandfull = ""
 
-if (len(sys.argv) != 2):
-	quit()
+file_list = []
+cmd = "no file selected"
 
-mysqldbnamemiddle = sys.argv[1]
-mysqlcommandfull = mysqlcommand + mysqldbnameprefix + mysqldbnamemiddle + mysqldbnamesuffix
-
-print mysqlcommandfull
-while True: 
-	answer = raw_input('Do you want to run this command to update ddd database ?') 
+file_list = glob.glob('ddd-*.sql')
+l = len(file_list)
+i = 0
+while (i < l):
+	name = file_list[i]
+	print name
+	answer = raw_input('Do you want to use this file to update ddd database (yes/no) ?') 
 	Fl = answer[0].lower() 
-	if Fl not in ['y','n']: 
-	   print('Please answer with yes or no!') 
-	elif Fl == 'y':  
-	    cmd = mysqlcommandfull
-	    break;
-	elif Fl == 'n': 
-	    print "Command cancled! Fl = ", Fl
-	    quit()
-	    break;
+	if Fl == 'y':  
+		cmd = mysqlcommand + name
+		break;
 
-returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
-print'returned value:', returned_value
+	i += 1
 
+print "The following command will now be run, ok? (yes/no)"
+print cmd
+
+answer = raw_input('Do you want to use this file to update ddd database (yes/no) ?') 
+Fl = answer[0].lower() 
+if Fl == 'y':  
+	print "Command run"
+
+
+# returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
+# print'returned value:', returned_value
 quit()
