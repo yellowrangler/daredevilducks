@@ -56,7 +56,11 @@ WHERE id NOT IN
 )
 AND status = 'active'
 
+SELECT  id as memberid, membername, screenname
+FROM membertbl where 
+screenname like "%hhhh%"
+membername like "%hhhh%"
 
-SELECT * FROM memberpickstbl WHERE season = 2019 and week = 7 and memberid = 96
+SELECT * FROM memberpickstbl WHERE season = 2021 and week = 3 and memberid = 99
 
-DELETE FROM memberpickstbl WHERE season = 2019 and week = 7 and memberid = 96
+DELETE FROM memberpickstbl WHERE season = 2021 and week = 3 and memberid = 99
