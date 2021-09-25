@@ -1791,7 +1791,7 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         //
         sw.start();
         startTime = sw.getLocalTimeStart();
-        $("#scriptMessagesDisplay").append("Start Get Member Picks List. Time:"+startTime+"<br />");
+        // $("#scriptMessagesDisplay").append("Start Get Member Picks List. Time:"+startTime+"<br />");
 
         scriptData = "season="+$scope.current.season+"&week="+$scope.current.week;
         scriptsFactory.getmemberpicklist(scriptData)

@@ -138,7 +138,7 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 	$msg = $msg . "&nbsp;&nbsp;" . str_replace('~', '&nbsp;', str_pad($picks, $padLength, '~')) . $membername . "<br />";
 }
 
-$msg = $msg . "<br />Totals members:$totalmembers Members who picked:$memberspicked Members who did not pick:$membersdidnotpick.";
+$msg = $msg . "<br />Totals members: $totalmembers <br />Members who picked: $memberspicked <br />Members who did not pick: $membersdidnotpick.<br />";
 
 //
 // close db connection

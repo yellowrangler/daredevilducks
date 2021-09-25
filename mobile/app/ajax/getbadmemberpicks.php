@@ -65,7 +65,8 @@ mysqli_close($dbConn);
 // Now look for double picks 
 // 
 
-print "<br>Member pick check report Start for Season: $season and week: $week <br>";
+print "<br>Input variables: Season:$season week:$week<br>";
+// print "<br>Member pick check report Start for Season: $season and week: $week <br>";
 $memberpickerrors = 0;
 $memberid = 0;
 $k = count($memberpicks);
@@ -96,7 +97,7 @@ for ($i = 0; $i < $k; $i++)
 		print "<br>TeamId:" . $memberpicks[$i-1]['teamid'];
 		print "<br>TeamName:" . $memberpicks[$i]['teamname'];
 		print "<br>TeamId:" . $memberpicks[$i-1]['teamid'];
-		print "<br>TeamName:" . $memberpicks[$i]['teamname'] ."<br>";
+		print "<br>TeamName:" . $memberpicks[$i]['teamname'] . "<br>";
 
 	}
 }
@@ -104,8 +105,8 @@ for ($i = 0; $i < $k; $i++)
 //
 // pass back info
 //
-print "<br>Member pick check number of errors: $memberpickerrors";
-print "<br>Member pick check report End<br>";
+print "<br>Member pick errors: $memberpickerrors <br>";
+// print "<br>Member pick check report End<br>";
 
 
 ?>
