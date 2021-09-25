@@ -93,6 +93,42 @@
 					</div> <!-- end of panel default -->
 
 					<div class="panel panel-default">
+					<form id="getbadmemberpicksForm" name="getbadmemberpicksForm" class="form-horizontal">
+						<div style="background-color:#8AF1A3;" class="panel-heading" id="getbadmemberpicksheading">
+							<h3 class="panel-title">
+								<a style="text-decoration:none;" data-toggle="collapse" data-parent="#scriptgroup" data-target="#getbadmemberpicks">
+								Bad Member Picks for Week
+								</a>
+							</h3>
+						</div> <!-- end of panel header -->
+
+						<div id="getbadmemberpicks" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="getbadmemberpicksseason">Season</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.season" class="form-control" id="getbadmemberpicksseason" name="getbadmemberpicksseason" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="getbadmemberpicksweek">Week</label>
+									<div class="col-md-5">
+										<input type="text" ng-model="current.week" class="form-control" id="getbadmemberpicksweek" name="getbadmemberpicksweek" placeholder="">
+									</div>
+								</div> <!-- end of form group -->
+
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-5">
+										<button type="button" ng-click="getbadmemberpicks()" id="getbadmemberpicksbutton" name="getbadmemberpicksbutton"  class="btn btn-primary">Get Bad Member Picks</button>
+									</div>
+								</div> <!-- end of form group -->
+							</div> <!-- end of panel body -->
+						</div> <!-- end of panel collapse -->
+					</form> <!-- end of form horizontal -->
+					</div> <!-- end of panel default -->
+
+					<div class="panel panel-default">
 					<form id="importteamweeklyrankForm" name="importteamweeklyrankForm" class="form-horizontal">
 						<div style="background-color:#FCE4DF;" class="panel-heading" id="importteamweeklyrankheading">
 							<h3 class="panel-title">
