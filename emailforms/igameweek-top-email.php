@@ -2,23 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-This week got started with the Washingtons hosting the Giants in another back and fourth affair. In the end the Washingtons were just too much as they eked out a one point win!
+This week got started with the Panthers putting a bag of hurt on the Texans! Not exactly a page turner.
 </p>
 
 <p>
-The Patriots got their first win over the hapless Jets. The Broncos stretched there record to 2 and 0 after beating the Jaguars. The Bills got their first win of the season by pummeling the Dolphins. The 49ers edged the Eagles as the Rams did the same to the Colts. The Raiders stayed unbeaten by beating the Steelers in Pittsburgh. 
+The Titans beat the winless Colts. In a match of two 0 and 3 teams, the Falcons further humiliated the Giants in a close and somewhat boring game. In something of an upset, the Chargers beat the overly hyped Chiefs. The Bengals beat the Steelers in Pittsburgh, which is bad news for Steeler fans, as these two are division rivals. The Browns continued to impress in their win over the Bears. The Lions lost in a heart breaker to the Ravens. The Lions had just come roaring (Lion roaring - cleaver yes?) back leading by 1, with almost no time on the clock. The Ravens were able to bring the ball to the 49 yard line representing a 66 yard field goal attempt. The field goal kicker hit the cross bar and the ball popped into the air and through giving the Ravens the win and setting a new record for the longest field goal! 
 </p>
 
 <p>
-The Bears beat the Bengals for their first win. The Browns thrashed the leaderless Texans. The Panthers humiliated the Saints as Winstons issues around protecting the ball resurfaced. The Cardinals squeaked by the Vikings in a great back and forth affair. The Buccaneers stayed perfect by beating the Falcons. The Titans beat the Seahawks in a great game that featured the Titans coming back and winning in overtime!
+The Saints beat the inconsistent Patriots in Foxborough. The Cardinals thumped the Jaguars. This game featured a 68 yard field goal attempt by the Cardinals that was run back for a touchdown by the Jaguars tieing the NFL record for longest return for touchdown. The Bills stampeded the Washingtons. The Broncos continued their quest for a perfect season by beating the hapless Jets. In a closely played match, the Raiders squeaked by the Dolphins. The Vikings beat the Seahawks, and the Rams beat the Buccaneers! The Packers came back in a thrilling ending to the Sunday night game, beating the 49ers by 2 with a last second field goal! 
 </p>
 
 <p>
-The Cowboys got their first win over the Chargers. The Ravens beat the hyped Chiefs. In the last game of the week, the Packers got their first win by crushing the Lions!
-</p>
-
-<p>
-  <span style='font-weight:bold; color:#FF6E3B;'>All in all a great week of football!</span>
+In the last game of the week, the Cowboys got their second win over the Eagles!
 </p>
 
 <p>

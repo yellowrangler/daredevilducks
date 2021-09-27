@@ -22,3 +22,11 @@ where season = 2021 and week = 3
 order by screenname, gamenbr
 
 http://yellowrangler/daredevilducks/app/ajax/getbadpicks.php?week=3
+
+Select  count(gamenbr), memberid, membername, screenname, teamid,CONCAT(T.name, ' ', T.location) as teamname
+from memberpickstbl MP 
+left join membertbl M on M.id = MP.memberid
+left join teamstbl T on T.id = MP.teamid
+where season = 2021 and week = 3 
+group by MP.memberid
+order by screenname
