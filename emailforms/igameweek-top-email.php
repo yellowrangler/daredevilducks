@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-This week got started with the Rams beating the Seahawks in an engaging contest.
+This week got started with the Buccaneers beating the Eagles in a close contest.
 </p>
 
 <p>
-The Falcons beat the Jets. The Steelers regained credibility as they beat the Broncos at home. The Tom Brady Buccaneers beat Miami. The Eagles beat the Panthers. The Vikings handed the Lions another heartbreaking last second loss. The Packers eeked out the Bengals. The Patriots equally eeked out the Texans. The Saints beat the Washingtons in a back and forth contest.
+The Jaguars beat the Dolphins in Jolly old England. The Chiefs beat the Washingtons. The Rams punished the Giants. The Colts stampeded the Texans and the Bengals looked good in their win over the Lions. The Packers held on to beat the Bears and the Ravens crushed the disappointing Chargers.
 </p>
 
 <p>
-The Titans crushed the Jaguars. The Bears beat the Raiders. The Chargers beat the Browns in a competitive high scoring affair. The Cardinals remained perfect by dispatching the 49ers. The Cowboys corralled the Giants. The Bills looked very good as they dispatched the 2 and 3 overly hyped Chiefs.
+The Vikings beat the Panthers as the Cardinals stayed perfect as they dispatched the Browns. The Gruden-less Raiders beat the Broncos. The Cowboys held on to beat the Patriots. In the best game of the week, the Steelers beat the Seahawks in a closely played and competitive contest.
 </p>
 
 <p>
-In the last game of the week, the Ravens beat the Colts in overtime!
+In the last game of the week, the Titans eaked out a win against the Bills!
 </p>
 
 <p>
