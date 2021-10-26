@@ -1818,14 +1818,14 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
         gw.start();
         startTime = gw.getLocalTimeStart();
-        $("#scriptMessagesDisplay").html("Start of Get Bad Member Picks ScriptsTime:"+startTime+"<br /><br />");
+        $("#scriptMessagesDisplay").html("Start of Get Bad Member Picks  ScriptsTime:"+startTime+"<br />");
 
         //
         // run get member picks list
         //
         sw.start();
-        startTime = sw.getLocalTimeStart();
-        $("#scriptMessagesDisplay").append("Start Get Bad Member Picks. Time:"+startTime+"<br />");
+        // startTime = sw.getLocalTimeStart();
+        // $("#scriptMessagesDisplay").append("Start Get Bad Member Picks. Time:"+startTime+"<br />");
 
         scriptData = "season="+$scope.current.season+"&week="+$scope.current.week;
         scriptsFactory.getbadmemberpicks(scriptData)

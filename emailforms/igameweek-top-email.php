@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-This week got started with the Buccaneers beating the Eagles in a close contest.
+The week got started with the Browns beating the Broncos, in a game that featured Case Keenum in for the injured Baker Mayfield.
 </p>
 
 <p>
-The Jaguars beat the Dolphins in Jolly old England. The Chiefs beat the Washingtons. The Rams punished the Giants. The Colts stampeded the Texans and the Bengals looked good in their win over the Lions. The Packers held on to beat the Bears and the Ravens crushed the disappointing Chargers.
+The Giants crushed the leaderless Panthers. The Patriots embarrassed the 1 and 5 Jets. In a huge upset, the Titans dominated the Chiefs, keeping the much vaulted Mahomes to 3 points! The Packers spanked the Washingtons. Thr Falcons eekec out a win over the Dolphins. In another upset of sorts, the Bengals mauled the Ravens in Baltimore!
 </p>
 
 <p>
-The Vikings beat the Panthers and the Cardinals stayed perfect as they dispatched the Browns. The Gruden-less Raiders beat the Broncos. The Cowboys held on to beat the Patriots. In the best game of the week, the Steelers beat the Seahawks in a closely played and competitive contest.
+The Rams beat the Lions in the game of switched quarterbacks, proving nothing. The Raiders boarded and beat the Eagles. The Cardinals started slowly but found their mettle on their way to a decisive thumping of the Texans. The Buccaneers dominated the Bears. In the Sunday night game which featured so much rain that animals in twos were spied boarding an arc - the Colts pounded the 49ers.
 </p>
 
 <p>
-In the last game of the week, the Titans eaked out a win against the Bills!
+In the last game of the week, the New Orleans Saints won out over the Seahawks!
 </p>
 
 <p>
