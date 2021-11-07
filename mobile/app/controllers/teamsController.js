@@ -17,12 +17,12 @@ controllers.teamstandingsController = function ($scope, $http, $location, $windo
 
     init();
     function init() {
-        var teamStandingsCollapse = $('#teamStandingsCollapse');
-        teamStandingsCollapse.on('show.bs.collapse','.collapse', function() {
-                teamStandingsCollapse.find('.collapse.in').collapse('hide');
+        // var teamStandingsCollapse = $('#teamStandingsCollapse');
+        // teamStandingsCollapse.on('show.bs.collapse','.collapse', function() {
+        //         teamStandingsCollapse.find('.collapse.in').collapse('hide');
 
-                $window.scrollTo(0, 0);
-            });
+        //         $window.scrollTo(0, 0);
+        //     });
 
         var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
         $scope.postseasonstatuses = postseasonstatuses;
