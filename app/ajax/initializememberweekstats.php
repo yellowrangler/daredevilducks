@@ -88,6 +88,7 @@ $sql_result_prime = $sql_result;
 //
 $membercount = 0;
 $memberinsertedcount = 0;
+$memberid = 0;
 
 while($row = mysqli_fetch_assoc($sql_result_prime)) {
 

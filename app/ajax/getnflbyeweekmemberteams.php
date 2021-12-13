@@ -9,7 +9,7 @@ include_once ('../class/class.AccessLog.php');
 //
 $season = $_POST['season'];
 $week = $_POST['week'];
-$memberid = $_POST['memberid'];
+// $memberid = $_POST['memberid'];
 
 // debug
 // $season = 2014;

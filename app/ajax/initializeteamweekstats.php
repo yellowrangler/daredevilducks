@@ -66,7 +66,7 @@ else
 	}
 }
 
-$msg = "Input variables: Season:$season weeksinseason:$weeksinseason weeksinplayoffseason:$weeksinplayoffseason<br />";
+$msg = "Input variables: Season:$season weeksinregularseason:$weeksinregularseason weeksinplayoffseason:$weeksinplayoffseason<br />";
 
 //
 // set variables
