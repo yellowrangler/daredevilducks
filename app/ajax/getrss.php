@@ -22,7 +22,6 @@ else
 	{
 		$msg = $msg . "No url passed - getrss terminated";
 		exit($msg);
-
 	}
 }
 
@@ -62,24 +61,22 @@ function display_xml_error($error, $xml)
 function xmlRss($url)
 {
 	try {
-	  $rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
-	  if ($rssContent === false)
-	  {
-	  	$errors = libxml_get_errors();
-	    foreach($errors as $error) {
-	        echo display_xml_error($error, $xml);
-	    }
+		// $rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
+		$rssContent = simplexml_load_string($url);
+		if ($rssContent === false)
+		{
+			$errors = libxml_get_errors();
+			foreach($errors as $error) {
+			    echo display_xml_error($error, $xml);
+			}
 
-	    libxml_clear_errors();
-	  }
+			libxml_clear_errors();
+		}
 	} catch (Exception $e) {
-	    echo "/n Exception /n";
+		echo "/n Exception /n";
 	}
 
-
 	return json_encode($rssContent);
-
-	// var_dump ( libxml_get_errors () );
 }
 
 function curlRss($url)
