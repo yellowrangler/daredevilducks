@@ -61,8 +61,8 @@ function display_xml_error($error, $xml)
 function xmlRss($url)
 {
 	try {
-		// $rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
-		$rssContent = simplexml_load_string($url);
+		$rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
+		// $rssContent = simplexml_load_string($url);
 		if ($rssContent === false)
 		{
 			$errors = libxml_get_errors();
