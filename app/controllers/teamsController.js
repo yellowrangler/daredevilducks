@@ -196,23 +196,23 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         refreshNflNews();
     }
 
-    $scope.loadNewsDetail = function (url, idx) {
-        loadNewsDetail(url, idx);
-    }
+    // $scope.loadNewsDetail = function (url, idx) {
+    //     loadNewsDetail(url, idx);
+    // }
 
-    $scope.showiFrameYes = function (idx) {
-        showiFrameYes(idx);
-    }
+    // $scope.showiFrameYes = function (idx) {
+    //     showiFrameYes(idx);
+    // }
 
-    $scope.trustSrc = function(src) {
-        var x = $sce.trustAsResourceUrl(src);
+    // $scope.trustSrc = function(src) {
+    //     var x = $sce.trustAsResourceUrl(src);
 
-        return x;
-    }
+    //     return x;
+    // }
 
-    $scope.decodeRssString = function (str) {
-        return decodeHtmlString(str);
-    }
+    // $scope.decodeRssString = function (str) {
+    //     return decodeHtmlString(str);
+    // }
 }
 
 controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, teamsFactory) {

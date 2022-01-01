@@ -62,6 +62,7 @@ function xmlRss($url)
 {
 	try {
 		$rssContent = simpleXML_load_file($url, 'SimpleXMLElement',LIBXML_NOCDATA);
+		// $rssContent = simpleXML_load_file($url);
 		// $rssContent = simplexml_load_string($url);
 		if ($rssContent === false)
 		{
