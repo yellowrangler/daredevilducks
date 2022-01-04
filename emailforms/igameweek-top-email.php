@@ -5,28 +5,30 @@ $emailtopwriteup = "
 The week got started with the Titans beating the 49ers in a thriller.
 </p>
 
-<p>
+<!-- <p>
 On Saturday, the Packers beat the Browns. The Colts beat the fading Cardinals.
 </p>
-
+ -->
 <p>
-On Sunday, the Eagles whupped on the Giants. The Rams beat the Vikings. The Bills returned the favor and beat the Patriots in Foxborough. The Buccaneers crushed the Panthers. The Jets beat the Jaguars. The Falcons beat the cowardly Lions. The Texans crushed the Chargers. The Bengals had there biggest win of the year as they defeated the Ravens decisively in Cincinnati. The Bears beat the Seahawks. The Chiefs beat the Steelers. The Raiders beat the Broncos. In the night game, the Cowboys eviscerated the Washingtons.
+On Sunday, the Eagles beat on the Washingtons. The Rams squeeked by the Ravens. The Bucaaneers beat the Jets in a classic Tom Brady last minute comeback. The Titans squished the fish. The Patriots mauled the Jaguars. The Raiders kept  their playoff hopes alive as they beat the Colts. The Bengals beat the cocky Chiefs. The Bears mauled the Giants. The Bills beat the Falcons. The 49ers slammed the Texans. The Chargers kept their playoff hopes alive as well as they stampeeded the Broncos. The Saints beat the Panthers. The Seahawks destroyed the Lions. In a thriller, the Cardinals beat the Cowboys. In the late game, the Packers beat the Vikings.
 </p>
 
 <p>
-On Monday, the Dolphins beat the Saints.
+On Monday, the Steelers beat the Browns.
 </p>
 
 <p>
   <span style='font-weight:bold; color:#FF6E3B;'>All in all a great week of football!</span>
 </p>
 
-<p>
-We can now start talking about the playoff picture! There are 7 playoff berths available for both the AFC and the NFC. 
+<p style='padding-top:20px;'>
+<span style='font-size: 20px; font-weight:bold; color:#00BBC0;'>The playoff picture!</span> 
 <br/><br/>
-In the AFC the Chiefs have clinched a playoff spot. Of the 6 available (in order of rank per standings) are the Titans, Bengals, Bills, Colts, Patriots and Dolphins. On the bubble are Chargers, Raiders, Ravens, Steelers, Browns and Broncos.
+There are 7 playoff berths available for both the AFC and the NFC. 
 <br/><br/>
-In the NFC the Packers, Cowboys, Rams, Buccaneers and Cardinals have clinched a playoff spot. Of the 2 available (in order of rank per standings) are the 49ers and Eagles. On the bubble are Vikings, Falcons, Saints and Washingtons.
+In the AFC the Titans, Chiefs, Bengals, Bills and Patriots have clinched a playoff spot. Of the 2 available (in order of rank per standings) are Colts and Chargers. On the bubble are Raiders, Steelers, and Ravens.
+<br/><br/>
+In the NFC the Packers, Cowboys, Rams, Buccaneers, Cardinals and Eagles have clinched a playoff spot. Of the 1 available (in order of rank per standings) is the 49ers. On the bubble is the Saints.
 </p>
 
 <p>
