@@ -108,7 +108,12 @@
             <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
         </article>
 
-        
+        <article>
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Season Playoff Bracket',bracketimg)">
+                <img style="width:150px;text-align:center;" ng-src="../img/{{bracketimg}}" alt="Playoff Bracket" class="img-rounded">
+            </a>
+        </article>
+
         <article>
             <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
                 <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmasstreeStopNew.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
@@ -116,7 +121,6 @@
 
             <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext"></div>
         </article>
-
         
         <!-- <article>
             <a href="#spooky">
@@ -137,7 +141,7 @@
         </article>  -->
 
          <article style="margin-bottom:25px;">
-            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Winter Wonderland!','Winter-HomePage2-2020.png')">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Winter Wonderland!','DonaldDuckWinter2018HomePageA.png')">
                 <img ng-src='../img/Winter-HomePage2-2020.png'  style="height:100px;text-align:center;" alt="Winter Wonderland!"> 
             </a>
         </article> 
