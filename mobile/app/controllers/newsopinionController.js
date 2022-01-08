@@ -1,4 +1,4 @@
-controllers.newsopinionController = function ($scope, $http, $location, loginService) {
+controllers.newsopinionController = function ($scope, $http, $location, loginService, manageimgService) {
     var loggedIn = loginService.isLoggedIn();
     if (!loggedIn)
     {
@@ -13,7 +13,8 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
-
         
     };
+
+    
 }

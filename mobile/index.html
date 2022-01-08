@@ -110,7 +110,7 @@
 
         <article>
             <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Season Playoff Bracket',bracketimg)">
-                <img style="width:150px;text-align:center;" ng-src="../img/{{bracketimg}}" alt="Playoff Bracket" class="img-rounded">
+                <img id="showpictureimg" style="width:150px;text-align:center;" ng-src="../img/{{bracketimg}}" alt="Playoff Bracket" class="img-rounded">
             </a>
         </article>
 
@@ -167,5 +167,25 @@
     </div>
 </div> <!-- end of footer -->
 
+<!-- dialogs -->
+<div class="modal fade" id="homePicShowModal" tabindex="-1" role="dialog" aria-labelledby="homePicShowModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 id="homePicShowModalTitle" class="modal-title" style="font-family:'ChopinScript',serif;font-size:28px;color:red;text-align:center" id="homePicModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="homePicModalBody">
+            <img ng-src={{showPictureSrc}} style="width:100%;text-align:center;" alt="Thank you Lord for all that we have!">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+    
 </body>
 </html>

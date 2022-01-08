@@ -1,4 +1,4 @@
-controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, teamsFactory, nflTeamsService) {
+controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, teamsFactory, nflTeamsService, manageimgService) {
     $scope.memberavatar = "";
 
     function checkRole() {
@@ -77,7 +77,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
 
         $scope.current = {};
 
-        // parent.document.body.style.overflowY='scroll';
+       // parent.document.body.style.overflowY='scroll';
 
         getAvatar();
         loginService.setAvatarLabel("menubaravatar",0);
