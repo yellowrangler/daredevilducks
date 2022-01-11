@@ -73,6 +73,9 @@ else
 
 $msg = "Input variables: Season:$season <br />";
 
+// debug
+print $msg;
+
 //
 // db connect
 //
@@ -93,7 +96,7 @@ $postseasontotalgames = 0;
 //---------------------------------------------------------------
 // Get list of all dare devil ducks members
 //---------------------------------------------------------------
-$sql = "SELECT * FROM membertbl";
+$sql = "SELECT * FROM membertbl where status = 'active'";
 
 //
 // sql query
@@ -101,7 +104,7 @@ $sql = "SELECT * FROM membertbl";
 $function = "select";
 $modulecontent = "Unable to get member list.";
 include ('mysqlquery.php');
-$sql_result_prime = $sql_result;
+$sql_result_members = $sql_result;
 
 //---------------------------------------------------------------
 // get total weeks to date
@@ -117,12 +120,16 @@ AND weekstart <= now()";
 $function = "select";
 $modulecontent = "Unable to get max weeks list.";
 include ('mysqlquery.php');
+$sql_result_weeks = $sql_result;
 
 //
 // get total weeks
 //
-$r = mysqli_fetch_assoc($sql_result);
+$r = mysqli_fetch_assoc($sql_result_weeks);
 $weekstotal = $r[weeks];
+
+// debug
+// print "<br />weeksttotal $weekstotal";
 
 // added 8/25/2016 if weeks is null
 if ($weekstotal == null)
@@ -133,11 +140,13 @@ if ($weekstotal == null)
 //
 // loop through all members
 //
-while($row = mysqli_fetch_assoc($sql_result_prime))
+while($row = mysqli_fetch_assoc($sql_result_members))
 {
 
 	// count members
 	$membercount = $membercount + 1;
+	// debug
+	// print "<br /> top member loop membercount $membercount";
 
 	//
 	// reset values
@@ -149,11 +158,17 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 
 	$memberid = $row['id'];
 
+	// debug
+	// print "<br /> top member loop memberid $memberid";
+
 	//
 	// for every week get totals
 	//
 	for ($week = 1; $week <= $weekstotal; $week++)
 	{
+		// debug
+		// print "<br /> top week loop week $week";
+
 		//
 		// reset values - comment this out to get cumulative rolled up results
 		//
@@ -166,7 +181,6 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 		$totalgamespercent = 0;
 
 		$totalgames = 0;
-
 
 		$gametypeid = 0;
 
@@ -191,12 +205,17 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 		LEFT JOIN teamstbl TH ON G.hometeamid = TH.id
 		LEFT JOIN teamstbl TA ON G.awayteamid = TA.id
 		LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
-		LEFT JOIN memberpickstbl MP ON (MP.teamid = G.hometeamid OR MP.teamid = G.awayteamid) AND MP.week = G.week AND MP.season = G.season AND MP.memberid ='$memberid'
+		LEFT JOIN memberpickstbl MP ON (MP.teamid = G.hometeamid OR MP.teamid = G.awayteamid) 
+		AND MP.week = G.week 
+		AND MP.season = G.season 
+		AND MP.memberid ='$memberid'
 		WHERE (G.season = '$season' AND G.week = $week)
 		AND MP.memberid = $memberid
 	    AND NOT (G.hometeamscore = G.awayteamscore AND G.hometeamscore = 0 AND G.awayteamscore = 0)
 		ORDER BY G.gamedatetime";
 
+		// debug
+		// print "<br /> sql to get games picked for week sql <br />$sql";
 		//
 		// sql query
 		//
@@ -239,12 +258,19 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 			exit($msg);
 		}
 
+		// debug
+		// print "<br /> count for selection before loop $count";
+
 		//
 		// We now have all the games for the season week for the member.
 		// Lets loop through and do the math.
 		//
 		while ($r = mysqli_fetch_assoc($sql_result_week))
 		{
+			// debug
+			// print "<br /> top week calc loop r[week] " . $r['week'];
+			// print_r($r);
+
 			//
 			// set up variablels
 			//
@@ -293,6 +319,7 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 
 				default:
 					$msg = $msg . "Switch default seleted:$teamselected hometeamid:$hometeamid awayteamid:$awayteamid";
+					print($msg);
 					exit($msg);
 					break;
 			}  // end of switch
@@ -302,7 +329,15 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 			//
 			$gametypeid = $r['gametypeid'];
 
+			// debug
+			// print "<br /> bottom of week calc loop r[week] " . $r['week'];
+			// print_r($r);
+
 		}  // end of while member games for week
+
+		// debug
+		// print "<br /> end of while member games for week loop";
+		// exit();
 
 		//
 		// totals games is done outside the loop because some people join later
@@ -361,6 +396,10 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 
 		$count = mysqli_num_rows($sql_result_check_week);
 
+		//debug
+		// print "<br /> update or insert. week = $week. memberid = $memberid";
+
+
 		if ($count > 0)
 		{
 			//
@@ -385,21 +424,34 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 			$function = "insert";
 
 			$sql = "INSERT INTO memberweekstatstbl
-				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, enterdate, gametypeid, memberid)
-				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
+				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, week, enterdate, gametypeid, memberid)
+				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, $week, '$enterdateTS', $gametypeid, $memberid)";
 		}
 
+		// debug
+		// print "<br /> before sql run. function = $function week $week";
 		//
 		// sql query
 		//
 		$modulecontent = "Unable to insert or update member week stats.";
 		include ('mysqlquery.php');
 		$sql_result_insert_update = $sql_result;
+
 	} // end of outer week loop
+
+	// debug
+	// print "<br /> end of outer week loop";
+	// exit();
 
 	//
 	// loop through rest of weeks - uncomment to get cumulative rolled up results
 	//
+
+	// debug
+	print "<br /> <br />loop thru rest of weeks";
+	print "<br /> start = $week. weeksinregularseason = $weeksinregularseason memberid = $memberid <br />";
+
+
  	$start = $week;
 	for ($week = $start; $week <= $weeksinregularseason; $week++)
 	{
@@ -414,10 +466,19 @@ while($row = mysqli_fetch_assoc($sql_result_prime))
 		$modulecontent = "Unable to insert or update member week stats.";
 		include ('mysqlquery.php');
 		$sql_result_update = $sql_result;
+
+		// debug
+		// print "<br /> rest of week loop";
+		// print "<br /> function = $function memberid = $memberid";
+
 	} // end of for week loop
+
 } // end of looping through members
 
 $msg = $msg . "Totals Members:$membercount. Weeks:$weekstotal";
+
+// debug
+// print "<br /> $msg";
 
 //
 // close db connection

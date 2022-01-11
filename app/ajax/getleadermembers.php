@@ -8,6 +8,7 @@ include_once ('../class/class.AccessLog.php');
 // get post variables
 //
 $season = $_POST['season'];
+// $week = $_POST['week'];
 $leaderType = $_POST['leaderType'];
 $gametypeid = $_POST['gametypeid'];
 $membergroupid = 0;

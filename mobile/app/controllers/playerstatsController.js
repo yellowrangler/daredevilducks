@@ -45,21 +45,23 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         return data;
     }
 
-    function getYearlyTotalWins() 
+    function getYearlyTotalWins(action) 
     {
-        // Set button title and toggle showexperts
-        switch ($scope.current.showexperts) {
-            case 0:
-                $scope.current.showexperts = 1;
-                $scope.current.showexpertsTitle = "Hide Experts";
-                break;
+        if (action == 'experts')
+        {
+            switch ($scope.current.showexperts) {
+                case 0:
+                    $scope.current.showexperts = 1;
+                    $scope.current.showexpertsTitle = "Hide Experts";
+                    break;
 
-            case 1:
-                $scope.current.showexperts = 0;
-                $scope.current.showexpertsTitle = "Show Experts";
-                break;    
-            default:
+                case 1:
+                    $scope.current.showexperts = 0;
+                    $scope.current.showexpertsTitle = "Show Experts";
+                    break;    
+                default:
                 
+            }
         }
 
         //
@@ -129,8 +131,8 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
             });    
     };
 
-    $scope.getYearlyTotalWins = function() {
-        getYearlyTotalWins();
+    $scope.getYearlyTotalWins = function(action) {
+        getYearlyTotalWins(action);
     }
 
     $scope.getMemberProfile = function(memberid) {
@@ -185,21 +187,23 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
         return data;
     }
 
-    function getYearlyTotalPercentage() 
+    function getYearlyTotalPercentage(action) 
     {
-        // Set button title and toggle showexperts
-        switch ($scope.current.showexperts) {
-            case 0:
-                $scope.current.showexperts = 1;
-                $scope.current.showexpertsTitle = "Hide Experts";
-                break;
+        if (action == 'experts')
+        {
+            switch ($scope.current.showexperts) {
+                case 0:
+                    $scope.current.showexperts = 1;
+                    $scope.current.showexpertsTitle = "Hide Experts";
+                    break;
 
-            case 1:
-                $scope.current.showexperts = 0;
-                $scope.current.showexpertsTitle = "Show Experts";
-                break;    
-            default:
+                case 1:
+                    $scope.current.showexperts = 0;
+                    $scope.current.showexpertsTitle = "Show Experts";
+                    break;    
+                default:
                 
+            }
         }
 
         //
@@ -269,8 +273,8 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
             });
     };
 
-    $scope.getYearlyTotalPercentage = function() {
-        getYearlyTotalPercentage();
+    $scope.getYearlyTotalPercentage = function(action) {
+        getYearlyTotalPercentage(action);
     }
 
     $scope.getMemberProfile = function(memberid) {
@@ -298,21 +302,24 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
             }); 
     }
 
-    function selectChange()
+    function selectChange(action)
     {
         // Set button title and toggle showexperts
-        switch ($scope.current.showexperts) {
-            case 0:
-                $scope.current.showexperts = 1;
-                $scope.current.showexpertsTitle = "Hide Experts";
-                break;
+        if (action == 'experts')
+        {
+            switch ($scope.current.showexperts) {
+                case 0:
+                    $scope.current.showexperts = 1;
+                    $scope.current.showexpertsTitle = "Hide Experts";
+                    break;
 
-            case 1:
-                $scope.current.showexperts = 0;
-                $scope.current.showexpertsTitle = "Show Experts";
-                break;    
-            default:
-                
+                case 1:
+                    $scope.current.showexperts = 0;
+                    $scope.current.showexpertsTitle = "Show Experts";
+                    break;    
+                default:
+                    
+            }
         }
         
         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&membergroupid="+$scope.current.membergroupid+"&showexperts="+$scope.current.showexperts;
@@ -420,8 +427,8 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         });                
     }
 
-    $scope.getMemberWeekStats = function() {
-        selectChange();
+    $scope.getMemberWeekStats = function(action) {
+        selectChange(action);
     }
 
     $scope.getMemberProfile = function(memberid) {

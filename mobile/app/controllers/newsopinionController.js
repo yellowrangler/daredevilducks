@@ -1,4 +1,4 @@
-controllers.newsopinionController = function ($scope, $http, $location, loginService, manageimgService) {
+controllers.newsopinionController = function ($scope, $http, $location, loginService) {
     var loggedIn = loginService.isLoggedIn();
     if (!loggedIn)
     {

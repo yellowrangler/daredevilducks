@@ -2,33 +2,27 @@
 
 $emailtopwriteup = "	
 <p>
-The week got started with the Titans beating the 49ers in a thriller.
+On Saturday, the Chiefs beat the Broncos in a close contest. The Cowboys crushed the Eagles.
+</p>
+
+<p>
+On Sunday, the Lions beat the Packers. In a huge upset, the Jaguars beat the Colts. The loss cost the Colts a seat at the playoffs! The Washington Redskins beat the Giants. The Vikings beat the Bears. The Titans held on to beat the Texans and in so doing secured a division title and home field advantage! This has been a tough year for the Steelers. Yet they have manged to pull their team together. Their regular season culminated in a win over the Ravens, giving them a well earned seat at the playoff table! The Browns beat the Bengals. The 49ers beat the Rams to advance into the playoffs. The Buccaneers crushed the Panthers. What has happened to the Cardinals. They lost again, this time to the Seahawks. The Dolphins beat the Patriots. The Saints beat the Falcons. The Bills beat the Jets (I mean who hasn't)! In the best game of the week (and there were many), the Raiders beat the Chargers to get a seat at the Playoffs!
 </p>
 
 <!-- <p>
-On Saturday, the Packers beat the Browns. The Colts beat the fading Cardinals.
-</p>
- -->
-<p>
-On Sunday, the Eagles beat on the Washingtons. The Rams squeeked by the Ravens. The Bucaaneers beat the Jets in a classic Tom Brady last minute comeback. The Titans squished the fish. The Patriots mauled the Jaguars. The Raiders kept  their playoff hopes alive as they beat the Colts. The Bengals beat the cocky Chiefs. The Bears mauled the Giants. The Bills beat the Falcons. The 49ers slammed the Texans. The Chargers kept their playoff hopes alive as well as they stampeeded the Broncos. The Saints beat the Panthers. The Seahawks destroyed the Lions. In a thriller, the Cardinals beat the Cowboys. In the late game, the Packers beat the Vikings.
-</p>
-
-<p>
 On Monday, the Steelers beat the Browns.
 </p>
-
+ -->
 <p>
   <span style='font-weight:bold; color:#FF6E3B;'>All in all a great week of football!</span>
 </p>
 
-<p style='padding-top:20px;'>
+<p style='padding-top:15px;'>
 <span style='font-size: 20px; font-weight:bold; color:#00BBC0;'>The playoff picture!</span> 
-<br/><br/>
-There are 7 playoff berths available for both the AFC and the NFC. 
-<br/><br/>
-In the AFC the Titans, Chiefs, Bengals, Bills and Patriots have clinched a playoff spot. Of the 2 available (in order of rank per standings) are Colts and Chargers. On the bubble are Raiders, Steelers, and Ravens.
-<br/><br/>
-In the NFC the Packers, Cowboys, Rams, Buccaneers, Cardinals and Eagles have clinched a playoff spot. Of the 1 available (in order of rank per standings) is the 49ers. On the bubble is the Saints.
+</p>
+
+<p>
+Check out the new Bracket prepared by Wildcat Wonder! Just click on the large Donald Duck image.
 </p>
 
 <p>

@@ -45,27 +45,30 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         return data;
     }
 
-    function getYearlyTotalWins() 
+    function getYearlyTotalWins(action) 
     {
         // Set button title and toggle showexperts
-        switch ($scope.current.showexperts) {
-            case 0:
-                $scope.current.showexperts = 1;
-                $scope.current.showexpertsTitle = "Hide Experts";
-                break;
+        if (action == 'experts')
+        {
+            switch ($scope.current.showexperts) {
+                case 0:
+                    $scope.current.showexperts = 1;
+                    $scope.current.showexpertsTitle = "Hide Experts";
+                    break;
 
-            case 1:
-                $scope.current.showexperts = 0;
-                $scope.current.showexpertsTitle = "Show Experts";
-                break;    
-            default:
+                case 1:
+                    $scope.current.showexperts = 0;
+                    $scope.current.showexpertsTitle = "Show Experts";
+                    break;    
+                default:
                 
+            }
         }
-
+            
         //
         // get total season win leaders
         //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=wins"+"&showexperts="+$scope.current.showexperts;
+        var qStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&gametypeid="+$scope.current.gametypeid+"&membergroupid="+$scope.current.membergroupid+"&leaderType=wins"+"&showexperts="+$scope.current.showexperts;
         teamsFactory.getLeaderMembers(qStr)
             .success( function(data) {
                 $scope.memberseasonwinstats = workWinsTableData(data); 
@@ -119,9 +122,7 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         }
 
         $scope.current = {};
-        $scope.current.season = nflTeamsService.getCurrentSeason();
         $scope.current.gametypeid = 1;
-        $scope.seasons = nflTeamsService.getNFLTeamseasons();
         $scope.gametypes = nflTeamsService.getNFLGametypes();
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
@@ -137,21 +138,40 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
                 alert(edata);
             }); 
 
-        //
-        // get wins season leaders
-        //
-        var qStr = "season="+$scope.current.season+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins"+"&showexperts="+$scope.current.showexperts;
-        teamsFactory.getLeaderMembers(qStr)
+        teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
-                $scope.memberseasonwinstats = workWinsTableData(data);  
-            })
-            .error( function(edata) {
-                alert(edata);
-            });    
-    };
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
 
-    $scope.getYearlyTotalWins = function() {
-        getYearlyTotalWins();
+                nflTeamsService.addCurrentWeek($scope.current.week);
+                nflTeamsService.addCurrentSeason($scope.current.season);  
+
+                $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+                teamsFactory.getNFLTeamseasonweeks($scope.current.season)
+                    .success( function(data) {
+                        $scope.weeks = data;
+
+                        var qStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&gametypeid="+$scope.current.gametypeid+"&leaderType=wins"+"&showexperts="+$scope.current.showexperts;
+                        teamsFactory.getLeaderMembers(qStr)
+                            .success( function(data) {
+                                $scope.memberseasonwinstats = workWinsTableData(data);  
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });   
+                    })
+                    .error( function(edata) {
+                        alert(edata);
+                    });            
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+            };
+
+    $scope.getYearlyTotalWins = function(action) {
+        getYearlyTotalWins(action);
     }
 
     $scope.getMemberProfile = function(memberid) {
@@ -212,21 +232,23 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
 
     }
 
-    function getYearlyTotalPercentage() 
+    function getYearlyTotalPercentage(action) 
     {
-        // Set button title and toggle showexperts
-        switch ($scope.current.showexperts) {
-            case 0:
-                $scope.current.showexperts = 1;
-                $scope.current.showexpertsTitle = "Hide Experts";
-                break;
+        if (action == 'experts')
+        {
+            switch ($scope.current.showexperts) {
+                case 0:
+                    $scope.current.showexperts = 1;
+                    $scope.current.showexpertsTitle = "Hide Experts";
+                    break;
 
-            case 1:
-                $scope.current.showexperts = 0;
-                $scope.current.showexpertsTitle = "Show Experts";
-                break;    
-            default:
+                case 1:
+                    $scope.current.showexperts = 0;
+                    $scope.current.showexpertsTitle = "Show Experts";
+                    break;    
+                default:
                 
+            }
         }
 
         //
@@ -316,8 +338,8 @@ controllers.playerstatstotalpercentageController = function ($scope, $http, $loc
             });
     };
 
-    $scope.getYearlyTotalPercentage = function() {
-        getYearlyTotalPercentage();
+    $scope.getYearlyTotalPercentage = function(action) {
+        getYearlyTotalPercentage(action);
     }
 
     $scope.getMemberProfile = function(memberid) {
@@ -349,23 +371,26 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
             }); 
     }
     
-    function selectChange()
+    function selectChange(action)
     {
         // Set button title and toggle showexperts
-        switch ($scope.current.showexperts) {
-            case 0:
-                $scope.current.showexperts = 1;
-                $scope.current.showexpertsTitle = "Hide Experts";
-                break;
+        if (action == 'experts')
+        {
+            switch ($scope.current.showexperts) {
+                case 0:
+                    $scope.current.showexperts = 1;
+                    $scope.current.showexpertsTitle = "Hide Experts";
+                    break;
 
-            case 1:
-                $scope.current.showexperts = 0;
-                $scope.current.showexpertsTitle = "Show Experts";
-                break;    
-            default:
-                
+                case 1:
+                    $scope.current.showexperts = 0;
+                    $scope.current.showexpertsTitle = "Show Experts";
+                    break;    
+                default:
+                    
+            }
         }
-        
+            
         var requestStr = "season="+$scope.current.season+"&week="+$scope.current.week+"&membergroupid="+$scope.current.membergroupid+"&showexperts="+$scope.current.showexperts;
 
         teamsFactory.getMemberWeekStats(requestStr)
@@ -499,8 +524,8 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         });                  
     }
 
-    $scope.getMemberWeekStats = function() {
-        selectChange();
+    $scope.getMemberWeekStats = function(action) {
+        selectChange(action);
     }
 
     $scope.getMemberProfile = function(memberid) {

@@ -1,4 +1,4 @@
-controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, teamsFactory, nflTeamsService, manageimgService) {
+controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, teamsFactory, nflTeamsService) {
     $scope.memberavatar = "";
 
     function checkRole() {
