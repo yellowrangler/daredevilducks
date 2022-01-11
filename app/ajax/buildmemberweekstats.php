@@ -74,7 +74,7 @@ else
 $msg = "Input variables: Season:$season <br />";
 
 // debug
-print $msg;
+// print $msg;
 
 //
 // db connect
@@ -448,8 +448,8 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 	//
 
 	// debug
-	print "<br /> <br />loop thru rest of weeks";
-	print "<br /> start = $week. weeksinregularseason = $weeksinregularseason memberid = $memberid <br />";
+	// print "<br /> <br />loop thru rest of weeks";
+	// print "<br /> start = $week. weeksinregularseason = $weeksinregularseason memberid = $memberid <br />";
 
 
  	$start = $week;
