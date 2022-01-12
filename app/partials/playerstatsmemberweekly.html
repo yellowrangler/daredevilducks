@@ -58,7 +58,8 @@
 				<table class="table MemberWeeklyTable" >
 					<tr class="tableTitle">
 						<th>Rank</th>
-						<th>Dates</th>
+						<!-- <th>Dates</th> -->
+						<th>% Right</th>
 						<th colspan=2>Player</th>			
 						<th style="width:25px;">W</th>
 						<th style="width:25px;">L</th>
@@ -66,17 +67,21 @@
 					</tr>
 
 					<tr ng-repeat="memberweekstat in memberweekstats">
-						<td style="padding-right:15px;" class="center-column-text">{{memberweekstat.position}}</td>
+						<td style="width:5%;" class="center-column-text">{{memberweekstat.position}}</td>
 						
-						<td style="width:30%;" class="left-column-text">
+						<!-- <td style="width:30%;" class="left-column-text">
 		                    {{memberweekstat.weekstart}} - {{memberweekstat.weekend}}
+						</td> -->
+
+						<td style="width:15%;" class="center-column-text">
+		                    {{memberweekstat.showplayerpickedpercent}}
 						</td>
 
-						<td style="width:15%;" class="left-column-text" >
+						<td style="width:20%;" class="right-column-text" >
 		                    <img style="height:70px;cursor:pointer;" ng-show="memberweekstat.memberavatar != ''" ng-click="getMemberProfile(memberweekstat.memberid)" ng-src="img/avatars/{{memberweekstat.memberavatar}}">
 						</td>
 
-						<td style="width:30%;" ng-class="{{memberweekstat.memberrole == 'expert'}} ? 'expertRole' : 'left-column-text' " >
+						<td style="width:35%;" ng-class="{{memberweekstat.memberrole == 'expert'}} ? 'expertRole' : 'left-column-text' " >
 		                    {{memberweekstat.screenname}}
 						</td>
 

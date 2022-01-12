@@ -49,6 +49,8 @@ if ($membergroupid == 0)
     MS.wins as wins,
     MS.ties as ties,
     MS.week as week,
+    MS.playerpickedpercent as playerpickedpercent,
+    CONCAT( ROUND( ( MS.playerpickedpercent * 100 ), 1 ),  '%' ) as showplayerpickedpercent,
     DATE_FORMAT(GW.weekstart,'%b %D') as weekstart,
     DATE_FORMAT(GW.weekend,'%b %D') as weekend
     FROM membertbl M
