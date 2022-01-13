@@ -1120,12 +1120,15 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
     };
 
     $scope.getGameNbr = function() {
-        var g = $scope.current.lastgamenbr;
+        var q = "season="+$scope.current.season;
 
-        g = g * 1;
-        g = g + 1;
-
-        $scope.current.gamenbr = g;
+        teamsFactory.getNextGameNbr(q)
+        .success( function(data) {
+            $scope.current.gamenbr = data; 
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
     }
 
     $scope.saveGameInfoRequest = function () {
