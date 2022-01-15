@@ -98,27 +98,40 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                 $scope.nflnews = {};
                 var arrLength = 0;
 
-                var found = url.indexOf("www.nfl.com");
-                if (found > 0)
-                    arrLength = data.entry.length;
-                else
-                    arrLength = data.channel.item.length;
-
-                for (var idx = 0; idx < arrLength; idx++)
+                if (data == false)
                 {
+                    var rssInfo = {};
+
+                    rssInfo.pubDate = "Error";
+                    rssInfo.description = "RSS feed was unable to complete request!";
+                    rssInfo.link = "";
+
+                    $scope.nflnews[idx]= rssInfo;
+                }
+                else
+                {
+                    var found = url.indexOf("www.nfl.com");
                     if (found > 0)
-                    {
-                        var rssInfo = {};
-
-                        rssInfo.pubDate = data.entry[idx].published;
-                        rssInfo.description = data.entry[idx].summary;
-                        rssInfo.link = data.entry[idx].link['@attributes'].href;
-
-                        $scope.nflnews[idx]= rssInfo;
-                    }
+                        arrLength = data.entry.length;
                     else
-                        $scope.nflnews[idx] = data.channel.item[idx];
-                }                   
+                        arrLength = data.channel.item.length;
+
+                    for (var idx = 0; idx < arrLength; idx++)
+                    {
+                        if (found > 0)
+                        {
+                            var rssInfo = {};
+
+                            rssInfo.pubDate = data.entry[idx].published;
+                            rssInfo.description = data.entry[idx].summary;
+                            rssInfo.link = data.entry[idx].link['@attributes'].href;
+
+                            $scope.nflnews[idx]= rssInfo;
+                        }
+                        else
+                            $scope.nflnews[idx] = data.channel.item[idx];
+                    }  
+                }                 
             })
             .error( function(edata) {
                 alert(edata);
