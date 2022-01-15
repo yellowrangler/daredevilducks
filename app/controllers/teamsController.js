@@ -98,7 +98,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                 $scope.nflnews = {};
                 var arrLength = 0;
 
-                if (data == false)
+                if (data == "false")
                 {
                     var rssInfo = {};
 
