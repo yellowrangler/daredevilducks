@@ -1474,7 +1474,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         // $scope.newsurl = 'http://sports.espn.go.com/espn/rss/nfl/news';
         // $scope.newsurl = 'http://www.rotowire.com/rss/news.htm?sport=nfl';
         // $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
-        getNFLrssFeed(); 
+        // getNFLrssFeed(); 
     };
 
     $scope.getNFLrssFeed = function () {

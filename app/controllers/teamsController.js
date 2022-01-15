@@ -196,7 +196,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         $scope.newsurl = "";
         $scope.current.newsidx = -1;
 
-        getNFLrssFeed();
+        // getNFLrssFeed();
 
         setviewpadding();
     };
