@@ -39,7 +39,6 @@ else
   {
     $msg = $msg . "No week passed";
     exit($msg);
-
   }
 }
 
