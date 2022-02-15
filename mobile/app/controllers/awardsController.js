@@ -70,6 +70,14 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
                 $(this).attr("src", "../img/halloffame/Tanya-Temp-Hall-of-Fame-Pic.png");
                 });                                                                  
         
+        $( "#hf2021" )
+          .mouseover(function() {
+                $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+              })
+          .mouseout(function() {
+              $(this).attr("src", "../img/halloffame/HallofFamePicture2.png");
+              });                                                                  
+            
         $( "#hfdefault" )
             .mouseover(function() {
                 $(this).attr("src", "../img/halloffame/HallofFameAngryDonald.png");
