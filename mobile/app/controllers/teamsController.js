@@ -1514,18 +1514,16 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
     function setBracketImage ()
     {
-        var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
-        teamsFactory.getTeamBracketSmart(q)
+        var q = "season="+$scope.current.season;                            
+        teamsFactory.getTeamBracket(q)
             .success( function(data) {
 
-                $scope.bracketimg = "";
+                $scope.bracket = "";
 
                 if (data != "null")
                 {
                     $scope.current.season = data.season; 
-                    $scope.current.week = data.week;
-
-                    $scope.bracketimg = data.imagename;
+                    $scope.bracket = data.bracket;
                 }
             })
             .error( function(edata) {
@@ -1546,15 +1544,13 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
                     .success( function(data) {
                         $scope.weeks = data; 
 
-                        var q = "week="+$scope.current.week+"&season="+$scope.current.season;                            
-                        teamsFactory.getTeamBracketSmart(q)
+                        var q = "season="+$scope.current.season;                            
+                        teamsFactory.getTeamBracket(q)
                             .success( function(data) {
                                 if (data != "null")
                                 {
                                     $scope.current.season = data.season; 
-                                    $scope.current.week = data.week;
-
-                                    $scope.bracketimg = data.imagename;
+                                    $scope.bracket = data.bracket;
                                 }
                             })
                             .error( function(edata) {

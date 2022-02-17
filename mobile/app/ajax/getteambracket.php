@@ -5,7 +5,7 @@ include_once ('../class/class.ErrorLog.php');
 
 
 //
-// get post variables
+// get or post variables
 //
 if (isset($_POST["season"]))
 {
@@ -13,25 +13,16 @@ if (isset($_POST["season"]))
 }
 else
 {
-  $season = "";
-}
+  if (isset($_GET["season"]))
+  {
+    $season = $_GET["season"];
+  }
+  else
+  {
+    $msg = $msg . "No season passed - terminated";
+    exit($msg);
 
-if (isset($_POST["week"]))
-{
-  $week = $_POST["week"];
-}
-else
-{
-  $week = "";
-}
-
-if (isset($_POST["bracket"]))
-{
-  $bracket = $_POST["bracket"];
-}
-else
-{
-  $bracket = "";
+  }
 }
 
 //
@@ -42,54 +33,14 @@ $datetime = date("Y-m-d H:i:s");
 //
 // db connect
 //
-$modulecontent = "Unable to get team bracket for season or week or bracket name.";
+$modulecontent = "Unable to get team bracket for season $season.";
 include 'mysqlconnect.php';
 
 //---------------------------------------------------------------
 // get images information
 //---------------------------------------------------------------
-$sql = "SELECT imagename as bracket, season, week, final 
-FROM teambrackettbl WHERE ";
-
-$where = "";
-
-if ($season != "")
-{
-  if ($where != "")
-  {
-    $where = $where . " AND season = " . $season;
-  }
-  else
-  {
-    $where = $where . " season = " . $season;
-  }
-}
-
-if ($week != "")
-{
-  if ($where != "")
-  {
-    $where = $where . " AND week = " . $week;
-  }
-  else
-  {
-    $where = $where . " week = " . $week;
-  }
-}
-
-if ($bracket != "")
-{
-  if ($where != "")
-  {
-    $where = $where . " AND imagename = '$bracket' ";
-  }
-  else
-  {
-    $where = $where . " imagename = '$bracket' ";
-  }
-}
-
-$sql = $sql . $where;
+$sql = "SELECT imagename as bracket, season
+FROM teambrackettbl WHERE  season =  $season";
 
 //
 // sql query

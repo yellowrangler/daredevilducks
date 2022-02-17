@@ -1347,7 +1347,7 @@ controllers.gameteamscoresinfoController = function ($scope, $http, $location, m
             .success( function(data) {
                 $scope.weeks = data; 
 
-                var senddata = "season="+$scope.current.season+"&week="+$scope.current.week;
+                var senddata = "season="+$scope.current.season;
                 teamsFactory.getNFLGameWeekTeams(senddata)
                 .success( function(data) {
                     $scope.games = data;
@@ -1383,11 +1383,12 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
     function saveTeamBracketInfo()
     {
         // var sdata = $("#teamsbracketForm").serialize();
-        var sdata = "season="+$scope.current.season+"&week="+$scope.current.week+"&bracket="+$scope.current.bracket+"&final="+$scope.current.final;
+        var sdata = "season="+$scope.current.season+"&bracket="+$scope.current.bracket;
 
         teamsFactory.saveTeamBracket(sdata)
             .success( function(data) {
-                getTeamBracketsInfo();
+                var q = "season="+$scope.current.season;
+                getTeamBracketInfo(q);
 
                 $('#teamBracketInfoSavedDialogModalTitle').text("Success");
                 $('#teamBracketInfoSavedDialogModalBody').html(data);
@@ -1400,36 +1401,14 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
         var i = 0;
     }
 
-    function getTeamBracketsInfo() 
-    {
-        var senddata = "season="+$scope.current.season+"&week="+$scope.current.week;
-        teamsFactory.getTeamBrackets(senddata)
-        .success( function(data) {
-            $scope.current.bracket = "";
-            $scope.current.week = "";
-            $scope.current.final = "";
-            
-            $scope.teambrackets = data;
-        })
-        .error( function(edata) {
-            alert(edata);
-        });
-    }
-
     function getTeamBracketInfo() 
     {
-        // must get different weeks and bracket info 
-        // will also need this code for other changes from season to week 
-        // thisi needs to add bracket 
-        // still need show bracket and new bracket and save or
-        // when you choose week bring up bracket for week!!!!!
-        var senddata = "season="+$scope.current.season+"&bracket="+$scope.current.bracket;
+        var senddata = "season="+$scope.current.season;
         teamsFactory.getTeamBracket(senddata)
         .success( function(data) {
             $scope.teambracket = data;
-            $scope.current.final = data.final;
-            $scope.current.week = data.week;
             $scope.current.season = data.season;
+            $scope.current.bracket = data.bracket;
         })
         .error( function(edata) {
             alert(edata);
@@ -1455,9 +1434,10 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
                 $scope.current.week = "";
 
                 var senddata = "season="+$scope.current.season;
-                teamsFactory.getTeamBrackets(senddata)
+                teamsFactory.getTeamBracket(senddata)
                 .success( function(data) {
-                    $scope.teambrackets = data;
+                    $scope.current.season = data.season;
+                    $scope.current.bracket = data.bracket;
                 })
                 .error( function(edata) {
                     alert(edata);
@@ -1475,10 +1455,6 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
 
     $scope.saveTeamBracketInfo = function() {
         saveTeamBracketInfo();
-    }
-
-    $scope.getTeamBracketsInfo = function () {
-        getTeamBracketsInfo();
     }
 
     $scope.getTeamBracketInfo = function () {

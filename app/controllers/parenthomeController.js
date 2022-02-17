@@ -262,12 +262,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                     .success( function(data) {
                         $scope.weeks = data; 
 
-                        var q = "week="+$scope.current.week+"&season="+$scope.current.season; 
+                        var q = "season="+$scope.current.season; 
                         // var q = "&season="+$scope.current.season; 
 
 
                         // get team bracket image for showpic. Remove this if decide to not show.                           
-                        teamsFactory.getTeamBracketSmart(q)
+                        teamsFactory.getTeamBracket(q)
                             .success( function(data) {
 
                                 $scope.bracket = "";
@@ -275,9 +275,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                                 if (data != "null")
                                 {
                                     $scope.current.season = data.season; 
-                                    $scope.current.week = data.week;
-
-                                    $scope.bracket = data.imagename;
+                                    $scope.bracket = data.bracket;
                                 }
                             })
                             .error( function(edata) {

@@ -15,28 +15,11 @@
 
 					<div class="form-group horizontalFieldOffset">
 				    	<label for="season" class="control-label">Season</label>
-			            <select class="customSelect form-control" ng-change="getTeamBracketsInfo('season')" ng-model="current.season" id="selectseason" name="selectseason">
+			            <select class="customSelect form-control" ng-change="getTeamBracketInfo('season')" ng-model="current.season" id="selectseason" name="selectseason">
 			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
 			            </select>
 					</div> <!-- end of form-group -->
 
-				<!-- 	<div class="form-group horizontalFieldOffset">
-				    	<label for="week" class="control-label">Week</label>
-			            <select class="customSelect form-control" ng-change="getTeamBracketsInfo('week')" ng-model="current.week" id="week" name="week">
-			                <option ng-repeat="week in weeks" ng-selected="current.week == week.week" value="{{week.week}}"> {{week.week}}</option>
-			            </select>
-					</div>  -->
-
-					<div class="form-group horizontalFieldOffset">
-				    	<label for="bracket" class="control-label">Team Bracket</label>
-			            <select class="customSelect form-control" ng-change="getTeamBracketInfo('bracket')" ng-model="current.bracket" id="selectbracket" name="selectbracket">
-			                <option ng-repeat="teambracket in teambrackets" ng-selected="current.bracket == teambracket.bracket" value="{{teambracket.bracket}}"> {{teambracket.bracket}}</option>
-			            </select>
-					</div> <!-- end of form-group -->  
-				
-					<!-- <div style="padding-left:15px;"class="form-group horizontalFieldOffset">
-		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="saveTeamBracketInfo()" id="saveTeamBracket" name="saveTeamBracket" >Save Bracket</button>
-					</div>  --><!-- end of form-group --> 
 
 				</div> <!-- end of panel body -->		
 			</div> <!-- end of panel -->
@@ -48,36 +31,23 @@
 	<div class="col-md-12">
       <div style="padding-left:5%;padding-right:5%;" style="width:90%;">
         <div class="panel panel-default">
-			<div class="subpanelCaption panel-heading">Team Bracket Information</div>
-			<div style="padding:10px;" class="form-horizontal">
-				<div class="form-group" >
-					<label for="newseason" class="col-md-3 control-label">Season</label>
-					<div class="col-md-2">
-						<input tabindex="1" readonly type="text" class="form-control" id="season" name="season" ng-model="current.season" >
-					</div>
-				</div> <!-- end of form-group -->
+					<div class="subpanelCaption panel-heading">Team Bracket Information</div>
+					<div style="padding:10px;" class="form-horizontal">
+						<div class="form-group" >
+							<label for="newseason" class="col-md-3 control-label">Season</label>
+							<div class="col-md-2">
+								<input tabindex="1" readonly type="text" class="form-control" id="season" name="season" ng-model="current.season" >
+							</div>
+						</div> <!-- end of form-group -->
 
-				<div class="form-group">
-					<label for="newweek" class="col-md-3 control-label">Week</label>
-					<div class="col-md-2">
-						<input tabindex="2" type="text" class="form-control" id="week" name="week" ng-model="current.week" >
-					</div>
-				</div> <!-- end of form-group -->
+						<div class="form-group">
+							<label for="newbracket" class="col-md-3 control-label">Bracket</label>
+							<div class="col-md-6">
+								<input tabindex="3" type="text" class="form-control" id="bracket" name="bracket" ng-model="current.bracket" >
+							</div>
+						</div> <!-- end of form-group -->
 
-				<div class="form-group">
-					<label for="newbracket" class="col-md-3 control-label">Bracket</label>
-					<div class="col-md-6">
-						<input tabindex="3" type="text" class="form-control" id="bracket" name="bracket" ng-model="current.bracket" >
-					</div>
-				</div> <!-- end of form-group -->
-
-				<div class="form-group">
-					<label for="newbracket" class="col-md-3 control-label">Final</label>
-					<div class="col-md-1">
-					<input tabindex="4" type="text" class="form-control" id="final" name="final" ng-model="current.final" >
-				</div> <!-- end of form-group -->
-
-			</div> <!-- end of form-horizontal -->
+					</div> <!-- end of form-horizontal -->
         </div> <!-- end of panel panel -->
     </div> <!-- end of div col md 12 -->
 </div> <!-- end of row -->

@@ -8,11 +8,9 @@ include_once ('../class/class.AccessLog.php');
 // post input
 //
 $season = $_POST['season'];
-$week = $_POST['week'];
-$final = $_POST['final'];
 $bracket = $_POST['bracket'];
 
-$msgtext = "Team bracket Saved Succesfully for Season: $season and week: $week!";
+$msgtext = "Team bracket Saved Succesfully for Season: $season!";
   
 $post = $_POST; 
 
@@ -41,18 +39,18 @@ $returnArrayLog = new AccessLog("logs/");
 //
 // db connect
 //
-$modulecontent = "Unable to save team bracket for Season: $season and week: $week!";
+$modulecontent = "Unable to save team bracket for Season: $season!";
 include_once ('mysqlconnect.php');
 
 
-$sql = "SELECT imagename as bracket, season, week, final 
-FROM teambrackettbl WHERE season = $season and week = $week";
+$sql = "SELECT imagename as bracket, season 
+FROM teambrackettbl WHERE season = $season ";
 
 //
 // sql query
 //
 $function = "select";
-$modulecontent = "Unable to get team bracket  for Season: $season and week: $week!";
+$modulecontent = "Unable to get team bracket  for Season: $season !";
 include ('mysqlquery.php');
  
 //
@@ -61,14 +59,14 @@ include ('mysqlquery.php');
 $rowcount=mysqli_num_rows($sql_result);
 if ($rowcount == 0)
 {
-	$sql = "INSERT INTO teambrackettbl(imagename, season, week, final, enterdate) 
-		VALUES ('$bracket',$season,$week,$final,'$enterdateTS')";
+	$sql = "INSERT INTO teambrackettbl(imagename, season, enterdate) 
+		VALUES ('$bracket',$season,'$enterdateTS')";
 
 	//
 	// sql query
 	//
 	$function = "insert";
-	$modulecontent = "Unable to insert team bracket  for Season: $season and week: $week!";
+	$modulecontent = "Unable to insert team bracket  for Season: $season!";
 	include ('mysqlquery.php');
 
 }
@@ -78,16 +76,14 @@ else
 	$sql = "UPDATE teambrackettbl 
 		SET imagename='$bracket',
 		season=$season,
-		week=$week,
-		final=$final,
 		enterdate='$enterdateTS' 
-		WHERE season = $season and week = $week";
+		WHERE season = $season";
 
 	//
 	// sql query
 	//
 	$function = "update";
-	$modulecontent = "Unable to update team bracket  for Season: $season and week: $week!";
+	$modulecontent = "Unable to update team bracket  for Season: $season!";
 	include ('mysqlquery.php');
 }
 
