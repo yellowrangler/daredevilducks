@@ -13,23 +13,24 @@ file_list = []
 cmd = "no file selected"
 
 file_list = glob.glob('ddd-*python.sql')
-l = len(file_list)
-i = 0
-while (i < l):
-	name = file_list[i]
-	print (name)
-	answer = raw_input('Do you want to use this file to update ddd database (yes/no) ?') 
-	Fl = answer[0].lower() 
-	if Fl == 'y':  
-		cmd = mysqlcommand + name
-		break;
-
-	i += 1
+lcount = len(file_list)
+idx = 0
+while (idx < lcount):
+  print ('The count is:', lcount)
+  fname = file_list[idx]
+  print (fname)
+  answer = input('Do you want to use this file to update ddd database (yes/no) ?') 
+  Fl = answer.lower() 
+  if Fl == 'yes':  
+    cmd = mysqlcommand + fname
+    break;  
+  
+  idx += 1
 
 print ("The following command will now be run, ok? (yes/no)")
 print (cmd)
 
-answer = raw_input('Do you want to use this file to update ddd database (yes/no) ?') 
+answer = input('Do you want to use this file to update ddd database (yes/no) ?') 
 Fl = answer[0].lower() 
 if Fl == 'y':  
 	returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
