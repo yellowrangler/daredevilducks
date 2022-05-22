@@ -19,7 +19,7 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $enterdate = $datetime;
 $season = $_POST['season'];
-$week = $_POST['week'];
+// $week = $_POST['week'];
 $teamid = $_POST['teamid'];
 $maxrankweek = 0;
 
