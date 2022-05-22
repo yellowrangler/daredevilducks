@@ -93,15 +93,20 @@ $pdp = array();
 $pdr = array();
 
 $r = mysqli_fetch_assoc($sql_result);
-$pot = 33 - $r[pot];
-$pos = 33 - $r[pos];
-$pop = 33 - $r[pop];
-$por = 33 - $r[por];
+// $pot = 33 - $r[pot];
+// $pos = 33 - $r[pos];
+// $pop = 33 - $r[pop];
+// $por = 33 - $r[por];
 
-$pdt = 33 - $r[pdt];
-$pds = 33 - $r[pds];
-$pdp = 33 - $r[pdp];
-$pdr = 33 - $r[pdr];
+$pot[0] = 33 - $r[pot];
+$pos[0] = 33 - $r[pos];
+$pop[0] = 33 - $r[pop];
+$por[0] = 33 - $r[por];
+
+$pdt[0] = 33 - $r[pdt];
+$pds[0] = 33 - $r[pds];
+$pdp[0] = 33 - $r[pdp];
+$pdr[0] = 33 - $r[pdr];
 
 
 $returnArray = array();
