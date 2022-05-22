@@ -76,6 +76,7 @@ include ('mysqlquery.php');
 //
 $powerrankingsteams = array();
 $powerrankingsweeks = array();
+
 while($r = mysqli_fetch_assoc($sql_result)) {
     $powerrankingsteams[] = 33 - $r['powerranking'];
     $powerrankingsweeks[] = "Week " . $r['week'];
