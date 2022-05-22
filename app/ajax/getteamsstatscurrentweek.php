@@ -110,15 +110,15 @@ $pdr[0] = 33 - $r[pdr];
 
 
 $returnArray = array();
-$returnArray[0] = $pot;
-$returnArray[1] = $pos;
-$returnArray[2] = $pop;
-$returnArray[3] = $por;
+$returnArray[0] = $pot[0];
+$returnArray[1] = $pos[0];
+$returnArray[2] = $pop[0];
+$returnArray[3] = $por[0];
 
-$returnArray[4] = $pdt;
-$returnArray[5] = $pds;
-$returnArray[6] = $pdp;
-$returnArray[7] = $pdr;
+$returnArray[4] = $pdt[0];
+$returnArray[5] = $pds[0];
+$returnArray[6] = $pdp[0];
+$returnArray[7] = $pdr[0];
 
 //
 // close db connection
