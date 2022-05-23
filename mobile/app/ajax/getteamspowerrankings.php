@@ -19,7 +19,7 @@ $datetime = date("Y-m-d H:i:s");
 // set variables
 $enterdate = $datetime;
 $season = $_POST['season'];
-$week = $_POST['week'];
+// $week = $_POST['week'];
 $teamid = $_POST['teamid'];
 $maxrankweek = 0;
 
@@ -76,9 +76,10 @@ include ('mysqlquery.php');
 //
 $powerrankingsteams = array();
 $powerrankingsweeks = array();
+
 while($r = mysqli_fetch_assoc($sql_result)) {
-    $powerrankingsteams[] = 33 - $r[powerranking];
-    $powerrankingsweeks[] = "Week " . $r[week];
+    $powerrankingsteams[] = 33 - $r['powerranking'];
+    $powerrankingsweeks[] = "Week " . $r['week'];
 }
 
 $returnArray = array();
