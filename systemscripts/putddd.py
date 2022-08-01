@@ -5,7 +5,7 @@ import sys
 import subprocess
 import glob
 
-# global variables
+# global variables yea
 
 mysqlcommand = "mysql -u tarryc -p ddd < "
 
