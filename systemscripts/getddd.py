@@ -24,13 +24,13 @@ if (len(sys.argv) == 2):
 else:
 	cmd = mysqlcommand + mysqldbnameprefix + mysqldbnamedate + mysqldbnamesuffix
 
-print "The following command will now be run, ok? (yes/no)"
-print cmd
+print ("The following command will now be run, ok? (yes/no)")
+print (cmd)
 
-answer = raw_input('Do you want to use this file to download ddd database (yes/no) ?') 
+answer = input('Do you want to use this file to download ddd database (yes/no) ?') 
 Fl = answer[0].lower() 
 if Fl == 'y':  
 	returned_value = subprocess.call(cmd, shell=True)  # returns the exit code in unix
-	print'returned value:', returned_value
+	print('returned value:', returned_value)
 
 quit()
