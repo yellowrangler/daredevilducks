@@ -23,7 +23,7 @@ $dontShowSql = 0;
 $csvfile = "";
 if (isset($_POST["csvfile"]))
 {
-	$dontShowSql = 1;
+	// $dontShowSql = 1;   Uncomment for production
 	$csvfile = $_POST["csvfile"];
 }
 else
@@ -123,6 +123,7 @@ foreach($seasonArray as $gameKey => $gameValue)
 	// get tv id from tv name
 	// 
 	$sql = "SELECT id as networkid FROM gamenetworktbl WHERE network = '" . $gameValue['network'] . "'";
+	print "sql to get network id = $sql <br><br>";
 
 	//
 	// sql query
@@ -133,6 +134,8 @@ foreach($seasonArray as $gameKey => $gameValue)
 
 	$r = mysqli_fetch_assoc($sql_result);
 	$networkid = $r['networkid'];
+
+	print "Net work id = $networkid <br><br>";
 
 	// 
 	// build the detail insert sql
