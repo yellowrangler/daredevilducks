@@ -2171,7 +2171,10 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
                 $scope.current.emailto = "";
             })
             .error( function(edata) {
-                alert(edata);
+                $('#eMailDialogModalTitle').text("eMail Error");
+                $('#eMailDialogModalLabelBody').html(edata);
+                $('#eMailDialogModal').modal();
+                // alert(edata);
             });
     }
 
