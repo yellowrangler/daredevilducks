@@ -121,7 +121,7 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 	// count teams
 	$teamcount = $teamcount + 1;
 
-	$teamid = $row[teamid];
+	$teamid = $row['teamid'];
 
 	//
 	// loop through all regular season weeks

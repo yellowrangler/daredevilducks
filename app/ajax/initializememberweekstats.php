@@ -95,7 +95,7 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 	// count membercount
 	$membercount = $membercount + 1;
 
-	$memberid = $row[memberid];
+	$memberid = $row['memberid'];
 
 	//
 	// loop through all regular season weeks
