@@ -21,8 +21,10 @@ $from = $_POST['emailfrom'];
 $to = $_POST['emailto'];
 $message = $_POST['emailmessage'];
 $subject = $_POST['emailsubject'];
-$mailaccount = "daredevilducks.xyz@gmail.com";
-$mailpassword = "ddd-02653$";
+// $mailaccount = "daredevilducks.xyz@gmail.com";
+// $mailpassword = "ddd-02653$";
+$mailaccount = "tccutler@tandtwanderers.com";
+$mailpassword = "W49BhP+qQg@";
 $logoimage = "img/DonaldDuckFlying-small.png";
 $logoimagefullpath = "/var/www/html/daredevilducks/img/DonaldDuckFlying-small.png";
 
@@ -33,7 +35,8 @@ try {
     // Server settings
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // for detailed debug output
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'mail.hover.com';
+    // $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
@@ -57,8 +60,8 @@ try {
         $mail->AddAddress($val);
     }
 
-    $mail->addCC('tarrant.cutler@gmail.com');
-	$mail->addBCC('tjamieson@healthallianze.com');
+    $mail->addCC('tccutler@tandtwanderers.com');
+	$mail->addBCC('tjcutler@tandtwanderers.com');
 
     $mail->addReplyTo($mailaccount, 'Daredevil Ducks'); // to set the reply to
 
