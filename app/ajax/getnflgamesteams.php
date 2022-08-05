@@ -23,7 +23,7 @@ $season = $_POST["season"];
 //
 // messaging
 //
-$returnArrayLog = new AccessLog("logs/");
+// $returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
 //
