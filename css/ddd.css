@@ -227,6 +227,7 @@ border: 0 none;
 .imgButtonNav {
 	width:75%;
 	height:75%;
+	margin: auto;
 	/*text-align: center;*/
 	/*padding-left:18%;*/
 }
