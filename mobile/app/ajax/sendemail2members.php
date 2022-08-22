@@ -4,14 +4,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-// require_once __DIR__ . '/vendor/Exception.php';
-// require_once __DIR__ . '/vendor/PHPMailer.php';
-// require_once __DIR__ . '/vendor/SMTP.php';
-
-// require_once '/home/pi/Development/daredevilducks/vendor/Exception.php';
-// require_once '/home/pi/Development/daredevilducks/vendor/PHPMailer.php';
-// require_once '/home/pi/Development/daredevilducks/vendor/SMTP.php';
-
 require_once '../../../vendor/Exception.php';
 require_once '../../../vendor/PHPMailer.php';
 require_once '../../../vendor/SMTP.php';
@@ -19,54 +11,18 @@ require_once '../../../vendor/SMTP.php';
 // get post variables 
 $from = $_POST['emailfrom'];
 $to = $_POST['emailto'];
+$cc = "tccutler@tandtwanderers.com";
+$replyto = "Daredevil Ducks";
+$host = "mail.hover.com";
+$port = 587;
+$emailChunks = 20;
 $message = $_POST['emailmessage'];
 $subject = $_POST['emailsubject'];
-$mailaccount = "daredevilducks.xyz@gmail.com";
-$mailpassword = "ddd-02653$";
+$mailaccount = "tccutler@tandtwanderers.com";
+$mailpassword = "W49BhP+qQg@";
 $logoimage = "img/DonaldDuckFlying-small.png";
 $logoimagefullpath = "/var/www/html/daredevilducks/img/DonaldDuckFlying-small.png";
-
-// passing true in constructor enables exceptions in PHPMailer
-$mail = new PHPMailer(true);
-
-try {
-    // Server settings
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // for detailed debug output
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
-
- //    $mail->SMTPOptions = array(
-	// 	'ssl' => array(
-	// 	'verify_peer' => false,
-	// 	'verify_peer_name' => false,
-	// 	'allow_self_signed' => true
-	// 	)
-	// );
-
-    $mail->Username = $mailaccount; // YOUR gmail email account name
-    $mail->Password = $mailpassword; // YOUR gmail password
-
-    // Sender and recipient settings
-    $mail->setFrom($from);
-
-    $toArray = explode(',', $to);
-    while (list ($key, $val) = each ($toArray)) {
-        $mail->AddAddress($val);
-    }
-
-    $mail->addCC('tarrant.cutler@gmail.com');
-	$mail->addBCC('tjamieson@healthallianze.com');
-
-    $mail->addReplyTo($mailaccount, 'Daredevil Ducks'); // to set the reply to
-
-    // Setting the email content
-    $mail->IsHTML(true);
-    $mail->AddEmbeddedImage($logoimagefullpath,'logoImg');
-
-    $body = "<html>
+$body = "<html>
     <body>
     <div style='display:block;margin:0 auto;padding:0px;width:98%;'>
 
@@ -83,14 +39,89 @@ try {
     </body>
     </html>";
 
-    $mail->Subject = $subject;
-    $mail->Body = $body;
-    // $mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
+$toArray = explode(',', $to);
+$toMemberSize = count($toArray);
 
-    $mail->send();
-    echo "Email message sent.";
-} catch (Exception $e) {
-    echo "Error in sending email. Mailer Error: {$mail->ErrorInfo}";
+$chunkStart = 0;
+$membersSent = 0;
+$sendIdx = 0;
+$membersSliceCount = 0;
+$debugcount = 0;
+
+// debug
+// print("<br> toMemberSize = $toMemberSize <br><br>");
+// echo "<br>to array<br>";
+// print_r($toArray);
+
+$mail = new PHPMailer(true);
+$mail->SMTPKeepAlive = true;
+$mail->isSMTP();
+$mail->Host = $host;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = $port;
+$mail->Username = $mailaccount; 
+$mail->Password = $mailpassword; 
+$mail->setFrom($from);
+$mail->addReplyTo($mailaccount, $replyto); 
+$mail->IsHTML(true);
+$mail->AddEmbeddedImage($logoimagefullpath,'logoImg');
+$mail->Subject = $subject;
+$mail->Body = $body;
+
+while (($membersSent != $toMemberSize) || ($membersSent < $toMemberSize))
+{
+    $mail->ClearAddresses();  
+
+    $toArraySlice = array_slice($toArray, $chunkStart, $emailChunks);
+    $membersSliceCount = count($toArraySlice);
+    $membersSent = $membersSent + $membersSliceCount;
+
+    // debug
+    // print("<br> chunkStart 1 = $chunkStart <br><br>");
+    // print("<br> membersSliceCount = $membersSliceCount <br><br>");
+    // print("<br> membersSent = $membersSent <br><br>");
+    // echo "<br>to array slice<br><br>";
+    // print_r($toArraySlice);
+
+    for ( $sendIdx = 0; $sendIdx < count($toArraySlice); $sendIdx++)
+    {
+        $mail->AddAddress($toArraySlice[$sendIdx]);
+    }
+
+    try 
+    {
+        $mail->addCC($cc);
+        $mail->addReplyTo($mailaccount, $replyto); 
+        $mail->IsHTML(true);
+        $mail->AddEmbeddedImage($logoimagefullpath,'logoImg');
+        $mail->send();
+        $mail->ClearAllRecipients();
+
+        // debug
+        // echo "mail to start<br>";
+        // print_r($mail);
+        // echo "mail to end<br><br>";
+        // echo "<br><br>Mail Object start<br>";
+        // print_r($mail);
+        // echo "<br><br>Mail Object end<br>";
+        // echo "Email $membersSent members sent emails.";
+    } catch (Exception $e) {
+        echo "Error in sending email. Mailer Error: {$mail->ErrorInfo}";
+    }
+
+    $chunkStart = $chunkStart + $membersSliceCount;
+
+    // debug
+    // print("<br> chunkStart 2 = $chunkStart <br><br>");
+    // print("<br> membersSliceCount 2 = $membersSliceCount <br><br>");
+    // $debugcount = $debugcount + 1;
+    // if ($debugcount > 3)
+    //     die();
 }
+    
+$mail->smtpClose();
+
+echo "Email $membersSent members sent emails.";    
 
 ?>
