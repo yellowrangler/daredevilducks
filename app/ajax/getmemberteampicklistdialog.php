@@ -139,14 +139,14 @@ $returnStr = "";
 $count = 1;
 $member = array();
 while($r = mysqli_fetch_assoc($sql_result)) {
-  $screenname = $r[screenname];
-  $memberavatar = $r[avatar];
+  $screenname = $r['screenname'];
+  $memberavatar = $r['avatar'];
 
   if ($count == 1)
   {
-    $teamname = $r[teamname];
-    $teamlocation = $r[teamlocation];
-    $teamiconname = $r[teamiconname];    
+    $teamname = $r['teamname'];
+    $teamlocation = $r['teamlocation'];
+    $teamiconname = $r['teamiconname'];    
     // first row 
     $returnStr = $returnStr . "
     <table style='width:95%;' class='table' >
