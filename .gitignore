@@ -6,3 +6,4 @@ manchester.txt
 mobile/.DS_Store
 /data/.DS_Store
 secure/**
+systemscripts/**
