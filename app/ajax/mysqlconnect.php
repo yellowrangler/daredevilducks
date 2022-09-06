@@ -1,13 +1,6 @@
 <?php 
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
+include_once "../../secure/ddd.php";
 
 //
 // connect to db

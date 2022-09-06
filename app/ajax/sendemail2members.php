@@ -8,18 +8,41 @@ require_once '../../vendor/Exception.php';
 require_once '../../vendor/PHPMailer.php';
 require_once '../../vendor/SMTP.php';
 
-// get post variables 
-$from = $_POST['emailfrom'];
+include_once "../../secure/emailaccounts.php";
+
+// print_r($_POST);
+// exit();
+
+$noip = $noipaccount;
+$hover = $hoveraccount;
+ 
+$mailaccount = $_POST['emailfromaccount'];
+switch ($mailaccount) {
+    case $noip:
+        $from = $noip;
+        $host = $noiphost;
+        $mailpassword = $noippassword;
+        $port = $noipport;
+        break;
+
+    case $hover:
+        $from = $hover;
+        $host = $hoverhost;
+        $mailpassword = $hoverpassword;
+        $port = $hoverport;
+        break;    
+    
+    default:
+        print("Error - invalid mailaccount: $mailaccount");
+        die();
+}
+
 $to = $_POST['emailto'];
-$cc = "tccutler@tandtwanderers.com";
 $replyto = "Daredevil Ducks";
-$host = "mail.hover.com";
-$port = 587;
 $emailChunks = 20;
 $message = $_POST['emailmessage'];
 $subject = $_POST['emailsubject'];
-$mailaccount = "tccutler@tandtwanderers.com";
-$mailpassword = "W49BhP+qQg@";
+
 $logoimage = "img/DonaldDuckFlying-small.png";
 $logoimagefullpath = "/var/www/html/daredevilducks/img/DonaldDuckFlying-small.png";
 $body = "<html>
@@ -91,7 +114,7 @@ while (($membersSent != $toMemberSize) || ($membersSent < $toMemberSize))
 
     try 
     {
-        $mail->addCC($cc);
+        // $mail->addCC($cc);
         $mail->addReplyTo($mailaccount, $replyto); 
         $mail->IsHTML(true);
         $mail->AddEmbeddedImage($logoimagefullpath,'logoImg');
@@ -122,6 +145,5 @@ while (($membersSent != $toMemberSize) || ($membersSent < $toMemberSize))
     
 $mail->smtpClose();
 
-echo "Email $membersSent members sent emails.";    
-
+echo "Email $membersSent members sent emails using $mailaccount.";    
 ?>

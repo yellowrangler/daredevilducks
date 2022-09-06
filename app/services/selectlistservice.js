@@ -9,6 +9,10 @@ dddApp.service('selectListService', function () {
                 thisList = emtList;
                 break;
 
+            case 'emailaccount':
+                thisList = emailaccountList;
+                break;    
+
            case 'states':
                 thisList = stateList;
                 break;
@@ -32,6 +36,11 @@ dddApp.service('selectListService', function () {
 
     var emptyList = [
         {   }
+    ];
+
+    var emailaccountList = [ 
+        { title :  "No-IP", value : "tccutler@capecutler.ddns.net"},
+        { title :  "Hover", value : "tccutler@tandtwanderers.com"}
     ];
 
     var emtList = [ 

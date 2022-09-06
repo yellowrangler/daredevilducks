@@ -2134,8 +2134,8 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 controllers.sendplayeremailController = function ($scope, $http, $location, membersFactory, teamsFactory, selectListService) {
     $scope.current = {};
     $scope.emailtemplates = {};
-    $scope.current.emailto = "";
-    $scope.current.emailfrom = "tccutler@tandtwanderers.com";
+    $scope.emailaccounts = {};
+
 
     function setMembereMail (email)
     {
@@ -2351,6 +2351,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
         $scope.sendDataEmail = "noemail=1";
 
         $scope.emailtemplates = selectListService.getList('emt');
+        $scope.emailaccounts = selectListService.getList('emailaccount');
 
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
@@ -2391,7 +2392,6 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
     $scope.clearMailTo = function() {
         clearMailTo();
     }
-
 }
 
 

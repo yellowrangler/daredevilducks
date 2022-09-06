@@ -1,13 +1,6 @@
 <?php 
 
-//------------------------------------------------------
-// get admin user info
-//------------------------------------------------------
-// open connection to host
-$DBhost = "localhost";
-$DBschema = "ddd";
-$DBuser = "tarryc";
-$DBpassword = "tarryc";
+include_once "../../../secure/ddd.php";
 
 //
 // connect to db
@@ -15,9 +8,13 @@ $DBpassword = "tarryc";
 $dbConn = @mysqli_connect($DBhost, $DBuser, $DBpassword, $DBschema);
 if (!$dbConn) 
 {
-	$log = new ErrorLog("logs/");
+	// $log = new ErrorLog("logs/");
+	// $dberr = mysqli_error();
+	// $log->writeLog("DB error: $dberr - Error mysql connect.$modulecontent.");
+
 	$dberr = mysqli_error();
-	$log->writeLog("DB error: $dberr - Error mysql connect.$modulecontent.");
+	$msgtext = "DB error: $dberr - Error mysql connect.$modulecontent.";
+	echo $msgtext;
 
 	$rv = "";
 	exit($rv);

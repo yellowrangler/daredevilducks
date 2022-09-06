@@ -12,10 +12,12 @@
       <div style="padding-top:15px;" class="panel-body">
         <form id="dddeMailForm" name="dddeMailForm" class="form-horizontal">
 
-          <div class="form-group">
-            <label for="emailfrom" class="col-md-2 control-label">From</label>
-            <div class="col-md-9">
-                <input type="email" class="form-control" ng-model="current.emailfrom" id="emailfrom" name="emailfrom" placeholder="">
+          <div class="form-group" >
+              <label for="emailfrom" class="col-md-2 control-label">From</label>
+              <div class="col-md-9">
+              <select tabindex="1"  class="form-control" ng-model="current.emailaccount.value" id="emailaccount" name="emailfromaccount">
+                <option ng-repeat="emailaccount in emailaccounts" value="{{emailaccount.value}}">{{emailaccount.title}}</option>
+              </select>
             </div>
           </div> <!-- end of form-group -->
 

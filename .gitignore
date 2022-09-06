@@ -5,3 +5,4 @@ manchester.txt
 .DS_Store
 mobile/.DS_Store
 /data/.DS_Store
+secure/**
