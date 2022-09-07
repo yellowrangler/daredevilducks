@@ -303,6 +303,7 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
 controllers.teamstatschartsController = function ($scope, $http, $location, teamsFactory, membersFactory, nflTeamsService, chartService, loginService) {
 
+
     function displayChart()
     {
         switch ($scope.current.chartid)
@@ -362,6 +363,20 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.showlinechart = false;
                 $scope.current.showbarchart = true;
                 break;
+
+            case "9":
+                getTeamDataChart9();
+
+                $scope.current.showlinechart = true;
+                $scope.current.showbarchart = false;
+                break;
+                
+            case "10":
+                getTeamDataChart10();
+
+                $scope.current.showlinechart = true;
+                $scope.current.showbarchart = false;
+                break;        
 
             default:
                 $scope.current.chartid = "";
@@ -469,6 +484,30 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.current.message = "<p>This bar chart shows <span display='color:red;font-weight:800;'>reverse offensive and defensive rankings</span>. The team you pick will have a bar chart built to show how its offensive and defensive rankings for overall, scoring, passing and rushing have changed from the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
                 break;
 
+            case "9":
+                $scope.current.showteama = true;
+                $scope.current.showteamb = false;
+                $scope.current.showlinechart = false;
+                $scope.current.showbarchart = false;
+
+                $scope.current.teama = " ";
+                $scope.current.teamb = " ";
+
+                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse offensive and rankings</span>. The team you pick will have a line chart built to show its offensive rankings per week for overall, scoring, passing and rushing since from the beginning of the season. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
+                break;
+                
+            case "10":
+                $scope.current.showteama = true;
+                $scope.current.showteamb = false;
+                $scope.current.showlinechart = false;
+                $scope.current.showbarchart = false;
+
+                $scope.current.teama = " ";
+                $scope.current.teamb = " ";
+
+                $scope.current.message = "<p>This line chart shows <span display='color:red;font-weight:800;'>reverse defensive rankings</span>. The team you pick will have a line chart built to show how its defensive rankings for per week for overall, scoring, passing and rushing since the beginning of the season to the current week. We realized that most people tend to look at charts as the higher the line the better the score.</p><p>So we Took these rankings (where lower is better) and subtracted 33 from all scores. What this means to you is that <span display='color:red;font-weight:800;'>the higher the line the better the ranking</span>; the lower the worse! </p>";
+                break;        
+
             default:
                 $scope.current.chartid = "";
         }
@@ -510,7 +549,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     function getTeamDataChart2 ()
     {
         var teamA = $scope.current.teamidA;
-        var season = $scope.current.season;
+
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -528,14 +567,14 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 $scope.weeks = data[8];
 
                 drawChart2($scope.pot,
-                                    $scope.pos,
-                                    $scope.pop,
-                                    $scope.por,
-                                    $scope.pdt,
-                                    $scope.pds,
-                                    $scope.pdp,
-                                    $scope.pdr,
-                                    $scope.weeks);
+                            $scope.pos,
+                            $scope.pop,
+                            $scope.por,
+                            $scope.pdt,
+                            $scope.pds,
+                            $scope.pdp,
+                            $scope.pdr,
+                            $scope.weeks);
 
                 })
             .error( function(edata) {
@@ -547,7 +586,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     {
         var teamA = $scope.current.teamidA;
         var teamB = $scope.current.teamidB;
-        var season = $scope.current.season;
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -576,7 +614,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     function getTeamDataChart4 ()
     {
         var teamA = $scope.current.teamidA;
-        var season = $scope.current.season;
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -608,7 +645,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     function getTeamDataChart5 ()
     {
         var teamA = $scope.current.teamidA;
-        var season = $scope.current.season;
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -641,7 +677,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     {
         var teamA = $scope.current.teamidA;
         var teamB = $scope.current.teamidB;
-        var season = $scope.current.season;
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -683,7 +718,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     {
         var teamA = $scope.current.teamidA;
         var teamB = $scope.current.teamidB;
-        var season = $scope.current.season;
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -724,7 +758,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
     function getTeamDataChart8 ()
     {
         var teamA = $scope.current.teamidA;
-        var season = $scope.current.season;
         // var week = $scope.current.week;
 
         var q = "teamid="+teamA+"&season="+$scope.current.season;
@@ -741,15 +774,69 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 $scope.weeks = data[8];
 
-                drawChart2($scope.pot,
-                                    $scope.pos,
-                                    $scope.pop,
-                                    $scope.por,
-                                    $scope.pdt,
-                                    $scope.pds,
-                                    $scope.pdp,
-                                    $scope.pdr,
-                                    $scope.weeks);
+                drawChart8($scope.pot,
+                            $scope.pos,
+                            $scope.pop,
+                            $scope.por,
+                            $scope.pdt,
+                            $scope.pds,
+                            $scope.pdp,
+                            $scope.pdr,
+                            $scope.weeks);
+
+                })
+            .error( function(edata) {
+                alert(edata);
+            });
+    }
+
+    function getTeamDataChart9 ()
+    {
+        var teamA = $scope.current.teamidA;
+
+        // var week = $scope.current.week;
+
+        var q = "teamid="+teamA+"&season="+$scope.current.season;
+        teamsFactory.getTeamPowerRankings(q)
+            .success( function(data) {
+                $scope.pot = data[0];
+                $scope.pos = data[1];
+                $scope.pop = data[2];
+                $scope.por = data[3];
+                $scope.weeks = data[8];
+
+                drawChart9($scope.pot,
+                            $scope.pos,
+                            $scope.pop,
+                            $scope.por,
+                            $scope.weeks);
+
+                })
+            .error( function(edata) {
+                alert(edata);
+            });
+    }
+
+    function getTeamDataChart10 ()
+    {
+        var teamA = $scope.current.teamidA;
+
+        // var week = $scope.current.week;
+
+        var q = "teamid="+teamA+"&season="+$scope.current.season;
+        teamsFactory.getTeamPowerRankings(q)
+            .success( function(data) {
+                $scope.pdt = data[4];
+                $scope.pds = data[5];
+                $scope.pdp = data[6];
+                $scope.pdr = data[7];
+                $scope.weeks = data[8];
+
+                drawChart10($scope.pdt,
+                            $scope.pds,
+                            $scope.pdp,
+                            $scope.pdr,
+                            $scope.weeks);
 
                 })
             .error( function(edata) {
@@ -805,6 +892,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                   }
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -839,12 +930,14 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
         $scope.colors = [
             {
+                // backgroundColor: 'transparent',
                 fillColor: 'rgba(47, 132, 71, 0.8)',
                 strokeColor: 'rgba(47, 132, 71, 0.8)',
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)'
             },
             {
+                // backgroundColor: 'transparent',
                 fillColor: 'rgba(47, 132, 71, 0.8)',
                 strokeColor: 'rgba(47, 132, 71, 0.8)',
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
@@ -873,6 +966,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -926,6 +1023,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
 
@@ -984,6 +1085,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -1041,6 +1146,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -1121,6 +1230,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -1201,6 +1314,10 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -1269,6 +1386,143 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
                 }
               ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
+            }
+
+        };
+    }
+
+    function drawChart9(pot,pos,pop,por,weeks)
+    {
+        var series1 = "Overall Offence";
+        var series2 = "Scoring Offence";
+        var series3 = "Passing Offence";
+        var series4 = "Rushing Offence";
+
+
+        $scope.labels = weeks;
+
+
+        $scope.series = [series1,
+                    series2,
+                    series3,
+                    series4];
+
+        $scope.data = [
+             pot,pos,pop,por
+            ];
+
+        $scope.colors = [
+            {
+                // backgroundColor: 'transparent',
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            },
+            {
+                // backgroundColor: 'transparent',
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            }];
+
+        $scope.datasetOverride = [
+                {
+                    yAxisID: 'Power-Rankings'
+                }
+            ];
+
+        $scope.options = {
+            legend: { display: true },
+            scales: {
+              yAxes: [
+                {
+                  id: 'Power-Rankings',
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  ticks: {
+                    max:32,
+                    min:0
+                  }
+
+                }
+              ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
+            }
+        };
+    }
+
+    function drawChart10(pdt,pds,pdp,pdr,weeks)
+    {
+        var series1 = "Overall Defense";
+        var series2 = "Scoring Defense";
+        var series3 = "Passing Defense";
+        var series4 = "Rushing Defence";
+
+
+        $scope.labels = weeks;
+
+
+        $scope.series = [series1,
+                    series2,
+                    series3,
+                    series4];
+
+        $scope.data = [
+             pdt,pds,pdp,pdr
+            ];
+
+        $scope.colors = [
+            {
+                // backgroundColor: 'transparent',
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            },
+            {
+                // backgroundColor: 'transparent',
+                fillColor: 'rgba(47, 132, 71, 0.8)',
+                strokeColor: 'rgba(47, 132, 71, 0.8)',
+                highlightFill: 'rgba(47, 132, 71, 0.8)',
+                highlightStroke: 'rgba(47, 132, 71, 0.8)'
+            }];
+
+        $scope.datasetOverride = [
+                {
+                    yAxisID: 'Power-Rankings'
+                }
+            ];
+
+        $scope.options = {
+            legend: { display: true },
+            scales: {
+              yAxes: [
+                {
+                  id: 'Power-Rankings',
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  ticks: {
+                    max:32,
+                    min:0
+                  }
+
+                }
+              ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 } 
             }
         };
     }
@@ -1291,6 +1545,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
         // default chart is poer rankings compare
         $scope.current.chartid = "1";
