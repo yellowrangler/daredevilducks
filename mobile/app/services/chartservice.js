@@ -31,24 +31,16 @@ dddAppMobile.service('chartService', function () {
             id : "3"
         },
         {  
-            title :  "Team Offense Stats All Weeks - Bar",
-            id : "4"
-        },
-        {  
-            title :  "Team Defense Stats All Weeks - Bar",
-            id : "5"
-        },
-        {  
             title :  "Two Teams Offense Defense Stats Game Week - Bar",
             id : "6"
         },
         {  
-            title :  "Two Teams Offense Defense Stats Game Week - Line",
-            id : "7"
+            title :  "Team Offense Stats All Weeks - Line",
+            id : "9"
         },
         {  
-            title :  "Team Offense Defense Stats All Weeks - Bar",
-            id : "8"
+            title :  "Team Defense Stats All Weeks - Line",
+            id : "10"
         },
     ];
 

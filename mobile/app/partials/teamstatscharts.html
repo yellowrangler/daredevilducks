@@ -15,6 +15,13 @@
 				<div class="panel-body">
 
 					<div class="form-group verticalFieldOffset">
+						<label for="season" class="control-label">Season </label>
+			            <select class="customSelect form-control" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+
+					<div class="form-group verticalFieldOffset">
 						<label for="teamstatschart" class="control-label">Chart</label>
 				        <select class="customSelect form-control" ng-change="getTeamStatsCharts()" ng-model="current.chartid" id="teamstatschart" name="teamstatschart">
 				            <option ng-repeat="teamstatschart in teamstatscharts" ng-selected="current.chartid == teamstatschart.id" value="{{teamstatschart.id}}">{{teamstatschart.title}}</option>
