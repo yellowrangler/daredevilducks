@@ -117,12 +117,12 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 	$totalmembers = $totalmembers + 1;
 
 	// get data
-	$memberid = $row[memberid];
-	$membername = $row[membername];
-	$email = $row[email];
-	$phonenumber = $row[phonenumber];
-	$screenname = $row[screenname];
-	$picks = $row[picks];
+	$memberid = $row["memberid"];
+	$membername = $row["membername"];
+	$email = $row["email"];
+	$phonenumber = $row["phonenumber"];
+	$screenname = $row["screenname"];
+	$picks = $row["picks"];
 
 	// check picks
 	if ($picks == 0)
