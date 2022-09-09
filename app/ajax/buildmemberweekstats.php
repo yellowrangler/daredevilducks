@@ -126,7 +126,7 @@ $sql_result_weeks = $sql_result;
 // get total weeks
 //
 $r = mysqli_fetch_assoc($sql_result_weeks);
-$weekstotal = $r[weeks];
+$weekstotal = $r["weeks"];
 
 // debug
 // print "<br />weeksttotal $weekstotal";

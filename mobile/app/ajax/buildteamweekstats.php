@@ -128,7 +128,7 @@ $modulecontent = "Unable to update team week stats - max weeks.";
 include ('mysqlquery.php');
 
 $r = mysqli_fetch_assoc($sql_result);
-$weekstotal = $r[weeks];
+$weekstotal = $r["weeks"];
 
 // echo "<br>timestamp: $enterdateTS<br/><br/>";
 // echo "<br />weekstotal: $weekstotal <br /><br />";

@@ -122,7 +122,7 @@ include ('mysqlquery.php');
 // get total weeks
 //
 $r = mysqli_fetch_assoc($sql_result);
-$weekstotal = $r[weeks];
+$weekstotal = $r["weeks"];
 
 // added 8/25/2016 if weeks is null
 if ($weekstotal == null)
