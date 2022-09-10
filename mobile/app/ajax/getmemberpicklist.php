@@ -82,7 +82,8 @@ FROM
 	)
 	AND status = 'active'
 ) AS QM
-LEFT JOIN membertbl M on QM.memberid = M.id";
+LEFT JOIN membertbl M on QM.memberid = M.id
+ORDER BY picks DESC, membername ASC";
 
 //
 // sql query
