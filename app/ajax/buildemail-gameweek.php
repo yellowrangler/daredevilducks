@@ -327,13 +327,9 @@ $email = $email . "
 Great effort by all! But remember Week $nextweek is upon us! So start thinking about what you want to pick!  
 </p>
 
-Click on http://daredevilducks.xyz to get started!
-<br />
-Mobile devices can click on http://daredevilducksm.xyz
-<br />
 <br />
 
-AirDreamer & Wildcat Wonder
+<span style='font-weight:bold; color:#4682B4;'>AirDreamer & Wildcat Wonder</style>
 </div>";
 
 //

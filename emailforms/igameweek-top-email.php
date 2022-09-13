@@ -2,40 +2,26 @@
 
 $emailtopwriteup = "	
 <p>
-On Super Bowl Sunday, the Rams came from behind to beat the upstart Bengals!  A great game played by 2 deserving teams. Mathew Stafford, languishing with the Detroit Lions, a team perennial loser. A very good quarterback, perhaps even a great quarterback. Gets picked up by the LA Rams and the result is a Super Bowl win! Congratulations to LA Rams! 
+  It was a good opening week of football. We had close games, upsets and field goal gremlins! 
 </p>
 
 <p>
-The Cincinnati Bengals did not disappoint as they pushed the Rams right up to the brink. They are a good team with a remarkable quarterback. One can only hope they will be back again! A remarkable job just getting to the Super Bowl! Great job Bengals!
-</p>
-
-<p>
-  <span style='font-weight:bold; color:#FF6E3B;'>All in all a great Super Bowl!</span>
-</p>
-
-<p style='padding-top:15px;'>
-<span style='font-size: 20px; font-weight:bold; color:#00BBC0;'>Hygenius is our 2021 Daredevil Ducks Champian!</span> 
+The Bills opened the season with an impressive win over last years Super Bowl winners Rams.  The Saints eked a win out over the Falcons. The Browns with Brissett beat the Panthers with Mayfield who used to quarterback the Browns. The Bears in a bit of an upset, beat the 49ers in a monsoon. In the most incredible game of the week, the Steelers beat the Bengals in a game featuring chances to win by both sides spoiled those field goal gremlins!
 </p> 
 
 <p>
-  His family pedigree can not be disputed. He is married to Toothfairy who happens to be our only 2 time Daredevil Ducks winner. Between the two of them they represent 3 out of 8 Daredevil Duck trophies! A family Dynasty!
+The Eagles beat the Lions. The Colts and Texans gave us our first tie of the season. The Dolphins crushed the Patriots. The Ravens beat the still hapless Jets evermore. The Commanders held on to beat the Jaguars. In another upset of sorts, the Giants beat the favored Titans in Nashville! The Chiefs pounded the Cardinals in Phoenix. The Chargers held on to beat the Raiders.
 </p> 
 
 <p>
-  Please join me in raising the beverage of your choice to our newest Champion!
-</p>
-
-<p>
-For the rest of you. Better luck next Year!
+The Vikings torched the Packers. The Buccaneers looked impressive in there win over the Cowboys in Dallas. In the final game for week 1, the Seahawks beat the Broncos in a thriller with a missed last second long distance field goal being the difference.
 </p> 
 
+<p>
+  <span style='font-weight:bold; color:#4682B4;'>All in all a superb week of football!</span>
+</p> 
 
 <br />
-
-<p>
-Check out the new Bracket prepared by Wildcat Wonder! Just click on the large Donald Duck image.
-</p>
-
 <p>
 The full stats are below! Read em and weep (I know I do)!
 </p> 
