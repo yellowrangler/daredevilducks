@@ -4,6 +4,9 @@ include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
+// print_r($_POST);
+
+
 //
 // post input
 //
@@ -108,10 +111,13 @@ $returnArrayLog = new AccessLog("logs/");
 $modulecontent = "Unable to add membername for ddd membername $membername.";
 include_once ('mysqlconnect.php');
 
+
+// print("Before escape string");
+// exit();
 //
 // now encode string. Must be done  after mysql connect
 //
-$biography = mysqli_real_escape_string($biography);
+$biography = mysqli_real_escape_string($dbConn, $biography);
 
 //---------------------------------------------------------------
 // check if membername already exists

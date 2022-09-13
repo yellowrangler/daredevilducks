@@ -1,8 +1,8 @@
 <?php
 
-// include_once ('../class/class.Log.php');
-// include_once ('../class/class.ErrorLog.php');
-// include_once ('../class/class.AccessLog.php');
+include_once ('../class/class.Log.php');
+include_once ('../class/class.ErrorLog.php');
+include_once ('../class/class.AccessLog.php');
 
 //
 // functions
@@ -23,7 +23,7 @@ $season = $_POST["season"];
 //
 // messaging
 //
-// $returnArrayLog = new AccessLog("logs/");
+$returnArrayLog = new AccessLog("logs/");
 // $returnArrayLog->writeLog("Client List request started" );
 
 //
