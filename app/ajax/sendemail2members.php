@@ -10,6 +10,7 @@ require_once '../../vendor/SMTP.php';
 
 include_once "../../secure/emailaccounts.php";
 
+// debug
 // print_r($_POST);
 // exit();
 
@@ -65,6 +66,25 @@ $body = "<html>
 $toArray = explode(',', $to);
 $toMemberSize = count($toArray);
 
+
+// debug start
+// print "<br>noip $noip";
+// print "<br>hover $hover";
+// print "<br>mailaccount $mailaccount";
+// print "<br>from $from";
+// print "<br>host $host";
+// print "<br>mailpassword $mailpassword";
+// print "<br>port $port";
+// print "<br>to $to";
+// print "<br>replyto $replyto";
+// print "<br>emailChunks $emailChunks";
+// print "<br>message $message";
+// print "<br>body $body";
+// print "<br>subject $subject";
+// print "<br>logoimage $logoimage";
+// print "<br>logoimagefullpath $logoimagefullpath";
+// debug end
+
 $chunkStart = 0;
 $membersSent = 0;
 $sendIdx = 0;
@@ -94,7 +114,7 @@ $mail->Body = $body;
 
 while (($membersSent != $toMemberSize) || ($membersSent < $toMemberSize))
 {
-    $mail->ClearAddresses();  
+    $mail->ClearAllRecipients();  
 
     $toArraySlice = array_slice($toArray, $chunkStart, $emailChunks);
     $membersSliceCount = count($toArraySlice);
@@ -119,7 +139,7 @@ while (($membersSent != $toMemberSize) || ($membersSent < $toMemberSize))
         $mail->IsHTML(true);
         $mail->AddEmbeddedImage($logoimagefullpath,'logoImg');
         $mail->send();
-        $mail->ClearAllRecipients();
+        // $mail->ClearAllRecipients();
 
         // debug
         // echo "mail to start<br>";

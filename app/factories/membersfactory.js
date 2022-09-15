@@ -19,6 +19,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.getMemberInfo = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmemberinfo.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getMemberProfileDialog = function (data) {
         return $http({ 
             method: 'POST', 

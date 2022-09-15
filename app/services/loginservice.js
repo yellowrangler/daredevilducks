@@ -51,6 +51,26 @@ dddApp.service('loginService', function () {
         } 
     }
 
+    this.setMemberAvatar = function(memberavatar) {
+        var login = this.getLogin();
+
+        if (login != null)
+        {
+            login.avatar = memberavatar;
+            this.addLogin(login);
+        } 
+    }
+
+    this.setMemberScreenName = function(memberscreenname) {
+        var login = this.getLogin();
+
+        if (login != null)
+        {
+            login.screenname = memberscreenname;
+            this.addLogin(login);
+        } 
+    }
+
     this.getLoginLogoffLabels = function() {
         var labels = loginLogoffService;
 
@@ -79,7 +99,7 @@ dddApp.service('loginService', function () {
         return role;
     }
 
-    this.getMemberAvatar= function() {
+    this.getMemberAvatar = function() {
         var memberavatar = "";
         var login = "";
 
@@ -89,21 +109,32 @@ dddApp.service('loginService', function () {
             var memberavatar = login.avatar;
         }
         
-
         return memberavatar;
     }
 
     this.getMemberScreenname = function() {
         var memberscreenname = "";
-        var login = "";
-
         var login = this.getLogin();
+
         if (login != null)
         {
             var memberscreenname = login.screenname;
         }
 
         return memberscreenname;
+    }
+
+    this.getMembername = function() {
+        var membername = "";
+        var login = "";
+
+        var login = this.getLogin();
+        if (login != null)
+        {
+            var membername = login.membername;
+        }
+
+        return membername;
     }
 
     this.getEmptyLogin = function() {

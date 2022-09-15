@@ -152,18 +152,6 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         $scope.current.devicetype = ua.deviceType;   
 
         $scope.mobileDevice = isMobile();
-        // if ($scope.mobileDevice)
-        // {
-        //     // alert ("Is Mobile");
-
-        //     $(".collapsableNavbar").click(function(event) {
-        //       $(".navbar-collapse").collapse('hide');
-        //       setviewpadding();
-        //     });
-
-        //     $('[name=navImage]').addClass("imgButtonMobileNav").removeClass("imgButtonNav").removeClass("img-responsive");
-        //     $('[name=navAvatarImage]').addClass("imgAvatarNavMobile").removeClass("imgAvatarNav");
-        // }
        
         //
         // this is not getting called at right time for definig top offset 
@@ -434,7 +422,7 @@ controllers.loginController = function ($scope, $http, $location, $window, login
         
 }
 
-controllers.homeController = function ($scope, $http, $location, $window, $route, loginService) {
+controllers.homeController = function ($scope, $http, $location, $window, $route, loginService, membersFactory) {
 
     init();
     function init() {
@@ -447,8 +435,48 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
         setviewpadding();
 
         var loggedIn = loginService.isLoggedIn();
-        if (loggedIn)
+        if (loggedIn) 
+        {
             $("#loginHomeButton").text("Logoff");
+
+            // 
+            // I made a tactical error in setting avatar and screen name
+            // at login. Many of our members including yours truely dont
+            // logoff so whenavatars change or TBD we wont reflect change.
+            // So this will be a stop gap (ha ha) fix.
+            // 
+            $membername = "";
+            $membername = loginService.getMembername();
+            var data = "membername="+$membername;
+            membersFactory.getMemberInfo(data)
+                .success( function(memberinfo) {   
+                    if (memberinfo.msgtext == "ok")
+                    {
+                        $scope.memberavatar = memberinfo.avatar;
+                        loginService.setMemberAvatar(memberinfo.avatar);
+                    }
+                    else
+                    {
+                        alert("Error\n"+memberinfo.msgtext);
+                    }   
+                });
+
+            $membername = "";
+            $membername = loginService.getMembername();
+            var data = "membername="+$membername;
+            membersFactory.getMemberInfo(data)
+                .success( function(memberinfo) {   
+                    if (memberinfo.msgtext == "ok")
+                    {
+                        $scope.memberscreenname = memberinfo.screenname;
+                        loginService.setMemberScreenName(memberinfo.screenname);
+                    }
+                    else
+                    {
+                        alert("Error\n"+memberinfo.msgtext);
+                    }   
+                });
+        }
         else
             $("#loginHomeButton").text("Login");
     };
