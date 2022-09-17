@@ -442,7 +442,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
             // 
             // I made a tactical error in setting avatar and screen name
             // at login. Many of our members including yours truely dont
-            // logoff so whenavatars change or TBD we wont reflect change.
+            // logoff so when avatars change or TBD we wont reflect change.
             // So this will be a stop gap (ha ha) fix.
             // 
             $membername = "";
