@@ -15,6 +15,10 @@ $showexperts = 0;
 if( isset($_POST['membergroupid']) )
 {
      $membergroupid = $_POST['membergroupid'];
+     if (!is_numeric($membergroupid))
+     {
+        $membergroupid = 0;
+     }
 }
 
 if( isset($_POST['showexperts']) )
