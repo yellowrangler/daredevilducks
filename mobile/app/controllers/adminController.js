@@ -1347,7 +1347,7 @@ controllers.gameteamscoresinfoController = function ($scope, $http, $location, m
             .success( function(data) {
                 $scope.weeks = data; 
 
-                var senddata = "season="+$scope.current.season;
+                var senddata = "season="+$scope.current.season+"&week="+$scope.current.week;
                 teamsFactory.getNFLGameWeekTeams(senddata)
                 .success( function(data) {
                     $scope.games = data;
