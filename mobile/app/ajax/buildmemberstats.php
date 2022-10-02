@@ -136,7 +136,11 @@ COALESCE(SUM(CASE WHEN gametypeid = 2 THEN 1 ELSE 0 END),0) AS regularseasontota
 COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasontotalgames,
 COALESCE(COUNT(gamenbr),0) as totalgames
 FROM gamestbl  
-WHERE season = $season and week  <= $currentweek";
+WHERE season = $season and gamedatetime < NOW()";
+
+// Tarry added this change to get number of games from current time vs games for current week 
+// WHERE season = $season and week  <= $currentweek";
+
 
 // Tarry changed from < to <= current week 09092016 because first week data not getting updated
 
