@@ -1514,6 +1514,72 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
     }
 }
 
+controllers.gameweekinfoController = function($scope, $http, $location, gamesFactory, teamsFactory, nflTeamsService, loginService) {
+    $scope.current = {};
+    $scope.current.season = nflTeamsService.getCurrentSeason();
+
+
+    function saveGameWeeksDateTimeInfo()
+    {
+        var sdata = $("#gameweekdatetimeForm").serialize();
+
+        gamesFactory.saveNFLWeekGamesInfo(sdata)
+            .success( function(data) {
+                getGameWeeksDateTimeInfo();
+
+                $('#gameWeekDateTimesInfoSavedDialogModalTitle').text("Success");
+                $('#gameWeekDateTimesInfoSavedDialogModalBody').html(data);
+                $('#gameWeekDateTimesInfoSavedDialogModal').modal();
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+
+        var i = 0;
+    }
+
+    function getGameWeeksDateTimeInfo()
+    {
+
+        var senddata = "season="+$scope.current.season;
+
+        gamesFactory.getNFLWeekGamesInfo(senddata)
+        .success( function(data) {
+            $scope.gameweeks = data; 
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
+    init();
+    function init() {
+        //
+        // this is not getting called at right time for definig top offset
+        // in jquery ready. So adding it here
+        //
+        setviewpadding();
+
+        teamsFactory.getCurrentSeasonWeek()
+        .success( function(data) {
+            $scope.current.season = data.season; 
+            $scope.seasons = nflTeamsService.getNFLTeamseasons();
+
+            getGameWeeksDateTimeInfo();  
+        })
+        .error( function(edata) {
+            alert(edata);
+        }); 
+    }
+
+    $scope.saveGameWeeksDateTimeInfo = function() {
+        saveGameWeeksDateTimeInfo();
+    }
+
+    $scope.getGameWeeksDateTimeInfo = function() {
+        getGameWeeksDateTimeInfo();
+    }
+}
 
 controllers.gameteamdatetimeinfoController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
     $scope.current = {};

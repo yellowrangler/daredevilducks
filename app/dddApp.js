@@ -171,6 +171,11 @@ dddApp.config(function ($routeProvider) {
                 controller: 'gameinfoController',
                 templateUrl: 'app/partials/gameinfo.html'
             })
+        .when('/gameweekinfo',
+            {
+                controller: 'gameweekinfoController',
+                templateUrl: 'app/partials/gameweekinfo.html'
+            })
         .when('/gamenetworkinfo',
             {
                 controller: 'gamenetworkinfoController',

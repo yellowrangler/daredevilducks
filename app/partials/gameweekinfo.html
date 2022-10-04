@@ -1,0 +1,94 @@
+<form id="gameweekdatetimeForm" name="gameweekdatetimeForm">
+<div class="pageCaption row">
+	<div style="padding-top:15px;display:inline;" class="col-md-12">
+		<h3 style="display:inline;" class="headerTitle4">Set Game Week Date Time</h3>
+	</div> <!-- end of column -->
+</div> <!-- end of row -->	
+
+<div class="row">
+	<div class="col-md-12 form-inline">
+		<div class="pageStandardOffset">
+			<div class="panel panel-default panelOverrideNoBorder">
+				<div class="panel-body">
+					<div class="form-group horizontalFieldOffset">
+				    	<label for="season" class="control-label">Season</label>
+			            <select class="customSelect form-control" ng-change="getGameWeeksDateTimeInfo('season')" ng-model="current.season" id="season" name="season">
+			                <option ng-repeat="season in seasons" ng-selected="current.season == season.season" value="{{season.season}}">{{season.season}}</option>
+			            </select>
+					</div> <!-- end of form-group -->
+				
+					<div style="padding-left:30px;"class="form-group horizontalFieldOffset">
+		                <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="saveGameWeeksDateTimeInfo()" id="saveGameDateTimeWeeklyInfo" name="saveGameDateTimeWeeklyInfo" >Save Game Weeks Date Time</button>
+					</div> <!-- end of form-group --> 
+
+				</div> <!-- end of panel body -->		
+			</div> <!-- end of panel -->
+		</div> <!-- end of panelOffset -->
+	</div> <!-- end of col 9 -->
+</div> <!-- end of row -->
+
+<div class="pageStandardOffset row">
+	<div class="col-md-12">
+		<div class="panel panel-default panelOverrideNoBorder">
+			<div class="panel-body table-responsive">
+				<table class="table pickGameTable" >
+					<tr class="tableTitle">
+						<th colspan=1>Season</th>	
+						<th colspan=1>Week</th>	
+						<th colspan=1>Date Start</th>	
+						<th colspan=1>Date End</th>		
+					</tr>
+
+					<tr ng-repeat="gameweek in gameweeks">
+						<td class="center-column-text">
+							{{gameweek.season}}
+							<input type='hidden' ng-model="gameweek.id" name='id[]' value='{{gameweek.id}}' />
+							<input type='hidden' ng-model="gameweek.season" name='season[]'  value='{{gameweek.season}}'/>
+						</td>
+
+						<td class="center-column-text">
+							{{gameweek.week}}
+							<input type='hidden' ng-model="gameweek.week" name='week[]'  value='{{gameweek.week}}' />
+						</td>
+
+						<td class="center-column-text">
+							<input ng-model="gameweek.weekstart" name='weekstart[]'  value='{{gameweek.weekstart}}' size="40" type='text' />
+						</td>
+
+						<td class="center-column-text">
+							<input ng-model="gameweek.weekend" name='weekend[]'  value='{{gameweek.weekend}}' size="40" type='text' />
+						</td>
+					</tr>
+
+				</table>
+			</div> <!-- end of panel body -->
+		</div> 	<!-- end of panel -->
+	</div> <!-- end of col 12 -->
+</div> <!-- end of row -->
+
+<div style="padding-top:15px; padding-bottom:35px;" class="row">
+	<div class="col-md-offset-2  col-md-8">
+		<button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block" ng-click="saveGameWeeksDateTimeInfo()" id="saveGameDateTimeWeeklyInfoButton" name="saveGameDateTimeWeeklyInfo">Click Here to Save Week Date Time</button>
+	</div><!-- end of col 12 -->
+</div> <!-- end of row -->
+
+</form>
+
+<!-- dialogs -->
+<div class="modal fade" id="gameWeekDateTimesInfoSavedDialogModal" tabindex="-1" role="dialog" aria-labelledby="gameWeekDateTimesInfoSavedDialogModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="gameWeekDateTimesInfoSavedDialogModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="gameWeekDateTimesInfoSavedDialogModalBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- <div style="padding-bottom:350px;">&nbsp;</div> -->

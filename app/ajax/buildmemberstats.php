@@ -58,7 +58,7 @@ $postseasontotalgames = 0;
 //---------------------------------------------------------------
 // Get list of all members 
 //---------------------------------------------------------------
-$sql = "SELECT * FROM membertbl";
+$sql = "SELECT * FROM membertbl where status = 'active'";
 
 //
 // sql query
