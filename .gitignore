@@ -8,3 +8,4 @@ mobile/.DS_Store
 secure/**
 systemscripts/**
 app/ajax/dbsql/**
+mobile/app/ajax/dbsql/**

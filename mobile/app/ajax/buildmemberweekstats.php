@@ -106,11 +106,15 @@ $sql_result_prime = $sql_result;
 //---------------------------------------------------------------
 // get total weeks to date
 //---------------------------------------------------------------
-$sql = "SELECT MAX(week) AS weeks
-FROM gameweekstbl 
-WHERE season = $season
-AND weekstart <= now()";
+$sql = "SELECT 
+COALESCE(MAX(week),1) AS weeks
+FROM gameweekstbl where season = $season
+AND weekend <= NOW()";
 
+// $sql = "SELECT 
+// COALESCE(MAX(week),1) AS weeks
+// FROM gameweekstbl where season = 2022
+// AND DATE_SUB(weekend, INTERVAL 4 DAY) <= NOW()";
 //
 // sql query
 //

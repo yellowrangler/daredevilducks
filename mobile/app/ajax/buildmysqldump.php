@@ -1,4 +1,5 @@
 <?php
+include_once "../../secure/ddd.php";
 
 //
 // get date time for this transaction
@@ -24,7 +25,7 @@ else
 }
 
 
-$mySqlStr = "mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd";
+$mySqlStr = "mysqldump --extended-insert=TRUE --complete-insert=TRUE -u $DBuser -p$DBpassword $DBschema";
 $fileNameStr = "dbsql/ddd-dump-$dumpdatabaselabel.sql";
 $execStr = $mySqlStr . " > " . $fileNameStr;
 
