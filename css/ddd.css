@@ -352,7 +352,7 @@ border: 0 none;
 }
 
 .surveyHomePage {
-	font-family: 'Lato', sans-serif;
+	font-family: 'cormorant';
 	font-weight: 800;
 	font-size: 18px;
 	color: #b57f7f;
@@ -739,6 +739,9 @@ border: 0 none;
 }
 
 .ScriptscrollClass {
+	font-family: 'cormorant';
+	color: #158341;
+	font-size:19px;
 	overflow: auto;
 	height: 480px;
 	padding:15px;

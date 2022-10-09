@@ -38,7 +38,7 @@
                     <div class="panel-heading" style="background-color:#6C0000">
                         <h3 class="panel-title surveyPanelHeading">Question {{current.survey.questionnbr}} of {{current.survey.totalquestions}}</h3>
                     </div>
-                    <div style="height:140px;overflow-y:scroll;" class="panel-body">
+                    <div style="height:140px;overflow-y:scroll;" class="panel-body surveyHomePage">
                         <span>{{current.survey.questiontext}}</span>
                     </div>
                 </div>
@@ -67,8 +67,8 @@
                     <div class="panel-heading" style="background-color:LightSeaGreen">
                         <h3 class="panel-title surveyPanelHeading">Answer Comment</h3>
                     </div>
-                    <div style="height:140px;overflow-y:scroll;" class="panel-body">
-                        <textarea class="form-control" ng-model="current.survey.answercomment" id="answercomment" name="answercomment" rows="4"></textarea>
+                    <div style="height:140px;overflow-y:scroll;" class="panel-body surveyHomePage">
+                        <textarea class="form-control" ng-model="current.survey.answercomment" id="answercomment" name="answercomment" style="font-size: 17px;" rows="4"></textarea>
                     </div>
                 </div>
             </div> 
@@ -81,7 +81,7 @@
                 <div class="panel-heading" style="background-color:#6C0000">
                     <h3 class="panel-title surveyPanelHeading">Description</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body surveyHomePage">
                     <span>{{current.survey.questiontip}}</span>
                 </div>
             </div> 
