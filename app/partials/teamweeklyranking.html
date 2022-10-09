@@ -1,6 +1,6 @@
 <div class="pageCaption row">
 	<div class="col-md-12">
-		<h2 style="display:inline;padding-right:30px;" class="headerTitle">Team Weekly Ranking</h2>
+		<h2 style="display:inline;padding-right:30px;" class="headerTitle">Team Scores & Stats</h2>
 		<img ng-init="helpimg='HelpButton4Circle.png'" 
 			 ng-mouseover="helpimg='HelpButton3Circle.png'" 
 			 ng-mouseout="helpimg='HelpButton4Circle.png'"
@@ -57,7 +57,7 @@
 
 
 <div style="paddimg-top:35px;" class="pageStandardOffset row">
-	<div class="col-md-10">
+	<div class="col-md-9">
 		<div class="panel panel-default panelOverrideNoBorder">
 			<div class="panelBodyOverride">
 				<table id="TeamWeeklyRankings" class="table teamWeeklyRankings" >
@@ -259,7 +259,16 @@
 				</table>
 			</div> <!-- end of panel body -->
 		</div> 	<!-- end of panel -->
-	</div> <!-- end of col 10 -->
+	</div> <!-- end of col 9 -->
+
+	<div style="padding-left:40px;" class="col-md-3">
+		<div class="floatingImgDiv" style="position:fixed;padding-right:10px;">
+			<img style="width:{{imageWidth}}px;"  class="rightImage" ng-src="img/Halloween-TotalPercentageLeader1-2018.png">
+		</div>
+	</div> <!-- end of column -->
+
+	<div class="col-md-2">
+	</div>
 
 </div> <!-- end of row -->
 </form>

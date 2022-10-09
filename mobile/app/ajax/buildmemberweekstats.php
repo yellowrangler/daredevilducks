@@ -108,8 +108,9 @@ $sql_result_prime = $sql_result;
 //---------------------------------------------------------------
 $sql = "SELECT 
 COALESCE(MAX(week),1) AS weeks
-FROM gameweekstbl where season = $season
-AND weekend <= NOW()";
+FROM gameweekstbl 
+WHERE season = $season
+AND weekstart <= NOW()";
 
 // $sql = "SELECT 
 // COALESCE(MAX(week),1) AS weeks

@@ -75,10 +75,10 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
 
         $( "#hf2021" )
             .mouseover(function() {
-                 $(this).attr("src", "img/halloffame/HallofFamePicture2.png");
+                 $(this).attr("src", "img/halloffame/OscarGuzmanAvatar2A.png");
                 })
             .mouseout(function() {
-                $(this).attr("src", "img/halloffame/HallofFamePicture2.png");
+                $(this).attr("src", "img/halloffame/OscarGuzmanAvatar2A.png");
                 });                                    
         
         $( "#hfdefault" )

@@ -1655,7 +1655,33 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         $scope.current.toggletext = $scope.current.toggletextShow;
 
         var windowHeight = window.innerHeight;
+        var windowWidth = window.innerWidth;
+        $scope.imageWidth = windowWidth * .15;
         $scope.current.WeeklRankingtablesize = windowHeight * .60;
+
+        $(window).scroll(function(){
+            if ($(".floatingImgDiv").length)
+            {
+                var windowTopPos = $(window).scrollTop();
+                var footerTopPos = $('.ddd-footer').offset().top;
+                var floatingImgDivBottomPos = $('.floatingImgDiv').offset().top + $('.floatingImgDiv').outerHeight();
+
+                if (floatingImgDivBottomPos >= footerTopPos) 
+                {
+                    $('.floatingImgDiv').css('position', 'absolute');
+                }
+                else 
+                {
+                     var whereAreWe = $(window).scrollTop();
+                     var checkCssPosition = $('.floatingImgDiv').css('position');
+                     var bringusBackPos = 1;
+                    if (whereAreWe <= bringusBackPos && checkCssPosition == 'absolute')
+                    {
+                        $('.floatingImgDiv').css('position', 'fixed');
+                    }
+                } 
+            }
+        });
 
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)

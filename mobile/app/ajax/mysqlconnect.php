@@ -8,11 +8,10 @@ include_once "../../../secure/ddd.php";
 $dbConn = @mysqli_connect($DBhost, $DBuser, $DBpassword, $DBschema);
 if (!$dbConn) 
 {
-	// $log = new ErrorLog("logs/");
-	// $dberr = mysqli_error();
-	// $log->writeLog("DB error: $dberr - Error mysql connect.$modulecontent.");
-
+	$log = new ErrorLog("logs/");
 	$dberr = mysqli_error();
+	$log->writeLog("DB error: $dberr - Error mysql connect.$modulecontent.");
+
 	$msgtext = "DB error: $dberr - Error mysql connect.$modulecontent.";
 	echo $msgtext;
 

@@ -9,7 +9,6 @@ if (!$sql_result)
 	$log->writeLog("SQL: $sql");
 
 	$msgtext = "System Error: $sqlerr. sql = $sql";
-
 	exit($msgtext);
 }
 

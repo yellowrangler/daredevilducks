@@ -46,6 +46,21 @@
   src: url('fonts/GingerbreadHouse.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'cormorant';
+    src: url('fonts/cormorant/cormorant/Cormorant-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'cormorantSemiBold';
+    src: url('fonts/cormorant/cormorant/Cormorant-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cormorant-SemiBoldItalic';
+    src: url('fonts/cormorant/cormorant/Cormorant-SemiBoldItalic.ttf') format('truetype');
+}
+
 /* create sticky menu bar */
 .fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
 
@@ -274,9 +289,16 @@ border: 0 none;
 
 .headerTitle {
 	color:#6C0000;
+	font-family: 'Cormorant-SemiBoldItalic';
+	font-style: italic, bold;
+}
+
+/*.headerTitle {
+	color:#6C0000;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
 	font-weight: 700;
 }
+*/
 
 .headerTitle2 {
 	color:#6C0000;
@@ -903,6 +925,16 @@ border: 0 none;
 /*imgae css*/
 .centeredImage {
 	text-align: center;
+	/*clear: left;*/
+    margin-right: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	width:'100%';
+}
+
+.rightImage {
+	text-align: right;
 	/*clear: left;*/
     margin-right: 0px;
 	margin-top: 0px;
