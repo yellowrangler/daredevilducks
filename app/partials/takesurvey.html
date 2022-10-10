@@ -5,7 +5,7 @@
 </div> <!-- end of row -->
 
 <div ng-if="current.firsttime" class="pageStandardOffset row">
-    <div style="padding-top:35px;" class="col-md-offset-3 col-md-7">
+    <div style="padding-top:35px;" class="col-md-offset-1 col-md-9">
         <p class="surveyHomePage">
             Dare Devil Duck Members, we are constantly trying to make our league more fun with the information you need to make winning picks each week.  &nbsp;&nbsp; We are working to improve the website, and add valued features to the make each of you better players. &nbsp;&nbsp; Thus in an effort to better understand what you like, and what you would like to see going forward, we would appreciate it if you would take 15-20 minutes to complete the questionnaire.
 
@@ -38,7 +38,8 @@
                     <div class="panel-heading" style="background-color:#6C0000">
                         <h3 class="panel-title surveyPanelHeading">Question {{current.survey.questionnbr}} of {{current.survey.totalquestions}}</h3>
                     </div>
-                    <div style="height:140px;overflow-y:scroll;" class="panel-body surveyHomePage">
+                    <!-- <div style="height:175px;overflow-y:scroll;" class="panel-body surveyHomePage"> -->
+                    <div class="panel-body surveyHomePage">
                         <span>{{current.survey.questiontext}}</span>
                     </div>
                 </div>
@@ -68,7 +69,7 @@
                         <h3 class="panel-title surveyPanelHeading">Answer Comment</h3>
                     </div>
                     <div style="height:140px;overflow-y:scroll;" class="panel-body surveyHomePage">
-                        <textarea class="form-control" ng-model="current.survey.answercomment" id="answercomment" name="answercomment" style="font-size: 17px;" rows="4"></textarea>
+                        <textarea class="form-control surveyHomePage" ng-model="current.survey.answercomment" id="answercomment" name="answercomment" rows="4"></textarea>
                     </div>
                 </div>
             </div> 

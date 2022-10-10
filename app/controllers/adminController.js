@@ -2158,6 +2158,11 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         $scope.current.week = nflTeamsService.getCurrentWeek();
 
         $scope.gametypes = nflTeamsService.getNFLGametypes();
+
+        var rungamescripts = $('#rungamescripts');
+        rungamescripts.on('show.bs.collapse','.collapse', function() {
+                rungamescripts.find('.collapse.in').collapse('hide');
+            });
     };
 
     $scope.runGameScripts = function () {

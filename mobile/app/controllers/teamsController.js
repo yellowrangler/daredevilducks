@@ -19,10 +19,10 @@ controllers.teamstandingsController = function ($scope, $http, $location, $windo
     function init() {
         // var teamStandingsCollapse = $('#teamStandingsCollapse');
         // teamStandingsCollapse.on('show.bs.collapse','.collapse', function() {
-        //         teamStandingsCollapse.find('.collapse.in').collapse('hide');
+        //     teamStandingsCollapse.find('.collapse.in').collapse('hide');
 
-        //         $window.scrollTo(0, 0);
-        //     });
+        //     $window.scrollTo(0, 0);
+        // });
 
         var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
         $scope.postseasonstatuses = postseasonstatuses;
