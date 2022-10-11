@@ -77,7 +77,7 @@ if ($count == 1)
 }
 else
 {
-	$retmsg = "Error: Member name $membername not registered. Please contact website administrator and register!";
+	$retmsg = "Error: Member name $membername not registered. Please contact website administrator and register! count = $count";
 }
 	
 //

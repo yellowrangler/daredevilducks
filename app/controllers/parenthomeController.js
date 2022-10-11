@@ -447,7 +447,8 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
             // 
             $membername = "";
             $membername = loginService.getMembername();
-            var data = "membername="+$membername;
+            var encoded = encodeURIComponent($membername);
+            var data = "membername="+encoded;
             membersFactory.getMemberInfo(data)
                 .success( function(memberinfo) {   
                     if (memberinfo.msgtext == "ok")
@@ -463,7 +464,8 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
 
             $membername = "";
             $membername = loginService.getMembername();
-            var data = "membername="+$membername;
+            var encoded = encodeURIComponent($membername);
+            var data = "membername="+encoded;
             membersFactory.getMemberInfo(data)
                 .success( function(memberinfo) {   
                     if (memberinfo.msgtext == "ok")
