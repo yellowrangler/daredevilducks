@@ -2,28 +2,27 @@
 
 $emailtopwriteup = "	
 <p>
-  It was a good 4th week of football. 
+  It was a good 5th week of football. 
 </p>
 
 <p>
-The Bengals beat the  Dolphins to open the week in what was a must win game for the Bengals. In jolly old England, the Vikings beat the Saints in a squeaker. The Falcons held on to defeat the Browns.The Titans beat the Colts, despite a late challenge by the Colts. The Cowboys hog tied the Commanders. The Seahawks overcame a back and forth affair to defeat the Lions. The Chargers beat the Texans.
+The Colts beat the Broncos in Denver to open the week. In jolly old England, in a bit of an upset, the Giants beat the Packers. The Bills crushed the Steelers. The Chargers came back from the dead to beat the Browns in Cleveland! The Texans beat the Jaguars in Jacksonville. The Vikings held on to beat the Bears. The Saints beat the Seahawks. The Patriots, without their starting quarterback, beat the Lions. The Jets beat the Dolphins.
 </p> 
 
 <p>
-The Giants crushed the Bears. The Eagles came back to beat the Jaguars. The Jets got their first win over the Steelers in Pittsburgh. Buffalo held on to beat the Ravens in Baltimore. The Cardinals beat the Panthers. The Packers held on to win over the Patriots. The Raiders got their first win over the Broncos. The Chiefs schooled the Buccaneers!
+The Buccaneers beat the Falcons. The Titans played well enough to bet the Commanders in Washington. The 49ers beat the Panthers in North Carolina. The Eagles beat the Cardinals to stay perfect. The Cowboys beat the Rams. In a close match, the Ravens beat the Bengals. 
 </p> 
 
 <p>
-In the final game of week 4 the 49ers defeated the Rams in San Fransisco!
+In the final game of week 5 the Chiefs defeated the Raiders in a game that went down to the final seconds!
 </p> 
 
 <p>
   <span style='font-weight:bold; color:#4682B4;'>All in all a superb week of football!</span>
 </p> 
 
-
 <p>
-Don't be disappointed if you are not basking in the upper wins tier! We are in the spooky month so nything can happen! Just continue sharpening your pencil and encourage those little grey cells to do their stuff! You can do it!
+Don't be disappointed if you are not basking in the upper wins tier! We are still in the spooky month so anything can happen! Just continue sharpening your pencil and encourage those little grey cells to do their stuff! You can do it!
 </p>
 
 </p>
