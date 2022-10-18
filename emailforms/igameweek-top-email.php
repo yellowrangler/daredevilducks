@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-  It was a good 5th week of football. 
+  It was a good 6th week of football. 
 </p>
 
 <p>
-The Colts beat the Broncos in Denver to open the week. In jolly old England, in a bit of an upset, the Giants beat the Packers. The Bills crushed the Steelers. The Chargers came back from the dead to beat the Browns in Cleveland! The Texans beat the Jaguars in Jacksonville. The Vikings held on to beat the Bears. The Saints beat the Seahawks. The Patriots, without their starting quarterback, beat the Lions. The Jets beat the Dolphins.
+The Commanders eked a win over the Bears to open the week. In a upset, the Falcons crushed the 49ers. The Patriots spanked the Browns. After trailing most of the game, the Colts beat the Jaguars. In another upset, the Jets beat the Packers in Green Bay. The Vikings squished the fish in Miami. The Bengals outlasted the Saints. 
 </p> 
 
 <p>
-The Buccaneers beat the Falcons. The Titans played well enough to bet the Commanders in Washington. The 49ers beat the Panthers in North Carolina. The Eagles beat the Cardinals to stay perfect. The Cowboys beat the Rams. In a close match, the Ravens beat the Bengals. 
+The surprise Giants beat the Ravens. The Steelers beat the Buccaneers in one of the best games of the week. The Rams beat the Panthers. The Seahawks beat the disappointing Cardinals. The Bills beat the Chiefs in a thriller. The Eagles remained unbeaten as they dispatched the Cowboys.
 </p> 
 
 <p>
-In the final game of week 5 the Chiefs defeated the Raiders in a game that went down to the final seconds!
+In the final game of week 6 the Chargers defeated the Broncos in a back and forth game that went to overtime!
 </p> 
 
 <p>
