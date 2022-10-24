@@ -12,7 +12,7 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here oye
         //
-
+        $scope.hofimage = "";
         $scope.halloffames = "";
         membersFactory.getAllHallofFame()
             .success( function(data) {
