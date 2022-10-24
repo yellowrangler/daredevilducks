@@ -6,7 +6,32 @@
 
 <div style="padding-left:25px;" class="pageStandardOffset">
 
-<div class="pageStandardOffset row">
+<div  ng-class="{ 'col-md-offset-1 col-md-3': ($index%3) == 0, 
+                  'col-md-3': ($index%3) != 0 }" 
+      ng-repeat="halloffame in halloffames" style="height:575px;">
+      <div class="thumbnail">
+          <img 
+          ng-mouseover="hofimage=halloffame.photourlB" 
+          ng-mouseout="hofimage=halloffame.photourlA" 
+          ng-init="hofimage=halloffame.photourlA"
+          id ="{{halloffame.year}}" 
+          src="../img/halloffame/{{hofimage}}">
+      </div> <!-- end of thumbnail -->
+          
+      <div class="caption">
+          <h3 class="hallFameParagraphCaptionHeader">
+            {{halloffame.title}}
+          </h3> 
+
+          <p class="hallFameParagraph">
+            {{halloffame.detail}}
+          </p>
+      </div>  <!-- end of caption -->
+    </div> <!-- end of repeat and cols -->
+  </div> <!-- end of row -->
+
+
+<!-- <div class="pageStandardOffset row">
 
   <div>
       <div class="thumbnail">
@@ -17,7 +42,7 @@
         <h3 class="hallFameParagraphCaptionHeader">This could be you! - Next years Dare Devil Duck League Winner</h3>
         <p class="hallFameParagraph">Glowing praise and admiration for you!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
 
@@ -30,7 +55,7 @@
       <h3 class="hallFameParagraphCaptionHeader">Oscar Guzman (Hygenius) - 2021 Dare Devil Duck League Winner</h3>
       <p class="hallFameParagraph">Oscar Guzman was in the hunt all year. Another Dental Hygentist (like his wife Toothfairy), Oscar kept his head clear and took the 'crown' when it mattered! Way to go Oscar!</p>
     </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
 
@@ -43,7 +68,7 @@
         <h3 class="hallFameParagraphCaptionHeader"> Alaskan Fisherman (Chuck Miemiec), SandyR (Sandy Rudman),  Skinny (Bonnie Shuris) - 2020 Dare Devil Duck League Winners</h3>
         <p class="hallFameParagraph">Chuck Miemiec (2015) long time member. Sandy (2017) is another Maine-iac! Bonnie (2014) is one of our original eight players! Way to go All!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
 
@@ -56,7 +81,7 @@
         <h3 class="hallFameParagraphCaptionHeader">  Team Remington (Tanya Gorman, Tony Bruehl & Remington) - 2019 Dare Devil Duck League Winners</h3>
         <p class="hallFameParagraph">Tanya and Tony from Team Remington (their dog is Remington) put in a stellar season culminating in a spectacular win! Way to go Team Remington!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
 
@@ -69,7 +94,7 @@
         <h3 class="hallFameParagraphCaptionHeader">4Horsemen (Don O'Malley) - 2018 Dare Devil Duck League Winner</h3>
         <p class="hallFameParagraph">Don is our first male winner! Long live the new King! Way to go Don!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
    <hr>
 
@@ -82,7 +107,7 @@
         <h3 class="hallFameParagraphCaptionHeader">Hawk Eye (Paula Bishop) - 2017 Dare Devil Duck League Winner</h3>
         <p class="hallFameParagraph">Paula is a second year member. An avid tennis player, Paula clearly knows her sports. Way to go Paula!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
   
@@ -95,7 +120,7 @@
         <h3 class="hallFameParagraphCaptionHeader">Toothfairy (Sabrina Hunzelman) - 2016 Dare Devil Duck League Winner</h3>
         <p class="hallFameParagraph">Sabrina is our first repeat winner! The bar is now officially raised for the rest of us. Way to go Sabrina!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
 
@@ -108,7 +133,7 @@
         <h3 class="hallFameParagraphCaptionHeader">Toothfairy (Sabrina Hunzelman) - 2015 Dare Devil Duck League Winner</h3>
         <p class="hallFameParagraph">New to our group in 2015, Sabrina dominted first place. This soft spoken dental hygentist set her 'teeth' into her analysis and took the 'crown' with ease! Way to go Sabrina!</p>
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
   <hr>
 
@@ -122,9 +147,10 @@
         <p class="hallFameParagraph">As both Grandmother and Mother, Laura took everyone by suprise and showed us "experts" how to walk the walk. Way to go Mom, Grandma and Laura!</p>
         <br /><br /><br /><br />
       </div>
-  </div> <!-- end of div -->
+  </div> 
 
  <hr>
-</div> <!-- end of pageoffset -->
+</div> 
 
+ -->
 <div style="padding-bottom:70px;">&nbsp;</div>

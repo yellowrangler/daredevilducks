@@ -904,10 +904,12 @@ border: 0 none;
 }
 
 .hallFameParagraph {
+	text-align: left;
 	font-size: 18px;
 }
 
 .hallFameParagraphCaptionHeader {
+	text-align: left;
 	font-size: 20px;
 	font-weight:500;
 	color:#00BBC0;
