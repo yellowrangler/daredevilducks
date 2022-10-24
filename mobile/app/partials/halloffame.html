@@ -4,31 +4,29 @@
   <h2 class="headerTitle">Hall Of Fame</h2>
 </div> <!-- end of row -->
 
-<div style="padding-left:25px;" class="pageStandardOffset">
+<div style="padding-left:25px;" class="pageStandardOffset row">
 
-<div  ng-class="{ 'col-md-offset-1 col-md-3': ($index%3) == 0, 
-                  'col-md-3': ($index%3) != 0 }" 
-      ng-repeat="halloffame in halloffames" style="height:575px;">
-      <div class="thumbnail">
-          <img 
-          ng-mouseover="hofimage=halloffame.photourlB" 
-          ng-mouseout="hofimage=halloffame.photourlA" 
-          ng-init="hofimage=halloffame.photourlA"
-          id ="{{halloffame.year}}" 
-          src="../img/halloffame/{{hofimage}}">
-      </div> <!-- end of thumbnail -->
-          
-      <div class="caption">
-          <h3 class="hallFameParagraphCaptionHeader">
-            {{halloffame.title}}
-          </h3> 
+<div ng-repeat="halloffame in halloffames">
+    <div class="thumbnail">
+        <img 
+        ng-mouseover="hofimage=halloffame.photourlB" 
+        ng-mouseout="hofimage=halloffame.photourlA" 
+        ng-init="hofimage=halloffame.photourlA"
+        id ="{{halloffame.year}}" 
+        src="../img/halloffame/{{hofimage}}">
+    </div> <!-- end of thumbnail -->
+        
+    <div class="caption">
+        <h3 class="hallFameParagraphCaptionHeader">
+          {{halloffame.title}}
+        </h3> 
 
-          <p class="hallFameParagraph">
-            {{halloffame.detail}}
-          </p>
-      </div>  <!-- end of caption -->
-    </div> <!-- end of repeat and cols -->
-  </div> <!-- end of row -->
+        <p class="hallFameParagraph">
+          {{halloffame.detail}}
+        </p>
+    </div>  <!-- end of caption -->
+  </div> <!-- end of repeat and cols -->
+</div> <!-- end of row -->
 
 
 <!-- <div class="pageStandardOffset row">
