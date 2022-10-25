@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-  It was a good 6th week of football. 
+  It was a good 7th week of football. 
 </p>
 
 <p>
-The Commanders eked a win over the Bears to open the week. In a upset, the Falcons crushed the 49ers. The Patriots spanked the Browns. After trailing most of the game, the Colts beat the Jaguars. In another upset, the Jets beat the Packers in Green Bay. The Vikings squished the fish in Miami. The Bengals outlasted the Saints. 
+The week started out with the Cardinals beating the Saints. The Ravens beat the Browns in a close contest. The Panthers beat the fading Buccaneers. The Bengals bludgeoned the Falcons. The Cowboys beat the cowardly Lions. The Giants continue to impress as they beat the Jaguars. The Titans beat the Colts, ultimately causing Mat Ryan his starting job for the foreseeable future.
 </p> 
 
 <p>
-The surprise Giants beat the Ravens. The Steelers beat the Buccaneers in one of the best games of the week. The Rams beat the Panthers. The Seahawks beat the disappointing Cardinals. The Bills beat the Chiefs in a thriller. The Eagles remained unbeaten as they dispatched the Cowboys.
+In an upset, the Commanders beat the Packers. The Jets continued their winning ways as they beat the Broncos. The Raiders beat the Texans in a battle of 1 win teams. The Seahawks beat the Chargers. The Chiefs beat a disappointing 49ers team. The Dolphins beat the Steelers.
 </p> 
 
 <p>
-In the final game of week 6 the Chargers defeated the Broncos in a back and forth game that went to overtime!
+In the final game of the week the Bears defeated a unprepared Patriots team in Foxborough!
 </p> 
 
 <p>
@@ -26,6 +26,8 @@ Don't be disappointed if you are not basking in the upper wins tier! We are stil
 </p>
 
 </p>
+New photos have been added to our Hall of Fame winners Tanya and Tony Bruehl! Check them out!
+<br><br>
 Click on the Donald Duck Halloween day image to see the Headless Horsemen making his ghoulish rounds!
 <br><br>
 Mobile members can Swipe your Avatar to the left until you see the Halloween image. Click on the Donald image to see the same ghoulish marauder!
