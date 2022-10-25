@@ -217,5 +217,23 @@ dddAppMobile.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.updateHallofFame = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/updatehalloffame.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+    factory.addHallofFame = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/addhalloffame.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });

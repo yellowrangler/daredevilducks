@@ -191,6 +191,16 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'weeklyscriptsController',
                 templateUrl: 'app/partials/weeklyscripts.html'
             })
+        .when('/managehalloffame',
+            {
+                controller: 'managehalloffameController',
+                templateUrl: 'app/partials/managehalloffame.html'
+            })
+        .when('/managehallofmemory',
+            {
+                controller: 'managehallofmemoryController',
+                templateUrl: 'app/partials/managehallofmemory.html'
+            })
         .when('/memberupdatemember',
             {
                 controller: 'memberupdatememberController',
