@@ -10,15 +10,36 @@
             <div class="panel panel-default panelOverrideNoBorder">
                 <div class="panel-body">
                     <div class="form-group horizontalFieldOffset">
-                        <button  style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" class="btn btn-info btn-sm" ng-click="addhalloffame()" id="addhalloffame" name="addhalloffame" >Add Hall of Fame</button>
+                        <button  
+                            style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
+                            class="btn btn-info btn-sm" 
+                            ng-click="togglehalloffame()" 
+                            id="togglehalloffame" 
+                            name="togglehalloffame">
+                                {{halloffameactionbutton}}
+                        </button>
                     </div> <!-- end of form-group --> 
 
                     <div style="padding-left:30px;" class="form-group horizontalFieldOffset">
-                        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-success btn-sm" ng-click="savemanagehalloffameInfo()" id="savemanagehalloffameButton" name="savemanagehalloffame">Save  Information</button>
+                        <button 
+                            style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
+                            type="button" 
+                            class="btn btn-success btn-sm" 
+                            ng-click="savemanagehalloffameInfo()" 
+                            id="savemanagehalloffameButton" 
+                            name="savemanagehalloffame">
+                            Save  Information
+                        </button>
                     </div><!-- end of form-group -->
 
                     <div style="float: right;" class="form-group horizontalFieldOffset">
-                        <button  style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" class="btn btn-warning btn-sm" ng-click="reloadhalloffame()" id="reloadhalloffame" name="reloadhalloffame" >Reload</button>
+                        <button  
+                            style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
+                            class="btn btn-warning btn-sm" ng-click="reloadhalloffame()" 
+                            id="reloadhalloffame" 
+                            name="reloadhalloffame" >
+                                Reload
+                        </button>
                     </div> <!-- end of form-group --> 
 
                 </div> <!-- end of panel body -->       
@@ -147,7 +168,13 @@
 
 <div style="padding-top:15px; padding-bottom:35px;" class="row">
     <div class="col-md-offset-2  col-md-8">
-        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-success btn-lg btn-block" ng-click="savemanagehalloffameInfo()" id="savemanagehalloffameButton" name="savemanagehalloffame">Click Here to Save Hall of Fame Information</button>
+        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
+            type="button" class="btn btn-success btn-lg btn-block" 
+            ng-click="savemanagehalloffameInfo()" 
+            id="savemanagehalloffameButton" 
+            name="savemanagehalloffame">
+                Click Here to Save Hall of Fame Information
+        </button>
     </div><!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>

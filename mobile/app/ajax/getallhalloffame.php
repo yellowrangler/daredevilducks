@@ -35,7 +35,7 @@ include_once ('mysqlconnect.php');
 //---------------------------------------------------------------
 // get hall of fame list
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM halloffametbl ORDER BY year DESC";
+$sql = "SELECT *  FROM halloffametbl ORDER BY year DESC, ord ASC";
 
 //
 // sql query

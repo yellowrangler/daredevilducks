@@ -41,6 +41,26 @@ controllers.managehalloffameController = function ($scope, $http, $location, log
         $location.path("#home");
     }
 
+    function togglehalloffame() {
+
+        switch ($scope.halloffameaction)
+        {
+            case "add":
+                $scope.halloffameaction = "update";
+                $scope.halloffameactionbutton = "Show Add";
+                break;
+
+            case "update":
+               $scope.halloffameaction = "add";
+               $scope.halloffameactionbutton = "Show Update";
+               break;
+
+            default:
+                $scope.halloffameaction = "update";
+                $scope.halloffameactionbutton = "Show Add";
+        }
+    }
+
     function savemanagehalloffameInfo() {
 
         switch ($scope.halloffameaction)
@@ -77,12 +97,9 @@ controllers.managehalloffameController = function ($scope, $http, $location, log
         }
     }
 
-    function addhalloffame() {
-        $scope.halloffameaction = "add";
-    }
-
     function reloadhalloffame() {
         $scope.halloffameaction = "update";
+        $scope.halloffameactionbutton = "Show Add";
         
         membersFactory.getAllHallofFame()
         .success( function(data) {
@@ -104,6 +121,7 @@ controllers.managehalloffameController = function ($scope, $http, $location, log
         $scope.current = {};
 
         $scope.halloffameaction = "update";
+        $scope.halloffameactionbutton = "Show Add";
 
         $scope.hofimage = "";
         $scope.halloffames = "";
@@ -115,8 +133,8 @@ controllers.managehalloffameController = function ($scope, $http, $location, log
         savemanagehalloffameInfo();
     }
 
-    $scope.addhalloffame = function () {
-        addhalloffame();
+    $scope.togglehalloffame = function () {
+        togglehalloffame();
     }
 
     $scope.reloadhalloffame = function () {
@@ -263,10 +281,6 @@ controllers.managehallofmemoryController = function ($scope, $http, $location, l
 
     $scope.savemanagehallofmemoryInfo = function () {
         savemanagehallofmemoryInfo();
-    }
-
-    $scope.addhallofmemory = function () {
-        addhallofmemory();
     }
 
     $scope.togglehallofmemory = function () {

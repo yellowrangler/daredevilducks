@@ -9,20 +9,18 @@
 <div ng-repeat="halloffame in halloffames">
     <div class="thumbnail">
         <img 
-        ng-mouseover="hofimage=halloffame.photourlB" 
-        ng-mouseout="hofimage=halloffame.photourlA" 
-        ng-init="hofimage=halloffame.photourlA"
+        ng-mouseover="hofimage=halloffame.photoB" 
+        ng-mouseout="hofimage=halloffame.photoA" 
+        ng-init="hofimage=halloffame.photoA"
         id ="{{halloffame.year}}" 
-        src="../img/halloffame/{{hofimage}}">
+        src="../img/halloffame/{{hofimage}}"
     </div> <!-- end of thumbnail -->
         
     <div class="caption">
-        <h3 class="hallFameParagraphCaptionHeader">
-          {{halloffame.title}}
+        <h3 ng-bind-html="halloffame.title" class="hallFameParagraphCaptionHeader">
         </h3> 
 
-        <p class="hallFameParagraph">
-          {{halloffame.detail}}
+        <p ng-bind-html="halloffame.detail" class="hallFameParagraph">
         </p>
     </div>  <!-- end of caption -->
   </div> <!-- end of repeat and cols -->
