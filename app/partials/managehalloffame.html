@@ -5,110 +5,149 @@
 </div> <!-- end of row -->
 
 <div class="row">
-    <div class="col-md-12 form-inline">
+    <div class="col-md-offset-1 col-md-8 form-inline">
         <div class="pageStandardOffset">
             <div class="panel panel-default panelOverrideNoBorder">
                 <div class="panel-body">
-                    <div style="padding-left:30px;"class="form-group horizontalFieldOffset">
-                        <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="addhalloffame()" id="addhalloffame" name="addhalloffame" >Add Hall of Fame</button>
+                    <div class="form-group horizontalFieldOffset">
+                        <button  style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" class="btn btn-info btn-sm" ng-click="addhalloffame()" id="addhalloffame" name="addhalloffame" >Add Hall of Fame</button>
                     </div> <!-- end of form-group --> 
 
-                    <div style="padding-left:30px;"class="form-group horizontalFieldOffset">
-                        <button  style="font-weight:bold;" class="btn btn-danger btn-sm" ng-click="reloadhalloffame()" id="reloadhalloffame" name="reloadhalloffame" >Reload</button>
+                    <div style="padding-left:30px;" class="form-group horizontalFieldOffset">
+                        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-success btn-sm" ng-click="savemanagehalloffameInfo()" id="savemanagehalloffameButton" name="savemanagehalloffame">Save  Information</button>
+                    </div><!-- end of form-group -->
+
+                    <div style="float: right;" class="form-group horizontalFieldOffset">
+                        <button  style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" class="btn btn-warning btn-sm" ng-click="reloadhalloffame()" id="reloadhalloffame" name="reloadhalloffame" >Reload</button>
                     </div> <!-- end of form-group --> 
+
                 </div> <!-- end of panel body -->       
             </div> <!-- end of panel -->
         </div> <!-- end of panelOffset -->
     </div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 
-<form id="managehalloffameForm" name="managehalloffameForm">
+<form class="form-horizontal" id="managehalloffameForm" name="managehalloffameForm">
 <div ng-show="halloffameaction == 'update'" class="pageStandardOffset row">
-    <div class="col-md-12">
-        <div class="panel panel-default panelOverrideNoBorder">
-            <div class="panel-body table-responsive">
-                <table class="table managehalloffameTable" >
-                    <tr class="tableTitle">
-                        <th class="center-column-text">Year</th>     
-                        <th class="center-column-text">Photo URL A</th>
-                        <th class="center-column-text">Photo URL B</th>        
-                        <th class="center-column-text">Title</th>
-                        <th class="center-column-text">Detail</th>    
-                    </tr>
+    <div class="col-md-offset-1 col-md-8">
+        <div ng-repeat="halloffame in halloffames">
+        
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Update</h1>
+                </div>
+                <div style="padding-top:15px; padding-bottom:15px;" class="panel-body">
+                    <div class="form-group">
+                        <label for="year" class="col-md-1 control-label">Year</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="year[]" value='{{halloffame.year}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
 
-                    <tr ng-repeat="halloffame in halloffames">
-                        <td class="center-column-text">
-                            <input class="form-control" ng-model="halloffame.year" name='year[]' value='{{halloffame.year}}' size="4" type='text' />
-                        </td>
+                    <div class="form-group">
+                        <label for="ord" class="col-md-1 control-label">Order</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="ord[]" value='{{halloffame.ord}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
 
-                        <td class="center-column-text">
-                            <input class="form-control" ng-model="halloffame.photourlA" name='photourlA[]' value='{{halloffame.photourlA}}' size="30" type='text' />
-                        </td>
+                    <div class="form-group">
+                        <label for="photoA" class="col-md-1 control-label">Photo A</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="photoA[]" value='{{halloffame.photoA}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
 
-                        <td class="center-column-text">
-                            <input class="form-control" ng-model="halloffame.photourlB" name='photourlB[]' value='{{halloffame.photourlB}}' size="30" type='text' />
-                        </td>
+                    <div class="form-group">
+                        <label for="photoB" class="col-md-1 control-label">Photo B</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="photoB[]" value='{{halloffame.photoB}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
 
-                        <td class="left-column-text">
-                            <textarea class="form-control" ng-model="halloffame.title" name="title[]" rows="7">{{halloffame.title}}</textarea>
-                        </td>
 
-                        <td class="left-column-text">
-                            <textarea class="form-control" ng-model="halloffame.detail" name="detail[]" rows="7">{{halloffame.detai}}</textarea>
-                        </td>
-                    </tr>
-                </table>
-            </div> <!-- end of panel body -->
-        </div>  <!-- end of panel -->
-    </div> <!-- end of col 12 -->
+                    <div class="form-group">
+                        <label for="biography" class="col-md-1 control-label">Title</label>
+                        <div class="col-md-7">
+                            <textarea class="form-control" name="title[]" rows="3">{{halloffame.title}}</textarea>
+                        </div>
+                    </div> <!-- end of form-group -->
+
+                    <div class="form-group">
+                        <label for="biography" class="col-md-1 control-label">Detail</label>
+                        <div class="col-md-7">
+                            <textarea class="form-control" name="detail[]" rows="5">{{halloffame.detail}}</textarea>
+                        </div>
+                    </div> <!-- end of form-group -->
+                </div> <!-- end of panel body -->
+            </div> <!-- end of panel -->
+
+            <div style="padding-top:15px; padding-bottom:15px;" > </div>
+            
+        </div> <!-- end of repeat -->
+
+    </div>  <!-- end of col -->
 </div> <!-- end of row -->
 </form>
 
 <form class="form-horizontal" id="addhalloffameForm" name="addhalloffameForm">
 <div ng-show="halloffameaction == 'add'" class="pageStandardOffset row">
-    <div class="col-md-12">
-        
-        <div class="form-group">
-            <label for="year" class="col-md-3 control-label">Year</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" ng-model="current.year" id="year" name="year" placeholder="Year">
-            </div>
-        </div> <!-- end of form-group -->
+    <div class="col-md-offset-1 col-md-8">
+        <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Add</h1>
+                </div>    
+            <div style="padding-top:15px; padding-bottom:15px;" class="panel-body">
+                <div class="form-group">
+                    <label for="year" class="col-md-1 control-label">Year</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" ng-model="current.year" id="year" name="year" placeholder="Year">
+                    </div>
+                </div> <!-- end of form-group -->
 
-        <div class="form-group">
-            <label for="email" class="col-md-3 control-label">Photo URL A</label>
-            <div class="col-md-5">
-                <input type="text" class="form-control" ng-model="current.photourlA" id="photourlA" name="photourlA" placeholder="Photo url A">
-            </div>
-        </div> <!-- end of form-group -->
+                <div class="form-group">
+                    <label for="year" class="col-md-1 control-label">Order</label>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="current.ord" id="ord" name="ord" placeholder="Order">
+                    </div>
+                </div> <!-- end of form-group -->
 
-        <div class="form-group">
-            <label for="photourlB" class="col-md-3 control-label">Photo URL B</label>
-            <div class="col-md-5">
-                <input type="text" class="form-control" ng-model="current.photourlB" id="photourlB" name="photourlB" placeholder="Photo url B">
-            </div>
-        </div> <!-- end of form-group -->
+                <div class="form-group">
+                    <label for="email" class="col-md-1 control-label">Photo A</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" ng-model="current.photoA" id="photoA" name="photoA" placeholder="Photo url A">
+                    </div>
+                </div> <!-- end of form-group -->
+
+                <div class="form-group">
+                    <label for="photoB" class="col-md-1 control-label">Photo B</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" ng-model="current.photoB" id="photoB" name="photoB" placeholder="Photo url B">
+                    </div>
+                </div> <!-- end of form-group -->
 
 
-        <div class="form-group">
-            <label for="biography" class="col-md-3 control-label">Title</label>
-            <div class="col-md-7">
-                <textarea class="form-control" ng-model="current.title" id="title" name="title" rows="7"></textarea>
-            </div>
-        </div> <!-- end of form-group -->
+                <div class="form-group">
+                    <label for="biography" class="col-md-1 control-label">Title</label>
+                    <div class="col-md-7">
+                        <textarea class="form-control" ng-model="current.title" id="title" name="title" rows="3"></textarea>
+                    </div>
+                </div> <!-- end of form-group -->
 
-        <div class="form-group">
-            <label for="biography" class="col-md-3 control-label">Detail</label>
-            <div class="col-md-7">
-                <textarea class="form-control" ng-model="current.detail" id="detail" name="detail" rows="9"></textarea>
-            </div>
-        </div> <!-- end of form-group -->
+                <div class="form-group">
+                    <label for="biography" class="col-md-1 control-label">Detail</label>
+                    <div class="col-md-7">
+                        <textarea class="form-control" ng-model="current.detail" id="detail" name="detail" rows="5"></textarea>
+                    </div>
+                </div> <!-- end of form-group -->
+            </div> <!-- end of panel body -->
+        </div> <!-- end of panel -->
     </div> <!-- end of col -->
 </div> <!-- end of row -->
 
 <div style="padding-top:15px; padding-bottom:35px;" class="row">
     <div class="col-md-offset-2  col-md-8">
-        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-danger btn-lg btn-block" ng-click="savemanagehalloffameInfo()" id="savemanagehalloffameButton" name="savemanagehalloffame">Click Here to Save Hall of Fame Information</button>
+        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" type="button" class="btn btn-success btn-lg btn-block" ng-click="savemanagehalloffameInfo()" id="savemanagehalloffameButton" name="savemanagehalloffame">Click Here to Save Hall of Fame Information</button>
     </div><!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>

@@ -159,9 +159,21 @@
             </ul>
 
             <ul class="nav navbar-nav">
-                <li class="menuItems"><a class="collapsableNavbar" href="#/halloffame">
-                <img id="halloffamenavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/halloffame.png">
-                </a></li>
+
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <img id="halloffamenavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/halloffame.png">
+                        <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>
+                                <a class="collapsableNavbar" href="#/halloffame">Hall of Fame</a>
+                            </li>
+                            <li>
+                                <a class="collapsableNavbar" href="#/hallofmemory">Hall of Memory</a>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav">
@@ -219,8 +231,12 @@
                         <li class="dropdown-submenu">
                             <a tabindex="-1" href="">Awards Management</a>
                             <ul class="dropdown-menu">
-                                <li><a class="collapsableNavbar" href="#/managehalloffame">Manage Hall of Fame</a></li>
-                                <li><a class="collapsableNavbar" href="#/managehallofmemory">Manage Hall of Memory</a></li>
+                                <li>
+                                    <a class="collapsableNavbar" href="#/managehalloffame">Manage Hall of Fame</a>
+                                </li>
+                                <li>
+                                    <a class="collapsableNavbar" href="#/managehallofmemory">Manage Hall of Memory</a>
+                                </li>
                             </ul>
                         </li>
                         
@@ -328,10 +344,19 @@
             </ul>
 
             <ul class="nav navbar-nav">
-                <li class="menuItems">
-                    <a class="collapsableNavbar " href="#/halloffame">
-                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/halloffame-mobile.png"><span style="padding-left:5px;">Hall of Fame</span>
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <img style="vertical-align:middle;height:25px;display:inline;" class="" src="img/buttons/halloffame-mobile.png"><span style="padding-left:5px;">Halls</span>
+                        <b class="caret"></b>
                     </a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li>
+                            <a class="collapsableNavbar" href="#/halloffame">Hall of Fame</a>
+                        </li>
+                        <li>
+                            <a class="collapsableNavbar" href="#/hallofmemory">Hall of Memory</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 
@@ -390,8 +415,12 @@
                         <li class="dropdown-submenu">
                             <a tabindex="-1" href="">Awards Management</a>
                             <ul class="dropdown-menu">
-                                <li><a class="collapsableNavbar" href="#/managehalloffame">Manage Hall of Fame</a></li>
-                                <li><a class="collapsableNavbar" href="#/managehallofmemory">Manage Hall of Memory</a></li>
+                                <li>
+                                    <a class="collapsableNavbar" href="#/managehalloffame">Manage Hall of Fame</a>
+                                </li>
+                                <li>
+                                    <a class="collapsableNavbar" href="#/managehallofmemory">Manage Hall of Memory</a>
+                                </li>
                             </ul>
                         </li>
                         

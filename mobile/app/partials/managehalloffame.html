@@ -22,49 +22,52 @@
     </div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 
-<form id="managehalloffameForm" name="managehalloffameForm">
+<form class="form-horizontal" id="managehalloffameForm" name="managehalloffameForm">
 <div ng-show="halloffameaction == 'update'" class="pageStandardOffset row">
-    <div class="col-md-12">
-        <div class="panel panel-default panelOverrideNoBorder">
-            <div ng-repeat="halloffame in halloffames">
-                <div class="form-group">
-                    <label for="year" class="col-md-3 control-label">Year</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" name="year[]" value='{{halloffame.year}}' >
-                    </div>
-                </div> <!-- end of form-group -->
+    <div class="pageStandardOffset col-md-12">
+        <div ng-repeat="halloffame in halloffames">
+        
+            <div class="form-group">
+                <label for="year" class="col-md-3 control-label">Year</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="year[]" value='{{halloffame.year}}' >
+                </div>
+            </div> <!-- end of form-group -->
 
-                <div class="form-group">
-                    <label for="email" class="col-md-3 control-label">Photo URL A</label>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control" name="photourlA[]" value='{{halloffame.photourlA}}' >
-                    </div>
-                </div> <!-- end of form-group -->
+            <div class="form-group">
+                <label for="email" class="col-md-3 control-label">Photo URL A</label>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="photourlA[]" value='{{halloffame.photourlA}}' >
+                </div>
+            </div> <!-- end of form-group -->
 
-                <div class="form-group">
-                    <label for="photourlB" class="col-md-3 control-label">Photo URL B</label>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control" name="photourlB[]" value='{{halloffame.photourlB}}' >
-                    </div>
-                </div> <!-- end of form-group -->
+            <div class="form-group">
+                <label for="photourlB" class="col-md-3 control-label">Photo URL B</label>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="photourlB[]" value='{{halloffame.photourlB}}' >
+                </div>
+            </div> <!-- end of form-group -->
 
 
-                <div class="form-group">
-                    <label for="biography" class="col-md-3 control-label">Title</label>
-                    <div class="col-md-7">
-                        <textarea class="form-control" name="title[]" rows="7">{{halloffame.title}}</textarea>
-                    </div>
-                </div> <!-- end of form-group -->
+            <div class="form-group">
+                <label for="biography" class="col-md-3 control-label">Title</label>
+                <div class="col-md-7">
+                    <textarea class="form-control" name="title[]" rows="7">{{halloffame.title}}</textarea>
+                </div>
+            </div> <!-- end of form-group -->
 
-                <div class="form-group">
-                    <label for="biography" class="col-md-3 control-label">Detail</label>
-                    <div class="col-md-7">
-                        <textarea class="form-control" name="detail[]" rows="9">{{halloffame.detail}}</textarea>
-                    </div>
-                </div> <!-- end of form-group -->
-            </div> <!-- end of repeat -->
-        </div> <!-- end of panel -->
-    </div> <!-- end of col -->
+            <div class="form-group">
+                <label for="biography" class="col-md-3 control-label">Detail</label>
+                <div class="col-md-7">
+                    <textarea class="form-control" name="detail[]" rows="9">{{halloffame.detail}}</textarea>
+                </div>
+            </div> <!-- end of form-group -->
+
+            <hr>
+            
+        </div> <!-- end of repeat -->
+
+    </div>  <!-- end of col -->
 </div> <!-- end of row -->
 </form>
 
@@ -107,6 +110,7 @@
                 <textarea class="form-control" ng-model="current.detail" id="detail" name="detail" rows="9"></textarea>
             </div>
         </div> <!-- end of form-group -->
+
     </div> <!-- end of col -->
 </div> <!-- end of row -->
 
