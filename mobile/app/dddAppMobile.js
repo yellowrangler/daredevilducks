@@ -111,6 +111,11 @@ dddAppMobile.config(function ($routeProvider) {
                 controller: 'halloffameController',
                 templateUrl: 'app/partials/halloffame.html'
             })
+        .when('/hallofmemory',
+            {
+                controller: 'hallofmemoryController',
+                templateUrl: 'app/partials/hallofmemory.html'
+            })
         .when('/teamdiscovery',
             {
                 controller: 'teamdiscoveryController',

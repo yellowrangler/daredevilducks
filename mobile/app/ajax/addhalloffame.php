@@ -8,8 +8,9 @@ include_once ('../class/class.AccessLog.php');
 // post input
 //
 $year = $_POST['year'];
-$photourlA = $_POST['photourlA'];
-$photourlB = $_POST['photourlB'];
+$ord = $_POST['ord'];
+$photoA = $_POST['photoA'];
+$photoB = $_POST['photoB'];
 $title = $_POST['title'];
 $detail = $_POST['detail'];
 
@@ -30,9 +31,9 @@ $modulecontent = "Unable to add Hall of Fame item.";
 // build the hall of fame insert statement
 //
 $sql = 'INSERT INTO halloffametbl
-    (year, photourlA, photourlB, title, detail) 
+    (year, ord, photoA, photoB, title, detail) 
     VALUES 
-    (' . $year . ', "' . $photourlA .'", "' . $photourlB . '", "' . $title . '", "' . $detail . '" )';
+    (' . $year . ', "' . $ord . ', "' . $photoA .'", "' . $photoB . '", "' . $title . '", "' . $detail . '" )';
 
 // $sql = mysql_real_escape_string($sql);
 

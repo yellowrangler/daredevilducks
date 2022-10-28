@@ -10,32 +10,15 @@ include_once ('../class/class.AccessLog.php');
 
 
 //
-// get date time for this transaction
-//
-$datetime = date("Y-m-d H:i:s");
-
-// print_r($_POST);
-// die();
-
-// set variables
-$enterdate = $datetime;
-
-//
-// messaging
-//
-$returnArrayLog = new AccessLog("logs/");
-// $returnArrayLog->writeLog("Hall of Fame List request started" );
-
-//
 // db connect
 //
-$modulecontent = "Unable to get Hall of Fame List.";
+$modulecontent = "Unable to get Hall of Memory List.";
 include_once ('mysqlconnect.php');
 
 //---------------------------------------------------------------
-// get hall of fame list
+// get hall of memory list
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM halloffametbl ORDER BY year DESC, ord ASC";
+$sql = "SELECT *  FROM hallofmemorytbl ORDER BY lastname DESC";
 
 //
 // sql query
@@ -44,15 +27,15 @@ $function = "select";
 include ('mysqlquery.php');
 
 //
-// get the hall of fame information
+// get the hall of memory information
 //
 
 //
 // fill the array
 //
-$halloffame = array();
+$hallofmemory = array();
 while($r = mysqli_fetch_assoc($sql_result)) {
-    $halloffame[] = $r;
+    $hallofmemory[] = $r;
 }
 
 //
@@ -63,5 +46,5 @@ mysqli_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($halloffame));
+exit(json_encode($hallofmemory));
 ?>
