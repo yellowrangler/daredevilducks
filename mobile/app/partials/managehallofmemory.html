@@ -1,43 +1,46 @@
+<div class="pageNavbarOffset">&nbsp;</div>
+
 <div class="pageCaption row">
-  <div class="col-md-12">
-    <h2 class="headerTitle">Manage Hall Of Fame</h2>
+  <div style="padding-top:15px;display:inline;" class="col-md-12">
+    <h2 style="display:inline;" class="headerTitle">Manage Hall Of Memory</h2>
+    </div> <!-- end of column -->
   </div> <!-- end of column -->
 </div> <!-- end of row -->
 
 <div class="row">
-    <div class="col-md-offset-1 col-md-8 form-inline">
+    <div class="col-md-12 form-inline">
         <div class="pageStandardOffset">
             <div class="panel panel-default panelOverrideNoBorder">
                 <div class="panel-body">
-                    <div class="form-group horizontalFieldOffset">
+                    <div style="padding-left:5px;" class="form-group horizontalFieldOffset">
                         <button  
                             style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
                             class="btn btn-info btn-sm" 
-                            ng-click="togglehalloffame()" 
-                            id="togglehalloffame" 
-                            name="togglehalloffame">
-                                {{halloffameactionbutton}}
+                            ng-click="togglehallofmemory()" 
+                            id="togglehallofmemory" 
+                            name="togglehallofmemory" >
+                                {{hallofmemoryactionbutton}}
                         </button>
                     </div> <!-- end of form-group --> 
 
-                    <div style="padding-left:30px;" class="form-group horizontalFieldOffset">
+                    <div style="padding-left:5px;" class="form-group horizontalFieldOffset">
                         <button 
                             style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
                             type="button" 
                             class="btn btn-success btn-sm" 
-                            ng-click="savemanagehalloffameInfo()" 
-                            id="savemanagehalloffameButton" 
-                            name="savemanagehalloffame">
-                            Save  Information
+                            ng-click="savemanagehallofmemoryInfo()" 
+                            id="savemanagehallofmemoryButton" 
+                            name="savemanagehallofmemory">
+                                Save  Information
                         </button>
                     </div><!-- end of form-group -->
 
-                    <div style="float: right;" class="form-group horizontalFieldOffset">
+                    <div style="padding-left:5px;" class="form-group horizontalFieldOffset">
                         <button  
                             style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
-                            class="btn btn-warning btn-sm" ng-click="reloadhalloffame()" 
-                            id="reloadhalloffame" 
-                            name="reloadhalloffame" >
+                            class="btn btn-warning btn-sm" ng-click="reloadhallofmemory()" 
+                            id="reloadhallofmemory" 
+                            name="reloadhallofmemory" >
                                 Reload
                         </button>
                     </div> <!-- end of form-group --> 
@@ -48,10 +51,10 @@
     </div> <!-- end of col 12 -->
 </div> <!-- end of row -->
 
-<form class="form-horizontal" id="managehalloffameForm" name="managehalloffameForm">
-<div ng-show="halloffameaction == 'update'" class="pageStandardOffset row">
-    <div class="col-md-offset-1 col-md-8">
-        <div ng-repeat="halloffame in halloffames">
+<form class="form-horizontal" id="managehallofmemoryForm" name="managehallofmemoryForm">
+<div ng-show="hallofmemoryaction == 'update'" class="pageStandardOffset row">
+    <div class="col-md-12">
+        <div ng-repeat="hallofmemory in hallofmemorys">
         
             <div class="panel panel-success">
                 <div class="panel-heading">
@@ -59,122 +62,159 @@
                 </div>
                 <div style="padding-top:15px; padding-bottom:15px;" class="panel-body">
                     <div class="form-group">
-                        <label for="year" class="col-md-1 control-label">Year</label>
+                        <label for="memberid" class="col-md-2 control-label">ID</label>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" name="memberid[]" value='{{hallofmemory.memberid}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
+
+                    <div class="form-group">
+                        <label for="lastname" class="col-md-2 control-label">Last Name</label>
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="year[]" value='{{halloffame.year}}' >
+                            <input type="text" class="form-control" name="lastname[]" value='{{hallofmemory.lastname}}' >
                         </div>
                     </div> <!-- end of form-group -->
 
                     <div class="form-group">
-                        <label for="ord" class="col-md-1 control-label">Order</label>
+                        <label for="firstname" class="col-md-2 control-label">First Name</label>
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="ord[]" value='{{halloffame.ord}}' >
+                            <input type="text" class="form-control" name="firstname[]" value='{{hallofmemory.firstname}}' >
                         </div>
                     </div> <!-- end of form-group -->
 
                     <div class="form-group">
-                        <label for="photoA" class="col-md-1 control-label">Photo A</label>
+                        <label for="photoA" class="col-md-2 control-label">Photo A</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="photoA[]" value='{{hallofmemory.photoA}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
+
+                    <div class="form-group">
+                        <label for="photoB" class="col-md-2 control-label">Photo B</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="photoB[]" value='{{hallofmemory.photoB}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
+
+                    <div class="form-group">
+                        <label for="titleA" class="col-md-2 control-label">Title A</label>
                         <div class="col-md-5">
-                            <input type="text" class="form-control" name="photoA[]" value='{{halloffame.photoA}}' >
+                            <textarea class="form-control" name="titleA[]" rows="3">{{hallofmemory.titleA}}</textarea>
                         </div>
                     </div> <!-- end of form-group -->
 
                     <div class="form-group">
-                        <label for="photoB" class="col-md-1 control-label">Photo B</label>
+                        <label for="titleB" class="col-md-2 control-label">Title B</label>
                         <div class="col-md-5">
-                            <input type="text" class="form-control" name="photoB[]" value='{{halloffame.photoB}}' >
-                        </div>
-                    </div> <!-- end of form-group -->
-
-
-                    <div class="form-group">
-                        <label for="biography" class="col-md-1 control-label">Title</label>
-                        <div class="col-md-7">
-                            <textarea class="form-control" name="title[]" rows="3">{{halloffame.title}}</textarea>
+                            <textarea class="form-control" name="titleB[]" rows="3">{{hallofmemory.titleB}}</textarea>
                         </div>
                     </div> <!-- end of form-group -->
 
                     <div class="form-group">
-                        <label for="biography" class="col-md-1 control-label">Detail</label>
+                        <label for="detailA" class="col-md-2 control-label">Detail A</label>
                         <div class="col-md-7">
-                            <textarea class="form-control" name="detail[]" rows="5">{{halloffame.detail}}</textarea>
+                            <textarea class="form-control" name="detailA[]" rows="5">{{hallofmemory.detailA}}</textarea>
                         </div>
                     </div> <!-- end of form-group -->
+
+                    <div class="form-group">
+                        <label for="titleB" class="col-md-2 control-label">Detail B</label>
+                        <div class="col-md-7">
+                            <textarea class="form-control" name="detailB[]" rows="5">{{hallofmemory.detailB}}</textarea>
+                        </div>
+                    </div> <!-- end of form-group -->
+
                 </div> <!-- end of panel body -->
             </div> <!-- end of panel -->
 
             <div style="padding-top:15px; padding-bottom:15px;" > </div>
             
         </div> <!-- end of repeat -->
-
     </div>  <!-- end of col -->
 </div> <!-- end of row -->
 </form>
 
-<form class="form-horizontal" id="addhalloffameForm" name="addhalloffameForm">
-<div ng-show="halloffameaction == 'add'" class="pageStandardOffset row">
-    <div class="col-md-offset-1 col-md-8">
+<form class="form-horizontal" id="addhallofmemoryForm" name="addhallofmemoryForm">
+<div ng-show="hallofmemoryaction == 'add'" class="pageStandardOffset row">
+    <div class="col-md-12">
         <div class="panel panel-info">
                 <div class="panel-heading">
                     <h1 class="panel-title">Add</h1>
                 </div>    
             <div style="padding-top:15px; padding-bottom:15px;" class="panel-body">
                 <div class="form-group">
-                    <label for="year" class="col-md-1 control-label">Year</label>
+                    <label for="memberid" class="col-md-2 control-label">ID</label>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" ng-model="current.memberid" id="memberid" name="memberid" placeholder="">
+                    </div>
+                </div> <!-- end of form-group -->
+
+                <div class="form-group">
+                    <label for="lastname" class="col-md-2 control-label">Last Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" ng-model="current.year" id="year" name="year" placeholder="Year">
+                        <input type="text" class="form-control" ng-model="current.lastname" id="lastname" name="lastname" placeholder="Last Name">
                     </div>
                 </div> <!-- end of form-group -->
 
                 <div class="form-group">
-                    <label for="year" class="col-md-1 control-label">Order</label>
-                    <div class="col-md-2">
-                        <input type="text" class="form-control" ng-model="current.ord" id="ord" name="ord" placeholder="Order">
+                    <label for="firstname" class="col-md-2 control-label">First Name</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" ng-model="current.firstname" id="firstname" name="firstname" placeholder="First Name">
                     </div>
                 </div> <!-- end of form-group -->
 
                 <div class="form-group">
-                    <label for="email" class="col-md-1 control-label">Photo A</label>
+                    <label for="email" class="col-md-2 control-label">Photo A</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" ng-model="current.photoA" id="photoA" name="photoA" placeholder="Photo A">
+                    </div>
+                </div> <!-- end of form-group -->
+
+                <div class="form-group">
+                    <label for="photoB" class="col-md-2 control-label">Photo B</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" ng-model="current.photoB" id="photoB" name="photoB" placeholder="Photo B">
+                    </div>
+                </div> <!-- end of form-group -->
+
+                <div class="form-group">
+                    <label for="titleA" class="col-md-2 control-label">Title A</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" ng-model="current.photoA" id="photoA" name="photoA" placeholder="Photo url A">
+                        <textarea class="form-control" ng-model="current.titleA" id="titleA" name="titleA" rows="3"></textarea>
                     </div>
                 </div> <!-- end of form-group -->
 
                 <div class="form-group">
-                    <label for="photoB" class="col-md-1 control-label">Photo B</label>
+                    <label for="titleB" class="col-md-2 control-label">Title B</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" ng-model="current.photoB" id="photoB" name="photoB" placeholder="Photo url B">
-                    </div>
-                </div> <!-- end of form-group -->
-
-
-                <div class="form-group">
-                    <label for="biography" class="col-md-1 control-label">Title</label>
-                    <div class="col-md-7">
-                        <textarea class="form-control" ng-model="current.title" id="title" name="title" rows="3"></textarea>
+                        <textarea class="form-control" ng-model="current.titleB" id="titleB" name="titleB" rows="3"></textarea>
                     </div>
                 </div> <!-- end of form-group -->
 
                 <div class="form-group">
-                    <label for="biography" class="col-md-1 control-label">Detail</label>
+                    <label for="detailA" class="col-md-2 control-label">Detail A</label>
                     <div class="col-md-7">
-                        <textarea class="form-control" ng-model="current.detail" id="detail" name="detail" rows="5"></textarea>
+                        <textarea class="form-control" ng-model="current.detailA" id="detailA" name="detailA" rows="5"></textarea>
                     </div>
                 </div> <!-- end of form-group -->
+
+                 <div class="form-group">
+                    <label for="detailB" class="col-md-2 control-label">Detail B</label>
+                    <div class="col-md-7">
+                        <textarea class="form-control" ng-model="current.detailB" id="detailB" name="detailB" rows="5"></textarea>
+                    </div>
+                </div> <!-- end of form-group -->   
             </div> <!-- end of panel body -->
         </div> <!-- end of panel -->
     </div> <!-- end of col -->
 </div> <!-- end of row -->
 
 <div style="padding-top:15px; padding-bottom:35px;" class="row">
-    <div class="col-md-offset-2  col-md-8">
-        <button style="font-weight:bold;font-variant:small-caps;letter-spacing:5px;" 
-            type="button" class="btn btn-success btn-lg btn-block" 
-            ng-click="savemanagehalloffameInfo()" 
-            id="savemanagehalloffameButton" 
-            name="savemanagehalloffame">
-                Click Here to Save Hall of Fame Information
-        </button>
+    <div class="col-md-7">
+        <button style="font-weight:bold;
+            font-variant:small-caps;
+            letter-spacing:5px;
+            width:80%;" type="button" class="btn btn-success btn-lg btn-block center-block" ng-click="savemanagehallofmemoryInfo()" id="savemanagehallofmemoryButton" name="savemanagehallofmemory">Save Information</button>
     </div><!-- end of col 12 -->
 </div> <!-- end of row -->
 </form>
