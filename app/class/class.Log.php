@@ -45,19 +45,21 @@ class Log
     
     public function writeLog($msg)
     {
-
+        // print("doing writw: $msg");
         $this->time = time();
         $this->datetime = date("Y-m-d H:i:s", $this->time);
         $this->buffer = $this->datetime." : ".$msg."\n";
 
         $fullyqualifiedlogName = $this->fileDirectory.$this->fileName;
 
+        // print("<br>fullyqualifiedlogName: $fullyqualifiedlogName");
         // print "fully qualified log name = $fullyqualifiedlogName   ";
 
         $this->fp = fopen($fullyqualifiedlogName, "a");
 
         if (fwrite($this->fp, $this->buffer) === FALSE) {
             echo "Cannot write to file ($fullyqualifiedlogName)";
+            // print("Cannot write to file: $fullyqualifiedlogName");
             exit;
         }
 
