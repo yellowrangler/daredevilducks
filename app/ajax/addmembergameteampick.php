@@ -3,8 +3,7 @@
 include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
-include_once ('../class/class.spyLog.php');
-$spystatus = false;
+
 
 //
 // post input
@@ -77,6 +76,9 @@ $strCut = "pick_";
 $gamenbr = "";
 $teamid = "";
 $msgtext = "ok";
+
+$action = "addmember";
+$module= "addmembergameteampick.php";
 
 //
 // collect the data coming in. 
@@ -180,23 +182,12 @@ if ($diffCount > 0)
 }
 
 //
-// i spy 
-//
-if ($spystatus == true) $spy = new spyLog("logs/");
-if ($spystatus == true) $spydate = date("Y-m-d H:i:s");
-if ($spystatus == true) $spytext = "\nspy:add pick start season: $season week: $week  memberid: $memberid datetime: $spydate";
-
-
-//
 // now loop through the picks
 //
-if ($spystatus == true) $spydata = "\n";
 for ( $j = 0; $j < $count; $j++ )
 {
 	$gamenbr = $gameArray[$j];
 	$teamid = $teamArray[$j];
-
-	if ($spystatus == true) $spydata = $spydata . "loop: $j gamenbr: $gamenbr teamid: $teamid datetime: $spydate\n";
 
 	//---------------------------------------------------------------
 	// if we have this already then update else insert
@@ -257,14 +248,6 @@ for ( $j = 0; $j < $count; $j++ )
 	}
 
 } 
-
-//
-// i spy 
-//
-if ($spystatus == true) $spytext = $spytext ."\nspy: add pick full $spydata";
-if ($spystatus == true) $spydate = date("Y-m-d H:i:s");
-if ($spystatus == true) $spytext = $spytext ."spy: add pick end season: $season week: $week  memberid: $memberid datetime: $spydate";
-if ($spystatus == true) $spy->writeLog($spytext);
 
 // &pick_17=8&pick_25=25&pick_22=21&pick_19=26&pick_20=7&pick_24=18&pick_23=31&pick_18=1&pick_21=19&pick_26=29&pick_27=32&pick_29=2&pick_30=10&pick_28=16&pick_31=30&pick_32=12  
 

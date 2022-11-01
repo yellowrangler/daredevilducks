@@ -9,6 +9,24 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
         $location.path("#home");
     }
 
+    function track(tracktext) {
+        var trackaction ='hall of fame';
+        var trackmodule ='awardscontroller.js';
+        var trackmemberid = $scope.current.memberid;
+        // var trackweek = $scope.current.week;
+        // var trackseason = $scope.current.season;
+
+        var q = "trackaction="+trackaction+"&trackmodule="+trackmodule+"&trackmemberid="+trackmemberid+"&tracktext="+tracktext;   
+        membersFactory.track(q)
+        .success( function(data) {
+            var track = "Ok"; 
+        })
+        .error( function(edata) {
+            var track = "Err"; 
+        }); 
+        
+    }
+
     init();
     function init() {
         //
@@ -17,8 +35,14 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
         //
         setviewpadding();
 
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
         $scope.hofimage = "";
         $scope.halloffames = "";
+
+        track("view hall of fame");
+
         membersFactory.getAllHallofFame()
             .success( function(data) {
                 $scope.halloffames = data;
@@ -154,6 +178,25 @@ controllers.hallofmemoryController = function ($scope, $http, $location, loginSe
         $location.path("#home");
     }
 
+    function track(tracktext) {
+        var trackaction ='hall of fame';
+        var trackmodule ='awardscontroller.js';
+        var trackmemberid = $scope.current.memberid;
+        // var trackweek = $scope.current.week;
+        // var trackseason = $scope.current.season;
+
+        var q = "trackaction="+trackaction+"&trackmodule="+trackmodule+"&trackmemberid="+trackmemberid+"&tracktext="+tracktext;   
+        membersFactory.track(q)
+        .success( function(data) {
+            var track = "Ok"; 
+        })
+        .error( function(edata) {
+            var track = "Err"; 
+        }); 
+        
+    }
+
+
     init();
     function init() {
         //
@@ -162,10 +205,15 @@ controllers.hallofmemoryController = function ($scope, $http, $location, loginSe
         //
         setviewpadding();
 
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
         $homimage = "";
         $homtitle = "";
         $homdetail = "";
         $scope.hallofmemorys = "";
+
+        track("view hall of memory");
 
         membersFactory.getAllHallofMemory()
             .success( function(data) {
