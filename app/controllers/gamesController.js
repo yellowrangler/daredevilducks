@@ -173,6 +173,12 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
 
+        $scope.$parent.tracker('get team stats dialog',
+              'team stats dialog',
+              'pickgamesController',
+              'NA',
+              'NA');
+
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
