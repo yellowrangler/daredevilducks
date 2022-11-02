@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-  It was a good 7th week of football. 
+  It was a good 8th week of football. 
 </p>
 
 <p>
-The week started out with the Cardinals beating the Saints. The Ravens beat the Browns in a close contest. The Panthers beat the fading Buccaneers. The Bengals bludgeoned the Falcons. The Cowboys beat the cowardly Lions. The Giants continue to impress as they beat the Jaguars. The Titans beat the Colts, ultimately causing Mat Ryan his starting job for the foreseeable future.
+The week started out with the Ravens beating the fading Buccaneers. The Broncos beat the Jaguars across the pond in Jolly Ole England. The Falcons squeaked out a win against the Panthers. The Cowboys crushed the Bears. The Dolphins won in a close contest with the Lions. The Vikings beat the disappointing Cardinals.
 </p> 
 
 <p>
-In an upset, the Commanders beat the Packers. The Jets continued their winning ways as they beat the Broncos. The Raiders beat the Texans in a battle of 1 win teams. The Seahawks beat the Chargers. The Chiefs beat a disappointing 49ers team. The Dolphins beat the Steelers.
+The Saints beat the clueless Raiders. The Patriots beat the Jets. The Titans played well enough to beat the Texans. The Commanders beat the leaderless Colts. The hot and cold 49ers beat the Rams. The Seahawks beat the Giants. The Bills beat the Packers.
 </p> 
 
 <p>
-In the final game of the week the Bears defeated a unprepared Patriots team in Foxborough!
+In the final game of the week the Browns defeated the erratic Bengals!
 </p> 
 
 <p>
@@ -22,15 +22,13 @@ In the final game of the week the Bears defeated a unprepared Patriots team in F
 </p> 
 
 <p>
-Don't be disappointed if you are not basking in the upper wins tier! We are still in the spooky month so anything can happen! Just continue sharpening your pencil and encourage those little grey cells to do their stuff! You can do it!
+Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
 </p>
 
 </p>
-New photos have been added to our Hall of Fame winners Tanya and Tony Bruehl! Check them out!
+More photos have been added to our Hall of Fame. See if you can figure out who has a new photo! Also, if you move your mouse over a hall of fame picture you will see the winners avatar!
 <br><br>
-Click on the Donald Duck Halloween day image to see the Headless Horsemen making his ghoulish rounds!
-<br><br>
-Mobile members can Swipe your Avatar to the left until you see the Halloween image. Click on the Donald image to see the same ghoulish marauder!
+Watch for our new Thanksgiving themes to be released soon!
 </p>
 
 <br />
