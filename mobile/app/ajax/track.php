@@ -182,7 +182,7 @@ $sql = "INSERT INTO tracktbl
 		'$trackmodule',
 		'$tracktext',
 		'$trackdate',
-		 'desktop')";
+		 'mobile')";
 
 //
 // sql query

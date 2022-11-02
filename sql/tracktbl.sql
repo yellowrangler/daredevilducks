@@ -11,6 +11,7 @@ CREATE TABLE `tracktbl` (
   `trackmodule` varchar(100) DEFAULT NULL,
   `tracktext` varchar(1000) DEFAULT NULL,
   `trackdate` datetime DEFAULT NULL,
+  `device` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;

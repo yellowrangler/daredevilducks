@@ -24,6 +24,12 @@ controllers.teamstandingsController = function ($scope, $http, $location, $windo
         //     $window.scrollTo(0, 0);
         // });
 
+        $scope.$parent.tracker('view team standings',
+              'team standings',
+              'teamstandingsController',
+              'NA',
+              'NA');
+
         var postseasonstatuses = nflTeamsService.getNFLpostseasonstatus();
         $scope.postseasonstatuses = postseasonstatuses;
 
@@ -1299,6 +1305,12 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         $scope.current.showteamb = true;
         $scope.teamstatscharts = chartService.getChartList("teamCharts");
 
+        $scope.$parent.tracker('look at team stat charts',
+              'team charts',
+              'teamstatschartsController',
+              'NA',
+              'NA');
+
         getTeamStatsCharts();
 
         $scope.current.memberlogin = loginService.getLogin();
@@ -1541,6 +1553,12 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
             $location.path("#home");
         }
 
+        $scope.$parent.tracker('look at team scores and stats',
+              'team scores and stats',
+              'teamweeklyrankingController',
+              'NA',
+              'NA');
+
         $scope.teams = nflTeamsService.getNFLTeams();
         $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -1604,6 +1622,12 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+
+        $scope.$parent.tracker('view team websites',
+              'team discovery',
+              'teamdiscoveryController',
+              'NA',
+              'NA');
 
         $scope.teams = nflTeamsService.getNFLTeams(); 
 
@@ -1716,6 +1740,13 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
 
     init();
     function init() {
+
+        $scope.$parent.tracker('view nfl news',
+              'nfl news',
+              'nflnewsController',
+              'NA',
+              'NA');
+
         $scope.current.rsslinkid = 1;
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
@@ -1787,6 +1818,13 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
 
     init();
     function init() {
+
+        $scope.$parent.tracker('view team brackets',
+              'team brackets',
+              'playoffstandingsController',
+              'NA',
+              'NA');
+
         $scope.seasons = nflTeamsService.getNFLTeamseasons();
 
         teamsFactory.getCurrentSeasonWeek()

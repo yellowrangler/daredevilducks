@@ -500,6 +500,12 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         // admins can choose any player. I disable memberid when not admin. Must therefore
         // check for memberid in seriaze string and if not there add it
         //
+        $scope.$parent.tracker('save weekly picks',
+              'pickgames',
+              'gamesController',
+              $scope.current.season,
+              $scope.current.week);
+
         var data = $("#pickweekForm").serialize();
         var n = data.indexOf("memberid");
         if (n == -1)
@@ -1291,6 +1297,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
     init();
     function init() {
         $scope.current = {};
+
+        $scope.$parent.tracker('see who is picking what',
+                  'viewtotalpickgames',
+                  'viewtotalpickgamesController',
+                  'NA',
+                  'NA');
 
         //
         // this is not getting called at right time for definig top offset 

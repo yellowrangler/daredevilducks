@@ -439,24 +439,6 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         }      
     }
 
-    function track(tracktext) {
-        var trackaction ='pickgames';
-        var trackmodule ='gamesController.js';
-        var trackmemberid = $scope.current.memberid;
-        var trackweek = $scope.current.week;
-        var trackseason = $scope.current.season;
-
-        var q = "trackaction="+trackaction+"&trackweek="+trackweek+"&trackseason="+trackseason+"&trackmodule="+trackmodule+"&trackmemberid="+trackmemberid+"&tracktext="+tracktext;   
-        membersFactory.track(q)
-        .success( function(data) {
-            var track = "Ok"; 
-        })
-        .error( function(edata) {
-            var track = "Err"; 
-        }); 
-        
-    }
-
     function saveGames() {
         //
         // validate the selections
@@ -507,10 +489,13 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         // admins can choose any player. I disable memberid when not admin. Must therefore
         // check for memberid in seriaze string and if not there add it
         //
+        $scope.$parent.tracker('save weekly picks',
+              'pickgames',
+              'gamesController',
+              $scope.current.season,
+              $scope.current.week);
+
         var data = $("#pickweekForm").serialize();
-
-        track("make weekly picks");
-
         var n = data.indexOf("memberid");
         if (n == -1)
         {
@@ -1375,6 +1360,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         
         $scope.current = {};
         $scope.teamstats = {};
+
+        $scope.$parent.tracker('see who is picking what',
+                  'viewtotalpickgames',
+                  'viewtotalpickgamesController',
+                  'NA',
+                  'NA');
 
         //
         // this is not getting called at right time for definig top offset 

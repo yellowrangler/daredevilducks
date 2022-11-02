@@ -107,6 +107,12 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
 
+        $scope.$parent.tracker('view member total wins',
+              'player totals',
+              'playerstatstotalwinsController',
+              'NA',
+              'NA');
+
         //
         // get member groups
         //
@@ -366,6 +372,12 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         $scope.current = {};
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
+        
+        $scope.$parent.tracker('view weekly member wins',
+              'weekly totals',
+              'playerstatsmemberweeklyController',
+              'NA',
+              'NA');
         
         //
         // this is not getting called at right time for definig top offset 

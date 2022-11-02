@@ -1,4 +1,4 @@
-controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, teamsFactory, nflTeamsService) {
+controllers.dddParentController = function ($scope, $http, $window, $route, $location, loginService, teamsFactory, membersFactory, nflTeamsService) {
     $("#adminselect").hide();
     
     $scope.memberavatar = "";
@@ -127,7 +127,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     function stopSnowAnimation()
     {
         clearInterval($scope.intervalVariable); 
-    }
+    }   
 
     init();
     function init() {
@@ -279,7 +279,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             });  
 
         checkRole();  
-    };         
+    };  
 
     $scope.loginlogoff = function (request) {
         loginlogoff(request);
@@ -314,6 +314,36 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     $scope.showPicture = function (title, picture) {
         showPicture(title, picture);   
     }
+
+    $scope.tracker = function (tracktext, trackaction, trackmodule, trackseason, trackweek){
+      var memberid = "";
+      var season = "";
+      var week = "";
+      var rv = "";
+
+      $scope.current.memberlogin = loginService.getLogin();
+      memberid = $scope.current.memberlogin.memberid;
+
+      if (trackweek == 'NA')
+      {
+          season = nflTeamsService.getCurrentSeason();
+          week = nflTeamsService.getCurrentWeek();
+      }
+      else
+      {
+          season = trackseason;
+          week = trackweek;
+      }
+
+      var q = "trackaction="+trackaction+"&trackmodule="+trackmodule+"&trackmemberid="+memberid+"&tracktext="+tracktext+"&trackseason="+season+"&trackweek="+week;   
+      membersFactory.track(q)
+      .success( function(data) {
+          rv = "Ok"; 
+      })
+      .error( function(edata) {
+          rv = "Err"; 
+      }); 
+    } 
 }
 
 controllers.loginController = function ($scope, $http, $location, $window, loginService, msgService, loginFactory) {

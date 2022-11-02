@@ -10,6 +10,13 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
     function init() {
         $scope.hofimage = "";
         $scope.halloffames = "";
+
+        $scope.$parent.tracker('view hall of fame',
+              'hall of fame',
+              'halloffameController',
+              'NA',
+              'NA');
+
         membersFactory.getAllHallofFame()
             .success( function(data) {
                 $scope.halloffames = data;
@@ -139,6 +146,12 @@ controllers.hallofmemoryController = function ($scope, $http, $location, loginSe
         $homtitle = "";
         $homdetail = "";
         $scope.hallofmemorys = "";
+
+        $scope.$parent.tracker('view hall of memory',
+              'hall of memory',
+              'hallofmemoryController',
+              'NA',
+              'NA');
 
         membersFactory.getAllHallofMemory()
             .success( function(data) {

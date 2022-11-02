@@ -262,5 +262,14 @@ dddAppMobile.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.track = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/track.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     return factory;
 });
