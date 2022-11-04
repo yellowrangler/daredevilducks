@@ -1326,6 +1326,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
     function getMemberPickList(teamid,gamenbr)
     {
+         $scope.$parent.tracker('see the picking list',
+                  'getMemberPickList',
+                  'viewtotalpickgamesController',
+                  $scope.current.season,
+                  $scope.current.week);
+
         var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&teamid="+teamid+"&gamenbr="+gamenbr;
         teamsFactory.getMemberTeamPickListDialog(q)
             .success( function(data) {

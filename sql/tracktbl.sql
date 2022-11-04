@@ -31,3 +31,11 @@ FROM tracktbl
 WHERE screenname = "Hawk Eye";
 AND trackaction = ""
 
+SELECT * FROM `tracktbl` 
+WHERE trackmodule = "viewtotalpickgames"
+order by screenname, id
+
+SELECT screenname, trackaction, count(trackaction)
+FROM `tracktbl` 
+where trackaction = "viewtotalpickgames"
+group by screenname;
