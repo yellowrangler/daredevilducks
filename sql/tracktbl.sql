@@ -15,3 +15,19 @@ CREATE TABLE `tracktbl` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=big5;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
+-- sql stuff
+SELECT screenname, COUNT(*) 
+FROM tracktbl
+GROUP BY screenname;
+
+SELECT * 
+FROM tracktbl
+WHERE screenname = "Hawk Eye";
+
+SELECT * 
+FROM tracktbl
+WHERE screenname = "Hawk Eye";
+AND trackaction = ""
+
