@@ -4,7 +4,7 @@ include_once ('../class/class.Log.php');
 include_once ('../class/class.ErrorLog.php');
 include_once ('../class/class.AccessLog.php');
 
-// include_once "../../secure/target.php";
+include_once "../../secure/target.php";
 // 
 //  post variables
 // 
@@ -113,22 +113,28 @@ else
 // 
 // before we do anything check and see if target member
 // 
-// $targetmembersArray = explode(',', $targetmembers);
-// $targetmembersArraySize = count($targetmembersArray);
-// $isNotTargetMember = 1;
-// for ($i = 0; $i < $targetmembersArraySize; $i++) 
-// {
-// 	if ($trackmemberid == $targetmembersArray[$i])
-// 	{
-// 		$isNotTargetMember = 0;
-// 		break;
-// 	}
-// }
+$targetmembersArray = explode(',', $targetmembers);
+$targetmembersArraySize = count($targetmembersArray);
+$isNotTargetMember = 1;
+for ($i = 0; $i < $targetmembersArraySize; $i++) 
+{
+	if ($targetmembersArray[$i] == "All")
+	{
+		$isNotTargetMember = 0;
+		break;
+	}
 
-// if ($isNotTargetMember == 1)
-// {
-// 	exit("Woof!");
-// }
+	if ($trackmemberid == $targetmembersArray[$i])
+	{
+		$isNotTargetMember = 0;
+		break;
+	}
+}
+
+if ($isNotTargetMember == 1)
+{
+	exit("Woof!");
+}
 
 //
 // get date time for this transaction
