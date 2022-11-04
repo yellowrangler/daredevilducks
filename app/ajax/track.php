@@ -135,12 +135,12 @@ else
 //
 $trackdatetime = date("Y-m-d H:i:s");
 
-print "trackdatetime=". $trackdatetime;
+// print "trackdatetime=". $trackdatetime;
 
 // create time stamp versions for insert to mysql
 $trackdate = date("Y-m-d H:i:s", strtotime($trackdatetime));
 
-print "trackdate=". $trackdate;
+// print "trackdate=". $trackdate;
 
 //
 // db connect
