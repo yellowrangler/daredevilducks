@@ -173,11 +173,11 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
 
-        $scope.$parent.tracker('get team stats dialog',
+        $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
               'team stats dialog',
               'pickgamesController',
-              'NA',
-              'NA');
+              $scope.current.season,
+              $scope.current.week);
 
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
@@ -866,6 +866,12 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
 
+        $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
+              'team stats dialog',
+              'viewselectpickgamesController',
+              $scope.current.season,
+              $scope.current.week);
+
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
@@ -1253,6 +1259,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
 
+        $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
+              'team stats dialog',
+              'viewtotalpickgamesController',
+              $scope.current.season,
+              $scope.current.week);
+
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
@@ -1326,7 +1338,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
     function getMemberPickList(teamid,gamenbr)
     {
-         $scope.$parent.tracker('see the picking list',
+         $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
                   'getMemberPickList',
                   'viewtotalpickgamesController',
                   $scope.current.season,
@@ -1373,12 +1385,6 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.current = {};
         $scope.teamstats = {};
 
-        $scope.$parent.tracker('see who is picking what',
-                  'viewtotalpickgames',
-                  'viewtotalpickgamesController',
-                  'NA',
-                  'NA');
-
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -1400,7 +1406,13 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         teamsFactory.getCurrentSeasonWeek()
             .success( function(data) {
                 $scope.current.season = data.season; 
-                $scope.current.week = data.week;  
+                $scope.current.week = data.week; 
+
+                $scope.$parent.tracker('see who is picking what',
+                  'viewtotalpickgames',
+                  'viewtotalpickgamesController',
+                  $scope.current.season,
+                  $scope.current.week); 
 
                 nflTeamsService.addCurrentWeek($scope.current.week);
                 nflTeamsService.addCurrentSeason($scope.current.season);  
