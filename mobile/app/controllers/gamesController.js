@@ -185,6 +185,12 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
 
+        $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
+              'team stats dialog',
+              'pickgamesController',
+              $scope.current.season,
+              $scope.current.week);
+
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
@@ -859,6 +865,12 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
 
+        $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
+              'team stats dialog',
+              'viewselectpickgamesController',
+              $scope.current.season,
+              $scope.current.week);
+
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
@@ -1208,6 +1220,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
     {
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
+
+        $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
+              'team stats dialog',
+              'viewtotalpickgamesController',
+              $scope.current.season,
+              $scope.current.week);
 
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
