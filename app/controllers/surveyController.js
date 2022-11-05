@@ -129,6 +129,12 @@ controllers.takesurveyController = function ($scope, $http, $location, $window, 
 
         $scope.current.firsttime = 1;
 
+        $scope.$parent.tracker('take survey',
+              'takesurvey',
+              'takesurveyController',
+              'NA',
+              'NA');
+
         surveyFactory.getCurrentSurveyData()
             .success( function(data) {
                 $scope.current.survey = data; 
@@ -451,6 +457,12 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        $scope.$parent.tracker('survey results',
+              'surveyresults',
+              'surveyresultsController',
+              'NA',
+              'NA');
 
         surveyFactory.getCurrentSurveyData()
             .success( function(data) {
