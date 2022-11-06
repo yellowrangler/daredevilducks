@@ -1300,7 +1300,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
     function getMemberPickList(teamid,gamenbr)
     {
-        $scope.$parent.tracker('see the picking list',
+        $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
                   'getMemberPickList',
                   'viewtotalpickgamesController',
                   $scope.current.season,
