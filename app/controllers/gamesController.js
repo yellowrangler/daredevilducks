@@ -1367,6 +1367,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
                     if (check[0].gamestatus != "expired")
                     {
+                        $scope.$parent.tracker('bounced: see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+                              'getMemberPickList',
+                              'viewtotalpickgamesController',
+                              $scope.current.season,
+                              $scope.current.week);
+
                         // new code
                         $scope.$parent.showAlert("Too Early!", "Data available once Game is underway!");
 
