@@ -18,7 +18,7 @@ CREATE TABLE tracktbl (
 
 
 -- sql stuff
-SELECT screenname, COUNT(*) 
+SELECT screenname, COUNT(*) as hits
 FROM tracktbl
 GROUP BY screenname;
 
@@ -60,4 +60,36 @@ FROM tracktbl
 where screenname = "Hawk Eye"
 ORDER BY id DESC
 
+SELECT screenname, count(screenname) as hits
+FROM tracktbl 
+group by screenname;
+
+SELECT screenname, trackaction, count(screenname) as hits
+FROM tracktbl 
+where trackaction = 'getMemberPickList'
+group by screenname;
+
+SELECT screenname, count(trackaction) as hits
+FROM tracktbl 
+group by screenname;
+
+SELECT screenname, trackaction, count(trackaction) as hits
+FROM tracktbl 
+where trackaction = 'getMemberPickList' 
+group by screenname;
+
+SELECT screenname, trackaction, count(trackaction) as hits
+FROM tracktbl 
+where trackaction = 'hall of fame' 
+group by screenname;
+
+SELECT screenname, trackaction, count(trackaction) as hits
+FROM tracktbl 
+where trackaction = 'hall of memory' 
+group by screenname;
+
+SELECT screenname, trackaction, 
+COALESCE(SUM(CASE WHEN trackaction = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
+COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonties,
+COALESCE(COUNT(*),0) as ties
 

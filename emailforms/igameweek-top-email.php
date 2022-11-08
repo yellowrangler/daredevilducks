@@ -2,23 +2,23 @@
 
 $emailtopwriteup = "	
 <p>
-  It was a good 8th week of football. 
+  It was a good week of football. 
 </p>
 
 <p>
-The week started out with the Ravens beating the fading Buccaneers. The Broncos beat the Jaguars across the pond in Jolly Ole England. The Falcons squeaked out a win against the Panthers. The Cowboys crushed the Bears. The Dolphins won in a close contest with the Lions. The Vikings beat the disappointing Cardinals.
+The week started out with the Eagles continuing their perfect season by beating the Texans in Houston. The Chargers eeked by the Falcons. The Dolphins beat the Bears in similar fashion. The Bengals crushed the Panthers. In a bit of an upset, the Lions beat the Packers. The Jaguars beat the just plain awful Raiders. The Patriots beat the Colts in a snooze fest. 
 </p> 
 
 <p>
-The Saints beat the clueless Raiders. The Patriots beat the Jets. The Titans played well enough to beat the Texans. The Commanders beat the leaderless Colts. The hot and cold 49ers beat the Rams. The Seahawks beat the Giants. The Bills beat the Packers.
+In another upset, the Jets beat the Bills. The Vikings beat the Commanders. Seattle continues to impress as does Geno Smith, as they beat the Cardinals. Tampa Bay came back with a classic Tom Brady one minute drill to beat the Rams. The Chiefs beat the Titans in overtime.
 </p> 
 
 <p>
-In the final game of the week the Browns defeated the erratic Bengals!
+In the final game of the week the Ravens beat the Saints in New Orleans!
 </p> 
 
 <p>
-  <span style='font-weight:bold; color:#4682B4;'>All in all a superb week of football!</span>
+  All in all a superb week of football!
 </p> 
 
 <p>
@@ -26,9 +26,7 @@ Don't be disappointed if you are not basking in the upper wins tier! There is st
 </p>
 
 </p>
-More photos have been added to our Hall of Fame. See if you can figure out who has a new photo! Also, if you move your mouse over a hall of fame picture you will see the winners avatar!
-<br><br>
-Watch for our new Thanksgiving themes to be released soon!
+Our new Thanksgiving themes are now onn display!
 </p>
 
 <br />

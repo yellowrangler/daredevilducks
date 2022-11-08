@@ -1298,24 +1298,88 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
             }); 
     }
 
+    function checkRole()
+    {
+        var role = loginService.getMemberRole();
+        var status = "";
+
+        if (role == "admin")
+        {
+            status = false;
+        }
+        else
+        {
+            status = true;
+        }  
+
+        return status;
+    }
+
     function getMemberPickList(teamid,gamenbr)
     {
-        $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+        if (checkRole())
+        {
+            //
+            // check if selected is expired
+            //
+            var q = "gamenbr="+gamenbr+"&week="+$scope.current.week+"&season="+$scope.current.season;
+            teamsFactory.getNFLGamesWeekMemberTeamsExpired(q)
+                .success( function(data) {
+                    var check = data; 
+
+                    if (check[0].gamestatus != "expired")
+                    {
+                        // new code
+                        alert("Too Early! Data available once Game is underway!");
+
+                    }
+                    else
+                    {
+                        
+                        $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+                              'getMemberPickList',
+                              'viewtotalpickgamesController',
+                              $scope.current.season,
+                              $scope.current.week);
+
+                        var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&teamid="+teamid+"&gamenbr="+gamenbr;
+                        teamsFactory.getMemberTeamPickListDialog(q)
+                            .success( function(data) {
+                                $('#memberListDialogModalTitle').text("Members who picked:");
+                                $('#memberListDialogModalBody').html(data);
+                                $('#memberListDialogModal').modal();
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            }); 
+                    }
+
+                })
+                .error( function(edata) {
+                    alert(edata);
+
+                    return;
+                });   
+        }
+        else
+        {
+            $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
                   'getMemberPickList',
                   'viewtotalpickgamesController',
                   $scope.current.season,
                   $scope.current.week);
 
-        var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&teamid="+teamid+"&gamenbr="+gamenbr;
-        teamsFactory.getMemberTeamPickListDialog(q)
-            .success( function(data) {
-                $('#memberListDialogModalTitle').text("Members who picked:");
-                $('#memberListDialogModalBody').html(data);
-                $('#memberListDialogModal').modal();
-            })
-            .error( function(edata) {
-                alert(edata);
-            });        
+            var q = "week="+$scope.current.week+"&season="+$scope.current.season+"&teamid="+teamid+"&gamenbr="+gamenbr;
+            teamsFactory.getMemberTeamPickListDialog(q)
+                .success( function(data) {
+                    $('#memberListDialogModalTitle').text("Members who picked:");
+                    $('#memberListDialogModalBody').html(data);
+                    $('#memberListDialogModal').modal();
+                })
+                .error( function(edata) {
+                    alert(edata);
+                }); 
+        }      
     }
 
     init();
