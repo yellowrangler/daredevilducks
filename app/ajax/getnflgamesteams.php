@@ -18,7 +18,19 @@ $datetime = date("Y-m-d H:i:s");
 
 // set variables
 $enterdate = $datetime;
-$season = $_POST["season"];
+if (isset($_POST["season"]))
+{
+	$season = $_POST["season"];
+}
+else
+{
+	if (isset($_GET["season"]))
+   	{
+   		$season = $_GET["season"];
+   	}
+}
+
+// $season = $_POST["season"];
 
 //
 // messaging
