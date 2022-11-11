@@ -84,7 +84,7 @@ LEFT JOIN teamstbl TA ON TA.id = G.awayteamid
 LEFT JOIN teamstbl TH ON TH.id = G.hometeamid
 LEFT JOIN gametypetbl GT ON GT.id = G.gametypeid
 LEFT JOIN gamenetworktbl GN ON GN.id = G.networkid
--- WHERE G.season = '$season'
+WHERE G.season = '$season'
 ORDER BY gamedatetime, G.id ASC";
 // print $sql;
 

@@ -88,8 +88,8 @@ FROM tracktbl
 where trackaction = 'hall of memory' 
 group by screenname;
 
-SELECT screenname, trackaction, 
-COALESCE(SUM(CASE WHEN trackaction = 2 THEN 1 ELSE 0 END),0) AS regularseasonties,
-COALESCE(SUM(CASE WHEN gametypeid = 3 THEN 1 ELSE 0 END),0) AS postseasonties,
-COALESCE(COUNT(*),0) as ties
-
+SELECT trackaction, count(trackaction) as hits
+FROM `tracktbl` 
+where screenname = 'Hawk Eye' 
+group by trackaction
+order by hits;

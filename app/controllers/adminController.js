@@ -1076,7 +1076,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             columnDefs: [
                 // default
                 { field: "season",
-                    displayName: "Season", headerCellClass: $scope.highlightFilteredHeader },
+                    displayName: "Season", headerCellClass: $scope.highlightFilteredHeader, enableFiltering: false },
                 { field: "week",
                     displayName: "Week", width:"9%", headerCellClass: $scope.highlightFilteredHeader },
                 { field: "gamenbr",
