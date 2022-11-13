@@ -18,34 +18,9 @@ CREATE TABLE tracktbl (
 
 
 -- sql stuff
-SELECT screenname, COUNT(*) as hits
-FROM tracktbl
-GROUP BY screenname;
-
-SELECT * 
-FROM tracktbl
-WHERE screenname = "Hawk Eye";
-
-SELECT * 
-FROM tracktbl
-WHERE screenname = "Hawk Eye";
-AND trackaction = ""
-
 SELECT * FROM tracktbl 
 WHERE trackmodule = "viewtotalpickgames"
 order by screenname, id
-
-getMemberPickList
-
-SELECT screenname, trackaction, count(trackaction)
-FROM tracktbl 
-where trackaction = "viewtotalpickgames"
-group by screenname;
-
-SELECT screenname, trackaction, count(trackaction)
-FROM tracktbl 
-where trackaction = "getMemberPickList"
-group by screenname;
 
 SELECT * FROM tracktbl  
 ORDER BY id DESC
@@ -60,28 +35,95 @@ FROM tracktbl
 where screenname = "Hawk Eye"
 ORDER BY id DESC
 
-SELECT screenname, count(screenname) as hits
-FROM tracktbl 
-group by screenname;
+mysql --batch -u user -h remote.host.tld database --port 3306 -ppass -e "SELECT * FROM webrecord_wr25mfz_20101011_175524;" | sed 's/\t/,/g' 2>&1
+mysql  -u tarryc -p ddd < trackercountall.sql | sed 's/\t/,/g'> trackercountall.csv
 
-SELECT screenname, trackaction, count(screenname) as hits
-FROM tracktbl 
-where trackaction = 'getMemberPickList'
-group by screenname;
+
+SELECT screenname, count(*) as hits,
+  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
+  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
+  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
+  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
+  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
+  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
+  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
+  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
+  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teadmDisc,  
+  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
+  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
+  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+INTO OUTFILE "/home/pi/Development/daredevilducks/csv/trackercountall.csv"
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY "\n"
+FROM tracktbl
+GROUP BY screenname;
+
+
+SELECT screenname, count(*) as hits,
+  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
+  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
+  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
+  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
+  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
+  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
+  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
+  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
+  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teadmDisc,  
+  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
+  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
+  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+FROM tracktbl
+GROUP BY screenname LIMIT 500;
+
+SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
+  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
+  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
+  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
+  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
+  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
+  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
+  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
+  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
+  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teadmDisc,  
+  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
+  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
+  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+FROM tracktbl
+GROUP BY tdate, screenname
+-- GROUP BY screenname, tdate
+ORDER BY screenname, tdate;
+
+SELECT SUM(t.hits)
+FROM 
+(  
+  SELECT screenname, count(*) as hits,
+  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
+  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
+  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
+  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
+  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
+  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
+  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
+  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
+  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teadmDisc,  
+  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
+  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
+  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+  FROM tracktbl
+  GROUP BY screenname) t;
 
 SELECT screenname, count(trackaction) as hits
 FROM tracktbl 
 group by screenname;
 
 SELECT screenname, trackaction, count(trackaction) as hits
-FROM tracktbl 
-where trackaction = 'getMemberPickList' 
-group by screenname;
-
-SELECT screenname, trackaction, count(trackaction) as hits
-FROM tracktbl 
-where trackaction = 'hall of fame' 
-group by screenname;
+FROM tracktbl  
+group by trackaction
+order by id desc;
 
 SELECT screenname, trackaction, count(trackaction) as hits
 FROM tracktbl 
