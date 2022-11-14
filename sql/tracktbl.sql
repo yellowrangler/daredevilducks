@@ -77,6 +77,17 @@ SELECT screenname, count(*) as hits,
 FROM tracktbl
 GROUP BY screenname LIMIT 500;
 
+SELECT screenname, CAST(trackdate AS DATE) as tdate, CAST(trackdate AS TIME) as ttime, count(*) as hits,
+
+-- SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
+SELECT screenname, CAST(trackdate AS DATE) as tdate, CAST(trackdate AS TIME) as ttime, trackaction
+FROM tracktbl
+GROUP BY tdate, ttime, screenname
+-- GROUP BY tdate, screenname
+-- GROUP BY screenname, tdate
+ORDER BY screenname, tdate;
+
+-- SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
 SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
   COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
   COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
