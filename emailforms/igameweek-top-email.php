@@ -6,27 +6,24 @@ $emailtopwriteup = "
 </p>
 
 <p>
-The week started out with the Eagles continuing their perfect season by beating the Texans in Houston. The Chargers eeked by the Falcons. The Dolphins beat the Bears in similar fashion. The Bengals crushed the Panthers. In a bit of an upset, the Lions beat the Packers. The Jaguars beat the just plain awful Raiders. The Patriots beat the Colts in a snooze fest. 
+The week started out with the Panthers beating the Falcons. The Buccaneers beat the Seahawks in a thriller across the pond in Germany. In a crazy game, the Vikings defeated the Bills. The Lions eked out a win over the Bears in a back and forth affair. The Chiefs beat the Jaguars. The Dolphins beat the Browns in a game featuring more offense then defense.
 </p> 
 
 <p>
-In another upset, the Jets beat the Bills. The Vikings beat the Commanders. Seattle continues to impress as does Geno Smith, as they beat the Cardinals. Tampa Bay came back with a classic Tom Brady one minute drill to beat the Rams. The Chiefs beat the Titans in overtime.
+The Giants beat the Texans. The Steelers beat the Saints. The Titans beat the Broncos. The Colts with a new coach and newly reinstated Mat Ryan beat the woeful Raiders. The Packers rallied to beat the Cowboys. The Cardinals beat the Stafford-less Rams. The 49ers stayed relevent as they beat the Chargers.
 </p> 
 
 <p>
-In the final game of the week the Ravens beat the Saints in New Orleans!
+In the final game of the week the Commanders gave the Eagles their first loss!
 </p> 
 
 <p>
   All in all a superb week of football!
 </p> 
 
+
 <p>
 Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
-</p>
-
-</p>
-Our new Thanksgiving themes are now onn display!
 </p>
 
 <br />

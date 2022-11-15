@@ -256,6 +256,16 @@ dddApp.config(function ($routeProvider) {
                 controller: 'memberupdatememberController',
                 templateUrl: 'app/partials/memberupdatemember.html'
             })
+        .when('/trackerreview',
+            {
+                controller: 'trackerreviewController',
+                templateUrl: 'app/partials/trackerreview.html'
+            })
+        .when('/trackeropen',
+            {
+                controller: 'trackeropenController',
+                templateUrl: 'app/partials/trackeropen.html'
+            })
         .when('/login',
             {
                 controller: 'loginController',
