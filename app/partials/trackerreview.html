@@ -31,23 +31,21 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
-			<div class="panelBodyOverride table-responsive">
+			<div class="panelBodyOverride">
 
-				<table ng-if="current.trackrequest == ''" class="table" >
-
-					<tr style="width:100%" class="tableTitleNoBorder">	
-						<th style="width:100%;" class="center-column-text"> Select Review</th>
+				<table style="width:100%" ng-if="current.trackrequest == ''" class="table" >
+					<tr class="tableTitleNoBorder">	
+						<th class="center-column-text"> Select Review</th>
 					</tr>
 
-					<tr style="width:100%" >
+					<tr>
 						<td class="center-column-text"> Nothing to show!</td>
 					</tr>
-
 				</table>
 
-				<table ng-if="current.trackrequest == trackrequests[0].trackrequest" class="table" >
+				<table style="width:100%" ng-if="current.trackrequest == trackrequests[0].trackrequest" class="table" >
 
-					<tr style="width:100%" class="tableTitleNoBorder">	
+					<tr class="tableTitleNoBorder">	
 						<th style="width:5%;" class="center-column-text">id</th>
 						<th style="width:10%;" class="center-column-text">memberid</th>
 						<th style="width:10%;" class="center-column-text">screenname</th>
@@ -79,20 +77,20 @@
 
 					<tr class="tableTitleNoBorder">	
 						<th style="width:13%;" class="center-column-text">screenname</th>
-					  <th style="width:6%;" class="center-column-text">hits</th>
-					  <th style="width:6%;" class="center-column-text">viewPicks</th>
-					  <th style="width:6%;" class="center-column-text">pickList</th>
-					  <th style="width:6%;" class="center-column-text">pickGames</th>
-					  <th style="width:6%;" class="center-column-text">playerWeekly</th>
-					  <th style="width:6%;" class="center-column-text">playerTls</th>
-					  <th style="width:4%;" class="center-column-text">hof</th>
-					  <th style="width:4%;" class="center-column-text">hom</th>
-					  <th style="width:6%;" class="center-column-text">teamStatDia</th>
-					  <th style="width:6%;" class="center-column-text">teamScrsStat</th>
-					  <th style="width:6%;" class="center-column-text">teamStand</th>
-					  <th style="width:6%;" class="center-column-text">teamDisc</th>
-					  <th style="width:6%;" class="center-column-text">takeSurvey</th>
-					  <th style="width:6%;" class="center-column-text">nflnews</th>
+						<th style="width:6%;" class="center-column-text">hits</th>
+						<th style="width:6%;" class="center-column-text">viewPicks</th>
+						<th style="width:6%;" class="center-column-text">pickList</th>
+						<th style="width:6%;" class="center-column-text">pickGames</th>
+						<th style="width:6%;" class="center-column-text">playerWeekly</th>
+						<th style="width:6%;" class="center-column-text">playerTls</th>
+						<th style="width:4%;" class="center-column-text">hof</th>
+						<th style="width:4%;" class="center-column-text">hom</th>
+						<th style="width:6%;" class="center-column-text">teamStatDia</th>
+						<th style="width:6%;" class="center-column-text">teamScrsStat</th>
+						<th style="width:6%;" class="center-column-text">teamStand</th>
+						<th style="width:6%;" class="center-column-text">teamDisc</th>
+						<th style="width:6%;" class="center-column-text">takeSurvey</th>
+						<th style="width:6%;" class="center-column-text">nflnews</th>
 					</tr>
 
 					<tr ng-repeat="trackreview in trackreviews">
@@ -120,20 +118,20 @@
 					<tr class="tableTitleNoBorder">	
 						<th style="width:13%;" class="center-column-text">screenname</th>
 						<th style="width:10%;" class="center-column-text">tdate</th>
-					  <th style="width:4%;" class="center-column-text">hits</th>
-					  <th style="width:6%;" class="center-column-text">viewPicks</th>
-					  <th style="width:6%;" class="center-column-text">pickList</th>
-					  <th style="width:6%;" class="center-column-text">pickGames</th>
-					  <th style="width:6%;" class="center-column-text">playerWeekly</th>
-					  <th style="width:6%;" class="center-column-text">playerTls</th>
-					  <th style="width:4%;" class="center-column-text">hof</th>
-					  <th style="width:4%;" class="center-column-text">hom</th>
-					  <th style="width:6%;" class="center-column-text">teamStatDia</th>
-					  <th style="width:6%;" class="center-column-text">teamScrsStat</th>
-					  <th style="width:6%;" class="center-column-text">teamStand</th>
-					  <th style="width:6%;" class="center-column-text">teamDisc</th>
-					  <th style="width:6%;" class="center-column-text">takeSurvey</th>
-					  <th style="width:6%;" class="center-column-text">nflnews</th>
+						<th style="width:4%;" class="center-column-text">hits</th>
+						<th style="width:6%;" class="center-column-text">viewPicks</th>
+						<th style="width:6%;" class="center-column-text">pickList</th>
+						<th style="width:6%;" class="center-column-text">pickGames</th>
+						<th style="width:6%;" class="center-column-text">playerWeekly</th>
+						<th style="width:6%;" class="center-column-text">playerTls</th>
+						<th style="width:4%;" class="center-column-text">hof</th>
+						<th style="width:4%;" class="center-column-text">hom</th>
+						<th style="width:6%;" class="center-column-text">teamStatDia</th>
+						<th style="width:6%;" class="center-column-text">teamScrsStat</th>
+						<th style="width:6%;" class="center-column-text">teamStand</th>
+						<th style="width:6%;" class="center-column-text">teamDisc</th>
+						<th style="width:6%;" class="center-column-text">takeSurvey</th>
+						<th style="width:6%;" class="center-column-text">nflnews</th>
 					</tr>
 
 					<tr ng-repeat="trackreview in trackreviews">

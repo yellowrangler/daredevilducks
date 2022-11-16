@@ -27,14 +27,17 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
 
     init();
     function init() {
-        $window.scrollTo(0, 0);  
-
+        $window.scrollTo(0, 0); 
+        var windowHeight = window.innerHeight;
+        $scope.current.trackreaquesttablesize = windowHeight * .45;
+ 
         $scope.trackrequests = {};
         $scope.requestcount = 0;
 
         $scope.current = {};
         $scope.current.trackrequest = "";
 
+        
         buildTrackrequests();
 
         var i = 0;
