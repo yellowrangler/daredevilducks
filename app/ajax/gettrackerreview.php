@@ -167,5 +167,9 @@ mysqli_close($dbConn);
 //
 // pass back info
 //
-exit(json_encode($trackerdata));
+echo(json_encode($trackerdata));
+
+flush();
+ob_flush();
+exit(0);
 ?>
