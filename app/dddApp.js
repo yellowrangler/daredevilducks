@@ -261,10 +261,10 @@ dddApp.config(function ($routeProvider) {
                 controller: 'trackerreviewController',
                 templateUrl: 'app/partials/trackerreview.html'
             })
-        .when('/trackeropen',
+        .when('/trackerreviewwithoptions',
             {
-                controller: 'trackeropenController',
-                templateUrl: 'app/partials/trackeropen.html'
+                controller: 'trackerreviewwithoptionsController',
+                templateUrl: 'app/partials/trackerreviewwithoptions.html'
             })
         .when('/login',
             {
