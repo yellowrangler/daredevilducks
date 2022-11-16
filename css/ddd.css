@@ -1286,13 +1286,27 @@ border: 0 none;
 	background:#FF6E3B;
 }
 
+.table-scroll thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
 
+.table-scroll tbody {
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
+    width: 100%;
+    table-layout: fixed;
+}
 
-/*.bracketModalTitle {
-	font-family:'ChopinScript',
-	serif;
-	font-size:45px;
-	color:red;
-	text-align:center
-}*/
+.table-scroll tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
 
+.table-scroll td {
+    height: 47px; // needed in order to keep rows from collapsing
+    word-wrap:break-word;
+}

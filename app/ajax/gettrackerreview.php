@@ -8,8 +8,11 @@ include_once ('../class/class.AccessLog.php');
 // post input
 //
 $trackrequest = "";
-$parmset = "";
-$parmvalue = "";
+$memberid = "";
+$orderby = "";
+
+// print_r($_POST);
+// die();
 
 if (isset($_POST["trackrequest"]))
 {
@@ -28,31 +31,30 @@ else
 	}
 }
 
-if (isset($_POST["parmset"]))
+if (isset($_POST["memberid"]))
 {
-	$parmset = $_POST["parmset"];
+	$memberid = $_POST["memberid"];
 }
 else
 {
-	if (isset($_GET["parmset"]))
+	if (isset($_GET["memberid"]))
 	{
-		$parmset = $_GET["parmset"];
+		$memberid = $_GET["memberid"];
+	}
+	else
+	{
+		$memberid = "";
 	}
 }
 
-if (isset($_POST["parmvalue"]))
+$where = "";
+$orderby = "id";
+if ($memberid != "")
 {
-	$parmvalue = $_POST["parmvalue"];
-}
-else
-{
-	if (isset($_GET["parmvalue"]))
-	{
-		$parmvalue = $_GET["parmvalue"];
-	}
+	$where = " WHERE memberid = '$memberid' ";
 }
 
-$sqlselectallorderby = "SELECT 
+$sqlselectall = "SELECT 
   id,
   memberid,
   screenname,
@@ -63,8 +65,9 @@ $sqlselectallorderby = "SELECT
   tracktext,
   trackdate,
   device
-FROM tracktbl  
-ORDER BY id";
+FROM tracktbl
+$where  
+ORDER BY $orderby";
 
 $sqlcountontrackaction = "SELECT screenname, count(*) as hits,
   COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
@@ -81,6 +84,7 @@ $sqlcountontrackaction = "SELECT screenname, count(*) as hits,
   COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
   COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
 FROM tracktbl
+$where
 GROUP BY screenname ";
 
 $sqlgroupcountontrackaction = "SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
@@ -98,6 +102,7 @@ $sqlgroupcountontrackaction = "SELECT screenname, CAST(trackdate AS DATE) as tda
   COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
   COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
 FROM tracktbl
+$where
 GROUP BY tdate, screenname
 ORDER BY screenname, tdate";
 
@@ -129,7 +134,7 @@ include_once ('mysqlconnect.php');
 //---------------------------------------------------------------
 switch ($trackrequest) {
 	case "selectallorderby":
-		$sql = $sqlselectallorderby;
+		$sql = $sqlselectall;
 		break;
 
 	case "countontrackaction":

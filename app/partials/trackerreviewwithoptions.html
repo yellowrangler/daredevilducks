@@ -10,12 +10,48 @@
 			<div class="panel panel-default panelOverrideNoBorder">
 				<div class="panel-body">
 
-					<div class="form-group horizontalFieldOffset">
-				    	<label for="season" class="control-label">Select Review</label>
-			            <select class="customSelect form-control" ng-change="getTrackerReviewInfo()" ng-model="current.trackrequest" id="trackrequest" name="trackrequest">
-			                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
-			            </select>
-					</div> <!-- end of form-group -->
+					<form id="trackerreviewwithoptions" name="trackerreviewwithoptions">
+						<div class="form-group horizontalFieldOffset">
+					    	<label for="season" class="control-label">Select Review</label>
+		            <select 
+		            	class="customSelect form-control"
+		            	ng-model="current.trackrequest" 
+		            	ng-change="setStatus('')"
+		            	id="trackrequest" 
+		            	name="trackrequest">
+		                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
+		            </select>
+
+		            <label style="padding-left:30px;" for="screenname" class="control-label">Screen name</label>
+				        <select 
+				        	class="customSelect form-control" 
+				        	ng-model="current.memberid" id="memberid" 
+				        	name="memberid">
+				            <option 
+				            	ng-selected="current.memberid == member.id" 
+				            	ng-change="setStatus('')" 
+				            	ng-model="current.status"
+				            	ng-repeat="member in members" 
+				            	value="{{member.id}}">{{member.screenname}}
+				            </option>
+				        </select>
+
+				        <div style="padding-left:30px;" class="form-group horizontalFieldOffset">
+		                <button  
+			                style="font-weight:bold;" 
+			                class="btn btn-danger btn-sm" 
+			                ng-click="getTrackerReviewInfo()" 
+			                id="getTrackerReviewInfo" 
+			                name="getTrackerReviewInfo" >Get Tracker Records
+		                </button>
+								</div> <!-- end of form-group --> 
+
+		            <label style="padding-left:35px;" for="reviewcount" class="control-label">Count</label>
+		            <span class="customSelect form-control">
+		                {{ requestcount }}
+		            </span>
+						</div> <!-- end of form-group -->
+				</form>
 
 				</div> <!-- end of panel body -->		
 			</div> <!-- end of panel -->
@@ -26,129 +62,138 @@
 <div class="pageStandardOffset row">
 	<div class="col-md-12">
 		<div class="panel panel-default panelOverride">
-			<div class="panelBodyOverride table-responsive">
+			<div class="panelBodyOverride">
 
-				<table ng-if="current.trackrequest == ''" class="table" >
-
-					<tr style="width:100%" class="tableTitleNoBorder">	
-						<th style="width:100%;" class="center-column-text"> Select Review</th>
+				<table style="width:100%" ng-if="current.status == 'GO' && current.trackrequest == ''" class="table" >
+					<tr class="tableTitleNoBorder">	
+						<th class="center-column-text"> Select Review</th>
 					</tr>
 
-					<tr style="width:100%" >
+					<tr>
 						<td class="center-column-text"> Nothing to show!</td>
 					</tr>
+				</table>
+
+				<table style="width:100%;" ng-if="current.status == 'GO' && current.trackrequest == trackrequests[0].trackrequest" class="table table-scroll" >
+
+					<thead>
+						<tr class="tableTitleNoBorder">	
+							<th style="width:5%;" class="center-column-text">id</th>
+							<th style="width:5%;" class="center-column-text">memberid</th>
+							<th style="width:10%;" class="center-column-text">screenname</th>
+							<th style="width:8%;" class="center-column-text">season</th>
+							<th style="width:5%;" class="center-column-text">week</th>
+							<th style="width:13%;" class="center-column-text">trackaction</th>
+							<th style="width:17%;" class="center-column-text">trackmodule</th>
+							<th style="width:15%;" class="center-column-text">tracktext</th>
+							<th style="width:15%;" class="center-column-text">trackdate</th>
+							<th style="width:8%;" class="center-column-text">device</th>	
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="trackreview in trackreviews">
+							<td style="width:5%;" class="center-column-text"> {{ trackreview.id }} </td>
+							<td style="width:5%;" class="center-column-text"> {{ trackreview.memberid }} </td>
+							<td style="width:10%;" class="center-column-text"> {{ trackreview.screenname }} </td>
+							<td style="width:8%;" class="center-column-text"> {{ trackreview.season }} </td>
+							<td style="width:5%;" class="center-column-text"> {{ trackreview.week }} </td>
+							<td style="width:10%;" class="left-column-text"> {{ trackreview.trackaction }} </td>
+							<td style="width:20%;" class="left-column-text"> {{ trackreview.trackmodule }} </td>
+							<td style="width:15%;" class="left-column-text"> {{ trackreview.tracktext }} </td>
+							<td style="width:15%;" class="left-column-text"> {{ trackreview.trackdate }} </td>
+							<td style="width:8%;" class="center-column-text"> {{ trackreview.device }} </td>
+						</tr>
+					</tbody>
 
 				</table>
 
-				<table ng-if="current.trackrequest == trackrequests[0].trackrequest" class="table" >
+				<table style="width:100%;" ng-if="current.status == 'GO' && current.trackrequest == trackrequests[1].trackrequest" class="table table-scroll" >
 
-					<tr style="width:100%" class="tableTitleNoBorder">	
-						<th style="width:5%;" class="center-column-text">id</th>
-					  <th style="width:10%;" class="center-column-text">memberid</th>
-					  <th style="width:10%;" class="center-column-text">screenname</th>
-					  <th style="width:8%;" class="center-column-text">season</th>
-					  <th style="width:5%;" class="center-column-text">week</th>
-					  <th style="width:10%;" class="center-column-text">trackaction</th>
-					  <th style="width:10%;" class="center-column-text">trackmodule</th>
-					  <th style="width:15%;" class="center-column-text">tracktext</th>
-					  <th style="width:20%;" class="center-column-text">trackdate</th>
-					  <th style="width:8%;" class="center-column-text">device</th>	
-					</tr>
+					<thead>
+						<tr class="tableTitleNoBorder">	
+							<th style="width:10%;" class="center-column-text">screenname</th>
+							<th style="width:6%;" class="center-column-text">hits</th>
+							<th style="width:6%;" class="center-column-text">viewPicks</th>
+							<th style="width:6%;" class="center-column-text">pickList</th>
+							<th style="width:6%;" class="center-column-text">pickGames</th>
+							<th style="width:6%;" class="center-column-text">playerWeekly</th>
+							<th style="width:6%;" class="center-column-text">playerTls</th>
+							<th style="width:4%;" class="center-column-text">hof</th>
+							<th style="width:4%;" class="center-column-text">hom</th>
+							<th style="width:6%;" class="center-column-text">teamStatDia</th>
+							<th style="width:9%;" class="center-column-text">teamScrsStat</th>
+							<th style="width:6%;" class="center-column-text">teamStand</th>
+							<th style="width:6%;" class="center-column-text">teamDisc</th>
+							<th style="width:6%;" class="center-column-text">takeSurvey</th>
+							<th style="width:6%;" class="center-column-text">nflnews</th>
+						</tr>
+					</thead>
 
-					<tr ng-repeat="trackreview in trackreviews">
-						<td class="center-column-text"> {{ trackreview.id }} </td>
-						<td class="center-column-text"> {{ trackreview.memberid }} </td>
-						<td class="center-column-text"> {{ trackreview.screenname }} </td>
-						<td class="center-column-text"> {{ trackreview.season }} </td>
-						<td class="center-column-text"> {{ trackreview.week }} </td>
-						<td class="left-column-text"> {{ trackreview.trackaction }} </td>
-						<td class="left-column-text"> {{ trackreview.trackmodule }} </td>
-						<td class="left-column-text"> {{ trackreview.tracktext }} </td>
-						<td class="left-column-text"> {{ trackreview.trackdate }} </td>
-						<td class="center-column-text"> {{ trackreview.device }} </td>
-					</tr>
-
-				</table>
-
-				<table ng-if="current.trackrequest == trackrequests[1].trackrequest" class="table" >
-
-					<tr class="tableTitleNoBorder">	
-						<th style="width:13%;" class="center-column-text">screenname</th>
-					  <th style="width:6%;" class="center-column-text">hits</th>
-					  <th style="width:6%;" class="center-column-text">viewPicks</th>
-					  <th style="width:6%;" class="center-column-text">pickList</th>
-					  <th style="width:6%;" class="center-column-text">pickGames</th>
-					  <th style="width:6%;" class="center-column-text">playerWeekly</th>
-					  <th style="width:6%;" class="center-column-text">playerTls</th>
-					  <th style="width:4%;" class="center-column-text">hof</th>
-					  <th style="width:4%;" class="center-column-text">hom</th>
-					  <th style="width:6%;" class="center-column-text">teamStatDia</th>
-					  <th style="width:6%;" class="center-column-text">teamScrsStat</th>
-					  <th style="width:6%;" class="center-column-text">teamStand</th>
-					  <th style="width:6%;" class="center-column-text">teamDisc</th>
-					  <th style="width:6%;" class="center-column-text">takeSurvey</th>
-					  <th style="width:6%;" class="center-column-text">nflnews</th>
-					</tr>
-
-					<tr ng-repeat="trackreview in trackreviews">
-						<td class="left-column-text"> {{ trackreview.screenname }} </td>
-						<td class="center-column-text"> {{ trackreview.hits }} </td>
-						<td class="center-column-text"> {{ trackreview.viewPicks }} </td>
-						<td class="center-column-text"> {{ trackreview.pickList }} </td>
-						<td class="center-column-text"> {{ trackreview.pickGames }} </td>
-						<td class="center-column-text"> {{ trackreview.playerWeekly }} </td>
-						<td class="center-column-text"> {{ trackreview.playerTls }} </td>
-						<td class="center-column-text"> {{ trackreview.hof }} </td>
-						<td class="center-column-text"> {{ trackreview.hom }} </td>
-						<td class="center-column-text"> {{ trackreview.teamStatDia }} </td>
-						<td class="center-column-text"> {{ trackreview.teamScrsStat }} </td>
-						<td class="center-column-text"> {{ trackreview.teamStand }} </td>
-						<td class="center-column-text"> {{ trackreview.teamDisc }} </td>
-						<td class="center-column-text"> {{ trackreview.takeSurvey }} </td>
-						<td class="center-column-text"> {{ trackreview.nflnews }} </td>
-					</tr>
+					<tbody>
+						<tr ng-repeat="trackreview in trackreviews">
+							<td style="width:10%;"class="left-column-text"> {{ trackreview.screenname }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.hits }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.viewPicks }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.pickList }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.pickGames }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.playerWeekly }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.playerTls }} </td>
+							<td style="width:4%;" class="center-column-text"> {{ trackreview.hof }} </td>
+							<td style="width:4%;" class="center-column-text"> {{ trackreview.hom }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamStatDia }} </td>
+							<td style="width:9%;" class="center-column-text"> {{ trackreview.teamScrsStat }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamStand }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamDisc }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.takeSurvey }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.nflnews }} </td>
+						</tr>
+					</tbody>
 
 				</table>
+			
+				<table ng-if="current.status == 'GO' && current.trackrequest == trackrequests[2].trackrequest" class="table table-scroll" >
+					<thead>
+						<tr class="tableTitleNoBorder">	
+							<th style="width:9%;" class="center-column-text">screenname</th>
+							<th style="width:10%;" class="center-column-text">tdate</th>
+							<th style="width:4%;" class="center-column-text">hits</th>
+							<th style="width:6%;" class="center-column-text">viewPicks</th>
+							<th style="width:6%;" class="center-column-text">pickList</th>
+							<th style="width:6%;" class="center-column-text">pickGames</th>
+							<th style="width:8%;" class="center-column-text">playerWeekly</th>
+							<th style="width:6%;" class="center-column-text">playerTls</th>
+							<th style="width:4%;" class="center-column-text">hof</th>
+							<th style="width:4%;" class="center-column-text">hom</th>
+							<th style="width:6%;" class="center-column-text">teamStatDia</th>
+							<th style="width:9%;" class="center-column-text">teamScrsStat</th>
+							<th style="width:6%;" class="center-column-text">teamStand</th>
+							<th style="width:6%;" class="center-column-text">teamDisc</th>
+							<th style="width:6%;" class="center-column-text">takeSurvey</th>
+							<th style="width:6%;" class="center-column-text">nflnews</th>
+						</tr>
+					</thead>
 
-				<table ng-if="current.trackrequest == trackrequests[2].trackrequest" class="table" >
-					
-					<tr class="tableTitleNoBorder">	
-						<th style="width:13%;" class="center-column-text">screenname</th>
-						<th style="width:10%;" class="center-column-text">tdate</th>
-					  <th style="width:4%;" class="center-column-text">hits</th>
-					  <th style="width:6%;" class="center-column-text">viewPicks</th>
-					  <th style="width:6%;" class="center-column-text">pickList</th>
-					  <th style="width:6%;" class="center-column-text">pickGames</th>
-					  <th style="width:6%;" class="center-column-text">playerWeekly</th>
-					  <th style="width:6%;" class="center-column-text">playerTls</th>
-					  <th style="width:4%;" class="center-column-text">hof</th>
-					  <th style="width:4%;" class="center-column-text">hom</th>
-					  <th style="width:6%;" class="center-column-text">teamStatDia</th>
-					  <th style="width:6%;" class="center-column-text">teamScrsStat</th>
-					  <th style="width:6%;" class="center-column-text">teamStand</th>
-					  <th style="width:6%;" class="center-column-text">teamDisc</th>
-					  <th style="width:6%;" class="center-column-text">takeSurvey</th>
-					  <th style="width:6%;" class="center-column-text">nflnews</th>
-					</tr>
-
-					<tr ng-repeat="trackreview in trackreviews">
-						<td class="left-column-text"> {{ trackreview.screenname }} </td>
-						<td class="center-column-text"> {{ trackreview.tdate }} </td>
-						<td class="center-column-text"> {{ trackreview.hits }} </td>
-						<td class="center-column-text"> {{ trackreview.viewPicks }} </td>
-						<td class="center-column-text"> {{ trackreview.pickList }} </td>
-						<td class="center-column-text"> {{ trackreview.pickGames }} </td>
-						<td class="center-column-text"> {{ trackreview.playerWeekly }} </td>
-						<td class="center-column-text"> {{ trackreview.playerTls }} </td>
-						<td class="center-column-text"> {{ trackreview.hof }} </td>
-						<td class="center-column-text"> {{ trackreview.hom }} </td>
-						<td class="center-column-text"> {{ trackreview.teamStatDia }} </td>
-						<td class="center-column-text"> {{ trackreview.teamScrsStat }} </td>
-						<td class="center-column-text"> {{ trackreview.teamStand }} </td>
-						<td class="center-column-text"> {{ trackreview.teamDisc }} </td>
-						<td class="center-column-text"> {{ trackreview.takeSurvey }} </td>
-						<td class="center-column-text"> {{ trackreview.nflnews }} </td>
-					</tr>
+					<tbody>
+						<tr ng-repeat="trackreview in trackreviews">
+							<td style="width:9%;"class="left-column-text"> {{ trackreview.screenname }} </td>
+							<td style="width:10%;"class="center-column-text"> {{ trackreview.tdate }} </td>
+							<td style="width:4%;" class="center-column-text"> {{ trackreview.hits }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.viewPicks }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.pickList }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.pickGames }} </td>
+							<td style="width:8%;" class="center-column-text"> {{ trackreview.playerWeekly }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.playerTls }} </td>
+							<td style="width:4%;" class="center-column-text"> {{ trackreview.hof }} </td>
+							<td style="width:4%;" class="center-column-text"> {{ trackreview.hom }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamStatDia }} </td>
+							<td style="width:9%;" class="center-column-text"> {{ trackreview.teamScrsStat }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamStand }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamDisc }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.takeSurvey }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.nflnews }} </td>
+						</tr>
+					</tbody>
 
 				</table>
 

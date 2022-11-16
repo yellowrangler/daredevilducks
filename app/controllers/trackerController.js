@@ -2,6 +2,7 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
    
     function getTrackerReviewInfo() 
     {
+ 
         var q = "trackrequest="+$scope.current.trackrequest;
         trackerFactory.getTrackerReview(q)
             .success( function(data) {
@@ -36,7 +37,6 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
 
         $scope.current = {};
         $scope.current.trackrequest = "";
-
         
         buildTrackrequests();
 
@@ -48,14 +48,25 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
     }
 }
 
-controllers.trackerreviewwithoptionsController = function ($scope, $http, $location, $window) {
+controllers.trackerreviewwithoptionsController = function ($scope, $http, $location, $window, trackerFactory, membersFactory) {
    
    function getTrackerReviewInfo() 
     {
-        var q = "trackrequest="+$scope.current.trackrequest;
+        if ($scope.current.memberid == "")
+        {
+            var q = "trackrequest="+$scope.current.trackrequest;
+        }
+        else
+        {
+            var q = "trackrequest="+$scope.current.trackrequest+"&memberid="+$scope.current.memberid;
+        }
+
+        $scope.current.status = "GO";
+        
         trackerFactory.getTrackerReview(q)
             .success( function(data) {
                 $scope.trackreviews = data;
+                $scope.requestcount = data.length;
                 })
             .error( function(edata) {
                 alert(edata);
@@ -63,6 +74,18 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
 
         var i = 0;
     };
+
+    function getMembers() 
+    {
+        var orderby = "orderby=screenname";
+        membersFactory.getMembers(orderby)
+            .success( function(data) {
+                $scope.members = data; 
+                })
+            .error( function(edata) {
+                alert(edata);
+            });
+    }
 
     function buildTrackrequests() {
 
@@ -79,13 +102,24 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
         $window.scrollTo(0, 0);  
 
         $scope.trackrequests = {};
-
+        $scope.members = {};
         $scope.current = {};
+
         $scope.current.trackrequest = "";
+        $scope.current.memberid = "";
+        $scope.requestcount = 0;
+        $scope.current.status = "";
 
         buildTrackrequests();
-
-        var i = 0;
+        getMembers(); 
     };
+
+    $scope.getTrackerReviewInfo = function () {
+        getTrackerReviewInfo();
+    }
+
+    $scope.setStatus = function () {
+        $scope.current.status = "";
+    }
 
 }
