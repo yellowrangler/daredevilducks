@@ -15,6 +15,11 @@
 			            <select class="customSelect form-control" ng-change="getTrackerReviewInfo()" ng-model="current.trackrequest" id="trackrequest" name="trackrequest">
 			                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
 			            </select>
+
+			            <label style="padding-left:35px;" for="reviewcount" class="control-label">Count</label>
+			            <span class="customSelect form-control">
+			                {{ requestcount }}
+			            </span>
 					</div> <!-- end of form-group -->
 
 				</div> <!-- end of panel body -->		

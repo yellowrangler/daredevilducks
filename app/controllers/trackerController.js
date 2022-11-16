@@ -6,6 +6,7 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
         trackerFactory.getTrackerReview(q)
             .success( function(data) {
                 $scope.trackreviews = data;
+                $scope.requestcount = data.length;
                 })
             .error( function(edata) {
                 alert(edata);
@@ -29,6 +30,7 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
         $window.scrollTo(0, 0);  
 
         $scope.trackrequests = {};
+        $scope.requestcount = 0;
 
         $scope.current = {};
         $scope.current.trackrequest = "";
