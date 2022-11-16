@@ -169,7 +169,7 @@ mysqli_close($dbConn);
 //
 echo(json_encode($trackerdata));
 
-flush();
-ob_flush();
+// flush();
+// ob_flush();
 exit(0);
 ?>
