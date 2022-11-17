@@ -16,12 +16,12 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
         var i = 0;
     };
 
-    function buildTrackrequests() {
+    function buildTrackselections() {
 
         $scope.trackrequests = [
-            { trackrequest: "selectallorderby" },
-            { trackrequest: "countontrackaction" },
-            { trackrequest: "groupcountontrackaction" }
+            { trackrequest: "selectall" },
+            { trackrequest: "countaction" },
+            { trackrequest: "countactiongroup" }
         ];
         
     };
@@ -38,7 +38,7 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
         $scope.current = {};
         $scope.current.trackrequest = "";
         
-        buildTrackrequests();
+        buildTrackselections();
 
         var i = 0;
     };
@@ -52,13 +52,20 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
    
    function getTrackerReviewInfo() 
     {
-        if ($scope.current.memberid == "")
+        var q = "trackrequest="+$scope.current.trackrequest;
+        if ($scope.current.memberid != "")
         {
-            var q = "trackrequest="+$scope.current.trackrequest;
+            q = q + "&memberid="+$scope.current.memberid;
         }
-        else
+
+        if ($scope.current.trackorderby != "")
         {
-            var q = "trackrequest="+$scope.current.trackrequest+"&memberid="+$scope.current.memberid;
+            q = q + "&trackorderby="+$scope.current.trackorderby;
+        }
+
+        if ($scope.current.trackorderbysort != "")
+        {
+            q = q + "&trackorderbysort="+$scope.current.trackorderbysort;
         }
 
         $scope.current.status = "GO";
@@ -87,30 +94,116 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
             });
     }
 
-    function buildTrackrequests() {
+    function buildTrackselections() {
 
         $scope.trackrequests = [
-            { trackrequest: "selectallorderby" },
-            { trackrequest: "countontrackaction" },
-            { trackrequest: "groupcountontrackaction" }
+            { trackrequest: "selectall" },
+            { trackrequest: "countaction" },
+            { trackrequest: "countactiongroup" }
+        ];
+
+        $scope.trackorderbyselectalls = [
+            { trackorderby: "id" },
+            { trackorderby: "memberid" },
+            { trackorderby: "screenname" },
+            { trackorderby: "season" },
+            { trackorderby: "week" },
+            { trackorderby: "trackaction" },
+            { trackorderby: "trackmodule" },
+            { trackorderby: "tracktext" },
+            { trackorderby: "trackdate" },
+            { trackorderby: "device" }
+        ];
+
+        $scope.trackorderbycountactions = [
+            { trackorderby: "screenname" },
+            { trackorderby: "hits" },
+            { trackorderby: "viewPicks" },
+            { trackorderby: "pickList" },
+            { trackorderby: "pickGames" },
+            { trackorderby: "playerWeekly" },
+            { trackorderby: "playerTls" },
+            { trackorderby: "hof" },
+            { trackorderby: "hom" },
+            { trackorderby: "teamStatDia" },
+            { trackorderby: "teamScrsStat" },
+            { trackorderby: "teamStand" },
+            { trackorderby: "teamDisc" },
+            { trackorderby: "takeSurvey" },
+            { trackorderby: "nflnews" }
+        ];
+
+        $scope.trackorderbycountactiongroups = [
+            { trackorderby: "screenname" },
+            { trackorderby: "hits" },
+            { trackorderby: "tdate" },
+            { trackorderby: "viewPicks" },
+            { trackorderby: "pickList" },
+            { trackorderby: "pickGames" },
+            { trackorderby: "playerWeekly" },
+            { trackorderby: "playerTls" },
+            { trackorderby: "hof" },
+            { trackorderby: "hom" },
+            { trackorderby: "teamStatDia" },
+            { trackorderby: "teamScrsStat" },
+            { trackorderby: "teamStand" },
+            { trackorderby: "teamDisc" },
+            { trackorderby: "takeSurvey" },
+            { trackorderby: "nflnews" }
         ];
         
     };
+
+    function setSelectionCriteria(selected) 
+    {
+        if (selected == "selectreview")
+        {
+            $scope.current.status = "";
+            $scope.current.trackgroupby = "";
+            $scope.current.trackorderby = "";
+            $scope.current.trackorderbysort = "";
+            $scope.current.memberid = "";
+        }
+            
+        switch ($scope.current.trackrequest)
+        {
+            case "selectall":
+                $scope.trackorderbys = $scope.trackorderbyselectalls;
+                break;
+
+            case "countaction":
+                $scope.trackorderbys = $scope.trackorderbycountactions;
+                break;
+
+            case "countactiongroup":
+                $scope.trackorderbys = $scope.trackorderbycountactiongroups;
+                break;
+
+            default:
+                var i =  0;
+        } 
+        
+    } 
 
     init();
     function init() {
         $window.scrollTo(0, 0);  
 
         $scope.trackrequests = {};
+        $scope.trackorderbys = {};
+        $scope.trackgroupbys = {};
         $scope.members = {};
         $scope.current = {};
 
         $scope.current.trackrequest = "";
+        $scope.current.trackorderby = "";
+        $scope.current.trackorderbysort = "";
+        $scope.current.trackgroupby = "";
         $scope.current.memberid = "";
         $scope.requestcount = 0;
         $scope.current.status = "";
 
-        buildTrackrequests();
+        buildTrackselections();
         getMembers(); 
     };
 
@@ -118,8 +211,8 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
         getTrackerReviewInfo();
     }
 
-    $scope.setStatus = function () {
-        $scope.current.status = "";
+    $scope.setSelectionCriteria = function (selected) {
+        setSelectionCriteria(selected);
     }
 
 }

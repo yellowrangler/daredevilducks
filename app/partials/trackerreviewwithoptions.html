@@ -11,46 +11,101 @@
 				<div class="panel-body">
 
 					<form id="trackerreviewwithoptions" name="trackerreviewwithoptions">
-						<div class="form-group horizontalFieldOffset">
-					    	<label for="season" class="control-label">Select Review</label>
-		            <select 
-		            	class="customSelect form-control"
-		            	ng-model="current.trackrequest" 
-		            	ng-change="setStatus('')"
-		            	id="trackrequest" 
-		            	name="trackrequest">
-		                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
-		            </select>
+						<div>
+							<div class="form-group horizontalFieldOffset">
+						    	<label for="season" class="control-label">Select Review</label>
+			            <select 
+			            	class="customSelect form-control"
+			            	ng-model="current.trackrequest" 
+			            	ng-change="setSelectionCriteria('selectreview')" 
+			            	id="trackrequest" 
+			            	name="trackrequest">
+			            		<option value="">No Selection</option>
+			                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
+			            </select>
 
-		            <label style="padding-left:30px;" for="screenname" class="control-label">Screen name</label>
-				        <select 
-				        	class="customSelect form-control" 
-				        	ng-model="current.memberid" id="memberid" 
-				        	name="memberid">
-				            <option 
-				            	ng-selected="current.memberid == member.id" 
-				            	ng-change="setStatus('')" 
-				            	ng-model="current.status"
-				            	ng-repeat="member in members" 
-				            	value="{{member.id}}">{{member.screenname}}
-				            </option>
-				        </select>
+			            <label ng-if="current.trackrequest == trackrequests[0].trackrequest"
+				            style="padding-left:30px;" 
+				            for="screenname" class="control-label">Screen name
+				          </label>
+					        <select 
+					        	ng-if="current.trackrequest == trackrequests[0].trackrequest"
+					        	class="customSelect form-control" 
+					        	ng-model="current.memberid" id="memberid" 
+					        	name="memberid">
+					        		<option value="">No Selection</option>
+					            <option 
+					            	ng-selected="current.memberid == member.id" 
+					            	ng-change="setSelectionCriteria('screenname')" 
+					            	ng-model="current.status"
+					            	ng-repeat="member in members" 
+					            	value="{{member.id}}">{{member.screenname}}
+					            </option>
+					        </select>
 
-				        <div style="padding-left:30px;" class="form-group horizontalFieldOffset">
-		                <button  
-			                style="font-weight:bold;" 
-			                class="btn btn-danger btn-sm" 
-			                ng-click="getTrackerReviewInfo()" 
-			                id="getTrackerReviewInfo" 
-			                name="getTrackerReviewInfo" >Get Tracker Records
-		                </button>
-								</div> <!-- end of form-group --> 
+					      <!--  <label ng-if="current.trackrequest == trackrequests[1].trackrequest"
+				            style="padding-left:30px;" 
+				            for="screenname" class="control-label">Group
+				          </label>
+					        <select 
+					        	ng-if="current.trackrequest == trackrequests[1].trackrequest"
+					        	class="customSelect form-control" 
+					        	ng-change="setSelectionCriteria('group')" 
+					        	ng-model="current.trackgroupby" id="trackgroupby" 
+					        	name="trackorderby">
+					        		<option value="">No Selection</option>
+			                <option ng-repeat="trackgroupby in trackgroupbys" value="{{trackgroupby.trackgroupby}}">{{trackgroupby.trackgroupby}}</option>
+					        </select>
+ -->
+					        <label ng-if="current.trackrequest != ''"
+				            style="padding-left:30px;" 
+				            for="screenname" class="control-label">Order
+				          </label>
+					        <select 
+					        	ng-if="current.trackrequest != ''"
+					        	class="customSelect form-control" 
+					        	ng-change="setSelectionCriteria('order')" 
+					        	ng-model="current.trackorderby" id="trackorderby" 
+					        	name="trackorderby">
+					        		<option value="">No Selection</option>
+			                <option ng-repeat="trackorderby in trackorderbys" value="{{trackorderby.trackorderby}}">{{trackorderby.trackorderby}}</option>
+					        </select>
 
-		            <label style="padding-left:35px;" for="reviewcount" class="control-label">Count</label>
-		            <span class="customSelect form-control">
-		                {{ requestcount }}
-		            </span>
-						</div> <!-- end of form-group -->
+					        <label ng-if="current.trackrequest != ''"
+				            style="padding-left:30px;" 
+				            for="screenname" class="control-label">Sort
+				          </label>
+					        <select 
+					        	ng-if="current.trackrequest != ''"
+					        	class="customSelect form-control" 
+					        	ng-change="setSelectionCriteria('sort')" 
+					        	ng-model="current.trackorderbysort" id="trackorderbysort" 
+					        	name="trackorderbysort">
+					        		<option value="">No Selection</option>
+			                <option value="ASC">Ascending</option>
+			                <option value="DESC">Descending</option>
+					        </select>
+							</div> <!-- end of form-group -->
+						</div>	
+
+						<div>
+							<div style="padding-top:30px;" class="form-group horizontalFieldOffset">
+					        <div class="form-group horizontalFieldOffset">
+			                <button  
+				                style="font-weight:bold;" 
+				                class="btn btn-danger btn-sm" 
+				                ng-click="getTrackerReviewInfo()" 
+				                id="getTrackerReviewInfo" 
+				                name="getTrackerReviewInfo" >Get Tracker Records
+			                </button>
+									</div> <!-- end of form-group --> 
+
+			            <label style="padding-left:35px;" for="reviewcount" class="control-label">Count</label>
+			            <span class="customSelect form-control">
+			                {{ requestcount }}
+			            </span>
+							</div> <!-- end of form-group -->
+						</div>
 				</form>
 
 				</div> <!-- end of panel body -->		

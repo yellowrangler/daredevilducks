@@ -59,6 +59,36 @@ FROM tracktbl
 WHERE [ any-field or none ] [ value-for-where ]
 ORDER BY [ any-field or none ] [ DESC or ASC or none ]
 
+SELECT  
+  id,
+  memberid,
+  screenname,
+  season,
+  week,
+  trackaction,
+  trackmodule,
+  tracktext,
+  trackdate,
+  device
+FROM tracktbl  
+WHERE [ any-field or none ] [ value-for-where ]
+ORDER BY [ any-field or none ] [ DESC or ASC or none ]
+
+SELECT  
+  id,
+  memberid,
+  screenname,
+  season,
+  week,
+  trackaction,
+  trackmodule,
+  tracktext,
+  trackdate,
+  device
+FROM tracktbl  
+GROUP BY trackmodule 
+ORDER BY trackdate
+
 -- select with group by single and double group
 SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits, [ what to select ]
   COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
@@ -192,6 +222,29 @@ FROM
   COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
   FROM tracktbl
   GROUP BY screenname) t;
+
+-- number of count on devices
+SELECT device, count(device) as devicehit
+FROM tracktbl 
+group by device;
+
+-- all picks what trackaction count
+SELECT screenname, trackaction, count(trackaction) as hits
+FROM tracktbl  
+group by trackaction,screenname
+order by trackaction;
+order by screenname;
+
+-- who has seen what trackaction count
+SELECT screenname, trackaction, count(trackaction) as hits
+FROM tracktbl  
+where trackaction "s"
+group by trackaction,screenname
+order by trackaction;
+order by screenname;
+
+add order by and asc or desc
+
 
 SELECT screenname, count(trackaction) as hits
 FROM tracktbl 

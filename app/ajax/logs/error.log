@@ -16,3 +16,131 @@
 2022-11-15 12:31:09 : SQL: 
 2022-11-16 01:37:48 : SQL error:  - Error function: select msg: Unable to get tracker review information.
 2022-11-16 01:37:48 : SQL: 
+2022-11-17 14:42:49 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'hits DESC' at line 18 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 14:42:49 : SQL: SELECT screenname, count(*) as hits,
+		  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
+		  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+		  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
+		  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
+		  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
+		  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
+		  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
+		  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
+		  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
+		  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teamStand,  
+		  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
+		  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
+		  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+		FROM tracktbl
+		
+		 GROUP BY   screenname  
+		 hits DESC 
+2022-11-17 14:56:07 : SQL error: Unknown column 'hits' in 'order clause' - Error function: select msg: Unable to get tracker review information.
+2022-11-17 14:56:07 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		 WHERE memberid = '108'   
+		ORDER BY  hits DESC
+2022-11-17 14:59:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 14:59:41 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		 WHERE memberid = '1'   
+		ORDER BY   
+2022-11-17 15:00:06 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 15:00:06 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		  
+		ORDER BY   
+2022-11-17 15:02:32 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 15:02:32 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		  
+		ORDER BY   
+2022-11-17 15:04:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 15:04:04 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		  
+		ORDER BY   
+2022-11-17 15:05:00 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 14 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 15:05:00 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		  
+		ORDER BY   
+2022-11-17 15:47:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 18 - Error function: select msg: Unable to get tracker review information.
+2022-11-17 15:47:10 : SQL: SELECT screenname, count(*) as hits,
+		  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
+		  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+		  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
+		  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
+		  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
+		  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
+		  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
+		  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
+		  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
+		  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teamStand,  
+		  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
+		  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
+		  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+		FROM tracktbl
+		
+		 GROUP BY   screenname  
+		ORDER BY    
