@@ -147,7 +147,7 @@ switch ($trackrequest) {
 
 		if ($trackorderbysort == "")
 		{
-			$$trackorderbysort = "DESC";
+			$trackorderbysort = "DESC";
 		}
 
 		$sqlselectall = "SELECT 
@@ -179,9 +179,8 @@ switch ($trackrequest) {
 		$orderby = "ORDER BY ";
 		if ($trackorderby == "")
 		{
-			$$trackorderby = "screenname";
+			$trackorderby = "screenname";
 		}
-
 
 		$sqlcountaction = "SELECT screenname, count(*) as hits,
 		  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
@@ -216,7 +215,6 @@ switch ($trackrequest) {
 			$trackorderby = "screenname, tdate";
 		}
 		
-
 		$sqlcountactiongroup = "SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
 		  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
 		  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,

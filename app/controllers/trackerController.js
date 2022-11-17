@@ -134,6 +134,8 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
         ];
 
         $scope.trackorderbycountactiongroups = [
+            { trackorderby: "screenname, tdate" },
+            { trackorderby: "tdate, screenname" },
             { trackorderby: "screenname" },
             { trackorderby: "hits" },
             { trackorderby: "tdate" },

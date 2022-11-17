@@ -155,7 +155,6 @@ LINES TERMINATED BY "\n"
 FROM tracktbl
 GROUP BY screenname;
 
-
 SELECT screenname, count(*) as hits,
   COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
   COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
