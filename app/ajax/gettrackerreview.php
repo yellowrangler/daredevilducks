@@ -211,8 +211,11 @@ switch ($trackrequest) {
 		$groupbyvalue = " tdate, screenname ";
 
 		$orderby = "ORDER BY ";
-		$trackorderby = "screenname, tdate";
-		$trackorderbysort = "DESC";
+		if ($trackorderby == "")
+		{
+			$trackorderby = "screenname, tdate";
+		}
+		
 
 		$sqlcountactiongroup = "SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
 		  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
