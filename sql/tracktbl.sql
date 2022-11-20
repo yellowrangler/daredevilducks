@@ -74,6 +74,49 @@ FROM tracktbl
 WHERE [ any-field or none ] [ value-for-where ]
 ORDER BY [ any-field or none ] [ DESC or ASC or none ]
 
+Where: 
+screenname 
+season
+week 
+trackaction
+trackmodule
+tracktext
+trackdate
+device 
+
+Operator:
+=
+>
+<
+<>
+like
+
+Value:
+screenname list
+season list
+week list
+trackaction list
+trackmodule list
+tracktext list
+trackdate list
+device list
+
+Orderby:
+screenname 
+season
+week 
+trackaction
+trackmodule
+tracktext
+trackdate
+device 
+
+Sort:
+ASC
+DESC
+
+
+
 SELECT  
   id,
   memberid,

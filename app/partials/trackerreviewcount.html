@@ -1,6 +1,6 @@
 <div class="pageCaption row">
 	<div style="padding-top:15px;display:inline;" class="col-md-12">
-		<h3 style="display:inline;" class="headerTitle4">Tracker Review with Options</h3>
+		<h3 style="display:inline;" class="headerTitle4">Tracker Review Count</h3>
 	</div> <!-- end of column -->
 </div> <!-- end of row -->	
 
@@ -14,96 +14,83 @@
 						<div>
 							<div class="form-group horizontalFieldOffset">
 						    	<label for="season" class="control-label">Select Review</label>
-			            <select 
-			            	class="customSelect form-control"
-			            	ng-model="current.trackrequest" 
-			            	ng-change="setSelectionCriteria('selectreview')" 
-			            	id="trackrequest" 
-			            	name="trackrequest">
-			            		<option value="">No Selection</option>
-			                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
-			            </select>
+					            <select 
+					            	class="customSelect form-control"
+					            	ng-model="current.trackrequest" 
+					            	ng-change="setSelectionCriteria('selectreview')" 
+					            	id="trackrequest" 
+					            	name="trackrequest">
+					            		<option value="">No Selection</option>
+					                <option ng-repeat="trackrequest in trackrequests" value="{{trackrequest.trackrequest}}">{{trackrequest.trackrequest}}</option>
+					            </select>
 
-			            <label ng-if="current.trackrequest == trackrequests[0].trackrequest"
-				            style="padding-left:30px;" 
-				            for="screenname" class="control-label">Screen name
-				          </label>
-					        <select 
-					        	ng-if="current.trackrequest == trackrequests[0].trackrequest"
-					        	class="customSelect form-control" 
-					        	ng-model="current.memberid" id="memberid" 
-					        	name="memberid">
-					        		<option value="">No Selection</option>
-					            <option 
-					            	ng-selected="current.memberid == member.id" 
-					            	ng-change="setSelectionCriteria('screenname')" 
-					            	ng-model="current.status"
-					            	ng-repeat="member in members" 
-					            	value="{{member.id}}">{{member.screenname}}
-					            </option>
-					        </select>
+					            <label 
+					            	ng-if="current.trackrequest != ''"
+						            style="padding-left:30px;" 
+						            for="screenname" class="control-label">Screen name
+						          </label>
+							        <select 
+							        	ng-if="current.trackrequest != ''"
+							        	class="customSelect form-control" 
+							        	ng-model="current.memberid" id="memberid" 
+							        	name="memberid">
+							        		<option value="">No Selection</option>
+							            <option 
+							            	ng-selected="current.memberid == member.id" 
+							            	ng-change="setSelectionCriteria('screenname')" 
+							            	ng-model="current.status"
+							            	ng-repeat="member in members" 
+							            	value="{{member.id}}">{{member.screenname}}
+							            </option>
+							        </select>
 
-					      <!--  <label ng-if="current.trackrequest == trackrequests[1].trackrequest"
-				            style="padding-left:30px;" 
-				            for="screenname" class="control-label">Group
-				          </label>
-					        <select 
-					        	ng-if="current.trackrequest == trackrequests[1].trackrequest"
-					        	class="customSelect form-control" 
-					        	ng-change="setSelectionCriteria('group')" 
-					        	ng-model="current.trackgroupby" id="trackgroupby" 
-					        	name="trackorderby">
-					        		<option value="">No Selection</option>
-			                <option ng-repeat="trackgroupby in trackgroupbys" value="{{trackgroupby.trackgroupby}}">{{trackgroupby.trackgroupby}}</option>
-					        </select>
- -->
-					        <label ng-if="current.trackrequest != ''"
-				            style="padding-left:30px;" 
-				            for="screenname" class="control-label">Order
-				          </label>
-					        <select 
-					        	ng-if="current.trackrequest != ''"
-					        	class="customSelect form-control" 
-					        	ng-change="setSelectionCriteria('order')" 
-					        	ng-model="current.trackorderby" id="trackorderby" 
-					        	name="trackorderby">
-					        		<option value="">No Selection</option>
-			                <option ng-repeat="trackorderby in trackorderbys" value="{{trackorderby.trackorderby}}">{{trackorderby.trackorderby}}</option>
-					        </select>
+							        <label ng-if="current.trackrequest != ''"
+						            style="padding-left:30px;" 
+						            for="screenname" class="control-label">Order
+						          </label>
+							        <select 
+							        	ng-if="current.trackrequest != ''"
+							        	class="customSelect form-control" 
+							        	ng-change="setSelectionCriteria('order')" 
+							        	ng-model="current.trackorderby" id="trackorderby" 
+							        	name="trackorderby">
+							        		<option value="">No Selection</option>
+					                <option ng-repeat="trackorderby in trackorderbys" value="{{trackorderby.trackorderby}}">{{trackorderby.trackorderby}}</option>
+							        </select>
 
-					        <label ng-if="current.trackrequest != ''"
-				            style="padding-left:30px;" 
-				            for="screenname" class="control-label">Sort
-				          </label>
-					        <select 
-					        	ng-if="current.trackrequest != ''"
-					        	class="customSelect form-control" 
-					        	ng-change="setSelectionCriteria('sort')" 
-					        	ng-model="current.trackorderbysort" id="trackorderbysort" 
-					        	name="trackorderbysort">
-					        		<option value="">No Selection</option>
-			                <option value="ASC">Ascending</option>
-			                <option value="DESC">Descending</option>
-					        </select>
-							</div> <!-- end of form-group -->
-						</div>	
+							        <label ng-if="current.trackrequest != ''"
+						            style="padding-left:30px;" 
+						            for="screenname" class="control-label">Sort
+						          </label>
+							        <select 
+							        	ng-if="current.trackrequest != ''"
+							        	class="customSelect form-control" 
+							        	ng-change="setSelectionCriteria('sort')" 
+							        	ng-model="current.trackorderbysort" id="trackorderbysort" 
+							        	name="trackorderbysort">
+							        		<option value="">No Selection</option>
+					                <option value="ASC">Ascending</option>
+					                <option value="DESC">Descending</option>
+							        </select>
+									</div> <!-- end of form-group -->
+								</div>	
 
-						<div>
-							<div style="padding-top:30px;" class="form-group horizontalFieldOffset">
-					        <div class="form-group horizontalFieldOffset">
-			                <button  
-				                style="font-weight:bold;" 
-				                class="btn btn-danger btn-sm" 
-				                ng-click="getTrackerReviewInfo()" 
-				                id="getTrackerReviewInfo" 
-				                name="getTrackerReviewInfo" >Get Tracker Records
-			                </button>
-									</div> <!-- end of form-group --> 
+								<div>
+									<div style="padding-top:30px;" class="form-group horizontalFieldOffset">
+							        <div class="form-group horizontalFieldOffset">
+					                <button  
+						                style="font-weight:bold;" 
+						                class="btn btn-danger btn-sm" 
+						                ng-click="getTrackerReviewInfo()" 
+						                id="getTrackerReviewInfo" 
+						                name="getTrackerReviewInfo" >Get Tracker Records
+					                </button>
+											</div> <!-- end of form-group --> 
 
-			            <label style="padding-left:35px;" for="reviewcount" class="control-label">Count</label>
-			            <span class="customSelect form-control">
-			                {{ requestcount }}
-			            </span>
+					            <label style="padding-left:35px;" for="reviewcount" class="control-label">Count</label>
+					            <span class="customSelect form-control">
+					                {{ requestcount }}
+					            </span>
 							</div> <!-- end of form-group -->
 						</div>
 				</form>
@@ -130,40 +117,6 @@
 				</table>
 
 				<table style="width:100%;" ng-if="current.status == 'GO' && current.trackrequest == trackrequests[0].trackrequest" class="table table-scroll" >
-
-					<thead>
-						<tr class="tableTitleNoBorder">	
-							<th style="width:5%;" class="center-column-text">id</th>
-							<th style="width:5%;" class="center-column-text">memberid</th>
-							<th style="width:12%;" class="center-column-text">screenname</th>
-							<th style="width:8%;" class="center-column-text">season</th>
-							<th style="width:5%;" class="center-column-text">week</th>
-							<th style="width:13%;" class="center-column-text">trackaction</th>
-							<th style="width:18%;" class="center-column-text">trackmodule</th>
-							<th style="width:15%;" class="center-column-text">tracktext</th>
-							<th style="width:15%;" class="center-column-text">trackdate</th>
-							<th style="width:8%;" class="center-column-text">device</th>	
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr ng-repeat="trackreview in trackreviews">
-							<td style="width:5%;" class="center-column-text"> {{ trackreview.id }} </td>
-							<td style="width:5%;" class="center-column-text"> {{ trackreview.memberid }} </td>
-							<td style="width:12%;" class="left-column-text"> {{ trackreview.screenname }} </td>
-							<td style="width:8%;" class="center-column-text"> {{ trackreview.season }} </td>
-							<td style="width:5%;" class="center-column-text"> {{ trackreview.week }} </td>
-							<td style="width:13%;" class="left-column-text"> {{ trackreview.trackaction }} </td>
-							<td style="width:18%;" class="left-column-text"> {{ trackreview.trackmodule }} </td>
-							<td style="width:15%;" class="left-column-text"> {{ trackreview.tracktext }} </td>
-							<td style="width:15%;" class="left-column-text"> {{ trackreview.trackdate }} </td>
-							<td style="width:8%;" class="center-column-text"> {{ trackreview.device }} </td>
-						</tr>
-					</tbody>
-
-				</table>
-
-				<table style="width:100%;" ng-if="current.status == 'GO' && current.trackrequest == trackrequests[1].trackrequest" class="table table-scroll" >
 
 					<thead>
 						<tr class="tableTitleNoBorder">	
@@ -207,7 +160,7 @@
 
 				</table>
 			
-				<table ng-if="current.status == 'GO' && current.trackrequest == trackrequests[2].trackrequest" class="table table-scroll" >
+				<table ng-if="current.status == 'GO' && current.trackrequest == trackrequests[1].trackrequest" class="table table-scroll" >
 					<thead>
 						<tr class="tableTitleNoBorder">	
 							<th style="width:9%;" class="center-column-text">screenname</th>

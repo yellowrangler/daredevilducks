@@ -9,6 +9,15 @@ dddApp.factory('trackerFactory', function($q, $http) {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
     }
+
+    factory.getTrackerSelectWhere = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/gettrackerselectwhere.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
     
 
     return factory;

@@ -220,3 +220,34 @@
 		
 		 GROUP BY   screenname  
 		ORDER BY  screenname, tdate DESC 
+2022-11-20 12:38:25 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY memberid ASC' at line 14 - Error function: select msg: Unable to get tracker review information.
+2022-11-20 12:38:25 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		 WHERE       
+		ORDER BY memberid ASC
+2022-11-20 12:46:47 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Eye   
+		ORDER BY screenname ASC' at line 13 - Error function: select msg: Unable to get tracker review information.
+2022-11-20 12:46:47 : SQL: SELECT 
+		  id,
+		  memberid,
+		  screenname,
+		  season,
+		  week,
+		  trackaction,
+		  trackmodule,
+		  tracktext,
+		  trackdate,
+		  device
+		FROM tracktbl
+		 WHERE screenname =  Hawk Eye   
+		ORDER BY screenname ASC

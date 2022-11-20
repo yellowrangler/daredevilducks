@@ -1,9 +1,37 @@
-controllers.trackerreviewController = function ($scope, $http, $location, $window, trackerFactory) {
+controllers.trackerreviewselectController = function ($scope, $http, $location, $window, trackerFactory, membersFactory) 
+{
    
-    function getTrackerReviewInfo() 
+   function getTrackerReviewInfo() 
     {
- 
+
         var q = "trackrequest="+$scope.current.trackrequest;
+        if ($scope.current.trackselectwhere != "")
+        {
+            q = q + "&trackselectwhere="+$scope.current.trackselectwhere;
+        }
+
+        if ($scope.current.trackselectwherecompare != "")
+        {
+            q = q + "&trackselectwherecompare="+$scope.current.trackselectwherecompare;
+        }
+
+        if ($scope.current.trackselectwherevalue != "")
+        {
+            q = q + "&trackselectwherevalue="+$scope.current.trackselectwherevalue;
+        }
+
+        if ($scope.current.trackorderby != "")
+        {
+            q = q + "&trackorderby="+$scope.current.trackorderby;
+        }
+
+        if ($scope.current.trackorderbysort != "")
+        {
+            q = q + "&trackorderbysort="+$scope.current.trackorderbysort;
+        }
+
+        $scope.current.status = "GO";
+        
         trackerFactory.getTrackerReview(q)
             .success( function(data) {
                 $scope.trackreviews = data;
@@ -16,39 +44,156 @@ controllers.trackerreviewController = function ($scope, $http, $location, $windo
         var i = 0;
     };
 
-    function buildTrackselections() {
+    function buildTrackselections() 
+    {
 
         $scope.trackrequests = [
-            { trackrequest: "selectall" },
-            { trackrequest: "countaction" },
-            { trackrequest: "countactiongroup" }
+            { trackrequest: "selectstandard" },
+            { trackrequest: "selectmultiple" },
+            { trackrequest: "selecttoppicker" }
+        ];
+
+        $scope.trackselectwheres = [
+            { trackselectwhere: "id" },
+            { trackselectwhere: "memberid" },
+            { trackselectwhere: "screenname" },
+            { trackselectwhere: "season" },
+            { trackselectwhere: "week" },
+            { trackselectwhere: "trackaction" },
+            { trackselectwhere: "trackmodule" },
+            { trackselectwhere: "tracktext" },
+            { trackselectwhere: "trackdate" },
+            { trackselectwhere: "device" }
+        ];
+
+        $scope.trackselectwherecompares = [
+            { trackselectwherecompare: "=" },
+            { trackselectwherecompare: ">" },
+            { trackselectwherecompare: "<" },
+            { trackselectwherecompare: "<>" },
+            { trackselectwherecompare: "like" }
+        ];
+
+        $scope.trackorderbys = [
+            { trackorderby: "id" },
+            { trackorderby: "memberid" },
+            { trackorderby: "screenname" },
+            { trackorderby: "season" },
+            { trackorderby: "week" },
+            { trackorderby: "trackaction" },
+            { trackorderby: "trackmodule" },
+            { trackorderby: "tracktext" },
+            { trackorderby: "trackdate" },
+            { trackorderby: "device" }
         ];
         
     };
 
-    init();
-    function init() {
-        $window.scrollTo(0, 0); 
-        var windowHeight = window.innerHeight;
-        $scope.current.trackreaquesttablesize = windowHeight * .45;
- 
-        $scope.trackrequests = {};
-        $scope.requestcount = 0;
+    function buildWhereValueSelectionList()
+    {
+        var q = "trackselectwhere="+$scope.current.trackselectwhere;
+        
+        trackerFactory.getTrackerSelectWhere(q)
+            .success( function(data) {
+              
+               var selectwherevalues = [];
+               var selectwherevalue = {};
+               var i = 0;
+               for (i = 0; i < data.length; i++)
+               {
+                   selectwherevalue = { 'trackselectwherevalue': data[i] };
+                   selectwherevalues.push(selectwherevalue);
+               }
 
+                $scope.trackselectwherevalues = selectwherevalues;
+
+                var i = 0;
+            })
+            .error( function(edata) {
+                alert(edata);
+            });
+        
+    }
+
+    function resetGlobalVariables() 
+    {
+        $scope.current.trackselectwhere = "";
+        $scope.current.trackselectwherecompare = "";
+        $scope.current.trackselectwherevalue = "";
+        $scope.current.trackorderby = "";
+        $scope.current.trackorderbysort = "";
+        $scope.requestcount = 0;
+        $scope.current.status = "";
+        $scope.current.fieldstatus = "";
+    }
+
+    function setSelectionCriteria(selected) 
+    {
+        switch (selected)
+        {
+            case "selectreview":
+                resetGlobalVariables(); 
+                break;
+
+            case "selectwhere":
+                if ($scope.current.trackselectwhere == "tracktext")
+                {
+                    $scope.current.fieldstatus = "input";
+                }
+                else
+                {
+                    $scope.current.fieldstatus = "";
+                }
+                buildWhereValueSelectionList();
+                break;
+
+            case "selectwherecompare":
+                if ($scope.current.trackselectwherecompare == "like")
+                {
+                    $scope.current.fieldstatus = "input";
+                }
+                break;
+
+            case "selectwherecompare":
+                break;    
+
+            case "selectwherevalues":
+                break;
+
+            default:
+                var i =  0;
+        } 
+    } 
+
+    init();
+    function init() 
+    {
+        $window.scrollTo(0, 0);  
+
+        $scope.trackrequests = {};
+        $scope.trackselectwheres = {};
+        $scope.trackselectwherecompares = {};
+        $scope.trackselectwherevalues = {};
+        $scope.trackorderbys = {};
         $scope.current = {};
         $scope.current.trackrequest = "";
-        
-        buildTrackselections();
 
-        var i = 0;
+        resetGlobalVariables();
+
+        buildTrackselections();
     };
 
     $scope.getTrackerReviewInfo = function () {
         getTrackerReviewInfo();
     }
+
+    $scope.setSelectionCriteria = function (selected) {
+        setSelectionCriteria(selected);
+    }
+
 }
 
-controllers.trackerreviewwithoptionsController = function ($scope, $http, $location, $window, trackerFactory, membersFactory) {
+controllers.trackerreviewcountController = function ($scope, $http, $location, $window, trackerFactory, membersFactory) {
    
    function getTrackerReviewInfo() 
     {
@@ -88,6 +233,7 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
         membersFactory.getMembers(orderby)
             .success( function(data) {
                 $scope.members = data; 
+                var i = 0;
                 })
             .error( function(edata) {
                 alert(edata);
@@ -97,22 +243,8 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
     function buildTrackselections() {
 
         $scope.trackrequests = [
-            { trackrequest: "selectall" },
             { trackrequest: "countaction" },
             { trackrequest: "countactiongroup" }
-        ];
-
-        $scope.trackorderbyselectalls = [
-            { trackorderby: "id" },
-            { trackorderby: "memberid" },
-            { trackorderby: "screenname" },
-            { trackorderby: "season" },
-            { trackorderby: "week" },
-            { trackorderby: "trackaction" },
-            { trackorderby: "trackmodule" },
-            { trackorderby: "tracktext" },
-            { trackorderby: "trackdate" },
-            { trackorderby: "device" }
         ];
 
         $scope.trackorderbycountactions = [
@@ -169,10 +301,6 @@ controllers.trackerreviewwithoptionsController = function ($scope, $http, $locat
             
         switch ($scope.current.trackrequest)
         {
-            case "selectall":
-                $scope.trackorderbys = $scope.trackorderbyselectalls;
-                break;
-
             case "countaction":
                 $scope.trackorderbys = $scope.trackorderbycountactions;
                 break;

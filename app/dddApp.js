@@ -256,15 +256,15 @@ dddApp.config(function ($routeProvider) {
                 controller: 'memberupdatememberController',
                 templateUrl: 'app/partials/memberupdatemember.html'
             })
-        .when('/trackerreview',
+        .when('/trackerreviewselect',
             {
-                controller: 'trackerreviewController',
-                templateUrl: 'app/partials/trackerreview.html'
+                controller: 'trackerreviewselectController',
+                templateUrl: 'app/partials/trackerreviewselect.html'
             })
-        .when('/trackerreviewwithoptions',
+        .when('/trackerreviewcount',
             {
-                controller: 'trackerreviewwithoptionsController',
-                templateUrl: 'app/partials/trackerreviewwithoptions.html'
+                controller: 'trackerreviewcountController',
+                templateUrl: 'app/partials/trackerreviewcount.html'
             })
         .when('/login',
             {

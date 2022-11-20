@@ -7,16 +7,18 @@ include_once ('../class/class.AccessLog.php');
 // 
 // default values
 // 
+
 $trackrequest = "";
-$memberid = "";
-$orderby = "";
-
-$where = "";
-
-$orderby = "";
+$trackselectwhere = "";
+$trackselectwherecompare = "";
+$trackselectwherevalue = "";
 $trackorderby = "";
 $trackorderbysort = "";
 
+$memberid = "";
+$orderby = "";
+$where = "";
+$orderby = "";
 $groupby = "";
 $groupbyvalue = "";
 
@@ -41,19 +43,51 @@ else
 	}
 }
 
-if (isset($_POST["memberid"]))
+if (isset($_POST["trackselectwhere"]))
 {
-	$memberid = $_POST["memberid"];
+	$trackselectwhere = $_POST["trackselectwhere"];
 }
 else
 {
-	if (isset($_GET["memberid"]))
+	if (isset($_GET["trackselectwhere"]))
 	{
-		$memberid = $_GET["memberid"];
+		$trackselectwhere = $_GET["trackselectwhere"];
 	}
 	else
 	{
-		$memberid = "";
+		$trackselectwhere = "";
+	}
+}
+
+if (isset($_POST["trackselectwherecompare"]))
+{
+	$trackselectwherecompare = $_POST["trackselectwherecompare"];
+}
+else
+{
+	if (isset($_GET["trackselectwherecompare"]))
+	{
+		$trackselectwherecompare = $_GET["trackselectwherecompare"];
+	}
+	else
+	{
+		$trackselectwherecompare = "";
+	}
+}
+
+if (isset($_POST["trackselectwherevalue"]))
+{
+	$trackselectwherevalue = $_POST["trackselectwherevalue"];
+}
+else
+{
+	if (isset($_GET["trackselectwherevalue"]))
+	{
+		$trackselectwherevalue = $_GET["trackselectwherevalue"];
+	}
+	else
+	{
+		$trackselectwherevalue = "";
 	}
 }
 
@@ -86,6 +120,22 @@ else
 	else
 	{
 		$trackorderbysort = "";
+	}
+}
+
+if (isset($_POST["memberid"]))
+{
+	$memberid = $_POST["memberid"];
+}
+else
+{
+	if (isset($_GET["memberid"]))
+	{
+		$memberid = $_GET["memberid"];
+	}
+	else
+	{
+		$memberid = "";
 	}
 }
 
@@ -133,24 +183,19 @@ include_once ('mysqlconnect.php');
 // get requested tracker information
 //---------------------------------------------------------------
 switch ($trackrequest) {
-	case "selectall":
-		if ($memberid != "")
+	case "selectstandard":
+		if ($trackselectwhere != "")
 		{
-			$where = " WHERE memberid = '$memberid' ";
+			$where = " WHERE $trackselectwhere $trackselectwherecompare  '$trackselectwherevalue' ";
 		}
 
-		$orderby = "ORDER BY ";
-		if ($trackorderby == "")
+		$orderby = "";
+		if (($trackorderby != "") && ($trackorderbysort != ""))
 		{
-			$trackorderby = "ID";
+			$orderby = "ORDER BY $trackorderby $trackorderbysort";
 		}
 
-		if ($trackorderbysort == "")
-		{
-			$trackorderbysort = "DESC";
-		}
-
-		$sqlselectall = "SELECT 
+		$selectstandard = "SELECT 
 		  id,
 		  memberid,
 		  screenname,
@@ -163,9 +208,9 @@ switch ($trackrequest) {
 		  device
 		FROM tracktbl
 		$where  
-		$orderby $trackorderby $trackorderbysort";
+		$orderby";
 
-		$sql = $sqlselectall;
+		$sql = $selectstandard;
 
 		// print("trackorderby: $trackorderby <br/>");
 		// print("sql: $sql  <br/>");
@@ -175,6 +220,12 @@ switch ($trackrequest) {
 	case "countaction":
 		$groupby = " GROUP BY ";
 		$groupbyvalue = " screenname ";
+
+		if ($memberid != "")
+		{
+			$where = " WHERE memberid =  '$memberid' ";
+		}
+		
 
 		$orderby = "ORDER BY ";
 		if ($trackorderby == "")
@@ -208,6 +259,11 @@ switch ($trackrequest) {
 	case "countactiongroup":
 		$groupby = " GROUP BY ";
 		$groupbyvalue = " tdate, screenname ";
+
+		if ($memberid != "")
+		{
+			$where = " WHERE memberid =  '$memberid' ";
+		}
 
 		$orderby = "ORDER BY ";
 		if ($trackorderby == "")
