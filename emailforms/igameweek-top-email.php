@@ -21,7 +21,7 @@ In the final game of the week the 49ers beat the Cardinals!
 Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
 </p>
 
-<span style='color:#539BD6;font-style:italic;'>Please be aware thst there are 3 games being played on Thanksgiving Thusday!</span>
+<span style='color:#539BD6;font-style:italic;'>Please be aware that there are 3 games being played on Thanksgiving Thusday!</span>
 
 <br />
 <p>
