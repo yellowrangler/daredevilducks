@@ -2,29 +2,26 @@
 
 $emailtopwriteup = "	
 <p>
-  It was a good week of football. 
-</p>
-
-<p>
-The week started out with the Panthers beating the Falcons. The Buccaneers beat the Seahawks in a thriller across the pond in Germany. In a crazy game, the Vikings defeated the Bills. The Lions eked out a win over the Bears in a back and forth affair. The Chiefs beat the Jaguars. The Dolphins beat the Browns in a game featuring more offense then defense.
+The week started out with the Titans beating the fading Packers. The Falcons beat the Bears in a back and forth affair. The Ravens crushed the Panthers. The Bills held on to beat the pesky Browns. The Commanders looked competitive in their win over the Texans. The Eagles came from behind to beat the Colts. In another mostly snooze fest, the Patriots beat the Jets on a last second kick return for touchdown.
 </p> 
 
 <p>
-The Giants beat the Texans. The Steelers beat the Saints. The Titans beat the Broncos. The Colts with a new coach and newly reinstated Mat Ryan beat the woeful Raiders. The Packers rallied to beat the Cowboys. The Cardinals beat the Stafford-less Rams. The 49ers stayed relevent as they beat the Chargers.
+The Saints beat the fading Rams. The Lions looked tough as they dispatched the favored Giants. The Raiders beat the woeful Broncos. The Cowboys tied and branded the Vikings in Minnesota. The Bengals beat the Steelers. The Chiefs beat the Chargers.
 </p> 
 
 <p>
-In the final game of the week the Commanders gave the Eagles their first loss!
+In the final game of the week the 49ers beat the Cardinals!
 </p> 
 
 <p>
   All in all a superb week of football!
 </p> 
 
-
 <p>
 Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
 </p>
+
+<span style='color:#539BD6;font-style:italic;'>Please be aware thst there are 3 games being played on Thanksgiving Thusday!</span>
 
 <br />
 <p>
