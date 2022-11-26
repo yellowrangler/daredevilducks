@@ -9,3 +9,5 @@ secure/**
 systemscripts/**
 app/ajax/dbsql/**
 mobile/app/ajax/dbsql/**
+app/ajax/logs/**
+mobile/app/ajax/logs/**

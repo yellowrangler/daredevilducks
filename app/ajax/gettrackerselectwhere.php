@@ -39,9 +39,15 @@ else
 	}
 	else
 	{
-		print("No trackselectwhere");
+		print("Error: No trackselectwhere. Not passed.");
 		die();
 	}
+}
+
+if ($trackselectwhere ==  "")
+{
+	print("Error: No trackselectwhere. Is empty.");
+	die();
 }
 
 //

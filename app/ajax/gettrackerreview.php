@@ -38,7 +38,7 @@ else
 	}
 	else
 	{
-		print("No trackrequest");
+		print("Error: No trackrequest. Not passed.");
 		die();
 	}
 }

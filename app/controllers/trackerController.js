@@ -1,7 +1,19 @@
 controllers.trackerreviewselectController = function ($scope, $http, $location, $window, trackerFactory, membersFactory) 
 {
+
+    function isError(checkStr) 
+    {
+        if (checkStr.indexOf("Error:", 0) == -1) 
+        { 
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
    
-   function getTrackerReviewInfo() 
+    function getTrackerReviewInfo() 
     {
 
         var q = "trackrequest="+$scope.current.trackrequest;
@@ -34,9 +46,16 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
         
         trackerFactory.getTrackerReview(q)
             .success( function(data) {
-                $scope.trackreviews = data;
-                $scope.requestcount = data.length;
-                })
+                if (isError(data))
+                {
+                   alert(data);
+                }
+                else
+                {
+                    $scope.trackreviews = data;
+                    $scope.requestcount = data.length;
+                }
+            })
             .error( function(edata) {
                 alert(edata);
             });
@@ -95,18 +114,26 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
         
         trackerFactory.getTrackerSelectWhere(q)
             .success( function(data) {
-              
-               var selectwherevalues = [];
-               var selectwherevalue = {};
-               var i = 0;
-               for (i = 0; i < data.length; i++)
+
+               if (isError(data))
                {
-                   selectwherevalue = { 'trackselectwherevalue': data[i] };
-                   selectwherevalues.push(selectwherevalue);
+                   alert(data);
                }
+               else
+               {
+                   var selectwherevalues = [];
+                   var selectwherevalue = {};
+                   var i = 0;
+                   for (i = 0; i < data.length; i++)
+                   {
+                       selectwherevalue = { 'trackselectwherevalue': data[i] };
+                       selectwherevalues.push(selectwherevalue);
+                   }
 
-                $scope.trackselectwherevalues = selectwherevalues;
-
+                    $scope.trackselectwherevalues = selectwherevalues;
+               }
+              
+               
                 var i = 0;
             })
             .error( function(edata) {
@@ -195,7 +222,19 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
 
 controllers.trackerreviewcountController = function ($scope, $http, $location, $window, trackerFactory, membersFactory) {
    
-   function getTrackerReviewInfo() 
+    function isError(checkStr) 
+    {
+        if (checkStr.indexOf("Error:", 0) == -1) 
+        { 
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    function getTrackerReviewInfo() 
     {
         var q = "trackrequest="+$scope.current.trackrequest;
         if ($scope.current.memberid != "")
@@ -217,9 +256,16 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
         
         trackerFactory.getTrackerReview(q)
             .success( function(data) {
-                $scope.trackreviews = data;
-                $scope.requestcount = data.length;
-                })
+                if (isError(data))
+                {
+                   alert(data);
+                }
+                else
+                {
+                    $scope.trackreviews = data;
+                    $scope.requestcount = data.length;
+                }
+            })
             .error( function(edata) {
                 alert(edata);
             });
@@ -240,7 +286,8 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             });
     }
 
-    function buildTrackselections() {
+    function buildTrackselections() 
+    {
 
         $scope.trackrequests = [
             { trackrequest: "countaction" },

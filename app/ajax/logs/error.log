@@ -251,3 +251,11 @@
 		FROM tracktbl
 		 WHERE screenname =  Hawk Eye   
 		ORDER BY screenname ASC
+2022-11-26 12:02:39 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tracktbl ORDER BY' at line 1 - Error function: select msg: Unable to get trackselectwhere information.
+2022-11-26 12:02:39 : SQL: SELECT DISTINCT  FROM tracktbl ORDER BY 
+2022-11-26 12:03:10 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tracktbl ORDER BY' at line 1 - Error function: select msg: Unable to get trackselectwhere information.
+2022-11-26 12:03:10 : SQL: SELECT DISTINCT  FROM tracktbl ORDER BY 
+2022-11-26 12:03:31 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tracktbl ORDER BY' at line 1 - Error function: select msg: Unable to get trackselectwhere information.
+2022-11-26 12:03:31 : SQL: SELECT DISTINCT  FROM tracktbl ORDER BY 
+2022-11-26 12:05:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tracktbl ORDER BY' at line 1 - Error function: select msg: Unable to get trackselectwhere information.
+2022-11-26 12:05:33 : SQL: SELECT DISTINCT  FROM tracktbl ORDER BY 
