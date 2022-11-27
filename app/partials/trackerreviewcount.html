@@ -25,12 +25,12 @@
 					            </select>
 
 					            <label 
-					            	ng-if="current.trackrequest != ''"
+					            	ng-if="current.trackrequest != '' && current.trackrequest != current.trackrequest == trackrequests[2].trackrequest"
 						            style="padding-left:30px;" 
 						            for="screenname" class="control-label">Screen name
 						          </label>
-							        <select 
-							        	ng-if="current.trackrequest != ''"
+							       <select 
+							        	ng-if="current.trackrequest != '' && current.trackrequest != current.trackrequest == trackrequests[2].trackrequest"
 							        	class="customSelect form-control" 
 							        	ng-model="current.memberid" id="memberid" 
 							        	name="memberid">
@@ -46,8 +46,22 @@
 
 							        <label ng-if="current.trackrequest != ''"
 						            style="padding-left:30px;" 
+						            for="screenname" class="control-label">Group
+						          	</label>
+							        <select 
+							        	ng-if="current.trackrequest != ''"
+							        	class="customSelect form-control" 
+							        	ng-change="setSelectionCriteria('group')" 
+							        	ng-model="current.trackgroupby" id="trackgroupby" 
+							        	name="trackgroupby">
+							        		<option value="">No Selection</option>
+					                <option ng-repeat="trackgroupby in trackgroupbys" value="{{trackgroupby.trackgroupby}}">{{trackgroupby.trackgroupby}}</option>
+							        </select>
+
+							        <label ng-if="current.trackrequest != ''"
+						            style="padding-left:30px;" 
 						            for="screenname" class="control-label">Order
-						          </label>
+						          	</label>
 							        <select 
 							        	ng-if="current.trackrequest != ''"
 							        	class="customSelect form-control" 
@@ -200,6 +214,28 @@
 							<td style="width:6%;" class="center-column-text"> {{ trackreview.teamDisc }} </td>
 							<td style="width:6%;" class="center-column-text"> {{ trackreview.takeSurvey }} </td>
 							<td style="width:6%;" class="center-column-text"> {{ trackreview.nflnews }} </td>
+						</tr>
+					</tbody>
+
+				</table>
+
+				<table style="width:100%;" ng-if="current.status == 'GO' && current.trackrequest == trackrequests[2].trackrequest" class="table table-scroll" >
+
+					<thead>
+						<tr class="tableTitleNoBorder">	
+							<th style="width:10%;" class="center-column-text">screenname</th>
+							<th style="width:6%;" class="center-column-text">devicehits</th>
+							<th style="width:6%;" class="center-column-text">desktophits</th>
+							<th style="width:6%;" class="center-column-text">mobilehits</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="trackreview in trackreviews">
+							<td style="width:10%;"class="left-column-text"> {{ trackreview.screenname }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.devicehits }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.desktophits }} </td>
+							<td style="width:6%;" class="center-column-text"> {{ trackreview.mobilehits }} </td>
 						</tr>
 					</tbody>
 

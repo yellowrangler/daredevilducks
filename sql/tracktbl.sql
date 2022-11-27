@@ -270,6 +270,14 @@ SELECT device, count(device) as devicehit
 FROM tracktbl 
 group by device;
 
+-- device questions
+SELECT screenname, count(*) as devicehits,
+  COUNT(CASE WHEN device = 'desktop' THEN 1 ELSE NULL END) AS desktophits,
+  COUNT(CASE WHEN device = 'mobile' THEN 1 ELSE NULL END) AS mobilehits
+from tracktbl
+group by screenname
+order by screenname;
+  
 -- all picks what trackaction count
 SELECT screenname, trackaction, count(trackaction) as hits
 FROM tracktbl  

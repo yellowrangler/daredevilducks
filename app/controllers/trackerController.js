@@ -115,23 +115,23 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
         trackerFactory.getTrackerSelectWhere(q)
             .success( function(data) {
 
-               if (isError(data))
+            if (isError(data))
+            {
+               alert(data);
+            }
+            else
+            {
+               var selectwherevalues = [];
+               var selectwherevalue = {};
+               var i = 0;
+               for (i = 0; i < data.length; i++)
                {
-                   alert(data);
+                   selectwherevalue = { 'trackselectwherevalue': data[i] };
+                   selectwherevalues.push(selectwherevalue);
                }
-               else
-               {
-                   var selectwherevalues = [];
-                   var selectwherevalue = {};
-                   var i = 0;
-                   for (i = 0; i < data.length; i++)
-                   {
-                       selectwherevalue = { 'trackselectwherevalue': data[i] };
-                       selectwherevalues.push(selectwherevalue);
-                   }
 
-                    $scope.trackselectwherevalues = selectwherevalues;
-               }
+               $scope.trackselectwherevalues = selectwherevalues;
+            }
               
                
                 var i = 0;
@@ -252,6 +252,11 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             q = q + "&trackorderbysort="+$scope.current.trackorderbysort;
         }
 
+        if ($scope.current.trackgroupby != "")
+        {
+            q = q + "&trackgroupby="+$scope.current.trackgroupby;
+        }
+
         $scope.current.status = "GO";
         
         trackerFactory.getTrackerReview(q)
@@ -291,7 +296,8 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
 
         $scope.trackrequests = [
             { trackrequest: "countaction" },
-            { trackrequest: "countactiongroup" }
+            { trackrequest: "countactiongroup" },
+            { trackrequest: "countdeviceusage" }
         ];
 
         $scope.trackorderbycountactions = [
@@ -310,6 +316,10 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             { trackorderby: "teamDisc" },
             { trackorderby: "takeSurvey" },
             { trackorderby: "nflnews" }
+        ];
+
+        $scope.trackgroupbycountactions = [
+            { trackgroupby: "screenname" }
         ];
 
         $scope.trackorderbycountactiongroups = [
@@ -332,7 +342,26 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             { trackorderby: "takeSurvey" },
             { trackorderby: "nflnews" }
         ];
-        
+
+        $scope.trackgroupbycountactiongroups = [
+            { trackgroupby: "screenname" }
+        ];
+
+        $scope.trackgroupbycountactiongroupgroups = [
+            { trackgroupby: "screenname" },
+            { trackgroupby: "screenname, tdate" }
+        ];
+
+        $scope.trackorderbycountdeviceusages = [
+            { trackorderby: "screenname" },
+            { trackorderby: "devicehits" },
+            { trackorderby: "desktophits" },
+            { trackorderby: "mobilehits" }
+        ];
+
+        $scope.trackgroupbycountdeviceusages = [
+            { trackgroupby: "screenname" }
+        ];
     };
 
     function setSelectionCriteria(selected) 
@@ -350,11 +379,18 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
         {
             case "countaction":
                 $scope.trackorderbys = $scope.trackorderbycountactions;
+                $scope.trackgroupbys = $scope.trackgroupbycountactiongroups;
                 break;
 
             case "countactiongroup":
                 $scope.trackorderbys = $scope.trackorderbycountactiongroups;
+                $scope.trackgroupbys = $scope.trackgroupbycountactiongroupgroups;
                 break;
+
+            case "countdeviceusage":
+                $scope.trackorderbys = $scope.trackorderbycountdeviceusages;
+                $scope.trackgroupbys = $scope.trackgroupbycountdeviceusages;
+                break;    
 
             default:
                 var i =  0;

@@ -259,3 +259,19 @@
 2022-11-26 12:03:31 : SQL: SELECT DISTINCT  FROM tracktbl ORDER BY 
 2022-11-26 12:05:33 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM tracktbl ORDER BY' at line 1 - Error function: select msg: Unable to get trackselectwhere information.
 2022-11-26 12:05:33 : SQL: SELECT DISTINCT  FROM tracktbl ORDER BY 
+2022-11-26 19:56:04 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY  screenname' at line 7 - Error function: select msg: Unable to get tracker review information.
+2022-11-26 19:56:04 : SQL: SELECT count(*) as devicehits,
+	  			COUNT(CASE WHEN device = 'desktop' THEN 1 ELSE NULL END) AS desktophits,
+	  			COUNT(CASE WHEN device = 'mobile' THEN 1 ELSE NULL END) AS mobilehits
+			FROM tracktbl
+			
+			 GROUP BY   
+			ORDER BY  screenname  
+2022-11-26 19:56:15 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY  screenname' at line 7 - Error function: select msg: Unable to get tracker review information.
+2022-11-26 19:56:15 : SQL: SELECT count(*) as devicehits,
+	  			COUNT(CASE WHEN device = 'desktop' THEN 1 ELSE NULL END) AS desktophits,
+	  			COUNT(CASE WHEN device = 'mobile' THEN 1 ELSE NULL END) AS mobilehits
+			FROM tracktbl
+			
+			 GROUP BY   
+			ORDER BY  screenname  
