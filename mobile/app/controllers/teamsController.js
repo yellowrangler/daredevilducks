@@ -1638,8 +1638,18 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
 controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTeamsService, teamsFactory) {
     $scope.current = {};
 
+    function htmlString (str) 
+    {
+        // return "<p>" + str + "</p>";
+        return str;
+    }
+
+
     function getNFLrssFeed() 
     {
+        if ($scope.current.rsslinkid == 0)
+            return 0;
+
         $scope.newsurl = getNFLrssLink($scope.current.rsslinkid);
 
         refreshNflNews();
@@ -1703,7 +1713,10 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                             $scope.nflnews[idx]= rssInfo;
                         }
                         else
+                        {
+                            data.channel.item[idx].description = htmlString(data.channel.item[idx].description);
                             $scope.nflnews[idx] = data.channel.item[idx];
+                        }
                     }  
                 }
                                  
@@ -1747,19 +1760,12 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
               'NA',
               'NA');
 
-        $scope.current.rsslinkid = 1;
+        $scope.current.rsslinkid = 0;
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
         $scope.newsdetail = "";
         $scope.newsurl = "";
         $scope.current.newsidx = -1;
-
-        // $scope.newsurl = 'http://www.cbssports.com/partners/feeds/rss/nfl_news';
-        // $scope.newsurl = 'http://www.nfl.com/rss/rsslanding?searchString=home';
-        // $scope.newsurl = 'http://sports.espn.go.com/espn/rss/nfl/news';
-        // $scope.newsurl = 'http://www.rotowire.com/rss/news.htm?sport=nfl';
-        // $scope.newsurl = 'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nfl';
-        // getNFLrssFeed(); 
     };
 
     $scope.getNFLrssFeed = function () {
@@ -1770,23 +1776,27 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         refreshNflNews();
     }
 
-    $scope.loadNewsDetail = function (url, idx) {
-        loadNewsDetail(url, idx); 
+    $scope.sanitizeMe = function(text) {
+        return $sce.trustAsHtml(text)
     }
 
-    $scope.showiFrameYes = function (idx) {
-        showiFrameYes(idx);
-    }
+    // $scope.loadNewsDetail = function (url, idx) {
+    //     loadNewsDetail(url, idx); 
+    // }
 
-    $scope.trustSrc = function(src) {
-        var x = $sce.trustAsResourceUrl(src);
+    // $scope.showiFrameYes = function (idx) {
+    //     showiFrameYes(idx);
+    // }
 
-        return x;
-    }
+    // $scope.trustSrc = function(src) {
+    //     var x = $sce.trustAsResourceUrl(src);
 
-    $scope.decodeRssString = function (str) {
-        return decodeHtmlString(str);
-    }
+    //     return x;
+    // }
+
+    // $scope.decodeRssString = function (str) {
+    //     return decodeHtmlString(str);
+    // }
 }
 
 controllers.playoffstandingsController = function ($scope, $http, $location, nflTeamsService, teamsFactory) {

@@ -278,6 +278,24 @@ from tracktbl
 group by screenname
 order by screenname;
   
+SELECT a.screenname, a.devicehits, a.desktophits, a.mobilehits 
+  COUNT(CASE WHEN a.devicehits = a.desktophits THEN 1 ELSE NULL END) AS desktoponly,
+  COUNT(CASE WHEN a.devicehits = a.mobilehits THEN 1 ELSE NULL END) AS mobileoponly
+FROM
+(
+  SELECT screenname, device, count(*) as devicehits,
+    COUNT(CASE WHEN device = 'desktop' THEN 1 ELSE NULL END) AS desktophits,
+    COUNT(CASE WHEN device = 'mobile' THEN 1 ELSE NULL END) AS mobilehits
+  FROM tracktbl  
+  group by screenname
+) a
+order by screenname;
+
+
+from tracktbl
+group by screenname
+order by screenname;
+
 -- all picks what trackaction count
 SELECT screenname, trackaction, count(trackaction) as hits
 FROM tracktbl  

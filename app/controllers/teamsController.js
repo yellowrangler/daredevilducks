@@ -76,8 +76,17 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
 controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTeamsService, teamsFactory) {
     $scope.current = {};
 
+    function htmlString (str) 
+    {
+        // return "<p>" + str + "</p>";
+        return str;
+    }
+
     function getNFLrssFeed()
     {
+        if ($scope.current.rsslinkid == 0)
+            return 0;
+
         $scope.newsurl = getNFLrssLink($scope.current.rsslinkid);
 
         refreshNflNews();
@@ -115,7 +124,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                     var rssInfo = {};
 
                     rssInfo.pubDate = "Error";
-                    rssInfo.description = "RSS feed was unable to complete request!";
+                    rssInfo.description = "<p>RSS feed was unable to complete request!</p>";
                     rssInfo.link = "";
 
                     $scope.nflnews[idx]= rssInfo;
@@ -135,13 +144,16 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                             var rssInfo = {};
 
                             rssInfo.pubDate = data.entry[idx].published;
-                            rssInfo.description = data.entry[idx].summary;
+                            rssInfo.description = htmlString(data.entry[idx].summary);
                             rssInfo.link = data.entry[idx].link['@attributes'].href;
 
                             $scope.nflnews[idx]= rssInfo;
                         }
                         else
+                        {
+                            data.channel.item[idx].description = htmlString(data.channel.item[idx].description);
                             $scope.nflnews[idx] = data.channel.item[idx];
+                        }
                     }  
                 }                 
             })
@@ -207,7 +219,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
               'NA',
               'NA');
 
-        $scope.current.rsslinkid = 1;
+        $scope.current.rsslinkid = 0;
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
         $scope.newsdetail = "";
@@ -225,6 +237,10 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
 
     $scope.refreshNflNews = function (){
         refreshNflNews();
+    }
+
+    $scope.sanitizeMe = function(text) {
+        return $sce.trustAsHtml(text)
     }
 
     // $scope.loadNewsDetail = function (url, idx) {

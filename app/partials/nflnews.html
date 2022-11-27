@@ -8,8 +8,20 @@
           <form class="form-inline pageStandardOffset">
             <div class="form-group">
               <label for="nflrss">News Source</label>
-              <select style="padding-left:5px;"  class="customSelect form-control" ng-change="getNFLrssFeed()" ng-model="current.rsslinkid" id="nflrss" name="nflrss">
-                  <option ng-repeat="nflrss in nflrsss" ng-selected="current.rsslinkid == nflrss.id" value="{{nflrss.id}}">{{nflrss.rsssource}}</option>
+              <select 
+                style="padding-left:5px;"  
+                class="customSelect form-control" 
+                ng-change="getNFLrssFeed()" 
+                ng-model="current.rsslinkid" 
+                id="nflrss" 
+                name="nflrss">
+                <option value="0">No Selection</option>
+                <option 
+                  ng-repeat="nflrss in nflrsss"  
+                  ng-selected="current.rsslinkid == nflrss.id"
+                  value="{{nflrss.id}}">
+                  {{nflrss.rsssource}}
+                </option>
               </select>
             </div>  <!-- end of div -->
               
@@ -34,9 +46,9 @@
                   </div>
                 </td>
                 <td>  
-                  <div style="color:teal;" >
-                    {{nflnew.description}}
-                    <!-- {{decodeRssString(nflnew.description)}} -->
+                  <div style="color:teal;" ng-bind-html="sanitizeMe(nflnew.description)">
+                    <!-- {{nflnew.description}}  -->
+                     <!-- {{decodeRssString(nflnew.description)}} -->
                   </div>
                 </td> 
               </tr>
