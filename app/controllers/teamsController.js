@@ -23,8 +23,8 @@ controllers.teamstandingsController = function ($scope, $http, $location, nflTea
         //
         setviewpadding();
 
-        $scope.$parent.tracker('view team standings',
-              'team standings',
+        $scope.$parent.tracker('team standings',
+              'teamStandings',
               'teamstandingsController',
               'NA',
               'NA');
@@ -61,8 +61,8 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
         // in jquery ready. So adding it here
         //
 
-        $scope.$parent.tracker('view team websites',
-              'team discovery',
+        $scope.$parent.tracker('team websites',
+              'teamDiscovery',
               'teamdiscoveryController',
               'NA',
               'NA');
@@ -213,8 +213,8 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
             }
         });
 
-        $scope.$parent.tracker('view nfl news',
-              'nfl news',
+        $scope.$parent.tracker('nfl news',
+              'nflNews',
               'nflnewsController',
               'NA',
               'NA');
@@ -297,8 +297,8 @@ controllers.playoffstandingsController = function ($scope, $http, $location, nfl
         //
         setviewpadding();
 
-        $scope.$parent.tracker('view team brackets',
-              'team brackets',
+        $scope.$parent.tracker('team brackets',
+              'teamBrackets',
               'playoffstandingsController',
               'NA',
               'NA');
@@ -1593,8 +1593,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         $scope.current.showteamb = true;
         $scope.teamstatscharts = chartService.getChartList("teamCharts");
 
-        $scope.$parent.tracker('look at team stat charts',
-              'team charts',
+        $scope.$parent.tracker('team stat charts',
+              'teamCharts',
               'teamstatschartsController',
               'NA',
               'NA');
@@ -1705,8 +1705,8 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         $scope.imageWidth = windowWidth * .15;
         $scope.current.WeeklRankingtablesize = windowHeight * .60;
 
-        $scope.$parent.tracker('look at team scores and stats',
-              'team scores and stats',
+        $scope.$parent.tracker('team scores and stats',
+              'teamScoresStats',
               'teamweeklyrankingController',
               'NA',
               'NA');

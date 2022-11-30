@@ -6,13 +6,15 @@ controllers.helpController = function ($scope, $http, $location, $window) {
 
         $scope.current.path = $location.path();
 
-        $scope.$parent.tracker('help request for path:'+$scope.current.path,
-              'help request',
+        var str = $scope.current.path;
+        var trackactionArray = str.split("/");
+        var trackaction = trackactionArray[1];
+
+        $scope.$parent.tracker('help for '+trackaction,
+              trackaction,
               'helpController',
               'NA',
               'NA');
-
-        var i = 0;
     };
 
     $scope.goBack = function (locationhash) {

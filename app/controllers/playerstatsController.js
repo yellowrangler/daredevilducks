@@ -127,8 +127,8 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
 
-        $scope.$parent.tracker('view member total wins',
-              'player totals',
+        $scope.$parent.tracker('member total wins',
+              'playerTotals',
               'playerstatstotalwinsController',
               'NA',
               'NA');
@@ -441,8 +441,8 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
 
-        $scope.$parent.tracker('view weekly member wins',
-              'weekly totals',
+        $scope.$parent.tracker('weekly member wins',
+              'weeklyTotals',
               'playerstatsmemberweeklyController',
               'NA',
               'NA');

@@ -2292,6 +2292,12 @@ controllers.memberupdatememberController = function ($scope, $http, $location, m
         $scope.current.memberlogin = loginService.getLogin();  
         $scope.current.memberid = $scope.current.memberlogin.memberid;
 
+        $scope.$parent.tracker('member update',
+              'memberUpdate',
+              'memberupdatememberController',
+              'NA',
+              'NA');
+
         getMember();
     };
 

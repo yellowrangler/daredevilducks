@@ -186,7 +186,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.current.awayteamname = awayteamname;
 
         $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
-              'team stats dialog',
+              'teamStatsDialog',
               'pickgamesController',
               $scope.current.season,
               $scope.current.week);
@@ -507,7 +507,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         // check for memberid in seriaze string and if not there add it
         //
         $scope.$parent.tracker('save weekly picks',
-              'pickgames',
+              'savePickGames',
               'gamesController',
               $scope.current.season,
               $scope.current.week);
@@ -866,7 +866,7 @@ controllers.viewselectpickgamesController = function ($scope, $http, $location, 
         $scope.current.awayteamname = awayteamname;
 
         $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
-              'team stats dialog',
+              'teamStatsDialog',
               'viewselectpickgamesController',
               $scope.current.season,
               $scope.current.week);
@@ -1222,7 +1222,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.current.awayteamname = awayteamname;
 
         $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
-              'team stats dialog',
+              'teamStatsDialog',
               'viewtotalpickgamesController',
               $scope.current.season,
               $scope.current.week);
