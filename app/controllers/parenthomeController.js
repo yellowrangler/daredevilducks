@@ -79,6 +79,12 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             $scope.intervalVariable = makeSnowAnimation(flakeObj,targetArea);
 
             $scope.isSnowing = 1;
+
+            $scope.tracker('let it snow',
+              'footer Christmas tree',
+              'dddParentController',
+              'NA',
+              'NA');
         }
         else
         {
