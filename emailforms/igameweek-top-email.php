@@ -2,15 +2,15 @@
 
 $emailtopwriteup = "	
 <p>
-The week started out with the Titans beating the fading Packers. The Falcons beat the Bears in a back and forth affair. The Ravens crushed the Panthers. The Bills held on to beat the pesky Browns. The Commanders looked competitive in their win over the Texans. The Eagles came from behind to beat the Colts. In another mostly snooze fest, the Patriots beat the Jets on a last second kick return for touchdown.
+The week started out with the Bills eking out a win over the much improved Lions. The Cowboys beat the Giants. The Vikings beat the fading Patriots. The Panthers with Darnold at QB beat the Broncos. The Browns beat Buccaneers. In an upset, the Jaguars beat the Ravens.
 </p> 
 
 <p>
-The Saints beat the fading Rams. The Lions looked tough as they dispatched the favored Giants. The Raiders beat the woeful Broncos. The Cowboys tied and branded the Vikings in Minnesota. The Bengals beat the Steelers. The Chiefs beat the Chargers.
+The Dolphins crushed the Texans. The Jets mauled the Bears. The Bengals beat the Titans. The Commanders played well enough to beat the Falcons. The Chargers squeaked by the Cardinals. The Raiders beat the Seahawks in Seattle. The Chiefs beat the Rams. The 49ers shut out the Saints. The Eagles held on to beat the Packers.
 </p> 
 
 <p>
-In the final game of the week the 49ers beat the Cardinals!
+In the final game of the week the Steelers beat the Colts!
 </p> 
 
 <p>
@@ -20,8 +20,6 @@ In the final game of the week the 49ers beat the Cardinals!
 <p>
 Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
 </p>
-
-<span style='color:#539BD6;font-style:italic;'>Please be aware that there are 3 games being played on Thanksgiving Thusday!</span>
 
 <br />
 <p>

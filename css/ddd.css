@@ -200,6 +200,7 @@ border: 0 none;
 	color:#6C0000;
 	font-size: 46px;
 	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+/*	font-family: 'ChopinScript', sans-serif;*/
 	font-weight: 700;
 	text-align:center;
 }
@@ -288,8 +289,11 @@ border: 0 none;
 }
 
 .headerTitle {
-	color:#6C0000;
-	font-family: 'Cormorant-SemiBoldItalic';
+/*	color:#6C0000;*/
+	color:#4d9e3a;
+	font-size:40px;
+/*	font-family: 'Cormorant-SemiBoldItalic';*/
+	font-family: 'ChopinScript', sans-serif;
 	font-style: italic, bold;
 }
 

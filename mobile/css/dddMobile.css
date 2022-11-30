@@ -259,8 +259,11 @@ border: 0 none;
 }
 
 .headerTitle {
-	color:#6C0000;
-	font-family: 'Cormorant-SemiBoldItalic';
+/*	color:#6C0000;*/
+	color:#4d9e3a;
+	font-size:32px;
+	font-family: 'ChopinScript', sans-serif;
+/*	font-family: 'Cormorant-SemiBoldItalic';*/
 	font-style: italic, bold;
 }
 
