@@ -47,7 +47,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             $scope.isSnowing = 1;
 
             $scope.tracker('let it snow',
-              'footer Christmas tree',
+              'ChristmasSnow',
               'dddParentController',
               'NA',
               'NA');
