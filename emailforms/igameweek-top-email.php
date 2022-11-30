@@ -2,7 +2,7 @@
 
 $emailtopwriteup = "	
 <p>
-The week started out with the Bills eking out a win over the much improved Lions. The Cowboys beat the Giants. The Vikings beat the fading Patriots. The Panthers with Darnold at QB beat the Broncos. The Browns beat Buccaneers. In an upset, the Jaguars beat the Ravens.
+The week started out with the Bills eking out a win over the much improved Lions. The Cowboys beat the Giants. The Vikings beat the fading Patriots. The Panthers with Darnold at QB beat the Broncos. The Browns beat the Buccaneers. In an upset, the Jaguars beat the Ravens.
 </p> 
 
 <p>
