@@ -21,6 +21,10 @@ In the final game of the week the Steelers beat the Colts!
 Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
 </p>
 
+<p>
+Be sure and check out our new Chritmas theme!
+</p>
+
 <br />
 <p>
 The full stats are below! Read em and weep (I know I do)!
