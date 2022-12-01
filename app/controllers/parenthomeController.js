@@ -59,6 +59,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         else
         {
             $("#loginHomeButton").text("Login");
+
             if (route == '/home')
                 showAlert("Success", "You are now logged off from Daredevil Ducks");
         }
@@ -405,6 +406,12 @@ controllers.loginController = function ($scope, $http, $location, $window, login
                     }
                     else
                     {
+                        $scope.tracker('member login',
+                          'login',
+                          'dddParentController',
+                          'NA',
+                          'NA');
+
                         $('#iformationDialogModalTitle').text("Success");
                         $('#iformationDialogModalLabelBody').text(login.text);
                         $('#iformationDialogModal').modal();
@@ -514,6 +521,8 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
                         alert("Error\n"+memberinfo.msgtext);
                     }   
                 });
+
+                xxxxxxx
         }
         else
             $("#loginHomeButton").text("Login");

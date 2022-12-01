@@ -269,7 +269,12 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
                     var route = loginService.setLoginLogoffLabel("menubarlogin",0);
                     loginService.setAvatarLabel("menubaravatar",0);
 
-                    
+                    $scope.tracker('member login',
+                      'login',
+                      'dddParentController',
+                      'NA',
+                      'NA');
+
                     $('#iformationDialogModalTitle').text("Success");
                     $('#iformationDialogModalLabelBody').text(login.text);
                     $('#iformationDialogModal').modal();
