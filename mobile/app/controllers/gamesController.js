@@ -1393,10 +1393,10 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.current = {};
 
         $scope.$parent.tracker('see who is picking what',
-                  'viewtotalpickgames',
+                  'viewTotalPickGames',
                   'viewtotalpickgamesController',
-                  'NA',
-                  'NA');
+                  $scope.current.season,
+                  $scope.current.week);
 
         //
         // this is not getting called at right time for definig top offset 

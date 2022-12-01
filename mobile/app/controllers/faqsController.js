@@ -9,7 +9,7 @@ controllers.faqsController = function ($scope, $http, $location, $window) {
                 faqInfoItems.find('.collapse.in').collapse('hide');
             });
 
-        scope.$parent.tracker('faq request',
+        $scope.$parent.tracker('faq request',
               'faqs',
               'faqsController',
               'NA',

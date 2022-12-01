@@ -1479,7 +1479,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
                 $scope.current.week = data.week; 
 
                 $scope.$parent.tracker('see who is picking what',
-                  'viewtotalpickgames',
+                  'viewTotalPickGames',
                   'viewtotalpickgamesController',
                   $scope.current.season,
                   $scope.current.week); 
