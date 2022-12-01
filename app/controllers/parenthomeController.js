@@ -521,8 +521,6 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
                         alert("Error\n"+memberinfo.msgtext);
                     }   
                 });
-
-                xxxxxxx
         }
         else
             $("#loginHomeButton").text("Login");
