@@ -1469,13 +1469,14 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                 strokeColor: 'rgba(47, 132, 71, 0.8)',
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)'
-            }];
+            }
+        ];
 
         $scope.datasetOverride = [
-                {
-                    yAxisID: 'Power-Rankings'
-                }
-            ];
+            {
+                yAxisID: 'Power-Rankings'
+            }
+        ];
 
         $scope.options = {
             legend: { display: true },
@@ -1686,7 +1687,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         }
 
         getTeamWeekRank($scope.current.teamid);
-
+x
     }
 
     init();

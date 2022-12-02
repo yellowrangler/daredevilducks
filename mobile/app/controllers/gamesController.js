@@ -1392,12 +1392,6 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
     function init() {
         $scope.current = {};
 
-        $scope.$parent.tracker('see who is picking what',
-                  'viewTotalPickGames',
-                  'viewtotalpickgamesController',
-                  $scope.current.season,
-                  $scope.current.week);
-
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
@@ -1417,6 +1411,12 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
             .success( function(data) {
                 $scope.current.season = data.season; 
                 $scope.current.week = data.week;  
+
+                $scope.$parent.tracker('see who is picking what',
+                  'viewTotalPickGames',
+                  'viewtotalpickgamesController',
+                  $scope.current.season,
+                  $scope.current.week);
 
                 nflTeamsService.addCurrentWeek($scope.current.week);
                 nflTeamsService.addCurrentSeason($scope.current.season);  
