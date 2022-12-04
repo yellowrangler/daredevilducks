@@ -275,3 +275,109 @@
 			
 			 GROUP BY   
 			ORDER BY  screenname  
+2022-12-03 16:20:31 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-03 16:20:31 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-03 16:20:37 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-03 16:20:37 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-04 14:34:52 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-04 14:34:52 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-04 14:34:52 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-04 14:34:52 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-04 15:00:01 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-04 15:00:01 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-04 15:00:59 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-04 15:00:59 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-04 15:19:39 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings current week information.
+2022-12-04 15:19:39 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week = 13
+
+2022-12-04 15:19:39 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings current week information.
+2022-12-04 15:19:39 : SQL: SELECT 
+week,
+offencetotal as pot, 
+offencescoring as pos,  
+offencepassing as pop, 
+offencerushing as por, 
+defencetotal as pdt,  
+defencescoring as pds, 
+defencepassing as pdp,  
+defencerushing as pdr 
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week = 13
+
+2022-12-04 15:22:38 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-04 15:22:38 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+
+2022-12-04 15:22:38 : SQL error: Unknown column 'undefined' in 'where clause' - Error function: select msg: Unable to get team weekly power rankings all season information.
+2022-12-04 15:22:38 : SQL: SELECT powerranking, week
+FROM `teamweekranktbl` 
+WHERE teamid = undefined
+and season = 2022
+and week <= 13
+

@@ -62,25 +62,32 @@
 
 <div style="padding-bottom:75px;" class="pageStandardOffset row">
 	<div class="col-offset-md-1 col-md-8">
-		<div ng-if="current.showlinechart" class="chart-container">
-			<canvas id="line" 
-			class="chart chart-line" 
-			chart-data="data"
-			chart-labels="labels" 
-			chart-series="series" 
-			chart-options="options"
-			chart-dataset-override="datasetOverride" 
-			chart-click="onClick">
+		<div 
+			ng-if="current.showlinechart" 
+			class="chart-container">
+			<canvas 
+				id="line" 
+				class="chart chart-line" 
+				chart-data="chart.data"
+				chart-labels="chart.labels" 
+				chart-series="chart.series" 
+				chart-options="chart.options"
+				chart-dataset-override="chart.datasetOverride" 
+				chart-click="onClick">
 			</canvas> 
 		</div> <!-- end of teamStatsChart -->
 
-		<div ng-if="current.showbarchart"class="chart-container col-offset-md-1 col-md-8">
-			<canvas id="bar" 
-			class="chart chart-bar"
-			chart-data="data" 
-			chart-labels="labels" 
-			chart-options="options"
-			chart-series="series">
+		<div 
+			ng-if="current.showbarchart"
+			class="chart-container col-offset-md-1 col-md-8">
+			<canvas 
+				id="bar" 
+				class="chart chart-bar"
+				chart-data="chart.data" 
+				chart-labels="chart.labels" 
+				chart-series="chart.series" 
+				chart-options="chart.options"
+				chart-dataset-override="chart.datasetOverride" >
 			</canvas>
 		</div> <!-- end of teamStatsChart -->
 	</div>	
