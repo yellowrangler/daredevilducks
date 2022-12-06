@@ -508,7 +508,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
             });
     }
 
-    function drawChart1(powerRankingsWeeks)
+    function drawChart1()
     {
         // ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
 
@@ -523,24 +523,25 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         // set dataoveride
         $scope.chart.datasetOverride = [
             {
-               backgroundColor: "rgba(99, 192, 242, 1)",
-               pointBackgroundColor: "rgba(99, 192, 242, 1)",
-               pointHoverBackgroundColor: "rgba(99, 192, 242, 1)",
-               borderColor: "rgba(99, 192, 242, 1)",
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(rgba(99, 192, 242, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
                fill: false
             },
             {
-               backgroundColor: "rgba(11, 239, 39, 1)",
-               pointBackgroundColor: "rgba(11, 239, 39, 1)",
-               pointHoverBackgroundColor: "rgba(11, 239, 39, 1)",
-               borderColor: "rgba(11, 239, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(11, 239, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
                fill: false
-            },
+            }
         ];
+
 
         // set options
         $scope.chart.options = {
@@ -562,9 +563,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
             },
             elements: { 
                 line: { fill: false, borderWidth: 6 },
-                point:{ 
-                    radius: 8
-                }
+                point:{ radius: 8 }
             }
         };
 
@@ -608,75 +607,75 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         // set dataoveride
         $scope.chart.datasetOverride = [
             {
-               backgroundColor: "rgba(99, 192, 242, 1)",
-               pointBackgroundColor: "rgba(99, 192, 242, 1)",
-               pointHoverBackgroundColor: "rgba(99, 192, 242, 1)",
-               borderColor: "rgba(99, 192, 242, 1)",
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(rgba(99, 192, 242, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
                fill: false
             },
             {
-               backgroundColor: "rgba(11, 239, 39, 1)",
-               pointBackgroundColor: "rgba(11, 239, 39, 1)",
-               pointHoverBackgroundColor: "rgba(11, 239, 39, 1)",
-               borderColor: "rgba(11, 239, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(11, 239, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
                fill: false
             },
             {
-               backgroundColor: "rgba(251, 19, 39, 1)",
-               pointBackgroundColor: "rgba(251, 19, 39, 1)",
-               pointHoverBackgroundColor: "rgba(251, 19, 39, 1)",
-               borderColor: "rgba(251, 19, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightred,
+               pointBackgroundColor: $scope.rgbacolors.brightred,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightred,
+               borderColor: $scope.rgbacolors.brightred,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(251, 19, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightred,
                fill: false
             },
             {
-               backgroundColor: "rgba(251, 249, 39, 1)",
-               pointBackgroundColor: "rgba(251, 249, 39, 1)",
-               pointHoverBackgroundColor: "rgbargba(251, 249, 39, 1)",
-               borderColor: "rgba(251, 249, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightyellow,
+               pointBackgroundColor: $scope.rgbacolors.brightyellow,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightyellow,
+               borderColor: $scope.rgbacolors.brightyellow,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(251, 249, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightyellow,
                fill: false
             },
             {
-               backgroundColor: "rgba(51, 137, 27, 1)",
-               pointBackgroundColor: "rgba(51, 137, 27, 1)",
-               pointHoverBackgroundColor: "rgba(51, 137, 27, 1)",
-               borderColor: "rgba(51, 137, 27, 1)",
+               backgroundColor: $scope.rgbacolors.darkgreen,
+               pointBackgroundColor: $scope.rgbacolors.darkgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.darkgreen,
+               borderColor: $scope.rgbacolors.darkgreen,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(51, 137, 27, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.darkgreen,
                fill: false
             },
             {
-               backgroundColor: "rgba(107, 120, 240, 1)",
-               pointBackgroundColor: "rgba(107, 120, 240, 1)",
-               pointHoverBackgroundColor: "rgba(107, 120, 240, 1)",
-               borderColor: "rgba(107, 120, 240, 1)",
+               backgroundColor: $scope.rgbacolors.darkpurple,
+               pointBackgroundColor: $scope.rgbacolors.darkpurple,
+               pointHoverBackgroundColor: $scope.rgbacolors.darkpurple,
+               borderColor: $scope.rgbacolors.darkpurple,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(107, 120, 240, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.darkpurple,
                fill: false
             },
             {
-               backgroundColor: "rgba(208, 135, 216, 1)",
-               pointBackgroundColor: "rgba(208, 135, 216, 1)",
-               pointHoverBackgroundColor: "rgba(208, 135, 216, 1)",
-               borderColor: "rgba(208, 135, 216, 1)",
+               backgroundColor: $scope.rgbacolors.lightpurple,
+               pointBackgroundColor: $scope.rgbacolors.lightpurple,
+               pointHoverBackgroundColor: $scope.rgbacolors.lightpurple,
+               borderColor: $scope.rgbacolors.lightpurple,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(208, 135, 216, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.lightpurple,
                fill: false
             },
             {
-               backgroundColor: "rgba(255, 156, 26, 1)",
-               pointBackgroundColor: "rgba(255, 156, 26, 1)",
-               pointHoverBackgroundColor: "rgba(255, 156, 26, 1)",
-               borderColor: "rgba(255, 156, 26, 1)",
+               backgroundColor: $scope.rgbacolors.brightorange,
+               pointBackgroundColor: $scope.rgbacolors.brightorange,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightorange,
+               borderColor: $scope.rgbacolors.brightorange,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(255, 156, 26, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightorange,
                fill: false
             }
         ];
@@ -715,14 +714,11 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         teamsFactory.getTeamsPowerRankings(q)
             .success( function(data) {
                 $scope.chart.data[0] = data[0];
-                // $scope.teamweekranksA = data[0];
 
                 var q = "teamid="+teamB+"&season="+$scope.current.season;
                 teamsFactory.getTeamsPowerRankings(q)
                     .success( function(data) {
                         $scope.chart.data[1] = data[0];
-                        // $scope.chart.data.concat(data[0]);
-                        // $scope.teamweekranksB = data[0];
 
                         //  set labels
                         $scope.chart.labels = data[1];
@@ -744,69 +740,31 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         $scope.chart.series[0] = $( "#teamidA option:selected" ).text();
         $scope.chart.series[1] = $( "#teamidB option:selected" ).text();
 
-        // set 2 colors
-        $scope.chart.colors [0] = {
-            fillColor: '#fdf386',
-            strokeColor: '#fdf386',
-            highlightFill: '#fdf386',
-            highlightStroke: '#fdf386'
-        };
-        
-        $scope.chart.colors [1] = {
-            fillColor: 'rgba(253, 243, 134, 0.8)',
-            strokeColor: 'rgba(253, 243, 134, 0.8)',
-            highlightFill: 'rgba(253, 243, 134, 0.8)',
-            highlightStroke: 'rgba(253, 243, 134, 0.8)'
-        };
+        // set colors
+        $scope.chart.colors = [
+               
+        ];
 
         // set dataoveride
         $scope.chart.datasetOverride = [
-            {
-                fill: true,
-                backgroundColor: [
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000"
-               ]
+           {
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
+               fill: true
             },
             {
-                fill: true,
-                backgroundColor: [
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB"
-               ]
-            } 
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
+               fill: true
+            }
         ];
 
         // set options
@@ -827,9 +785,6 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
               ]
             }
         };
-
-        
-
     }
 
     function getTeamDataChart6 ()
@@ -873,69 +828,31 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         $scope.chart.labels[6] = "Def Pass";
         $scope.chart.labels[7] = "Def Rush";
 
-        // set 2 colors
-        $scope.chart.colors [0] = {
-            fillColor: '#fdf386',
-            strokeColor: '#fdf386',
-            highlightFill: '#fdf386',
-            highlightStroke: '#fdf386'
-        };
-        
-        $scope.chart.colors [1] = {
-            fillColor: 'rgba(253, 243, 134, 0.8)',
-            strokeColor: 'rgba(253, 243, 134, 0.8)',
-            highlightFill: 'rgba(253, 243, 134, 0.8)',
-            highlightStroke: 'rgba(253, 243, 134, 0.8)'
-        };
+        // set colors
+        $scope.chart.colors = [
+               
+        ];
 
         // set dataoveride
         $scope.chart.datasetOverride = [
-            {
-                fill: true,
-                backgroundColor: [
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000"
-               ]
+           {
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
+               fill: true
             },
             {
-                fill: true,
-                backgroundColor: [
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB"
-               ]
-            } 
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
+               fill: true
+            }
         ];
 
         $scope.chart.options = {
@@ -989,41 +906,42 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                
         ];
 
+        // set dataoveride
         $scope.chart.datasetOverride = [
             {
-               backgroundColor: "rgba(99, 192, 242, 1)",
-               pointBackgroundColor: "rgba(99, 192, 242, 1)",
-               pointHoverBackgroundColor: "rgba(99, 192, 242, 1)",
-               borderColor: "rgba(99, 192, 242, 1)",
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(rgba(99, 192, 242, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
                fill: false
             },
             {
-               backgroundColor: "rgba(11, 239, 39, 1)",
-               pointBackgroundColor: "rgba(11, 239, 39, 1)",
-               pointHoverBackgroundColor: "rgba(11, 239, 39, 1)",
-               borderColor: "rgba(11, 239, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(11, 239, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
                fill: false
             },
             {
-               backgroundColor: "rgba(251, 19, 39, 1)",
-               pointBackgroundColor: "rgba(251, 19, 39, 1)",
-               pointHoverBackgroundColor: "rgba(251, 19, 39, 1)",
-               borderColor: "rgba(251, 19, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightred,
+               pointBackgroundColor: $scope.rgbacolors.brightred,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightred,
+               borderColor: $scope.rgbacolors.brightred,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(251, 19, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightred,
                fill: false
             },
             {
-               backgroundColor: "rgba(251, 249, 39, 1)",
-               pointBackgroundColor: "rgba(251, 249, 39, 1)",
-               pointHoverBackgroundColor: "rgbargba(251, 249, 39, 1)",
-               borderColor: "rgba(251, 249, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightyellow,
+               pointBackgroundColor: $scope.rgbacolors.brightyellow,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightyellow,
+               borderColor: $scope.rgbacolors.brightyellow,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(251, 249, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightyellow,
                fill: false
             }
         ];
@@ -1086,43 +1004,44 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
                
         ];
 
+        // set dataoveride
         $scope.chart.datasetOverride = [
             {
-               backgroundColor: "rgba(99, 192, 242, 1)",
-               pointBackgroundColor: "rgba(99, 192, 242, 1)",
-               pointHoverBackgroundColor: "rgba(99, 192, 242, 1)",
-               borderColor: "rgba(99, 192, 242, 1)",
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(rgba(99, 192, 242, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
                fill: false
             },
             {
-               backgroundColor: "rgba(11, 239, 39, 1)",
-               pointBackgroundColor: "rgba(11, 239, 39, 1)",
-               pointHoverBackgroundColor: "rgba(11, 239, 39, 1)",
-               borderColor: "rgba(11, 239, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(11, 239, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
                fill: false
             },
             {
-               backgroundColor: "rgba(251, 19, 39, 1)",
-               pointBackgroundColor: "rgba(251, 19, 39, 1)",
-               pointHoverBackgroundColor: "rgba(251, 19, 39, 1)",
-               borderColor: "rgba(251, 19, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightred,
+               pointBackgroundColor: $scope.rgbacolors.brightred,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightred,
+               borderColor: $scope.rgbacolors.brightred,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(251, 19, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightred,
                fill: false
             },
             {
-               backgroundColor: "rgba(251, 249, 39, 1)",
-               pointBackgroundColor: "rgba(251, 249, 39, 1)",
-               pointHoverBackgroundColor: "rgbargba(251, 249, 39, 1)",
-               borderColor: "rgba(251, 249, 39, 1)",
+               backgroundColor: $scope.rgbacolors.brightyellow,
+               pointBackgroundColor: $scope.rgbacolors.brightyellow,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightyellow,
+               borderColor: $scope.rgbacolors.brightyellow,
                pointBorderColor: '#fff',
-               pointHoverBorderColor: "rgba(251, 249, 39, 1)",
+               pointHoverBorderColor: $scope.rgbacolors.brightyellow,
                fill: false
-            },
+            }
         ];
 
         $scope.chart.options = {
@@ -1187,6 +1106,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
               'NA');
 
         getTeamStatsCharts();
+
+        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;

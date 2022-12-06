@@ -37,69 +37,31 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.chart.labels[6] = "D/O Pass";
         $scope.chart.labels[7] = "D/O Rush";
 
-        // set 2 colors
-        $scope.chart.colors [0] = {
-            fillColor: '#fdf386',
-            strokeColor: '#fdf386',
-            highlightFill: '#fdf386',
-            highlightStroke: '#fdf386'
-        };
-        
-        $scope.chart.colors [1] = {
-            fillColor: 'rgba(253, 243, 134, 0.8)',
-            strokeColor: 'rgba(253, 243, 134, 0.8)',
-            highlightFill: 'rgba(253, 243, 134, 0.8)',
-            highlightStroke: 'rgba(253, 243, 134, 0.8)'
-        };
+        // set colors
+        $scope.chart.colors = [
+               
+        ];
 
         // set dataoveride
         $scope.chart.datasetOverride = [
-            {
-                fill: true,
-                backgroundColor: [
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000"
-               ]
+           {
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
+               fill: true
             },
             {
-                fill: true,
-                backgroundColor: [
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB"
-               ]
-            } 
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
+               fill: true
+            }
         ];
 
         // set options
@@ -113,7 +75,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                   display: true,
                   position: 'left',
                   ticks: {
-                    display: false 
+                    max:32,
+                    min:0
                   }
                 }
               ]
@@ -512,6 +475,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.chart.options = {};
         $scope.chart.datasetOverride = [];
 
+        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
 
         // $('[data-toggle="pagehelptooltip"]').tooltip();  
 
@@ -664,20 +628,32 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.chart.labels[6] = "D/O Pass";
         $scope.chart.labels[7] = "D/O Rush";
 
-        // set 2 colors
-        $scope.chart.colors [0] = {
-            fillColor: '#fdf386',
-            strokeColor: '#fdf386',
-            highlightFill: '#fdf386',
-            highlightStroke: '#fdf386'
-        };
-        
-        $scope.chart.colors [1] = {
-            fillColor: 'rgba(253, 243, 134, 0.8)',
-            strokeColor: 'rgba(253, 243, 134, 0.8)',
-            highlightFill: 'rgba(253, 243, 134, 0.8)',
-            highlightStroke: 'rgba(253, 243, 134, 0.8)'
-        };
+        // set colors
+        $scope.chart.colors = [
+               
+        ];
+
+        // set dataoveride
+        $scope.chart.datasetOverride = [
+           {
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
+               fill: true
+            },
+            {
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
+               fill: true
+            }
+        ];
 
         // set options
         $scope.chart.options = {
@@ -690,62 +666,13 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
                   display: true,
                   position: 'left',
                   ticks: {
-                    display: false 
+                    max:32,
+                    min:0
                   }
                 }
               ]
             }
         };
-
-        // set dataoveride
-        $scope.chart.datasetOverride = [
-            {
-                fill: true,
-                backgroundColor: [
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000",
-               "#FD0000"
-               ]
-            },
-            {
-                fill: true,
-                backgroundColor: [
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB",
-               "#02E7FB"
-               ]
-            } 
-        ];
     }
 
     function getTeamStats (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
@@ -944,6 +871,8 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.chart.colors = [];
         $scope.chart.options = {};
         $scope.chart.datasetOverride = [];
+
+        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
 
         //
         // this is not getting called at right time for definig top offset 
