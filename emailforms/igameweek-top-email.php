@@ -2,11 +2,11 @@
 
 $emailtopwriteup = "	
 <p>
-  We have made changes that may require you to clear your web data (caches)!
+  <span style='font-style:bold; color:maroon;'> We have made changes that may require you to clear your web data (caches)!</span>
 </p>
 
 <p>
-  This is because your web browser saves parts of web pages in order to speed up web browser response time. Unfortunately it can create a situation where web data gets out of sync. If you are unsure on how to do this go to our Daredevilducks home page. There is information on how to do this.
+  <span style='font-style:bold; color:blue;'>This is because your web browser saves parts of web pages in order to speed up web browser response time. Unfortunately it can create a situation where web data gets out of sync. If you are unsure on how to do this go to our Daredevilducks home page. There is information on how to do this.</span>
 </p>
 
 <p>
