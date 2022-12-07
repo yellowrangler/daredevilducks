@@ -1098,6 +1098,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         $scope.current.showteama = true;
         $scope.current.showteamb = true;
         $scope.teamstatscharts = chartService.getChartList("teamCharts");
+        $scope.rgbacolors = chartService.getChartColorsList();
+
 
         $scope.$parent.tracker('team stat charts',
               'teamCharts',
@@ -1107,7 +1109,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
         getTeamStatsCharts();
 
-        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
+        // $scope.rgbacolors = $scope.$parent.rgbaGetColors();
 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;
@@ -1194,7 +1196,6 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         }
 
         getTeamWeekRank($scope.current.teamid);
-x
     }
 
     init();

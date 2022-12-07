@@ -13,9 +13,24 @@ dddAppMobile.service('chartService', function () {
         return thisList;
     }
 
+    this.getChartColorsList = function() {
+        return rgbaColors;
+    }
+
     var emptyList = [
         {   }
     ];
+
+    var rgbaColors = {
+        brightblue : "rgba(99, 192, 242, 1)", 
+        brightgreen : "rgba(11, 239, 39, 1)",
+        brightred : "rgba(251, 19, 39, 1)", 
+        brightyellow : "rgba(251, 249, 39, 1)",
+        darkgreen : "rgba(51, 137, 27, 1)", 
+        darkpurple : "rgba(107, 120, 240, 1)",
+        lightpurple :"rgba(208, 135, 216, 1)", 
+        brightorange :"rgba(255, 156, 26, 1"
+        };
 
     var teamChartList = [ 
         {  

@@ -322,23 +322,6 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         showPicture(title, picture);   
     }
 
-    $scope.rgbaGetColors = function () {
-
-        const rgbaColors = {
-                "brightblue":"rgba(99, 192, 242, 1)", 
-                "brightgreen":"rgba(11, 239, 39, 1)",
-                "brightred":"rgba(251, 19, 39, 1)", 
-                "brightyellow":"rgba(251, 249, 39, 1)",
-                "darkgreen":"rgba(51, 137, 27, 1)", 
-                "darkpurple":"rgba(107, 120, 240, 1)",
-                "lightpurple":"rgba(208, 135, 216, 1)", 
-                "brightorange":"rgba(255, 156, 26, 1"
-        };
-
-        return rgbaColors;
-    }
-
-
     $scope.tracker = function (tracktext, trackaction, trackmodule, trackseason, trackweek){
       var memberid = "";
       var season = "";

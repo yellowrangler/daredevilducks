@@ -1,4 +1,4 @@
-controllers.teamstandingsController = function ($scope, $http, $location, $window, nflTeamsService, teamsFactory) {
+controllers.teamstandingsController = function ($scope, $http, $location, $window, nflTeamsService, chartService, teamsFactory) {
     $scope.current = {};
     $scope.current.season = nflTeamsService.getCurrentSeason();
 
@@ -901,8 +901,8 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
         // 
         resetChartObject();
 
-        $scope.teamstatscharts = chartService.getChartList("teamCharts");
-
+        $scope.rgbacolors = chartService.getChartColorsList();
+        
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
@@ -930,7 +930,9 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
         getTeamStatsCharts();
 
-        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
+        $scope.teamstatscharts = chartService.getChartList("teamCharts");
+        $scope.rgbacolors = chartService.getChartColorsList();
+
 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;
@@ -961,7 +963,7 @@ controllers.teamstatschartsController = function ($scope, $http, $location, team
 
 }
 
-controllers.teamweeklyrankingController = function ($scope, $http, $location, teamsFactory, membersFactory, nflTeamsService, loginService) {
+controllers.teamweeklyrankingController = function ($scope, $http, $location, teamsFactory, membersFactory, chartService, nflTeamsService, loginService) {
 
     function getTeamWeekRank ()
     {
@@ -1143,7 +1145,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
         $scope.chart.options = {};
         $scope.chart.datasetOverride = [];
 
-        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
+        $scope.rgbacolors = chartService.getChartColorsList();
 
         $scope.teamstats = {};
         

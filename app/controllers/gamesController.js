@@ -1,4 +1,4 @@
-controllers.pickgamesController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, loginService) {
+controllers.pickgamesController = function ($scope, $http, $location, membersFactory, teamsFactory, nflTeamsService, chartService, loginService) {
     
     //
     // this returnd false if admin true if other
@@ -475,7 +475,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         $scope.chart.options = {};
         $scope.chart.datasetOverride = [];
 
-        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
+        $scope.rgbacolors = chartService.getChartColorsList();
 
         // $('[data-toggle="pagehelptooltip"]').tooltip();  
 
@@ -608,7 +608,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
     
 }
 
-controllers.viewtotalpickgamesController = function ($scope, $http, $location, teamsFactory, nflTeamsService, loginService) {
+controllers.viewtotalpickgamesController = function ($scope, $http, $location, teamsFactory, nflTeamsService, chartService, loginService) {
 
     
 
@@ -872,8 +872,8 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         $scope.chart.options = {};
         $scope.chart.datasetOverride = [];
 
-        $scope.rgbacolors = $scope.$parent.rgbaGetColors();
-
+        $scope.rgbacolors = chartService.getChartColorsList();
+        
         //
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
