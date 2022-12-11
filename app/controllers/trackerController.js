@@ -103,8 +103,8 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
 
         $scope.trackactionsHdrsB = [
             "screenname",
-            "hits",
-            "tdate"
+            "tdate",
+            "hits"
         ];
 
         for (var index = 0; index < tblLength; index++ )
@@ -378,8 +378,8 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
 
         $scope.trackactionsHdrsB = [
             "screenname",
-            "hits",
-            "tdate"
+            "tdate",
+            "hits"
         ];
 
         for (var index = 0; index < tblLength; index++ )
