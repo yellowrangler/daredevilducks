@@ -11,7 +11,7 @@ controllers.helpController = function ($scope, $http, $location, $window) {
         var trackaction = trackactionArray[1];
 
         $scope.$parent.tracker('help for '+trackaction,
-              trackaction,
+              'helpRequest',
               'helpController',
               'NA',
               'NA');

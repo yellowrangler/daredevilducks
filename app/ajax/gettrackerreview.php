@@ -22,6 +22,26 @@ $orderby = "";
 $groupby = "";
 $trackgroupby = "";
 
+$countCaseStr = "COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
+			  COUNT(CASE WHEN trackaction = 'savePickGames' THEN 1 ELSE NULL END) AS savePick,
+			  COUNT(CASE WHEN trackaction = 'hallofFame' THEN 1 ELSE NULL END) AS HOF,
+			  COUNT(CASE WHEN trackaction = 'weeklyTotals' THEN 1 ELSE NULL END) AS WeekTls,
+			  COUNT(CASE WHEN trackaction = 'playerTotals' THEN 1 ELSE NULL END) AS playerTls,  
+			  COUNT(CASE WHEN trackaction = 'teamStatsDialog' THEN 1 ELSE NULL END) AS teamStatDia,
+			  COUNT(CASE WHEN trackaction = 'teamScoresStats' THEN 1 ELSE NULL END) AS teamScorSta,
+			  COUNT(CASE WHEN trackaction = 'teamStandings' THEN 1 ELSE NULL END) AS teamStand,
+			  COUNT(CASE WHEN trackaction = 'hallofMemory' THEN 1 ELSE NULL END) AS HOM,
+			  COUNT(CASE WHEN trackaction = 'nflNews' THEN 1 ELSE NULL END) AS nflnews,
+			  COUNT(CASE WHEN trackaction = 'teamCharts' THEN 1 ELSE NULL END) AS teamChart,  
+			  COUNT(CASE WHEN trackaction = 'login' THEN 1 ELSE NULL END) AS login,
+			  COUNT(CASE WHEN trackaction = 'faqs' THEN 1 ELSE NULL END) AS faq,
+			  COUNT(CASE WHEN trackaction = 'helpRequest' THEN 1 ELSE NULL END) AS help,
+			  COUNT(CASE WHEN trackaction = 'viewTotalPickGames' THEN 1 ELSE NULL END) AS vewTtlPckGa, 
+			  COUNT(CASE WHEN trackaction = 'takeSurvey' THEN 1 ELSE NULL END) AS takeSurvey, 
+			  COUNT(CASE WHEN trackaction = 'surveyResults' THEN 1 ELSE NULL END) AS surveyRes, 
+			  COUNT(CASE WHEN trackaction = 'teamDiscovery' THEN 1 ELSE NULL END) AS teamDisc, 
+			  COUNT(CASE WHEN trackaction = 'teamBrackets' THEN 1 ELSE NULL END) AS teamBrk, 
+			  COUNT(CASE WHEN trackaction = 'ChristmasSnow' THEN 1 ELSE NULL END) AS snow";
 
 // print_r($_POST);
 // die();
@@ -234,19 +254,7 @@ switch ($trackrequest) {
 			$groupby = " GROUP BY ";
 
 			$sqlcountaction = "SELECT screenname, count(*) as hits,
-			  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
-			  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
-			  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
-			  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
-			  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
-			  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
-			  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
-			  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
-			  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
-			  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teamStand,  
-			  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
-			  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
-			  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+			  $countCaseStr
 			FROM tracktbl
 			$where
 			$groupby $trackgroupby 
@@ -258,19 +266,7 @@ switch ($trackrequest) {
 			$trackgroupby = " screenname ";
 
 			$sqlcountaction = "SELECT screenname, count(*) as hits,
-			  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
-			  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
-			  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
-			  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
-			  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
-			  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
-			  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
-			  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
-			  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
-			  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teamStand,  
-			  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
-			  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
-			  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+			  $countCaseStr
 			FROM tracktbl
 			$where
 			$groupby $trackgroupby 
@@ -298,19 +294,7 @@ switch ($trackrequest) {
 			$groupby = " GROUP BY ";
 
 			$sqlcountactiongroup = "SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
-			  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
-			  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
-			  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
-			  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
-			  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
-			  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
-			  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
-			  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
-			  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
-			  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teamStand,  
-			  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
-			  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
-			  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+			  $countCaseStr
 			FROM tracktbl
 			$where
 			$groupby $trackgroupby 
@@ -322,19 +306,7 @@ switch ($trackrequest) {
 			$trackgroupby = " tdate, screenname ";
 
 			$sqlcountactiongroup = "SELECT screenname, CAST(trackdate AS DATE) as tdate, count(*) as hits,
-			  COUNT(CASE WHEN trackaction = 'viewtotalpickgames' THEN 1 ELSE NULL END) AS viewPicks,
-			  COUNT(CASE WHEN trackaction = 'getMemberPickList' THEN 1 ELSE NULL END) AS pickList,
-			  COUNT(CASE WHEN trackaction = 'pickgames' THEN 1 ELSE NULL END) AS pickGames,
-			  COUNT(CASE WHEN trackaction = 'weekly totals' THEN 1 ELSE NULL END) AS playerWeekly,
-			  COUNT(CASE WHEN trackaction = 'player totals' THEN 1 ELSE NULL END) AS playerTls,  
-			  COUNT(CASE WHEN trackaction = 'hall of fame' THEN 1 ELSE NULL END) AS hof,
-			  COUNT(CASE WHEN trackaction = 'hall of memory' THEN 1 ELSE NULL END) AS hom,
-			  COUNT(CASE WHEN trackaction = 'team stats dialog' THEN 1 ELSE NULL END) AS teamStatDia,
-			  COUNT(CASE WHEN trackaction = 'team scores and stats' THEN 1 ELSE NULL END) AS teamScrsStat,
-			  COUNT(CASE WHEN trackaction = 'team standings' THEN 1 ELSE NULL END) AS teamStand,  
-			  COUNT(CASE WHEN trackaction = 'team discovery' THEN 1 ELSE NULL END) AS teamDisc,
-			  COUNT(CASE WHEN trackaction = 'takesurvey' THEN 1 ELSE NULL END) AS takeSurvey,
-			  COUNT(CASE WHEN trackaction = 'nfl news' THEN 1 ELSE NULL END) AS nflnews
+			  $countCaseStr
 			FROM tracktbl
 			$where
 			$groupby $trackgroupby 

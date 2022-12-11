@@ -63,13 +63,60 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
         var i = 0;
     };
 
-    function buildTrackselections() 
+    function buildtrackTables() 
     {
+        $scope.trackactions = [
+            "pickList",
+            "savePick",
+            "HOF",
+            "HOM",
+            "WeekTls",
+            "playerTls",
+            "teamStatDia",
+            "teamScorSta",
+            "teamStand",
+            "nflnews",
+            "teamChart",
+            "login",
+            "faq",
+            "help",
+            "vewTtlPckGa",
+            "takeSurvey",
+            "surveyRes",
+            "teamDisc",
+            "teamBrk",
+            "snow"
+        ];
+
+        // 
+        // variables for managing tables
+        // 
+        var index = 0;
+        var tblLength = $scope.trackactions.length;
+        var el = "";
+        var elObj = {};
+
+        $scope.trackactionsHdrsA = [
+            "screenname",
+            "hits"
+        ];
+
+        $scope.trackactionsHdrsB = [
+            "screenname",
+            "hits",
+            "tdate"
+        ];
+
+        for (var index = 0; index < tblLength; index++ )
+        {
+            el = $scope.trackactions[index];
+
+            $scope.trackactionsHdrsA.push(el);
+            $scope.trackactionsHdrsB.push(el);
+        }
 
         $scope.trackrequests = [
-            { trackrequest: "selectstandard" },
-            { trackrequest: "selectmultiple" },
-            { trackrequest: "selecttoppicker" }
+            { trackrequest: "selectstandard" }
         ];
 
         $scope.trackselectwheres = [
@@ -132,8 +179,7 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
 
                $scope.trackselectwherevalues = selectwherevalues;
             }
-              
-               
+                    
                 var i = 0;
             })
             .error( function(edata) {
@@ -207,7 +253,7 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
 
         resetGlobalVariables();
 
-        buildTrackselections();
+        buildtrackTables();
     };
 
     $scope.getTrackerReviewInfo = function () {
@@ -291,8 +337,58 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             });
     }
 
-    function buildTrackselections() 
+    function buildtrackTables() 
     {
+
+        $scope.trackactions = [
+            "pickList",
+            "savePick",
+            "HOF",
+            "HOM",
+            "WeekTls",
+            "playerTls",
+            "teamStatDia",
+            "teamScorSta",
+            "teamStand",
+            "nflnews",
+            "teamChart",
+            "login",
+            "faq",
+            "help",
+            "vewTtlPckGa",
+            "takeSurvey",
+            "surveyRes",
+            "teamDisc",
+            "teamBrk",
+            "snow"
+        ];
+
+        // 
+        // variables for managing tables
+        // 
+        var index = 0;
+        var tblLength = $scope.trackactions.length;
+        var el = "";
+        var elObj = {};
+
+        $scope.trackactionsHdrsA = [
+            "screenname",
+            "hits"
+        ];
+
+        $scope.trackactionsHdrsB = [
+            "screenname",
+            "hits",
+            "tdate"
+        ];
+
+        for (var index = 0; index < tblLength; index++ )
+        {
+            el = $scope.trackactions[index];
+
+            $scope.trackactionsHdrsA.push(el);
+            $scope.trackactionsHdrsB.push(el);
+        }
 
         $scope.trackrequests = [
             { trackrequest: "countaction" },
@@ -303,23 +399,7 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
         $scope.trackorderbycountactions = [
             { trackorderby: "screenname" },
             { trackorderby: "hits" },
-            { trackorderby: "viewPicks" },
-            { trackorderby: "pickList" },
-            { trackorderby: "pickGames" },
-            { trackorderby: "playerWeekly" },
-            { trackorderby: "playerTls" },
-            { trackorderby: "hof" },
-            { trackorderby: "hom" },
-            { trackorderby: "teamStatDia" },
-            { trackorderby: "teamScrsStat" },
-            { trackorderby: "teamStand" },
-            { trackorderby: "teamDisc" },
-            { trackorderby: "takeSurvey" },
-            { trackorderby: "nflnews" }
-        ];
-
-        $scope.trackgroupbycountactions = [
-            { trackgroupby: "screenname" }
+            { trackorderby: "tdate" }
         ];
 
         $scope.trackorderbycountactiongroups = [
@@ -327,20 +407,21 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             { trackorderby: "tdate, screenname" },
             { trackorderby: "screenname" },
             { trackorderby: "hits" },
-            { trackorderby: "tdate" },
-            { trackorderby: "viewPicks" },
-            { trackorderby: "pickList" },
-            { trackorderby: "pickGames" },
-            { trackorderby: "playerWeekly" },
-            { trackorderby: "playerTls" },
-            { trackorderby: "hof" },
-            { trackorderby: "hom" },
-            { trackorderby: "teamStatDia" },
-            { trackorderby: "teamScrsStat" },
-            { trackorderby: "teamStand" },
-            { trackorderby: "teamDisc" },
-            { trackorderby: "takeSurvey" },
-            { trackorderby: "nflnews" }
+            { trackorderby: "tdate" }
+        ];
+
+        for (var index = 0; index < tblLength; index++ )
+        {
+            elObj = {
+              trackorderby: $scope.trackactions[index] 
+            };
+
+            $scope.trackorderbycountactions.push(elObj);
+            $scope.trackorderbycountactiongroups.push(elObj);
+        }
+        
+        $scope.trackgroupbycountactions = [
+            { trackgroupby: "screenname" }
         ];
 
         $scope.trackgroupbycountactiongroups = [
@@ -416,7 +497,8 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
         $scope.requestcount = 0;
         $scope.current.status = "";
 
-        buildTrackselections();
+        buildtrackTables();
+
         getMembers(); 
     };
 

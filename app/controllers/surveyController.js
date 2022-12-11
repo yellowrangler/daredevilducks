@@ -130,7 +130,7 @@ controllers.takesurveyController = function ($scope, $http, $location, $window, 
         $scope.current.firsttime = 1;
 
         $scope.$parent.tracker('take survey',
-              'takesurvey',
+              'takeSurvey',
               'takesurveyController',
               'NA',
               'NA');
@@ -459,7 +459,7 @@ controllers.surveyresultsController = function ($scope, $http, $location, $windo
         $scope.current.memberid = $scope.current.memberlogin.memberid;
 
         $scope.$parent.tracker('survey results',
-              'surveyresults',
+              'surveyResults',
               'surveyresultsController',
               'NA',
               'NA');
