@@ -2,23 +2,15 @@
 
 $emailtopwriteup = "	
 <p>
-  <span style='font-style:bold; color:maroon;'> We have made changes that may require you to clear your web data (caches)!</span>
-</p>
-
-<p>
-  <span style='font-style:bold; color:blue;'>This is because your web browser saves parts of web pages in order to speed up web browser response time. Unfortunately it can create a situation where web data gets out of sync. If you are unsure on how to do this go to our Daredevilducks home page. There is information on how to do this.</span>
-</p>
-
-<p>
-The week started out with the Bills beating the snot out of the Patriots. The Steelers played well enough to beat the Falcons in Atlanta. The Packers held court over the Bears. The Lions, no longer the league doormat, beat the Jaguars. The Browns with Deshaun Watson beat the Texans in Houston. The Vikings improved their winning ways with a win over the Jets. 
+The week started out with the Raiders beating the Rams. The Bills held on to beat the impressive looking Jets. The Bengals beat the Browns. The Cowboys came from the brink to beat the last place Texans. The Lions kept their playoff chances alive with a win over the Vikings.
 </p> 
 
 <p>
-The Giants and the Commanders played to a tie. The Eagles crushed the Titans. The Ravens with an injured Lamar Jackson, brought in Tyler Huntley to beat the Broncos. The Seahawks beat the Rams. The 49ers lost Garoppolo to a broken leg. No problem, rookie quarterback Brock Purdy took the reigns as the 49ers beat the Dolphins. The Bengals beat the Chiefs. The Raiders beat the Chargers. The Cowboys roped and tied the Colts. 
+ The Eagles looked impressive as they destroyed the Giants. In a bit of an upset, the Jaguars beat the Titans in Nashville. The Ravens beat the Steelers. In another upset, the Panthers beat the Seahawks. The 49ers behind rookie quarterback Brock Purdy crushed the Buccaneers. The Chiefs beat the Broncos and the Chargers beat the Dolphins.
 </p> 
 
 <p>
-In the final game of the week Tom Brady showed even his naysayers why he is the G.O.A.T.; as the Buccaneers came from behind to beat the Saints!
+In the final game of the week the Patriots beat the Cardinals in Arizona. 
 </p> 
 
 <p>
@@ -30,14 +22,9 @@ Don't be disappointed if you are not basking in the upper wins tier! There is st
 </p>
 
 <p>
-  We have made changes that may require you to clear your web data (caches)!
+Be aware that we have games on Saturday!
 </p>
 
-<p>
-  This is because your web browser saves parts of web pages in order to speed up web browser response time. Unfortunately it can create a situation where web data gets out of sync. If you are unsure on how to do this go to our Daredevilducks home page. There is information on how to do this.
-</p>
-
-<br />
 <p>
 The full stats are below! Read em and weep (I know I do)!
 </p> 

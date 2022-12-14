@@ -107,7 +107,7 @@ controllers.trackerreviewselectController = function ($scope, $http, $location, 
             "hits"
         ];
 
-        for (var index = 0; index < tblLength; index++ )
+        for (index = 0; index < tblLength; index++ )
         {
             el = $scope.trackactions[index];
 
@@ -382,7 +382,7 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             "hits"
         ];
 
-        for (var index = 0; index < tblLength; index++ )
+        for (index = 0; index < tblLength; index++ )
         {
             el = $scope.trackactions[index];
 
@@ -410,7 +410,7 @@ controllers.trackerreviewcountController = function ($scope, $http, $location, $
             { trackorderby: "tdate" }
         ];
 
-        for (var index = 0; index < tblLength; index++ )
+        for (index = 0; index < tblLength; index++ )
         {
             elObj = {
               trackorderby: $scope.trackactions[index] 
