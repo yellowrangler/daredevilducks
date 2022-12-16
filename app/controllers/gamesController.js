@@ -766,27 +766,27 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
             //
             // check if selected is expired
             //
-            var q = "gamenbr="+gamenbr+"&week="+$scope.current.week+"&season="+$scope.current.season;
-            teamsFactory.getNFLGamesWeekMemberTeamsExpired(q)
+            var q = "gamenbr="+gamenbr+"&week="+$scope.current.week+"&season="+$scope.current.season+"&addtime=1";
+            teamsFactory.getNFLGamesWeekMemberTeamsExpiredAugmented(q)
                 .success( function(data) {
                     var check = data; 
 
-                    if (check[0].gamestatus != "expired")
+                    if (check[0].gamestatus == "block")
                     {
-                        $scope.$parent.tracker('bounced: see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+                        $scope.$parent.tracker('bounced: member picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
                               'getMemberPickList',
                               'viewtotalpickgamesController',
                               $scope.current.season,
                               $scope.current.week);
 
                         // new code
-                        $scope.$parent.showAlert("Too Early!", "Data available once Game is underway!");
+                        $scope.$parent.showAlert("Too Early!", "Data available 1 hour after Game is underway!");
 
                     }
                     else
                     {
                         
-                        $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+                        $scope.$parent.tracker('member picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
                               'getMemberPickList',
                               'viewtotalpickgamesController',
                               $scope.current.season,
@@ -813,7 +813,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         }
         else
         {
-            $scope.$parent.tracker('see the picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+            $scope.$parent.tracker('member picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
                   'getMemberPickList',
                   'viewtotalpickgamesController',
                   $scope.current.season,

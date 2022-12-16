@@ -170,6 +170,15 @@ dddApp.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.getNFLGamesWeekMemberTeamsExpiredAugmented = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getnflgameweekmemberteamsexpiredaugmented.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getNFLByeWeekMemberTeams = function (data) {
         return $http({ 
             method: 'POST', 
