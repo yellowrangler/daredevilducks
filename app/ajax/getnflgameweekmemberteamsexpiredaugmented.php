@@ -46,7 +46,7 @@ $sql = "SELECT
   G.id as gameid,
   G.gamenbr as gamenbr,
   CASE 
-  WHEN G.gamedatetime < DATE_ADD(NOW(), INTERVAL $addtime HOUR) THEN 'ok'
+  WHEN G.gamedatetime < DATE_SUB(NOW(), INTERVAL $addtime HOUR) THEN 'ok'
   ELSE 'block'
   END AS gamestatus
 FROM gamestbl G 
