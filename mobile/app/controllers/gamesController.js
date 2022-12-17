@@ -768,7 +768,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
                               $scope.current.week);
 
                         // new code
-                        alert("Too Early!", "Data available 1 hour after Game is underway!");
+                        alert("Too Early! Data available 1 hour after Game is underway!");
 
                     }
                     else
