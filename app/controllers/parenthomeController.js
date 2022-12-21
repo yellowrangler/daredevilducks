@@ -314,6 +314,10 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         letItSnow();
     }
 
+    $scope.testPopUp = function(message) {
+        alert(message);
+    }
+
     $scope.toggleHalloweenNav = function() {
         toggleHalloweenNav();
     }

@@ -1,16 +1,31 @@
 <?php
 
 $emailtopwriteup = "	
+<div style='color:#2F6C03;font-style:italic;'>
+  <p>
+  We have again made changes that may require you to clear your web data (caches)!
+  </p>
+
+  <p>
+  This is because your web browser saves parts of web pages in order to speed up web browser response time. Unfortunately it can create a situation where web data gets out of sync.
+  </p>
+
+  <p>
+  If you are unsure on how to do this go to the Daredevil ducks home page. It will refer you to a PCMagazine article on how to clear your web data!
+  </p>
+</div>
+
 <p>
-The week started out with the Raiders beating the Rams. The Bills held on to beat the impressive looking Jets. The Bengals beat the Browns. The Cowboys came from the brink to beat the last place Texans. The Lions kept their playoff chances alive with a win over the Vikings.
+The week started out with the 49ers beating the Seahawks. The Vikings defeated the Colts in overtime in the biggest comeback in NFL history! The Browns beat the Ravens. The Bills beat the Dolphins in the final seconds in a snow storm! 
+The Steelers beat the Panthers. The Eagles played in a back and forth affair finally holding on to beat the Bears.
 </p> 
 
 <p>
- The Eagles looked impressive as they destroyed the Giants. In a bit of an upset, the Jaguars beat the Titans in Nashville. The Ravens beat the Steelers. In another upset, the Panthers beat the Seahawks. The 49ers behind rookie quarterback Brock Purdy crushed the Buccaneers. The Chiefs beat the Broncos and the Chargers beat the Dolphins.
+ The Chiefs eeked by the Texans. In an upset, the Jaguars beat the Cowboys. The Saints beat the Falcons and the Lions beat the Jets. The Broncos beat the Cardinals. In the craziest game of the week, the Raiders beat the Patriots. The Chargers beat the Titans. The Bengals beat the Buccaneers. The Giants beat the Commanders.
 </p> 
 
 <p>
-In the final game of the week the Patriots beat the Cardinals in Arizona. 
+In the final game of the week the Packers beat the Rams. 
 </p> 
 
 <p>
@@ -18,11 +33,7 @@ In the final game of the week the Patriots beat the Cardinals in Arizona.
 </p> 
 
 <p>
-Don't be disappointed if you are not basking in the upper wins tier! There is still time to make a run. All you have to do is win!
-</p>
-
-<p>
-Be aware that we have games on Saturday!
+Be aware that most games are on Saturday!
 </p>
 
 <p>

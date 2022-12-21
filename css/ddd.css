@@ -409,6 +409,18 @@ border: 0 none;
 	font-size: 17px;
 }
 
+.didyouknowBodySmallCap {
+	/*font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	font-size: 17px;
+	color: #999999;*/
+	color: #2F6C03;
+	font-family: 'Cormorant-SemiBoldItalic';
+	font-weight:900;
+	font-size: 18px;
+}
+
+
 .discoverCaption  {
 	color:#6C0000;
 	font-family: 'Open Sans', sans-serif;

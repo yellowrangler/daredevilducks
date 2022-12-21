@@ -21,29 +21,29 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         return status;
     }
 
-    function drawChartDiff() 
+    function drawChartDiff1() 
     {
-         // set 2 serries
-        $scope.chart.series[0] = $scope.current.hometeamname;
-        $scope.chart.series[1] = $scope.current.awayteamname;
+        // set serries
+        $scope.charts[0].series[0] = $scope.current.hometeamname;
+        $scope.charts[0].series[1] = $scope.current.awayteamname;
 
         // set 8 labels
-        $scope.chart.labels[0] = "O/D All";
-        $scope.chart.labels[1] = "O/D Score";
-        $scope.chart.labels[2] = "O/D Pass";
-        $scope.chart.labels[3] = "O/D Rush";
-        $scope.chart.labels[4] = "D/O All";
-        $scope.chart.labels[5] = "D/O Score";
-        $scope.chart.labels[6] = "D/O Pass";
-        $scope.chart.labels[7] = "D/O Rush";
+        $scope.charts[0].labels[0] = "O/D All";
+        $scope.charts[0].labels[1] = "O/D Score";
+        $scope.charts[0].labels[2] = "O/D Pass";
+        $scope.charts[0].labels[3] = "O/D Rush";
+        $scope.charts[0].labels[4] = "D/O All";
+        $scope.charts[0].labels[5] = "D/O Score";
+        $scope.charts[0].labels[6] = "D/O Pass";
+        $scope.charts[0].labels[7] = "D/O Rush";
 
         // set colors
-        $scope.chart.colors = [
+        $scope.charts[0].colors = [
                
         ];
 
         // set dataoveride
-        $scope.chart.datasetOverride = [
+        $scope.charts[0].datasetOverride = [
            {
                backgroundColor: $scope.rgbacolors.brightblue,
                pointBackgroundColor: $scope.rgbacolors.brightblue,
@@ -65,7 +65,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         ];
 
         // set options
-        $scope.chart.options = {
+        $scope.charts[0].options = {
             legend: { display: true },
             scales: {
               yAxes: [
@@ -84,6 +84,65 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         };
     }
 
+    function drawChartDiff2() 
+    {
+        // set serries
+        $scope.charts[1].series[0] = $scope.current.hometeamname;
+        $scope.charts[1].series[1] = $scope.current.awayteamname;
+
+        // set colors
+        $scope.charts[1].colors = [
+               
+        ];
+
+        // set dataoveride
+        $scope.charts[1].datasetOverride = [
+            {
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
+               fill: false
+            },
+            {
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
+               fill: false
+            }
+        ];
+
+
+        // set options
+        $scope.charts[1].options = {
+            legend: { display: true },
+            scales: {
+              yAxes: [
+                {
+                  id: 'Power-Rankings',
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  ticks: {
+                    max:32,
+                    min:0,
+                    // reverse: true,
+                  }
+                }
+              ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 }
+            }
+        };
+    }
+
     function getTeamStats (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
     {
         $scope.current.hometeamname = hometeamname;
@@ -97,44 +156,65 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
+        .success( function(data) {
+            $scope.charts[0].data[0] = data;
+           
+            var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+            teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
-                $scope.chart.data[0] = data;
+                $scope.charts[0].data[1] = data;
 
-                var q = "teamid="+awayteamid+"&season="+$scope.current.season;
-                teamsFactory.getTeamsStatsCurrentWeek(q)
+                drawChartDiff1();
+
+                var q = "teamid="+hometeamid+"&season="+$scope.current.season;
+                teamsFactory.getTeamsPowerRankings(q)
+                .success( function(data) {
+                    $scope.charts[1].data[0] = data[0];
+
+                    var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+                    teamsFactory.getTeamsPowerRankings(q)
                     .success( function(data) {
-                        $scope.chart.data[1] = data;
+                        $scope.charts[1].data[1] = data[0];
 
-                        drawChartDiff(); 
+                        //  set labels
+                        $scope.charts[1].labels = data[1];
+
+                        drawChartDiff2();
 
                         var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
                         teamsFactory.getTeamStandingsDialog(q)
-                            .success( function(data) {
-                                $scope.teamstats = data[0]; 
+                        .success( function(data) {
+                            $scope.teamstats = data[0]; 
 
-                                // $scope.teamstat = "";
+                            // $scope.teamstat = "";
 
-                                $('#teamStatsDialogModalTitle').text("Team Stats");
-                                // $('#teamStatsDialogModalBody').html(data);
-                                $('#teamStatsDialogModal').modal();
+                            $('#teamStatsDialogModalTitle').text("Team Stats");
+                            // $('#teamStatsDialogModalBody').html(data);
+                            $('#teamStatsDialogModal').modal();
 
-                                $('#teamStatsDialogModal').on('shown.bs.modal', function() {
-                                    
-                                })
-
+                            $('#teamStatsDialogModal').on('shown.bs.modal', function() {
                                 
                             })
-                            .error( function(edata) {
-                                alert(edata);
-                            });
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });
                     })
                     .error( function(edata) {
                         alert(edata);
-                    });  
+                    });
                 })
+                .error( function(edata) {
+                    alert(edata);
+                });
+            })
             .error( function(edata) {
                 alert(edata);
-            });   
+            });  
+        })
+        .error( function(edata) {
+            alert(edata);
+        });   
                           
     }
 
@@ -467,13 +547,24 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         // 
         // chartjs objects
         // 
-        $scope.chart = {};
-        $scope.chart.data = [];
-        $scope.chart.series = [];
-        $scope.chart.labels = [];
-        $scope.chart.colors = [];
-        $scope.chart.options = {};
-        $scope.chart.datasetOverride = [];
+        $scope.charts = [
+            {
+                data: [],
+                series: [],
+                labels: [],
+                colors: [],
+                options: {},
+                datasetOverride: []
+            },
+            {
+                data: [],
+                series: [],
+                labels: [],
+                colors: [],
+                options: {},
+                datasetOverride: []
+            }
+        ];  // use this to hold multiple charts
 
         $scope.rgbacolors = chartService.getChartColorsList();
        
@@ -599,29 +690,29 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
 controllers.viewtotalpickgamesController = function ($scope, $http, $location, teamsFactory, nflTeamsService, chartService, loginService) {
 
-    function drawChartDiff() 
+    function drawChartDiff1() 
     {
-        // set 2 serries
-        $scope.chart.series[0] = $scope.current.hometeamname;
-        $scope.chart.series[1] = $scope.current.awayteamname;
+        // set serries
+        $scope.charts[0].series[0] = $scope.current.hometeamname;
+        $scope.charts[0].series[1] = $scope.current.awayteamname;
 
         // set 8 labels
-        $scope.chart.labels[0] = "O/D All";
-        $scope.chart.labels[1] = "O/D Score";
-        $scope.chart.labels[2] = "O/D Pass";
-        $scope.chart.labels[3] = "O/D Rush";
-        $scope.chart.labels[4] = "D/O All";
-        $scope.chart.labels[5] = "D/O Score";
-        $scope.chart.labels[6] = "D/O Pass";
-        $scope.chart.labels[7] = "D/O Rush";
+        $scope.charts[0].labels[0] = "O/D All";
+        $scope.charts[0].labels[1] = "O/D Score";
+        $scope.charts[0].labels[2] = "O/D Pass";
+        $scope.charts[0].labels[3] = "O/D Rush";
+        $scope.charts[0].labels[4] = "D/O All";
+        $scope.charts[0].labels[5] = "D/O Score";
+        $scope.charts[0].labels[6] = "D/O Pass";
+        $scope.charts[0].labels[7] = "D/O Rush";
 
         // set colors
-        $scope.chart.colors = [
+        $scope.charts[0].colors = [
                
         ];
 
         // set dataoveride
-        $scope.chart.datasetOverride = [
+        $scope.charts[0].datasetOverride = [
            {
                backgroundColor: $scope.rgbacolors.brightblue,
                pointBackgroundColor: $scope.rgbacolors.brightblue,
@@ -643,7 +734,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         ];
 
         // set options
-        $scope.chart.options = {
+        $scope.charts[0].options = {
             legend: { display: true },
             scales: {
               yAxes: [
@@ -662,6 +753,65 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         };
     }
 
+    function drawChartDiff2() 
+    {
+        // set serries
+        $scope.charts[1].series[0] = $scope.current.hometeamname;
+        $scope.charts[1].series[1] = $scope.current.awayteamname;
+
+        // set colors
+        $scope.charts[1].colors = [
+               
+        ];
+
+        // set dataoveride
+        $scope.charts[1].datasetOverride = [
+            {
+               backgroundColor: $scope.rgbacolors.brightblue,
+               pointBackgroundColor: $scope.rgbacolors.brightblue,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightblue,
+               borderColor: $scope.rgbacolors.brightblue,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightblue,
+               fill: false
+            },
+            {
+               backgroundColor: $scope.rgbacolors.brightgreen,
+               pointBackgroundColor: $scope.rgbacolors.brightgreen,
+               pointHoverBackgroundColor: $scope.rgbacolors.brightgreen,
+               borderColor: $scope.rgbacolors.brightgreen,
+               pointBorderColor: '#fff',
+               pointHoverBorderColor: $scope.rgbacolors.brightgreen,
+               fill: false
+            }
+        ];
+
+
+        // set options
+        $scope.charts[1].options = {
+            legend: { display: true },
+            scales: {
+              yAxes: [
+                {
+                  id: 'Power-Rankings',
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  ticks: {
+                    max:32,
+                    min:0,
+                    // reverse: true,
+                  }
+                }
+              ]
+            },
+            elements: { 
+                line: { fill: false, borderWidth: 6 },
+                point:{ radius: 8 }
+            }
+        };
+    }
+
     function getTeamStats (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
     {
         $scope.current.hometeamname = hometeamname;
@@ -669,51 +819,71 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
         $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
               'teamStatsDialog',
-              'viewtotalpickgamesController',
+              'pickgamesController',
               $scope.current.season,
               $scope.current.week);
 
         var q = "teamid="+hometeamid+"&season="+$scope.current.season;
         teamsFactory.getTeamsStatsCurrentWeek(q)
+        .success( function(data) {
+            $scope.charts[0].data[0] = data;
+           
+            var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+            teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
-                $scope.chart.data[0] = data; 
+                $scope.charts[0].data[1] = data;
 
-                var q = "teamid="+awayteamid+"&season="+$scope.current.season;
-                teamsFactory.getTeamsStatsCurrentWeek(q)
+                drawChartDiff1();
+
+                var q = "teamid="+hometeamid+"&season="+$scope.current.season;
+                teamsFactory.getTeamsPowerRankings(q)
+                .success( function(data) {
+                    $scope.charts[1].data[0] = data[0];
+
+                    var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+                    teamsFactory.getTeamsPowerRankings(q)
                     .success( function(data) {
-                        $scope.chart.data[1] = data;
-                        
-                        // drawChartSame(); 
-                        drawChartDiff();
+                        $scope.charts[1].data[1] = data[0];
+
+                        //  set labels
+                        $scope.charts[1].labels = data[1];
+
+                        drawChartDiff2();
 
                         var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
                         teamsFactory.getTeamStandingsDialog(q)
-                            .success( function(data) {
-                                $scope.teamstats = data[0]; 
+                        .success( function(data) {
+                            $scope.teamstats = data[0]; 
 
-                                // $scope.teamstat = "";
+                            // $scope.teamstat = "";
 
-                                $('#teamStatsDialogModalTitle').text("Team Stats");
-                                // $('#teamStatsDialogModalBody').html(data);
-                                $('#teamStatsDialogModal').modal();
+                            $('#teamStatsDialogModalTitle').text("Team Stats");
+                            // $('#teamStatsDialogModalBody').html(data);
+                            $('#teamStatsDialogModal').modal();
 
-                                $('#teamStatsDialogModal').on('shown.bs.modal', function() {
-                                    
-                                })
-
+                            $('#teamStatsDialogModal').on('shown.bs.modal', function() {
                                 
                             })
-                            .error( function(edata) {
-                                alert(edata);
-                            });
+                        })
+                        .error( function(edata) {
+                            alert(edata);
+                        });
                     })
                     .error( function(edata) {
                         alert(edata);
-                    });  
+                    });
                 })
+                .error( function(edata) {
+                    alert(edata);
+                });
+            })
             .error( function(edata) {
                 alert(edata);
-            });   
+            });  
+        })
+        .error( function(edata) {
+            alert(edata);
+        });   
                           
     }
 
@@ -823,17 +993,29 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
     init();
     function init() {
         $scope.current = {};
+        $scope.teamstats = {};
 
         // 
         // chartjs objects
         // 
-        $scope.chart = {};
-        $scope.chart.data = [];
-        $scope.chart.series = [];
-        $scope.chart.labels = [];
-        $scope.chart.colors = [];
-        $scope.chart.options = {};
-        $scope.chart.datasetOverride = [];
+        $scope.charts = [
+            {
+                data: [],
+                series: [],
+                labels: [],
+                colors: [],
+                options: {},
+                datasetOverride: []
+            },
+            {
+                data: [],
+                series: [],
+                labels: [],
+                colors: [],
+                options: {},
+                datasetOverride: []
+            }
+        ];  // use this to hold multiple charts
 
         $scope.rgbacolors = chartService.getChartColorsList();
        

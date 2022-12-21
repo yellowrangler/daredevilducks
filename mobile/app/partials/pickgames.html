@@ -242,7 +242,7 @@
 			</tr>
 
 			<tr style='background:maroon;color:white;font-weight:bold;'>
-				<td colspan=3>Compare Off/Def Ranking (Higher is better)</td> 							
+				<td colspan=3>Compare Off/Def Ranking (Higher better)</td> 							
 			</tr>
 
 			<tr>
@@ -251,13 +251,32 @@
 						id='bar' 
 						height="250"
 						class='chart chart-bar'
-						chart-data='chart.data' 
-						chart-labels='chart.labels' 
-						chart-options='chart.options'
-						chart-series='chart.series'
-						chart-dataset-override="chart.datasetOverride" >
+						chart-data='charts[0].data' 
+						chart-labels='charts[0].labels' 
+						chart-options='charts[0].options'
+						chart-series='charts[0].series'
+						chart-dataset-override="charts[0].datasetOverride" >
 					</canvas>
 				</td>									
+			</tr>
+
+			<tr style='background:maroon;color:white;font-weight:bold;'>
+				<td colspan=3>Compare Rankings all Weeks (Higher better)</td> 	
+			</tr>
+
+			<tr>
+				<td colspan=4 >
+					<canvas 
+						id='line' 
+						height="250"
+						class='chart chart-line' 
+						chart-data='charts[1].data' 
+						chart-labels='charts[1].labels' 
+						chart-options='charts[1].options'
+						chart-series='charts[1].series'
+						chart-dataset-override="charts[1].datasetOverride" >
+					</canvas> 
+				</td>												
 			</tr>
 
 			<tr >
