@@ -137,8 +137,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
               ]
             },
             elements: { 
-                line: { fill: false, borderWidth: 6 },
-                point:{ radius: 8 }
+                line: { fill: false, borderWidth: 3 },
+                point:{ radius: 5 }
             }
         };
     }
@@ -806,8 +806,8 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
               ]
             },
             elements: { 
-                line: { fill: false, borderWidth: 6 },
-                point:{ radius: 8 }
+                line: { fill: false, borderWidth: 3 },
+                point:{ radius: 5 }
             }
         };
     }
