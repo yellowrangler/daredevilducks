@@ -47,17 +47,17 @@
 
 @font-face {
     font-family: 'cormorant';
-    src: url('fonts/cormorant/cormorant/Cormorant-Regular.ttf') format('truetype');
+    src: url('../../fonts/cormorant/cormorant/Cormorant-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'cormorantSemiBold';
-    src: url('fonts/cormorant/cormorant/Cormorant-SemiBold.ttf') format('truetype');
+    src: url('../../fonts/cormorant/cormorant/Cormorant-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Cormorant-SemiBoldItalic';
-    src: url('fonts/cormorant/cormorant/Cormorant-SemiBoldItalic.ttf') format('truetype');
+    src: url('../../fonts/cormorant/cormorant/Cormorant-SemiBoldItalic.ttf') format('truetype');
 }
 
 /* create sticky menu bar */
@@ -94,6 +94,13 @@
 
 .pickGameLine :hover {
 	outline: 1px solid blue;
+}
+
+.oneMoreThing {
+	color: #2F6C03;
+	font-family: 'cormorant';
+	font-weight:300;
+	font-size: 18px;
 }
 
 .newsOpinion p {
