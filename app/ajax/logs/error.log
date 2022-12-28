@@ -381,3 +381,8 @@ WHERE teamid = undefined
 and season = 2022
 and week <= 13
 
+2022-12-24 16:21:18 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE membername = '"Hawk Eye"'' at line 1 - Error function: select msg: Unable to getmemberstatus for ddd membername "Hawk Eye" memberid .
+2022-12-24 16:21:18 : SQL: WHERE membername = '"Hawk Eye"'
+2022-12-24 18:03:41 : SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Eye' at line 2 - Error function: select msg: Unable to getmemberstatus for ddd screenname Hawk Eye memberid .
+2022-12-24 18:03:41 : SQL: SELECT status 
+FROM membertbl WHERE screenname = Hawk Eye

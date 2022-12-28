@@ -31,6 +31,21 @@
 }
 
 @font-face {
+  font-family: 'Anton-Regular';
+  src: url('fonts/Anton/Anton-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'metro-retro';
+  src: url('fonts/metro-retro.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CoventryGardenNF';
+  src: url('fonts/coventrygarden/CoventryGardenNF.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'RothenburgDecorative';
   src: url('fonts/RothenburgDecorative.ttf') format('truetype');
 }
@@ -47,12 +62,12 @@
 
 @font-face {
     font-family: 'cormorant';
-    src: url('../../fonts/cormorant/cormorant/Cormorant-Regular.ttf') format('truetype');
+    src: url('fonts/cormorant/cormorant/Cormorant-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'cormorantSemiBold';
-    src: url('../../fonts/cormorant/cormorant/Cormorant-SemiBold.ttf') format('truetype');
+    src: url('fonts/cormorant/cormorant/Cormorant-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -265,14 +280,28 @@ border: 0 none;
 	height:75px;
 }
 
-.headerTitle {
-/*	color:#6C0000;*/
+/*.headerTitle {
+	color:#6C0000;
 	color:#4d9e3a;
 	font-size:32px;
 	font-family: 'ChopinScript', sans-serif;
-/*	font-family: 'Cormorant-SemiBoldItalic';*/
+	font-family: 'Cormorant-SemiBoldItalic';
 	font-style: italic, bold;
 }
+*/
+
+.headerTitle {
+/*	color:#6C0000;*/
+/*	color:#4d9e3a;*/
+	color:#ac8747;
+/*	font-size:40px;*/
+	font-size:25px;
+/*	font-family: 'Cormorant-SemiBoldItalic';*/
+	font-family: 'metro-retro';
+/*	font-family: 'ChopinScript', sans-serif;*/
+	font-style: normal;
+}
+
 
 /*.headerTitle {
 	color:#6C0000;

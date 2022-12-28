@@ -15,7 +15,6 @@ dddApp.service('loginService', function () {
         }
         else
         {
-            
             if (action)
             {
                 this.removeLogin();
@@ -78,11 +77,16 @@ dddApp.service('loginService', function () {
     }
 
     this.isLoggedIn = function() {
+
         var login = this.getLogin();
         if (login == null)
-            return false
+        {
+            return false;
+        }
         else
+        {  
             return true;
+        }
     }
 
     this.getMemberRole = function() {

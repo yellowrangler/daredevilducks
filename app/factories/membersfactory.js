@@ -19,6 +19,15 @@ dddApp.factory('membersFactory', function($q, $http) {
         })
     }
 
+    factory.getMemberStatus = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getmemberstatus.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getMemberInfo = function (data) {
         return $http({ 
             method: 'POST', 
