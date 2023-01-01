@@ -954,7 +954,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
                     if (check[0].gamestatus == "block")
                     {
-                        $scope.$parent.tracker('bounced: member picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+                        $scope.$parent.tracker('bounced: member picking list for teamid:'+teamid+' gamenbr:'+gamenbr+' curdate:'+check[0].curdate+' testdate:'+check[0].testdate,
                               'getMemberPickList',
                               'viewtotalpickgamesController',
                               $scope.current.season,
@@ -967,7 +967,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
                     else
                     {
                         
-                        $scope.$parent.tracker('member picking list for teamid:'+teamid+' gamenbr:'+gamenbr,
+                        $scope.$parent.tracker('member picking list for teamid:'+teamid+' gamenbr:'+gamenbr+' curdate:'+check[0].curdate+' testdate:'+check[0].testdate,
                               'getMemberPickList',
                               'viewtotalpickgamesController',
                               $scope.current.season,
