@@ -45,6 +45,8 @@ $sql = "SELECT
   G.week as week,
   G.id as gameid,
   G.gamenbr as gamenbr,
+  DATE_SUB(NOW(), INTERVAL 1 HOUR) as testdate,
+  NOW() as curdate,
   CASE 
   WHEN G.gamedatetime < DATE_SUB(NOW(), INTERVAL $addtime HOUR) THEN 'ok'
   ELSE 'block'
@@ -53,6 +55,9 @@ FROM gamestbl G
 WHERE G.season = '$season'
 AND G.week = '$week'
 AND G.gamenbr = '$gamenbr'";
+
+// echo "sql = $sql";
+// die();
 
 //
 // sql query
