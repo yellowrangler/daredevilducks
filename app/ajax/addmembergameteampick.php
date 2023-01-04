@@ -72,6 +72,12 @@ else
 	}
 }
 
+if ($memberid == 37)
+{
+	exit('Account Closed');
+}
+
+
 $strCut = "pick_";
 $gamenbr = "";
 $teamid = "";
