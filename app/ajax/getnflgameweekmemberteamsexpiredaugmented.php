@@ -45,7 +45,7 @@ $sql = "SELECT
   G.week as week,
   G.id as gameid,
   G.gamenbr as gamenbr,
-  DATE_SUB(NOW(), INTERVAL 1 HOUR) as testdate,
+  DATE_SUB(NOW(), INTERVAL $addtime HOUR) as testdate,
   NOW() as curdate,
   CASE 
   WHEN G.gamedatetime < DATE_SUB(NOW(), INTERVAL $addtime HOUR) THEN 'ok'
