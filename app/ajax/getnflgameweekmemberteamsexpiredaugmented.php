@@ -12,6 +12,21 @@ $week = $_POST['week'];
 $gamenbr = $_POST['gamenbr'];
 $addtime = $_POST['addtime'];
 
+if (isset($_POST["memberid"]))
+{
+  $memberid = $_POST["memberid"];
+}
+else
+{
+  if (isset($_GET["memberid"]))
+  {
+    $memberid = $_GET["memberid"];
+  }
+  else
+  {
+    $memberid = 0;
+  }
+}
 
 // debug
 // $season = 2014;

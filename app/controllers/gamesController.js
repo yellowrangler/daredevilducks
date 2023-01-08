@@ -711,8 +711,6 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
 controllers.viewtotalpickgamesController = function ($scope, $http, $location, teamsFactory, nflTeamsService, chartService, loginService) {
 
-    
-
     function drawChartDiff1() 
     {
         // set serries
@@ -942,6 +940,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
     function getMemberPickList(teamid,gamenbr)
     {
+
         if (checkRole())
         {
             //
@@ -1079,6 +1078,22 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
             $scope.$parent.showAlert("Whoops!", "You must login in order to continue!");
              
             // alert ("You must login in order to continue!")
+            $location.path("#home");
+        }
+
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        if ($scope.current.memberid == 37)
+        {
+            $scope.$parent.tracker('reroute to login',
+                  'init',
+                  'viewtotalpickgamesController',
+                  'NA',
+                  'NA');
+
+            loginService.removeLogin();
+
             $location.path("#home");
         }
 

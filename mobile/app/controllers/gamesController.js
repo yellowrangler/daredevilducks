@@ -1018,7 +1018,6 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         ];  // use this to hold multiple charts
 
         $scope.rgbacolors = chartService.getChartColorsList();
-       
 
         //
         // this is not getting called at right time for definig top offset 
@@ -1030,6 +1029,22 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         if (!loggedIn)
         {
             alert ("You must login!")
+            $location.path("#home");
+        }
+
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        if ($scope.current.memberid == 37)
+        {
+            $scope.$parent.tracker('reroute to login',
+                  'init',
+                  'viewtotalpickgamesController',
+                  'NA',
+                  'NA');
+
+            loginService.removeLogin();
+
             $location.path("#home");
         }
     
