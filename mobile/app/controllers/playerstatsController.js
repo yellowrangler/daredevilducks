@@ -83,12 +83,37 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
-
+        $scope.current = {};
+        $scope.current.season = nflTeamsService.getCurrentSeason();
+        $scope.current.gametypeid = 1;
+        $scope.seasons = nflTeamsService.getNFLTeamseasons();
+        $scope.gametypes = nflTeamsService.getNFLGametypes();
+        $scope.current.showexperts = 0;
+        $scope.current.showexpertsTitle = "Show Experts";
         
         var loggedIn = loginService.isLoggedIn();
         if (!loggedIn)
         {
             alert ("You must login!")
+            $location.path("#home");
+        }
+
+        // 
+        // auth check
+        // 
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        if ($scope.current.memberid == 37)
+        {
+            $scope.$parent.tracker('reroute to login',
+                  'init',
+                  'playerstatstotalwinsController',
+                  'NA',
+                  'NA');
+
+            loginService.removeLogin();
+
             $location.path("#home");
         }
 
@@ -98,14 +123,6 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
 
                 $window.scrollTo(0, 0);
             });
-
-        $scope.current = {};
-        $scope.current.season = nflTeamsService.getCurrentSeason();
-        $scope.current.gametypeid = 1;
-        $scope.seasons = nflTeamsService.getNFLTeamseasons();
-        $scope.gametypes = nflTeamsService.getNFLGametypes();
-        $scope.current.showexperts = 0;
-        $scope.current.showexpertsTitle = "Show Experts";
 
         $scope.$parent.tracker('member total wins',
               'playerTotals',
@@ -372,6 +389,33 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         $scope.current = {};
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
+
+        var loggedIn = loginService.isLoggedIn();
+        if (!loggedIn)
+         {
+            alert ("You must login!")
+            $location.path("#home");
+        }
+
+
+        // 
+        // auth check
+        // 
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        if ($scope.current.memberid == 37)
+        {
+            $scope.$parent.tracker('reroute to login',
+                  'init',
+                  'playerstatsmemberweeklyController',
+                  'NA',
+                  'NA');
+
+            loginService.removeLogin();
+
+            $location.path("#home");
+        }
         
         $scope.$parent.tracker('weekly member wins',
               'weeklyTotals',
@@ -385,13 +429,7 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         //
 
         
-        var loggedIn = loginService.isLoggedIn();
-        if (!loggedIn)
-         {
-            alert ("You must login!")
-            $location.path("#home");
-        }
-
+     
         //
         // get member groups
         //

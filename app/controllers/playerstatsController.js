@@ -127,6 +127,25 @@ controllers.playerstatstotalwinsController = function ($scope, $http, $location,
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
 
+        // 
+        // auth check
+        // 
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        if ($scope.current.memberid == 37)
+        {
+            $scope.$parent.tracker('reroute to login',
+                  'init',
+                  'playerstatstotalwinsController',
+                  'NA',
+                  'NA');
+
+            loginService.removeLogin();
+
+            $location.path("#home");
+        }
+
         $scope.$parent.tracker('member total wins',
               'playerTotals',
               'playerstatstotalwinsController',
@@ -441,12 +460,6 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
         $scope.current.showexperts = 0;
         $scope.current.showexpertsTitle = "Show Experts";
 
-        $scope.$parent.tracker('weekly member wins',
-              'weeklyTotals',
-              'playerstatsmemberweeklyController',
-              'NA',
-              'NA');
-
         $(window).scroll(function(){
             if ($(".floatingImgDiv").length)
             {
@@ -486,6 +499,32 @@ controllers.playerstatsmemberweeklyController = function ($scope, $http, $locati
             // alert ("You must login in order to continue!")
             $location.path("#home");
         }
+
+        // 
+        // auth check
+        // 
+        $scope.current.memberlogin = loginService.getLogin();
+        $scope.current.memberid = $scope.current.memberlogin.memberid;
+
+        if ($scope.current.memberid == 37)
+        {
+            $scope.$parent.tracker('reroute to login',
+                  'init',
+                  'playerstatsmemberweeklyController',
+                  'NA',
+                  'NA');
+
+            loginService.removeLogin();
+
+            $location.path("#home");
+        }
+
+        $scope.$parent.tracker('weekly member wins',
+              'weeklyTotals',
+              'playerstatsmemberweeklyController',
+              'NA',
+              'NA');
+
 
         //
         // get member groups

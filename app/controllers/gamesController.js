@@ -1081,6 +1081,9 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
             $location.path("#home");
         }
 
+        // 
+        // auth check
+        // 
         $scope.current.memberlogin = loginService.getLogin();
         $scope.current.memberid = $scope.current.memberlogin.memberid;
 
