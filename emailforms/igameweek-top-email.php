@@ -6,7 +6,7 @@ The week started with the Chiefs punishing the Raiders. The Jaguars knocked the 
 </p> 
 
 <p>
- The Dolphins beat the Jest in a snoozer. The Panthers beat the Saints. The Steelers beat their division rival Browns. The Broncos beat the Chargers. The Eagles beat the Giants. The Seahawks beat the Rams earning them a place in  the playoffs and simultaneously knocking the Steelers out. The 49ers crushed the Cardinals and the Commanders beat the Cowboys.
+ The Dolphins beat the Jets in a snoozer. The Panthers beat the Saints. The Steelers beat their division rival Browns. The Broncos beat the Chargers. The Eagles beat the Giants. The Seahawks beat the Rams earning them a place in  the playoffs and simultaneously knocking the Steelers out. The 49ers crushed the Cardinals and the Commanders beat the Cowboys.
 </p> 
 
 <p>
