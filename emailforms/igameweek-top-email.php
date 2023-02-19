@@ -2,28 +2,39 @@
 
 $emailtopwriteup = "	
 <p>
-In the NFC conference playoffs the Eagles beat the 49ers. The 49ers lost both their second and third string quarter backs early in the game. I have never seen such a thing happen. It was a shame as it reduced the game to a fete de complete for the Eagles!
+The Super Bowl was a close contest between two great teams. In the end the <span style='color:#FF6E3B;font-weight:700;'>Kansas City Chiefs</span> persevered! Click on our new Spring image below to see the our firework celebration!
 </p> 
 
 <p>
-In the AFC conference playoffs the Chiefs beat the Bengals. It was a competitive match up. Unfortunately for Cincinnati penalties where devastating. Especially the last penalty which put the Chiefs in range for a winning field goal!
-</p> 
-
-<
-<p>
-  All in all a superb week of Playoff football!
-</p> 
-
-<p>
-Only the Super Bowl is left! The winning window is down to its last gasp! Pick wisely! Praying probably wouldn't hurt either!
+We had another great turnout this week. Thank you all again for participating. It has been a well attended season and all of you out there made this possible! 
 </p>
 
 <p>
-Check out our Teams Playoff Bracket, accessible by clicking on the large Daredevil Ducks image on the main page. Mobile users swipe your Avatar image to the left until you see the Teams Playoff Bracket. Then select the image. Check it out! You may need to refresh your browser to bring in the new bracket image.
+  <span style='color:#FF6E3B;font-weight:700;'>Daffy Duck</span> is our <span style='font-weight:bold; color:maroon;'>2022 Daredevil Ducks Winner!</span>. 
 </p>
 
 <p>
-The full stats are below! Read em and weep (I know I do)!
+  Jeff did a great job picking this season. He always seemed to make it into the top 5. In the end it came down to the last game. And like a true champion he picked wisely! 
+</p> 
+
+<p>
+  <span style='color:black;font-weight:900;'>Please join me in raising the beverage of your choice to our newest Champion!</span>
+</p>
+
+<p>
+For the rest of you. Better luck next Year!
+</p>
+
+<p>
+Check out the final Bracket prepared by Wildcat Wonder! Just click on the large Donald Duck image. The final team stats are available as well!
+</p>
+
+<p>
+  All good things come to a close! For now... We hope to see you all next year!
+</p>
+
+<p>
+The final stats are below! Read em and weep (I know I do)!
 </p> 
 ";
 

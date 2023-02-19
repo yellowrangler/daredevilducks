@@ -51,42 +51,42 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- App libs -->
-<script src="app/dddAppMobile.js?ver=02022023"></script>
+<script src="app/dddAppMobile.js?ver=02162023"></script>
 
 <!-- controllers  -->
-<script src="app/controllers/firstController.js?ver=02022023"></script>
-<script src="app/controllers/parenthomeController.js?ver=02022023"></script>
-<script src="app/controllers/surveyController.js?ver=02022023"></script>
-<script src="app/controllers/gamesController.js?ver=02022023"></script>
-<script src="app/controllers/playerstatsController.js?ver=02022023"></script>
-<script src="app/controllers/teamsController.js?ver=02022023"></script>
-<script src="app/controllers/awardsController.js?ver=02022023"></script>
-<script src="app/controllers/newsopinionController.js?ver=02022023"></script>
-<script src="app/controllers/adminController.js?ver=02022023"></script>
-<script src="app/controllers/faqsController.js?ver=02022023"></script>
-<script src="app/controllers/surveyController.js?ver=02022023"></script>
-<script src="app/controllers/fireworksController.js?ver=02022023"></script>
-<script src="app/controllers/spookyController.js?ver=02022023"></script>
-<script src="app/controllers/happyholidaysController.js?ver=02022023"></script>
-<script src="app/controllers/lastController.js?ver=02022023"></script>
+<script src="app/controllers/firstController.js?ver=02162023"></script>
+<script src="app/controllers/parenthomeController.js?ver=02162023"></script>
+<script src="app/controllers/surveyController.js?ver=02162023"></script>
+<script src="app/controllers/gamesController.js?ver=02162023"></script>
+<script src="app/controllers/playerstatsController.js?ver=02162023"></script>
+<script src="app/controllers/teamsController.js?ver=02162023"></script>
+<script src="app/controllers/awardsController.js?ver=02162023"></script>
+<script src="app/controllers/newsopinionController.js?ver=02162023"></script>
+<script src="app/controllers/adminController.js?ver=02162023"></script>
+<script src="app/controllers/faqsController.js?ver=02162023"></script>
+<script src="app/controllers/surveyController.js?ver=02162023"></script>
+<script src="app/controllers/fireworksController.js?ver=02162023"></script>
+<script src="app/controllers/spookyController.js?ver=02162023"></script>
+<script src="app/controllers/happyholidaysController.js?ver=02162023"></script>
+<script src="app/controllers/lastController.js?ver=02162023"></script>
 <!-- factories  -->
-<script src="app/factories/loginfactory.js?ver=02022023"></script>
-<script src="app/factories/membersfactory.js?ver=02022023"></script>
-<script src="app/factories/scriptsfactory.js?ver=02022023"></script>
-<script src="app/factories/surveyfactory.js?ver=02022023"></script>
+<script src="app/factories/loginfactory.js?ver=02162023"></script>
+<script src="app/factories/membersfactory.js?ver=02162023"></script>
+<script src="app/factories/scriptsfactory.js?ver=02162023"></script>
+<script src="app/factories/surveyfactory.js?ver=02162023"></script>
 
-<script src="app/factories/teamsfactory.js?ver=02022023"></script>
+<script src="app/factories/teamsfactory.js?ver=02162023"></script>
 <!-- services  -->
-<script src="app/services/msgservice.js?ver=02022023"></script>
-<script src="app/services/loginservice.js?ver=02022023"></script>
-<script src="app/services/teamservice.js?ver=02022023"></script>
-<script src="app/services/chartservice.js?ver=02022023"></script>
-<script src="app/services/selectlistservice.js?ver=02022023"></script>
+<script src="app/services/msgservice.js?ver=02162023"></script>
+<script src="app/services/loginservice.js?ver=02162023"></script>
+<script src="app/services/teamservice.js?ver=02162023"></script>
+<script src="app/services/chartservice.js?ver=02162023"></script>
+<script src="app/services/selectlistservice.js?ver=02162023"></script>
 
-<script src="app/directives/directives.js?ver=02022023"></script>
-<script src="app/validations/validate.js?ver=02022023"></script>
+<script src="app/directives/directives.js?ver=02162023"></script>
+<script src="app/validations/validate.js?ver=02162023"></script>
 
-<script src="script/dddMobile.js?ver=02022023"></script>
+<script src="script/dddMobile.js?ver=02162023"></script>
 </head>
 
 <body style="background:white;overflow-y: scroll;" data-ng-controller="dddParentController" >
@@ -110,12 +110,12 @@
             <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
         </article>
 
-        <!-- <article style="margin-bottom:25px;">
+        <article style="margin-bottom:25px;">
           <a id="showpicture" name="showpicture" href="#fireworks">
-              <img ng-src='../img/Spring-HomePage1-2021.png'  style="height:100px;text-align:center;" alt=Super Bowl!"> 
+              <img ng-src='../img/Spring-HomePage-2023B.png'  style="height:100px;text-align:center;" alt=Super Bowl!"> 
           </a> 
       </article> 
-        -->
+       
 
         <article style="margin-bottom:25px;">
             <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Season Playoff Bracket',current.bracket)">
@@ -123,14 +123,14 @@
             </a>
         </article>
 
-       <article style="margin-bottom:25px;">
+       <!-- <article style="margin-bottom:25px;">
             <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
-                <!-- <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmasstreeStopNew.png'}}"  style="height:60px;text-align:center;" alt="Go Snow!">  -->
+                <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmasstreeStopNew.png'}}"  style="height:60px;text-align:center;" alt="Go Snow!"> 
                 <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmastree2mobile.png'}}" style="height:100px;text-align:center;" alt="Go Snow!"> 
             </a>
 
             <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext"></div>
-        </article>
+        </article> -->
         
        <!--  <article>
             <div style="padding-bottom:60px">
@@ -152,12 +152,12 @@
             </a>
         </article>  -->
 
-         <article style="margin-bottom:25px;">
+        <!--  <article style="margin-bottom:25px;">
             <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Winter is here!','Winter-HomePage-2023.png')">
                 <img ng-src='../img/Winter-HomePage-2023.png'  style="height:100px;text-align:center;" alt="Winter Day!"> 
             </a>
         </article> 
-
+ -->
 
         <!--  <article style="margin-bottom:25px;">
             <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Merry Christmas to All!','NewYear2021HomeScrn3.png')">
