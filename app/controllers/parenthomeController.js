@@ -2,6 +2,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
     $("#adminselect").hide();
     
     $scope.memberavatar = "";
+    // $scope.appVersion = "06292023";
 
     function checkRole() {
         var role = loginService.getMemberRole();
