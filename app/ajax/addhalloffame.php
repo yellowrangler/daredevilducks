@@ -33,7 +33,7 @@ $modulecontent = "Unable to add Hall of Fame item.";
 $sql = 'INSERT INTO halloffametbl
     (year, ord, photoA, photoB, title, detail) 
     VALUES 
-    (' . $year . ', "' . $ord . ', "' . $photoA .'", "' . $photoB . '", "' . $title . '", "' . $detail . '" )';
+    (' . $year . ', ' . $ord . ', "' . $photoA .'", "' . $photoB . '", "' . $title . '", "' . $detail . '" )';
 
 // $sql = mysql_real_escape_string($sql);
 
