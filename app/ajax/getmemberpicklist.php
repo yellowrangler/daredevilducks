@@ -85,6 +85,9 @@ FROM
 LEFT JOIN membertbl M on QM.memberid = M.id
 ORDER BY picks DESC, membername ASC";
 
+// print('sql = ' . $sql);
+// die();
+
 //
 // sql query
 //
