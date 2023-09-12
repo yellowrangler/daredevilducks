@@ -363,6 +363,55 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 	$regularseasonplayerpickedgames = $regularseasonwins + $regularseasonlosses + $regularseasonties;
 	$postseasonplayerpickedgames = $postseasonwins + $postseasonlosses + $postseasonties;
 
+
+	// debug
+	// if ($memberid == 2)
+	// {
+	// 	echo "<br />";
+	// 	echo "buildMemberStats";
+
+	// 	echo "<br />";
+	// 	echo "memberid = $memberid";
+
+	// 	echo "<br /><br />";
+	// 	echo "totalgames = $totalgames";
+	// 	echo "<br />";
+	// 	echo "playerpickedgames = $playerpickedgames";
+	// 	echo "<br />";
+	// 	echo "wins = $wins";
+	// 	echo "<br />";
+	// 	echo "losses = $losses";
+	// 	echo "<br />";
+	// 	echo "ties = $ties";
+
+	// 	echo "<br /><br />";
+	// 	echo "regularseasonplayerpickedgames = $regularseasonplayerpickedgames";
+	// 	echo "<br />";
+	// 	echo "regularseasonwins = $regularseasonwins"; 
+	// 	echo "<br />";
+	// 	echo "regularseasonlosses = $regularseasonlosses"; 
+	// 	echo "<br />";
+	// 	echo "regularseasonties =  $regularseasonties";
+		
+	// 	echo "<br /><br />";
+	// 	echo "postseasonplayerpickedgames = $postseasonplayerpickedgames";
+	// 	echo "<br />";
+	// 	echo "postseasonwins = $postseasonwins"; 
+	// 	echo "<br />";
+	// 	echo "postseasonlosses = $postseasonlosses"; 
+	// 	echo "<br />";
+	// 	echo "regularseasonties =  $postseasonties";
+	
+	// 	echo "<br /><br />";
+	// 	echo "totalgames = $totalgames";
+	// 	echo "<br />";
+	// 	echo "tiesadjust = $tiesadjust";
+	// 	echo "<br />";
+	// 	echo "p = (wins + tiesadjust) / totalgames";
+	// 	echo "<br />";
+	// 	echo "totalgamespercent = $totalgamespercent";
+	// }
+
 	//
 	// calculate percentage for players picked
 	//
@@ -371,6 +420,23 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 		$tiesadjust = $ties * 0.5;
 		$p = ($wins + $tiesadjust) / $playerpickedgames;
 		$playerpickedpercent = round($p, 3);
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "calculate percentage for players picked";
+		// 	echo "<br />";
+		// 	echo "playerpickedgames";
+		// 	echo "<br />";
+		// 	echo "tiesadjust = $tiesadjust";
+		// 	echo "<br />";
+		// 	echo "p = (wins + tiesadjust) / playerpickedgames";
+		// 	echo "<br />";
+		// 	echo "p  = $p";
+		// 	echo "<br />";
+		// 	echo "playerpickedpercent = $playerpickedpercent";
+		// }
 	}
 
 	if ($regularseasonplayerpickedgames > 0)
@@ -378,6 +444,21 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 		$tiesadjust = $regularseasonties * 0.5;
 		$p = ($regularseasonwins + $tiesadjust) / $regularseasonplayerpickedgames;
 		$regularseasonplayerpickedpercent = round($p, 3);
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "regularseasonplayerpickedgames";
+		// 	echo "<br />";
+		// 	echo "tiesadjust = $tiesadjust";
+		// 	echo "<br />";
+		// 	echo "p = (regularseasonwins + tiesadjust) / regularseasonplayerpickedgames";
+		// 	echo "<br />";
+		// 	echo "p  = $p";
+		// 	echo "<br />";
+		// 	echo "regularseasonplayerpickedpercent = $regularseasonplayerpickedpercent";
+		// }
 	}
 
 	if ($postseasonplayerpickedgames > 0)
@@ -385,6 +466,21 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 		$tiesadjust = $postseasonties * 0.5;
 		$p = ($postseasonwins + $tiesadjust) / $postseasonplayerpickedgames;
 		$postseasonplayerpickedpercent = round($p, 3);
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "postseasonplayerpickedgames";
+		// 	echo "<br />";
+		// 	echo "tiesadjust = $tiesadjust";
+		// 	echo "<br />";
+		// 	echo "p = (postseasonwins + tiesadjust) / postseasonplayerpickedgames";
+		// 	echo "<br />";
+		// 	echo "p  = $p";
+		// 	echo "<br />";
+		// 	echo "regularseasonplayerpickedpercent = $regularseasonplayerpickedpercent";
+		// }
 	}
 
 	//
@@ -395,6 +491,21 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 		$tiesadjust = $ties * 0.5;
 		$p = ($wins + $tiesadjust) / $totalgames;
 		$totalgamespercent = round($p, 3);
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "calculate percentage totalgames";
+		// 	echo "<br />";
+		// 	echo "tiesadjust = $tiesadjust";
+		// 	echo "<br />";
+		// 	echo "p = (wins + tiesadjust) / totalgames";
+		// 	echo "<br />";
+		// 	echo "p  = $p";
+		// 	echo "<br />";
+		// 	echo "totalgamespercent = $totalgamespercent";
+		// }
 	}
 
 	if ($regularseasontotalgames > 0)
@@ -402,6 +513,21 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 		$tiesadjust = $regularseasonties * 0.5;
 		$p = ($regularseasonwins + $tiesadjust) / $regularseasontotalgames;
 		$regularseasontotalgamespercent = round($p, 3);
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "calculate percentage regularseasontotalgames";
+		// 	echo "<br />";
+		// 	echo "tiesadjust = $tiesadjust";
+		// 	echo "<br />";
+		// 	echo "p = (regularseasonwins + tiesadjust) / regularseasontotalgames";
+		// 	echo "<br />";
+		// 	echo "p  = $p";
+		// 	echo "<br />";
+		// 	echo "regularseasontotalgamespercent = $regularseasontotalgamespercent";
+		// }
 	}
 
 	if ($postseasontotalgames > 0)
@@ -409,9 +535,23 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 		$tiesadjust = $postseasonties * 0.5;
 		$p = ($postseasonwins + $tiesadjust) / $postseasontotalgames;
 		$postseasontotalgamespercent = round($p, 3);
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "calculate percentage postseasontotalgames";
+		// 	echo "<br />";
+		// 	echo "tiesadjust = $tiesadjust";
+		// 	echo "<br />";
+		// 	echo "p = (postseasonwins + tiesadjust) / postseasontotalgames";
+		// 	echo "<br />";
+		// 	echo "p  = $p";
+		// 	echo "<br />";
+		// 	echo "postseasontotalgamespercent = $postseasontotalgamespercent";
+		// }
 	}
 
-	// debug
 	// $msg = $msg .  "<br/>memberid:$memberid</br>wins:$wins losses:$losses ties:$ties total:$totalgames totalgamespercent:$totalgamespercent</br>playerpickedgames:$playerpickedgames playerpickedpercent:$playerpickedpercent</br>";	
 	
 	//--------------------------------------------------------------------------------------- 
@@ -466,6 +606,22 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, 
 					$totalgamespercent, $playerpickedpercent, $season, '$enterdateTS', $gametypeid, $memberid)";
 		}
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "total";
+
+		// 	echo "<br />";
+		// 	echo "buildMemberStats";
+
+		// 	echo "<br />";
+		// 	echo "sql = $sql";
+		// 	echo "<br />";
+		// 	echo "function = $function";
+		// }
+
 
 		//
 		// sql query
@@ -524,6 +680,21 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 					$season, '$enterdateTS', $gametypeid, $memberid)";
 		}
 
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "regularseasontotalgames";
+
+		// 	echo "<br />";
+		// 	echo "buildMemberStats";
+
+		// 	echo "<br />";
+		// 	echo "sql = $sql";
+		// 	echo "<br />";
+		// 	echo "function = $function";
+		// }
+
 		//
 		// sql query
 		//
@@ -580,6 +751,21 @@ while($row = mysqli_fetch_assoc($sql_result_prime)) {
 					$postseasontotalgamespercent, $postseasonplayerpickedpercent, 
 					$season, '$enterdateTS', $gametypeid, $memberid)";
 		}
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br /><br />";
+		// 	echo "postseasontotalgames";
+
+		// 	echo "<br />";
+		// 	echo "buildMemberStats";
+
+		// 	echo "<br />";
+		// 	echo "sql = $sql";
+		// 	echo "<br />";
+		// 	echo "function = $function";
+		// }
 
 		//
 		// sql query

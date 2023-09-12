@@ -215,6 +215,11 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 		ORDER BY G.gamedatetime";
 
 		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br />";
+		// 	echo "sql to get games picked for week sql <br />$sql";
+		// }
 		// print "<br /> sql to get games picked for week sql <br />$sql";
 		//
 		// sql query
@@ -352,6 +357,31 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 			$tiesadjust = $ties * 0.5;
 			$p = ($wins + $tiesadjust) / $playerpickedgames;
 			$playerpickedpercent = round($p, 3);
+
+			// debug
+			// if ($memberid == 2)
+			// {
+			// 	echo "<br />";
+			// 	echo "buildMemberWeekStats";
+
+			// 	echo "<br />";
+			// 	echo "memberid = $memberid";
+
+			// 	echo "<br />";
+			// 	echo "calculate percentage for players picked";
+			// 	echo "<br />";
+			// 	echo "playerpickedgames = $playerpickedgames";
+			// 	echo "<br />";
+			// 	echo "wins  = $wins";
+			// 	echo "<br />";
+			// 	echo "losses = $losses";
+			// 	echo "<br />";
+			// 	echo "ties $ties";
+
+			// 	echo "p = (wins + tiesadjust) / playerpickedgames";
+			// 	echo "<br />";
+			// 	echo "playerpickedgames = $playerpickedgames";
+			// }
 		}
 
 		//
@@ -362,6 +392,32 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 			$tiesadjust = $ties * 0.5;
 			$p = ($wins + $tiesadjust) / $totalgames;
 			$totalgamespercent = round($p, 3);
+
+			// debug
+			// if ($memberid == 2)
+			// {
+			// 	echo "<br />";
+			// 	echo "buildMemberWeekStats";
+
+			// 	echo "<br />";
+			// 	echo "memberid = $memberid";
+
+			// 	echo "<br />";
+			// 	echo "calculate percentage large";
+			// 	echo "<br />";
+			// 	echo "totalgames = $totalgames";
+			// 	echo "<br />";
+			// 	echo "wins  = $wins";
+			// 	echo "<br />";
+			// 	echo "losses = $losses";
+			// 	echo "<br />";
+			// 	echo "ties $ties";
+
+			// 	echo "p = (wins + tiesadjust) / totalgames";
+			// 	echo "<br />";
+			// 	echo "totalgames = $totalgames";
+			// }
+
 		}
 
 		if ($week < $weeksinregularseason)
@@ -427,6 +483,19 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 				(totalgames, playerpickedgames, wins, losses, ties, totalgamespercent, playerpickedpercent, season, week, enterdate, gametypeid, memberid)
 				VALUES ($totalgames, $playerpickedgames, $wins, $losses, $ties, $totalgamespercent, $playerpickedpercent, $season, $week, '$enterdateTS', $gametypeid, $memberid)";
 		}
+
+
+		// debug
+		// if ($memberid == 2)
+		// {
+		// 	echo "<br />";
+		// 	echo "buildMemberWeekStats";
+				
+		// 	echo "<br />";
+		// 	echo "function = $function for memberid = $memberid";
+		// 	echo "<br />";
+		// 	echo "sql for $function = $sql";
+		// }
 
 		// debug
 		// print "<br /> before sql run. function = $function week $week";
