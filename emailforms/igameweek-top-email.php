@@ -2,7 +2,7 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game found the Eagles won over the Vikings. The Falcons looked strong again in their win over the Packers. The Bills got their first win of the season at the expense of the Raiders. Baltimore beat their division rivals Bengals in a close game. The Seahawks beat the Lions and the Colts beat the Texans.
+The first game found the Eagles with a win over the Vikings. The Falcons looked strong again in their win over the Packers. The Bills got their first win of the season at the expense of the Raiders. Baltimore beat their division rivals Bengals in a close game. The Seahawks beat the Lions and the Colts beat the Texans.
 </p> 
 
 <p>
