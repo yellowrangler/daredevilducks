@@ -2,16 +2,20 @@
 
 $emailtopwriteup = "	
 <p>
-The first game found the Eagles with a win over the Vikings. The Falcons looked strong again in their win over the Packers. The Bills got their first win of the season at the expense of the Raiders. Baltimore beat their division rivals Bengals in a close game. The Seahawks beat the Lions and the Colts beat the Texans.
+The first game found the 49ers with a win over the Giants. The Browns crushed the Titans. The Lions looked good besting the Falcons. In a real squeaker, the Packers beat the Saints. The Texans beat the struggling Jaguars in Jacksonville. The Dolphins took their third in a row over the winless Broncos. The Chargers got their first win over the winless Vikings.
 </p> 
 
 <p>
-In a low scoring game, the Chiefs beat the Jaguars. The Titans won in a squeaker against the Chargers. The Buccaneers continued to win as they dispatched the Bears. The Giants got their first twin as they eeked by the winless Cardinals. In a California rumble, the 49ers outlasted the Rams. The Cowboys crushed the still Roger-less Jets. The Commanders kept the Broncos and Sean Payton winless. The Dolphins beat the winless Patriots.
+The Patriots beat the Jets in a rain fest. The Colts beat the Ravens in overtime. The Bills overwhelmed the Commanders. The Seahawks beat the winless Panthers. In an upset of sorts, the Cardinals beat the Cowboys. The Chiefs destroyed the hapless Bears. The Steelers beat the Raiders.  
+</p>
+
+<p>
+In the final two Monday night games, the Eagles beat the Buccaneers and the Bengals got their first win over the Rams!
 </p>  
 
 <p>
-  All in all a superb week of football!
-</p>  
+Lots of movement in the rankings as the football Gods have their way! Don't despair if you are not where you want to be. There is still a lot of time! Good luck to all!
+</p>
 
 <p>
 The Member stats are below! Read em and weep (I know I do)!
