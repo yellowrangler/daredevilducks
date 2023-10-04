@@ -2,15 +2,15 @@
 
 $emailtopwriteup = "	
 <p>
-The first game found the 49ers with a win over the Giants. The Browns crushed the Titans. The Lions looked good besting the Falcons. In a real squeaker, the Packers beat the Saints. The Texans beat the struggling Jaguars in Jacksonville. The Dolphins took their third in a row over the winless Broncos. The Chargers got their first win over the winless Vikings.
+The first game found the Detroit Lions beating their division rival Packers. The Jaguars beat the Falcons in Jolly Ole England. The Bills spanked the Dolphins. The Vikings won their first game over the winless Panthers. The Broncos got their first win over the winless Bears. The Ravens crushed the Browns. The Rams beat the Colts in Overtime.
 </p> 
 
 <p>
-The Patriots beat the Jets in a rain fest. The Colts beat the Ravens in overtime. The Bills overwhelmed the Commanders. The Seahawks beat the winless Panthers. In an upset of sorts, the Cardinals beat the Cowboys. The Chiefs destroyed the hapless Bears. The Steelers beat the Raiders.  
+The Texans crushed the Steelers. The Buccaneers beat the Saints in New Orleans. The Titans overwhelmed the inept Bengals. The Eagles finessed a win over the Commanders. The Chargers held on to beat the Raiders. The Cowboys roped and branded a very bad Patriots team. The 49ers dominated the Cardinals. The Chiefs won in a squeaker over the Jets.
 </p>
 
 <p>
-In the final two Monday night games, the Eagles beat the Buccaneers and the Bengals got their first win over the Rams!
+In the Monday night game, the Seahawks beat the Giants!
 </p>  
 
 <p>
