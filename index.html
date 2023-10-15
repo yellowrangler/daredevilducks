@@ -150,13 +150,22 @@
                     <a data-toggle="dropdown" class="dropdown-toggle">
                     <img id="teamnavimg" name="navImage" class="img-responsive imgButtonNav" src="img/buttons/team2018.png">
                     <b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
+                    <ul role="menu" class="dropdown-menu multi-level" aria-labelledby="dropdownMenu">
                         <li><a class="collapsableNavbar" href="#/teamstandings">Team Standings</a></li>
                         <li><a class="collapsableNavbar" href="#/teamweeklyranking">Team Scores & Stats</a></li>
                         <li><a class="collapsableNavbar" href="#/teamstatscharts">Team Stats Charts</a></li>
                         <li id="adminplayoffstandings"><a class="collapsableNavbar" href="#/playoffstandings">Team Playoff Brackets</a></li>
                         <li role="presentation" class="divider"></li>
                         <li><a class="collapsableNavbar" href="http://www.nfl.com/scores" target="_blank">Current Scores</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Injury Reports</a> 
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="http://www.nfl.com/injuries/" target="_blank">NFL Injury Report</a></li>
+                                <li><a class="collapsableNavbar" href="https://www.covers.com/sport/football/nfl/injuries/" target="_blank">Covers Injury Report</a></li>
+                                <li><a class="collapsableNavbar" href="https://sports.yahoo.com/nfl/injuries/" target="_blank">Yahoo Injury Report</a></li>
+                            </ul>
+                        </li>
+
                         <li id="adminnflnews"><a class="collapsableNavbar" href="#/nflnews">NFL Headlines</a></li>
                         <li><a class="collapsableNavbar" href="#/teamdiscovery">Team Discovery</a></li>
                     </ul>
@@ -351,6 +360,15 @@
                         <li id="adminplayoffstandings"><a class="collapsableNavbar" href="#/playoffstandings">Team Playoff Brackets</a></li>
                         <li role="presentation" class="divider"></li>
                         <li><a class="collapsableNavbar" href="http://www.nfl.com/scores" target="_blank">Current Scores</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Injury Reports</a> 
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="http://www.nfl.com/injuries/" target="_blank">NFL Injury Report</a></li>
+                                <li><a class="collapsableNavbar" href="https://www.covers.com/sport/football/nfl/injuries/" target="_blank">Covers Injury Report</a></li>
+                                <li><a class="collapsableNavbar" href="https://sports.yahoo.com/nfl/injuries/" target="_blank">Yahoo Injury Report</a></li>
+                            </ul>
+                        </li>
+                        <li></li>
                         <li id="adminnflnews"><a class="collapsableNavbar" href="#/nflnews">NFL Headlines</a></li>
                         <li><a class="collapsableNavbar" href="#/teamdiscovery">Team Discovery</a></li>
                     </ul>
