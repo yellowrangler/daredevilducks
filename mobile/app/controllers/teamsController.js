@@ -1276,6 +1276,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
     function refreshNflNews()
     {
         var url = $scope.newsurl;
+        var newssearch = $scope.current.newssearch;
 
         var data = "url=" + encodeURIComponent(url);
         // var data = "url=" + url;
@@ -1290,7 +1291,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                     var rssInfo = {};
 
                     rssInfo.pubDate = "Error";
-                    rssInfo.description = "RSS feed was unable to complete request!";
+                    rssInfo.description = "<p>RSS feed was unable to complete request!</p>";
                     rssInfo.link = "";
 
                     $scope.nflnews[idx]= rssInfo;
@@ -1303,26 +1304,51 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
                     else
                         arrLength = data.channel.item.length;
 
+                    var outboundIdx = 0;
                     for (var idx = 0; idx < arrLength; idx++)
                     {
                         if (found > 0)
                         {
+                            // only run for nfl rss which we dont support any more
                             var rssInfo = {};
 
                             rssInfo.pubDate = data.entry[idx].published;
-                            rssInfo.description = data.entry[idx].summary;
+                            rssInfo.description = htmlString(data.entry[idx].summary);
                             rssInfo.link = data.entry[idx].link['@attributes'].href;
 
                             $scope.nflnews[idx]= rssInfo;
                         }
                         else
                         {
-                            data.channel.item[idx].description = htmlString(data.channel.item[idx].description);
-                            $scope.nflnews[idx] = data.channel.item[idx];
+                            // var matchStr = "/" + newssearch + "/gi";
+                            var matchvalue = new RegExp(newssearch, 'gi');
+                            // xxx.match(re);
+
+                            var results = "";
+                            var match = 0;
+
+                            let title = htmlString(data.channel.item[idx].title);
+                            results = title.match(matchvalue);
+                            if (results != null)
+                                match = 1;
+
+                            let description = htmlString(data.channel.item[idx].description);
+                            results = description.match(matchvalue);
+                            if (results != null)
+                                match = 1;
+
+                            if (match == 1)
+                            {
+                                data.channel.item[outboundIdx].description = htmlString(data.channel.item[idx].description);
+                                $scope.nflnews[outboundIdx] = data.channel.item[idx];
+
+                                outboundIdx = outboundIdx + 1;
+                            }
+                            // data.channel.item[idx].description = htmlString(data.channel.item[idx].description);
+                            // $scope.nflnews[idx] = data.channel.item[idx];
                         }
                     }  
-                }
-                                 
+                }                 
             })
             .error( function(edata) {
                 alert(edata);
@@ -1366,6 +1392,7 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         $scope.current.rsslinkid = 0;
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
+        $scope.current.newssearch = "";
         $scope.newsdetail = "";
         $scope.newsurl = "";
         $scope.current.newsidx = -1;

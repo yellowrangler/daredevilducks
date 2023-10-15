@@ -1,37 +1,58 @@
 <div class="pageCaption row">
-  <div style="padding-bottom:25px;"  class="col-md-12">
-      <div class="pageCaption">
-          <div style="padding-bottom:25px;">
-            <h2 style="display:inline;" class="headerTitle">NFL Headlines</h2>
-          </div> 
+    <div class="col-md-12">
+        <h2 class="headerTitle">NFL Headlines</h2>
+    </div><!-- end of col 12 -->
+</div><!-- end of row -->
 
-          <form class="form-inline pageStandardOffset">
-            <div class="form-group">
-              <label for="nflrss">News Source</label>
-              <select 
-                style="padding-left:5px;"  
-                class="customSelect form-control" 
-                ng-change="getNFLrssFeed()" 
-                ng-model="current.rsslinkid" 
-                id="nflrss" 
-                name="nflrss">
-                <option value="0">No Selection</option>
-                <option 
-                  ng-repeat="nflrss in nflrsss"  
-                  ng-selected="current.rsslinkid == nflrss.id"
-                  value="{{nflrss.id}}">
-                  {{nflrss.rsssource}}
-                </option>
-              </select>
-            </div>  <!-- end of div -->
-              
-            <div style="padding-left:35px;" class="form-group">
-                <button  class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Refresh News</button>
-            </div>  <!-- end of div -->
-          </form>
-        </div> <!-- end of div --> 
-  </div> <!-- end of col -->
-</div> <!-- end of row -->   
+<form>
+<div class="row">
+    <div class="col-md-12 form-inline">
+        <div class="pageStandardOffset">
+            <div class="panel panel-default panelOverrideNoBorder">
+                <div class="panel-body">
+
+                    <div style="padding:10px;" class="form-horizontal">
+                        
+                        <div class="form-group horizontalFieldOffset">
+                            <label style="color:maroon" for="nflrss">News Source</label>
+                            <select 
+                            style="padding-left:5px;"  
+                            class="customSelect form-control" 
+                            ng-change="getNFLrssFeed()" 
+                            ng-model="current.rsslinkid" 
+                            id="nflrss" 
+                            name="nflrss">
+                            <option value="0">No Selection</option>
+                            <option 
+                                ng-repeat="nflrss in nflrsss"  
+                                ng-selected="current.rsslinkid == nflrss.id"
+                                value="{{nflrss.id}}">
+                                {{nflrss.rsssource}}
+                            </option>
+                            </select>
+                        </div>  <!-- end of div form group -->
+
+                        <div style="padding-left:35px;" class="form-group horizontalFieldOffset">
+                            <label style="color:maroon" for="newsSearch" class="col-md-2 control-label">Search</label>
+                            <div class="form-horizontal col-md-3">
+                                <input ng-model="current.newssearch" size="35" type="text" class="form-control" id="newssearch" name="newssearch" value="{{current.newssearch}}">
+                            </div>
+                        </div>
+
+                        <div style="padding-left:35px;" class="form-group horizontalFieldOffset">
+                            <button  class="btn btn-info btn-md" ng-click="refreshNflNews()" id="refreshNflNews" name="refreshNflNews" >Get News</button>
+                        </div>  <!-- end of div form group -->
+
+                    </div> <!-- end of div form horizontel -->
+
+                </div> <!-- end of panel body -->
+            </div> <!-- end of panel -->
+
+        </div> <!-- end of div standard offset -->   
+    </div> <!-- end of col 12 form inline -->
+    
+</div> <!-- end of row --> 
+</form>   
 
 <div style="padding-top:25px;" class="row">
     <div class="col-md-8">
