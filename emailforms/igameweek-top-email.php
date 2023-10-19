@@ -2,20 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-The first game found the favored Commanders mauled by the Bears in Washington! In an upset of the young season, the Jaguars beat the highly touted Bills in Buffalo! The Falcons won in a squeaker over the Texans. The Colts beat the Titans. Detroit crushed the winless Panthers. The Dolphins beat the Giants.
+In the first game the Chiefs beat the Broncos. The Ravens beat the Broncos in Tennessee. The Commanders beat the Falcons in Atlanta. The Vikings beat the Bears in Chicago. The Bengals beat the Seahawks in a close contest. In one of the two the upsets of the week, the Browns behind their second string quarterback beat the dominant 49ers. 
 </p> 
 
 <p>
-The Saints shut out the Patriots. The Steelers beat the Ravens. The Bengals came back to beat the Cardinals in Arizona. The Eagles beat the Rams in LA. The Jets beat the Broncos in Denver. The Chiefs beat the Vikings in Minnesota. The 49ers skewered the Cowboys.
+The Texans beat the Saints. The Jaguars continued to look strong, as they beat the Colts. The Lions mauled the Buccaneers. In the second upset of the week, the Jets beat the highly favored Eagles. The Rams trounced the Cardinals. The Bills held on to beat the Giants.
 </p>
 
 <p>
-In the Monday night game, the Raiders beat the Packers!
+In the Monday night game, the Cowboys beat the Chargers in LA!
 </p>  
 
-
 <p>
-There continue to be lots of movement in the rankings! So don't despair if you are not where you want to be. There is still a lot of time! Good luck to all!
+There is still a lot of time! Remember what Yoda says 'No try just do!'. Just Do it!
 </p>
 
 <p>
