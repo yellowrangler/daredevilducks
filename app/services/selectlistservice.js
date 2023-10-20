@@ -39,7 +39,6 @@ dddApp.service('selectListService', function () {
     ];
 
     var emailaccountList = [ 
-        { title :  "No-IP", value : "tccutler@capecutler.ddns.net"},
         { title :  "Hover", value : "tccutler@tandtwanderers.com"}
     ];
 
