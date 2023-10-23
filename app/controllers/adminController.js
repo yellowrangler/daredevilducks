@@ -1909,6 +1909,40 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
         });
     }
 
+    function importplayerinjuryfilescripts()
+    {
+        //
+        // initialize message variables and html space
+        //
+        var data = "";
+        var scriptData = "";
+
+        gw.start();
+        startTime = gw.getLocalTimeStart();
+        $("#scriptMessagesDisplay").html("Start of Import Player Injury File Scripts. Time:"+startTime+"<br /><br />");
+
+        //
+        // run get member picks list
+        //
+        sw.start();
+        startTime = sw.getLocalTimeStart();
+        // $("#scriptMessagesDisplay").append("Start Get Member Picks List. Time:"+startTime+"<br />");
+
+        scriptData = "season="+$scope.current.season+"&week="+$scope.current.week+"&importplayerinjuryfile="+$scope.current.importplayerinjuryfile;
+        scriptsFactory.importplayerinjuryFile(scriptData)
+        .success( function(data) {
+            sw.stop();
+            stopTime = sw.getLocalTimeStop();
+            timeDiff = sw.getSecondsDiff();
+
+            $("#scriptMessagesDisplay").append(data);
+            $("#scriptMessagesDisplay").append("<br /><br />End of Import Player Injury File. Time:"+stopTime+". Interval:"+ timeDiff +" seconds <br />");
+        })
+        .error( function(edata) {
+            alert(edata);
+        });
+    }
+
     function getbadmemberpicks()
     {
         //
@@ -2175,6 +2209,10 @@ controllers.weeklyscriptsController = function ($scope, $http, $location, teamsF
 
     $scope.getmemberpicklistscripts = function () {
         getmemberpicklistscripts();
+    }
+
+    $scope.importplayerinjuryfilescripts = function () {
+        importplayerinjuryfilescripts();
     }
 
     $scope.getbadmemberpicks = function () {

@@ -19,6 +19,15 @@ dddApp.factory('scriptsFactory', function($q, $http) {
         })
     }
 
+    factory.importplayerinjuryFile = function (data) {
+        return $http({
+            method: 'POST', 
+            url: "app/ajax/importplayerinjuryfile.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getbadmemberpicks = function (data) {
         return $http({
             method: 'POST', 

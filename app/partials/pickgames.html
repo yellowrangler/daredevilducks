@@ -236,9 +236,10 @@
         <h4 class="modal-title" id="teamStatsDialogModalTitle"></h4>
       </div>
       <div class="modal-body" id="teamStatsDialogModalBody">
-      	<table style='width:100%;' class='table' >
+      <table style='width:100%;' class='table' >
 			<tr >
-				<td style='font-weight:bold;padding-top:20px;'>{{teamstats.hometeamname}} (H) VS {{teamstats.awayteamname}} (A)</td>			
+				<td style='font-weight:bold;padding-top:20px;'>{{teamstats.hometeamname}} (H) VS {{teamstats.awayteamname}} (A)
+				</td>			
 				<td>
 					<div style='text-align:center;'>
 						<a href='{{teamstats.hometeamurl}}' target='_blank'>
@@ -320,7 +321,7 @@
 			</tr>
 
 			<tr style='background:maroon;color:white;font-weight:bold;'>
-				<td colspan=3>Compare Offence/Defence Ranking for current Week (Higher is better)</td> 	
+				<td colspan=3>Compare Offence/Defence Ranking current Week (Higher better)</td> 	
 			</tr>
 
 			<tr>
@@ -443,7 +444,7 @@
 			</tr>
 
 			<tr style='background:#CC0000;color:white;font-weight:bold;'>
-				<td colspan=3>Defensive Rankings (Lower number is better)</td>								
+				<td colspan=3>Defensive Rankings (Lower number is better)</td>			
 			</tr>
 
 			<tr >
@@ -493,7 +494,50 @@
 				   {{teamstats.awayteamdefencerushing}}
 				</td>												
 			</tr>
+		</table>
+			
+		<table style='width:100%;padding:0;' class='table' >
+			<tr style='background:#40E0D0;color:white;font-weight:bold;'>
+				<td style='padding:0;' colspan=4>
+					<img style='text-align:centerr;padding:0;' height='40' src='img/nflicons/{{teamstats.hometeamiconname}}'>  
+					<span style="padding-left:15px;">Player Injuries</span>
+				</td>			
+			</tr>
 
+			<tr style="color:red;text-align:center;vertical-align:middle;line-height:12px;padding:0;">
+				<td style="text-align:center;">Player</td>
+				<td style="text-align:center;">Pos</td>
+				<td style="text-align:center;">Injury</td>	
+				<td style="text-align:center;">Status</td>											
+			</tr>
+
+			<tr data-ng-repeat="hometeaminjurystat in hometeaminjurystats" style="vertical-align:middle;line-height:12px;padding:0;">	
+				<td style="text-align:left;">{{hometeaminjurystat.playername}}</td>
+				<td style="text-align:center;">{{hometeaminjurystat.position}}</td>
+				<td style="text-align:center;">{{hometeaminjurystat.injury}}</td>	
+				<td style="text-align:center;">{{hometeaminjurystat.status}}</td>											
+			</tr>
+
+			<tr style='background:#6495ED;color:white;font-weight:bold;'>
+				<td style='padding:0;' colspan=4>
+					<img style='text-align:centerr;padding:0;' height='40' src='img/nflicons/{{teamstats.awayteamiconname}}'>  
+					<span style="padding-left:15px;">Player Injuries</span>
+				</td>			
+			</tr>
+
+			<tr style="color:red;text-align:center;vertical-align:middle;line-height:12px;padding:0;">
+				<td style="text-align:center;">Player</td>
+				<td style="text-align:center;">Pos</td>
+				<td style="text-align:center;">Injury</td>	
+				<td style="text-align:center;">Status</td>											
+			</tr>
+
+			<tr data-ng-repeat="awayteaminjurystat in awayteaminjurystats" style="text-align:center;vertical-align:middle;line-height:12px;padding:0;">
+				<td style="text-align:left;">{{awayteaminjurystat.playername}}</td>
+				<td style="text-align:center;">{{awayteaminjurystat.position}}</td>
+				<td style="text-align:center;">{{awayteaminjurystat.injury}}</td>	
+				<td style="text-align:center;">{{awayteaminjurystat.status}}</td>											
+			</tr>
 		</table>
       </div>
       <div class="modal-footer">

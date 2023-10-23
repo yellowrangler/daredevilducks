@@ -18,7 +18,7 @@ from datetime import date
 
 input_conversion_file = "conversionfile.csv"
 input_injury_file = "nflinjuryreport.csv"
-output_injury = "injuryimportfile"
+output_injury = "injuryimportfile-"
 output_injury_file = ""
 
 conversion_dict = dict()

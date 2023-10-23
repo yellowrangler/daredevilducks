@@ -154,47 +154,56 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
               $scope.current.season,
               $scope.current.week);
 
-        var q = "teamid="+hometeamid+"&season="+$scope.current.season;
-        teamsFactory.getTeamsStatsCurrentWeek(q)
+        var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&season="+$scope.current.season+"&week="+$scope.current.week;
+        // teamsFactory.getPlayerInjuryHTMLDialog(q)
+        teamsFactory.getPlayerInjuryDialog(q)
         .success( function(data) {
-            $scope.charts[0].data[0] = data;
-           
-            var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+            $scope.hometeaminjurystats = data[0]; 
+            $scope.awayteaminjurystats = data[1]; 
+
+            var q = "teamid="+hometeamid+"&season="+$scope.current.season;
             teamsFactory.getTeamsStatsCurrentWeek(q)
             .success( function(data) {
-                $scope.charts[0].data[1] = data;
-
-                drawChartDiff1();
-
-                var q = "teamid="+hometeamid+"&season="+$scope.current.season;
-                teamsFactory.getTeamsPowerRankings(q)
+                $scope.charts[0].data[0] = data;
+               
+                var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+                teamsFactory.getTeamsStatsCurrentWeek(q)
                 .success( function(data) {
-                    $scope.charts[1].data[0] = data[0];
+                    $scope.charts[0].data[1] = data;
 
-                    var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+                    drawChartDiff1();
+
+                    var q = "teamid="+hometeamid+"&season="+$scope.current.season;
                     teamsFactory.getTeamsPowerRankings(q)
                     .success( function(data) {
-                        $scope.charts[1].data[1] = data[0];
+                        $scope.charts[1].data[0] = data[0];
 
-                        //  set labels
-                        $scope.charts[1].labels = data[1];
-
-                        drawChartDiff2();
-
-                        var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
-                        teamsFactory.getTeamStandingsDialog(q)
+                        var q = "teamid="+awayteamid+"&season="+$scope.current.season;
+                        teamsFactory.getTeamsPowerRankings(q)
                         .success( function(data) {
-                            $scope.teamstats = data[0]; 
+                            $scope.charts[1].data[1] = data[0];
 
-                            // $scope.teamstat = "";
+                            //  set labels
+                            $scope.charts[1].labels = data[1];
 
-                            $('#teamStatsDialogModalTitle').text("Team Stats");
-                            // $('#teamStatsDialogModalBody').html(data);
-                            $('#teamStatsDialogModal').modal();
+                            drawChartDiff2();
 
-                            $('#teamStatsDialogModal').on('shown.bs.modal', function() {
-                                
+                            var q = "hometeamid="+hometeamid+"&awayteamid="+awayteamid+"&gamenbr="+gamenbr+"&season="+$scope.current.season;
+                            teamsFactory.getTeamStandingsDialog(q)
+                            .success( function(data) {
+                                $scope.teamstats = data[0]; 
+
+                                $('#teamStatsDialogModalTitle').text("Team Stats");
+                                // $('#teamStatsDialogModalBody').html(data);
+                                $('#teamStatsDialogModal').modal();
+
+                                $('#teamStatsDialogModal').on('shown.bs.modal', function() {  
+                                       
+                                })
                             })
+                            .error( function(edata) {
+                                alert(edata);
+                            });
                         })
                         .error( function(edata) {
                             alert(edata);
@@ -206,15 +215,15 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                 })
                 .error( function(edata) {
                     alert(edata);
-                });
+                });  
             })
             .error( function(edata) {
                 alert(edata);
-            });  
+            }); 
         })
         .error( function(edata) {
             alert(edata);
-        });   
+        });       
                           
     }
 
@@ -705,6 +714,10 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
 
     $scope.showHelp = function () {
         $location.path("/pickgameshelp");
+    }
+    
+    $scope.sanitizeMe = function(text) {
+        return $sce.trustAsHtml(text)
     }
     
 }

@@ -101,7 +101,6 @@ if (!file_exists ($fullyqualifiedimportfilename) )
 	exit($msgtext);
 }
 
-
 $filerow = 0;
 $handle = fopen("$fullyqualifiedimportfilename", "r");
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {

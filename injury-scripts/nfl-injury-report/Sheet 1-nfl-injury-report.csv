@@ -1,0 +1,878 @@
+Player,Team,Pos,Injury,Status
+Antonio Hamilton,ARI,CB,Groin,Questionable
+Budda Baker,ARI,S,Hamstring,IR
+Carlos Watkins,ARI,DT,Biceps,IR
+Carter O'Donnell,ARI,OT,Coach's Decision,Inactive
+Elijah Higgins,ARI,TE,Illness,Inactive
+Garrett Williams,ARI,CB,Knee - ACL,NFI-R
+Jalen Thompson,ARI,S,Hamstring,Inactive
+James Conner,ARI,RB,Knee,IR
+Jesse Luketa,ARI,LB,Shoulder,Inactive
+Jon Gaines,ARI,C,Knee,IR
+Keith Ismael,ARI,C,Coach's Decision,Inactive
+Kyler McMichael,ARI,CB,Undisclosed,IR
+Kyler Murray,ARI,QB,Knee - ACL,PUP-R
+L.J. Collier,ARI,DE,Biceps,IR
+Marlon Mack,ARI,RB,Achilles,IR
+Matt Hembrough,ARI,C,Back,IR
+Myjai Sanders,ARI,LB,Thumb,IR-R
+Pat Elflein,ARI,C,Undisclosed,IR
+Rashad Fenton,ARI,CB,Undisclosed,IR
+Tony Jones,ARI,RB,Coach's Decision,Inactive
+Adetokunbo Ogundeji,ATL,LB,Foot,IR
+Avery Williams,ATL,RB,Knee - ACL,IR
+Clark Phillips,ATL,CB,Coach's Decision,Inactive
+Eddie Goldman,ATL,DT,Undisclosed,Reserve-Ex
+Eli Ankou,ATL,DT,Coach's Decision,Inactive
+Ethan Greenidge,ATL,OT,Undisclosed,IR
+Feleipe Franks,ATL,TE,Undisclosed,IR
+Ikenna Enechukwu,ATL,LB,Undisclosed,IR
+Jared Bernhardt,ATL,WR,Groin,Reserve-Ret
+Joe Gaziano,ATL,DE,Coach's Decision,Inactive
+John FitzPatrick,ATL,TE,Coach's Decision,Inactive
+Josh Ali,ATL,WR,Ankle,IR
+Kyle Hinton,ATL,OG,Coach's Decision,Inactive
+Logan Woodside,ATL,QB,Coach's Decision,Inactive
+Matt Hennessy,ATL,OG,Knee,IR
+Ta'Quon Graham,ATL,DE,Coach's Decision,Inactive
+Troy Andersen,ATL,LB,Shoulder,IR
+Andrew Vorhees,BAL,OG,Knee - ACL,NFI-R
+Ar'Darius Washington,BAL,CB,Chest,IR
+Brent Urban,BAL,DE,Neck,Questionable
+Damarion Williams,BAL,CB,Ankle,IR
+Daniel Faalele,BAL,OT,Coach's Decision,Inactive
+Daryl Worley,BAL,S,Shoulder,IR
+David Ojabo,BAL,LB,Ankle,IR
+J.K. Dobbins,BAL,RB,Achilles,IR
+Jalyn Armour-Davis,BAL,CB,Coach's Decision,Inactive
+Josh Johnson,BAL,QB,Coach's Decision,Inactive
+Kevon Seymour,BAL,CB,Ankle,Questionable
+Malaesala Aumavae-Laulu,BAL,OG,Coach's Decision,Inactive
+Malik Hamm,BAL,LB,Ankle,IR
+Marcus Williams,BAL,S,Hamstring,Questionable
+Nick Moore,BAL,C,Achilles,NFI-R
+Odafe Oweh,BAL,LB,Ankle,Inactive
+Trayvon Mullen,BAL,CB,Toe,NFI-R
+Tylan Wallace,BAL,WR,Hamstring,IR
+Tyus Bowser,BAL,LB,Knee,NFI-R
+A.J. Klein,BUF,LB,Coach's Decision,Inactive
+Alec Anderson,BUF,OT,Coach's Decision,Inactive
+Brandon Shell,BUF,OT,Undisclosed,Reserve-Ret
+Dalton Kincaid,BUF,TE,Concussion,Inactive
+Damar Hamlin,BUF,S,Coach's Decision,Inactive
+Dane Jackson,BUF,CB,Foot,Inactive
+DaQuan Jones,BUF,DT,Pectoral,IR
+Germain Ifedi,BUF,OG,Coach's Decision,Inactive
+Justin Shorter,BUF,WR,Hamstring,IR
+Matt Milano,BUF,LB,Leg,IR
+Nyheim Hines,BUF,RB,Knee,NFI-R
+Tommy Doyle,BUF,OT,Knee,IR
+Tre'Davious White,BUF,CB,Achilles,IR
+Zach Davidson,BUF,TE,Undisclosed,IR
+Austin Corbett,CAR,OG,Knee - ACL,PUP-R
+Brady Christensen,CAR,OG,Biceps,IR
+Calvin Throckmorton,CAR,OG,Calf,Questionable
+Chandler Zavala,CAR,OG,Neck,Inactive
+David Sharpe,CAR,OT,Coach's Decision,Inactive
+Frankie Luvu,CAR,LB,Hip,Questionable
+Giovanni Ricci,CAR,TE,Shoulder,Inactive
+Henry Anderson,CAR,DE,Foot,IR
+Ian Thomas,CAR,TE,Calf,IR
+Jaycee Horn,CAR,CB,Hamstring,IR
+Laviska Shenault,CAR,WR,Ankle,Out
+Marquis Haynes,CAR,LB,Back,IR
+Miles Sanders,CAR,RB,Shoulder,Inactive
+Shaq Thompson,CAR,LB,Lower Leg,IR
+Vonn Bell,CAR,S,Quadriceps,Inactive
+Xavier Woods,CAR,S,Hamstring,Inactive
+Yetur Gross-Matos,CAR,LB,Hamstring,Questionable
+Aviante Collins,CHI,OT,Coach's Decision,Inactive
+Braxton Jones,CHI,OT,Neck,IR
+Doug Kramer,CHI,C,Thumb,IR-R
+Eddie Jackson,CHI,S,Foot,Questionable
+Equanimeous St. Brown,CHI,WR,Hamstring,IR
+Joe Reed,CHI,WR,Undisclosed,IR
+Josh Blackwell,CHI,CB,Hamstring,IR
+Justin Fields,CHI,QB,Hand,Questionable
+Khalid Kareem,CHI,DE,Hip,IR
+Khalil Herbert,CHI,RB,Ankle,IR
+Nate Davis,CHI,OG,Ankle,Questionable
+Nathan Peterman,CHI,QB,Coach's Decision,Inactive
+Roschon Johnson,CHI,RB,Concussion,Inactive
+Terell Smith,CHI,CB,Illness,Inactive
+Travis Homer,CHI,RB,Hamstring,Inactive
+Akeem Davis-Gaither,CIN,LB,Knee,Inactive
+Charlie Jones,CIN,WR,Thumb,IR
+D'Ante Smith,CIN,OT,Coach's Decision,Inactive
+Devin Cochran,CIN,OT,Knee,IR
+Devin Harper,CIN,LB,Hamstring,Inactive
+Devonnsha Maxwell,CIN,DT,Knee,IR
+Jay Tufele,CIN,DT,Coach's Decision,Inactive
+Orlando Brown,CIN,OT,Groin,Questionable
+Trey Hill,CIN,C,Coach's Decision,Inactive
+Anthony Walker,CLE,LB,Concussion,Questionable
+Cedric Tillman,CLE,WR,Hip,Inactive
+Dawson Deaton,CLE,OG,Knee - ACL,IR
+Deshaun Watson,CLE,QB,Shoulder,Inactive
+Drew Forbes,CLE,OG,Back,NFI-R
+Isaiah McGuire,CLE,DE,Coach's Decision,Inactive
+Jack Conklin,CLE,OT,Knee - ACL + MCL,IR
+Jacob Phillips,CLE,LB,Pectoral,IR
+Jakeem Grant,CLE,WR,Kneecap,IR
+Joel Bitonio,CLE,OG,Knee,Inactive
+Jordan Kunaszyk,CLE,LB,Knee - MCL,IR
+Kahlef Hailassie,CLE,CB,Coach's Decision,Inactive
+Michael Woods,CLE,WR,Achilles,NFI-R
+Nick Chubb,CLE,RB,Knee - ACL + MCL,IR
+Ronnie Hickman,CLE,S,Coach's Decision,Inactive
+Siaki Ika,CLE,DT,Coach's Decision,Inactive
+Thomas Graham,CLE,CB,Ankle,IR
+C.J. Goodwin,DAL,CB,Pectoral,Out
+Chuma Edoga,DAL,OT,Illness,Questionable
+David Durden,DAL,WR,Knee - ACL,IR
+DeMarvion Overshown,DAL,LB,Knee - ACL,IR
+John Stephens,DAL,TE,Knee - ACL,IR
+Josh Ball,DAL,OT,Hip,IR
+Juanyeh Thomas,DAL,S,Hamstring,Doubtful
+Leighton Vander Esch,DAL,LB,Neck,Out
+Matt Waletzko,DAL,OT,Shoulder,IR
+Nahshon Wright,DAL,CB,Ankle,IR-R
+Peyton Hendershot,DAL,TE,Ankle,IR
+Trevon Diggs,DAL,CB,Knee - ACL,IR
+Alex Forsyth,DEN,C,Coach's Decision,Inactive
+Alex Palczewski,DEN,OT,Hand,IR
+Baron Browning,DEN,LB,Knee,PUP-R
+Caden Sterns,DEN,S,Knee,IR
+D.J. Jones,DEN,DT,Knee,Inactive
+Elijah Garcia,DEN,DT,Coach's Decision,Inactive
+Eyioma Uwazurike,DEN,DT,Suspension,Reserve-Sus
+Greg Dulcich,DEN,TE,Hamstring,Questionable
+Jalen Virgil,DEN,WR,Knee - Meniscus,IR
+JL Skinner,DEN,S,Coach's Decision,Inactive
+Jonas Griffith,DEN,LB,Knee - ACL,IR
+K'Waun Williams,DEN,CB,Ankle,IR
+Nate Adkins,DEN,TE,Coach's Decision,Inactive
+Samaje Perine,DEN,RB,Leg,Questionable
+Thomas Incoom,DEN,LB,Coach's Decision,Inactive
+Tim Patrick,DEN,WR,Achilles,IR
+Brian Branch,DET,S,Ankle,Inactive
+Brodric Martin,DET,DT,Coach's Decision,Inactive
+C.J. Gardner-Johnson,DET,S,Pectoral,IR
+David Montgomery,DET,RB,Ribs,Questionable
+Emmanuel Moseley,DET,CB,Knee - ACL,IR
+Hendon Hooker,DET,QB,Knee - ACL,NFI-R
+Jahmyr Gibbs,DET,RB,Hamstring,Inactive
+James Houston,DET,LB,Ankle,IR
+James Mitchell,DET,TE,Hamstring,Inactive
+Jason Cabinda,DET,FB,Knee,IR
+Jonah Jackson,DET,OG,Ankle,Inactive
+Josh Paschal,DET,DE,Knee,IR-R
+Matt Nelson,DET,OT,Ankle,IR
+Nate Sudfeld,DET,QB,Knee - ACL,IR
+Shane Zylstra,DET,TE,Knee,IR
+Steven Gilmore,DET,CB,Coach's Decision,Inactive
+Zonovan Knight,DET,RB,Shoulder,IR
+A.Q. Shipley,FA,C,Neck,Questionable
+Abraham Beauplan,FA,LB,Undisclosed,Questionable
+Adam Shaheen,FA,TE,Knee,Questionable
+Adrian Colbert,FA,S,Undisclosed,Questionable
+AJ Parker,FA,CB,Hamstring,Questionable
+Akial Byers,FA,DT,Undisclosed,Questionable
+Aldrick Rosas,FA,K,Undisclosed,Questionable
+Alex Bachman,FA,WR,Oblique,Questionable
+Alex Redmond,FA,OG,Undisclosed,Questionable
+Alize Mack,FA,TE,Undisclosed,Questionable
+Allen Hurns,FA,WR,Wrist,Questionable
+Amani Bledsoe,FA,DE,Suspension,Reserve-Sus
+Amani Oruwariye,FA,CB,Neck,Questionable
+Andrew Adams,FA,S,Knee,Questionable
+Andrew Norwell,FA,OG,Hip,Questionable
+Andrew Parchment,FA,WR,Undisclosed,Questionable
+Anthony McKinney,FA,OT,Undisclosed,Questionable
+Anthony Schwartz,FA,WR,Hamstring,Questionable
+Anthony Witherstone,FA,CB,Toe,Questionable
+Armani Watts,FA,S,Ankle,Questionable
+Austin Proehl,FA,WR,Undisclosed,Questionable
+B.J. Bello,FA,LB,Ankle,Questionable
+Barry Wesley,FA,OT,Undisclosed,Out
+Beau Brinkley,FA,C,Undisclosed,Questionable
+Ben Braden,FA,OG,Undisclosed,Questionable
+Ben Garland,FA,C,Calf,Questionable
+Ben Jones,FA,C,Undisclosed,Questionable
+Bisi Johnson,FA,WR,Knee - ACL,Questionable
+Blake Lynch,FA,LB,Undisclosed,Questionable
+Branden Jackson,FA,DE,Spine,Questionable
+Brandon King,FA,LB,Hamstring,Questionable
+Brandon Parker,FA,OT,Undisclosed,Questionable
+Brent Qvale,FA,OT,Undisclosed,Questionable
+Brett Jones,FA,C,Biceps,Questionable
+Broughton Hatcher,FA,C,Undisclosed,Questionable
+Bruno Labelle,FA,TE,Undisclosed,Questionable
+Bryan Bulaga,FA,OT,Back,Questionable
+Bryce Love,FA,RB,Knee,Questionable
+Bryce Rodgers,FA,DT,Undisclosed,Questionable
+Bunmi Rotimi,FA,DE,Foot,Questionable
+Byron Jones,FA,CB,Achilles,Questionable
+C. J. Avery,FA,LB,Undisclosed,Questionable
+C.J. Board,FA,WR,Ribs,Questionable
+C.J. Moore,FA,S,Suspension,Reserve-Sus
+Caleb Huntley,FA,RB,Achilles,Questionable
+Calvin Taylor,FA,DE,Undisclosed,Questionable
+Cassius Marsh,FA,LB,Knee,Questionable
+Chad Williams,FA,WR,Undisclosed,Questionable
+Chandler Jones,FA,DE,Personal,Questionable
+Chandon Herring,FA,OG,Undisclosed,Questionable
+Charleston Rambo,FA,WR,Undisclosed,Questionable
+Chase Allen,FA,TE,Undisclosed,Questionable
+Chauncey Rivers,FA,LB,Knee - ACL,Questionable
+Chris Jones,FA,P,Abdomen,Questionable
+Chris Lacy,FA,WR,Undisclosed,Questionable
+Chris Murray,FA,C,Undisclosed,Questionable
+Chris Odom,FA,DE,Knee - ACL,Questionable
+Chris Streveler,FA,QB,Thumb,Questionable
+Chris Thompson,FA,WR,Undisclosed,Questionable
+Chris Williamson,FA,CB,Undisclosed,Questionable
+Christian Albright,FA,LB,Undisclosed,Questionable
+Christian Sam,FA,LB,Undisclosed,Questionable
+Christopher Allen,FA,LB,Groin,Questionable
+Clark Harris,FA,C,Biceps,Questionable
+Codey McElroy,FA,TE,Foot,Questionable
+Cody Conway,FA,OT,Knee - ACL,Questionable
+Cody Core,FA,WR,Undisclosed,Questionable
+Cody Hollister,FA,WR,Neck,Questionable
+Cody White,FA,WR,Undisclosed,Questionable
+Cole Christiansen,FA,LB,Hamstring,Out
+Cole Madison,FA,OG,Knee - ACL,Questionable
+Conor McDermott,FA,OT,Undisclosed,Questionable
+Corey Davis,FA,WR,Personal,Reserve-Ret
+Cre'von LeBlanc,FA,CB,Undisclosed,Questionable
+Cullen Gillaspia,FA,LB,Knee,Questionable
+Curtis Riley,FA,S,Achilles,Questionable
+Daelin Hayes,FA,LB,Undisclosed,Questionable
+DaeSean Hamilton,FA,WR,Undisclosed,Questionable
+Daewood Davis,FA,WR,Concussion,Questionable
+Dakota Dozier,FA,OG,Knee - ACL,Questionable
+Damien Wilson,FA,LB,Undisclosed,Reserve-Sus
+Damiere Byrd,FA,WR,Hamstring,Questionable
+Daniel Brown,FA,TE,Hip,Questionable
+Daniel Ross,FA,DT,Undisclosed,Questionable
+Dante Pettis,FA,WR,Undisclosed,Questionable
+Darius Anderson,FA,RB,Knee,Questionable
+Darius Clark,FA,RB,Knee,Questionable
+Darius Harris,FA,LB,Undisclosed,Questionable
+Darius Stills,FA,DT,Undisclosed,Questionable
+Darrius Shepherd,FA,WR,Undisclosed,Questionable
+Darron Lee,FA,LB,Undisclosed,Questionable
+Darryl Johnson,FA,LB,Undisclosed,Questionable
+Dayan Lake,FA,CB,Undisclosed,Questionable
+Daylen Baldwin,FA,WR,Hamstring,Questionable
+DeAndre Square,FA,LB,Undisclosed,Questionable
+DeAndre Thompkins,FA,WR,Undisclosed,Questionable
+DeAndrew White,FA,WR,Undisclosed,Questionable
+Dee Ford,FA,DE,Back,Questionable
+DeMarcus Christmas,FA,DT,Undisclosed,Questionable
+Demetrius Taylor,FA,DT,Suspension,Reserve-Sus
+Desmond Noel,FA,OG,Undisclosed,Questionable
+Devante Bond,FA,LB,Knee,Questionable
+Devery Hamilton,FA,OT,Lower Leg,Questionable
+Devin Jones,FA,CB,Undisclosed,Questionable
+Diego Fagot,FA,LB,Undisclosed,Questionable
+Dion Jordan,FA,DE,Knee,Questionable
+Diontae Spencer,FA,WR,Undisclosed,Questionable
+DJ Turner,FA,WR,Undisclosed,Questionable
+Dominique Dafney,FA,TE,Undisclosed,Questionable
+Donnie Ernsberger,FA,TE,Undisclosed,Questionable
+Donnie Lewis,FA,CB,Undisclosed,Questionable
+Dontae Johnson,FA,CB,Knee - ACL,Questionable
+Donte Moncrief,FA,WR,Undisclosed,Questionable
+Donte Sylencieux,FA,WR,Undisclosed,Questionable
+Dontrell Hilliard,FA,RB,Neck,Questionable
+Dre Kirkpatrick,FA,CB,Ankle,Questionable
+Drew Estrada,FA,WR,Achilles,Questionable
+Duke Dawson,FA,CB,Undisclosed,Questionable
+Duke Ejiofor,FA,LB,Undisclosed,Questionable
+Duke Williams,FA,WR,Hamstring,Questionable
+Dwayne Harris,FA,WR,Triceps,Questionable
+Dylan Cantrell,FA,TE,Undisclosed,Questionable
+Dylan Deatherage,FA,OT,Undisclosed,Questionable
+Dylan Soehner,FA,TE,Undisclosed,Questionable
+Eli Stove,FA,WR,Knee - ACL,Questionable
+Elijah Nkansah,FA,OT,Undisclosed,Questionable
+Elijah Ponder,FA,LB,Undisclosed,Questionable
+Emanuel Hall,FA,WR,Achilles,Questionable
+Eric Fisher,FA,OT,Calf,Questionable
+Ethan Fernea,FA,WR,Undisclosed,Questionable
+Evan Baylis,FA,TE,Ankle,Questionable
+Everson Griffen,FA,DE,Personal,Questionable
+Ezekiel Ansah,FA,DE,Biceps,Questionable
+Forrest Lamp,FA,OG,Undisclosed,Questionable
+Forrest Merrill,FA,DT,Undisclosed,Questionable
+Frank Clark,FA,LB,Illness,Inactive
+Gabriel Houy,FA,OT,Undisclosed,Questionable
+Gareon Conley,FA,CB,Ankle,Questionable
+George Iloka,FA,S,Knee - ACL,Questionable
+Grant Haley,FA,CB,Knee - ACL,Questionable
+Greg Little,FA,OT,Back,Questionable
+Greg Long,FA,OT,Undisclosed,Questionable
+Haggai Ndubuisi,FA,OT,Finger,Out
+Hakeem Butler,FA,WR,Undisclosed,Questionable
+Hardy Nickerson,FA,LB,Concussion,Questionable
+Hayden Howerton,FA,OG,Undisclosed,Out
+Henry Mondeaux,FA,DE,Undisclosed,Questionable
+Hunter Bryant,FA,TE,Undisclosed,Questionable
+Ian Bunting,FA,TE,Neck,Questionable
+Ibraheim Campbell,FA,S,Ankle,Questionable
+Isaac Nauta,FA,TE,Undisclosed,Questionable
+Isaac Taylor-Stuart,FA,CB,Undisclosed,Out
+Isaiah Crowell,FA,RB,Achilles,Questionable
+Isaiah Ford,FA,WR,Undisclosed,Questionable
+Isaiah Irving,FA,LB,Back,Questionable
+Isaiah Thomas,FA,DE,Knee,Doubtful
+Isaiah Weston,FA,WR,Undisclosed,Reserve-Ret
+Isaiah Zuber,FA,WR,Undisclosed,Questionable
+Ishmael Hyman,FA,WR,Undisclosed,Questionable
+J.D. McKissic,FA,RB,Neck,Questionable
+J'Mon Moore,FA,WR,Undisclosed,Questionable
+Ja'Marcus Bradley,FA,WR,Undisclosed,Questionable
+Ja'Wuan James,FA,OT,Achilles,Questionable
+Jack Anderson,FA,OG,Undisclosed,Out
+Jacob Hollister,FA,TE,Undisclosed,Questionable
+Jacob Tuioti-Mariner,FA,LB,Knee,Questionable
+Jaeden Graham,FA,TE,Undisclosed,Questionable
+Jahmir Johnson,FA,OT,Undisclosed,Questionable
+Jake Hanson,FA,C,Shin,Questionable
+Jake Kumerow,FA,WR,Back,Questionable
+Jalen Dalton,FA,DT,Undisclosed,Questionable
+Jalen Hurd,FA,WR,Undisclosed,Reserve-Ret
+Jalen Jelks,FA,DE,Undisclosed,Questionable
+Jalen Redmond,FA,DT,Undisclosed,Questionable
+Jalin Moore,FA,RB,Ankle,Reserve-Ret
+Jamal Carter,FA,S,Undisclosed,Questionable
+Jamell Garcia-Williams,FA,DE,Undisclosed,Questionable
+Jaquan Amos,FA,S,Undisclosed,Questionable
+Jaray Jenkins,FA,WR,Undisclosed,Questionable
+Jared Norris,FA,LB,Shoulder,Questionable
+Jared Pinkney,FA,TE,Undisclosed,Questionable
+Jarren Williams,FA,CB,Lower Body,Questionable
+Jarvis Landry,FA,WR,Ankle,Questionable
+Jason Lewan,FA,DE,Back,Questionable
+Javin White,FA,LB,Knee - ACL,Questionable
+Jayon Brown,FA,LB,Hand,Questionable
+Jayson Stanley,FA,CB,Knee,Questionable
+Jaytlin Askew,FA,CB,Quadriceps,Questionable
+Jeff Cotton,FA,WR,Undisclosed,Questionable
+Jequez Ezzard,FA,WR,Undisclosed,Questionable
+Jerald Hawkins,FA,OT,Undisclosed,Questionable
+Jeremy Sprinkle,FA,TE,Achilles,Questionable
+Jerome Carvin,FA,C,Undisclosed,Questionable
+Jimmy Moreland,FA,CB,Hand,Questionable
+Joe Ostman,FA,DE,Undisclosed,Questionable
+Joel Heath,FA,DE,Knee - ACL,Questionable
+John Franklin,FA,WR,Knee - ACL,Questionable
+John Hurst,FA,WR,Ankle,Questionable
+John Lovett,FA,FB,Undisclosed,Questionable
+John Penisini,FA,DT,Undisclosed,Questionable
+John Ross,FA,WR,Undisclosed,Reserve-Ret
+John Ursua,FA,WR,Knee - ACL,Questionable
+Jon Bostic,FA,LB,Pectoral,Questionable
+Jonah Tavai,FA,DT,Undisclosed,Questionable
+Jonathan Hubbard,FA,OT,Undisclosed,Questionable
+Jonathan Williams,FA,RB,Undisclosed,Questionable
+Jordan Glasgow,FA,LB,Undisclosed,Questionable
+Jordan Jenkins,FA,DE,Knee - ACL,Questionable
+Jordan Mosley,FA,S,Undisclosed,Questionable
+Jordan Perryman,FA,CB,Undisclosed,Questionable
+Jordan Swann,FA,CB,Undisclosed,Questionable
+Josh Drayden,FA,CB,Undisclosed,Questionable
+Josh Johnson,FA,RB,Undisclosed,Questionable
+Josh Jones,FA,S,Hamstring,Questionable
+Josh Thompson,FA,S,Undisclosed,Questionable
+Josh Wells,FA,OT,Hip,Questionable
+Josiah Scott,FA,CB,Undisclosed,Out
+Jovante Moffatt,FA,S,Undisclosed,Questionable
+Justin Zimmer,FA,DT,Undisclosed,Questionable
+Kamal Martin,FA,LB,Undisclosed,Questionable
+Karl Joseph,FA,S,Ankle,Questionable
+Keaton Sutherland,FA,OG,Abdomen,Questionable
+Kedrick Whitehead,FA,S,Undisclosed,Questionable
+Keith Washington,FA,CB,Wrist,Questionable
+Kekoa Crawford,FA,WR,Undisclosed,Questionable
+Kemon Hall,FA,CB,Undisclosed,Questionable
+Ken Webster,FA,CB,Undisclosed,Questionable
+Kevin Pierre-Louis,FA,LB,Groin,Questionable
+Koda Martin,FA,OG,Undisclosed,Questionable
+Kolby Harvell-Peel,FA,S,Hamstring,Questionable
+Kris Boyd,FA,CB,Hip,Questionable
+Kyle Fuller,FA,CB,Knee - ACL,Questionable
+Kyle Murphy,FA,OG,Ankle,Questionable
+Kyric McGowan,FA,WR,Undisclosed,Questionable
+L.J. Fort,FA,LB,Knee - ACL,Questionable
+La'Michael Pettway,FA,TE,Undisclosed,Questionable
+Lachavious Simmons,FA,OG,Undisclosed,Questionable
+Lamarcus Joyner,FA,S,Hip,Questionable
+Ledarius Mack,FA,LB,Undisclosed,Questionable
+Leon O'Neal,FA,S,Undisclosed,Questionable
+Levine Toilolo,FA,TE,Achilles,Questionable
+Lew Nichols,FA,RB,Shoulder,Questionable
+Liam Shanahan,FA,C,Undisclosed,Questionable
+Mac McCain,FA,CB,Undisclosed,Questionable
+Mackensie Alexander,FA,CB,Undisclosed,Questionable
+Marcus Cannon,FA,OT,Concussion,Questionable
+Marcus Martin,FA,C,Undisclosed,Questionable
+Marcus Webb,FA,DE,Undisclosed,Questionable
+Marcus Willoughby,FA,DE,Undisclosed,Questionable
+Mark Gilbert,FA,CB,Undisclosed,Questionable
+Mark Ingram,FA,RB,Knee - MCL,Questionable
+Marquise Blair,FA,S,Undisclosed,Questionable
+Marvell Tell,FA,CB,Undisclosed,Questionable
+Matt Barkley,FA,QB,Elbow,Questionable
+Matt Gono,FA,OT,Neck,Questionable
+Matt Ioannidis,FA,DT,Back,Questionable
+Matt Kaskey,FA,OT,Undisclosed,Questionable
+Maurice Smith,FA,S,Undisclosed,Questionable
+Micah Kiser,FA,LB,Leg,Questionable
+Michael Schofield,FA,OG,Knee,Questionable
+Michael Tutsie,FA,S,Undisclosed,Questionable
+Michael Walker,FA,WR,Undisclosed,Questionable
+Mike Brown,FA,OG,Undisclosed,Questionable
+Mike Thomas,FA,WR,Shoulder - Labrum,Questionable
+Milton Wright,FA,WR,Undisclosed,Questionable
+Mohamed Ibrahim,FA,RB,Undisclosed,Questionable
+Monte Pottebaum,FA,FB,Undisclosed,Reserve-Ret
+Montre Hartage,FA,S,Undisclosed,Questionable
+Montrel Meander,FA,LB,Achilles,Questionable
+Nate Becker,FA,TE,Undisclosed,Questionable
+Nate Ebner,FA,S,Ankle,Questionable
+Nathan Cottrell,FA,RB,Undisclosed,Questionable
+Nick Nelson,FA,CB,Undisclosed,Questionable
+Nick O'Leary,FA,TE,Chest,Questionable
+Nick Sundberg,FA,C,Elbow,Questionable
+Nicolas Melsop,FA,OG,Undisclosed,Questionable
+Noah Elliss,FA,DT,Undisclosed,Questionable
+Obi Melifonwu,FA,S,Undisclosed,Questionable
+Olivier Vernon,FA,DE,Achilles,Questionable
+Osirus Mitchell,FA,WR,Quadriceps,Questionable
+Otaro Alaka,FA,LB,Undisclosed,Questionable
+Parker Hesse,FA,TE,Undisclosed,Out
+Patrick Carr,FA,RB,Undisclosed,Questionable
+Penny Hart,FA,WR,Concussion,Questionable
+Quartney Davis,FA,WR,Shoulder,Questionable
+Quentin Poling,FA,LB,Undisclosed,Questionable
+Quinn Nordin,FA,K,Undisclosed,Questionable
+Quintez Cephus,FA,WR,Suspension,Reserve-Sus
+Ra'Shaun Henry,FA,WR,Undisclosed,Questionable
+Rashad Torrence,FA,S,Knee,Questionable
+Rashard Robinson,FA,CB,Undisclosed,Questionable
+Rashod Berry,FA,DE,Suspension,Reserve-Sus
+Raven Greene,FA,S,Undisclosed,Questionable
+Reggie Ragland,FA,LB,Shoulder,Questionable
+Reggie Robinson,FA,CB,Undisclosed,Questionable
+Richard Rodgers,FA,TE,Knee,Questionable
+Ricky Seals-Jones,FA,TE,Foot,Questionable
+Rodney Hudson,FA,C,Knee,Questionable
+Ross Pierschbacher,FA,C,Undisclosed,Questionable
+Ross Reynolds,FA,OG,Undisclosed,Questionable
+Ryan Connelly,FA,LB,Knee,Out
+Ryan Groy,FA,OG,Triceps,Questionable
+Ryan Nall,FA,FB,Shoulder,Questionable
+Ryan Smenda,FA,LB,Undisclosed,Questionable
+Ryan Smith,FA,CB,Suspension,Reserve-Sus
+Saivion Smith,FA,S,Undisclosed,Questionable
+Sam Renner,FA,DT,Undisclosed,Questionable
+Sam Schlueter,FA,OT,Illness,Questionable
+Sam Tevi,FA,OT,Knee - ACL,Questionable
+Saquan Hampton,FA,S,Achilles,Questionable
+Scott Lashley,FA,OT,Undisclosed,Questionable
+Sewo Olonilua,FA,FB,Neck,Questionable
+Shakur Brown,FA,CB,Undisclosed,Questionable
+Shane Ray,FA,DE,Hamstring,Questionable
+Shaquan Davis,FA,WR,Undisclosed,Out
+Sharif Finch,FA,LB,Undisclosed,Questionable
+Sharrod Neasman,FA,S,Undisclosed,Questionable
+Shaun Jolly,FA,CB,Undisclosed,Questionable
+Shawn Davis,FA,S,Abdomen,Questionable
+Sherrick McManis,FA,S,Hamstring,Questionable
+Silas Kelly,FA,LB,Undisclosed,Questionable
+Stantley Thomas-Oliver,FA,CB,Hamstring,Questionable
+Stephen Weatherly,FA,DE,Knee,Questionable
+Sterling Weatherford,FA,LB,Undisclosed,Questionable
+Steven Means,FA,LB,Achilles,Questionable
+T.D. Moultry,FA,LB,Undisclosed,Questionable
+Taco Charlton,FA,DE,Undisclosed,Questionable
+Tae Daley,FA,S,Undisclosed,Questionable
+Tajae Sharpe,FA,WR,Undisclosed,Questionable
+Tanner Owen,FA,OT,Illness,Questionable
+Taquan Mizzell,FA,WR,Undisclosed,Questionable
+Tautala Pesefea,FA,DT,Undisclosed,Questionable
+Tavon Wilson,FA,S,Foot,Questionable
+Tavon Young,FA,CB,Undisclosed,Questionable
+Tay Gowan,FA,CB,Undisclosed,Questionable
+Tayler Hawkins,FA,S,Hand,Questionable
+Taylor Lewan,FA,OT,Knee - ACL,Questionable
+Ted Larsen,FA,OG,Knee,Questionable
+Thomas Ives,FA,WR,Undisclosed,Questionable
+Tino Ellis,FA,CB,Undisclosed,Questionable
+Tipa Galeai,FA,LB,Hamstring,Questionable
+Tom Compton,FA,OT,Back,Questionable
+Tom Kennedy,FA,WR,Arm,Questionable
+Tommylee Lewis,FA,WR,Hip,Questionable
+Tony McRae,FA,CB,Knee,Questionable
+Torrence Allen,FA,WR,Undisclosed,Questionable
+Tre Harbison,FA,RB,Concussion,Questionable
+Tre Roberson,FA,CB,Concussion,Questionable
+Trenton Cannon,FA,RB,Knee,Questionable
+Trestan Ebner,FA,RB,Concussion,Questionable
+Trevon Grimes,FA,WR,Undisclosed,Questionable
+Trey Ragas,FA,RB,Undisclosed,Questionable
+Troy Brown,FA,LB,Undisclosed,Questionable
+Troymaine Pope,FA,RB,Undisclosed,Questionable
+Tucker McCann,FA,K,Undisclosed,Questionable
+Tuzar Skipper,FA,LB,Undisclosed,Questionable
+Tyarise Stevenson,FA,DT,Shoulder - AC Joint,Questionable
+Tyler Ervin,FA,RB,Foot,Questionable
+Tyler Shelvin,FA,DT,Undisclosed,Questionable
+Tyrell Crosby,FA,OT,Back,Questionable
+Tyrell Williams,FA,WR,Concussion,Questionable
+Vernon Butler,FA,DT,Undisclosed,Questionable
+Vi Jones,FA,LB,Ankle,Questionable
+Vincent Taylor,FA,DT,Achilles,Questionable
+Virgil Green,FA,TE,Ankle,Questionable
+Warren Jackson,FA,WR,Undisclosed,Questionable
+Wes Martin,FA,OG,Concussion,Questionable
+Will Fuller,FA,WR,Finger,Questionable
+Will Holden,FA,OT,Calf,Questionable
+Willie Beavers,FA,OG,Undisclosed,Questionable
+Willie Johnson,FA,WR,Undisclosed,Questionable
+Xavier Henderson,FA,S,Undisclosed,Questionable
+Xavier Jones,FA,RB,Achilles,Questionable
+Yasir Durant,FA,OG,Undisclosed,Questionable
+Zane Gonzalez,FA,K,Calf,Questionable
+Aaron Jones,GB,RB,Hamstring,Questionable
+Darnell Savage,GB,S,Calf,Questionable
+David Bakhtiari,GB,OT,Knee,IR
+De'Vondre Campbell,GB,LB,Ankle,Questionable
+Eric Stokes,GB,CB,Foot,PUP-R
+Luke Tenuta,GB,OT,Ankle,IR
+Quay Walker,GB,LB,Knee,Questionable
+Tyler Davis,GB,TE,Knee,IR
+Zayne Anderson,GB,S,Hamstring,Questionable
+Case Keenum,HOU,QB,Coach's Decision,Inactive
+Charlie Heck,HOU,OT,Foot,PUP-R
+Dare Ogunbowale,HOU,RB,Coach's Decision,Inactive
+Denzel Perryman,HOU,LB,Coach's Decision,Inactive
+Derek Stingley,HOU,CB,Hamstring,IR
+DJ Scaife,HOU,OT,Leg,IR
+Eric Murray,HOU,S,Knee,Questionable
+Hassan Ridgeway,HOU,DT,Calf,IR
+Jesse Matthews,HOU,WR,Knee - ACL,IR
+Juice Scruggs,HOU,C,Hamstring,IR
+Kendrick Green,HOU,OG,Knee - Meniscus,IR
+Kenyon Green,HOU,OG,Shoulder - Labrum,IR
+Kilian Zierer,HOU,OT,Ankle,IR
+Nick Broeker,HOU,OG,Coach's Decision,Inactive
+Scott Quessenberry,HOU,C,Knee - ACL + MCL,IR
+Tank Dell,HOU,WR,Concussion,Inactive
+Tavierre Thomas,HOU,CB,Coach's Decision,Inactive
+Troy Hairston,HOU,FB,Back,IR
+Adetomiwa Adebawore,IND,DT,Coach's Decision,Inactive
+Alec Pierce,IND,WR,Shoulder,Questionable
+Anthony Richardson,IND,QB,Shoulder - AC Joint,IR
+Ashton Dulin,IND,WR,Knee - ACL,IR
+Braden Smith,IND,OT,Foot,Inactive
+Dallis Flowers,IND,CB,Achilles,IR
+Daniel Scott,IND,S,Knee - ACL,IR
+Danny Pinter,IND,C,Ankle,IR
+Evan Hull,IND,RB,Knee,IR
+Genard Avery,IND,DE,Knee - Meniscus,IR
+Ike Boettger,IND,OG,Coach's Decision,Inactive
+Isaiah Land,IND,LB,Coach's Decision,Inactive
+Jake Witt,IND,OT,Hip,IR
+Jelani Woods,IND,TE,Hamstring,IR
+Titus Leo,IND,DE,Undisclosed,IR
+Tony Brown,IND,CB,Coach's Decision,Inactive
+Brandon Scherff,JAX,OG,Ankle,Questionable
+Chris Claybrooks,JAX,CB,Undisclosed,Reserve-CEL
+Christian Braswell,JAX,CB,Hamstring,IR
+Cooper Hodges,JAX,OT,Knee,IR
+DaVon Hamilton,JAX,DT,Back,IR-R
+Gregory Junior,JAX,CB,Hamstring,IR
+JaMycal Hasty,JAX,RB,Coach's Decision,Inactive
+Jaylon Moore,JAX,WR,Undisclosed,IR
+Leonard Taylor,JAX,TE,Undisclosed,IR
+Parker Washington,JAX,WR,Knee,IR
+Sammis Reyes,JAX,TE,Concussion,Reserve-Ret
+Trevor Lawrence,JAX,QB,Knee,Questionable
+Tyson Campbell,JAX,CB,Hamstring,Questionable
+Ventrell Miller,JAX,LB,Achilles,IR
+Walker Little,JAX,OG,Knee,Inactive
+Yasir Abdullah,JAX,LB,Coach's Decision,Inactive
+Zay Jones,JAX,WR,Knee,Inactive
+BJ Thompson,KC,DE,Coach's Decision,Inactive
+Jody Fortson,KC,TE,Shoulder,IR
+Justin Watson,KC,WR,Elbow,Questionable
+Keondre Coburn,KC,DT,Coach's Decision,Inactive
+Mike Caliendo,KC,OG,Coach's Decision,Inactive
+Nazeeh Johnson,KC,S,Knee - ACL,IR
+Neil Farrell,KC,DT,Coach's Decision,Inactive
+Nic Jones,KC,CB,Coach's Decision,Inactive
+Nikko Remigio,KC,WR,Wrist,IR
+Prince Tega Wanogho,KC,OT,Quadriceps,IR
+Richie James,KC,WR,Knee - MCL,IR
+AJ Uzodinma,LAC,CB,Undisclosed,IR
+Alohi Gilman,LAC,S,Heel,Doubtful
+Andrew Trainer,LAC,OT,Undisclosed,IR
+Corey Linsley,LAC,C,Illness,NFI-R
+Deane Leonard,LAC,CB,Hamstring,Doubtful
+Donald Parham,LAC,TE,Wrist,Questionable
+Jalen Guyton,LAC,WR,Knee - ACL,PUP-R
+Joey Bosa,LAC,LB,Toe,Questionable
+Joshua Palmer,LAC,WR,Groin,Questionable
+JT Woods,LAC,S,Illness,NFI-R
+Mike Williams,LAC,WR,Knee - ACL,IR
+Nick Williams,LAC,DT,Back,Questionable
+Otito Ogbonnia,LAC,DT,Kneecap,PUP-R
+Bobby Brown,LAR,DT,Knee - MCL,IR
+Desjuan Johnson,LAR,DE,Coach's Decision,Inactive
+Hunter Long,LAR,TE,Thigh,IR
+Jason Taylor,LAR,S,Groin,IR
+Joe Noteboom,LAR,OG,Groin,Inactive
+Larrell Murchison,LAR,DT,Knee,Inactive
+Nick Hampton,LAR,LB,Coach's Decision,Inactive
+Ronnie Rivers,LAR,RB,Knee,Questionable
+Sony Michel,LAR,RB,Undisclosed,Reserve-Ret
+Stetson Bennett,LAR,QB,Illness,NFI-R
+Zachary Thomas,LAR,OT,Coach's Decision,Inactive
+Aidan O'Connell,LV,QB,Coach's Decision,Inactive
+Amari Burney,LV,LB,Coach's Decision,Inactive
+Austin Walter,LV,RB,Undisclosed,IR
+Brandon Facyson,LV,CB,Shin,IR
+Brittain Brown,LV,RB,Undisclosed,IR
+Chris Smith,LV,S,Coach's Decision,Inactive
+Curtis Bolton,LV,LB,Knee,IR
+Dalton Wagner,LV,OT,Undisclosed,IR
+Darien Butler,LV,LB,Undisclosed,IR
+Jimmy Garoppolo,LV,QB,Back,Questionable
+Justin Herron,LV,OT,Concussion,Inactive
+Kristian Wilkerson,LV,WR,Coach's Decision,Inactive
+Nate Hobbs,LV,CB,Ankle,Inactive
+Nesta Jade Silvera,LV,DT,Coach's Decision,Inactive
+Roderic Teamer,LV,S,Hamstring,Questionable
+Brandon Pili,MIA,DT,Coach's Decision,Inactive
+Chase Claypool,MIA,WR,Coach's Decision,Inactive
+Chris Brooks,MIA,RB,Ankle,Questionable
+Connor Williams,MIA,C,Groin,Inactive
+De'Von Achane,MIA,RB,Knee,IR
+Erik Ezukanma,MIA,WR,Neck,NFI-R
+Jalen Ramsey,MIA,CB,Knee - Meniscus,IR
+Jeff Wilson,MIA,RB,Ribs,IR-R
+Keion Crossen,MIA,CB,Undisclosed,IR
+Kelvin Joseph,MIA,CB,Coach's Decision,Inactive
+Nik Needham,MIA,CB,Achilles,PUP-R
+River Cracraft,MIA,WR,Shoulder,IR
+Skylar Thompson,MIA,QB,Coach's Decision,Inactive
+Terron Armstead,MIA,OT,Knee,IR
+Tyler Kroft,MIA,TE,Coach's Decision,Inactive
+Xavien Howard,MIA,CB,Groin,Questionable
+Zeke Vandenburgh,MIA,LB,Undisclosed,IR
+Andre Carter,MIN,LB,Coach's Decision,Inactive
+Chris Reed,MIN,OG,Lower Leg,NFI-R
+Ezra Cleveland,MIN,OG,Foot,Questionable
+Hakeem Adeniji,MIN,OT,Coach's Decision,Inactive
+Jalen Nailor,MIN,WR,Hamstring,IR
+James Lynch,MIN,DT,Knee - ACL,IR
+Jaquelin Roy,MIN,DT,Coach's Decision,Inactive
+Justin Jefferson,MIN,WR,Hamstring,IR
+Kene Nwangwu,MIN,RB,Back,IR-R
+Lewis Cine,MIN,S,Coach's Decision,Inactive
+Malik Knowles,MIN,WR,Undisclosed,NFI-R
+Marcus Davenport,MIN,LB,Ankle,Questionable
+Nick Mullens,MIN,QB,Back,IR
+Nick Muse,MIN,TE,Coach's Decision,Inactive
+Olisaemeka Udoh,MIN,OT,Quadriceps,IR
+William Kwenkeu,MIN,LB,Undisclosed,IR
+Bailey Zappe,NE,QB,Coach's Decision,Inactive
+Christian Gonzalez,NE,CB,Shoulder - Labrum,IR
+Cody Davis,NE,S,Knee,PUP-R
+Cole Strange,NE,OG,Knee,Inactive
+Daniel Ekuale,NE,DT,Biceps,IR
+Demario Douglas,NE,WR,Concussion,Inactive
+Isaiah Bolden,NE,CB,Concussion,IR
+Jack Jones,NE,CB,Hamstring,IR
+Jonathan Jones,NE,CB,Knee,Questionable
+Josh Uche,NE,LB,Foot,Questionable
+JuJu Smith-Schuster,NE,WR,Concussion,Inactive
+Kayshon Boutte,NE,WR,Coach's Decision,Inactive
+Keion White,NE,DE,Head,Questionable
+Marcus Jones,NE,CB,Shoulder,IR
+Matthew Judon,NE,LB,Biceps,IR
+Raekwon McMillan,NE,LB,Achilles,IR
+Riley Reiff,NE,OT,Knee,Inactive
+Terez Hall,NE,LB,Undisclosed,IR
+Tre Nixon,NE,WR,Shoulder,IR
+Trey Flowers,NE,LB,Foot,PUP-R
+Tyrone Wheatley,NE,OT,Knee,IR
+Will Grier,NE,QB,Coach's Decision,Inactive
+A.T. Perry,NO,WR,Coach's Decision,Inactive
+Adam Prentice,NO,FB,Knee,IR
+Andrew Dowell,NO,LB,Knee - ACL,IR
+Eno Benjamin,NO,RB,Achilles,IR
+J.T. Gray,NO,S,Hamstring,Inactive
+Jabari Zuniga,NO,DE,Undisclosed,Reserve-Ret
+Jake Haener,NO,QB,Suspension,Reserve-Sus
+Jake Luton,NO,QB,Coach's Decision,Inactive
+Jamaal Williams,NO,RB,Hamstring,IR
+James Hurst,NO,OT,Ankle,Questionable
+Juwan Johnson,NO,TE,Calf,Inactive
+Kyle Phillips,NO,DE,Coach's Decision,Inactive
+Landon Young,NO,OT,Hip,Inactive
+Lonnie Johnson,NO,S,Hamstring,Inactive
+Payton Turner,NO,DE,Toe,IR
+Ryan Ramczyk,NO,OT,Concussion,Questionable
+Trai Turner,NO,OG,Quadriceps,IR
+Aaron Robinson,NYG,CB,Knee - ACL + MCL,PUP-R
+Andrew Thomas,NYG,OT,Hamstring,Inactive
+Azeez Ojulari,NYG,LB,Ankle,IR
+Bobby McCain,NYG,S,Coach's Decision,Inactive
+Bryce Ford-Wheaton,NYG,WR,Knee,IR
+Chris Myarick,NYG,FB,Hand,IR
+D.J. Davidson,NYG,DT,Knee,Inactive
+Daniel Jones,NYG,QB,Neck,Inactive
+Gervarrius Owens,NYG,S,Coach's Decision,Inactive
+J.C. Hassenauer,NYG,C,Triceps,IR
+Jarrad Davis,NYG,LB,Knee,IR
+John Michael Schmitz,NYG,C,Shoulder,Inactive
+Matt Peart,NYG,OT,Shoulder,Inactive
+Tommy Sweeney,NYG,TE,Undisclosed,NFI-R
+Wyatt Davis,NYG,OG,Ankle,IR
+Aaron Rodgers,NYJ,QB,Achilles,IR
+Alijah Vera-Tucker,NYJ,OG,Achilles,IR
+Bradlee Anae,NYJ,DE,Undisclosed,IR
+Brandin Echols,NYJ,CB,Hamstring,Inactive
+Chuck Clark,NYJ,S,Knee - ACL,IR
+D.J. Reed,NYJ,CB,Concussion,Inactive
+Duane Brown,NYJ,OT,Shoulder,IR
+Hamsah Nasirildeen,NYJ,LB,Neck,IR
+Ifeadi Odenigbo,NYJ,DE,Undisclosed,IR
+Israel Abanikanda,NYJ,RB,Coach's Decision,Inactive
+Jarrick Bernard-Converse,NYJ,CB,Foot,PUP-R
+Jason Brownlee,NYJ,WR,Coach's Decision,Inactive
+Javelin Guidry,NYJ,CB,Knee,IR
+Joe Tippmann,NYJ,OG,Thigh,Questionable
+Justin Hardee,NYJ,CB,Hamstring,IR
+Kenny Yeboah,NYJ,TE,Hamstring,IR
+Maalik Hall,NYJ,LB,Undisclosed,IR
+Micheal Clemons,NYJ,DT,Ankle,Inactive
+Sauce Gardner,NYJ,CB,Concussion,Inactive
+Zaire Barnes,NYJ,LB,Coach's Decision,Inactive
+Albert Okwuegbunam,PHI,TE,Coach's Decision,Inactive
+Avonte Maddox,PHI,CB,Pectoral,IR
+Bradley Roby,PHI,CB,Shoulder,Questionable
+Cam Jurgens,PHI,OG,Foot,IR
+Darius Slay,PHI,CB,Knee,Inactive
+Eli Ricks,PHI,CB,Knee,Out
+Isaiah Rodgers,PHI,CB,Suspension,Reserve-Sus
+Jalen Carter,PHI,DT,Ankle,Inactive
+Justin Evans,PHI,S,Knee,IR
+Lane Johnson,PHI,OT,Ankle,Questionable
+Marlon Tuipulotu,PHI,DT,Triceps,Inactive
+Matt Leo,PHI,DE,Undisclosed,Reserve-Ret
+Myles Jack,PHI,LB,Personal,Reserve-Ret
+Quez Watkins,PHI,WR,Hamstring,IR
+Rashaad Penny,PHI,RB,Coach's Decision,Inactive
+Reed Blankenship,PHI,S,Ribs,Questionable
+Roderick Johnson,PHI,OT,Undisclosed,IR
+Shaun Bradley,PHI,LB,Achilles,IR
+Sydney Brown,PHI,S,Hamstring,Inactive
+Tanner McKee,PHI,QB,Coach's Decision,Inactive
+Zech McPhearson,PHI,CB,Achilles,IR
+Alfonzo Graham,PIT,RB,Undisclosed,IR
+Anthony McFarland,PIT,RB,Knee,IR
+Cameron Heyward,PIT,DE,Groin,IR
+Chapelle Russell,PIT,LB,Undisclosed,IR
+Cory Trice,PIT,CB,Knee - ACL,IR
+Dan Moore,PIT,OT,Knee,Questionable
+DeMarvin Leal,PIT,DE,Concussion,Questionable
+Diontae Johnson,PIT,WR,Hamstring,IR
+James Daniels,PIT,OG,Groin,Questionable
+Larry Ogunjobi,PIT,DT,Undisclosed,Questionable
+Pat Freiermuth,PIT,TE,Hamstring,Questionable
+Pressley Harvin,PIT,P,Hamstring,Questionable
+Renell Wren,PIT,DT,Undisclosed,IR
+T.J. Watt,PIT,LB,Finger,Questionable
+Abraham Lucas,SEA,OT,Knee,IR
+Andrew Whitaker,SEA,CB,Knee,IR
+Artie Burns,SEA,CB,Hamstring,Inactive
+Austin Faoliu,SEA,DT,Knee,PUP-R
+Bryan Mone,SEA,DT,Knee - ACL,PUP-R
+Coby Bryant,SEA,CB,Toe,IR
+Damien Lewis,SEA,OG,Ankle,Inactive
+Dareke Young,SEA,WR,Groin,IR
+Dee Eskridge,SEA,WR,Suspension,Reserve-Sus
+Devin Bush,SEA,LB,Coach's Decision,Inactive
+Joshua Onujiogu,SEA,LB,Elbow,IR
+Kenny McIntosh,SEA,RB,Knee,IR
+LaTrell Bumphus,SEA,DT,Undisclosed,IR
+McClendon Curtis,SEA,OG,Coach's Decision,Inactive
+Mike Morris,SEA,DE,Shoulder,IR
+Raiqwon O'Neal,SEA,OG,Coach's Decision,Inactive
+Brandon Allen,SF,QB,Coach's Decision,Inactive
+Brayden Willis,SF,TE,Coach's Decision,Inactive
+Cameron Latu,SF,TE,Knee - Meniscus,IR
+Christian McCaffrey,SF,RB,Oblique,Questionable
+Danny Gray,SF,WR,Shoulder - AC Joint,IR
+Darrell Luter,SF,CB,Knee,PUP-R
+Deebo Samuel,SF,WR,Shoulder,Questionable
+Dre Greenlaw,SF,LB,Hamstring,Inactive
+George Odum,SF,S,Thigh,Questionable
+Jalen Graham,SF,LB,Coach's Decision,Inactive
+Kalia Davis,SF,DT,Coach's Decision,Inactive
+Matt Pryor,SF,OT,Coach's Decision,Inactive
+Robert Beal,SF,DE,Hamstring,IR
+Samuel Womack,SF,CB,Knee,IR
+Trent Williams,SF,OT,Ankle,Questionable
+Tyrion Davis-Price,SF,RB,Coach's Decision,Inactive
+Anthony Nelson,TB,LB,Concussion,Inactive
+Brandon Walton,TB,OT,Coach's Decision,Inactive
+Chase Edmonds,TB,RB,Knee - MCL,IR
+David Wells,TB,TE,Coach's Decision,Inactive
+Derrek Pitts,TB,CB,Coach's Decision,Inactive
+Patrick O'Connor,TB,DE,Coach's Decision,Inactive
+Russell Gage,TB,WR,Knee,IR
+Ryan Jensen,TB,C,Knee,IR
+Caleb Farley,TEN,CB,Back,PUP-R
+Caleb Murphy,TEN,LB,Coach's Decision,Inactive
+Chris Moore,TEN,WR,Concussion,Questionable
+Elijah Molden,TEN,S,Hamstring,Inactive
+Hassan Haskins,TEN,RB,Undisclosed,IR
+Jaelyn Duncan,TEN,OT,Coach's Decision,Inactive
+Josh Whyle,TEN,TE,Concussion,Questionable
+Julius Chestnut,TEN,RB,Hamstring,IR
+Kearis Jackson,TEN,WR,Ankle,IR
+Luke Gifford,TEN,LB,Hamstring,Inactive
+Mike Brown,TEN,S,Undisclosed,IR
+Ryan Tannehill,TEN,QB,Ankle,Questionable
+Shakel Brown,TEN,DT,Ankle,IR
+Teair Tart,TEN,DT,Toe,Inactive
+Treylon Burks,TEN,WR,Knee,Inactive
+Will Levis,TEN,QB,Coach's Decision,Inactive
+Armani Rogers,WAS,TE,Achilles,IR
+Braeden Daniels,WAS,OT,Shoulder,IR
+Brandon Dillon,WAS,TE,Undisclosed,IR
+Charles Leno,WAS,OT,Personal,Inactive
+Chris Paul,WAS,OG,Coach's Decision,Inactive
+Christian Holmes,WAS,CB,Hamstring,Inactive
+Curtis Brooks,WAS,DT,Undisclosed,IR
+Curtis Hodges,WAS,TE,Coach's Decision,Inactive
+Darrick Forrest,WAS,S,Shoulder,IR
+David Bada,WAS,DT,Triceps,IR
+Dax Milne,WAS,WR,Groin,IR
+Drew White,WAS,LB,Knee,PUP-R
+Jeremy Reaves,WAS,S,Knee - ACL,IR
+K.J. Henry,WAS,DE,Coach's Decision,Inactive
+Kaden Smith,WAS,TE,Undisclosed,IR
+Mitchell Tinsley,WAS,WR,Coach's Decision,Inactive
+Montez Sweat,WAS,DE,Thumb,Questionable
+Phidarian Mathis,WAS,DT,Calf,IR
+Shaka Toney,WAS,DE,Suspension,Reserve-Sus
+Troy Apke,WAS,CB,Shoulder,IR
+,,,,876
