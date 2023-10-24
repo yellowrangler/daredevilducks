@@ -59,43 +59,43 @@
 <!-- <script src="script/typeahead.js"></script> -->
 
 <!-- App libs -->
-<script src="app/dddApp.js?dddver=DDV10152023"></script>
+<script src="app/dddApp.js?dddver=DDV10192023"></script>
 
 <!-- controllers  -->
-<script src="app/controllers/firstController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/parenthomeController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/gamesController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/playerstatsController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/teamsController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/trackerController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/awardsController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/adminController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/faqsController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/helpController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/surveyController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/fireworksController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/spookyController.js?dddver=DDV10152023"></script>
-<script src="app/controllers/lastController.js?dddver=DDV10152023"></script>
+<script src="app/controllers/firstController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/parenthomeController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/gamesController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/playerstatsController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/teamsController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/trackerController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/awardsController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/adminController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/faqsController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/helpController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/surveyController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/fireworksController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/spookyController.js?dddver=DDV10192023"></script>
+<script src="app/controllers/lastController.js?dddver=DDV10192023"></script>
 <!-- factories  -->
-<script src="app/factories/loginfactory.js?dddver=DDV10152023"></script>
-<script src="app/factories/membersfactory.js?dddver=DDV10152023"></script>
-<script src="app/factories/scriptsfactory.js?dddver=DDV10152023"></script>
-<script src="app/factories/surveyfactory.js?dddver=DDV10152023"></script>
-<script src="app/factories/teamsfactory.js?dddver=DDV10152023"></script>
-<script src="app/factories/gamesfactory.js?dddver=DDV10152023"></script>
-<script src="app/factories/trackerfactory.js?dddver=DDV10152023"></script>
+<script src="app/factories/loginfactory.js?dddver=DDV10192023"></script>
+<script src="app/factories/membersfactory.js?dddver=DDV10192023"></script>
+<script src="app/factories/scriptsfactory.js?dddver=DDV10192023"></script>
+<script src="app/factories/surveyfactory.js?dddver=DDV10192023"></script>
+<script src="app/factories/teamsfactory.js?dddver=DDV10192023"></script>
+<script src="app/factories/gamesfactory.js?dddver=DDV10192023"></script>
+<script src="app/factories/trackerfactory.js?dddver=DDV10192023"></script>
 <!-- services  -->
-<script src="app/services/msgservice.js?dddver=DDV10152023"></script>
-<script src="app/services/loginservice.js?dddver=DDV10152023"></script>
-<script src="app/services/teamservice.js?dddver=DDV10152023"></script>
-<script src="app/services/chartservice.js?dddver=DDV10152023"></script>
-<script src="app/services/selectlistservice.js?dddver=DDV10152023"></script>
+<script src="app/services/msgservice.js?dddver=DDV10192023"></script>
+<script src="app/services/loginservice.js?dddver=DDV10192023"></script>
+<script src="app/services/teamservice.js?dddver=DDV10192023"></script>
+<script src="app/services/chartservice.js?dddver=DDV10192023"></script>
+<script src="app/services/selectlistservice.js?dddver=DDV10192023"></script>
 
-<script src="app/directives/directives.js?dddver=DDV10152023"></script>
-<script src="app/validations/validate.js?dddver=DDV10152023"></script>
+<script src="app/directives/directives.js?dddver=DDV10192023"></script>
+<script src="app/validations/validate.js?dddver=DDV10192023"></script>
 
 <!-- <script src="script/snow/js/snow.js"></script> -->
-<script src="script/ddd.js?dddver=DDV10152023"></script>
+<script src="script/ddd.js?dddver=DDV10192023"></script>
 
 </head>
 <body style="background:white;" data-ng-controller="dddParentController" >
@@ -156,13 +156,12 @@
                         <li><a class="collapsableNavbar" href="#/teamstatscharts">Team Stats Charts</a></li>
                         <li id="adminplayoffstandings"><a class="collapsableNavbar" href="#/playoffstandings">Team Playoff Brackets</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a class="collapsableNavbar" href="http://www.nfl.com/scores" target="_blank">Current Scores</a></li>
+                        <li><a style="color:green" class="collapsableNavbar" href="http://www.nfl.com/scores" target="_blank">Current Scores</a></li>
                         <li class="dropdown-submenu">
                             <a tabindex="-1" href="">Injury Reports</a> 
                             <ul class="dropdown-menu">
-                                <li><a class="collapsableNavbar" href="http://www.nfl.com/injuries/" target="_blank">NFL Injury Report</a></li>
-                                <li><a class="collapsableNavbar" href="https://www.rotowire.com/football/injury-report.php" target="_blank">Rotowire Injury Report</a></li>
-                                <li><a class="collapsableNavbar" href="https://sports.yahoo.com/nfl/injuries/" target="_blank">Yahoo Injury Report</a></li>
+                                <li><a style="color:green" class="collapsableNavbar" href="http://www.nfl.com/injuries/" target="_blank">NFL Injury Report</a></li>
+                                <li><a style="color:green" class="collapsableNavbar" href="https://www.rotowire.com/football/injury-report.php" target="_blank">Rotowire Injury Report</a></li>
                             </ul>
                         </li>
 
@@ -545,7 +544,7 @@
 
                     <div style="padding-top:45px;padding-bottom:5px;">
                         <span style="font-style: italic">
-                            Version: DDV10152023  
+                            Version: DDV10192023  
                         </span>
                     </div> 
 
