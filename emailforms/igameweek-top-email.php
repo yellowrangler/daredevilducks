@@ -14,10 +14,6 @@ In the Monday night game, the Vikings beat the 49ers!
 </p>  
 
 <p>
-There is still a lot of time! Remember what Yoda says 'No try just do!'. Just Do it!
-</p>
-
-<p>
 There is still a lot of time! Don't get Spooked!
 </p> 
 ";
