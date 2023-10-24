@@ -2,15 +2,15 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game the Chiefs beat the Broncos. The Ravens beat the Broncos in Tennessee. The Commanders beat the Falcons in Atlanta. The Vikings beat the Bears in Chicago. The Bengals beat the Seahawks in a close contest. In one of the two the upsets of the week, the Browns behind their second string quarterback beat the dominant 49ers. 
+In the first game the Jaguars beat the Saints in New Orleans. The Bears beat the Raiders. In a tight back and forth affair, the Browns held on to beat the Colts. In an upset, the Patriots came back to beat the Bills. The Giants beat the Commanders and the Ravens beat the Lions.
 </p> 
 
 <p>
-The Texans beat the Saints. The Jaguars continued to look strong, as they beat the Colts. The Lions mauled the Buccaneers. In the second upset of the week, the Jets beat the highly favored Eagles. The Rams trounced the Cardinals. The Bills held on to beat the Giants.
+The Falcons eked out a win over the Buccaneers. The Steelers beat the Rams. The Seahawks beat the Cardinals. The Broncos got their second win defeating the Packers. The Chiefs crushed the Chargers. The Eagles clawed the Dolphins.
 </p>
 
 <p>
-In the Monday night game, the Cowboys beat the Chargers in LA!
+In the Monday night game, the Vikings beat the 49ers!
 </p>  
 
 <p>
@@ -18,7 +18,7 @@ There is still a lot of time! Remember what Yoda says 'No try just do!'. Just Do
 </p>
 
 <p>
-The Member stats are below! Read em and weep (I know I do)!
+There is still a lot of time! Don't get Spooked!
 </p> 
 ";
 
