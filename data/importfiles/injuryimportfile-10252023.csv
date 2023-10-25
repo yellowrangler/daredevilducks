@@ -1,0 +1,406 @@
+Player,Team,Pos,Injury,Status
+Budda Baker,31,S,Hamstring,IR
+L.J. Collier,31,DE,Biceps,IR
+James Conner,31,RB,Knee,IR
+Pat Elflein,31,C,Undisclosed,IR
+Rashad Fenton,31,CB,Undisclosed,IR
+Jon Gaines,31,C,Knee,IR
+Antonio Hamilton,31,CB,Groin,Questionable
+Matt Hembrough,31,C,Back,IR
+Elijah Higgins,31,TE,Illness,Questionable
+Jesse Luketa,31,LB,Shoulder,Questionable
+Marlon Mack,31,RB,Achilles,IR
+Kyler McMichael,31,CB,Undisclosed,IR
+Kyler Murray,31,QB,Knee - ACL,PUP-R
+Myjai Sanders,31,LB,Thumb,IR-R
+Jalen Thompson,31,S,Hamstring,Questionable
+Carlos Watkins,31,DT,Biceps,IR
+Garrett Williams,31,CB,Knee - ACL,NFI-R
+Josh Ali,26,WR,Ankle,IR
+Troy Andersen,26,LB,Shoulder,IR
+Jared Bernhardt,26,WR,Groin,Reserve-Ret
+Ikenna Enechukwu,26,LB,Undisclosed,IR
+Feleipe Franks,26,TE,Undisclosed,IR
+Eddie Goldman,26,DT,Undisclosed,Reserve-Ex
+Ethan Greenidge,26,OT,Undisclosed,IR
+Matt Hennessy,26,OG,Knee,IR
+Adetokunbo Ogundeji,26,LB,Foot,IR
+Avery Williams,26,RB,Knee - ACL,IR
+Tyus Bowser,8,LB,Knee,NFI-R
+J.K. Dobbins,8,RB,Achilles,IR
+Malik Hamm,8,LB,Ankle,IR
+Nick Moore,8,C,Achilles,NFI-R
+Trayvon Mullen,8,CB,Toe,NFI-R
+David Ojabo,8,LB,Ankle,IR
+Odafe Oweh,8,LB,Ankle,Questionable
+Kevon Seymour,8,CB,Ankle,Questionable
+Brent Urban,8,DE,Neck,Questionable
+Andrew Vorhees,8,OG,Knee - ACL,NFI-R
+Tylan Wallace,8,WR,Hamstring,IR
+Ar'Darius Washington,8,CB,Chest,IR
+Damarion Williams,8,CB,Ankle,IR
+Marcus Williams,8,S,Hamstring,Questionable
+Daryl Worley,8,S,Shoulder,IR
+Josh Allen,3,QB,Shoulder,Questionable
+Zach Davidson,3,TE,Undisclosed,IR
+Tommy Doyle,3,OT,Knee,IR
+Damien Harris,3,RB,Neck,Questionable
+Nyheim Hines,3,RB,Knee,NFI-R
+Dane Jackson,3,CB,Foot,Questionable
+DaQuan Jones,3,DT,Pectoral,IR
+Dalton Kincaid,3,TE,Concussion,Questionable
+Matt Milano,3,LB,Leg,IR
+Brandon Shell,3,OT,Undisclosed,Reserve-Ret
+Justin Shorter,3,WR,Hamstring,IR
+Tre'Davious White,3,CB,Achilles,IR
+Henry Anderson,25,DE,Foot,IR
+Vonn Bell,25,S,Quadriceps,Questionable
+Brady Christensen,25,OG,Biceps,IR
+Austin Corbett,25,OG,Knee - ACL,PUP-R
+Yetur Gross-Matos,25,LB,Hamstring,Questionable
+Marquis Haynes,25,LB,Back,IR
+Jaycee Horn,25,CB,Hamstring,IR
+Frankie Luvu,25,LB,Hip,Questionable
+Giovanni Ricci,25,TE,Shoulder,Questionable
+Miles Sanders,25,RB,Shoulder,Questionable
+Laviska Shenault,25,WR,Ankle,Questionable
+Ian Thomas,25,TE,Calf,IR
+Shaq Thompson,25,LB,Lower Leg,IR
+Calvin Throckmorton,25,OG,Calf,Questionable
+Xavier Woods,25,S,Hamstring,Questionable
+Chandler Zavala,25,OG,Neck,Questionable
+Josh Blackwell,23,CB,Hamstring,IR
+Nate Davis,23,OG,Ankle,Questionable
+Justin Fields,23,QB,Thumb,Questionable
+Khalil Herbert,23,RB,Ankle,IR
+Travis Homer,23,RB,Hamstring,Questionable
+Eddie Jackson,23,S,Foot,Questionable
+Roschon Johnson,23,RB,Concussion,Questionable
+Braxton Jones,23,OT,Neck,IR
+Khalid Kareem,23,DE,Hip,IR
+Doug Kramer,23,C,Thumb,IR-R
+Joe Reed,23,WR,Undisclosed,IR
+Terell Smith,23,CB,Illness,Questionable
+Equanimeous St. Brown,23,WR,Hamstring,IR
+Orlando Brown,5,OT,Groin,Questionable
+Devin Cochran,5,OT,Knee,IR
+Akeem Davis-Gaither,5,LB,Knee,Questionable
+Devin Harper,5,LB,Hamstring,Questionable
+Charlie Jones,5,WR,Thumb,IR
+Devonnsha Maxwell,5,DT,Knee,IR
+Joel Bitonio,7,OG,Knee,Questionable
+Nick Chubb,7,RB,Knee - ACL + MCL,IR
+Jack Conklin,7,OT,Knee - ACL + MCL,IR
+Dawson Deaton,7,OG,Knee - ACL,IR
+Drew Forbes,7,OG,Back,NFI-R
+Thomas Graham,7,CB,Ankle,IR
+Jakeem Grant,7,WR,Kneecap,IR
+Jordan Kunaszyk,7,LB,Knee - MCL,IR
+Jacob Phillips,7,LB,Pectoral,IR
+Cedric Tillman,7,WR,Hip,Questionable
+Anthony Walker,7,LB,Concussion,Questionable
+Deshaun Watson,7,QB,Shoulder,Questionable
+Michael Woods,7,WR,Achilles,NFI-R
+Josh Ball,19,OT,Hip,IR
+Trevon Diggs,19,CB,Knee - ACL,IR
+David Durden,19,WR,Knee - ACL,IR
+Chuma Edoga,19,OT,Illness,Questionable
+C.J. Goodwin,19,CB,Pectoral,Out
+Peyton Hendershot,19,TE,Ankle,IR
+DeMarvion Overshown,19,LB,Knee - ACL,IR
+John Stephens,19,TE,Knee - ACL,IR
+Juanyeh Thomas,19,S,Hamstring,Doubtful
+Leighton Vander Esch,19,LB,Neck,Out
+Matt Waletzko,19,OT,Shoulder,IR
+Nahshon Wright,19,CB,Ankle,IR-R
+Baron Browning,13,LB,Knee,PUP-R
+Greg Dulcich,13,TE,Hamstring,Questionable
+Jonas Griffith,13,LB,Knee - ACL,IR
+D.J. Jones,13,DT,Knee,Questionable
+Alex Palczewski,13,OT,Hand,IR
+Tim Patrick,13,WR,Achilles,IR
+Samaje Perine,13,RB,Leg,Questionable
+Caden Sterns,13,S,Knee,IR
+Eyioma Uwazurike,13,DT,Suspension,Reserve-Sus
+Jalen Virgil,13,WR,Knee - Meniscus,IR
+K'Waun Williams,13,CB,Ankle,IR
+Brian Branch,22,S,Ankle,Questionable
+Jason Cabinda,22,FB,Knee,IR
+C.J. Gardner-Johnson,22,S,Pectoral,IR
+Jahmyr Gibbs,22,RB,Hamstring,Questionable
+Hendon Hooker,22,QB,Knee - ACL,NFI-R
+James Houston,22,LB,Ankle,IR
+Jonah Jackson,22,OG,Ankle,Questionable
+Zonovan Knight,22,RB,Shoulder,IR
+James Mitchell,22,TE,Hamstring,Questionable
+David Montgomery,22,RB,Ribs,Questionable
+Emmanuel Moseley,22,CB,Knee - ACL,IR
+Matt Nelson,22,OT,Ankle,IR
+Josh Paschal,22,DE,Knee,IR-R
+Nate Sudfeld,22,QB,Knee - ACL,IR
+Shane Zylstra,22,TE,Knee,IR
+Zayne Anderson,24,S,Hamstring,Questionable
+David Bakhtiari,24,OT,Knee,IR
+De'Vondre Campbell,24,LB,Ankle,Questionable
+Tyler Davis,24,TE,Knee,IR
+Aaron Jones,24,RB,Hamstring,Questionable
+Darnell Savage,24,S,Calf,Questionable
+Eric Stokes,24,CB,Foot,PUP-R
+Luke Tenuta,24,OT,Ankle,IR
+Quay Walker,24,LB,Knee,Questionable
+Tank Dell,10,WR,Concussion,Questionable
+Kendrick Green,10,OG,Knee - Meniscus,IR
+Kenyon Green,10,OG,Shoulder - Labrum,IR
+Troy Hairston,10,FB,Back,IR
+Charlie Heck,10,OT,Foot,PUP-R
+Jesse Matthews,10,WR,Knee - ACL,IR
+Eric Murray,10,S,Knee,Questionable
+Scott Quessenberry,10,C,Knee - ACL + MCL,IR
+Hassan Ridgeway,10,DT,Calf,IR
+DJ Scaife,10,OT,Leg,IR
+Juice Scruggs,10,C,Hamstring,IR
+Derek Stingley,10,CB,Hamstring,IR
+Kilian Zierer,10,OT,Ankle,IR
+Genard Avery,12,DE,Knee - Meniscus,IR
+Ashton Dulin,12,WR,Knee - ACL,IR
+Dallis Flowers,12,CB,Achilles,IR
+Evan Hull,12,RB,Knee,IR
+Titus Leo,12,DE,Undisclosed,IR
+Alec Pierce,12,WR,Shoulder,Questionable
+Danny Pinter,12,C,Ankle,IR
+Anthony Richardson,12,QB,Shoulder - AC Joint,IR
+Daniel Scott,12,S,Knee - ACL,IR
+Braden Smith,12,OT,Foot,Questionable
+Jake Witt,12,OT,Hip,IR
+Jelani Woods,12,TE,Hamstring,IR
+Christian Braswell,11,CB,Hamstring,IR
+Tyson Campbell,11,CB,Hamstring,Questionable
+Chris Claybrooks,11,CB,Undisclosed,Reserve-CEL
+DaVon Hamilton,11,DT,Back,IR-R
+Cooper Hodges,11,OT,Knee,IR
+Zay Jones,11,WR,Knee,Questionable
+Gregory Junior,11,CB,Hamstring,IR
+Trevor Lawrence,11,QB,Knee,Questionable
+Walker Little,11,OG,Knee,Questionable
+Ventrell Miller,11,LB,Achilles,IR
+Jaylon Moore,11,WR,Undisclosed,IR
+Sammis Reyes,11,TE,Concussion,Reserve-Ret
+Brandon Scherff,11,OG,Ankle,Questionable
+Leonard Taylor,11,TE,Undisclosed,IR
+Parker Washington,11,WR,Knee,IR
+Jody Fortson,15,TE,Shoulder,IR
+Richie James,15,WR,Knee - MCL,IR
+Nazeeh Johnson,15,S,Knee - ACL,IR
+Nikko Remigio,15,WR,Wrist,IR
+Prince Tega Wanogho,15,OT,Quadriceps,IR
+Justin Watson,15,WR,Elbow,Questionable
+Joey Bosa,14,LB,Toe,Questionable
+Alohi Gilman,14,S,Heel,Doubtful
+Jalen Guyton,14,WR,Knee - ACL,PUP-R
+Deane Leonard,14,CB,Hamstring,Doubtful
+Corey Linsley,14,C,Illness,NFI-R
+Otito Ogbonnia,14,DT,Kneecap,PUP-R
+Joshua Palmer,14,WR,Groin,Questionable
+Donald Parham,14,TE,Wrist,Questionable
+Andrew Trainer,14,OT,Undisclosed,IR
+AJ Uzodinma,14,CB,Undisclosed,IR
+Mike Williams,14,WR,Knee - ACL,IR
+Nick Williams,14,DT,Back,Questionable
+JT Woods,14,S,Illness,NFI-R
+Stetson Bennett,32,QB,Illness,NFI-R
+Bobby Brown,32,DT,Knee - MCL,IR
+Hunter Long,32,TE,Thigh,IR
+Sony Michel,32,RB,Undisclosed,Reserve-Ret
+Larrell Murchison,32,DT,Knee,Questionable
+Joe Noteboom,32,OG,Groin,Questionable
+Ronnie Rivers,32,RB,Knee - PCL,Questionable
+Jason Taylor,32,S,Groin,IR
+Kyren Williams,32,RB,Ankle,Questionable
+Curtis Bolton,15,LB,Knee,IR
+Brittain Brown,15,RB,Undisclosed,IR
+Darien Butler,15,LB,Undisclosed,IR
+Brandon Facyson,15,CB,Shin,IR
+Jimmy Garoppolo,15,QB,Back,Questionable
+Justin Herron,15,OT,Concussion,Questionable
+Nate Hobbs,15,CB,Ankle,Questionable
+Roderic Teamer,15,S,Hamstring,Questionable
+Dalton Wagner,15,OT,Undisclosed,IR
+Austin Walter,15,RB,Undisclosed,IR
+De'Von Achane,1,RB,Knee,IR
+Terron Armstead,1,OT,Knee,IR
+Chris Brooks,1,RB,Ankle,Questionable
+River Cracraft,1,WR,Shoulder,IR
+Keion Crossen,1,CB,Undisclosed,IR
+Erik Ezukanma,1,WR,Neck,NFI-R
+Xavien Howard,1,CB,Groin,Questionable
+Nik Needham,1,CB,Achilles,PUP-R
+Jalen Ramsey,1,CB,Knee - Meniscus,IR
+Zeke Vandenburgh,1,LB,Undisclosed,IR
+Connor Williams,1,C,Groin,Questionable
+Jeff Wilson,1,RB,Ribs,IR-R
+Ezra Cleveland,21,OG,Foot,Questionable
+Marcus Davenport,21,LB,Ankle,Questionable
+Akayleb Evans,21,CB,Oblique,Questionable
+Justin Jefferson,21,WR,Hamstring,IR
+Malik Knowles,21,WR,Undisclosed,NFI-R
+William Kwenkeu,21,LB,Undisclosed,IR
+James Lynch,21,DT,Knee - ACL,IR
+Nick Mullens,21,QB,Back,IR
+Jalen Nailor,21,WR,Hamstring,IR
+Kene Nwangwu,21,RB,Back,IR-R
+Chris Reed,21,OG,Lower Leg,NFI-R
+Olisaemeka Udoh,21,OT,Quadriceps,IR
+Isaiah Bolden,4,CB,Concussion,IR
+Cody Davis,4,S,Knee,PUP-R
+Demario Douglas,4,WR,Concussion,Questionable
+Daniel Ekuale,4,DT,Biceps,IR
+Trey Flowers,4,LB,Foot,PUP-R
+Christian Gonzalez,4,CB,Shoulder - Labrum,IR
+Terez Hall,4,LB,Undisclosed,IR
+Jack Jones,4,CB,Hamstring,IR
+Jonathan Jones,4,CB,Knee,Questionable
+Marcus Jones,4,CB,Shoulder,IR
+Matthew Judon,4,LB,Biceps,IR
+Raekwon McMillan,4,LB,Achilles,IR
+Tre Nixon,4,WR,Shoulder,IR
+Riley Reiff,4,OT,Knee,Questionable
+JuJu Smith-Schuster,4,WR,Concussion,Questionable
+Cole Strange,4,OG,Knee,Questionable
+Josh Uche,4,LB,Foot,Questionable
+Tyrone Wheatley,4,OT,Knee,IR
+Keion White,4,DE,Head,Questionable
+Eno Benjamin,27,RB,Achilles,IR
+Andrew Dowell,27,LB,Knee - ACL,IR
+J.T. Gray,27,S,Hamstring,Questionable
+Jake Haener,27,QB,Suspension,Reserve-Sus
+James Hurst,27,OT,Ankle,Questionable
+Juwan Johnson,27,TE,Calf,Questionable
+Lonnie Johnson,27,S,Hamstring,Questionable
+Adam Prentice,27,FB,Knee,IR
+Ryan Ramczyk,27,OT,Concussion,Questionable
+Payton Turner,27,DE,Toe,IR
+Trai Turner,27,OG,Quadriceps,IR
+Jamaal Williams,27,RB,Hamstring,IR
+Landon Young,27,OT,Hip,Questionable
+Jabari Zuniga,27,DE,Undisclosed,Reserve-Ret
+D.J. Davidson,20,DT,Knee,Questionable
+Jarrad Davis,20,LB,Knee,IR
+Wyatt Davis,20,OG,Ankle,IR
+Joshua Ezeudu,20,OT,Toe,Questionable
+Bryce Ford-Wheaton,20,WR,Knee,IR
+J.C. Hassenauer,20,C,Triceps,IR
+Adoree' Jackson,20,CB,Neck,Questionable
+Daniel Jones,20,QB,Neck,Questionable
+Chris Myarick,20,FB,Hand,IR
+Azeez Ojulari,20,LB,Ankle,IR
+Matt Peart,20,OT,Shoulder,Questionable
+Aaron Robinson,20,CB,Knee - ACL + MCL,PUP-R
+John Michael Schmitz,20,C,Shoulder,Questionable
+Tommy Sweeney,20,TE,Undisclosed,NFI-R
+Andrew Thomas,20,OT,Hamstring,Questionable
+Bradlee Anae,2,DE,Undisclosed,IR
+Jarrick Bernard-Converse,2,CB,Foot,PUP-R
+Duane Brown,2,OT,Shoulder,IR
+Chuck Clark,2,S,Knee - ACL,IR
+Micheal Clemons,2,DT,Ankle,Questionable
+Brandin Echols,2,CB,Hamstring,Questionable
+Sauce Gardner,2,CB,Concussion,Questionable
+Javelin Guidry,2,CB,Knee,IR
+Maalik Hall,2,LB,Undisclosed,IR
+Justin Hardee,2,CB,Hamstring,IR
+Hamsah Nasirildeen,2,LB,Neck,IR
+Ifeadi Odenigbo,2,DE,Undisclosed,IR
+D.J. Reed,2,CB,Concussion,Questionable
+Aaron Rodgers,2,QB,Achilles,IR
+Joe Tippmann,2,OG,Thigh,Questionable
+Alijah Vera-Tucker,2,OG,Achilles,IR
+Kenny Yeboah,2,TE,Hamstring,IR
+Reed Blankenship,17,S,Ribs,Questionable
+Shaun Bradley,17,LB,Achilles,IR
+Sydney Brown,17,S,Hamstring,Questionable
+Jalen Carter,17,DT,Ankle,Questionable
+Justin Evans,17,S,Knee,IR
+Myles Jack,17,LB,Personal,Reserve-Ret
+Lane Johnson,17,OT,Ankle,Questionable
+Roderick Johnson,17,OT,Undisclosed,IR
+Cam Jurgens,17,OG,Foot,IR
+Matt Leo,17,DE,Undisclosed,Reserve-Ret
+Avonte Maddox,17,CB,Pectoral,IR
+Zech McPhearson,17,CB,Achilles,IR
+Eli Ricks,17,CB,Knee,Questionable
+Bradley Roby,17,CB,Shoulder,Questionable
+Isaiah Rodgers,17,CB,Suspension,Reserve-Sus
+Darius Slay,17,CB,Knee,Questionable
+Marlon Tuipulotu,17,DT,Triceps,Questionable
+Quez Watkins,17,WR,Hamstring,IR
+James Daniels,6,OG,Groin,Questionable
+Pat Freiermuth,6,TE,Hamstring,Questionable
+Alfonzo Graham,6,RB,Undisclosed,IR
+Pressley Harvin,6,P,Hamstring,Questionable
+Cameron Heyward,6,DE,Groin,IR
+Diontae Johnson,6,WR,Hamstring,IR-R
+DeMarvin Leal,6,DE,Concussion,Questionable
+Anthony McFarland,6,RB,Knee,IR
+Dan Moore,6,OT,Knee,Questionable
+Larry Ogunjobi,6,DT,Undisclosed,Questionable
+Chapelle Russell,6,LB,Undisclosed,IR
+Cory Trice,6,CB,Knee - ACL,IR
+T.J. Watt,6,LB,Finger,Questionable
+Renell Wren,6,DT,Undisclosed,IR
+Coby Bryant,29,CB,Toe,IR
+LaTrell Bumphus,29,DT,Undisclosed,IR
+Artie Burns,29,CB,Hamstring,Questionable
+Dee Eskridge,29,WR,Suspension,Reserve-Sus
+Austin Faoliu,29,DT,Knee,PUP-R
+Damien Lewis,29,OG,Ankle,Questionable
+Abraham Lucas,29,OT,Knee,IR
+Kenny McIntosh,29,RB,Knee,IR
+Bryan Mone,29,DT,Knee - ACL,PUP-R
+Mike Morris,29,DE,Shoulder,IR
+Joshua Onujiogu,29,LB,Elbow,IR
+Andrew Whitaker,29,CB,Knee,IR
+Dareke Young,29,WR,Groin,IR
+Robert Beal,30,DE,Hamstring,IR
+Danny Gray,30,WR,Shoulder - AC Joint,IR
+Dre Greenlaw,30,LB,Hamstring,Questionable
+Cameron Latu,30,TE,Knee - Meniscus,IR
+Darrell Luter,30,CB,Knee,PUP-R
+Christian McCaffrey,30,RB,Oblique,Questionable
+George Odum,30,S,Thigh,Questionable
+Deebo Samuel,30,WR,Shoulder,Questionable
+Trent Williams,30,OT,Ankle,Questionable
+Samuel Womack,30,CB,Knee,IR
+Chase Edmonds,28,RB,Knee - MCL,IR
+Russell Gage,28,WR,Knee,IR
+Ryan Jensen,28,C,Knee,IR
+Baker Mayfield,28,QB,Hand,Questionable
+Anthony Nelson,28,LB,Concussion,Questionable
+Mike Brown,9,S,Undisclosed,IR
+Shakel Brown,9,DT,Ankle,IR
+Treylon Burks,9,WR,Knee,Questionable
+Julius Chestnut,9,RB,Hamstring,IR
+Caleb Farley,9,CB,Back,PUP-R
+Luke Gifford,9,LB,Hamstring,Questionable
+Hassan Haskins,9,RB,Undisclosed,IR
+Kearis Jackson,9,WR,Ankle,IR
+Elijah Molden,9,S,Hamstring,Questionable
+Chris Moore,9,WR,Concussion,Questionable
+Ryan Tannehill,9,QB,Ankle,Questionable
+Teair Tart,9,DT,Toe,Questionable
+Josh Whyle,9,TE,Concussion,Questionable
+Troy Apke,18,CB,Shoulder,IR
+David Bada,18,DT,Triceps,IR
+Curtis Brooks,18,DT,Undisclosed,IR
+Braeden Daniels,18,OT,Shoulder,IR
+Brandon Dillon,18,TE,Undisclosed,IR
+Darrick Forrest,18,S,Shoulder,IR
+Christian Holmes,18,CB,Hamstring,Questionable
+Charles Leno,18,OT,Personal,Questionable
+Phidarian Mathis,18,DT,Calf,IR
+Dax Milne,18,WR,Groin,IR
+Jeremy Reaves,18,S,Knee - ACL,IR
+Armani Rogers,18,TE,Achilles,IR
+Kaden Smith,18,TE,Undisclosed,IR
+Montez Sweat,18,DE,Thumb,Questionable
+Shaka Toney,18,DE,Suspension,Reserve-Sus
+Drew White,18,LB,Knee,PUP-R
