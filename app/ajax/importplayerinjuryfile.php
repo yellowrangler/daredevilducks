@@ -153,11 +153,12 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 
 	$team = $data[$teamIdx];
 	$pos = $data[$posIdx];
-	$injury = $data[$injuryIdx];
+
+	$injuryTmp = $data[$injuryIdx];
+	$injury = mysqli_real_escape_string($dbConn, $injuryTmp);
+
 	$status = $data[$statusIdx];
 
-
-	
 	// 
 	// do insert
 	// 
