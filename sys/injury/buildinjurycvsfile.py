@@ -102,14 +102,18 @@ output_injury_file = output_injury + str_current_datetime+".csv"
 conversion_dict = getconversionfile()
 
 # 
-# get the injuryfile file. read into dict
+# start output file. Then read in injury file - make changes to rows and write output
 # 
+
+# open output file
 with open(output_injury_file, 'w', newline='') as csv_file_out:
   fieldnames = ['Player','Team','Pos','Injury','Status']
   csv_writer_out = csv.DictWriter(csv_file_out, fieldnames=fieldnames)
 
+  # write header for output csv
   csv_writer_out.writeheader()
 
+  # cycle through input file making changes then write to output file
   with open(input_injury_file, mode='r', encoding='utf-8-sig') as csv_file_in:
       csv_reader_in = csv.DictReader(csv_file_in)
 
@@ -124,8 +128,7 @@ with open(output_injury_file, 'w', newline='') as csv_file_out:
           teamid = cvtinjury(row['Team'])
           row['Team'] = teamid
 
-          # write out new row
-          # drop the estimated return column
+          # drop the estimated return column then write out new row
           del row['Est. Return']
  
           csv_writer_out.writerow(row) 
