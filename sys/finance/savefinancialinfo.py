@@ -3,26 +3,26 @@
 import mysql
 import mysql.connector
 from mysql.connector import errorcode
+
 import glob
-from datetime import date
 import csv
 import re
-from decimal import Decimal
 
+from datetime import date
+from decimal import Decimal
 
 ######################################################################################################
 # Author: Tarrant Cutler Jr
 # Date: 11/04/2023
-# Description:  
+# Description: Read in bank or creditcard csv information
 ######################################################################################################
-
 
 ##################################
 # global variables
 ##################################
 
 dbparms = {
-    'user': 'root', 
+    'user': 'tarryc', 
     'password': '',
     'host': 'localhost',
     'database': 'finance'
@@ -39,6 +39,7 @@ ftables = {
 }
 
 stats = {
+    "finance scope" : "",
     "finance type" : "",
     "input filename" : "",
     "output filename" : "",
@@ -51,6 +52,97 @@ stats = {
 ##################################
 # functions
 ##################################
+
+
+# 
+#  get input parm
+#  
+def getfinancetype():
+  answer = ''
+
+  # Ask the user for finace type.
+  answer = input("What financial type (creditcard or bank?): ")
+  if answer != "creditcard" and answer != "bank" :  
+    answer = ''
+  
+  return (answer)
+   
+# 
+#  get input parm
+#  
+def getfinancescope():
+  answer = ''
+
+  # Ask the user for finace scope.
+  answer = input("Financial scope defaults to overwrite (append or overwrite ?): ")
+  if answer != "append" and answer != "overwrite" :  
+    answer = 'overwrite'
+
+  return (answer)
+
+def getfile(financialfiletype):
+  answer = ''
+
+  if (financialfiletype == 'creditcard'):
+    # 
+    # get list of cvs files to process
+    # 
+
+    file_list = glob.glob(fchoosefile['creditcard'])
+    lcount = len(file_list)
+    idx = 0
+    while (idx < lcount):
+      fname = file_list[idx]
+      answer = input(f"Use  '{fname}' Y/N ?")  
+      if answer.upper() == "Y":  
+        answer = fname
+        break;  
+      
+      idx += 1
+  elif (financialfiletype == 'bank'):
+    file_list = glob.glob(fchoosefile['bank'])
+    lcount = len(file_list)
+    idx = 0
+    while (idx < lcount):
+      fname = file_list[idx]
+      answer = input(f"Use  '{fname}' Y/N ?")  
+      if answer.upper() == "Y":  
+        answer = fname
+        break;  
+      
+      idx += 1
+  else:
+    print("Bad financial file type!")  
+    quit()
+  
+  return answer
+
+# 
+# get financial data into list
+# 
+def getfinancialdataintolist(filetype, filename):
+  formatted_date = date.today().strftime('%Y-%m-%d %H:%M:%S')
+  
+  financialfile = open(filename, mode='r')
+  financiallist = list(csv.reader(financialfile, delimiter=","))
+  financialfile.close()
+
+  # add season and week to front of list
+  i = 0
+  while i < len(financiallist):
+    if i == 0:
+      del financiallist[i]
+  
+    financiallist[i].append(formatted_date)
+    tmpstr = financiallist[i][2]
+    financiallist[i][2] = re.sub("'","",tmpstr)
+    tmpstr = financiallist[i][4]
+    financiallist[i][4] = Decimal(tmpstr)
+
+    # print(injurylist[i])
+    i = i + 1
+     
+  return financiallist
 
 #
 # delete same season week injury numbers
@@ -118,85 +210,8 @@ def getfinancedbpassword():
   answer = input("What is the finance db password?: ")
   
   return (answer)
-  
+    
 
- # 
-#  get input parm
-#  
-def getfinancetype():
-  answer = ''
-
-  # Ask the user for finace type.
-  answer = input("What financial type (creditcard or bank?): ")
-  
-  return (answer)
-   
-
-def getfile(financialfiletype):
-  answer = ''
-
-  if (financialfiletype == 'creditcard'):
-    # 
-    # get list of cvs files to process
-    # 
-
-    file_list = glob.glob(fchoosefile['creditcard'])
-    lcount = len(file_list)
-    idx = 0
-    while (idx < lcount):
-      fname = file_list[idx]
-      answer = input(f"Use  '{fname}' Y/N ?")  
-      if answer.upper() == "Y":  
-        answer = fname
-        break;  
-      
-      idx += 1
-  elif (financialfiletype == 'bank'):
-    file_list = glob.glob(fchoosefile['bank'])
-    lcount = len(file_list)
-    idx = 0
-    while (idx < lcount):
-      fname = file_list[idx]
-      answer = input(f"Use  '{fname}' Y/N ?")  
-      if answer.upper() == "Y":  
-        answer = fname
-        break;  
-      
-      idx += 1
-  else:
-    print("Bad financial file type!")  
-    quit()
-  
-  return answer
-
-# 
-# get financial data into list
-# 
-def getfinancialdataintolist(filetype, filename):
-  formatted_date = date.today().strftime('%Y-%m-%d %H:%M:%S')
-  
-  financialfile = open(filename, mode='r')
-  financiallist = list(csv.reader(financialfile, delimiter=","))
-  financialfile.close()
-
-  # add season and week to front of list
-  i = 0
-  while i < len(financiallist):
-    if i == 0:
-      del financiallist[i]
-  
-    financiallist[i].append(formatted_date)
-    tmpstr = financiallist[i][2]
-    financiallist[i][2] = re.sub("'","",tmpstr)
-    tmpstr = financiallist[i][4]
-    financiallist[i][4] = Decimal(tmpstr)
-
-    # print(injurylist[i])
-    i = i + 1
-     
-  return financiallist
-
-  
 ##################################
 # Main
 ################################## 
@@ -207,6 +222,16 @@ print("Finance Update started!\n")
 # get finance db password 
 # 
 dbparms['password'] = getfinancedbpassword()
+
+# 
+# get finance scope 
+# 
+fscope = getfinancescope()
+if fscope == '':
+  print("No financial scope entered!")
+  quit()
+
+stats['finance scope'] = fscope
 
 # 
 # get type of financial info to update 
@@ -237,15 +262,16 @@ financialdatalist = getfinancialdataintolist(ftype, ffile)
 stats['records read'] = len(financialdatalist)
 
 #
-# Delete existing finacial data
+# Delete existing finacial data if full update
 #
-deletefinancialinfo(ftype)
-
+if fscope == "overwrite":
+  deletefinancialinfo(ftype)
 
 # insert finacial data
 stats['records written'] = insertfinancialinfo(ftype, financialdatalist)
 
 print("\nFinancial type", stats["finance type"]) 
+print("Financial scope", stats["finance scope"])
 print("Financial records Read", stats["records read"]) 
 print("Financial records Written", stats["records written"]) 
 
