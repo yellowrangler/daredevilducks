@@ -53,7 +53,17 @@ stats = {
 # functions
 ##################################
 
+# 
+#  get input parm
+#  
+def getfinancedbpassword():
+  answer = ''
 
+  # Ask the user for finace type.
+  answer = input("What is the finance db password?: ")
+  
+  return (answer)
+    
 # 
 #  get input parm
 #  
@@ -80,7 +90,7 @@ def getfinancescope():
 
   return (answer)
 
-def getfile(financialfiletype):
+def getfilename(financialfiletype):
   answer = ''
 
   if (financialfiletype == 'creditcard'):
@@ -120,7 +130,7 @@ def getfile(financialfiletype):
 # 
 # get financial data into list
 # 
-def getfinancialdataintolist(filetype, filename):
+def readfinancialdataintolist(filetype, filename):
   formatted_date = date.today().strftime('%Y-%m-%d %H:%M:%S')
   
   financialfile = open(filename, mode='r')
@@ -147,7 +157,7 @@ def getfinancialdataintolist(filetype, filename):
 #
 # delete same season week injury numbers
 #
-def deletefinancialinfo(financialtype):
+def deletefinancialtblinfo(financialtype):
 
   financialtable = ftables[financialtype]
 
@@ -200,18 +210,6 @@ def insertfinancialinfo(financialtype, data):
 
   return number_of_rows     
 
-# 
-#  get input parm
-#  
-def getfinancedbpassword():
-  answer = ''
-
-  # Ask the user for finace type.
-  answer = input("What is the finance db password?: ")
-  
-  return (answer)
-    
-
 ##################################
 # Main
 ################################## 
@@ -221,7 +219,12 @@ print("Finance Update started!\n")
 # 
 # get finance db password 
 # 
-dbparms['password'] = getfinancedbpassword()
+dbpasswd = getfinancedbpassword()
+if dbpasswd == '':
+  print("No financial db password entered!")
+  quit()
+
+dbparms['password'] = dbpasswd
 
 # 
 # get finance scope 
@@ -246,7 +249,7 @@ stats["finance type"] = ftype
 # 
 # get financial file 
 # 
-ffile = getfile(ftype)
+ffile = getfilename(ftype)
 if ffile == '':
   print("No financial file entered!")
   quit()  
@@ -256,7 +259,7 @@ stats["input filename"] = ffile
 #
 # get financial data into list
 #
-financialdatalist = getfinancialdataintolist(ftype, ffile)
+financialdatalist = readfinancialdataintolist(ftype, ffile)
 # print(financialdatalist)
 
 stats['records read'] = len(financialdatalist)
@@ -265,7 +268,7 @@ stats['records read'] = len(financialdatalist)
 # Delete existing finacial data if full update
 #
 if fscope == "overwrite":
-  deletefinancialinfo(ftype)
+  deletefinancialtblinfo(ftype)
 
 # insert finacial data
 stats['records written'] = insertfinancialinfo(ftype, financialdatalist)
@@ -275,4 +278,4 @@ print("Financial scope", stats["finance scope"])
 print("Financial records Read", stats["records read"]) 
 print("Financial records Written", stats["records written"]) 
 
-print("\nInjury Update Ended!")
+print("\nFinancial Update Ended!")
