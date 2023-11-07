@@ -107,6 +107,7 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 	$filerow++;
 
     $num = count($data);
+    
     // $msgtext = $msgtext . "<p> $num fields in line $filerow<br /></p>\n";
 
     // 
@@ -119,6 +120,9 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 
 	if ($num != $teamrankfieldnbr)
 	{
+		// var_dump($data);
+    	// var_dump($num);
+    	// die();
 		$msgtext = $msgtext . "<p> Invalid column  count: $num <br /></p>\n";
 		exit($msgtext);
 	}
