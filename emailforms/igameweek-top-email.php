@@ -14,8 +14,25 @@ In the Monday night game, the Chargers crushed the Jets!
 </p>  
 
 <p>
+	As Veterans Day approaches it is time to remember all who not only served, but also those who gave their life in service to this country. 
+</p>
+
+<p>
+	When Wildcat Wonder and I travel west we always stop at American Legion Post 639< named LZ639 after an American submarine whose conning tower sits in a park set aside for veterans. I bring this up because while neither Wildcat Wonder or myself have served; they have always been more then hospitable letting us park are Airstream trailer overnight. Really great people, with strong community values and community support for those who serve. 
+</p>
+
+<p>
+	If you are ever driving through Springfield Missouri stop by, have a pop and meet some friendly folks! They are populated by the true patriots of the United States of America. 
+</p>
+
+<p>	
+	In the meantime, as you move through your daily progressions; If you bump into a Veteran, reach out and thank them for their service!
+</p>
+
+<p>
 We are through half the regular season! Time is  ticking! Tick. tick, tick... 
 </p>
+
 ";
 
 ?>
