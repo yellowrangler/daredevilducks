@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+import logging
+
+# import MySQLdb
+
 import mysql
 import mysql.connector
 from mysql.connector import errorcode
@@ -22,11 +26,14 @@ from decimal import Decimal
 ##################################
 
 dbparms = {
-    'user': 'tarryc', 
+    'user': 'tandt', 
     'password': '',
     'host': 'localhost',
     'database': 'finance'
 }
+
+required_csv_items = [0, 1, 2, 4]
+csv_nbr_item = 5
 
 fchoosefile = {
     'creditcard': 'CreditCards*.csv',
@@ -42,6 +49,7 @@ stats = {
     "finance scope" : "",
     "finance type" : "",
     "input filename" : "",
+    "input item errors" : "",
     "output filename" : "",
     "records read" : 0,
     "records written" : 0
@@ -128,9 +136,53 @@ def getfilename(financialfiletype):
   return answer
 
 # 
+# validate required items
+# 
+def valid_list(list, size, required):
+
+  #
+  # csv list must have size number of elements
+  #
+  list_nbr = len(list)
+  if list_nbr != size:
+    logging.info('invalid size:  %s', str(list_nbr))
+    logging.info('error row:  %s', list)
+
+    return 0
+
+  #
+  # csv list must have required elements. Required is list of index positions
+  #
+  i = 0
+  while i < len(required):  
+    x = required[i]
+    if len(list[x]) == 0:
+      logging.info('invalid item size: %s', list[x])
+      logging.info('error row:  %s', list)
+
+      return 0
+
+    i = i + 1  
+
+  #
+  # amt must be not be 0
+  #
+  amtstr = list[4]
+  # print("amtstr: ",list)
+  amt = Decimal(amtstr)
+  if amt.is_zero():
+    logging.info('invalid decimal is 0')
+    logging.info('error row:  %s', list)
+
+    return 0   
+
+# 
 # get financial data into list
 # 
 def readfinancialdataintolist(filetype, filename):
+  isvalid_list = 1
+  input_item_errors = 0
+
   formatted_date = date.today().strftime('%Y-%m-%d %H:%M:%S')
   
   financialfile = open(filename, mode='r')
@@ -142,6 +194,14 @@ def readfinancialdataintolist(filetype, filename):
   while i < len(financiallist):
     if i == 0:
       del financiallist[i]
+
+    isvalid_list = valid_list(financiallist[i], csv_nbr_item, required_csv_items)
+    if isvalid_list == 0:
+      del financiallist[i]
+      input_item_errors = input_item_errors + 1
+
+      # i = i + 1
+      continue
   
     financiallist[i].append(formatted_date)
     tmpstr = financiallist[i][2]
@@ -149,9 +209,10 @@ def readfinancialdataintolist(filetype, filename):
     tmpstr = financiallist[i][4]
     financiallist[i][4] = Decimal(tmpstr)
 
-    # print(injurylist[i])
     i = i + 1
      
+  stats["input item errors"] = input_item_errors   
+
   return financiallist
 
 #
@@ -186,33 +247,65 @@ def insertfinancialinfo(financialtype, data):
   number_of_rows = 0
   financialtable = ftables[financialtype]
 
-  try:
-    conn = mysql.connector.connect(**dbparms)
-    cursor = conn.cursor()
+  for row in data:
+    try:
+      conn = mysql.connector.connect(**dbparms)
+      cursor = conn.cursor()
 
-    tmpsql = "INSERT INTO " + financialtable + "(institution, transdate, description, category, amt, enterdate)" 
+      tmpsql = "INSERT INTO " + financialtable + "(institution, transdate, payee, category, amt, enterdate)" 
+      sql = tmpsql + " VALUES (%s, STR_TO_DATE(%s,'%m/%d/%Y'), %s, %s, %s, %s)"
 
-    sql = tmpsql + "VALUES (%s, STR_TO_DATE(%s,'%m/%d/%Y'), %s, %s, %s, %s)"
-    # number_of_rows = cursor.executemany(sql, data)
-    cursor.executemany(sql, data)
-    # print(sql)
-    # print(data)
+      # MySQLdb.escape_string(row)
 
-    number_of_rows = cursor.rowcount
+      cursor.execute(sql, row)
+      
+      conn.commit()
 
-    conn.commit()
-  except mysql.connector.Error as e:
-    print("Error inserting financial data for financial table", e)
-  finally:
-    if conn.is_connected():
-        conn.close()
-        cursor.close()   
+      number_of_rows = number_of_rows + 1
+    except mysql.connector.Error as e:
+      print("Error inserting financial data for financial table", e)
+      print(sql)
+      print(row)
+    finally:
+      if conn.is_connected():
+          conn.close()
+          cursor.close()   
+
+  # try:
+  #   conn = mysql.connector.connect(**dbparms)
+  #   cursor = conn.cursor()
+
+  #   tmpsql = "INSERT INTO " + financialtable + "(institution, transdate, payee, category, amt, enterdate) " 
+
+  #   sql = tmpsql + "VALUES (%s, STR_TO_DATE(%s,'%m/%d/%Y'), %s, %s, %s, %s)"
+  #   # number_of_rows = cursor.executemany(sql, data)
+  #   # print(data)
+  #   # print(sql)
+
+  #   MySQLdb.escape_string(sql)
+
+  #   cursor.executemany(sql, data)
+
+  #   number_of_rows = cursor.rowcount
+
+  #   conn.commit()
+  # except mysql.connector.Error as e:
+  #   print("Error inserting financial data for financial table", e)
+  #   print(sql)
+  # finally:
+  #   if conn.is_connected():
+  #       conn.close()
+  #       cursor.close()   
 
   return number_of_rows     
 
 ##################################
 # Main
 ################################## 
+
+# logging
+logging.basicConfig(filename='financial.log', format='%(asctime)s %(message)s', encoding='utf-8', level=logging.INFO)
+logging.info('Finance Update started')
 
 print("Finance Update started!\n")
 
@@ -273,9 +366,13 @@ if fscope == "overwrite":
 # insert finacial data
 stats['records written'] = insertfinancialinfo(ftype, financialdatalist)
 
-print("\nFinancial type", stats["finance type"]) 
-print("Financial scope", stats["finance scope"])
-print("Financial records Read", stats["records read"]) 
+# logging
+logging.info('Stats type: %s' '  scope: %s' '  read: %s' '  errors: %s' '  written: %s', stats["finance type"], stats["finance scope"], stats["records read"], stats["input item errors"], stats["records written"])
+logging.info('Financial Update Ended!')
+
+
+print("\nFinancial records Read", stats["records read"]) 
+print("Financial record Errors", stats["input item errors"]) 
 print("Financial records Written", stats["records written"]) 
 
 print("\nFinancial Update Ended!")
