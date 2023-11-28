@@ -2,15 +2,15 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game the Ravens beat the Bengals. The Cowboys stampeded the Panthers. The Browns eked past the Steelers. The Lions came back to maul the Bears. The Packers beat the Chargers. The Texans continued to impress with a win over the Cardinals. The Jaguars beat the fading Titans. The Dolphins beat the Raiders.
+In the first game the Packers beat the Lions in Detroit. The Cowboys crushed their division rival Commanders. The 49ers beat the Seahawks in Seattle. The Dolphins beat their division rival Jets. The Falcons beat the Saints. The Steelers beat the Bengals.
 </p> 
 
 <p>
-The Giants played well as they beat the Commanders. The 49ers won over the Buccaneers. The Bills crushed the Jets. The Rams eked a win over the Seahawks. The Broncos won a close contest against the Vikings. 
+The Colts beat the Buccaneers. The Jaguars beat the Texans. The Giants beat the just plain awful Patriots. The Titans beat the Panthers. The Rams beat the Cardinals. The Broncos kept to their winning ways by defeating their division rival Browns. The Eagles beat the Bills. The Chiefs beat the Raiders. The Ravens beat the Charges
 </p>
 
 <p>
-In the Monday night game, the Eagles beat the Chiefs in Kansas City!
+In the Monday night game, the Bears beat the Vikings!
 </p>  
 
 <p>
