@@ -59,6 +59,7 @@
 <!-- <script src="script/typeahead.js"></script> -->
 
 <!-- App libs -->
+<<<<<<< HEAD
 <script src="app/dddApp.js?dddver=DDV00000000"></script>
 
 <!-- controllers  -->
@@ -96,6 +97,45 @@
 
 <!-- <script src="script/snow/js/snow.js"></script> -->
 <script src="script/ddd.js?dddver=DDV00000000"></script>
+=======
+<script src="app/dddApp.js?dddver=DDV11302023"></script>
+
+<!-- controllers  -->
+<script src="app/controllers/firstController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/parenthomeController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/gamesController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/playerstatsController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/teamsController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/trackerController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/awardsController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/adminController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/faqsController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/helpController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/surveyController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/fireworksController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/spookyController.js?dddver=DDV11302023"></script>
+<script src="app/controllers/lastController.js?dddver=DDV11302023"></script>
+<!-- factories  -->
+<script src="app/factories/loginfactory.js?dddver=DDV11302023"></script>
+<script src="app/factories/membersfactory.js?dddver=DDV11302023"></script>
+<script src="app/factories/scriptsfactory.js?dddver=DDV11302023"></script>
+<script src="app/factories/surveyfactory.js?dddver=DDV11302023"></script>
+<script src="app/factories/teamsfactory.js?dddver=DDV11302023"></script>
+<script src="app/factories/gamesfactory.js?dddver=DDV11302023"></script>
+<script src="app/factories/trackerfactory.js?dddver=DDV11302023"></script>
+<!-- services  -->
+<script src="app/services/msgservice.js?dddver=DDV11302023"></script>
+<script src="app/services/loginservice.js?dddver=DDV11302023"></script>
+<script src="app/services/teamservice.js?dddver=DDV11302023"></script>
+<script src="app/services/chartservice.js?dddver=DDV11302023"></script>
+<script src="app/services/selectlistservice.js?dddver=DDV11302023"></script>
+
+<script src="app/directives/directives.js?dddver=DDV11302023"></script>
+<script src="app/validations/validate.js?dddver=DDV11302023"></script>
+
+<!-- <script src="script/snow/js/snow.js"></script> -->
+<script src="script/ddd.js?dddver=DDV11302023"></script>
+>>>>>>> 8561c037ae62d22f196759f7796fa0f21c3c8a14
 
 </head>
 <body style="background:white;" data-ng-controller="dddParentController" >
@@ -544,7 +584,11 @@
 
                     <div style="padding-top:45px;padding-bottom:5px;">
                         <span style="font-style: italic">
+<<<<<<< HEAD
                             Version: DDV00000000  
+=======
+                            Version: DDV11302023  
+>>>>>>> 8561c037ae62d22f196759f7796fa0f21c3c8a14
                         </span>
                     </div> 
 
