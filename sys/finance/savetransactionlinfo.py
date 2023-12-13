@@ -17,7 +17,7 @@ from decimal import Decimal
 
 ######################################################################################################
 # Author: Tarrant Cutler Jr
-# Date: 11/04/2023
+# Date: 12/09/2023
 # Description: Read in bank or creditcard csv information
 ######################################################################################################
 
@@ -32,30 +32,21 @@ dbparms = {
     'database': 'finance'
 }
 
-required_csv_items = [0, 1, 2, 4]
-csv_nbr_item = 5
+required_csv_items = [0, 1, 2, 3, 5]
+csv_nbr_item = 6
 
-fchoosefile = {
-    'creditcard': 'CreditCards*.csv',
-    'bank': 'Banks*.csv'
-}
+transactionfile = 'Transactions*.csv'
 
-ftables = {
-    'creditcard': 'creditcardtbl',
-    'bank': 'banktbl'
-}
+trantable = 'transactiontbl'
 
 stats = {
     "finance scope" : "",
-    "finance type" : "",
     "input filename" : "",
     "input item errors" : "",
     "output filename" : "",
     "records read" : 0,
     "records written" : 0
     }
-
-# inputtemplatefilestring = '*-transactions.csv'
 
 ##################################
 # functions
@@ -72,18 +63,6 @@ def getfinancedbpassword():
   
   return (answer)
     
-# 
-#  get input parm
-#  
-def getfinancetype():
-  answer = ''
-
-  # Ask the user for finace type.
-  answer = input("What financial type (creditcard or bank?): ")
-  if answer != "creditcard" and answer != "bank" :  
-    answer = ''
-  
-  return (answer)
    
 # 
 #  get input parm
@@ -92,46 +71,31 @@ def getfinancescope():
   answer = ''
 
   # Ask the user for finace scope.
-  answer = input("Financial scope defaults to overwrite (append or overwrite ?): ")
+  answer = input("Financial scope defaults to append (append or overwrite ?): ")
   if answer != "append" and answer != "overwrite" :  
-    answer = 'overwrite'
+    answer = 'append'
 
   return (answer)
 
-def getfilename(financialfiletype):
+def getfilename():
   answer = ''
 
-  if (financialfiletype == 'creditcard'):
-    # 
-    # get list of cvs files to process
-    # 
+  # 
+  # get list of cvs files to process
+  # 
 
-    file_list = glob.glob(fchoosefile['creditcard'])
-    lcount = len(file_list)
-    idx = 0
-    while (idx < lcount):
-      fname = file_list[idx]
-      answer = input(f"Use  '{fname}' Y/N ?")  
-      if answer.upper() == "Y":  
-        answer = fname
-        break;  
-      
-      idx += 1
-  elif (financialfiletype == 'bank'):
-    file_list = glob.glob(fchoosefile['bank'])
-    lcount = len(file_list)
-    idx = 0
-    while (idx < lcount):
-      fname = file_list[idx]
-      answer = input(f"Use  '{fname}' Y/N ?")  
-      if answer.upper() == "Y":  
-        answer = fname
-        break;  
-      
-      idx += 1
-  else:
-    print("Bad financial file type!")  
-    quit()
+  file_list = glob.glob(transactionfile)
+  lcount = len(file_list)
+  idx = 0
+  while (idx < lcount):
+    fname = file_list[idx]
+    answer = input(f"Use  '{fname}' Y/N ?")  
+    if answer.upper() == "Y":  
+      answer = fname
+      break;  
+    
+    idx += 1
+
   
   return answer
 
@@ -167,7 +131,7 @@ def valid_list(list, size, required):
   #
   # amt must be not be 0
   #
-  amtstr = list[4]
+  amtstr = list[5]
   # print("amtstr: ",list)
   amt = Decimal(amtstr)
   if amt.is_zero():
@@ -179,7 +143,7 @@ def valid_list(list, size, required):
 # 
 # get financial data into list
 # 
-def readfinancialdataintolist(filetype, filename):
+def readfinancialdataintolist(filename):
   isvalid_list = 1
   input_item_errors = 0
 
@@ -204,10 +168,10 @@ def readfinancialdataintolist(filetype, filename):
       continue
   
     financiallist[i].append(formatted_date)
-    tmpstr = financiallist[i][2]
-    financiallist[i][2] = re.sub("'","",tmpstr)
-    tmpstr = financiallist[i][4]
-    financiallist[i][4] = Decimal(tmpstr)
+    tmpstr = financiallist[i][3]
+    financiallist[i][3] = re.sub("'","",tmpstr)
+    tmpstr = financiallist[i][5]
+    financiallist[i][5] = Decimal(tmpstr)
 
     i = i + 1
      
@@ -218,9 +182,9 @@ def readfinancialdataintolist(filetype, filename):
 #
 # delete same season week injury numbers
 #
-def deletefinancialtblinfo(financialtype):
+def deletefinancialtblinfo():
 
-  financialtable = ftables[financialtype]
+  financialtable = trantable
 
   try:
     conn = mysql.connector.connect(**dbparms)
@@ -243,17 +207,18 @@ def deletefinancialtblinfo(financialtype):
 #
 # insert financial numbers
 #
-def insertfinancialinfo(financialtype, data):
+def insertfinancialinfo(data):
   number_of_rows = 0
-  financialtable = ftables[financialtype]
+  financialtable = trantable
 
+  print("\nInserting Financial transactions!")
   for row in data:
     try:
       conn = mysql.connector.connect(**dbparms)
       cursor = conn.cursor()
 
-      tmpsql = "INSERT INTO " + financialtable + "(institution, transdate, payee, category, amt, enterdate)" 
-      sql = tmpsql + " VALUES (%s, STR_TO_DATE(%s,'%m/%d/%Y'), %s, %s, %s, %s)"
+      tmpsql = "INSERT INTO " + financialtable + "(institutiontype, institution, transdate, payee, category, amt, enterdate)" 
+      sql = tmpsql + " VALUES (%s, %s, STR_TO_DATE(%s,'%m/%d/%Y'), %s, %s, %s, %s)"
 
       # MySQLdb.escape_string(row)
 
@@ -271,31 +236,6 @@ def insertfinancialinfo(financialtype, data):
           conn.close()
           cursor.close()   
 
-  # try:
-  #   conn = mysql.connector.connect(**dbparms)
-  #   cursor = conn.cursor()
-
-  #   tmpsql = "INSERT INTO " + financialtable + "(institution, transdate, payee, category, amt, enterdate) " 
-
-  #   sql = tmpsql + "VALUES (%s, STR_TO_DATE(%s,'%m/%d/%Y'), %s, %s, %s, %s)"
-  #   # number_of_rows = cursor.executemany(sql, data)
-  #   # print(data)
-  #   # print(sql)
-
-  #   MySQLdb.escape_string(sql)
-
-  #   cursor.executemany(sql, data)
-
-  #   number_of_rows = cursor.rowcount
-
-  #   conn.commit()
-  # except mysql.connector.Error as e:
-  #   print("Error inserting financial data for financial table", e)
-  #   print(sql)
-  # finally:
-  #   if conn.is_connected():
-  #       conn.close()
-  #       cursor.close()   
 
   return number_of_rows     
 
@@ -329,20 +269,11 @@ if fscope == '':
 
 stats['finance scope'] = fscope
 
-# 
-# get type of financial info to update 
-# 
-ftype = getfinancetype()
-if ftype == '':
-  print("No financial type entered!")
-  quit()
-
-stats["finance type"] = ftype
 
 # 
 # get financial file 
 # 
-ffile = getfilename(ftype)
+ffile = getfilename()
 if ffile == '':
   print("No financial file entered!")
   quit()  
@@ -352,7 +283,7 @@ stats["input filename"] = ffile
 #
 # get financial data into list
 #
-financialdatalist = readfinancialdataintolist(ftype, ffile)
+financialdatalist = readfinancialdataintolist(ffile)
 # print(financialdatalist)
 
 stats['records read'] = len(financialdatalist)
@@ -361,13 +292,13 @@ stats['records read'] = len(financialdatalist)
 # Delete existing finacial data if full update
 #
 if fscope == "overwrite":
-  deletefinancialtblinfo(ftype)
+  deletefinancialtblinfo()
 
 # insert finacial data
-stats['records written'] = insertfinancialinfo(ftype, financialdatalist)
+stats['records written'] = insertfinancialinfo(financialdatalist)
 
 # logging
-logging.info('Stats type: %s' '  scope: %s' '  read: %s' '  errors: %s' '  written: %s', stats["finance type"], stats["finance scope"], stats["records read"], stats["input item errors"], stats["records written"])
+logging.info('Stats scope: %s' '  read: %s' '  errors: %s' '  written: %s', stats["finance scope"], stats["records read"], stats["input item errors"], stats["records written"])
 logging.info('Financial Update Ended!')
 
 
