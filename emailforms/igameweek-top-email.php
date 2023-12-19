@@ -2,15 +2,15 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game the Patriots beat the Steelers. The Buccaneers came back in a wild game to beat the Falcons in Atlanta. The Bears beat the Lions. The Bengals won a close game against the Colts. The Browns beat the Jaguars. The Saints pounded the Panthers. The Jets beat the Texans. In a back and forth affair, the Ravens were the last team to score as they beat the Rams.
+In the first game the Raiders eviscerated the Chargers. The Bengals held on to beat the Vikings. The Colts beat the Steelers. The Lions mauled the Broncos. The Panthers beat the Falcons. The Browns beat the Bears in the wackiest game of the week. The Buccaneers beat the Packers in Green Bay.
 </p> 
 
 <p>
-The Vikings beat the Raiders in a low scoring affair. The 49ers beat the Seahawks. The Bills beat the Chiefs in Kansas. The Broncos beat the Chargers. In the game of the week, the Cowboys crushed the Eagles.
+The Dolphins shut out the Jets. The Saints crushed the Giants. The Texans held on to beat the Titans at home in overtime. The Chiefs crushed the Patriots. The 49ers beat the Cardinals in Arizona. The Rams played well enough to beat the Commanders in a close contest. The Bills ran the Cowboys out of town in an impressive beat down. The Ravens beat the Jaguars.
 </p>
 
 <p>
-For Monday night, we had 2 games being played at the same time. Both games featured wild endings! In the first, the Titans beat the Dolphins! In the second, Giants beat the Packers.
+For Monday night, the Seahawks beat the highly touted Eagles. 
 </p>  
 
 <p>
