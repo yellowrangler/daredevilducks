@@ -496,43 +496,53 @@
 			</tr>
 		</table>
 			
-		<table style='width:100%;padding:0;' class='table' >
-			<tr style='background:#40E0D0;color:white;font-weight:bold;'>
+		<table ng-init="showHomeTeamsInjuryStats=false; showAwayTeamsInjuryStats=false" style='width:100%;padding:0;' class='table' >
+			<tr ng-click="showHomeTeamsInjuryStats = !showHomeTeamsInjuryStats" style='background:#B25109;color:white;font-weight:bold; cursor:pointer;'>
 				<td style='padding:0;' colspan=4>
 					<img style='text-align:centerr;padding:0;' height='40' src='img/nflicons/{{teamstats.hometeamiconname}}'>  
 					<span style="padding-left:15px;">Player Injuries</span>
+					<span ng-if="showHomeTeamsInjuryStats"style="padding-left:5px">(Click here to hide Injury list.)</span>
+					<span ng-if="!showHomeTeamsInjuryStats"style="padding-left:5px">(Click here to view Injury list.)</span>
 				</td>			
 			</tr>
 
-			<tr style="color:red;text-align:center;vertical-align:middle;line-height:12px;padding:0;">
+			<tr ng-if="showHomeTeamsInjuryStats" style="color:red;text-align:center;vertical-align:middle;line-height:12px;padding:0;">
 				<td style="text-align:center;">Player</td>
 				<td style="text-align:center;">Pos</td>
 				<td style="text-align:center;">Injury</td>	
 				<td style="text-align:center;">Status</td>											
 			</tr>
 
-			<tr data-ng-repeat="hometeaminjurystat in hometeaminjurystats" style="vertical-align:middle;line-height:12px;padding:0;">	
+			<tr ng-if="showHomeTeamsInjuryStats" data-ng-repeat="hometeaminjurystat in hometeaminjurystats" style="vertical-align:middle;line-height:12px;padding:0;">	
 				<td style="text-align:left;">{{hometeaminjurystat.playername}}</td>
 				<td style="text-align:center;">{{hometeaminjurystat.position}}</td>
 				<td style="text-align:center;">{{hometeaminjurystat.injury}}</td>	
-				<td style="text-align:center;">{{hometeaminjurystat.status}}</td>											
+				<td style="text-align:center;">{{hometeaminjurystat.status}}</td>	
 			</tr>
 
-			<tr style='background:#6495ED;color:white;font-weight:bold;'>
+			<tr >
 				<td style='padding:0;' colspan=4>
-					<img style='text-align:centerr;padding:0;' height='40' src='img/nflicons/{{teamstats.awayteamiconname}}'>  
-					<span style="padding-left:15px;">Player Injuries</span>
+					&nbsp;
 				</td>			
 			</tr>
 
-			<tr style="color:red;text-align:center;vertical-align:middle;line-height:12px;padding:0;">
+			<tr ng-click="showAwayTeamsInjuryStats = !showAwayTeamsInjuryStats" style='background:#6495ED;color:white;font-weight:bold; cursor:pointer;'>
+				<td style='padding:0;' colspan=4>
+					<img style='text-align:centerr;padding:0;' height='40' src='img/nflicons/{{teamstats.awayteamiconname}}'>  
+					<span style="padding-left:15px;">Player Injuries</span>
+					<span ng-if="showAwayTeamsInjuryStats"style="padding-left:5px">(Click here to hide Injury list.)</span>
+					<span ng-if="!showAwayTeamsInjuryStats"style="padding-left:5px">(Click here to view Injury list.)</span>
+				</td>			
+			</tr>
+
+			<tr ng-if="showAwayTeamsInjuryStats" style="color:red;text-align:center;vertical-align:middle;line-height:12px;padding:0;">
 				<td style="text-align:center;">Player</td>
 				<td style="text-align:center;">Pos</td>
 				<td style="text-align:center;">Injury</td>	
 				<td style="text-align:center;">Status</td>											
 			</tr>
 
-			<tr data-ng-repeat="awayteaminjurystat in awayteaminjurystats" style="text-align:center;vertical-align:middle;line-height:12px;padding:0;">
+			<tr ng-if="showAwayTeamsInjuryStats" data-ng-repeat="awayteaminjurystat in awayteaminjurystats" style="text-align:center;vertical-align:middle;line-height:12px;padding:0;">
 				<td style="text-align:left;">{{awayteaminjurystat.playername}}</td>
 				<td style="text-align:center;">{{awayteaminjurystat.position}}</td>
 				<td style="text-align:center;">{{awayteaminjurystat.injury}}</td>	
