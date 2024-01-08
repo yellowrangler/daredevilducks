@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the opening game for the week, the Browns beat the Jets. The Cowboys beat the Lions on a dubious officiating call. The Bills beat the Patriots. The Bears mauled the Falcons. The Colts beat the Raiders in a close match. The Texans crushed the Titans. The Jaguars beat the Panthers. The Rams beat the Giants in New York. 
+In the opening game for the week, the Steelers beat the Lamar-less Ravens. This was a pivotal game for the Steelers, as it propelled them into the Playoffs! The Texans beat the Colts, propelling them into the playoffs as well! The Buccaneers beat the Panthers, clinching the Division title for the Buccaneers! The Bengals beat the depleted Browns. The Lions beat the Vikings. The Saints beat the Falcons. The Jets beat the Patriots in New England. The first time for the Jets in New England in 15 years! 
 </p> 
 
 <p>
-In the upset of the week, the Cardinals beat the Eagles in Philadelphia! The Ravens eviscerated the Dolphins. The Saints beat the Buccaneers inn Tampa. The 49ers beat the Commanders in Washington. The Steelers beat the Seahawks in Seattle. The Broncos beat the Chargers. The Chiefs beat the Bengals.
+The Titans beat the Jaguars in a back and forth affair. The Seahawks beat the Cardinals. The Packers beat the Bears, earning them a place in the playoffs! The Giants beat the Eagles. The Raiders beat the Broncos. The Chiefs beat the Chargers. The Rams beat the 49ers. The Cowboys beat the Commanders.
 </p>
 
 <p>
-In the final game of the week, Green Bay beat the Vikings.
+In the final game of the week, the Bills beat the Dolphins.
 </p>  
 
 <p>
-Only 1 more game in the regular season! Good luck all! 
+Welcome to the post season! This should be a very entertaining week! Enjoy!
 </p>
 ";
 

@@ -901,7 +901,7 @@ controllers.gameinfoController = function ($scope, $http, $log, $location, uiGri
             rc = -1;
         }
 
-        if ( (fieldIsEmpty($scope.current.networkid)) || ($scope.current.networkid.length != 1) )
+        if ( fieldIsEmpty($scope.current.networkid) )
         {
             if (rc == -1)
             {
