@@ -18,7 +18,7 @@ Welcome to the post season! This should be a very entertaining week! Enjoy!
 </p>
 
 <p >
-	Check out the our Wild Card week <b>Team Bracket</b>! You can see it by clicking on the <b>Donald Duck on a Rocket</b> image. As the Playoffs progress, the <b>Team Bracket</b> will change as well! 
+	Check out  our Wild Card week <b>Team Bracket</b>! You can see it by clicking on the <b>Donald Duck on a Rocket</b> image. As the Playoffs progress, the <b>Team Bracket</b> will change as well! 
 </p>
 
 <p> 
