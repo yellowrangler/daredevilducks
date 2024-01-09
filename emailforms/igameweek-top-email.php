@@ -16,6 +16,15 @@ In the final game of the week, the Bills beat the Dolphins.
 <p>
 Welcome to the post season! This should be a very entertaining week! Enjoy!
 </p>
+
+<p >
+	Check out the our Wild Card week <b>Team Bracket</b>! You can see it by clicking on the <b>Donald Duck on a Rocket</b> image. As the Playoffs progress, the <b>Team Bracket</b> will change as well! 
+</p>
+
+<p> 
+	Mobile users swipe the icon at the bottom of the screen to the left until you see the <b>Team Bracket</b> image! Select that image for a larger picture! 
+</p>
+
 ";
 
 ?>
