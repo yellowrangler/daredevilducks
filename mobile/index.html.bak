@@ -52,42 +52,42 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- App libs -->
-<script src="app/dddAppMobile.js?dddver=DMV01162024"></script>
+<script src="app/dddAppMobile.js?dddver=DMV01172024"></script>
 
 <!-- controllers  -->
-<script src="app/controllers/firstController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/parenthomeController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/surveyController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/gamesController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/playerstatsController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/teamsController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/awardsController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/newsopinionController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/adminController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/faqsController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/surveyController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/fireworksController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/spookyController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/happyholidaysController.js?dddver=DMV01162024"></script>
-<script src="app/controllers/lastController.js?dddver=DMV01162024"></script>
+<script src="app/controllers/firstController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/parenthomeController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/surveyController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/gamesController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/playerstatsController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/teamsController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/awardsController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/newsopinionController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/adminController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/faqsController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/surveyController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/fireworksController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/spookyController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/happyholidaysController.js?dddver=DMV01172024"></script>
+<script src="app/controllers/lastController.js?dddver=DMV01172024"></script>
 <!-- factories  -->
-<script src="app/factories/loginfactory.js?dddver=DMV01162024"></script>
-<script src="app/factories/membersfactory.js?dddver=DMV01162024"></script>
-<script src="app/factories/scriptsfactory.js?dddver=DMV01162024"></script>
-<script src="app/factories/surveyfactory.js?dddver=DMV01162024"></script>
+<script src="app/factories/loginfactory.js?dddver=DMV01172024"></script>
+<script src="app/factories/membersfactory.js?dddver=DMV01172024"></script>
+<script src="app/factories/scriptsfactory.js?dddver=DMV01172024"></script>
+<script src="app/factories/surveyfactory.js?dddver=DMV01172024"></script>
 
-<script src="app/factories/teamsfactory.js?dddver=DMV01162024"></script>
+<script src="app/factories/teamsfactory.js?dddver=DMV01172024"></script>
 <!-- services  -->
-<script src="app/services/msgservice.js?dddver=DMV01162024"></script>
-<script src="app/services/loginservice.js?dddver=DMV01162024"></script>
-<script src="app/services/teamservice.js?dddver=DMV01162024"></script>
-<script src="app/services/chartservice.js?dddver=DMV01162024"></script>
-<script src="app/services/selectlistservice.js?dddver=DMV01162024"></script>
+<script src="app/services/msgservice.js?dddver=DMV01172024"></script>
+<script src="app/services/loginservice.js?dddver=DMV01172024"></script>
+<script src="app/services/teamservice.js?dddver=DMV01172024"></script>
+<script src="app/services/chartservice.js?dddver=DMV01172024"></script>
+<script src="app/services/selectlistservice.js?dddver=DMV01172024"></script>
 
-<script src="app/directives/directives.js?dddver=DMV01162024"></script>
-<script src="app/validations/validate.js?dddver=DMV01162024"></script>
+<script src="app/directives/directives.js?dddver=DMV01172024"></script>
+<script src="app/validations/validate.js?dddver=DMV01172024"></script>
 
-<script src="script/dddMobile.js?dddver=DMV01162024"></script>
+<script src="script/dddMobile.js?dddver=DMV01172024"></script>
 </head>
 
 <body style="background:white;overflow-y: scroll;" data-ng-controller="dddParentController" >
@@ -189,7 +189,7 @@
         <article style="margin-bottom:25px;">
             <h4 style="color: teal;
                 text-align:center;">
-                Version: DMV01162024  
+                Version: DMV01172024  
             </h4>
         </article>  
 
