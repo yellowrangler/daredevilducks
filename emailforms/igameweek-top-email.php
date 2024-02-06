@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-The Ravens beat the Texans decisively in the first Saturday Wildcard weekend game. In the second Saturday game the 49ers won over the Packers in a closer contest.
+The Chiefs beat the Ravens in the first Conference playoff game. The Ravens looked out of sorts from the start. They played punishing football but didn't come together until it was too late. Meanwhile, the Chiefs looked very good in all facets of the game. This may be a great chance for them to win a back to back Super Bowl.
 </p> 
 
 <p>
-In the first Sunday game, the Lions beat the Buccaneers in a competitive match. In the second and final Sunday game, the Chiefs beat the Bills in a heart breaker for the Bills. Seems like missing last second field goals is still in the Bills DNA.
+In the second Conference playoff game The 49ers beat the Lions. The 49ers were good enough to beat the Lions. The Lions coaching staff made a couple of head scratching decisions regarding going for 4th and short when points were there as a field goal.
 </p>
 
 <p>
-  <span style='color:#40B7E0;font-weight:900;'>All in all a superb week of football! On to the Conference Playoffs, week 21!</span>
+  <span style='color:#40B7E0;font-weight:900;'>All in all a superb week of football! On to the Super Bowl!</span>
 </p> 
 
 <p >
-	Check out our Conference Playoffs <b>Team Bracket</b>! You can see it by clicking on the <b>Donald Duck on a Rocket</b> image. As the Playoffs progress, the <b>Team Bracket</b> will change as well! 
+	Check out our Super Bowl Playoffs <b>Team Bracket</b>! You can see it by clicking on the <b>Donald Duck on a Rocket</b> image. As the Playoffs progress, the <b>Team Bracket</b> will change as well! 
 </p>
 
 <p> 
