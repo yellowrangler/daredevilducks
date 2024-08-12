@@ -128,20 +128,26 @@ $sql_result_weeks = $sql_result;
 $r = mysqli_fetch_assoc($sql_result_weeks);
 $weekstotal = $r["weeks"];
 
-// debug
-// print "<br />weeksttotal $weekstotal";
-
 // added 8/25/2016 if weeks is null
 if ($weekstotal == null)
 {
 	$weekstotal = 0;
 }
 
+// debug
+// print "<br />weeksttotal $weekstotal <br />";
+
 //
 // loop through all members
 //
+// debug
+// print "<br /> top member loop membercount $membercount <br />";
+
 while($row = mysqli_fetch_assoc($sql_result_members))
 {
+	// debug
+	// print "<br /> in member loop <br />";
+
 
 	// count members
 	$membercount = $membercount + 1;
@@ -159,7 +165,7 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 	$memberid = $row['id'];
 
 	// debug
-	// print "<br /> top member loop memberid $memberid";
+	// print "<br /> top member loop for week thru weeks <br /> ";
 
 	//
 	// for every week get totals
@@ -167,7 +173,7 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 	for ($week = 1; $week <= $weekstotal; $week++)
 	{
 		// debug
-		// print "<br /> top week loop week $week";
+		// print "<br /> in week in weeks  loop  for member <br />";
 
 		//
 		// reset values - comment this out to get cumulative rolled up results
@@ -213,6 +219,9 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 		AND MP.memberid = $memberid
 	    AND NOT (G.hometeamscore = G.awayteamscore AND G.hometeamscore = 0 AND G.awayteamscore = 0)
 		ORDER BY G.gamedatetime";
+
+		// debug
+		// print "<br /> gametypeid= $gametypeid";	
 
 		// debug
 		// if ($memberid == 2)
@@ -420,14 +429,26 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 
 		}
 
+		// debug
+		// $debuugtxt = "week in weeksinregularseason invalid. not 2 or 3.";
+
 		if ($week < $weeksinregularseason)
 		{
 			$gametypeid = 2;
+
+			// debug
+			// $debuugtxt = "week in weeksinregularseason valid. 2";
 		}
 		elseif ($week > $weeksinregularseason)
 		{
 			$gametypeid = 3;
+
+			// debug
+			// $debuugtxt = "week in weeksinregularseason valid. 3";
 		}
+
+		// debug
+		// print "<br /> $debuugtxt";
 
 		//---------------------------------------------------------------------------------------
 		//
@@ -517,9 +538,16 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 	//
 
 	// debug
-	// print "<br /> <br />loop thru rest of weeks";
+	// print "<br /> <br />loop thru rest of weeks <br />";
 	// print "<br /> start = $week. weeksinregularseason = $weeksinregularseason memberid = $memberid <br />";
 
+	// Fix for start of season, Set gametypeid = 2
+	if ($gametypeid == 0)
+	{
+		// debug
+		print("<br /> Setting gametypeid to 2 <br /> ");
+		$gametypeid = 2;
+	}
 
  	$start = $week;
 	for ($week = $start; $week <= $weeksinregularseason; $week++)
