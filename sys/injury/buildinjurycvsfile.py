@@ -72,9 +72,11 @@ print("Conversion started!\n")
 
 file_list = glob.glob("nfl-injury*.csv")
 lcount = len(file_list)
+print ("The file count is:", lcount)
+
 idx = 0
 while (idx < lcount):
-  print ("The count is:", lcount)
+  print ("The current count is:", idx + 1)
   fname = file_list[idx]
   answer = input(f"Do you want to use '{fname}' for import as injury file for ddd Y/N ?")  
   if answer.upper() == "Y":  
@@ -83,9 +85,9 @@ while (idx < lcount):
   
   idx += 1
 
-  if input_injury_file == "":
-    print("No file picked!")
-    quit()
+if input_injury_file == "":
+  print("No file picked!")
+  quit()
 
 # 
 # build output file name
