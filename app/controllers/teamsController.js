@@ -1239,7 +1239,7 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
 
         var windowHeight = window.innerHeight;
         var windowWidth = window.innerWidth;
-        $scope.imageWidth = windowWidth * .15;  // was .15
+        $scope.imageWidth = windowWidth * .13;  // was .15
         $scope.current.WeeklRankingtablesize = windowHeight * .50;  // was .60
 
         $scope.$parent.tracker('team scores and stats',
