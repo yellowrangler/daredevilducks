@@ -59,6 +59,13 @@
                 </div>
                 <div style="padding-top:15px; padding-bottom:15px;" class="panel-body">
                     <div class="form-group">
+                        <label for="ordr" class="col-md-2 control-label">Order</label>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" name="ordr[]" value='{{hallofmemory.ordr}}' >
+                        </div>
+                    </div> <!-- end of form-group -->
+
+                    <div class="form-group">
                         <label for="memberid" class="col-md-2 control-label">ID</label>
                         <div class="col-md-1">
                             <input type="text" class="form-control" name="memberid[]" value='{{hallofmemory.memberid}}' >
@@ -140,6 +147,13 @@
                     <h1 class="panel-title">Add</h1>
                 </div>    
             <div style="padding-top:15px; padding-bottom:15px;" class="panel-body">
+                <div class="form-group">
+                    <label for="ordr" class="col-md-2 control-label">Order</label>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" ng-model="current.ordr" id="ordr" name="ordr" placeholder="">
+                    </div>
+                </div> <!-- end of form-group -->
+
                 <div class="form-group">
                     <label for="memberid" class="col-md-2 control-label">ID</label>
                     <div class="col-md-1">

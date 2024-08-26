@@ -7,6 +7,7 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
+$ordr = $_POST['ordr'];
 $memberid = $_POST['memberid'];
 $lastname = $_POST['lastname'];
 $firstname = $_POST['firstname'];
@@ -16,7 +17,6 @@ $detailA = $_POST['detailA'];
 $detailB = $_POST['detailB'];
 $photoA = $_POST['photoA'];
 $photoB = $_POST['photoB'];
-
 
 $msgtext = "Hall of Memory Info Added Succesfully!";
 
@@ -35,9 +35,15 @@ $modulecontent = "Unable to add Hall of Memory item.";
 // build the hall of memory insert statement
 //
 $sql = 'INSERT INTO hallofmemorytbl 
-    (memberid, lastname, firstname, titleA, titleB, detailA, detailB, photoA, photoB) 
+    (ordr, memberid, lastname, firstname, titleA, titleB, detailA, detailB, photoA, photoB) 
     VALUES 
-    (' . $memberid . ', "' . $lastname . '", "' . $firstname . '", "' . $titleA . '", "' . $titleB . '", "' . $detailA . '", "' . $detailB . '", "' . $photoA .'", "' . $photoB . '" )';
+    (' . $ordr . ', ' . $memberid . ', "' . $lastname . '", "' . $firstname . '", "' . $titleA . '", "' . $titleB . '", "' . $detailA . '", "' . $detailB . '", "' . $photoA .'", "' . $photoB . '" )';
+
+// $sql = 'INSERT INTO hallofmemorytbl 
+//     (memberid, lastname, firstname, titleA, titleB, detailA, detailB, photoA, photoB) 
+//     VALUES 
+//     (' . $memberid . ', "' . $lastname . '", "' . $firstname . '", "' . $titleA . '", "' . $titleB . '", "' . $detailA . '", "' . $detailB . '", "' . $photoA .'", "' . $photoB . '" )';
+
 
 // $sql = mysql_real_escape_string($sql);
 

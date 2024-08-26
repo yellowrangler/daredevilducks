@@ -7,6 +7,7 @@ include_once ('../class/class.AccessLog.php');
 //
 // post input
 //
+$ordr = $_POST['ordr'];
 $memberid = $_POST['memberid'];
 $lastname = $_POST['lastname'];
 $firstname = $_POST['firstname'];
@@ -47,7 +48,7 @@ for ($i = 0; $i < $count; $i++)
     //-----------------------------------------------------------------
     // add hall of memory info to sql 
     //-----------------------------------------------------------------
-    $sql = $sql . '( "' . $memberid[$i] . '", "' . $lastname[$i] .'", "' . $firstname[$i] . '", "' . $photoA[$i] . '", "' . $photoB[$i] . '", "' . $titleA[$i] . '", "' . $titleB[$i] . '", "' . $detailA[$i] . '", "' . $detailB[$i]  . '" )';
+    $sql = $sql . '( "' . $ordr[$i] . '", "' . $memberid[$i] . '", "' . $lastname[$i] .'", "' . $firstname[$i] . '", "' . $photoA[$i] . '", "' . $photoB[$i] . '", "' . $titleA[$i] . '", "' . $titleB[$i] . '", "' . $detailA[$i] . '", "' . $detailB[$i]  . '" )';
 
     if ($i < ($count - 1))
     {
