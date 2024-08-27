@@ -18,7 +18,7 @@ include_once ('mysqlconnect.php');
 //---------------------------------------------------------------
 // get hall of memory list
 //---------------------------------------------------------------
-$sql = "SELECT *  FROM hallofmemorytbl ORDER BY lastname DESC";
+$sql = "SELECT *  FROM hallofmemorytbl ORDER BY ordr DESC";
 
 //
 // sql query
