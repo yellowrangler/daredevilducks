@@ -2,26 +2,25 @@
 
 $emailtopwriteup = "	
 <p>
-In the first game of the 2024 season, the Chiefs looked good as they beat the Ravens! In our first Friday night game of the season, the Eagles held on to beat the Packers in Sao Paulo, Brazil. The Steelers looked tough as they made Kirk Cousins life miserable in his debut as the Falcons quarterback. The Bills beat the Cardinals in a back and fourth affair in Buffalo. The Bears beat the Titans in a sloppily played game. But as the saying goes an ugly win is still a win. The Patriots without Bill Belichick beat the Bengals in Cincinnati! The Texans beat the Colts in a close contest in Indianapolis. The Dolphins came out slowly but were able to ramp it up as thy beat the Jaguars. 
+In the Thursday night game the Bills crushed the Dolphins. Dolphins quarterback Tagovailoa left the game with a concussion, his third since joining the NFL. 
 </p> 
 
 <p>
-The Saints crushed the hapless Panthers. Speaking of hapless, the Vikings pounded the ill prepared Giants in New York. The Chargers impressed their new coach Jim Harbaugh by beating the Raiders. The Seahawks beat the Broncos. The Cowboys gave their quarterback Dak Prescott a new 4 year $60 million dollar a year extension. In return Dak held up his part in the bargain as the Cowboys beat up on the Browns. The Buccaneers put a whopping on the Commanders. The Lions beat the Rams in overtime!
+In Sunday games - The Chargers scorched the winless Panthers. In the first upset of the week, the Saints soundly beat the Cowboys in Dallas. The Buccaneers beat the Lions in Detroit. The Packers beat the Colts. The Browns squeaked past the Jaguars. In a second upset of sorts, the Vikings beat the 49ers. The Seahawks eeked past the Patriots in New England. The Jets beat the titans in Tennessee. In another upset, the Raiders beat the Ravens in Baltimore. The Commanders beat the Giants. The Cardinals crushed the Rams. In a low scoring contest, the Steelers beat the Broncos. In a game with some questionable officiating shenanigans, the Chiefs edged out the Bengals in the last seconds of the game. In the late Sunday game, the Texans beat the Bears.
 </p> 
 
 <p>
-In the final game of the week, the 49ers looked sharp as they beat the Jets, ruining Aaron Rogers return to football!
+In the Monday night game, the Falcons beat the Eagles in a thrilling contest, featuring a last second Falcons comeback!
 </p>   
 
 <p>
-A great first week! Dont be disappointed if you did not do well. There is still plenty of time!
+A great second week! Dont be disappointed if you did not do well. There is still plenty of time!
 </p>
 
 
 <p>
 The Member stats are below! Read em and weep (I know I do)!
 </p> 
-
 ";
 
 ?>
