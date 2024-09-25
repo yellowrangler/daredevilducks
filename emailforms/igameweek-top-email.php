@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Bills crushed the Dolphins. Dolphins quarterback Tagovailoa left the game with a concussion, his third since joining the NFL. 
+In the Thursday night game the Jets punished the Patriots.
 </p> 
 
 <p>
-In Sunday games - The Chargers scorched the winless Panthers. In the first upset of the week, the Saints soundly beat the Cowboys in Dallas. The Buccaneers beat the Lions in Detroit. The Packers beat the Colts. The Browns squeaked past the Jaguars. In a second upset of sorts, the Vikings beat the 49ers. The Seahawks eeked past the Patriots in New England. The Jets beat the titans in Tennessee. In another upset, the Raiders beat the Ravens in Baltimore. The Commanders beat the Giants. The Cardinals crushed the Rams. In a low scoring contest, the Steelers beat the Broncos. In a game with some questionable officiating shenanigans, the Chiefs edged out the Bengals in the last seconds of the game. In the late Sunday game, the Texans beat the Bears.
+In Sunday games - In a bit of an upset, the Giants beat the Browns in Cleveland! The Colts beat the Bears. The Vikings mauled the Texans. The Eagles beat the Saints. The Packers, without their starting quarterback, soundly defeated the Titans in Tennessee. The Steelers kept their winning ways by beating the Chargers. In another upset, the winless Broncos beat the undefeated Buccaneers.  The Panthers with backup quarterback Andy Dalton beat the Raiders. The Seahawks beat the Tua-less Dolphins. The Lions beat the Cardinals in Arizona. The Ravens beat the Cowboys in Dallas. In a thriller the Rams beat the 49ers. In the late Sunday game, the Chiefs squeaked by the Falcons.
 </p> 
 
 <p>
-In the Monday night game, the Falcons beat the Eagles in a thrilling contest, featuring a last second Falcons comeback!
+In the first Monday night game, the Bills crushed the Jaguars! In the second, the Commanders beat the winless Bengals in Cincinnati!
 </p>   
 
 <p>
-A great second week! Dont be disappointed if you did not do well. There is still plenty of time!
+A great third week! Dont be disappointed if you did not do well. There is still plenty of time!
 </p>
 
 
