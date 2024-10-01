@@ -2,19 +2,20 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Jets punished the Patriots.
+In the Thursday night game the Cowboys eeked out the Giants.
 </p> 
 
 <p>
-In Sunday games - In a bit of an upset, the Giants beat the Browns in Cleveland! The Colts beat the Bears. The Vikings mauled the Texans. The Eagles beat the Saints. The Packers, without their starting quarterback, soundly defeated the Titans in Tennessee. The Steelers kept their winning ways by beating the Chargers. In another upset, the winless Broncos beat the undefeated Buccaneers.  The Panthers with backup quarterback Andy Dalton beat the Raiders. The Seahawks beat the Tua-less Dolphins. The Lions beat the Cardinals in Arizona. The Ravens beat the Cowboys in Dallas. In a thriller the Rams beat the 49ers. In the late Sunday game, the Chiefs squeaked by the Falcons.
+In Sunday games - The Falcons beat the Saints in a close game. The Bengals got their first win as they beat the Panthers in Carolina. The Bears beat the Rams. In another close game, the Colts beat the Steelers. In an upset, the Vikings beat the Packers in Green Bay. The Texans beat the Jaguars. The Broncos beat the Jets in New Jersey. The Jets were in a position to win but missed a last second field goal. The Buccaneers beat the struggling Eagles. The Commanders crushed the Cardinals in Phoenix. The 49ers crushed the hapless Patriots. The Raiders beat the Browns. The Chiefs beat the Chargers. In the late Sunday game, the Ravens punished the Bills.
 </p> 
 
 <p>
-In the first Monday night game, the Bills crushed the Jaguars! In the second, the Commanders beat the winless Bengals in Cincinnati!
+In the first Monday night game, the Titans mauled the toothless Dolphins in Miami! In the second, the Lions beat the Seahawks!
 </p>   
 
+
 <p>
-A great third week! Dont be disappointed if you did not do well. There is still plenty of time!
+A great fourth week! Dont be disappointed if you did not do well. There is still plenty of time!
 </p>
 
 
