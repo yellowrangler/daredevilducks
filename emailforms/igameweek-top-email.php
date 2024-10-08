@@ -2,20 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Cowboys eeked out the Giants.
+In the Thursday night game The Falcons beat the Buccaneers in overtime.
 </p> 
 
 <p>
-In Sunday games - The Falcons beat the Saints in a close game. The Bengals got their first win as they beat the Panthers in Carolina. The Bears beat the Rams. In another close game, the Colts beat the Steelers. In an upset, the Vikings beat the Packers in Green Bay. The Texans beat the Jaguars. The Broncos beat the Jets in New Jersey. The Jets were in a position to win but missed a last second field goal. The Buccaneers beat the struggling Eagles. The Commanders crushed the Cardinals in Phoenix. The 49ers crushed the hapless Patriots. The Raiders beat the Browns. The Chiefs beat the Chargers. In the late Sunday game, the Ravens punished the Bills.
+In Sunday games - The Vikings beat the Jets in London. The Bears beat the Panthers. The Ravens beat the Bengals in overtime. This was a stunning loss for the Bengals as they had the game in the bag but missed a game winning field goal! The Texans beat the receding Bills. The Jaguars beat the Colts. The Dolphins beat the pathetic Patriots in New England. The Commanders beat the Browns. The Broncos beat the Raiders. In an upset, the Cardinals beat the 49ers in a thrilling contest in San Fransisco! The Packers beat the Rams in Los Angeles. The Giants beat the Seahawks. In the late game, the Cowboys beat the Steelers.
 </p> 
 
 <p>
-In the first Monday night game, the Titans mauled the toothless Dolphins in Miami! In the second, the Lions beat the Seahawks!
+In the Monday night game, the Chiefs beat the Saints!
 </p>   
 
-
 <p>
-A great fourth week! Dont be disappointed if you did not do well. There is still plenty of time!
+A great Fith week! Dont be disappointed if you did not do well. There is still plenty of time!
 </p>
 
 

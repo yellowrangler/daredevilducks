@@ -5,8 +5,11 @@
 <meta name="description" content="Dare Devil Ducks League Mobile">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 
-<link rel="shortcut icon" href="img/ddd-url-img.ico" /> 
+<link rel="shortcut icon" href="../img/ddd-url-img.ico" /> 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -49,42 +52,42 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- App libs -->
-<script src="app/dddAppMobile.js"></script>
+<script src="app/dddAppMobile.js?dddver=DMV10012024"></script>
 
 <!-- controllers  -->
-<script src="app/controllers/firstController.js"></script>
-<script src="app/controllers/parenthomeController.js"></script>
-<script src="app/controllers/surveyController.js"></script>
-<script src="app/controllers/gamesController.js"></script>
-<script src="app/controllers/playerstatsController.js"></script>
-<script src="app/controllers/teamsController.js"></script>
-<script src="app/controllers/awardsController.js"></script>
-<script src="app/controllers/newsopinionController.js"></script>
-<script src="app/controllers/adminController.js"></script>
-<script src="app/controllers/faqsController.js"></script>
-<script src="app/controllers/surveyController.js"></script>
-<script src="app/controllers/fireworksController.js"></script>
-<script src="app/controllers/spookyController.js"></script>
-<script src="app/controllers/happyholidaysController.js"></script>
-<script src="app/controllers/lastController.js"></script>
+<script src="app/controllers/firstController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/parenthomeController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/surveyController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/gamesController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/playerstatsController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/teamsController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/awardsController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/newsopinionController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/adminController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/faqsController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/surveyController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/fireworksController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/spookyController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/happyholidaysController.js?dddver=DMV10012024"></script>
+<script src="app/controllers/lastController.js?dddver=DMV10012024"></script>
 <!-- factories  -->
-<script src="app/factories/loginfactory.js"></script>
-<script src="app/factories/membersfactory.js"></script>
-<script src="app/factories/scriptsfactory.js"></script>
-<script src="app/factories/surveyfactory.js"></script>
+<script src="app/factories/loginfactory.js?dddver=DMV10012024"></script>
+<script src="app/factories/membersfactory.js?dddver=DMV10012024"></script>
+<script src="app/factories/scriptsfactory.js?dddver=DMV10012024"></script>
+<script src="app/factories/surveyfactory.js?dddver=DMV10012024"></script>
 
-<script src="app/factories/teamsfactory.js"></script>
+<script src="app/factories/teamsfactory.js?dddver=DMV10012024"></script>
 <!-- services  -->
-<script src="app/services/msgservice.js"></script>
-<script src="app/services/loginservice.js"></script>
-<script src="app/services/teamservice.js"></script>
-<script src="app/services/chartservice.js"></script>
-<script src="app/services/selectlistservice.js"></script>
+<script src="app/services/msgservice.js?dddver=DMV10012024"></script>
+<script src="app/services/loginservice.js?dddver=DMV10012024"></script>
+<script src="app/services/teamservice.js?dddver=DMV10012024"></script>
+<script src="app/services/chartservice.js?dddver=DMV10012024"></script>
+<script src="app/services/selectlistservice.js?dddver=DMV10012024"></script>
 
-<script src="app/directives/directives.js"></script>
-<script src="app/validations/validate.js"></script>
+<script src="app/directives/directives.js?dddver=DMV10012024"></script>
+<script src="app/validations/validate.js?dddver=DMV10012024"></script>
 
-<script src="script/dddMobile.js"></script>
+<script src="script/dddMobile.js?dddver=DMV10012024"></script>
 </head>
 
 <body style="background:white;overflow-y: scroll;" data-ng-controller="dddParentController" >
@@ -108,34 +111,109 @@
             <span style="color:teal;" id="menubaravatar" name="menubaravatar"></span>
         </article>
 
-        
-        <!-- <article>
-            <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
-                <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmasstreeStopNew.png'}}" style="width:70px;text-align:center;" alt="Go Snow!"> 
-            </a>
-
-            <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext"></div>
-        </article> -->
-
-        
-        <!-- <article>
-            <a href="#spooky">
-                <img ng-src="../img/pumkin-house.png" style="height:125px;text-align:center;" alt="Happy Halloween!"> 
-            </a>
-        </article> -->
-
-        <!-- <article style="margin-bottom:25px;">
-            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Happy Chistmas to All!','merryChristmas2019.png')">
-                <img ng-src='../img/ChristmasHomeScrn2018.png'  style="height:100px;text-align:center;" alt="Season Starts"> 
-            </a>
-        </article>  -->
-
+        <!-- 
         <article style="margin-bottom:25px;">
-            <a id="showpicture" name="showpicture" href="#fireworks">
-                <img ng-src='../img/FallHomePage2019.png'  style="height:100px;text-align:center;" alt="New Season"> 
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Season Playoff Bracket',current.bracket)">
+                <img id="showpictureimg" style="width:150px;text-align:center;" ng-src="../img/{{current.bracket}}" alt="Playoff Bracket" class="img-rounded">
             </a>
         </article> 
+        -->
+
+        <!-- 
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="#fireworks">
+                <img ng-src='../img/Fall-HomePage-2023.png'  style="height:100px;text-align:center;" alt="Season start!"> 
+          </a> 
+        </article>  
+        -->
+       
+        <!--   
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('New 2023 Fall Season!','Fall-HomePage-2023.png')">
+                <img id="showpictureimg" style="width:150px;text-align:center;" ng-src="../img/Fall-HomePage-2023.png" alt="New 2023 Fall Season!" class="img-rounded">
+            </a>
+        </article> 
+        -->
+
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Columbus Day! Season!','ColumbusDayHomScrn2019.png')">
+                <img id="showpictureimg" style="width:150px;text-align:center;" ng-src="../img/ColumbusDayHomScrn2019.png" alt="olumbus Day!" class="img-rounded">
+            </a>
+        </article> 
+
+        <!-- 
+        <article style="margin-bottom:25px;">
+            <a id="letitsnow" name="letitsnow" href="" ng-click="letItSnow()">
+                <img ng-src="{{isSnowing == 0 && '../img/xmastree.png' || '../img/xmasstreeStopNew.png'}}"  style="height:60px;text-align:center;" alt="Go Snow!"> 
+            </a>
+
+            <div style="display:block;" class="ddd-footer-text-green" id="letitsnowtext">
+            </div>
+        </article>  
+        -->
+       
+       <!--  
+       <article>
+            <div style="padding-bottom:60px">
+                <a href="#spooky">
+                    <img ng-src="../img/pumkin-house.png" style="height:125px;text-align:center;" alt="Happy Halloween!"> 
+                </a>
+            </div>    
+        </article>  
+        -->
+       
+       <!--  
+       <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Winter is now here!','Winter-HomePage-2024.png')">
+                <img ng-src='../img/Winter-HomePage-2024.png'  style="height:100px;text-align:center;" alt="Winter is now here"> 
+            </a>
+        </article>   
+        -->
+         
+       <!-- 
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Let us give Thanks for all that we have!','Thanksgiving-HomeScreen-2023.png')">
+                <img ng-src='../img/Thanksgiving-HomeScreen-2023.png'  style="height:100px;text-align:center;" alt="Thanksgiving Day!"> 
+            </a>
+        </article> 
+          -->
+       
+
+        <!--  
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Winter is here!','Winter-HomePage-2023.png')">
+                <img ng-src='../img/Winter-HomePage-2023.png'  style="height:100px;text-align:center;" alt="Winter Day!"> 
+            </a>
+        </article> 
+        -->
+
+        <!--  
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Merry Christmas to All!','NewYear2021HomeScrn3.png')">
+                <img ng-src='../img/NewYear2021HomeScrn2.png'  style="height:100px;text-align:center;" alt="Happy New Year!"> 
+            </a>
+        </article>  
+        -->
+
+        <article style="margin-bottom:25px;">
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('The First Amendment!','BillofRights2.png')">
+                <img id="showpictureimg" style="width:150px;text-align:center;" ng-src="../img/dont-tread-on-me-A.png" alt="Faith, Family, Farm - Freedom!" class="img-rounded">
+            </a>
+        </article>
+
+        <article style="margin-bottom:25px;">
+            <h4 style="color: teal;
+                text-align:center;">
+                Version: DMV10012024  
+            </h4>
+        </article>  
+
+  <!-- <article >
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+    </article> -->
     </div> <!-- end of container -->
+
 
     <div style="padding-top:15px;padding-bottom:25px;">    
         <a href="#/faqs">
@@ -150,5 +228,25 @@
     </div>
 </div> <!-- end of footer -->
 
+<!-- dialogs -->
+<div class="modal fade" id="homePicShowModal" tabindex="-1" role="dialog" aria-labelledby="homePicShowModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 id="homePicShowModalTitle" class="modal-title" style="font-family:'ChopinScript',serif;font-size:28px;color:#9d504f;text-align:center" id="homePicModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="homePicModalBody">
+            <img ng-src={{showPictureSrc}} style="width:100%;text-align:center;" alt="Thank you Lord for all that we have!">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+    
 </body>
 </html>
