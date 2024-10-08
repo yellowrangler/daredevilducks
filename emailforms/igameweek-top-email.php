@@ -14,7 +14,7 @@ In the Monday night game, the Chiefs beat the Saints!
 </p>   
 
 <p>
-A great Fith week! Dont be disappointed if you did not do well. There is still plenty of time!
+A great Fifth week! Dont be disappointed if you did not do well. There is still plenty of time!
 </p>
 
 
