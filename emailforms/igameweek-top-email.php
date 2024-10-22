@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the 49ers beat the Seahawks in Seattle.
+In the Thursday night game the Broncos smoked the Saints in New Orleans!.
 </p> 
 
 <p>
-In Sunday games - The Bears crushed the Jaguars. The Packers equally crushed the Cardinals! The Buccaneers beat up the Saints in New Orleans. The Texans gave the Patriots another loss. The Colts beat the Titans in Nashville. The Eagles eeked by the Browns. The Ravens beat the Commanders. The Chargers beat their division rival Broncos in Denver. The Steelers beat their division rival Raiders in Las Vegas. The Falcons beat the Panthers. The Lions beat the Cowboys in Dallas! In the late night game, the Bengals beat the Giants in New York!
+In Sunday games - The Jaguars crushed the clown world Patriots in Jolly Ole England. The Seahawks beat the Falcons in Atlanta. The Bills beat the Titans. The Bengals upset the Browns in Cleveland. In that game Cleveland's quarterback Deshaun Watson was injured and is lost for the season. The Colts beat the Dolphins. The Packers beat the Texans in a squeaker. The Lions beat the undefeated Vikings in Minnesota. The Eagles mauled the Giants in NY. The Rams beat the Raiders in another close contest. The Chiefs beat the 49ers in San Fransisco. In the night game, the Steelers beat the Jets.
 </p> 
 
 <p>
-In the Monday night game, The Bills beat the Jets in a close contest in New York!
-</p>     
+In the Monday night games, The Ravens beat the Buccaneers in Tampa. and the Cardinals beat the Chargers with a last second field goal!
+</p>       
 
 <p>
-A great Sixth week! Dont be disappointed if you did not do well. There is still plenty of time!
+A great Seventh week! Don't be disappointed if you did not do well. Bee the ball!
 </p>
 
 

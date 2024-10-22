@@ -940,6 +940,7 @@ border: 0 none;
 .hallFameParagraph {
 	text-align: left;
 	font-size: 18px;
+/*	height: 300px;*/
 }
 
 .hallFameParagraphCaptionHeader {
