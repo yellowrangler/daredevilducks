@@ -218,9 +218,11 @@ border: 0 none;
 }
 
 .mainTitle {
-	color:#6C0000;
-	font-size: 46px;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+/*	color:#6C0000;*/
+	color:#e1adad;
+	font-size: 42px;
+	font-family: 'Lato', sans-serif;
+/*	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;*/
 /*	font-family: 'ChopinScript', sans-serif;*/
 	font-weight: 700;
 	text-align:center;
@@ -322,8 +324,10 @@ border: 0 none;
 }*/
 
 .headerTitle {
-	color:#6C0000;
-	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+/*	color:#6C0000;*/
+	color:#e1adad;
+/*	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;*/
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 }
 
@@ -358,8 +362,10 @@ border: 0 none;
 }
 
 .headerTitle4 {
-	color:#3ca4d7;
-	font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;
+/*	color:#3ca4d7;*/
+	color:#e1adad;
+	font-family: 'Lato', sans-serif;
+/*	font-family: 'aileronsemibold', 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;*/
 	font-weight: 900;
 	font-variant: small-caps;
 	letter-spacing: 3px;
