@@ -14,7 +14,7 @@ In the Monday night game the Steelers beat the Giants.
 </p>      
 
 <p>
-A great Eighth week! Don't be disappointed if you did not do well. Bee the ball!
+A great Eighth week! Don't be disappointed if you did not do well. Be the ball!
 </p>
 
 <p>
