@@ -2,7 +2,7 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Eagles beat their division rivals Commnders!.
+In the Thursday night game the Eagles beat their division rivals Commanders!.
 </p> 
 
 <p>
