@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Ravens beat the Benglas by 1 point!.
+In the Thursday night game the Eagles beat their division rivals Commnders!.
 </p> 
 
 <p>
-In Sunday games - The Panthers beat the Giants. The Patriots beat the Bears in Chicago. The Bills played well enough to beat the Colts. The Vikings held on to beat the Vikings. The Chiefs beat the Broncos with the help of an easy last second chip shot field goal being missed by the Broncos. The Saints beat the Falcons. The 49ers squeaked by the Buccaneers in Tampa. The Steelers just held on to beat the Commanders. The Chargers beat the fading Titans. The Cardinals bet the Jets. The Eagles beat the Dak-less Cowboys. In the late game, the Lions beat the Texans.
+In Sunday games - The Packers beat the Bears in a close contest. The Lions pummeled the Jaguars. The Dolphins beat the fading Raiders. The Saints crushed the Browns. The Rams beat the Patriots in Foxborough. The Vikings beat the Titans. The Steelers beat the Ravens in a close game. The Broncos crushed the Falcons. The Seahawks upset the 49ers in San Fransisco! The Bills beat the previously undefeated Chiefs. The Colts beat the Jets by 1 point. In the late game the Chargers beat the Colts.
 </p> 
 
 <p>
-In the Monday night game the Dolphins beat the Rams!
+In the Monday night game the Texans beat the Cowboys!
 </p>   
 
 <p>
-A great Tenth week! Don't be disappointed if you did not do well. Be the ball!
+A great Eleventh week! Don't be disappointed if you did not do well. As Hercule Poirot would say, use your little grey cells!
 </p>
 
 <p>
