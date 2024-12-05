@@ -2,19 +2,23 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Browns beat the Steelers!.
+In the Thursday night games the Lions beat the Bears in a game that ultimately cost the Bears coach his job! The Cowboys beat the Giants and the Packers beat the Dolphins!
 </p> 
 
 <p>
-In Sunday games - The Chiefs eked out a win against the lowly Panthers. The Vikings, likewise, held on to beat the Bears in Chicago. The Lions beat the Colts. The Titans, in a bit of an upset, beat the Texans in Houston. The Dolphins beat the Patriots. The Buccaneers beat the Giants in Ny. The Cowboys beat the Commanders in a close contest. The Broncos beat the Raiders. The Packers beat the Purdy-less 49ers. The Seahawks beat the Cardinals. In the late game, the Eagles crushed the Rams. 
+In the Friday game - The Chiefs squeaked by the Raiders.  
 </p> 
 
 <p>
-In the Monday night game the Ravens beat the Chargers!
-</p>     
+In Sunday games - The Chargers beat the Falcons in Atlanta. The Steelers beat the Bengals in Cincinnati! The Vikings beat the Cardinals by 1 point! The Colts beat the Patriots by the same margin in New England. The Seahawks beat the Jets in New York. The Commanders crushed the Titans. The Buccaneers played well enough to outlast the Panthers. The Rams beat the Saints and the Eagles beat the Ravens in Baltimore! In the late game, the Bills walloped the 49ers in a classic old style snow bowl!
+</p> 
 
 <p>
-A great Twelfth week! Don't be disappointed if you did not do well. As Hercule Poirot would say, use your little grey cells!
+In the Monday night game the Broncos beat the Browns in a high scoring back and forth!
+</p>   
+
+<p>
+A great Thirteenth week! Don't be disappointed if you did not do well. As Hercule Poirot would say, use your little grey cells!
 </p>
 
 <p>
