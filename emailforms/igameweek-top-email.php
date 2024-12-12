@@ -2,23 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night games the Lions beat the Bears in a game that ultimately cost the Bears coach his job! The Cowboys beat the Giants and the Packers beat the Dolphins!
+In the Thursday night games the Lions with a diminished roster via injuries beat a very good Packers team.
 </p> 
 
 <p>
-In the Friday game - The Chiefs squeaked by the Raiders.  
+In Sunday games - The Dolphins beat the Jets. The Vikings beat the Falcons. The Saints beat the Giants and the Jaguars beat the Titans. The Eagles beat the Panthers. The Steelers beat the Browns. The Buccaneers beat the Raiders. The Seahawks beat the Cardinals and the Rams beat the Bills. In the night game the Chiefs squeaked by the Chargers.
 </p> 
 
 <p>
-In Sunday games - The Chargers beat the Falcons in Atlanta. The Steelers beat the Bengals in Cincinnati! The Vikings beat the Cardinals by 1 point! The Colts beat the Patriots by the same margin in New England. The Seahawks beat the Jets in New York. The Commanders crushed the Titans. The Buccaneers played well enough to outlast the Panthers. The Rams beat the Saints and the Eagles beat the Ravens in Baltimore! In the late game, the Bills walloped the 49ers in a classic old style snow bowl!
-</p> 
-
-<p>
-In the Monday night game the Broncos beat the Browns in a high scoring back and forth!
+In the Monday night game - The Bengals beat the Cowboys in which a blocked Bengal punt was inadvertently touched by a Cowboy, forward of the line of scrimmage resulting in a Bengal recovery and eventual touchdown for the win.
 </p>   
 
 <p>
-A great Thirteenth week! Don't be disappointed if you did not do well. As Hercule Poirot would say, use your little grey cells!
+A great Fourteenth week! The season is beginning to come to an end! So pick carefully!  
 </p>
 
 <p>
