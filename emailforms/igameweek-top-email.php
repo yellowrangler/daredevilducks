@@ -2,19 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night games the Lions with a diminished roster via injuries beat a very good Packers team.
+In the Thursday night game the Rams beat a the 49ers.
 </p> 
 
 <p>
-In Sunday games - The Dolphins beat the Jets. The Vikings beat the Falcons. The Saints beat the Giants and the Jaguars beat the Titans. The Eagles beat the Panthers. The Steelers beat the Browns. The Buccaneers beat the Raiders. The Seahawks beat the Cardinals and the Rams beat the Bills. In the night game the Chiefs squeaked by the Chargers.
+In Sunday games - The Cowboys stayed on the playoff bubble, with a win over the Panthers. The Chiefs beat the Browns - Duh. The Texans beat the Dolphins and clinched  playoff spot! The Jets beat the Jaguars. The Commander beat the Saints, keeping the Commanders in the playoff hunt! The Ravens crushed the Giants. The Bengals beat the Titans and the Cardinals beat the hapless Patriots! The Broncos whipped the Colts. In a thriller, the Bills beat the Lions in Detroit! The Eagles beat the Steelers, But worry not Steelers fans as the Steelers clinched a playoff spot in spite of the loss! The Buccaneers keelhauled the Chargers. In the late game, the Packers beat the Seahawks! 
 </p> 
 
 <p>
-In the Monday night game - The Bengals beat the Cowboys in which a blocked Bengal punt was inadvertently touched by a Cowboy, forward of the line of scrimmage resulting in a Bengal recovery and eventual touchdown for the win.
-</p>   
+In the Monday night games - The Vikings beat the Bears clinching a playoff spot for the Vikings! The Falcons stayed relevant beating the Raiders.
+</p>    
 
 <p>
-A great Fourteenth week! The season is beginning to come to an end! So pick carefully!  
+A great Fifteenth week! The season is beginning to come to an end! So pick carefully!  
 </p>
 
 <p>
