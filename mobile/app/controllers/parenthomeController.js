@@ -313,7 +313,8 @@ controllers.loginController = function ($scope, $http, $location, loginService, 
         
 }
 
-controllers.homeController = function ($scope, $http, $location, $window, $route, loginService) {
+controllers.homeController = function ($scope, $http, $location, $window, $route, loginService, teamsFactory) {
+
 
     init();
     function init() {

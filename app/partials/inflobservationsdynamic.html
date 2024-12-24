@@ -1,0 +1,164 @@
+<p style="padding-top: 15px;">
+  <span class="nflObservationsHeaders">NFL Observations</span>
+</p>
+
+<p>
+Week 16 and, with apologies to Glen Frey, the heat is on! It's time for the cream to rise to the top! I love this time of the year! Lets take a look at where the teams are
+</p> 
+
+<p style="padding-top: 15px;">
+  <p class="nflObservationsSubHeaders"><span class="nflObservationsSubHeadersText">Clinched a playoff spot</span></p>
+</p>
+
+<table class="nflObservationsTableText" style="width:100%;">
+	<tr class="" style="">
+		<th colspan=3 class="center-column-text" style="width:50%;">
+		  AFC
+		</th>
+		<th colspan=3 class="center-column-text" style="">
+		  NFC
+		</th>
+	</tr>
+
+	<tbody ng-repeat="clinchedteam in current.clinchedteams">
+	  	<tr >
+		  	<td class="center-column-text" style="">
+		       <span style="padding-left:5;"> {{clinchedteam.afcposition}} </span>
+		    </td>
+		    <td class="center-column-text" style="">
+		      <img ng-if="clinchedteam.afcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{clinchedteam.afcteamicon}}" height="35" >
+		    </td>
+		    <td class="left-column-text" style="">
+		      <span style="padding-left:5;"> {{clinchedteam.afcteamname}} </span>
+		    </td>
+
+		    <td class="center-column-text" style="">
+		       <span style="padding-left:5;"> {{clinchedteam.nfcposition}} </span>
+		    </td>
+		    <td class="center-column-text" style="">
+		      <img ng-if="clinchedteam.nfcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{clinchedteam.nfcteamicon}}" height="35" >
+		    </td>
+		    <td class="left-column-text" style="">
+		      <span style="padding-left:5;"> {{clinchedteam.nfcteamname}} </span>
+		    </td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="padding-top: 25px;">
+  <p class="nflObservationsSubHeaders"><span class="nflObservationsSubHeadersText">In the Hunt</span></p>
+</p>
+
+<table class="nflObservationsTableText" style="width:100%;">
+  <tr class="" style="">
+    <th colspan=3 class="center-column-text" style="width:50%;">
+      AFC
+    </th>
+    <th colspan=3 class="center-column-text" style="">
+      NFC
+    </th>
+  </tr>
+
+  <tbody ng-repeat="huntteam in current.huntteams">
+  	<tr >
+	  	<td class="center-column-text" style="">
+	       <span style="padding-left:5;"> {{huntteam.afcposition}} </span>
+	    </td>
+	    <td class="center-column-text" style="">
+	      <img ng-if="huntteam.afcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{huntteam.afcteamicon}}" height="35" >
+	    </td>
+	    <td class="left-column-text" style="">
+	      <span style="padding-left:5;"> {{huntteam.afcteamname}} </span>
+	    </td>
+
+	    <td class="center-column-text" style="">
+	       <span style="padding-left:5;"> {{huntteam.nfcposition}} </span>
+	    </td>
+	    <td class="center-column-text" style="">
+	      <img ng-if="huntteam.nfcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{huntteam.nfcteamicon}}" height="35" >
+	    </td>
+	    <td class="left-column-text" style="">
+	      <span style="padding-left:5;"> {{huntteam.nfcteamname}} </span>
+	    </td>
+		</tr>
+	</tbody>
+</table>
+   
+<p style="padding-top: 25px;">
+  <p class="nflObservationsSubHeaders"><span class="nflObservationsSubHeadersText">On the Bubble</span></p>
+</p>
+
+<table class="nflObservationsTableText" style="width:100%;">
+  <tr class="" style="">
+    <th colspan=3 class="center-column-text" style="width:50%;">
+      AFC
+    </th>
+    <th colspan=3 class="center-column-text" style="">
+      NFC
+    </th>
+  </tr>
+
+  <tbody ng-repeat="bubbleteam in current.bubbleteams">
+  	<tr >
+	  	<td class="center-column-text" style="">
+	       <span style="padding-left:5;"> {{bubbleteam.afcposition}} </span>
+	    </td>
+	    <td class="center-column-text" style="">
+	      <img ng-if="bubbleteam.afcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{bubbleteam.afcteamicon}}" height="35" >
+	    </td>
+	    <td class="left-column-text" style="">
+	      <span style="padding-left:5;"> {{bubbleteam.afcteamname}} </span>
+	    </td>
+
+	    <td class="center-column-text" style="">
+	       <span style="padding-left:5;"> {{bubbleteam.nfcposition}} </span>
+	    </td>
+	    <td class="center-column-text" style="">
+	      <img ng-if="bubbleteam.nfcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{bubbleteam.nfcteamicon}}" height="35" >
+	    </td>
+	    <td class="left-column-text" style="">
+	      <span style="padding-left:5;"> {{bubbleteam.nfcteamname}} </span>
+	    </td>
+		</tr>
+	</tbody>
+</table>
+
+
+<p style="padding-top: 25px;">
+  <p class="nflObservationsSubHeaders"><span class="nflObservationsSubHeadersText">Eliminated</span></p>
+</p>
+
+<table class="nflObservationsTableText" style="width:100%;">
+  <tr class="" style="">
+    <th colspan=3 class="center-column-text" style="width:50%;">
+      AFC
+    </th>
+    <th colspan=3 class="center-column-text" style="">
+      NFC
+    </th>
+  </tr>
+
+  <tbody ng-repeat="eliminatedteam in current.eliminatedteams">
+  	<tr >
+	  	<td class="center-column-text" style="">
+	       <span style="padding-left:5;"> {{eliminatedteam.afcposition}} </span>
+	    </td>
+	    <td class="center-column-text" style="">
+	      <img ng-if="eliminatedteam.afcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{eliminatedteam.afcteamicon}}" height="35" >
+	    </td>
+	    <td class="left-column-text" style="">
+	      <span style="padding-left:5;"> {{eliminatedteam.afcteamname}} </span>
+	    </td>
+
+	    <td class="center-column-text" style="">
+	       <span style="padding-left:5;"> {{eliminatedteam.nfcposition}} </span>
+	    </td>
+	    <td class="center-column-text" style="">
+	      <img ng-if="eliminatedteam.nfcteamicon != ''" ng-src="{{$parent.imagePath}}/nflicons/{{eliminatedteam.nfcteamicon}}" height="35" >
+	    </td>
+	    <td class="left-column-text" style="">
+	      <span style="padding-left:5;"> {{eliminatedteam.nfcteamname}} </span>
+	    </td>
+		</tr>
+	</tbody>
+</table>

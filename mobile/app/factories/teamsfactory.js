@@ -368,6 +368,16 @@ dddAppMobile.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.getplayoffstatus = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getplayoffstatus.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
+
     factory.getTeamSeasonInfo = function (data) {
         return $http({ 
             method: 'POST', 

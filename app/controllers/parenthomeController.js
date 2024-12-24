@@ -236,7 +236,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
             })
             .error( function(edata) {
                 alert(edata);
-            }); 
+            });     
 
         teamsFactory.getNFLrss()
             .success( function(data) {
@@ -259,8 +259,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                         $scope.weeks = data; 
 
                         var q = "season="+$scope.current.season; 
-                        // var q = "&season="+$scope.current.season; 
-
+                        // var q = "&season="+$scope.current.season;
 
                         // get team bracket image for showpic. Remove this if decide to not show.                           
                         teamsFactory.getTeamBracket(q)
@@ -470,7 +469,66 @@ controllers.loginController = function ($scope, $http, $location, $window, login
         
 }
 
-controllers.homeController = function ($scope, $http, $location, $window, $route, loginService, membersFactory) {
+controllers.homeController = function ($scope, $http, $location, $window, $route, loginService, membersFactory, teamsFactory) {
+
+    buildplayoffstatus = function (){
+      var rv = "";
+
+      var season = $scope.current.season;
+
+      // 
+      // build clinched teams
+      // 
+      var q = "season="+season+"&playoffstatus=Clinched";
+      teamsFactory.getplayoffstatus(q)
+      .success( function(data) {
+        if (data != null)
+          $scope.current.clinchedteams = data; 
+      })
+      .error( function(edata) {
+          rv = "Err"; 
+      }); 
+
+      // 
+      // build hunt teams
+      // 
+      var q = "season="+season+"&playoffstatus=Hunt";
+      teamsFactory.getplayoffstatus(q)
+      .success( function(data) {
+        if (data != null)
+          $scope.current.huntteams = data; 
+      })
+      .error( function(edata) {
+          rv = "Err"; 
+      }); 
+
+      // 
+      // build bubble teams
+      // 
+      var q = "season="+season+"&playoffstatus=Bubble";
+      teamsFactory.getplayoffstatus(q)
+      .success( function(data) {
+        if (data != null)
+          $scope.current.bubbleteams = data; 
+      })
+      .error( function(edata) {
+          rv = "Err"; 
+      }); 
+
+      // 
+      // build eliminated teams
+      // 
+      var q = "season="+season+"&playoffstatus=Eliminated";
+      teamsFactory.getplayoffstatus(q)
+      .success( function(data) {
+        if (data != null)
+          $scope.current.eliminatedteams = data; 
+      })
+      .error( function(edata) {
+          rv = "Err"; 
+      }); 
+
+    } 
 
     init();
     function init() {
@@ -481,6 +539,23 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
         $window.scrollTo(0, 0);
 
         setviewpadding();
+
+        $scope.current.clinchedteams = {};
+        $scope.current.huntteams = {};
+        $scope.current.bubbleteams = {};
+        $scope.current.eliminatedteams = {};
+
+        teamsFactory.getCurrentSeasonWeek()
+            .success( function(data) {
+                $scope.current.season = data.season; 
+                $scope.current.week = data.week;
+
+                buildplayoffstatus();
+            })
+            .error( function(edata) {
+                alert(edata);
+            }); 
+        
 
         var loggedIn = loginService.isLoggedIn();
         if (loggedIn) 
