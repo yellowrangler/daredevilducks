@@ -1,5 +1,6 @@
 ﻿Player,Team,Pos,Injury,Status,Est. Return
 Micah Abernathy,ATL,S,Knee,IR,Subscribers Only
+Tony Adams,NYJ,S,Ankle,Questionable,Subscribers Only
 Paulson Adebo,NO,CB,Upper Leg,IR,Subscribers Only
 Hakeem Adeniji,CLE,OT,Knee,IR,Subscribers Only
 Nelson Agholor,BAL,WR,Concussion,Questionable,Subscribers Only
@@ -11,17 +12,18 @@ Christian Albright,FA,LB,Undisclosed,Questionable,Subscribers Only
 Jaire Alexander,GB,CB,Knee,Questionable,Subscribers Only
 Mackensie Alexander,FA,CB,Undisclosed,Questionable,Subscribers Only
 Erick All,CIN,TE,Knee - ACL,IR,Subscribers Only
-Braelon Allen,NYJ,RB,Back,Questionable,Subscribers Only
 Christopher Allen,FA,LB,Groin,Questionable,Subscribers Only
 Devon Allen,FA,WR,Undisclosed,Questionable,Subscribers Only
 Jaylon Allen,FA,LB,Undisclosed,Questionable,Subscribers Only
-Jonathan Allen,WAS,DT,Pectoral,IR,Subscribers Only
-Kazmeir Allen,WAS,RB,Ankle,IR,Subscribers Only
+Jonathan Allen,WAS,DT,Pectoral,IR-R,Subscribers Only
+Josh Allen,BUF,QB,Elbow,Questionable,Subscribers Only
+Kazmeir Allen,FA,RB,Ankle,Out,Subscribers Only
 Torrence Allen,FA,WR,Undisclosed,Questionable,Subscribers Only
 Jaquan Amos,FA,S,Undisclosed,Questionable,Subscribers Only
 Troy Andersen,ATL,LB,Knee,IR,Subscribers Only
 Calvin Anderson,PIT,OT,Groin,IR,Subscribers Only
 Darius Anderson,FA,RB,Knee,Questionable,Subscribers Only
+Will Anderson,HOU,DE,Hand,Questionable,Subscribers Only
 David Andrews,NE,C,Shoulder,IR,Subscribers Only
 Jake Andrews,NE,C,Knee,IR,Subscribers Only
 Zack Annexstad,FA,QB,Undisclosed,Questionable,Subscribers Only
@@ -30,36 +32,37 @@ Alex Anzalone,DET,LB,Forearm,IR,Subscribers Only
 Troy Apke,FA,CB,Shoulder,Questionable,Subscribers Only
 Eli Apple,LAC,CB,Hamstring,IR,Subscribers Only
 Jalyn Armour-Davis,BAL,CB,Hamstring,Questionable,Subscribers Only
-Terron Armstead,MIA,OT,Knee,Questionable,Subscribers Only
 Grayland Arnold,FA,S,Calf,Questionable,Subscribers Only
 Jaytlin Askew,FA,CB,Quadriceps,Questionable,Subscribers Only
 Popo Aumavae,CAR,DT,Undisclosed,IR,Subscribers Only
 Malaesala Aumavae-Laulu,FA,OG,Back,Questionable,Subscribers Only
+Denico Autry,HOU,DT,Knee,Questionable,Subscribers Only
 Anthony Averett,FA,CB,Undisclosed,Questionable,Subscribers Only
 C. J. Avery,FA,LB,Undisclosed,Questionable,Subscribers Only
 Joe Bachie,CIN,LB,Groin,IR,Subscribers Only
-David Bada,DET,DT,Achilles,IR,Subscribers Only
+David Bada,FA,DT,Achilles,Questionable,Subscribers Only
 Michael Badgley,DET,K,Hamstring,IR,Subscribers Only
 Tyler Badie,DEN,RB,Back,IR,Subscribers Only
 Markus Bailey,FA,LB,Suspension,Out,Subscribers Only
 Quinn Bailey,DEN,OT,Ankle,IR,Subscribers Only
-Javon Baker,NE,WR,Concussion,Questionable,Subscribers Only
 David Bakhtiari,FA,OT,Knee,Questionable,Subscribers Only
-Deonte Banks,NYG,CB,Ribs,Questionable,Subscribers Only
+Aaron Banks,SF,OG,Knee - MCL,Out,Subscribers Only
 Eric Banks,FA,DE,Undisclosed,Questionable,Subscribers Only
 Luq Barcoo,FA,CB,Undisclosed,Questionable,Subscribers Only
+Christian Barmore,NE,DT,Illness,NFI-R,Subscribers Only
 Derrick Barnes,DET,LB,Knee - MCL,IR,Subscribers Only
 Kalon Barnes,FA,CB,Undisclosed,Questionable,Subscribers Only
 Zaire Barnes,NYJ,LB,Ankle,IR,Subscribers Only
 Shaquil Barrett,MIA,LB,Personal,Reserve-Ret,Subscribers Only
 Ben Bartch,SF,OG,Ankle,IR,Subscribers Only
 T.J. Bass,DAL,OG,Thigh,Questionable,Subscribers Only
-Ryan Bates,CHI,OG,Concussion,Questionable,Subscribers Only
+Ryan Bates,CHI,OG,Concussion,IR,Subscribers Only
 Bo Bauer,FA,LB,Leg,Questionable,Subscribers Only
 Evan Baylis,FA,TE,Ankle,Questionable,Subscribers Only
+Robert Beal,SF,DE,Ankle,Questionable,Subscribers Only
 Willie Beavers,FA,OG,Undisclosed,Questionable,Subscribers Only
+Jack Bech,FA,WR,Knee,Questionable,Subscribers Only
 Nate Becker,FA,TE,Undisclosed,Questionable,Subscribers Only
-Cooper Beebe,DAL,C,Concussion,Questionable,Subscribers Only
 David Bell,CLE,WR,Hip,IR,Subscribers Only
 Markquese Bell,DAL,S,Shoulder,IR,Subscribers Only
 B.J. Bello,FA,LB,Ankle,Questionable,Subscribers Only
@@ -68,12 +71,10 @@ Trey Benson,ARI,RB,Ankle,Questionable,Subscribers Only
 Ja'Whaun Bentley,NE,LB,Pectoral,IR,Subscribers Only
 Braxton Berrios,MIA,WR,Knee - ACL,IR,Subscribers Only
 Tatum Bethune,SF,LB,Knee - MCL,IR,Subscribers Only
-Tyler Biadasz,WAS,C,Illness,Questionable,Subscribers Only
 Andrew Billings,CHI,DT,Pectoral,IR,Subscribers Only
-Cole Bishop,BUF,S,Lower Leg,Questionable,Subscribers Only
 Mekhi Blackmon,MIN,CB,Knee - ACL,IR,Subscribers Only
-Raheem Blackshear,CAR,RB,Chest,Questionable,Subscribers Only
 Angelo Blackson,FA,DE,Undisclosed,Out,Subscribers Only
+Joey Blount,ARI,S,Ribs,Questionable,Subscribers Only
 C.J. Board,FA,WR,Ribs,Questionable,Subscribers Only
 Devante Bond,FA,LB,Knee,Questionable,Subscribers Only
 Jon Bostic,FA,LB,Pectoral,Questionable,Subscribers Only
@@ -83,39 +84,39 @@ Tyus Bowser,MIA,LB,Knee,IR,Subscribers Only
 James Bradberry,PHI,S,Lower Leg,IR,Subscribers Only
 Anthony Bradford,SEA,OG,Ankle,IR,Subscribers Only
 Brady Breeze,FA,S,Undisclosed,Questionable,Subscribers Only
-JuJu Brents,IND,CB,Knee - MCL,IR,Subscribers Only
+JuJu Brents,IND,CB,Knee - MCL,IR-R,Subscribers Only
 Beau Brinkley,FA,C,Undisclosed,Questionable,Subscribers Only
 Jaquan Brisker,CHI,S,Concussion,IR,Subscribers Only
 K.J. Britt,TB,LB,Ankle,Questionable,Subscribers Only
 British Brooks,HOU,RB,Knee - Meniscus,IR,Subscribers Only
+Jalen Brooks,DAL,WR,Knee,Questionable,Subscribers Only
 Jonathon Brooks,CAR,RB,Knee - ACL,IR,Subscribers Only
-Anthony Brown,FA,CB,Thumb,Out,Subscribers Only
+Jordyn Brooks,MIA,LB,Quadriceps,Questionable,Subscribers Only
+Anthony Brown,FA,CB,Thumb,Questionable,Subscribers Only
 Cam Brown,MIA,LB,Undisclosed,IR,Subscribers Only
 Daniel Brown,FA,TE,Hip,Questionable,Subscribers Only
 Derrick Brown,CAR,DE,Knee - Meniscus,IR,Subscribers Only
 Duane Brown,FA,OT,Back,Questionable,Subscribers Only
-Hollywood Brown,KC,WR,Shoulder,IR-R,Subscribers Only
+Dyami Brown,WAS,WR,Hamstring,Questionable,Subscribers Only
 Jayon Brown,FA,LB,Hand,Questionable,Subscribers Only
-Ji'Ayir Brown,SF,S,Groin,Questionable,Subscribers Only
+Ji'Ayir Brown,SF,S,Ankle,Questionable,Subscribers Only
 Mike Brown,FA,OG,Undisclosed,Questionable,Subscribers Only
 Noah Brown,WAS,WR,Torso,IR,Subscribers Only
 Orlando Brown,CIN,OT,Leg,Questionable,Subscribers Only
 Shakur Brown,FA,CB,Undisclosed,Questionable,Subscribers Only
-Spencer Brown,BUF,OT,Head,Questionable,Subscribers Only
-Sydney Brown,PHI,S,Concussion,Questionable,Subscribers Only
 Tony Brown,CLE,CB,Foot,IR,Subscribers Only
-Tre Brown,SEA,CB,Hamstring,Questionable,Subscribers Only
 Trent Brown,CIN,OT,Knee,IR,Subscribers Only
 Troy Brown,FA,LB,Undisclosed,Questionable,Subscribers Only
+Baron Browning,ARI,LB,Neck,Questionable,Subscribers Only
 Logan Bruss,TEN,OG,Knee - ACL,IR,Subscribers Only
 Austin Bryant,FA,DE,Undisclosed,Questionable,Subscribers Only
 Hunter Bryant,FA,TE,Undisclosed,Questionable,Subscribers Only
 Shane Buechele,BUF,QB,Neck,IR,Subscribers Only
 Javon Bullard,GB,S,Ankle,Questionable,Subscribers Only
 Ian Bunting,FA,TE,Neck,Questionable,Subscribers Only
+Spencer Burford,SF,OG,Calf,Questionable,Subscribers Only
 Terrell Burgess,FA,S,Hamstring,Questionable,Subscribers Only
 Treylon Burks,TEN,WR,Knee - ACL,IR,Subscribers Only
-Artie Burns,FA,CB,Toe,Questionable,Subscribers Only
 Robert Burns,ATL,FB,Undisclosed,PUP-R,Subscribers Only
 Josh Butler,DAL,CB,Knee - ACL,IR,Subscribers Only
 Vernon Butler,FA,DT,Undisclosed,Questionable,Subscribers Only
@@ -123,43 +124,42 @@ Akial Byers,FA,DT,Undisclosed,Questionable,Subscribers Only
 Henry Byrd,FA,OG,Undisclosed,Out,Subscribers Only
 Don Callis,FA,CB,Hamstring,Questionable,Subscribers Only
 Chance Campbell,TEN,LB,Knee - ACL,IR,Subscribers Only
-De'Vondre Campbell,SF,LB,Suspension,Out,Subscribers Only
+De'Vondre Campbell,SF,LB,Suspension,Reserve-Sus,Subscribers Only
 Ibraheim Campbell,FA,S,Ankle,Questionable,Subscribers Only
 Marcus Cannon,FA,OT,Concussion,Questionable,Subscribers Only
 Dylan Cantrell,FA,TE,Undisclosed,Questionable,Subscribers Only
-Alex Cappa,CIN,OG,Concussion,Questionable,Subscribers Only
-Jaylon Carlies,IND,LB,Lower Leg,IR-R,Subscribers Only
 Stephen Carlson,CHI,TE,Collarbone,IR,Subscribers Only
 Tariq Carpenter,FA,LB,Suspension,Reserve-Sus,Subscribers Only
-Derek Carr,NO,QB,Hand,Doubtful,Subscribers Only
+Derek Carr,NO,QB,Hand,Questionable,Subscribers Only
 Patrick Carr,FA,RB,Undisclosed,Questionable,Subscribers Only
 Caelen Carson,DAL,CB,Shoulder,IR,Subscribers Only
 DeAndre Carter,CHI,WR,Hamstring,IR,Subscribers Only
 Devin Carter,FA,WR,Undisclosed,Questionable,Subscribers Only
 Jamal Carter,FA,S,Undisclosed,Questionable,Subscribers Only
 Michael Carter,NYJ,CB,Back,Questionable,Subscribers Only
+Zach Charbonnet,SEA,RB,Elbow,Questionable,Subscribers Only
 Irvin Charles,NYJ,WR,Knee - ACL,IR,Subscribers Only
 Saahdiq Charles,TEN,OG,Personal,Reserve-Ret,Subscribers Only
 Taco Charlton,FA,DE,Undisclosed,Questionable,Subscribers Only
 Claudin Cherelus,CAR,LB,Toe,IR,Subscribers Only
-Jeremy Chinn,WAS,S,Head,Questionable,Subscribers Only
 DeMarcus Christmas,FA,DT,Undisclosed,Questionable,Subscribers Only
 Bradley Chubb,MIA,LB,Knee - ACL,PUP-R,Subscribers Only
-Nick Chubb,CLE,RB,Foot,Out,Subscribers Only
+Nick Chubb,CLE,RB,Foot,IR,Subscribers Only
 Jimmy Ciarlo,NYJ,LB,Knee - ACL,IR,Subscribers Only
 Darius Clark,FA,RB,Knee,Questionable,Subscribers Only
 Le'Raven Clark,PHI,OT,Undisclosed,IR,Subscribers Only
 Chase Claypool,FA,WR,Toe,Questionable,Subscribers Only
 Travis Clayton,BUF,OT,Shoulder,IR,Subscribers Only
+Jack Cochrane,KC,LB,Ankle,IR,Subscribers Only
 Tarik Cohen,FA,RB,Undisclosed,Reserve-Ret,Subscribers Only
 Douglas Coleman,CHI,S,Upper Body,IR,Subscribers Only
 Ryan Coll,IND,C,Undisclosed,IR,Subscribers Only
 Chris Collins,LAC,LB,Undisclosed,IR,Subscribers Only
 John Cominsky,DET,DE,Knee - MCL,IR,Subscribers Only
 Tom Compton,FA,OT,Back,Questionable,Subscribers Only
-Tyler Conklin,NYJ,TE,Personal,Questionable,Subscribers Only
 Ryan Connelly,FA,LB,Undisclosed,Questionable,Subscribers Only
-Chamarri Conner,KC,S,Concussion,Questionable,Subscribers Only
+Chamarri Conner,KC,S,Concussion,Out,Subscribers Only
+James Conner,ARI,RB,Knee,Questionable,Subscribers Only
 Tanner Conner,MIA,TE,Knee,IR,Subscribers Only
 Cody Conway,FA,OT,Knee - ACL,Questionable,Subscribers Only
 Austin Corbett,CAR,C,Biceps,IR,Subscribers Only
@@ -172,9 +172,10 @@ Britain Covey,PHI,WR,Neck,Questionable,Subscribers Only
 Fletcher Cox,FA,DT,Undisclosed,Reserve-Ret,Subscribers Only
 Kekoa Crawford,FA,WR,Undisclosed,Questionable,Subscribers Only
 Corey Crooms,FA,WR,Undisclosed,Questionable,Subscribers Only
-Maxx Crosby,LV,DE,Ankle,Out,Subscribers Only
+Maxx Crosby,LV,DE,Ankle,IR,Subscribers Only
 Tyrell Crosby,FA,OT,Back,Questionable,Subscribers Only
 Isaiah Crowell,FA,RB,Achilles,Questionable,Subscribers Only
+Baylor Cupp,FA,TE,Undisclosed,Out,Subscribers Only
 Lloyd Cushenberry,TEN,C,Achilles,IR,Subscribers Only
 Tae Daley,FA,S,Undisclosed,Questionable,Subscribers Only
 James Daniels,PIT,OG,Achilles,IR,Subscribers Only
@@ -187,9 +188,7 @@ Carlton Davis,DET,CB,Jaw,IR,Subscribers Only
 Daewood Davis,FA,WR,Thigh,Questionable,Subscribers Only
 Gabe Davis,JAX,WR,Knee - Meniscus,IR,Subscribers Only
 Jarrad Davis,FA,LB,Knee,Questionable,Subscribers Only
-Khalil Davis,SF,DT,Knee,Questionable,Subscribers Only
 L.J. Davis,FA,CB,Undisclosed,Questionable,Subscribers Only
-Nate Davis,FA,OG,Back,Questionable,Subscribers Only
 Quartney Davis,FA,WR,Shoulder,Questionable,Subscribers Only
 Shawn Davis,FA,S,Abdomen,Questionable,Subscribers Only
 Tae Davis,FA,LB,Foot,Questionable,Subscribers Only
@@ -197,20 +196,19 @@ Tyler Davis,GB,TE,Shoulder,IR,Subscribers Only
 Duke Dawson,FA,CB,Undisclosed,Questionable,Subscribers Only
 Dylan Deatherage,FA,OT,Undisclosed,Questionable,Subscribers Only
 Dawson Deaton,FA,OG,Knee - ACL,Questionable,Subscribers Only
+Tank Dell,HOU,WR,Knee - ACL,IR,Subscribers Only
 Emari Demercado,ARI,RB,Back,IR,Subscribers Only
 Trevor Denbow,IND,S,Knee,IR,Subscribers Only
 SirVocea Dennis,TB,LB,Shoulder,IR,Subscribers Only
-Tommy DeVito,NYG,QB,Concussion,Questionable,Subscribers Only
 Gervon Dexter,CHI,DT,Knee,Questionable,Subscribers Only
-Landon Dickerson,PHI,OG,Knee,Questionable,Subscribers Only
 Quandre Diggs,TEN,S,Foot,IR,Subscribers Only
 Stefon Diggs,HOU,WR,Knee - ACL,IR,Subscribers Only
-Trevon Diggs,DAL,CB,Knee,Out,Subscribers Only
+Trevon Diggs,DAL,CB,Knee,IR,Subscribers Only
 AJ Dillon,GB,RB,Neck,IR,Subscribers Only
 Brandon Dillon,FA,TE,Undisclosed,Questionable,Subscribers Only
 Will Dissly,LAC,TE,Shoulder,Questionable,Subscribers Only
 De'Shaan Dixon,JAX,DE,Knee - ACL,IR,Subscribers Only
-J.K. Dobbins,LAC,RB,Knee - MCL,IR,Subscribers Only
+J.K. Dobbins,LAC,RB,Knee - MCL,IR-R,Subscribers Only
 JoJo Domann,FA,LB,Undisclosed,Questionable,Subscribers Only
 Aaron Donald,FA,DT,Undisclosed,Reserve-Ret,Subscribers Only
 Khalil Dorsey,DET,CB,Ankle,IR,Subscribers Only
@@ -221,40 +219,34 @@ Tommy Doyle,BUF,OT,Knee,PUP-R,Subscribers Only
 Dakota Dozier,FA,OG,Knee - ACL,Questionable,Subscribers Only
 Josh Drayden,FA,CB,Undisclosed,Questionable,Subscribers Only
 Grant DuBose,MIA,WR,Head,IR,Subscribers Only
-Ashton Dulin,IND,WR,Ankle,Questionable,Subscribers Only
-Jaelyn Duncan,TEN,OT,Hamstring,IR-R,Subscribers Only
-Cobie Durant,LAR,CB,Chest,Questionable,Subscribers Only
+Jaelyn Duncan,TEN,OT,Hamstring,Questionable,Subscribers Only
 Yasir Durant,FA,OG,Undisclosed,Questionable,Subscribers Only
 David Durden,FA,WR,Undisclosed,Questionable,Subscribers Only
 Silas Dzansi,TB,OT,Knee,IR,Subscribers Only
 Nate Ebner,FA,S,Ankle,Questionable,Subscribers Only
 Trestan Ebner,FA,RB,Concussion,Questionable,Subscribers Only
 Samson Ebukam,IND,DE,Achilles,IR-R,Subscribers Only
-Brandin Echols,NYJ,CB,Shoulder,Questionable,Subscribers Only
 Chase Edmonds,TB,RB,Knee,IR,Subscribers Only
-Chuma Edoga,DAL,OT,Ankle,Questionable,Subscribers Only
-Mike Edwards,TB,S,Hamstring,Questionable,Subscribers Only
 Duke Ejiofor,FA,LB,Undisclosed,Questionable,Subscribers Only
 Austin Ekeler,WAS,RB,Concussion,IR,Subscribers Only
 Hamze El-Zayat,FA,WR,Undisclosed,Questionable,Subscribers Only
 Pat Elflein,FA,C,Calf,Questionable,Subscribers Only
-DeShon Elliott,PIT,S,Hamstring,Questionable,Subscribers Only
 Tino Ellis,FA,CB,Undisclosed,Questionable,Subscribers Only
-Christian Elliss,NE,LB,Head,Questionable,Subscribers Only
-Martin Emerson,CLE,CB,Head,Questionable,Subscribers Only
-Evan Engram,JAX,TE,Shoulder,IR,Subscribers Only
+Evan Engram,JAX,TE,Shoulder - Labrum,IR,Subscribers Only
 Marcus Epps,LV,S,Knee - ACL,IR,Subscribers Only
 Donnie Ernsberger,FA,TE,Undisclosed,Questionable,Subscribers Only
-Zach Ertz,WAS,TE,Concussion,Questionable,Subscribers Only
 Tyler Ervin,FA,RB,Foot,Questionable,Subscribers Only
 Dee Eskridge,MIA,WR,Knee,Questionable,Subscribers Only
 Drew Estrada,FA,WR,Achilles,Questionable,Subscribers Only
 Chris Evans,CIN,RB,Leg,IR,Subscribers Only
 Justin Evans,FA,S,Knee,Questionable,Subscribers Only
 Jequez Ezzard,FA,WR,Undisclosed,Questionable,Subscribers Only
+Daniel Faalele,BAL,OT,Knee,Questionable,Subscribers Only
 Brandon Facyson,FA,CB,Undisclosed,Questionable,Subscribers Only
 Diego Fagot,FA,LB,Undisclosed,Questionable,Subscribers Only
 George Fant,SEA,OT,Knee,IR,Subscribers Only
+Noah Fant,SEA,TE,Knee,Questionable,Subscribers Only
+Olu Fashanu,NYJ,OT,Foot,Out,Subscribers Only
 Folorunso Fatukasi,HOU,DT,Ankle,Questionable,Subscribers Only
 Troy Fautanu,PIT,OT,Knee,IR,Subscribers Only
 Simi Fehoko,LAC,WR,Elbow,IR,Subscribers Only
@@ -264,23 +256,23 @@ Justin Fields,PIT,QB,Abdomen,Questionable,Subscribers Only
 Sharif Finch,FA,LB,Undisclosed,Questionable,Subscribers Only
 Eric Fisher,FA,OT,Calf,Questionable,Subscribers Only
 Jeremy Flax,MIN,OT,Undisclosed,IR,Subscribers Only
-Cor'Dale Flott,NYG,CB,Quadriceps,Questionable,Subscribers Only
+Tre Flowers,FA,CB,Shoulder,Out,Subscribers Only
 Trey Flowers,FA,LB,Foot,Questionable,Subscribers Only
+Zay Flowers,BAL,WR,Shoulder,Questionable,Subscribers Only
+Nick Folk,TEN,K,Abdomen,Questionable,Subscribers Only
 Drew Forbes,FA,OG,Back,Questionable,Subscribers Only
-Cody Ford,CIN,OG,Illness,Questionable,Subscribers Only
 Dee Ford,FA,DE,Back,Questionable,Subscribers Only
 Jeff Foreman,LV,WR,Knee,IR,Subscribers Only
 Miller Forristall,FA,TE,Undisclosed,Questionable,Subscribers Only
-Stone Forsythe,SEA,OT,Hand,IR-R,Subscribers Only
 L.J. Fort,FA,LB,Knee - ACL,Questionable,Subscribers Only
 Jody Fortson,KC,TE,Knee - ACL,IR,Subscribers Only
-Leki Fotu,NYJ,DT,Knee,IR,Subscribers Only
+Leki Fotu,NYJ,DT,Knee,IR-R,Subscribers Only
 Tomari Fox,LV,DT,Undisclosed,IR,Subscribers Only
 Ja'Mion Franklin,FA,DT,Undisclosed,Questionable,Subscribers Only
 John Franklin,FA,WR,Knee - ACL,Questionable,Subscribers Only
-John Franklin-Myers,DEN,DE,Foot,Questionable,Subscribers Only
 Wesley French,IND,C,Ankle,IR,Subscribers Only
 Will Fries,IND,OG,Lower Leg,IR,Subscribers Only
+Kendall Fuller,MIA,CB,Knee,Questionable,Subscribers Only
 Will Fuller,FA,WR,Finger,Questionable,Subscribers Only
 X'Zauvea Gadlin,FA,OG,Undisclosed,Questionable,Subscribers Only
 Tipa Galeai,FA,LB,Hamstring,Questionable,Subscribers Only
@@ -288,6 +280,7 @@ Michael Gallup,FA,WR,Undisclosed,Reserve-Ret,Subscribers Only
 Connor Galvin,DET,OT,Knee - MCL,IR,Subscribers Only
 Jamell Garcia-Williams,FA,DE,Undisclosed,Questionable,Subscribers Only
 Dennis Gardeck,ARI,LB,Knee - ACL,IR,Subscribers Only
+Sauce Gardner,NYJ,CB,Hamstring,Questionable,Subscribers Only
 Ben Garland,FA,C,Calf,Questionable,Subscribers Only
 Mekhi Garner,FA,CB,Hamstring,Questionable,Subscribers Only
 Izaiah Gathings,FA,TE,Hamstring,Questionable,Subscribers Only
@@ -300,37 +293,38 @@ Cullen Gillaspia,FA,LB,Knee,Questionable,Subscribers Only
 Tyree Gillespie,FA,S,Undisclosed,Questionable,Subscribers Only
 Blake Gillikin,ARI,P,Foot,IR,Subscribers Only
 Alohi Gilman,LAC,S,Hamstring,IR,Subscribers Only
-Stephon Gilmore,MIN,CB,Hamstring,Questionable,Subscribers Only
+Trevis Gipson,SEA,LB,Ankle,IR,Subscribers Only
 Kevin Givens,SF,DT,Pectoral,IR,Subscribers Only
+Graham Glasgow,DET,OG,Knee,Questionable,Subscribers Only
 Jordan Glasgow,FA,LB,Undisclosed,Questionable,Subscribers Only
 Chris Godwin,TB,WR,Ankle,IR,Subscribers Only
 Dallas Goedert,PHI,TE,Knee,IR,Subscribers Only
-Markus Golden,PIT,LB,Undisclosed,Reserve-Ret,Subscribers Only
+Markus Golden,PIT,LB,Personal,Reserve-Ret,Subscribers Only
 Matt Gono,FA,OT,Neck,Questionable,Subscribers Only
-Zane Gonzalez,WAS,K,Foot,Questionable,Subscribers Only
-Cameron Goode,MIA,LB,Knee,PUP-R,Subscribers Only
 Mario Goodrich,FA,CB,Hamstring,Questionable,Subscribers Only
 Brandon Graham,PHI,LB,Triceps,IR,Subscribers Only
 Jaeden Graham,FA,TE,Undisclosed,Questionable,Subscribers Only
 Ta'Quon Graham,ATL,DE,Pectoral,IR,Subscribers Only
 Vincent Gray,FA,CB,Groin,Questionable,Subscribers Only
 Antoine Green,DET,WR,Concussion,IR,Subscribers Only
-Kenyon Green,HOU,OG,Shoulder,IR-R,Subscribers Only
 Rasheem Green,FA,DE,Undisclosed,Questionable,Subscribers Only
 Virgil Green,FA,TE,Ankle,Questionable,Subscribers Only
 Raven Greene,FA,S,Undisclosed,Questionable,Subscribers Only
 Ethan Greenidge,FA,OT,Undisclosed,Questionable,Subscribers Only
-Dre Greenlaw,SF,LB,Achilles,Questionable,Subscribers Only
+Dre Greenlaw,SF,LB,Calf,Questionable,Subscribers Only
 Everson Griffen,FA,DE,Personal,Questionable,Subscribers Only
 Jonas Griffith,FA,LB,Knee - ACL,Questionable,Subscribers Only
 Trevon Grimes,FA,WR,Undisclosed,Questionable,Subscribers Only
 Ryan Groy,FA,OG,Triceps,Questionable,Subscribers Only
+Isaac Guerendo,SF,RB,Hamstring,Questionable,Subscribers Only
 Jeff Gunter,CIN,DE,Undisclosed,Reserve-Ret,Subscribers Only
 Grant Haley,FA,CB,Knee - ACL,Questionable,Subscribers Only
 Bryce Hall,TB,CB,Ankle,IR,Subscribers Only
+Derick Hall,SEA,LB,Shoulder,Questionable,Subscribers Only
 Emanuel Hall,FA,WR,Achilles,Questionable,Subscribers Only
 Terez Hall,FA,LB,Undisclosed,Questionable,Subscribers Only
-Damar Hamlin,BUF,S,Back,Questionable,Subscribers Only
+Antonio Hamilton,ATL,CB,Quadriceps,Questionable,Subscribers Only
+Damar Hamlin,BUF,S,Ribs,Questionable,Subscribers Only
 Malik Hamm,BAL,LB,Knee - ACL,IR,Subscribers Only
 Nick Hampton,LAR,LB,Pectoral,IR,Subscribers Only
 Saquan Hampton,FA,S,Achilles,Questionable,Subscribers Only
@@ -345,11 +339,13 @@ Dwayne Harris,FA,WR,Triceps,Questionable,Subscribers Only
 Keilahn Harris,FA,WR,Undisclosed,Questionable,Subscribers Only
 Nick Harris,CLE,C,Ankle,IR,Subscribers Only
 Shelby Harris,CLE,DT,Elbow,Questionable,Subscribers Only
+Anton Harrison,JAX,OT,Shoulder,Questionable,Subscribers Only
 Cam Hart,LAC,CB,Concussion,Questionable,Subscribers Only
 Penny Hart,FA,WR,Concussion,Questionable,Subscribers Only
 Montre Hartage,FA,S,Undisclosed,Questionable,Subscribers Only
 Deonte Harty,BAL,WR,Knee,IR,Subscribers Only
 Kolby Harvell-Peel,FA,S,Hamstring,Questionable,Subscribers Only
+JaMycal Hasty,NE,RB,Ankle,Questionable,Subscribers Only
 Jerald Hawkins,FA,OT,Undisclosed,Questionable,Subscribers Only
 Tayler Hawkins,FA,S,Undisclosed,Questionable,Subscribers Only
 Tre Hawkins,NYG,CB,Spine,IR,Subscribers Only
@@ -357,113 +353,114 @@ Jaaron Hayek,KC,WR,Shoulder,IR,Subscribers Only
 Daelin Hayes,FA,LB,Undisclosed,Questionable,Subscribers Only
 Joel Heath,FA,DE,Knee - ACL,Questionable,Subscribers Only
 DeMarcco Hellams,ATL,S,Ankle,IR-R,Subscribers Only
-Peyton Hendershot,KC,TE,Calf,IR,Subscribers Only
 C.J. Henderson,PIT,CB,Neck,IR,Subscribers Only
 LaDarius Henderson,HOU,OG,Foot,NFI-R,Subscribers Only
 Xavier Henderson,FA,S,Undisclosed,Questionable,Subscribers Only
 Ra'Shaun Henry,FA,WR,Undisclosed,Questionable,Subscribers Only
-Justin Herbert,LAC,QB,Ankle,Questionable,Subscribers Only
 Nate Herbig,PIT,OG,Shoulder,IR,Subscribers Only
 Will Hernandez,ARI,OG,Knee,IR,Subscribers Only
 Chandon Herring,FA,OG,Undisclosed,Questionable,Subscribers Only
 Justin Herron,NO,OT,Knee,IR,Subscribers Only
+Elijah Hicks,CHI,S,Ankle,Questionable,Subscribers Only
 Brandon Hill,HOU,S,Leg,IR,Subscribers Only
 Dax Hill,CIN,CB,Knee - ACL,IR,Subscribers Only
+Justice Hill,BAL,RB,Concussion,Questionable,Subscribers Only
 Taysom Hill,NO,TE,Knee - ACL,IR,Subscribers Only
 Troy Hill,TB,CB,Foot,IR,Subscribers Only
 Trysten Hill,FA,DT,Undisclosed,Out,Subscribers Only
 Dontrell Hilliard,FA,RB,Neck,Questionable,Subscribers Only
+Nate Hobbs,LV,CB,Illness,Questionable,Subscribers Only
 Cooper Hodges,JAX,OG,Knee,IR,Subscribers Only
 Curtis Hodges,FA,TE,Undisclosed,Questionable,Subscribers Only
 Cole Holcomb,PIT,LB,Knee,PUP-R,Subscribers Only
 Will Holden,FA,OT,Calf,Questionable,Subscribers Only
 Cody Hollister,FA,WR,Neck,Questionable,Subscribers Only
 Ka'dar Hollman,HOU,CB,Knee - ACL,IR,Subscribers Only
+Travis Homer,CHI,RB,Hamstring,Questionable,Subscribers Only
+Amani Hooker,TEN,S,Shoulder,Questionable,Subscribers Only
 Timmy Horne,NYG,DT,Achilles,IR,Subscribers Only
 Jarveon Howard,FA,RB,Undisclosed,Questionable,Subscribers Only
 Hayden Howerton,FA,OG,Undisclosed,Questionable,Subscribers Only
 Jonathan Hubbard,FA,OT,Undisclosed,Questionable,Subscribers Only
-Sam Hubbard,CIN,DE,Knee,Out,Subscribers Only
+Sam Hubbard,CIN,DE,Knee,Questionable,Subscribers Only
 James Hudson,CLE,OT,Shoulder,IR,Subscribers Only
 Rodney Hudson,FA,C,Knee,Questionable,Subscribers Only
+Tanner Hudson,CIN,TE,Knee,Questionable,Subscribers Only
 Tommy Hudson,FA,TE,Undisclosed,Questionable,Subscribers Only
-Bryce Huff,PHI,LB,Wrist,IR,Subscribers Only
+Bryce Huff,PHI,LB,Wrist,IR-R,Subscribers Only
 Charley Hughlett,CLE,C,Ribs,IR,Subscribers Only
-D.J. Humphries,KC,OT,Hamstring,Questionable,Subscribers Only
+D.J. Humphries,KC,OT,Hamstring,Out,Subscribers Only
 Jontrey Hunter,FA,LB,Undisclosed,Questionable,Subscribers Only
-Jalen Hurd,FA,WR,Undisclosed,Reserve-Ret,Subscribers Only
 Allen Hurns,FA,WR,Wrist,Questionable,Subscribers Only
-Hayden Hurst,LAC,TE,Hip,IR-R,Subscribers Only
 John Hurst,FA,WR,Ankle,Questionable,Subscribers Only
 Maurice Hurst,CLE,DT,Ankle,IR,Subscribers Only
+Jalen Hurts,PHI,QB,Concussion,Questionable,Subscribers Only
 Aidan Hutchinson,DET,DE,Lower Leg,IR,Subscribers Only
 Ishmael Hyman,FA,WR,Undisclosed,Questionable,Subscribers Only
 George Iloka,FA,S,Knee - ACL,Questionable,Subscribers Only
 Matt Ioannidis,FA,DT,Back,Questionable,Subscribers Only
 Isaiah Irving,FA,LB,Back,Questionable,Subscribers Only
-Adisa Isaac,BAL,LB,Hamstring,Questionable,Subscribers Only
 Qadir Ismail,FA,TE,Undisclosed,Out,Subscribers Only
 Thomas Ives,FA,WR,Undisclosed,Questionable,Subscribers Only
 Austin Jackson,MIA,OT,Knee,IR,Subscribers Only
 Branden Jackson,FA,DE,Spine,Questionable,Subscribers Only
 D'Marco Jackson,NO,LB,Ankle,IR,Subscribers Only
-Donte Jackson,PIT,CB,Back,Questionable,Subscribers Only
 Drake Jackson,SF,DE,Knee,PUP-R,Subscribers Only
 JaQuae Jackson,NE,WR,Knee,IR,Subscribers Only
 Warren Jackson,FA,WR,Undisclosed,Questionable,Subscribers Only
-Curtis Jacobs,NE,LB,Head,IR,Subscribers Only
+Curtis Jacobs,NE,LB,Head,IR-R,Subscribers Only
 Craig James,FA,CB,Undisclosed,Questionable,Subscribers Only
 Ja'Wuan James,FA,OT,Achilles,Questionable,Subscribers Only
-Jaxon Janke,FA,WR,Undisclosed,Questionable,Subscribers Only
 Trajan Jeffcoat,FA,DE,Undisclosed,Out,Subscribers Only
 Malik Jefferson,FA,LB,Undisclosed,Questionable,Subscribers Only
 Jordan Jenkins,FA,DE,Knee - ACL,Questionable,Subscribers Only
+Teven Jenkins,CHI,OG,Calf,Questionable,Subscribers Only
 Nash Jensen,FA,OG,Undisclosed,Questionable,Subscribers Only
 Jake Johanning,LV,OG,Undisclosed,IR,Subscribers Only
 Alexander Johnson,FA,LB,Undisclosed,Questionable,Subscribers Only
 Bisi Johnson,FA,WR,Knee - ACL,Questionable,Subscribers Only
-Dillon Johnson,FA,RB,Undisclosed,Out,Subscribers Only
+Dillon Johnson,FA,RB,Undisclosed,Questionable,Subscribers Only
 Dyontae Johnson,NYG,LB,Ankle,IR-R,Subscribers Only
 Jahmir Johnson,FA,OT,Undisclosed,Questionable,Subscribers Only
 Jermaine Johnson,NYJ,DE,Achilles,IR,Subscribers Only
 John Johnson,LAR,S,Shoulder,IR,Subscribers Only
 Josh Johnson,FA,RB,Undisclosed,Questionable,Subscribers Only
 Kameron Johnson,TB,WR,Ankle,IR-R,Subscribers Only
-Patrick Johnson,NYG,LB,Knee,Questionable,Subscribers Only
+Paris Johnson,ARI,OT,Knee,Out,Subscribers Only
+Patrick Johnson,NYG,LB,Knee,IR,Subscribers Only
 Roderick Johnson,FA,OT,Undisclosed,Questionable,Subscribers Only
-Roschon Johnson,CHI,RB,Concussion,Questionable,Subscribers Only
 Theo Johnson,NYG,TE,Foot,IR,Subscribers Only
 Tyreek Johnson,FA,DE,Undisclosed,Questionable,Subscribers Only
 Willie Johnson,FA,WR,Undisclosed,Questionable,Subscribers Only
-Zion Johnson,LAC,OG,Ankle,Questionable,Subscribers Only
 Cameron Johnston,PIT,P,Knee,IR,Subscribers Only
 Ben Jones,FA,C,Undisclosed,Questionable,Subscribers Only
-Braxton Jones,CHI,OT,Concussion,Questionable,Subscribers Only
+Braxton Jones,CHI,OT,Ankle,IR,Subscribers Only
 Brett Jones,FA,C,Biceps,Questionable,Subscribers Only
 Buddha Jones,FA,DT,Undisclosed,Questionable,Subscribers Only
 Byron Jones,FA,CB,Achilles,Questionable,Subscribers Only
 Charlie Jones,CIN,WR,Groin,Questionable,Subscribers Only
 Chris Jones,FA,P,Abdomen,Questionable,Subscribers Only
-D.J. Jones,DEN,DT,Finger,Questionable,Subscribers Only
+Chris Jones,KC,DT,Calf,Questionable,Subscribers Only
 Dawand Jones,CLE,OT,Lower Leg,IR,Subscribers Only
 Devin Jones,FA,CB,Undisclosed,Questionable,Subscribers Only
 Elijah Jones,ARI,CB,Ankle,IR-R,Subscribers Only
 Jaylon Jones,CHI,CB,Shoulder,IR,Subscribers Only
+Jaylon Jones,IND,CB,Neck,Questionable,Subscribers Only
 Joe Jones,FA,LB,Finger,Questionable,Subscribers Only
 Josh Jones,FA,S,Hamstring,Questionable,Subscribers Only
 Julio Jones,FA,WR,Concussion,Questionable,Subscribers Only
 Justin Jones,ARI,DT,Triceps,IR,Subscribers Only
 Keandre Jones,FA,LB,Undisclosed,Questionable,Subscribers Only
+Marcus Jones,NE,CB,Hip,Questionable,Subscribers Only
 Xavier Jones,FA,RB,Achilles,Questionable,Subscribers Only
 Brevin Jordan,HOU,TE,Knee - ACL,IR,Subscribers Only
 Lamarcus Joyner,FA,S,Hip,Questionable,Subscribers Only
 Alvin Kamara,NO,RB,Groin,Questionable,Subscribers Only
-Sanoussi Kane,BAL,S,Hamstring,Questionable,Subscribers Only
 Dalton Keene,HOU,TE,Knee - ACL,IR,Subscribers Only
 Case Keenum,HOU,QB,Foot,IR,Subscribers Only
-Ryan Kelly,IND,C,Knee,IR-R,Subscribers Only
 Silas Kelly,FA,LB,Undisclosed,Questionable,Subscribers Only
 Derion Kendrick,LAR,CB,Knee - ACL,IR,Subscribers Only
+Eric Kendricks,DAL,LB,Calf,Questionable,Subscribers Only
 Lawrence Keys,FA,WR,Leg,Questionable,Subscribers Only
 Brandon King,FA,LB,Hamstring,Questionable,Subscribers Only
 Christian Kirk,JAX,WR,Collarbone,IR,Subscribers Only
@@ -473,19 +470,19 @@ Micah Kiser,FA,LB,Leg,Questionable,Subscribers Only
 Trey Knox,FA,TE,Undisclosed,Questionable,Subscribers Only
 Bryant Koback,FA,RB,Undisclosed,Reserve-Ret,Subscribers Only
 Charlie Kolar,BAL,TE,Forearm,IR,Subscribers Only
-Younghoe Koo,ATL,K,Undisclosed,Questionable,Subscribers Only
+Younghoe Koo,ATL,K,Hip,IR,Subscribers Only
 Malcolm Koonce,LV,DE,Knee - ACL,IR,Subscribers Only
-Tanoh Kpassagnon,NO,DE,Achilles,Questionable,Subscribers Only
+Doug Kramer,CHI,C,Shoulder,Questionable,Subscribers Only
 Jake Kumerow,FA,WR,Back,Questionable,Subscribers Only
-Jordan Kunaszyk,MIN,LB,Undisclosed,IR,Subscribers Only
+Jordan Kunaszyk,FA,LB,Undisclosed,Questionable,Subscribers Only
 Bruno Labelle,FA,TE,Undisclosed,Questionable,Subscribers Only
 Chris Lacy,FA,WR,Undisclosed,Questionable,Subscribers Only
 Dayan Lake,FA,CB,Undisclosed,Questionable,Subscribers Only
-Kendall Lamm,MIA,OT,Back,Questionable,Subscribers Only
 Forrest Lamp,FA,OG,Undisclosed,Questionable,Subscribers Only
 Ted Larsen,FA,OG,Knee,Questionable,Subscribers Only
 Tyler Larsen,FA,C,Knee,Questionable,Subscribers Only
 Scott Lashley,FA,OT,Undisclosed,Questionable,Subscribers Only
+Marshon Lattimore,WAS,CB,Hamstring,Questionable,Subscribers Only
 DeMarcus Lawrence,DAL,DE,Foot,IR,Subscribers Only
 Dexter Lawrence,NYG,DT,Elbow,IR,Subscribers Only
 Trevor Lawrence,JAX,QB,Shoulder - AC Joint,IR,Subscribers Only
@@ -495,29 +492,32 @@ Cre'von LeBlanc,FA,CB,Undisclosed,Questionable,Subscribers Only
 Jonathan Ledbetter,FA,DT,Knee,Questionable,Subscribers Only
 Darron Lee,FA,LB,Undisclosed,Questionable,Subscribers Only
 Logan Lee,PIT,DT,Calf,IR,Subscribers Only
-Xavier Legette,CAR,WR,Groin,Doubtful,Subscribers Only
+Xavier Legette,CAR,WR,Hip,Questionable,Subscribers Only
 Charles Leno,FA,OT,Hip,Questionable,Subscribers Only
 Matt Leo,PHI,DE,Undisclosed,Reserve-Ret,Subscribers Only
 KT Leveston,LAR,OT,Ankle,IR,Subscribers Only
 Jason Lewan,FA,DE,Back,Questionable,Subscribers Only
 Taylor Lewan,FA,OT,Knee - ACL,Questionable,Subscribers Only
 Donnie Lewis,FA,CB,Undisclosed,Questionable,Subscribers Only
-Jourdan Lewis,DAL,CB,Elbow,Questionable,Subscribers Only
 Tommylee Lewis,FA,WR,Hip,Questionable,Subscribers Only
+Tyler Linderbaum,BAL,C,Back,Questionable,Subscribers Only
 Greg Little,FA,OT,Back,Questionable,Subscribers Only
+Walker Little,JAX,OT,Ankle,Out,Subscribers Only
 MarShawn Lloyd,GB,RB,Appendix,NFI-R,Subscribers Only
-Drew Lock,NYG,QB,Heel,Questionable,Subscribers Only
+Drew Lock,NYG,QB,Shoulder,Questionable,Subscribers Only
+Drake London,ATL,WR,Hamstring,Questionable,Subscribers Only
 Greg Long,FA,OT,Undisclosed,Questionable,Subscribers Only
 Bryce Love,FA,RB,Knee,Questionable,Subscribers Only
 John Lovett,FA,FB,Undisclosed,Questionable,Subscribers Only
 Corey Luciano,FA,C,Undisclosed,Questionable,Subscribers Only
-Jesse Luketa,ARI,LB,Thigh,Questionable,Subscribers Only
+Jesse Luketa,ARI,LB,Thigh,IR,Subscribers Only
 Darrell Luter,SF,CB,Pelvis,IR,Subscribers Only
 Nate Lynn,DET,DE,Shoulder,IR,Subscribers Only
 Alize Mack,FA,TE,Undisclosed,Questionable,Subscribers Only
 Ledarius Mack,FA,LB,Undisclosed,Questionable,Subscribers Only
 Marlon Mack,FA,RB,Achilles,Questionable,Subscribers Only
 Cole Madison,FA,OG,Knee - ACL,Questionable,Subscribers Only
+Jordan Magee,WAS,LB,Hamstring,Questionable,Subscribers Only
 Cassius Marsh,FA,LB,Knee,Questionable,Subscribers Only
 Kamal Martin,FA,LB,Undisclosed,Questionable,Subscribers Only
 Koda Martin,FA,OG,Undisclosed,Questionable,Subscribers Only
@@ -525,21 +525,24 @@ Marcus Martin,FA,C,Undisclosed,Questionable,Subscribers Only
 Zack Martin,DAL,OG,Ankle,IR,Subscribers Only
 Ben Mason,FA,TE,Undisclosed,Questionable,Subscribers Only
 Jordan Mason,SF,RB,Ankle,IR,Subscribers Only
+Shaq Mason,HOU,OG,Knee - MCL,Doubtful,Subscribers Only
 Luke Masterson,LV,LB,Knee,IR,Subscribers Only
 Christian Matthew,BAL,CB,Undisclosed,IR,Subscribers Only
+Kana'i Mauga,LV,LB,Illness,Questionable,Subscribers Only
 Arthur Maulet,BAL,CB,Calf,IR,Subscribers Only
+Marcus Maye,LAC,S,Ankle,IR,Subscribers Only
+Cade Mays,CAR,OG,Illness,Questionable,Subscribers Only
 Christian McCaffrey,SF,RB,Knee - PCL,IR,Subscribers Only
 J.J. McCarthy,MIN,QB,Knee - Meniscus,IR,Subscribers Only
 Jase McClellan,ATL,RB,Knee,IR,Subscribers Only
-Sincere McCormick,LV,RB,Ankle,Doubtful,Subscribers Only
+Sincere McCormick,LV,RB,Ankle,IR,Subscribers Only
 Colt McCoy,FA,QB,Undisclosed,Reserve-Ret,Subscribers Only
+Erik McCoy,NO,C,Elbow,Questionable,Subscribers Only
 Nate McCrary,FA,RB,Undisclosed,Questionable,Subscribers Only
 Justin McCray,FA,OG,Calf,Questionable,Subscribers Only
-Roger McCreary,TEN,CB,Shoulder,Questionable,Subscribers Only
 Conor McDermott,LAR,OT,Undisclosed,IR,Subscribers Only
 Codey McElroy,FA,TE,Foot,Questionable,Subscribers Only
 Anthony McKinney,FA,OT,Undisclosed,Questionable,Subscribers Only
-Kool-Aid McKinstry,NO,CB,Neck,Questionable,Subscribers Only
 J.D. McKissic,FA,RB,Neck,Questionable,Subscribers Only
 Jaleel McLaughlin,DEN,RB,Quadriceps,Questionable,Subscribers Only
 Tyler McLellan,LAC,OT,Undisclosed,IR,Subscribers Only
@@ -552,18 +555,18 @@ Nate Meadors,FA,S,Undisclosed,Questionable,Subscribers Only
 Montrel Meander,FA,LB,Achilles,Questionable,Subscribers Only
 Bub Means,NO,WR,Ankle,IR-R,Subscribers Only
 Steven Means,FA,LB,Achilles,Questionable,Subscribers Only
-Ifeatu Melifonwu,DET,S,Undisclosed,IR,Subscribers Only
 Obi Melifonwu,FA,S,Undisclosed,Questionable,Subscribers Only
 Nicolas Melsop,FA,OG,Undisclosed,Questionable,Subscribers Only
-Max Melton,ARI,CB,Shin,Questionable,Subscribers Only
+Jordan Meredith,LV,OG,Ankle,Questionable,Subscribers Only
 Forrest Merrill,FA,DT,Undisclosed,Questionable,Subscribers Only
-John Metchie,HOU,WR,Shoulder,Questionable,Subscribers Only
+Kaevon Merriweather,TB,S,Knee,Questionable,Subscribers Only
 McKade Mettauer,KC,OG,Knee - MCL,IR,Subscribers Only
 Sony Michel,FA,RB,Undisclosed,Reserve-Ret,Subscribers Only
-Matt Milano,BUF,LB,Groin,Questionable,Subscribers Only
+Matt Milano,BUF,LB,Biceps,Questionable,Subscribers Only
+Ventrell Miller,JAX,LB,Ankle,Questionable,Subscribers Only
 Nyheim Miller-Hines,CLE,RB,Knee - ACL,NFI-R,Subscribers Only
-Davis Mills,HOU,QB,Illness,Questionable,Subscribers Only
-Jalen Mills,NYJ,S,Chest,Questionable,Subscribers Only
+Jalen Mills,NYJ,S,Collarbone,IR,Subscribers Only
+Amarius Mims,CIN,OT,Ankle,Questionable,Subscribers Only
 Gardner Minshew,LV,QB,Collarbone,IR,Subscribers Only
 Elijah Mitchell,SF,RB,Hamstring,IR,Subscribers Only
 Osirus Mitchell,FA,WR,Quadriceps,Questionable,Subscribers Only
@@ -576,8 +579,11 @@ David Montgomery,DET,RB,Knee - MCL,Out,Subscribers Only
 J'Mon Moore,FA,WR,Undisclosed,Questionable,Subscribers Only
 Jalin Moore,FA,RB,Undisclosed,Reserve-Ret,Subscribers Only
 Jaylon Moore,FA,WR,Undisclosed,Questionable,Subscribers Only
+Jaylon Moore,SF,OT,Quadriceps,Out,Subscribers Only
 Rondale Moore,ATL,WR,Knee,IR,Subscribers Only
 Skyy Moore,KC,WR,Abdomen,IR,Subscribers Only
+Tarvarius Moore,CHI,S,Knee,Questionable,Subscribers Only
+Fabian Moreau,MIN,CB,Hip,Questionable,Subscribers Only
 Jimmy Moreland,FA,CB,Suspension,Out,Subscribers Only
 John Morgan,FA,DE,Undisclosed,Questionable,Subscribers Only
 Jordan Morgan,GB,OG,Shoulder,IR,Subscribers Only
@@ -593,50 +599,45 @@ Grayson Murphy,MIA,LB,Knee,IR,Subscribers Only
 Kyle Murphy,FA,OG,Ankle,Questionable,Subscribers Only
 Bill Murray,CHI,OG,Pectoral,IR,Subscribers Only
 Chris Murray,FA,C,Undisclosed,Questionable,Subscribers Only
+Kenneth Murray,TEN,LB,Wrist,Questionable,Subscribers Only
 Patrick Murtagh,JAX,TE,Ankle,IR,Subscribers Only
-Luke Musgrave,GB,TE,Ankle,IR-R,Subscribers Only
-Malik Mustapha,SF,S,Chest,Questionable,Subscribers Only
 Netane Muti,DET,OG,Shoulder,IR,Subscribers Only
 Hamsah Nasirildeen,FA,LB,Neck,Questionable,Subscribers Only
 Isaac Nauta,FA,TE,Undisclosed,Questionable,Subscribers Only
 Keanu Neal,FA,S,Ribs,Questionable,Subscribers Only
 Sharrod Neasman,FA,S,Undisclosed,Questionable,Subscribers Only
 Nick Nelson,FA,CB,Undisclosed,Questionable,Subscribers Only
-Xavier Newman,NYJ,OG,Groin,Questionable,Subscribers Only
 Greg Newsome,CLE,CB,Hamstring,IR,Subscribers Only
 Bilal Nichols,ARI,DT,Undisclosed,IR,Subscribers Only
 Hardy Nickerson,FA,LB,Concussion,Questionable,Subscribers Only
-David Njoku,CLE,TE,Hamstring,Questionable,Subscribers Only
+David Njoku,CLE,TE,Knee,Questionable,Subscribers Only
 Elijah Nkansah,FA,OT,Undisclosed,Questionable,Subscribers Only
 Desmond Noel,FA,OG,Undisclosed,Questionable,Subscribers Only
 Quinn Nordin,FA,K,Undisclosed,Questionable,Subscribers Only
 Jared Norris,FA,LB,Shoulder,Questionable,Subscribers Only
-Trevor Nowaske,DET,LB,Concussion,Questionable,Subscribers Only
 Tyler Nubin,NYG,S,Ankle,IR,Subscribers Only
-Rakeem Nunez-Roches,NYG,DT,Neck,Questionable,Subscribers Only
 Kene Nwangwu,NYJ,RB,Hand,IR,Subscribers Only
-Aidan O'Connell,LV,QB,Knee,Questionable,Subscribers Only
+Uchenna Nwosu,SEA,LB,Wrist,Questionable,Subscribers Only
 Carter O'Donnell,ARI,OG,Undisclosed,IR,Subscribers Only
 Nick O'Leary,FA,TE,Chest,Questionable,Subscribers Only
 Leon O'Neal,FA,S,Undisclosed,Questionable,Subscribers Only
-Brian O'Neill,MIN,OT,Knee,Questionable,Subscribers Only
 Ifeadi Odenigbo,FA,DE,Undisclosed,Questionable,Subscribers Only
 Chris Odom,FA,DE,Knee - ACL,Questionable,Subscribers Only
 George Odum,SF,S,Knee,IR,Subscribers Only
-Otito Ogbonnia,LAC,DT,Pelvis,Questionable,Subscribers Only
+Amen Ogbongbemiga,CHI,LB,Hip,Questionable,Subscribers Only
 Ovie Oghoufo,FA,DE,Hamstring,Questionable,Subscribers Only
-Larry Ogunjobi,PIT,DT,Groin,Questionable,Subscribers Only
 Azeez Ojulari,NYG,LB,Toe,IR,Subscribers Only
 BJ Ojulari,ARI,DE,Knee - ACL,IR,Subscribers Only
-Bobby Okereke,NYG,LB,Back,Questionable,Subscribers Only
+Bobby Okereke,NYG,LB,Back,IR,Subscribers Only
 Chukwuma Okorafor,NE,OT,Personal,Reserve-Ex,Subscribers Only
-Chris Olave,NO,WR,Concussion,IR,Subscribers Only
+Chris Olave,NO,WR,Concussion,IR-R,Subscribers Only
 Sewo Olonilua,FA,FB,Neck,Questionable,Subscribers Only
 Gunner Olszewski,NYG,WR,Groin,IR,Subscribers Only
 Olu Oluwatimi,SEA,C,Knee,Questionable,Subscribers Only
 Joshua Onujiogu,SEA,LB,Undisclosed,IR,Subscribers Only
 Sua Opeta,TB,OG,Knee - ACL,IR,Subscribers Only
 Joe Ostman,FA,DE,Undisclosed,Questionable,Subscribers Only
+Cade Otton,TB,TE,Knee,Questionable,Subscribers Only
 DeMarvion Overshown,DAL,LB,Knee - ACL + MCL,IR,Subscribers Only
 Tanner Owen,FA,OT,Illness,Questionable,Subscribers Only
 Jeremiah Owusu-Koramoah,CLE,LB,Neck,IR,Subscribers Only
@@ -646,7 +647,8 @@ DeVante Parker,FA,WR,Undisclosed,Reserve-Ret,Subscribers Only
 Josh Pederson,FA,TE,Ankle,Questionable,Subscribers Only
 Kyle Peko,DET,DT,Pectoral,IR,Subscribers Only
 Rashaad Penny,FA,RB,Undisclosed,Reserve-Ret,Subscribers Only
-David Perales,PIT,LB,Knee - MCL,IR,Subscribers Only
+Jabrill Peppers,NE,S,Hamstring,Questionable,Subscribers Only
+David Perales,FA,LB,Knee - MCL,Questionable,Subscribers Only
 Denzel Perryman,LAC,LB,Groin,Questionable,Subscribers Only
 Jordan Perryman,FA,CB,Undisclosed,Questionable,Subscribers Only
 Ricky Person,FA,RB,Undisclosed,Questionable,Subscribers Only
@@ -654,27 +656,29 @@ Tautala Pesefea,FA,DT,Undisclosed,Questionable,Subscribers Only
 Jason Peters,FA,OT,Undisclosed,Questionable,Subscribers Only
 Camron Peterson,NO,DT,Undisclosed,IR,Subscribers Only
 Shaun Peterson,FA,LB,Undisclosed,Questionable,Subscribers Only
-Del'Shawn Phillips,HOU,LB,Foot,Questionable,Subscribers Only
-Dru Phillips,NYG,CB,Shoulder,Questionable,Subscribers Only
 Jaelan Phillips,MIA,LB,Knee - ACL,IR,Subscribers Only
 George Pickens,PIT,WR,Hamstring,Questionable,Subscribers Only
 Nathan Pickering,FA,DT,Undisclosed,Questionable,Subscribers Only
+Kenny Pickett,PHI,QB,Ribs,Questionable,Subscribers Only
 Alec Pierce,IND,WR,Concussion,Questionable,Subscribers Only
 Kevin Pierre-Louis,FA,LB,Groin,Questionable,Subscribers Only
 Jared Pinkney,FA,TE,Undisclosed,Questionable,Subscribers Only
 Jalen Pitre,HOU,S,Pectoral,IR,Subscribers Only
 Thyrick Pitts,FA,WR,Undisclosed,Questionable,Subscribers Only
+Mason Pline,FA,TE,Undisclosed,Out,Subscribers Only
 Quentin Poling,FA,LB,Undisclosed,Questionable,Subscribers Only
 Norell Pollard,WAS,DT,Undisclosed,IR,Subscribers Only
 Elijah Ponder,FA,LB,Undisclosed,Questionable,Subscribers Only
 Troymaine Pope,FA,RB,Undisclosed,Questionable,Subscribers Only
+Joey Porter,PIT,CB,Knee,Out,Subscribers Only
 Monte Pottebaum,FA,FB,Undisclosed,Reserve-Ret,Subscribers Only
-Matt Prater,ARI,K,Knee - Meniscus,IR,Subscribers Only
+Matt Prater,ARI,K,Knee - Meniscus,IR-R,Subscribers Only
 Dak Prescott,DAL,QB,Hamstring,IR,Subscribers Only
 Austin Proehl,FA,WR,Undisclosed,Questionable,Subscribers Only
 Teagan Quitoriano,HOU,TE,Knee,IR,Subscribers Only
 Brent Qvale,FA,OT,Undisclosed,Questionable,Subscribers Only
 Kevin Rader,FA,TE,Undisclosed,Questionable,Subscribers Only
+Dillon Radunz,TEN,OG,Shoulder,Questionable,Subscribers Only
 Trey Ragas,FA,RB,Undisclosed,Questionable,Subscribers Only
 Reggie Ragland,FA,LB,Shoulder,Questionable,Subscribers Only
 Ennis Rakestraw,DET,CB,Hamstring,IR,Subscribers Only
@@ -687,12 +691,11 @@ Kalif Raymond,DET,WR,Foot,IR,Subscribers Only
 Jalen Reagor,LAC,WR,Finger,IR,Subscribers Only
 Alex Redmond,FA,OG,Undisclosed,Questionable,Subscribers Only
 Jalen Redmond,MIN,DT,Concussion,Questionable,Subscribers Only
-D.J. Reed,NYJ,CB,Groin,Questionable,Subscribers Only
 Jerrick Reed,SEA,S,Quadriceps,IR,Subscribers Only
 Joe Reed,FA,WR,Undisclosed,Questionable,Subscribers Only
 Troy Reeder,LAR,LB,Hamstring,IR,Subscribers Only
 Otis Reese,TEN,LB,Ankle,Questionable,Subscribers Only
-Jalen Reeves-Maybin,DET,LB,Neck,IR,Subscribers Only
+Jalen Reeves-Maybin,DET,LB,Neck,IR-R,Subscribers Only
 Riley Reiff,FA,OG,Knee,Questionable,Subscribers Only
 Ross Reynolds,FA,OG,Undisclosed,Questionable,Subscribers Only
 Giovanni Ricci,FA,TE,Knee,Questionable,Subscribers Only
@@ -713,6 +716,7 @@ Rashard Robinson,FA,CB,Undisclosed,Questionable,Subscribers Only
 Reggie Robinson,FA,CB,Undisclosed,Questionable,Subscribers Only
 Tayvion Robinson,FA,WR,Undisclosed,Questionable,Subscribers Only
 Quincy Roche,FA,LB,Undisclosed,Questionable,Subscribers Only
+Aaron Rodgers,NYJ,QB,Knee,Questionable,Subscribers Only
 Bryce Rodgers,FA,DT,Undisclosed,Questionable,Subscribers Only
 Richard Rodgers,FA,TE,Knee,Questionable,Subscribers Only
 Malcolm Rodriguez,DET,LB,Knee - ACL,IR,Subscribers Only
@@ -730,15 +734,16 @@ Nick Saldiveri,NO,OG,Knee,IR,Subscribers Only
 Christian Sam,FA,LB,Undisclosed,Questionable,Subscribers Only
 Cameron Sample,CIN,DE,Achilles,IR,Subscribers Only
 Asante Samuel,LAC,CB,Shoulder,IR,Subscribers Only
-Curtis Samuel,BUF,WR,Shoulder,Questionable,Subscribers Only
+Curtis Samuel,BUF,WR,Ribs,Questionable,Subscribers Only
 Miles Sanders,CAR,RB,Ankle,IR,Subscribers Only
+Darnell Savage,JAX,S,Concussion,Questionable,Subscribers Only
 DJ Scaife,FA,OT,Leg,Questionable,Subscribers Only
 Patrick Scales,CHI,C,Back,IR,Subscribers Only
 Austin Schlottmann,NYG,OG,Lower Leg,IR-R,Subscribers Only
 Sam Schlueter,FA,OT,Illness,Questionable,Subscribers Only
+John Michael Schmitz,NYG,C,Ankle,Questionable,Subscribers Only
 Anthony Schwartz,MIA,WR,Knee,IR,Subscribers Only
 Daniel Scott,IND,S,Achilles,IR,Subscribers Only
-Nick Scott,CAR,S,Hamstring,Questionable,Subscribers Only
 Juice Scruggs,HOU,OG,Foot,Questionable,Subscribers Only
 Ricky Seals-Jones,FA,TE,Foot,Questionable,Subscribers Only
 Austin Seibert,WAS,K,Groin,IR,Subscribers Only
@@ -747,19 +752,23 @@ Liam Shanahan,FA,C,Undisclosed,Questionable,Subscribers Only
 Tajae Sharpe,FA,WR,Undisclosed,Questionable,Subscribers Only
 Brandon Shell,BUF,OT,Undisclosed,Reserve-Ret,Subscribers Only
 Tyler Shelvin,FA,DT,Undisclosed,Questionable,Subscribers Only
+Sterling Shepard,TB,WR,Hamstring,Questionable,Subscribers Only
 Darrius Shepherd,FA,WR,Undisclosed,Questionable,Subscribers Only
+Nathan Shepherd,NO,DT,Eye,Questionable,Subscribers Only
 Jamie Sheriff,FA,LB,Undisclosed,Out,Subscribers Only
+Will Shipley,PHI,RB,Head,Questionable,Subscribers Only
 Spencer Shrader,KC,K,Hamstring,IR,Subscribers Only
 Lachavious Simmons,FA,OG,Undisclosed,Questionable,Subscribers Only
 Marcus Simms,FA,WR,Undisclosed,Questionable,Subscribers Only
 Cam Sims,FA,WR,Undisclosed,Questionable,Subscribers Only
 Alex Singleton,DEN,LB,Knee - ACL,IR,Subscribers Only
 Tuzar Skipper,FA,LB,Undisclosed,Questionable,Subscribers Only
+Ben Skowronek,PIT,WR,Hip,Out,Subscribers Only
 Ryan Smenda,FA,LB,Undisclosed,Questionable,Subscribers Only
 Braden Smith,IND,OT,Personal,NFI-R,Subscribers Only
 Cam Smith,MIA,CB,Shoulder,IR,Subscribers Only
 D'Ante Smith,CIN,OT,Knee,IR,Subscribers Only
-Geno Smith,SEA,QB,Knee,Questionable,Subscribers Only
+Harrison Smith,MIN,S,Foot,Questionable,Subscribers Only
 Jeff Smith,FA,WR,Undisclosed,Questionable,Subscribers Only
 Keith Smith,FA,FB,Ankle,Questionable,Subscribers Only
 Kion Smith,MIA,OT,Knee - ACL,IR,Subscribers Only
@@ -772,6 +781,8 @@ James Smith-Williams,ATL,LB,Lower Leg,IR,Subscribers Only
 Willie Snead,FA,WR,Undisclosed,Questionable,Subscribers Only
 L'Jarius Sneed,TEN,CB,Quadriceps,IR,Subscribers Only
 Dylan Soehner,FA,TE,Undisclosed,Questionable,Subscribers Only
+Baylon Spector,BUF,LB,Calf,IR,Subscribers Only
+E.J. Speed,IND,LB,Knee,Questionable,Subscribers Only
 Jeremy Sprinkle,FA,TE,Achilles,Questionable,Subscribers Only
 DeAndre Square,FA,LB,Undisclosed,Questionable,Subscribers Only
 Taylor Stallworth,FA,DT,Undisclosed,Questionable,Subscribers Only
@@ -781,10 +792,10 @@ John Stephens,DAL,TE,Knee - ACL,IR,Subscribers Only
 Markese Stepp,FA,RB,Undisclosed,Questionable,Subscribers Only
 Tyarise Stevenson,FA,DT,Shoulder - AC Joint,Questionable,Subscribers Only
 Darius Stills,FA,DT,Undisclosed,Questionable,Subscribers Only
+Aaron Stinnie,NYG,OG,Concussion,Questionable,Subscribers Only
 Ron Stone,FA,DE,Undisclosed,Questionable,Subscribers Only
 Eli Stove,FA,WR,Knee - ACL,Questionable,Subscribers Only
-Cade Stover,HOU,TE,Appendix,Questionable,Subscribers Only
-Cole Strange,NE,OG,Knee,Questionable,Subscribers Only
+Greg Stroman,NYG,CB,Shoulder,Questionable,Subscribers Only
 Stephen Sullivan,FA,TE,Knee,Out,Subscribers Only
 Nick Sundberg,FA,C,Elbow,Questionable,Subscribers Only
 Sage Surratt,FA,TE,Ankle,Questionable,Subscribers Only
@@ -796,10 +807,9 @@ Tommy Sweeney,FA,TE,Undisclosed,Out,Subscribers Only
 Ryan Swoboda,FA,OT,Undisclosed,Questionable,Subscribers Only
 Donte Sylencieux,FA,WR,Undisclosed,Questionable,Subscribers Only
 Taki Taimani,MIN,DT,Ankle,IR,Subscribers Only
-T.J. Tampa,BAL,CB,Ankle,IR-R,Subscribers Only
 Jonah Tavai,FA,DT,Undisclosed,Questionable,Subscribers Only
 Calvin Taylor,FA,DE,Undisclosed,Questionable,Subscribers Only
-Darrell Taylor,CHI,DE,Shoulder,Questionable,Subscribers Only
+Jawaan Taylor,KC,OT,Knee,Questionable,Subscribers Only
 Leonard Taylor,FA,TE,Undisclosed,Questionable,Subscribers Only
 Malik Taylor,NYJ,WR,Undisclosed,IR,Subscribers Only
 Vincent Taylor,FA,DT,Achilles,Questionable,Subscribers Only
@@ -808,7 +818,7 @@ Isaac Taylor-Stuart,FA,CB,Undisclosed,Questionable,Subscribers Only
 Roderic Teamer,FA,S,Suspension,Reserve-Sus,Subscribers Only
 Marvell Tell,FA,CB,Undisclosed,Questionable,Subscribers Only
 Sam Tevi,FA,OT,Knee - ACL,Questionable,Subscribers Only
-Ambry Thomas,FA,CB,Forearm,Out,Subscribers Only
+Ambry Thomas,FA,CB,Forearm,Questionable,Subscribers Only
 Andrew Thomas,NYG,OT,Foot,IR,Subscribers Only
 Ian Thomas,CAR,TE,Calf,IR,Subscribers Only
 Jaylon Thomas,HOU,OG,Undisclosed,IR,Subscribers Only
@@ -822,10 +832,12 @@ Cody Thompson,FA,WR,Shoulder,Out,Subscribers Only
 Josh Thompson,FA,S,Undisclosed,Questionable,Subscribers Only
 NaJee Thompson,MIN,CB,Knee,IR,Subscribers Only
 Shaq Thompson,CAR,LB,Achilles,IR,Subscribers Only
+Dorian Thompson-Robinson,CLE,QB,Calf,Questionable,Subscribers Only
 Cedric Tillman,CLE,WR,Concussion,Questionable,Subscribers Only
 Levine Toilolo,FA,TE,Achilles,Questionable,Subscribers Only
+Jalen Tolbert,DAL,WR,Finger,Questionable,Subscribers Only
 Tre Tomlinson,LAR,CB,Undisclosed,IR,Subscribers Only
-Casey Toohill,FA,DE,Ribs,Questionable,Subscribers Only
+Tyrone Tracy,NYG,RB,Ankle,Questionable,Subscribers Only
 Badara Traore,FA,OT,Knee,Questionable,Subscribers Only
 Jordan Travis,NYJ,QB,Lower Leg,NFI-R,Subscribers Only
 Bralen Trice,ATL,LB,Knee - ACL,IR,Subscribers Only
@@ -837,6 +849,7 @@ Trai Turner,FA,OG,Quadriceps,Questionable,Subscribers Only
 Delarrin Turner-Yell,DEN,S,Knee - ACL,PUP-R,Subscribers Only
 Lwal Uguak,FA,DT,Undisclosed,Questionable,Subscribers Only
 Halapoulivaati Vaitai,FA,OG,Back,Questionable,Subscribers Only
+Marquez Valdes-Scantling,NO,WR,Illness,Questionable,Subscribers Only
 Zeke Vandenburgh,FA,LB,Leg,Questionable,Subscribers Only
 Ben VanSumeren,PHI,LB,Knee,IR,Subscribers Only
 Zach VanValkenburg,FA,LB,Undisclosed,Questionable,Subscribers Only
@@ -844,7 +857,7 @@ Olivier Vernon,FA,DE,Achilles,Questionable,Subscribers Only
 Jason Verrett,FA,CB,Shoulder,Questionable,Subscribers Only
 Tyler Vrabel,ATL,OT,Undisclosed,Reserve-Ret,Subscribers Only
 Jaylen Waddle,MIA,WR,Knee,Questionable,Subscribers Only
-Kenneth Walker,SEA,RB,Calf,Questionable,Subscribers Only
+Kenneth Walker,SEA,RB,Ankle,Questionable,Subscribers Only
 Michael Walker,FA,WR,Undisclosed,Questionable,Subscribers Only
 Quay Walker,GB,LB,Ankle,Questionable,Subscribers Only
 Caedan Wallace,NE,OT,Ankle,IR-R,Subscribers Only
@@ -853,19 +866,19 @@ Trevin Wallace,CAR,LB,Shoulder,IR,Subscribers Only
 Garret Wallow,TEN,LB,Pectoral,IR,Subscribers Only
 Austin Walter,FA,RB,Undisclosed,Questionable,Subscribers Only
 Prince Tega Wanogho,FA,OT,Quadriceps,Questionable,Subscribers Only
-Ar'Darius Washington,BAL,S,Ankle,Questionable,Subscribers Only
+Jimmie Ward,HOU,S,Foot,IR,Subscribers Only
 Casey Washington,ATL,WR,Concussion,Questionable,Subscribers Only
 Dwayne Washington,FA,RB,Illness,Questionable,Subscribers Only
 Isaiah Washington,FA,WR,Undisclosed,Questionable,Subscribers Only
 Keith Washington,FA,CB,Wrist,Questionable,Subscribers Only
 Tahj Washington,MIA,WR,Undisclosed,IR,Subscribers Only
+Christian Watson,GB,WR,Knee,Questionable,Subscribers Only
 Deshaun Watson,CLE,QB,Achilles,IR,Subscribers Only
 Jaylen Watson,KC,CB,Lower Leg,IR,Subscribers Only
 Leroy Watson,FA,OT,Back,Questionable,Subscribers Only
-T.J. Watt,PIT,LB,Ankle,Questionable,Subscribers Only
 Armani Watts,FA,S,Ankle,Questionable,Subscribers Only
 Armon Watts,NYG,DT,Shoulder,IR,Subscribers Only
-Markees Watts,TB,LB,Knee,IR-R,Subscribers Only
+Markees Watts,TB,LB,Knee,IR,Subscribers Only
 Ryan Watts,PIT,S,Neck,IR,Subscribers Only
 Stephen Weatherly,FA,DE,Knee,Questionable,Subscribers Only
 Marcus Webb,FA,DE,Undisclosed,Questionable,Subscribers Only
@@ -877,8 +890,9 @@ Ian Wheeler,CHI,RB,Knee,IR,Subscribers Only
 David White,JAX,WR,Knee - ACL,IR,Subscribers Only
 DeAndrew White,FA,WR,Undisclosed,Questionable,Subscribers Only
 Drew White,FA,LB,Knee,Questionable,Subscribers Only
+Tre'Davious White,BAL,CB,Shoulder,Questionable,Subscribers Only
 Zamir White,LV,RB,Quadriceps,IR,Subscribers Only
-Jordan Whitehead,TB,S,Pectoral,IR,Subscribers Only
+Jordan Whitehead,TB,S,Pectoral,IR-R,Subscribers Only
 Kedrick Whitehead,FA,S,Undisclosed,Questionable,Subscribers Only
 Jared Wiley,KC,TE,Knee - ACL,IR,Subscribers Only
 Christian Wilkins,LV,DT,Foot,IR,Subscribers Only
@@ -888,12 +902,14 @@ Chase Williams,FA,S,Head,Questionable,Subscribers Only
 Connor Williams,SEA,C,Personal,Reserve-Ret,Subscribers Only
 Damien Williams,FA,RB,Foot,Questionable,Subscribers Only
 Duke Williams,FA,WR,Hamstring,Questionable,Subscribers Only
+Evan Williams,GB,S,Quadriceps,Doubtful,Subscribers Only
 Jarren Williams,FA,CB,Lower Body,Questionable,Subscribers Only
+Jonah Williams,ARI,OT,Knee,Out,Subscribers Only
 Jonathan Williams,FA,RB,Concussion,Questionable,Subscribers Only
 Quinnen Williams,NYJ,DT,Hamstring,Questionable,Subscribers Only
 Raequan Williams,CAR,DT,Undisclosed,IR,Subscribers Only
 Sam Williams,DAL,DE,Knee - ACL,IR,Subscribers Only
-Trent Williams,SF,OT,Ankle,Questionable,Subscribers Only
+Trent Williams,SF,OT,Ankle,Out,Subscribers Only
 Tyrell Williams,FA,WR,Concussion,Questionable,Subscribers Only
 Chris Williamson,FA,CB,Undisclosed,Questionable,Subscribers Only
 Marcus Willoughby,FA,DE,Undisclosed,Questionable,Subscribers Only
@@ -906,7 +922,8 @@ Antoine Winfield,TB,S,Knee,Questionable,Subscribers Only
 Juwann Winfree,IND,WR,Undisclosed,IR,Subscribers Only
 Perrion Winfrey,FA,DT,Ankle,Questionable,Subscribers Only
 Mekhi Wingo,DET,DT,Knee,IR,Subscribers Only
-Dee Winters,SF,LB,Neck,Questionable,Subscribers Only
+Jameis Winston,CLE,QB,Shoulder,Questionable,Subscribers Only
+Dee Winters,SF,LB,Chest,Questionable,Subscribers Only
 Mitch Wishnowsky,SF,P,Back,IR,Subscribers Only
 Anthony Witherstone,FA,CB,Toe,Questionable,Subscribers Only
 Julius Wood,TEN,S,Suspension,Reserve-Sus,Subscribers Only

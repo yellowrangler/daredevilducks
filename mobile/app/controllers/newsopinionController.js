@@ -72,6 +72,11 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
+
+        // 
+        // if set to 1 show playoff status
+        // 
+        $scope.current.playoffoptics = 1;
         
         $scope.current.clinchedteams = {};
         $scope.current.huntteams = {};
