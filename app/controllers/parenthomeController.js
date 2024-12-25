@@ -548,11 +548,6 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
 
         setviewpadding();
 
-        // 
-        // if set to 1 show playoff status
-        // 
-        $scope.current.playoffoptics = 1;
-
         $scope.current.clinchedteams = {};
         $scope.current.huntteams = {};
         $scope.current.bubbleteams = {};
