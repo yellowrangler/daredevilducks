@@ -8,6 +8,10 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
 
     buildplayoffstatus = function (){
       var rv = "";
+      // 
+      // if set to 1 show playoff status
+      // 
+      $scope.current.playoffoptics = 0;
 
       var season = $scope.current.season;
 
@@ -18,7 +22,8 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
         if (data != null)
-          $scope.current.clinchedteams = data; 
+          $scope.current.clinchedteams = data;
+          $scope.current.playoffoptics = 1; 
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -32,6 +37,7 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
       .success( function(data) {
         if (data != null)
           $scope.current.huntteams = data; 
+          $scope.current.playoffoptics = 1; 
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -44,7 +50,8 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
         if (data != null)
-          $scope.current.bubbleteams = data; 
+          $scope.current.bubbleteams = data;
+          $scope.current.playoffoptics = 1;  
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -58,6 +65,7 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
       .success( function(data) {
         if (data != null)
           $scope.current.eliminatedteams = data; 
+          $scope.current.playoffoptics = 1; 
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -72,11 +80,6 @@ controllers.newsopinionController = function ($scope, $http, $location, loginSer
         // this is not getting called at right time for definig top offset 
         // in jquery ready. So adding it here
         //
-
-        // 
-        // if set to 1 show playoff status
-        // 
-        $scope.current.playoffoptics = 1;
         
         $scope.current.clinchedteams = {};
         $scope.current.huntteams = {};

@@ -473,6 +473,10 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
 
     buildplayoffstatus = function (){
       var rv = "";
+      // 
+      // if set to 1 show playoff status
+      // 
+      $scope.current.playoffoptics = 0;
 
       var season = $scope.current.season;
 
@@ -483,7 +487,8 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
         if (data != null)
-          $scope.current.clinchedteams = data; 
+          $scope.current.clinchedteams = data;
+          $scope.current.playoffoptics = 1; 
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -497,6 +502,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       .success( function(data) {
         if (data != null)
           $scope.current.huntteams = data; 
+          $scope.current.playoffoptics = 1; 
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -509,7 +515,8 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
         if (data != null)
-          $scope.current.bubbleteams = data; 
+          $scope.current.bubbleteams = data;
+          $scope.current.playoffoptics = 1;  
       })
       .error( function(edata) {
           rv = "Err"; 
@@ -523,6 +530,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       .success( function(data) {
         if (data != null)
           $scope.current.eliminatedteams = data; 
+          $scope.current.playoffoptics = 1; 
       })
       .error( function(edata) {
           rv = "Err"; 
