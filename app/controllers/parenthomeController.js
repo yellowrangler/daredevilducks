@@ -486,7 +486,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       var q = "season="+season+"&playoffstatus=Clinched";
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
-        if (data != null)
+        if (data != null and data != "")
           $scope.current.clinchedteams = data;
           $scope.current.playoffoptics = 1; 
       })
@@ -500,7 +500,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       var q = "season="+season+"&playoffstatus=Hunt";
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
-        if (data != null)
+        if (data != null and data != "")
           $scope.current.huntteams = data; 
           $scope.current.playoffoptics = 1; 
       })
@@ -514,7 +514,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       var q = "season="+season+"&playoffstatus=Bubble";
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
-        if (data != null)
+        if (data != null and data != "")
           $scope.current.bubbleteams = data;
           $scope.current.playoffoptics = 1;  
       })
@@ -528,7 +528,7 @@ controllers.homeController = function ($scope, $http, $location, $window, $route
       var q = "season="+season+"&playoffstatus=Eliminated";
       teamsFactory.getplayoffstatus(q)
       .success( function(data) {
-        if (data != null)
+        if (data != null and data != "")
           $scope.current.eliminatedteams = data; 
           $scope.current.playoffoptics = 1; 
       })
