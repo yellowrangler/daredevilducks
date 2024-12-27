@@ -143,10 +143,14 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         };
     }
 
-    function getTeamStats (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
+    function getTeamStats (networkiconname,gameday,gametime,hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
     {
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
+
+        $scope.current.networkiconname = networkiconname;
+        $scope.current.gameday = gameday;
+        $scope.current.gametime = gametime;
 
         $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
               'teamStatsDialog',
@@ -193,7 +197,7 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
                             .success( function(data) {
                                 $scope.teamstats = data[0]; 
 
-                                $('#teamStatsDialogModalTitle').text("Team Stats");
+                                $('#teamStatsDialogModalTitle').text("Game Info & Team Stats");
                                 // $('#teamStatsDialogModalBody').html(data);
                                 $('#teamStatsDialogModal').modal();
 
@@ -691,8 +695,8 @@ controllers.pickgamesController = function ($scope, $http, $location, membersFac
         setSelectTeam(teamtype, gamenbr, awayteamid, hometeamid, teamselected);
     }
 
-    $scope.getTeamStats = function (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
-        getTeamStats(hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
+    $scope.getTeamStats = function (networkiconname,gameday,gametime,hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
+        getTeamStats(networkiconname,gameday,gametime,hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
     }
     
 }
@@ -821,10 +825,14 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         };
     }
 
-    function getTeamStats (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
+    function getTeamStats (networkiconname,gameday,gametime,hometeamname,hometeamid,awayteamname,awayteamid,gamenbr)
     {
         $scope.current.hometeamname = hometeamname;
         $scope.current.awayteamname = awayteamname;
+
+        $scope.current.networkiconname = networkiconname;
+        $scope.current.gameday = gameday;
+        $scope.current.gametime = gametime;
 
         $scope.$parent.tracker('get team stats dialog. hometeam:'+$scope.current.hometeamname+' awayteam:'+$scope.current.awayteamname+' gamenbr:'+gamenbr,
               'teamStatsDialog',
@@ -866,7 +874,7 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
 
                             // $scope.teamstat = "";
 
-                            $('#teamStatsDialogModalTitle').text("Team Stats");
+                            $('#teamStatsDialogModalTitle').text("Game Info & Team Stats");
                             // $('#teamStatsDialogModalBody').html(data);
                             $('#teamStatsDialogModal').modal();
 
@@ -1102,8 +1110,8 @@ controllers.viewtotalpickgamesController = function ($scope, $http, $location, t
         selectChange();
     }
 
-    $scope.getTeamStats = function (hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
-        getTeamStats(hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
+    $scope.getTeamStats = function (networkiconname,gameday,gametime,hometeamname,hometeamid,awayteamname,awayteamid,gamenbr) {
+        getTeamStats(networkiconname,gameday,gametime,hometeamname,hometeamid,awayteamname,awayteamid,gamenbr);
     }
 
     $scope.getMemberPickList = function (teamid,gamenbr) {

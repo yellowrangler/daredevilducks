@@ -20,9 +20,9 @@ INSERT INTO preplayofftbl
 VALUES
 (1,2024,'Clinched','1','Chiefs','kc.png','1','Lions','det.png',NULL,NULL),
 (2,2024,'Clinched','2','Bills','buf.png','2','Eagles','phi.png',NULL,NULL),
-(3,2024,'Clinched','3','Steelers','pit.png','5','Vikings','min.png',NULL,NULL),
+(3,2024,'Clinched','3','Ravens','bal.png','5','Vikings','min.png',NULL,NULL),
 (4,2024,'Clinched','4','Texans','hou.png','6','Packers','gb.png',NULL,NULL),
-(5,2024,'Clinched','5','Ravens','bal.png','','','',NULL,NULL),
+(5,2024,'Clinched','5','Steelers','pit.png','','','',NULL,NULL),
 (6,2024,'Hunt','6','Chargers','sd.png','3','Rams','stl.png',NULL,NULL),
 (7,2024,'Hunt','7','Broncos','den.png','4','Falcons','atl.png',NULL,NULL),
 (8,2024,'Hunt','','','','7','Commanders','was.png',NULL,NULL),

@@ -55,7 +55,7 @@
 					<div style="display:inline-block;line-height:55px;"  class="col-xs-3 col-sm-2 col-md-2 col-lg-2" id='pickh_{{game.gamenbr}}_icon' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 					    <input ng-model="game.teamselected" ng-disabled="{{game.awayteamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='pickh_{{game.gamenbr}}' value='{{game.hometeamid}}' type='hidden'/>
 					
-						<img style="display:inline-block;cursor:pointer;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="56" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+						<img style="display:inline-block;cursor:pointer;float:right;" ng-click="getTeamStats(game.networkiconname,game.gameday,game.gametime,game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="56" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
 					</div>
 
 					<div style="display:inline-block;line-height:55px;cursor:pointer;" class="left-column-text col-xs-6 col-sm-8 col-md-8 col-lg-8" name='pickh_div' id='pickh_{{game.gamenbr}}_teamname' ng-class="{{game.hometeamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'" ng-click="setSelectTeam('home',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)">
@@ -74,7 +74,7 @@
 					<div style="display:inline-block;line-height:55px;" class="left-column-text col-xs-3 col-sm-2 col-md-2 col-lg-2" id='picka_{{game.gamenbr}}_icon' ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected' " >
 					    <input ng-model="game.teamselected" ng-disabled="{{game.hometeamid == game.teamselected || game.teamselected == null}}" name='pick_{{game.gamenbr}}' id='picka_{{game.gamenbr}}' value='{{game.awayteamid}}' type='hidden' />
 					
-						<img style="display:inline;cursor:pointer;float:right;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="56" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+						<img style="display:inline;cursor:pointer;float:right;" ng-click="getTeamStats(game.networkiconname,game.gameday,game.gametime,game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="56" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
 					</div>
 
 					<div style="display:inline-block;line-height:55px;cursor:pointer;"  class="left-column-text col-xs-6 col-sm-8 col-md-8 col-lg-8" name='picka_div' id='picka_{{game.gamenbr}}_teamname' ng-click="setSelectTeam('away',game.gamenbr,game.awayteamid,game.hometeamid,game.gamestatus)" ng-class="{{game.awayteamid == game.teamselected}} ? 'teamSelected' : 'teamNotSelected'">
@@ -159,6 +159,18 @@
       </div>
       <div class="modal-body" id="teamStatsDialogModalBody">
       	<table style='width:100%;' class='table' >
+      		<tr >
+      			<td colspan=3 class="left-column-text">
+							<img ng-if="current.networkiconname" height="45" style='padding-left:5px;' ng-src='../img/tvicons/{{current.networkiconname}}'>
+						
+							 <span style="padding-left:10px; font-weight:bold; font-size:16px;">Day:</span> 
+							 <span style="padding-left:5px; font-size:16px;">{{current.gameday}}</span>
+						
+							 <span style="padding-left:10px;font-weight:bold; font-size:16px;">Time:</span>
+							 <span style="padding-left:5px; font-size:16px;"> {{current.gametime}}</span>
+						</td>
+					</tr>
+
 			<tr >
 				<td style='font-weight:bold;padding-top:20px;'>{{teamstats.hometeamname}} (H) VS {{teamstats.awayteamname}} (A)</td>			
 				<td>
