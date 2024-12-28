@@ -35,7 +35,7 @@
 			<div class="pickTeamsPair" >
 				<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row" >
 					<div style="display:inline-block;line-height:50px;"  class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-						<img style="cursor:pointer;" ng-click="getTeamStats(game.networkiconname,game.gameday,game.gametime,  game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
+						<img style="cursor:pointer;" ng-click="getTeamStats(game.networkiconname,game.gameday,game.gamedate,game.gameyear,game.gametime,  game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
 						<!-- <a ng-href="{{game.hometeamurl}}" target="_blank">
 							<img style="display:inline-block;float:right;" height="50" ng-src='../img/nflicons/{{game.hometeamiconname}}'>
 						</a> -->
@@ -51,7 +51,7 @@
 
 			<div style="padding-left:3px;padding-top:3px;padding-bottom:2px;padding-right:3px;" class="row">
 				<div style="display:inline-block;line-height:50px;" class="left-column-text  col-xs-3 col-sm-2 col-md-2 col-lg-2">
-					<img style="cursor:pointer;" ng-click="getTeamStats(game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
+					<img style="cursor:pointer;" ng-click="getTeamStats(game.networkiconname,game.gameday,game.gamedate,game.gameyear,game.gametime,game.hometeamname,game.hometeamid,game.awayteamname,game.awayteamid,game.gamenbr)" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
 					<!-- <a ng-href="{{game.awayteamurl}}" target="_blank">
 						<img style="display:inline-block;float:right;" height="50" ng-src='../img/nflicons/{{game.awayteamiconname}}'>
 					</a> -->
