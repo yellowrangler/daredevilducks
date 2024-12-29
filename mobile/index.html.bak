@@ -52,42 +52,42 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- App libs -->
-<script src="app/dddAppMobile.js?dddver=DMV12272024"></script>
+<script src="app/dddAppMobile.js?dddver=DMV12282024"></script>
 
 <!-- controllers  -->
-<script src="app/controllers/firstController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/parenthomeController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/surveyController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/gamesController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/playerstatsController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/teamsController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/awardsController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/newsopinionController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/adminController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/faqsController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/surveyController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/fireworksController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/spookyController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/happyholidaysController.js?dddver=DMV12272024"></script>
-<script src="app/controllers/lastController.js?dddver=DMV12272024"></script>
+<script src="app/controllers/firstController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/parenthomeController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/surveyController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/gamesController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/playerstatsController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/teamsController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/awardsController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/newsopinionController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/adminController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/faqsController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/surveyController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/fireworksController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/spookyController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/happyholidaysController.js?dddver=DMV12282024"></script>
+<script src="app/controllers/lastController.js?dddver=DMV12282024"></script>
 <!-- factories  -->
-<script src="app/factories/loginfactory.js?dddver=DMV12272024"></script>
-<script src="app/factories/membersfactory.js?dddver=DMV12272024"></script>
-<script src="app/factories/scriptsfactory.js?dddver=DMV12272024"></script>
-<script src="app/factories/surveyfactory.js?dddver=DMV12272024"></script>
+<script src="app/factories/loginfactory.js?dddver=DMV12282024"></script>
+<script src="app/factories/membersfactory.js?dddver=DMV12282024"></script>
+<script src="app/factories/scriptsfactory.js?dddver=DMV12282024"></script>
+<script src="app/factories/surveyfactory.js?dddver=DMV12282024"></script>
 
-<script src="app/factories/teamsfactory.js?dddver=DMV12272024"></script>
+<script src="app/factories/teamsfactory.js?dddver=DMV12282024"></script>
 <!-- services  -->
-<script src="app/services/msgservice.js?dddver=DMV12272024"></script>
-<script src="app/services/loginservice.js?dddver=DMV12272024"></script>
-<script src="app/services/teamservice.js?dddver=DMV12272024"></script>
-<script src="app/services/chartservice.js?dddver=DMV12272024"></script>
-<script src="app/services/selectlistservice.js?dddver=DMV12272024"></script>
+<script src="app/services/msgservice.js?dddver=DMV12282024"></script>
+<script src="app/services/loginservice.js?dddver=DMV12282024"></script>
+<script src="app/services/teamservice.js?dddver=DMV12282024"></script>
+<script src="app/services/chartservice.js?dddver=DMV12282024"></script>
+<script src="app/services/selectlistservice.js?dddver=DMV12282024"></script>
 
-<script src="app/directives/directives.js?dddver=DMV12272024"></script>
-<script src="app/validations/validate.js?dddver=DMV12272024"></script>
+<script src="app/directives/directives.js?dddver=DMV12282024"></script>
+<script src="app/validations/validate.js?dddver=DMV12282024"></script>
 
-<script src="script/dddMobile.js?dddver=DMV12272024"></script>
+<script src="script/dddMobile.js?dddver=DMV12282024"></script>
 </head>
 
 <body style="background:white;overflow-y: scroll;" data-ng-controller="dddParentController" >
@@ -203,19 +203,21 @@
         -->
 
          
+        <!-- 
         <article style="margin-bottom:25px;">
             <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Merry Christmas to All!','Christmas-HomeScrn-2022.png')">
                 <img ng-src='../img/Christmas-HomeScrn-2022.png'  style="height:100px;text-align:center;" alt="Merry Christmas!"> 
             </a>
         </article>  
+        --> 
 
-        <!-- 
+        
         <article style="margin-bottom:25px;">
-            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Happy New Year to All!','NewYear2021HomeScrn3.png')">
-                <img ng-src='../img/NewYear2021HomeScrn2.png'  style="height:100px;text-align:center;" alt="Happy New Year!"> 
+            <a id="showpicture" name="showpicture" href="" ng-click="showPicture('Happy New Year!','NewYear2021HomeScrn3.png')">
+                <img ng-src='../img/NewYear-2025Home.png'  style="height:100px;text-align:center;" alt="Happy New Year!"> 
             </a>
         </article> 
-        -->  
+         
        
 
         <article style="margin-bottom:25px;">
@@ -227,7 +229,7 @@
         <article style="margin-bottom:25px;">
             <h4 style="color: teal;
                 text-align:center;">
-                Version: DMV12272024  
+                Version: DMV12282024  
             </h4>
         </article>  
 
@@ -257,11 +259,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 id="homePicShowModalTitle" class="modal-title" style="font-family:'ChopinScript',serif;font-size:28px;color:#4d9e3a;text-align:center" id="homePicModalTitle"></h4>
+        <h4 id="homePicShowModalTitle" class="modal-title" style="font-family:'metro-retro',serif;font-size:28px;color:#4d9e3a;text-align:center" id="homePicModalTitle"></h4>
       </div>
       <div class="modal-body">
         <p id="homePicModalBody">
-            <img ng-src={{showPictureSrc}} style="width:100%;text-align:center;" alt="Thank you Lord for all that we have!">
+            <img ng-src={{showPictureSrc}} style="width:100%;text-align:center;" alt="Happy New Year!">
         </p>
       </div>
       <div class="modal-footer">
