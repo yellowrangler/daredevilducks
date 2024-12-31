@@ -2,19 +2,28 @@
 
 $emailtopwriteup = "	
 <p>
-In the Thursday night game the Chargers beat the Broncos.
+In the Wednesday games the Chiefs beat the Steelers in Pittsburgh. The Ravens beat the Texans in Houston.
 </p> 
 
 <p>
-In Sunday games - The Chiefs beat the Texans. The Ravens beat the Steelers. The Bengals beat the Browns. The Falcons crushed the Giants. The Panthers beat the Cardinals in overtime. The Lions beat the Bears in Chicago. The Colts beat the Titans. The Rams beat the Jets. The Commanders beat the Eagles after Jalen Hurts was knocked out of the game with a concussion. The Vikings beat the Seahawks. The Bills beat the Patriots. The Dolphins beat the 49ers. The Jaguars beat the Raiders. In the night game the Cowboys beat the Buccaneers.
+In the Thursday night game the Seahawks beat the Bears in Chicago.
 </p> 
 
 <p>
-In the Monday night game - The Packers shut out the Saints.
-</p>     
+In the Saturday games the Chargers pummeled the Patriots in Foxborough. The Bengals beat the Broncos to stay in the playoff hunt. The Rams beat the Cardinals.
+</p> 
 
 <p>
-A great Sixteenth week! The season is beginning to come to an end! So pick carefully!  
+In Sunday games - The Bills crushed the Jets. The Jaguars beat the Titans. The Raiders beat the Saints in New Orleans. The Giants beat the Colts. The Buccaneers beat the Panthers. The Eagles pounded the Cowboys. The Dolphins beat the Browns and the Vikings eked a win over the Packers. In the late night game, the Commanders earned a playoff spot by beating the Falcons.
+</p> 
+
+<p>
+In the Monday night game - The Lions beat the 49ers.
+</p>   
+
+
+<p>
+A great Seventeenth week! The season is rapidly coming to an end! So pick carefully!  
 </p>
 
 <p>
