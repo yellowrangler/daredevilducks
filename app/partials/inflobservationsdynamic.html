@@ -165,3 +165,16 @@ Week 17 has finished and, with apologies to Glen Frey, the heat is on! It's time
 	</tbody>
 </table>
 </div>
+
+<div style="padding-top:50px;text-align:center;" ng-if="bracket.length" class="pageStandardOffset">
+	<p style="padding-top: 15px;">
+  	<p class="nflObservationsSubHeaders"><span class="nflBracketText">
+  		Current Playoff Bracket</span>
+  	</p>
+	</p>
+	<div class="">
+		<a id="showpicture" name="showpicture" href="" ng-click="showPicture('Season Playoff Bracket',bracket)">
+			<img style="width:100%;padding:5px;" class="center-block img-rounded" ng-src="{{$parent.imagePath}}/{{bracket}}">
+		</a>
+	</div> <!-- end of col -->
+</div> <!-- end of row -->

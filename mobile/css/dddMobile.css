@@ -1120,3 +1120,9 @@ border: 0 none;
 	color:#929999;
 }
 
+.nflBracketText {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	color:#4ba0c2;
+}

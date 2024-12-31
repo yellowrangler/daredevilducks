@@ -161,6 +161,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                                 {
                                     $scope.current.season = data.season; 
                                     $scope.current.bracket = data.bracket;
+                                    $scope.bracket = data.bracket;
                                 }
                             })
                             .error( function(edata) {

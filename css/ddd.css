@@ -1383,7 +1383,7 @@ border: 0 none;
 .nflObservationsSubHeadersText {
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
-	font-size: 25px;
+	font-size: 20px;
 	color:#d68ca7;
 }
 
@@ -1406,4 +1406,11 @@ border: 0 none;
 	font-weight:bold;
 	padding:15px;
 	color:#929999;
+}
+
+.nflBracketText {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	color:#4ba0c2;
 }
