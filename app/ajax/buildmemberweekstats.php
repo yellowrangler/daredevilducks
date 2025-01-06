@@ -538,9 +538,11 @@ while($row = mysqli_fetch_assoc($sql_result_members))
 	//
 
 	// debug
-	// print "<br /> <br />loop thru rest of weeks <br />";
-	// print "<br /> start = $week. weeksinregularseason = $weeksinregularseason memberid = $memberid <br />";
+	// print "(<br /> <br />loop thru rest of weeks <br />)";
+	// print "(<br /> start = $week. weeksinregularseason = $weeksinregularseason memberid = $memberid <br />)";
 
+	// debug
+	// print("<br /> gametypeid = $gametypeid <br /> ");
 	// Fix for start of season, Set gametypeid = 2
 	if ($gametypeid == 0)
 	{
