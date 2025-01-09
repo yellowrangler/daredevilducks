@@ -1,10 +1,6 @@
 <?php
 
 $emailtopwriteup = "	
-<p style="padding-top: 5px;">
-  <span class="newsOpinionHeaders">The regular season is Over! Prepare for Wildcard Week 19!</span>
-</p> 
-
 <p>
 In the Saturday games the Ravens crushed the Browns. In the night game the Bengals beat the Steelers keeping their playoff hopes alive for a few hours! 
 </p> 
