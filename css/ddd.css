@@ -1429,3 +1429,7 @@ border: 0 none;
 	font-size: 20px;
 	color:#78290b;
 }
+
+.shadowImg {
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+}
