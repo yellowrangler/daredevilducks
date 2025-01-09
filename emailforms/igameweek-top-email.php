@@ -1,29 +1,20 @@
 <?php
 
 $emailtopwriteup = "	
-<p>
-In the Wednesday games the Chiefs beat the Steelers in Pittsburgh. The Ravens beat the Texans in Houston.
+<p style="padding-top: 5px;">
+  <span class="newsOpinionHeaders">The regular season is Over! Prepare for Wildcard Week 19!</span>
 </p> 
 
 <p>
-In the Thursday night game the Seahawks beat the Bears in Chicago.
+In the Saturday games the Ravens crushed the Browns. In the night game the Bengals beat the Steelers keeping their playoff hopes alive for a few hours! 
 </p> 
 
 <p>
-In the Saturday games the Chargers pummeled the Patriots in Foxborough. The Bengals beat the Broncos to stay in the playoff hunt. The Rams beat the Cardinals.
+In Sunday games - The Panthers beat the Falcons in Atlanta, knocking them out of the playoffs. The Commander beat the Cowboys. The Bears beat the Packers in Green Bay. The Colts beat the Jaguars and the Patriots beat a depleted Bills team. The Eagles beat the Giants. The Buccaneers beat the Saints ensuring a playoff spot. The Texans beat the Titans. The Cardinals beat the 49ers. The Broncos beat the Chiefs in Denver guaranteeing them a playoff spot. The Seahawks beat the Rams. The Chargers beat the Raiders. The Jets beat the Dolphins. In the late night game the Lions beat the Vikings in a thriller.
 </p> 
 
 <p>
-In Sunday games - The Bills crushed the Jets. The Jaguars beat the Titans. The Raiders beat the Saints in New Orleans. The Giants beat the Colts. The Buccaneers beat the Panthers. The Eagles pounded the Cowboys. The Dolphins beat the Browns and the Vikings eked a win over the Packers. In the late night game, the Commanders earned a playoff spot by beating the Falcons.
-</p> 
-
-<p>
-In the Monday night game - The Lions beat the 49ers.
-</p>   
-
-
-<p>
-A great Seventeenth week! The season is rapidly coming to an end! So pick carefully!  
+A great Eighteenth week! So ends the regular season. Bring on the Playoffs!  
 </p>
 
 <p>
