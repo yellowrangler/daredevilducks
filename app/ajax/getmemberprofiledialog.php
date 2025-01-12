@@ -68,7 +68,7 @@ $sql = "SELECT
 	T.teamurl as favoriteteamurl
 FROM membertbl M 
 LEFT JOIN teamstbl T on T.id = M.favoriteteamid
-WHERE M.id = '$memberid' AND M.status = 'active'";
+WHERE M.id = '$memberid'";
 
 // print $sql;
 // exit();

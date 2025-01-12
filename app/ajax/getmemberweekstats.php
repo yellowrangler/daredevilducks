@@ -60,13 +60,14 @@ if ($membergroupid == 0)
     FROM membertbl M
     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
     LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
-    WHERE  M.status = 'active'
-    AND MS.season = $season AND MS.week = $week";
+    WHERE ( (MS.wins + MS.losses + MS.ties) > 0 )
+    AND MS.season = $season AND MS.week = $week
+    AND M.role != 'expert' ";
 
-    if ($showexperts == 0)
-    {
-        $sql = $sql . " AND M.role != 'expert' ";
-    }
+    // if ($showexperts == 0)
+    // {
+    //     $sql = $sql . " AND M.role != 'expert' ";
+    // }
     
     $sql = $sql . " ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 }
@@ -88,7 +89,8 @@ else
     LEFT JOIN membertbl M ON M.id = MG.memberid
     LEFT JOIN memberweekstatstbl MS on M.id = MS.memberid
     LEFT JOIN gameweekstbl GW on MS.week = GW.week AND MS.season = GW.season
-    WHERE M.status = 'active' AND MG.membergroupid = $membergroupid
+    WHERE ( (MS.wins + MS.losses + MS.ties) > 0 )
+    AND MG.membergroupid = $membergroupid
     AND MS.season = $season AND MS.week = $week
     ORDER BY MS.wins DESC, MS.losses ASC, M.screenname ASC";
 }

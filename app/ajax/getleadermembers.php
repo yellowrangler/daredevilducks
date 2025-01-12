@@ -84,9 +84,13 @@ else
 
 if ($membergroupid == 0)
 {
+  // $sql = $sql . "
+  // WHERE M.status = 'active'
+  // AND MS.season = '$season' AND gametypeid = $gametypeid";
+
   $sql = $sql . "
-  WHERE M.status = 'active'
-  AND MS.season = '$season' AND gametypeid = $gametypeid";
+  WHERE MS.season = '$season' AND gametypeid = $gametypeid
+  AND ( (MS.wins + MS.losses + MS.ties) > 0 )";
 
   //
   // only applicable in non group lists
@@ -98,9 +102,14 @@ if ($membergroupid == 0)
 }
 else
 {
+  // $sql = $sql . "
+  // WHERE M.status = 'active' AND MG.membergroupid = '$membergroupid'
+  // AND MS.season = '$season' AND gametypeid = $gametypeid";
+
   $sql = $sql . "
-  WHERE M.status = 'active' AND MG.membergroupid = '$membergroupid'
-  AND MS.season = '$season' AND gametypeid = $gametypeid";
+  WHERE MS.season = '$season' AND MG.membergroupid = '$membergroupid'
+  AND gametypeid = $gametypeid
+  AND ( (MS.wins + MS.losses + MS.ties) > 0 )";
 }
 
 
