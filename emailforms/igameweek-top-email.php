@@ -2,15 +2,19 @@
 
 $emailtopwriteup = "	
 <p>
-In the Saturday games the Ravens crushed the Browns. In the night game the Bengals beat the Steelers keeping their playoff hopes alive for a few hours! 
+In the Saturday Wildcard games the <span style='font-weight:bold;color:#1280d6;'>Texans</span> beat the <span style='font-weight:bold;color:#1280d6;'>Chargers</span>. In the night game the <span style='font-weight:bold;color:#1280d6;'>Ravens</span> crushed the <span style='font-weight:bold;color:#1280d6;'>Steelers</span>! 
 </p> 
 
 <p>
-In Sunday games - The Panthers beat the Falcons in Atlanta, knocking them out of the playoffs. The Commanders beat the Cowboys. The Bears beat the Packers in Green Bay. The Colts beat the Jaguars and the Patriots beat a depleted Bills team. The Eagles beat the Giants. The Buccaneers beat the Saints ensuring a playoff spot. The Texans beat the Titans. The Cardinals beat the 49ers. The Broncos beat the Chiefs in Denver guaranteeing them a playoff spot. The Seahawks beat the Rams. The Chargers beat the Raiders. The Jets beat the Dolphins. In the late night game the Lions beat the Vikings in a thriller.
+In Sunday Wildcard games - The <span style='font-weight:bold;color:#1280d6;'>Bills</span> stampeded over the <span style='font-weight:bold;color:#1280d6;'>Broncos</span>. In spite of the large margin of loss, the Broncos look primed for next year. The <span style='font-weight:bold;color:#1280d6;'>Eagles</span> easily dispatched the <span style='font-weight:bold;color:#1280d6;'>Packers</span>. The <span style='font-weight:bold;color:#1280d6;'>Commanders</span> beat the <span style='font-weight:bold;color:#1280d6;'>Buccaneers</span> in an exciting contest.
 </p> 
 
 <p>
-A great Eighteenth week! So ends the regular season. Bring on the Playoffs!  
+In the Monday night Wildcard game - The <span style='font-weight:bold;color:#1280d6;'>Rams</span> trampled the <span style='font-weight:bold;color:#1280d6;'>Vikings</span>. This was a disappointing loss for a Vikings team that showed so much prowess during the regular season.
+</p>   
+
+<p>
+A great Wildcard week! Bring on the Divisionals!  
 </p>
 
 <p>

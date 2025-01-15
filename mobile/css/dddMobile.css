@@ -1145,3 +1145,9 @@ border: 0 none;
 .shadowImg {
 	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
+
+.emphasis {
+	font-weight:bold;
+	color: #1280d6;
+/*	font-style: italic;*/
+}
