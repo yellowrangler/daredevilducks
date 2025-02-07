@@ -1,0 +1,29 @@
+trackaction
+getMemberPickList
+savePickGames
+hallofFame
+weeklyTotals
+playerTotals
+teamStatsDialog
+teamScoresStats
+teamStandings
+hallofMemory
+nflNews
+teamCharts
+login
+faqs
+pickgameshelp
+viewTotalPickGames
+ChristmasSnow
+pickgames
+player totals
+teamBrackets
+memberUpdate
+takeSurvey
+surveyResults
+helpRequest
+team scores and stats
+init
+hall of memory
+hall of fame
+teamDiscovery

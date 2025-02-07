@@ -17,7 +17,7 @@ controllers.halloffameController = function ($scope, $http, $location, loginServ
         //
         setviewpadding();
 
-        $scope.$parent.tracker('hall of fame',
+        $scope.$parent.tracker('hallofFame',
               'hallofFame',
               'halloffameController',
               'NA',
@@ -171,7 +171,7 @@ controllers.hallofmemoryController = function ($scope, $http, $location, loginSe
         $homdetail = "";
         $scope.hallofmemorys = "";
 
-        $scope.$parent.tracker('hall of memory',
+        $scope.$parent.tracker('hallofMemory',
               'hallofMemory',
               'hallofmemoryController',
               'NA',

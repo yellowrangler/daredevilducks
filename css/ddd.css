@@ -82,6 +82,22 @@
     src: url('fonts/cormorant/cormorant/Cormorant-SemiBoldItalic.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Middleearth';
+    src: url('fonts/middleearth-font/Middleearth-ao6m.ttf') format('truetype');
+}
+
+/*@font-face {
+    font-family: 'Aniron-font';
+    src: url('fonts/aniron-font/Aniron-7BaP.ttf') format('truetype');
+}*/
+
+@font-face {
+    font-family: 'Aniron';
+    src: url('fonts/aniron-font/AnironcBold-PKwr.ttf') format('truetype');
+}
+
+
 /* create sticky menu bar */
 .fixed { position: fixed; left: 0px; top: 0px; right: 0px; z-index: 1; }
 
@@ -1416,7 +1432,7 @@ border: 0 none;
 }
 
 .nflBracketText {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Middleearth', sans-serif;
 	font-weight: 700;
 	font-size: 20px;
 	color:#4ba0c2;
