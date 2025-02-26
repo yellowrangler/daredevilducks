@@ -1,3 +1,14 @@
+SELECT  memberid, membername, season
+FROM memberstatstbl MS
+LEFT JOIN membertbl M on MS.memberid = M.id
+WHERE memberid = 69
+group by season
+
+how many seasons 
+
+
+
+
 SELECT  memberid, membername, COUNT(*)
 FROM memberpickstbl MP
 LEFT JOIN membertbl M on MP.memberid = M.id
