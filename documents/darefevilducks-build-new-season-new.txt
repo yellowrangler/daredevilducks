@@ -1,0 +1,28 @@
+How to build new NFL Dare Devil Ducks Season New
+
+
+1. Go to the website http://www.pro-football-reference.com/years/xxxx/games.htm where xxxx is the NFL season (eg 2023) and create csv game file. Screen scrape (copy the relevant items) copy into a spreadsheet a pear down. s a file named 2023NFLSeasonSchedule.csv
+
+2. Add the bye teams. I used this url for 2023 https://www.footballdiehards.com/nfl-bye-weeks.cfm. Again screen scrape (copy the relevant items) copy into a spreadsheet a pear down. Create a file named 2023NFLSeasonbye.csv
+
+3. Bring YYYYNFLSeasonGameWeeks up where YYYY is last years csv file. Make appropriate changes for new NFL season. This is a crucial file and is monotonous and tedious. The week starts on a Thursday (Yes Thursday) and ends on Tuesday.      
+
+NFL in a nutshell: 32 teams, each play 17 games in regular season that spans 18 weeks. Each team gets a bye week - where players can rest. After the regular season, playoffs begin. 12 teams qualify for playoffs. Playoffs consists of wildcard week, divisional week, conference championships, a bye-week and ends with SuperBowl. So 18 weeks + 3 playoffs + Super Bowl = 22 weeks!
+
+4. At this time make any changes to team names or locations via the admin screen.
+
+5. DO A COMPLETE BACKUP OF THE DDD DATABASE. This way you can stop and re-add data if you make a mistake.  Use the following command: mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd > ddd-dump-nflxxxx.sql. 
+
+If you need to restore the backup you must do it from the linux command line. EG. mysql -u tarryc -p ddd < ddd-dump-nfl2015-bkup.sql
+
+6. Go to the admin screen -> System scripts -> choose New Season Setup. Put appropriate file names into each input field and hit button.
+
+7. Your new NFL season should now be up. Next Statistics and images.
+
+8. Go to System Scripts under Admin and select “Run Game scripts”. Review all tables to see if populated.
+
+9. You must import last seasons last TeamWeeklyRanking and rename it to be first before EG TeamWeekRank2025W1Before.csv. If you dont do this the stats that pop up will be broken. 
+
+10. Add new images.
+
+11. Get injury reports from https://www.rotowire.com/football/injury-report.php. Clean up a css file and review injury folder in sys directory for tools to create for import.
