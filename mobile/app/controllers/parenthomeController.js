@@ -82,6 +82,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 500);
 
         $scope.current = {};
+        $scope.newseason = true;
 
        // parent.document.body.style.overflowY='scroll';
 
@@ -150,7 +151,20 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                     .success( function(data) {
                         $scope.weeks = data; 
 
-                        var q = "season="+$scope.current.season; 
+                        // this is a hack to insure that last years bracket shows up until
+                        // newseason variable (in init) turns to false
+
+                        if ($scope.newseason)
+                        {
+                            bracketseason = $scope.current.season - 1;
+                        }
+                        else
+                        {
+                            bracketseason = $scope.current.season;
+                        } 
+
+                        var q = "season="+bracketseason; 
+                        // var q = "&season="+$scope.current.season;
 
                         // get team bracket image for showpic. Remove this if decide to not show.                           
                         teamsFactory.getTeamBracket(q)

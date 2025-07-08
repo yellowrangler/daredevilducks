@@ -1433,7 +1433,8 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
         teamsFactory.saveTeamBracket(sdata)
             .success( function(data) {
                 var q = "season="+$scope.current.season;
-                getTeamBracketInfo(q);
+                getTeamBracket(q);
+                // getTeamBracketInfo(q);
 
                 $('#teamBracketInfoSavedDialogModalTitle').text("Success");
                 $('#teamBracketInfoSavedDialogModalBody').html(data);
@@ -1444,6 +1445,14 @@ controllers.teamsbracketsinfoController = function ($scope, $http, $location, te
             });
 
         var i = 0;
+    }
+
+    function getTeamBracket(season)
+    {
+        var q = "season="+season;
+        getTeamBracketInfo(q);
+
+     
     }
 
 
