@@ -10,9 +10,11 @@ import shutil
 ######################################################################################################
 # Author: Tarrant Cutler Jr
 # Date: 10/19/2023
-# Updated: 1010/2024 - add copy to data/importfiles. Add request for week now added to filename!
+# Updated: 10/10/2024 - add copy to data/importfiles. Add request for week now added to filename!
 # Description: Read in NFL Injury CSV file from RottoWire. Convert Team abbreviation to TemID on 
 #              DDD Database
+# Updated: 09/01/2025 - csv fileno longer hasest return column. dont delete
+# 
 ######################################################################################################
 
 
@@ -171,7 +173,7 @@ with open(output_injury_file, 'w', newline='') as csv_file_out:
           row['Team'] = teamid
 
           # drop the estimated return column then write out new row
-          del row['Est. Return']
+          # del row['Est. Return']
  
           csv_writer_out.writerow(row) 
 
