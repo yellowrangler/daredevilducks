@@ -234,8 +234,8 @@ border: 0 none;
 }
 
 .mainTitle {
-/*	color:#6C0000;*/
-	color:#e1adad;
+	color:#6C0000;
+	/*color:#e1adad;*/
 	font-size: 42px;
 	font-family: 'Lato', sans-serif;
 /*	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;*/
@@ -340,8 +340,8 @@ border: 0 none;
 }*/
 
 .headerTitle {
-/*	color:#6C0000;*/
-	color:#e1adad;
+	color:#6C0000;
+	/*color:#e1adad;*/
 /*	font-family: 'Damion', 'Oleo Script Swash Caps', Helvetica, sans-serif;*/
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
