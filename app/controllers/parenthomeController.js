@@ -158,7 +158,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
         // remmber to remove any new season remarks
         // this is a hack
         
-        $scope.newseason = true;
+        $scope.newseason = false;
 
         var ua = getUserAgent();
         $scope.current.devicename = ua.deviceName; 

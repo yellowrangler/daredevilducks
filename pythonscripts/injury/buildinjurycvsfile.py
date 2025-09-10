@@ -173,7 +173,7 @@ with open(output_injury_file, 'w', newline='') as csv_file_out:
           row['Team'] = teamid
 
           # drop the estimated return column then write out new row
-          # del row['Est. Return']
+          del row['Est. Return']
  
           csv_writer_out.writerow(row) 
 

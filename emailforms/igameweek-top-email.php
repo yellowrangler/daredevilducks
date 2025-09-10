@@ -2,23 +2,40 @@
 
 $emailtopwriteup = "
 <p>
-In Sundays Superbowl match up the <span style='font-weight:bold;color:#1280d6;'>Eagles</span> crushed the <span style='font-weight:bold;color:#1280d6;'>Chiefs</span> in a game nobody expected! The Chiefs this season have had a plethora of questionable timely calls. It didn't help that the game started inauspiciously with two questionable calls against the Eagles. 
+What a great start to the season! I can't remember a season start with so many not only close games, but unbelievable comebacks!
 </p>
 
 <p>
-But it was for not, as the Eagles began putting a serious whopping on the Chiefs. The Eagles defensive line kept Mahomes on the run most of the game. The Chiefs never really got going until late in the game where they were able to make the score look closer then it actually was. 
+In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Eagles</span> retained their Super Bowl ways beating the <span style='color:#1280D6;font-weight:900;'>Cowboys</span>. 
 </p>
 
 <p>
-    <span style='font-weight:bold;color:#1280d6;'>Hail to the Eagles! Your 2024 Superbowl Champions</span>!
+In a special Friday night game the <span style='color:#1280D6;font-weight:900;'>Chargers</span> beat the heavily favored <span style='color:#1280D6;font-weight:900;'>Chiefs</span> in Brazil! 
+</p>
+
+<p>
+In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in a thriller. The <span style='color:#1280D6;font-weight:900;'>Bengals</span> beat the <span style='color:#1280D6;font-weight:900;'>Browns</span> in another thrilling and close contest! The <span style='color:#1280D6;font-weight:900;'>Colts</span> came out firing on all cylinders as they squished the <span style='color:#1280D6;font-weight:900;'>Dolphins</span>. The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> crushed the hapless <span style='color:#1280D6;font-weight:900;'>Panthers</span>. 
+</p>
+
+<p>
+The <span style='color:#1280D6;font-weight:900;'>Raiders</span> beat the <span style='color:#1280D6;font-weight:900;'>Patriots</span> in New England. The <span style='color:#1280D6;font-weight:900;'>Cardinals</span> beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in a another thriller! The <span style='color:#1280D6;font-weight:900;'>Steelers</span> with their new QB Arron Rodgers, beat the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York. The <span style='color:#1280D6;font-weight:900;'>Commanders</span> crushed the <span style='color:#1280D6;font-weight:900;'>Giants</span>.
+</p>
+
+<p>
+The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Titans</span> and <span style='color:#1280D6;font-weight:900;'>49ers</span> beat the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> in Seattle. The <span style='color:#1280D6;font-weight:900;'>Packers</span> crushed the <span style='color:#1280D6;font-weight:900;'>Lions</span>. The <span style='color:#1280D6;font-weight:900;'>Rams</span> beat the <span style='color:#1280D6;font-weight:900;'>Texans</span>.
+</p>
+
+<p>
+In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the  <span style='color:#1280D6;font-weight:900;'>Ravens</span> in again another amazing thriller and comeback! 
+</p>
+
+<p>
+In the Monday night game the <span style='color:#1280D6;font-weight:900;'>Vikings</span> beat the  <span style='color:#1280D6;font-weight:900;'>Bears</span> in Chicago in yet again another amazing thriller and comeback! 
+</p>
+
+<p>
+  All in all a superb week of football!
 </p> 
-
-<span style='color:#FF6E3B;font-weight:700;'>The Juice Is Loose</span> is now our official <span style='font-weight:bold; color:maroon;'> Daredevil Ducks first place Champion</span> for the 2024 Season!  
-</p>
-
-<p>
-  So please raise a glass with the beverage of your choice and salute <span style='color:#FF6E3B;font-weight:700;'>The Juice Is Loose</span>! He was able to weather all storms proving his metal as a football savant!
-</p>
 
 
 <p>
