@@ -82,7 +82,7 @@ controllers.dddParentController = function ($scope, $http, $window, $route, $loc
                 500);
 
         $scope.current = {};
-        $scope.newseason = true;
+        $scope.newseason = false;
 
        // parent.document.body.style.overflowY='scroll';
 

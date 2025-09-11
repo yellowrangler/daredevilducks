@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+
+import pandas as pd
+import math
+
 import csv
 import datetime
 import sys
@@ -13,8 +17,7 @@ import shutil
 # Updated: 10/10/2024 - add copy to data/importfiles. Add request for week now added to filename!
 # Description: Read in NFL Injury CSV file from RottoWire. Convert Team abbreviation to TemID on 
 #              DDD Database
-# Updated: 09/01/2025 - csv file no longer has est return column. dont delete
-# Updated: 09/10/2025 - csv file again has est return column. added delete back
+# Updated: 09/01/2025 - csv fileno longer has est return column. dont delete
 # 
 ######################################################################################################
 
@@ -49,15 +52,10 @@ counters = {
 # get team conversion file
 #
 def getconversionfile(): 
-  tc_dict = dict();
-  
-  with open(input_conversion_file, mode='r', encoding='utf-8-sig') as csv_file:
-    csv_reader = csv.DictReader(csv_file)
-    tc_dict = [row for row in csv_reader]
+  # read the cvs injury file into a datframe
+  df = pd.read_csv('data/fb_price.csv')
 
-  csv_file.close()
-
-  return tc_dict
+  return df
 
 #
 # convert team abbreviation to team id
@@ -149,6 +147,12 @@ conversion_dict = getconversionfile()
 # 
 # start output file. Then read in injury file - make changes to rows and write output
 # 
+
+
+
+brake the car
+
+
 
 # open output file
 with open(output_injury_file, 'w', newline='') as csv_file_out:
