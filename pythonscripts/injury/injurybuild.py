@@ -13,11 +13,9 @@ import shutil
 
 ######################################################################################################
 # Author: Tarrant Cutler Jr
-# Date: 10/19/2023
-# Updated: 10/10/2024 - add copy to data/importfiles. Add request for week now added to filename!
+# Date: 09/12/2025
 # Description: Read in NFL Injury CSV file from RottoWire. Convert Team abbreviation to TemID on 
-#              DDD Database
-# Updated: 09/01/2025 - csv fileno longer has est return column. dont delete
+#              DDD Database - rewritten from buildinjurycvsfile.py
 # 
 ######################################################################################################
 
@@ -52,15 +50,30 @@ counters = {
 # get team conversion file
 #
 def getconversionfile(): 
-  # read the cvs injury file into a datframe
-  df = pd.read_csv('data/fb_price.csv')
+  tc_dict = dict();
+  
+  with open(input_conversion_file, mode='r', encoding='utf-8-sig') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    tc_dict = [row for row in csv_reader]
+
+  csv_file.close()
+
+  return tc_dict
+
+
+#
+# get injury  file
+#
+def getinjuryfile(filename): 
+  # read the cvs injury file into a dataframe
+  df = pd.read_csv(filename)
 
   return df
 
 #
 # convert team abbreviation to team id
 #
-def cvtinjury(teamabbrev): 
+def cvtinjury(teamabbrev, conversion_dict): 
   for row in conversion_dict:
     if teamabbrev == row['TA']:
       teamid = row['TI']
@@ -140,56 +153,37 @@ str_current_datetime = str(current_datetime)
 output_injury_file = output_injury + "-season" + output_injury_season + "-week" + output_injury_week + "-" + str_current_datetime + ".csv"
 
 # 
-# get the conversion file. read into dict
+# get the conversion file. read into data frame
 # 
-conversion_dict = getconversionfile()
+conv_dict = getconversionfile()
 
 # 
-# start output file. Then read in injury file - make changes to rows and write output
+# get the injury file. read into data frame
 # 
+injury_df = getinjuryfile(input_injury_file)
 
+# remove superfluous columns
+injury_df = injury_df[['Player','Team','Pos','Injury','Status']]
 
+# drop indices where Team = FA
+indices_to_drop = injury_df.loc[injury_df['Team'] == 'FA'].index
+injury_df.drop(indices_to_drop, inplace=True)
 
-brake the car
+# convert team name ti db id
+for index, row in injury_df.iterrows():
+  row['Team'] = cvtinjury(row['Team'], conv_dict)
+  
+# 
+# build output file name
+# 
+current_datetime = date.today().strftime('%m%d%Y')
+str_current_datetime = str(current_datetime)
 
+# create a file object along with extension
+output_injury_file = output_injury + "-season" + output_injury_season + "-week" + output_injury_week + "-" + str_current_datetime + ".csv"
 
+injury_df.to_csv(output_injury_file, index=False) 
 
-# open output file
-with open(output_injury_file, 'w', newline='') as csv_file_out:
-  fieldnames = ['Player','Team','Pos','Injury','Status']
-  csv_writer_out = csv.DictWriter(csv_file_out, fieldnames=fieldnames)
-
-  # write header for output csv
-  csv_writer_out.writeheader()
-
-  # cycle through input file making changes then write to output file
-  with open(input_injury_file, mode='r', encoding='utf-8-sig') as csv_file_in:
-      csv_reader_in = csv.DictReader(csv_file_in)
-
-      for row in csv_reader_in:
-        counters['Read'] += 1
-
-        if row['Team'] == 'FA':
-          counters['Passed'] += 1
-          continue
-        else:
-          # convert team abb to team id
-          teamid = cvtinjury(row['Team'])
-          row['Team'] = teamid
-
-          # drop the estimated return column then write out new row
-          del row['Est. Return']
- 
-          csv_writer_out.writerow(row) 
-
-          counters['Written'] += 1 
-
-      csv_file_out.close() 
-      csv_file_in.close()
-
-print(f"\nRecords read: {counters['Read']} ")
-print(f"Records passed: {counters['Passed']} ")
-print(f"Records written: {counters['Written']} \n")
 print(f"Input injury filename: {input_injury_file} ")
 print(f"Input conversion filename: {input_conversion_file} ")
 print(f"Output Injury filename for Import: {output_injury_file} \n")
