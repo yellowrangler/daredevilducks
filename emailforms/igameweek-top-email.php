@@ -2,40 +2,36 @@
 
 $emailtopwriteup = "
 <p>
-What a great start to the season! I can't remember a season start with so many not only close games, but unbelievable comebacks!
+Week 2 did not disappoint. We continue to have competitive and energetic engagements. Lets hope it continues for week 3!
 </p>
 
 <p>
-In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Eagles</span> retained their Super Bowl ways beating the <span style='color:#1280D6;font-weight:900;'>Cowboys</span>. 
+In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Packers</span> handily dispatched the <span style='color:#1280D6;font-weight:900;'>Commanders</span>. 
 </p>
 
 <p>
-In a special Friday night game the <span style='color:#1280D6;font-weight:900;'>Chargers</span> beat the heavily favored <span style='color:#1280D6;font-weight:900;'>Chiefs</span> in Brazil! 
+In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Bengals</span> beat the <span style='color:#1280D6;font-weight:900;'>Jaguars</span> but lost Joe Burrow in the balance! The <span style='color:#1280D6;font-weight:900;'>Cowboys</span> beat the <span style='color:#1280D6;font-weight:900;'>Giants</span> in a thrilling contest! The <span style='color:#1280D6;font-weight:900;'>Lions</span> crushed the <span style='color:#1280D6;font-weight:900;'>Bears</span>. The <span style='color:#1280D6;font-weight:900;'>Patriots</span> held on to win against the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> in Miami! 
 </p>
 
 <p>
-In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in a thriller. The <span style='color:#1280D6;font-weight:900;'>Bengals</span> beat the <span style='color:#1280D6;font-weight:900;'>Browns</span> in another thrilling and close contest! The <span style='color:#1280D6;font-weight:900;'>Colts</span> came out firing on all cylinders as they squished the <span style='color:#1280D6;font-weight:900;'>Dolphins</span>. The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> crushed the hapless <span style='color:#1280D6;font-weight:900;'>Panthers</span>. 
+The <span style='color:#1280D6;font-weight:900;'>49ers</span> without their starting quarterback, beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in New Orleans. The <span style='color:#1280D6;font-weight:900;'>Bills</span> trampled the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York! The <span style='color:#1280D6;font-weight:900;'>Rams</span> beat the <span style='color:#1280D6;font-weight:900;'>Titans</span> in Nashville. The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> drubbed the <span style='color:#1280D6;font-weight:900;'>Steelers</span> in Pittsburgh.
 </p>
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Raiders</span> beat the <span style='color:#1280D6;font-weight:900;'>Patriots</span> in New England. The <span style='color:#1280D6;font-weight:900;'>Cardinals</span> beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in a another thriller! The <span style='color:#1280D6;font-weight:900;'>Steelers</span> with their new QB Arron Rodgers, beat the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York. The <span style='color:#1280D6;font-weight:900;'>Commanders</span> crushed the <span style='color:#1280D6;font-weight:900;'>Giants</span>.
+The <span style='color:#1280D6;font-weight:900;'>Ravens</span> pummeled the <span style='color:#1280D6;font-weight:900;'>Browns</span>. The <span style='color:#1280D6;font-weight:900;'>Colts</span> beat the <span style='color:#1280D6;font-weight:900;'>Broncos</span> in a last second thriller. The <span style='color:#1280D6;font-weight:900;'>Cardinals</span> beat the woeful <span style='color:#1280D6;font-weight:900;'>Panthers</span>. In this seasons replay of last years super bowl, the <span style='color:#1280D6;font-weight:900;'>Eagles</span> (again) beat the now 0 and 2 <span style='color:#1280D6;font-weight:900;'>Chiefs</span>. 
 </p>
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Titans</span> and <span style='color:#1280D6;font-weight:900;'>49ers</span> beat the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> in Seattle. The <span style='color:#1280D6;font-weight:900;'>Packers</span> crushed the <span style='color:#1280D6;font-weight:900;'>Lions</span>. The <span style='color:#1280D6;font-weight:900;'>Rams</span> beat the <span style='color:#1280D6;font-weight:900;'>Texans</span>.
+In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Falcons</span> shattered the <span style='color:#1280D6;font-weight:900;'>Vikings</span> in Minnesota. 
 </p>
 
 <p>
-In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the  <span style='color:#1280D6;font-weight:900;'>Ravens</span> in again another amazing thriller and comeback! 
-</p>
-
-<p>
-In the Monday night game the <span style='color:#1280D6;font-weight:900;'>Vikings</span> beat the  <span style='color:#1280D6;font-weight:900;'>Bears</span> in Chicago in yet again another amazing thriller and comeback! 
+In the Monday night games the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> beat the  <span style='color:#1280D6;font-weight:900;'>Texans</span> in Houston in another amazing thriller and comeback! The <span style='color:#1280D6;font-weight:900;'>Chargers</span> beat the  <span style='color:#1280D6;font-weight:900;'>Raiders</span> in Las Vegas! 
 </p>
 
 <p>
   All in all a superb week of football!
-</p> 
+</p>  
 
 
 <p>
