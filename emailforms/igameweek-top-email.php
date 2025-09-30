@@ -2,36 +2,36 @@
 
 $emailtopwriteup = "
 <p>
-Another great week of football! Some good last year teams are struggling. But, it's still early.
+Another great week of football! Unfortunately, Tyreek hill is out for the season with torn ligaments and a dislocated knee! We got our first tie game, and the Patriots actually crushed an NFL team! See the competitive results below!
 </p>
 
 <p>
-In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the <span style='color:#1280D6;font-weight:900;'>Dolphins</span>. 
+In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> beat the <span style='color:#1280D6;font-weight:900;'>Cardinals</span> in Arizona. 
 </p>
 
 <p>
-In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Panthers</span> beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span>. The <span style='color:#1280D6;font-weight:900;'>Browns</span> upset the <span style='color:#1280D6;font-weight:900;'>Packers</span>! The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> improved their lot by beating the <span style='color:#1280D6;font-weight:900;'>Texans</span>. The <span style='color:#1280D6;font-weight:900;'>Vikings</span> crushed the Burrow-less <span style='color:#1280D6;font-weight:900;'>Bengals</span>! 
+In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Steelers</span> beat the <span style='color:#1280D6;font-weight:900;'>Vikings</span>. The <span style='color:#1280D6;font-weight:900;'>Falcons</span> beat the <span style='color:#1280D6;font-weight:900;'>Commanders</span>! The <span style='color:#1280D6;font-weight:900;'>Bills</span> continue to impress as they dispatched the <span style='color:#1280D6;font-weight:900;'>Saints</span>. The <span style='color:#1280D6;font-weight:900;'>Lions</span> found their swagger as they easily beat the <span style='color:#1280D6;font-weight:900;'>Browns</span>! 
 </p>
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Steelers</span> beat the turnover prone <span style='color:#1280D6;font-weight:900;'>Patriots</span> in New England. The <span style='color:#1280D6;font-weight:900;'>Colts</span> stampeded the <span style='color:#1280D6;font-weight:900;'>Titans</span> in Nashville! The <span style='color:#1280D6;font-weight:900;'>Eagles</span> held tough and beat the <span style='color:#1280D6;font-weight:900;'>Rams</span>. The <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> beat the <span style='color:#1280D6;font-weight:900;'>Jets</span> in a thriller!
+The <span style='color:#1280D6;font-weight:900;'>Texans</span> got back in their winning ways beating the <span style='color:#1280D6;font-weight:900;'>Titans</span>. The <span style='color:#1280D6;font-weight:900;'>Patriots</span> ravaged the <span style='color:#1280D6;font-weight:900;'>Panther</span>! The <span style='color:#1280D6;font-weight:900;'>Giants</span> held tough and upset the <span style='color:#1280D6;font-weight:900;'>Chargers</span>. The <span style='color:#1280D6;font-weight:900;'>Eagles</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in a close contest!
 </p>
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Commanders</span> without their starting quarterback thrashed the <span style='color:#1280D6;font-weight:900;'>Raiders</span>. The <span style='color:#1280D6;font-weight:900;'>Chargers</span> eked by the <span style='color:#1280D6;font-weight:900;'>Broncos</span>. The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> beat the woeful <span style='color:#1280D6;font-weight:900;'>Saints</span>. The <span style='color:#1280D6;font-weight:900;'>Bears</span>  beat the disappointing <span style='color:#1280D6;font-weight:900;'>Cowboys</span>. The <span style='color:#1280D6;font-weight:900;'>49ers</span> beat the <span style='color:#1280D6;font-weight:900;'>Cardinals</span> in a back and fourth affair. 
+The <span style='color:#1280D6;font-weight:900;'>Rams</span> beat the <span style='color:#1280D6;font-weight:900;'>Colts</span>. The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> upset the <span style='color:#1280D6;font-weight:900;'>49ers</span> in San Fransisco! The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> hammered the <span style='color:#1280D6;font-weight:900;'>Ravens</span>. The <span style='color:#1280D6;font-weight:900;'>Bears</span> eked out a win over the <span style='color:#1280D6;font-weight:900;'>Raiders</span> in an exciting contest. 
 </p>
 
 <p>
-In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> found their mojo  as they dismantled the <span style='color:#1280D6;font-weight:900;'>Giants</span> in New York. 
+In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Cowboys</span> tied the <span style='color:#1280D6;font-weight:900;'>Packers</span> in Dallas! 
 </p>
 
 <p>
-In the Monday night game the <span style='color:#1280D6;font-weight:900;'>Lions</span> beat the  <span style='color:#1280D6;font-weight:900;'>Ravens</span> in Baltimore in another thriller! 
+In the Monday night games the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> beat the  <span style='color:#1280D6;font-weight:900;'>Jets</span> and the <span style='color:#1280D6;font-weight:900;'>Broncos</span> stampeded the <span style='color:#1280D6;font-weight:900;'>Bengals</span>. 
 </p>
 
 <p>
   All in all a superb week of football!
-</p>  
+</p> 
 
 
 <p>
