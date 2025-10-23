@@ -2,37 +2,36 @@
 
 $emailtopwriteup = "
 <p>
-Another interesting week! As we finish the 6th week we find that there are now no undefeated teams! The week gave a balancing spin to the standard deviation of team standings! Check out the week!
+Another fun week! The Jets still haven't won a game. The Dolphins continue to pick up speed as they loose altitude! The NFC West has 3 teams at 4 wins and 2 losses. The Patriots won another game! Is this real or just a <i>transient phenomenon</i> (I got that from AI. And I'll bet most of you thought AI was going to be the shiz! HaHa!). Check out the week!
 </p>
 
 <p>
-In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Giants</span> beat the heavily favored <span style='color:#1280D6;font-weight:900;'>Eagles</span> in New York. 
+In the Thursday night game the <span style='color:#1280D6;font-weight:900;'>Bengals</span> shocked the  favored <span style='color:#1280D6;font-weight:900;'>Steelers</span>. 
 </p>
 
 <p>
-In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Broncos</span> were last team standing when the smoke cleared as they defeated the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York! The <span style='color:#1280D6;font-weight:900;'>Rams</span> pounded the <span style='color:#1280D6;font-weight:900;'>Ravens</span> in Baltimore! The <span style='color:#1280D6;font-weight:900;'>Panthers</span> upset the <span style='color:#1280D6;font-weight:900;'>Cowboys</span>. The <span style='color:#1280D6;font-weight:900;'>Colts</span> stampeded the <span style='color:#1280D6;font-weight:900;'>Cardinals</span>! 
+In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Rams</span> defeated the <span style='color:#1280D6;font-weight:900;'>Jaguars</span> in jolly ole London! The <span style='color:#1280D6;font-weight:900;'>Bears</span> clawed the <span style='color:#1280D6;font-weight:900;'>Saints</span>! The <span style='color:#1280D6;font-weight:900;'>Browns</span> crushed the fading <span style='color:#1280D6;font-weight:900;'>Dolphins</span>. The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> shutout the <span style='color:#1280D6;font-weight:900;'>Raiders</span>! 
 </p>
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> beat the <span style='color:#1280D6;font-weight:900;'>Jaguars</span> in Jacksonville. The <span style='color:#1280D6;font-weight:900;'>Chargers</span> eked out a win over the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> in Miami! The <span style='color:#1280D6;font-weight:900;'>Steelers</span> crushed the <span style='color:#1280D6;font-weight:900;'>Browns</span>. The <span style='color:#1280D6;font-weight:900;'>Patriots</span> beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in New Orleans!
+The <span style='color:#1280D6;font-weight:900;'>Panthers</span> beat the winless <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York. The <span style='color:#1280D6;font-weight:900;'>Patriots</span> punished the <span style='color:#1280D6;font-weight:900;'>Titans</span> in Nashville! The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Giants</span> in a close thriller. The <span style='color:#1280D6;font-weight:900;'>Colts</span> beat the <span style='color:#1280D6;font-weight:900;'>Chargers</span> in LA!
 </p>
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Raiders</span> beat the <span style='color:#1280D6;font-weight:900;'>Titans</span>. The <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> boarded and pillaged the <span style='color:#1280D6;font-weight:900;'>49ers</span>. The <span style='color:#1280D6;font-weight:900;'>Packers</span> beat the <span style='color:#1280D6;font-weight:900;'>Bengals</span> in a close contest.
+The <span style='color:#1280D6;font-weight:900;'>Green Bay</span> beat the <span style='color:#1280D6;font-weight:900;'>Cardinals</span> in a sloppy affair. The <span style='color:#1280D6;font-weight:900;'>Cowboys</span> defeated the <span style='color:#1280D6;font-weight:900;'>Commanders</span>.
 </p>
 
 <p>
-In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the bejesus out of the <span style='color:#1280D6;font-weight:900;'>Lions</span>. 
+In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>49ers</span> beat the mercurial <span style='color:#1280D6;font-weight:900;'>Falcons</span>. 
 </p>
 
 <p>
-In the Monday night games the <span style='color:#1280D6;font-weight:900;'>Falcons</span> beat the favored <span style='color:#1280D6;font-weight:900;'>Bills</span>! The <span style='color:#1280D6;font-weight:900;'>Bears</span> beat the <span style='color:#1280D6;font-weight:900;'>Commanders</span> in a balanced contest. 
+In the Monday night games the <span style='color:#1280D6;font-weight:900;'>Lions</span> defeated the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span>! The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> beat the <span style='color:#1280D6;font-weight:900;'>Texans</span>. 
 </p>
 
 <p>
   All in all a superb week of football!
 </p> 
-
 
 <p>
 The Member stats are below! Read em and weep (I know I do)!
