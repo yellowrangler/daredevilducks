@@ -26,7 +26,7 @@ import shutil
 
 input_conversion_file = "conversionfile.csv"
 input_injury_file = ""
-output_injury = "injuryimportfile"
+output_injury = "injury"
 output_injury_file = ""
 output_injury_week = ""
 output_injury_season = ""
