@@ -73,7 +73,7 @@ controllers.teamdiscoveryController = function ($scope, $http, $log, $location, 
 
 }
 
-controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTeamsService, teamsFactory) {
+controllers.nflnewsController = function ($scope, $timeout, $sce, $http, $location, nflTeamsService, teamsFactory) {
     $scope.current = {};
 
     function htmlString (str) 
@@ -250,6 +250,9 @@ controllers.nflnewsController = function ($scope, $sce, $http, $location, nflTea
         $scope.nflrsss = nflTeamsService.getNFLrss();
 
         $scope.current.newssearch = "";
+
+        // $timeout($scope.current.newssearch = "", 5000)
+
         $scope.newsdetail = "";
         $scope.newsurl = "";
         $scope.current.newsidx = -1;
