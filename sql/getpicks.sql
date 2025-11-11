@@ -4,9 +4,16 @@ LEFT JOIN membertbl M on MS.memberid = M.id
 WHERE memberid = 69
 group by season
 
-how many seasons 
+-- how many seasons 
 
 
+-- who picked less then games in week - you must supply games in week
+SELECT  memberid, membername, COUNT(*) as picks
+FROM memberpickstbl MP
+LEFT JOIN membertbl M on MP.memberid = M.id
+WHERE season = 2025 and week = 9 
+GROUP BY membername, memberid
+HAVING picks < 14
 
 
 SELECT  memberid, membername, COUNT(*)
