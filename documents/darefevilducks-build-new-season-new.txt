@@ -1,7 +1,7 @@
 How to build new NFL Dare Devil Ducks Season New
 
 
-1. Go to the website http://www.pro-football-reference.com/years/xxxx/games.htm where xxxx is the NFL season (eg 2023) and create csv game file. Screen scrape (copy the relevant items) copy into a spreadsheet a pear down. s a file named 2023NFLSeasonSchedule.csv
+1. Go to the website http://www.pro-football-reference.com/years/xxxx/games.htm where xxxx is the NFL season (eg 2023) and create csv game file. Screen scrape (copy the relevant items) copy into a spreadsheet a pear down. s a file named 2023NFLSeasonSchedule.csv. Be careful that the home and away teams are not identified clearly. Watch for the @ sign! Alternative website is https://fixturedownload.com/results/nfl-2025#google_vignette.
 
 2. Add the bye teams. I used this url for 2023 https://www.footballdiehards.com/nfl-bye-weeks.cfm. Again screen scrape (copy the relevant items) copy into a spreadsheet a pear down. Create a file named 2023NFLSeasonbye.csv
 
