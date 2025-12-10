@@ -30,8 +30,12 @@ Make way for the Superbowl!
 </p> -->
 
 <div ng-if="current.playoffoptics == 1">
-	<p style="padding-top: 15px;">
-  	<span class="nflObservationsSubHeaders">Playoff Status</span>
+	<p>
+  	<span class="newsOpinionHeaders">Team Playoff Status</span>
+	</p>
+
+	<p>
+		We display team playoff opportunities as we get close to exiting the reagular season and enter the  playoffs.
 	</p>
 
 	<div ng-if="current.clinchedteams.length">
@@ -199,20 +203,22 @@ Make way for the Superbowl!
 	</div>
 </div> 
 
-<div style="padding-top:5px;text-align:center;" ng-if="bracket.length" class="pageStandardOffset">
+<!-- 
+<div style="padding-top:35px;text-align:center;" ng-if="bracket.length" class="pageStandardOffset">
 	<p>
   	<p class="nflObservationsSubSubHeaders"><span class="nflBracketText">
-  	 Final Playoff Bracket</span>
+  	 Team Playoff Bracket</span>
   	</p>
 	</p>
 
-	<!-- <p style="text-align:left;">
+	<p style="text-align:left;">
 		<span class="nflBracketTextIntro">Click on the bracket to see a larger rendering.</span>
-	</p>  -->
+	</p> 
 	
-	<div class="">
+	<div style="padding-top:15px;text-align:center;">
 		<a id="showpicture" name="showpicture" href="" ng-click="showPicture('Final Playoff Bracket',bracket)">
 			<img style="width:100%;padding:5px;" class="center-block img-rounded shadowImg" ng-src="{{$parent.imagePath}}/{{bracket}}">
 		</a>
-	</div> <!-- end of col -->
-</div> <!-- end of row -->
+	</div> 
+</div>  
+-->
