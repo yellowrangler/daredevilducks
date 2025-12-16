@@ -1,4 +1,4 @@
--- dddgetPlayoffStatusgetBracketupdate.sql
+-- getPlayoffInfo.sql
 
 SELECT * FROM preplayofftbl WHERE season = '2025';
 

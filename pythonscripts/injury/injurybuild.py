@@ -8,6 +8,7 @@ import csv
 import datetime
 import sys
 import glob
+import os
 from datetime import date
 import shutil
 
@@ -115,6 +116,8 @@ print("Conversion started!\n")
 # 
 
 file_list = glob.glob("nfl-injury*.csv")
+file_list.sort(key=os.path.getmtime,reverse=True)  
+
 lcount = len(file_list)
 print ("The file count is:", lcount)
 
@@ -122,7 +125,7 @@ idx = 0
 while (idx < lcount):
   print ("The current count is:", idx + 1)
   fname = file_list[idx]
-  answer = input(f"Do you want to use '{fname}' for import as injury file for ddd Y/N ?")  
+  answer = input(f"Do you want to use '{fname}' for import as injury file for ddd Y/N ? ")  
   if answer.upper() == "Y":  
     input_injury_file = fname
     break;  

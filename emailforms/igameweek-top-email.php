@@ -2,27 +2,27 @@
 
 $emailtopwriteup = "
 <p>
-The were a number of big games this week that served as harbingers for things to come!  The most compelling to me was the <span style='color:#1280D6;font-weight:900;'>Texans</span> winning out over the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> in Kansas. In last years playoffs the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the <span style='color:#1280D6;font-weight:900;'>Texans</span> in a game with a number of controversial critical referee calls in favor of the <span style='color:#1280D6;font-weight:900;'>Chiefs</span>. The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> ended up winning that game. Now, with the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> on the ropes regarding the playoffs, the <span style='color:#1280D6;font-weight:900;'>Texans</span> got a sense of retribution as they beat them at home. Can't wait to see what happens next week!
+Two big teams got kicked off the playoff bus! The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> and the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> didn't have the correct fare so out they go! On the other side of the PLayoff ledger we had 2 teams clinch a playoff berth. The <span style='color:#1280D6;font-weight:900;'>Broncos</span> and the <span style='color:#1280D6;font-weight:900;'>Rams</span> are in! Things are going to get dicey!  Can't wait to see what happens next week!
 </p>
 
 <p>
-On the Thursday game the <span style='color:#1280D6;font-weight:900;'>Lions</span> beat the <span style='color:#1280D6;font-weight:900;'>Cowboys</span> in a competitive match. 
+On the Thursday game the <span style='color:#1280D6;font-weight:900;'>Falcons</span> upset the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in Tampa! 
 </p>
 
 <p>
-In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> crushed the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in Atlanta. The <span style='color:#1280D6;font-weight:900;'>Titans</span>  eked out a win over the <span style='color:#1280D6;font-weight:900;'>Browns</span> in Cleveland! The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> beat the <span style='color:#1280D6;font-weight:900;'>Colts</span> in a game where the Colts starting quarterback, Daniel Jones, was injured and is out for the season. The <span style='color:#1280D6;font-weight:900;'>Vikings</span> shutout the <span style='color:#1280D6;font-weight:900;'>Commanders</span>. The <span style='color:#1280D6;font-weight:900;'>Dolphins</span> beat the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York! The <span style='color:#1280D6;font-weight:900;'>Steelers</span> beat the <span style='color:#1280D6;font-weight:900;'>Ravens</span> in Baltimore!
+In Sunday's games the <span style='color:#1280D6;font-weight:900;'>Bears</span> mauled the <span style='color:#1280D6;font-weight:900;'>Browns</span>. The <span style='color:#1280D6;font-weight:900;'>Ravens</span>  shutout the <span style='color:#1280D6;font-weight:900;'>Bengals</span> in Cincinnati! The <span style='color:#1280D6;font-weight:900;'>Texans</span> looked good beating the <span style='color:#1280D6;font-weight:900;'>Cardinals</span>. The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> beat the <span style='color:#1280D6;font-weight:900;'>Jets</span>. The <span style='color:#1280D6;font-weight:900;'>Chargers</span> knocked the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> out of the playoffs in Kansas! The <span style='color:#1280D6;font-weight:900;'>Bills</span> came back in the second half to beat the <span style='color:#1280D6;font-weight:900;'>Patriots</span> in New England!
 </p>
 
 <p>
-In an upset, the <span style='color:#1280D6;font-weight:900;'>Saints</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in Tampa. The <span style='color:#1280D6;font-weight:900;'>Bills</span> came from behind to beat the <span style='color:#1280D6;font-weight:900;'>Bengals</span>! The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Raiders</span> in Las Vegas. The <span style='color:#1280D6;font-weight:900;'>Packers</span> held on to beat the <span style='color:#1280D6;font-weight:900;'>Bears</span>! The <span style='color:#1280D6;font-weight:900;'>Rams</span> crushed the <span style='color:#1280D6;font-weight:900;'>Cardinals</span> in Phoenix! 
+The <span style='color:#1280D6;font-weight:900;'>Commanders</span> beat the <span style='color:#1280D6;font-weight:900;'>Giants</span> in New York. The <span style='color:#1280D6;font-weight:900;'>Eagles</span> beat the <span style='color:#1280D6;font-weight:900;'>Raiders</span>! The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Packers</span>. The <span style='color:#1280D6;font-weight:900;'>Saints</span> beat the <span style='color:#1280D6;font-weight:900;'>Panthers</span>! The <span style='color:#1280D6;font-weight:900;'>Rams</span> dispatched the <span style='color:#1280D6;font-weight:900;'>Lions</span>! The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> eked out a win over the <span style='color:#1280D6;font-weight:900;'>Colts</span>! The <span style='color:#1280D6;font-weight:900;'>49ers</span> did likewise over the <span style='color:#1280D6;font-weight:900;'>Titans</span>! 
 </p>
 
 <p>
-In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Texans</span> had a statement win against the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> in Kansas! 
+In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Vikings</span> plundered the <span style='color:#1280D6;font-weight:900;'>Cowboys</span> in Dallas! 
 </p>
 
 <p>
-In the Monday night game the <span style='color:#1280D6;font-weight:900;'>Chargers</span> beat the <span style='color:#1280D6;font-weight:900;'>Eagles</span> in overtime!
+In the Monday night game the <span style='color:#1280D6;font-weight:900;'>Steelers</span> handsomely knocked the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> out of the playoffs!
 </p>
 
 <p>
