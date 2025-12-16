@@ -983,6 +983,32 @@ controllers.teamweeklyrankingController = function ($scope, $http, $location, te
                 teamsFactory.getNflTeam(q)
                     .success( function(data) {
                         $scope.current.team = data; 
+                        var q = "teamid="+$scope.current.teamid+"&season="+$scope.current.season+"&orderbydirection="+$scope.current.toggleSort;
+                        teamsFactory.getTeamWeekyRanking(q)
+                            .success( function(data) {
+                                $scope.teamweekranks = data;
+
+                                var q = "teamid="+$scope.current.teamid;
+                                teamsFactory.getNflTeam(q)
+                                    .success( function(data) {
+                                        $scope.current.team = data;
+
+                                        var q = "teamid="+$scope.current.teamid+"&season="+$scope.current.season;
+                                        teamsFactory.getTeamWLT(q)
+                                            .success( function(data) {
+                                                $scope.current.teamwlt = data[0];
+                                            })
+                                            .error( function(edata) {
+                                                alert(edata);
+                                            });
+                                    })
+                                    .error( function(edata) {
+                                        alert(edata);
+                                    });
+                            })
+                            .error( function(edata) {
+                                alert(edata);
+                            });
                     })
                     .error( function(edata) {
                         alert(edata);

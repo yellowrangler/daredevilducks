@@ -16,6 +16,17 @@
 				            <option ng-repeat="team in teams" value="{{team.id}}">{{team.location}} {{team.name}}</option>
 				        </select>
 					</div> <!-- end of form-group --> 
+
+					<div style="padding-top:15px;" class="form-group horizontalFieldOffset">
+						<span class="left-column-text" style="padding:2px;font-size:18px;font-weight:700;padding-right:5px;">Wins:</span>
+		        	<input class="left-column-text" size='2' type="text" value="{{current.teamwlt.teamwins}}" style="display: inline-block; vertical-align: middle; border:none; color:red; padding:2px;font-size:18px;font-weight:700;padding-right:7px;"readonly>
+
+		        	<span class="left-column-text" style="padding:2px;font-size:18px;font-weight:700;padding-right:5px;">Losses:</span>
+		        	<input class="left-column-text" size='2' type="text" value="{{current.teamwlt.teamlosses}}" style="display: inline-block; vertical-align: middle; border:none; color:red; padding:2px;font-size:18px;font-weight:700;padding-right:7px;"readonly>
+
+		        	<span class="left-column-text" style="padding:2px;font-size:18px;font-weight:700;padding-right:5px;">Ties:</span>
+		        	<input class="left-column-text" size='2' type="text" value="{{current.teamwlt.teamties}}" style="display: inline-block; vertical-align: middle; border:none; color:red; padding:2px;font-size:18px;font-weight:700;padding-right:2px;"readonly>
+					</div> <!-- end of form-group --> 
 				</div> <!-- end of panel body -->				
 			</div> <!-- end of panel -->
 		</div> <!-- end of panelOffset -->	

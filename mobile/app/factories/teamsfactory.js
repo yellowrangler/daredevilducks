@@ -278,6 +278,15 @@ dddAppMobile.factory('teamsFactory', function($q, $http) {
         })
     }
 
+    factory.getTeamWLT = function (data) {
+        return $http({ 
+            method: 'POST', 
+            url: "app/ajax/getteamwlt.php",
+            data: data,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+    }
+
     factory.getTeamsPowerRankings = function (data) {
         return $http({ 
             method: 'POST', 
