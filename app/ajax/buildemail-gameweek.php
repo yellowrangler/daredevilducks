@@ -300,9 +300,9 @@ $leaderweektable = $leaderweektable . "
 //
 mysqli_close($dbConn);
 
-$email = "Daredevil Ducks - Week $week is over. Prepare for week $nextweek!\n
+$email = "Daredevil Ducks - Week $week in Review! Prepare for week $nextweek!\n
 <p>
-<span style='font-size:20px;font-style:normal;font-weight:bold;color:#6C0000;''>Daredevil Ducks - Week $week is over. Prepare for week $nextweek!</span>
+<span style='font-size:20px;font-style:normal;font-weight:bold;color:#6C0000;''>Daredevil Ducks - Week $week in Review! Prepare for week $nextweek!</span>
 </p>";
 
 $email = $email . $emailtopwriteup;

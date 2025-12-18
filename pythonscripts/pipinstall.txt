@@ -1,0 +1,246 @@
+Package                   Version        Location                                        Installer
+------------------------- -------------- ----------------------------------------------- ---------
+aiohappyeyeballs          2.6.1          /home/tarryc/.local/lib/python3.9/site-packages pip
+aiohttp                   3.12.15        /home/tarryc/.local/lib/python3.9/site-packages pip
+aiosignal                 1.4.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+alpha-vantage             3.0.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+anyio                     4.10.0         /usr/local/lib/python3.9/dist-packages          pip
+arandr                    0.1.10         /usr/lib/python3/dist-packages
+argon2-cffi               25.1.0         /usr/local/lib/python3.9/dist-packages          pip
+argon2-cffi-bindings      25.1.0         /usr/local/lib/python3.9/dist-packages          pip
+arrow                     1.3.0          /usr/local/lib/python3.9/dist-packages          pip
+asgiref                   3.7.2          /home/tarryc/.local/lib/python3.9/site-packages pip
+astroid                   2.5.1          /usr/lib/python3/dist-packages
+asttokens                 3.0.0          /usr/local/lib/python3.9/dist-packages          pip
+async-lru                 2.0.5          /usr/local/lib/python3.9/dist-packages          pip
+async-timeout             5.0.1          /home/tarryc/.local/lib/python3.9/site-packages pip
+attrs                     25.3.0         /home/tarryc/.local/lib/python3.9/site-packages pip
+automationhat             0.2.0          /usr/lib/python3/dist-packages
+babel                     2.17.0         /usr/local/lib/python3.9/dist-packages          pip
+beautifulsoup4            4.13.4         /home/tarryc/.local/lib/python3.9/site-packages pip
+bleach                    6.2.0          /usr/local/lib/python3.9/dist-packages          pip
+blinker                   1.4            /usr/lib/python3/dist-packages
+blinkt                    0.1.2          /usr/lib/python3/dist-packages
+Brotli                    1.0.9          /home/tarryc/.local/lib/python3.9/site-packages pip
+buttonshim                0.0.2          /usr/lib/python3/dist-packages
+Cap1xxx                   0.1.3          /usr/lib/python3/dist-packages
+certifi                   2025.8.3       /home/tarryc/.local/lib/python3.9/site-packages pip
+cffi                      1.17.1         /home/tarryc/.local/lib/python3.9/site-packages pip
+chardet                   4.0.0          /usr/lib/python3/dist-packages
+charset-normalizer        3.4.3          /home/tarryc/.local/lib/python3.9/site-packages pip
+click                     7.1.2          /usr/lib/python3/dist-packages
+colorama                  0.4.4          /usr/lib/python3/dist-packages
+colorzero                 1.1            /usr/lib/python3/dist-packages
+comm                      0.2.3          /usr/local/lib/python3.9/dist-packages          pip
+contourpy                 1.3.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+cryptography              3.3.2          /usr/lib/python3/dist-packages
+cupshelpers               1.0            /usr/lib/python3/dist-packages
+curl-cffi                 0.13.0         /home/tarryc/.local/lib/python3.9/site-packages pip
+cycler                    0.12.1         /home/tarryc/.local/lib/python3.9/site-packages pip
+dbus-python               1.2.16         /usr/lib/python3/dist-packages
+debugpy                   1.8.16         /usr/local/lib/python3.9/dist-packages          pip
+decorator                 5.2.1          /usr/local/lib/python3.9/dist-packages          pip
+defusedxml                0.7.1          /usr/local/lib/python3.9/dist-packages          pip
+distro                    1.5.0          /usr/lib/python3/dist-packages
+dnspython                 2.0.0          /usr/lib/python3/dist-packages
+docutils                  0.16           /usr/lib/python3/dist-packages
+drumhat                   0.1.0          /usr/lib/python3/dist-packages
+envirophat                1.0.0          /usr/lib/python3/dist-packages
+eod                       0.2.1          /home/tarryc/.local/lib/python3.9/site-packages pip
+et-xmlfile                2.0.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+exceptiongroup            1.3.0          /usr/local/lib/python3.9/dist-packages          pip
+executing                 2.2.0          /usr/local/lib/python3.9/dist-packages          pip
+ExplorerHAT               0.4.2          /usr/lib/python3/dist-packages
+fastjsonschema            2.21.2         /usr/local/lib/python3.9/dist-packages          pip
+fix-yahoo-finance         0.1.30         /home/tarryc/.local/lib/python3.9/site-packages pip
+Flask                     1.1.2          /usr/lib/python3/dist-packages
+fonttools                 4.59.1         /home/tarryc/.local/lib/python3.9/site-packages pip
+fourletterphat            0.1.0          /usr/lib/python3/dist-packages
+fqdn                      1.5.1          /usr/local/lib/python3.9/dist-packages          pip
+frozendict                2.4.6          /home/tarryc/.local/lib/python3.9/site-packages pip
+frozenlist                1.7.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+gpg                       1.14.0-unknown /usr/lib/python3/dist-packages
+gpiozero                  1.6.2          /usr/lib/python3/dist-packages
+h11                       0.16.0         /usr/local/lib/python3.9/dist-packages          pip
+html5lib                  1.1            /usr/lib/python3/dist-packages
+httpcore                  1.0.9          /usr/local/lib/python3.9/dist-packages          pip
+httpx                     0.28.1         /usr/local/lib/python3.9/dist-packages          pip
+idna                      2.10           /usr/lib/python3/dist-packages
+imgcat                    0.6.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+importlib-metadata        8.7.0          /usr/local/lib/python3.9/dist-packages          pip
+importlib-resources       6.5.2          /home/tarryc/.local/lib/python3.9/site-packages pip
+ipykernel                 6.30.1         /usr/local/lib/python3.9/dist-packages          pip
+ipython                   8.18.1         /usr/local/lib/python3.9/dist-packages          pip
+ipywidgets                8.1.7          /usr/local/lib/python3.9/dist-packages          pip
+isoduration               20.11.0        /usr/local/lib/python3.9/dist-packages          pip
+isort                     5.6.4          /usr/lib/python3/dist-packages
+itsdangerous              1.1.0          /usr/lib/python3/dist-packages
+jedi                      0.18.0         /usr/lib/python3/dist-packages
+jinja2                    3.1.6          /usr/local/lib/python3.9/dist-packages          pip
+json5                     0.12.1         /usr/local/lib/python3.9/dist-packages          pip
+jsonpointer               3.0.0          /usr/local/lib/python3.9/dist-packages          pip
+jsonschema                4.25.1         /usr/local/lib/python3.9/dist-packages          pip
+jsonschema-specifications 2025.4.1       /usr/local/lib/python3.9/dist-packages          pip
+jupyter-client            8.6.3          /usr/local/lib/python3.9/dist-packages          pip
+jupyter-console           6.6.3          /usr/local/lib/python3.9/dist-packages          pip
+jupyter-core              5.8.1          /usr/local/lib/python3.9/dist-packages          pip
+jupyter-events            0.12.0         /usr/local/lib/python3.9/dist-packages          pip
+jupyter-lsp               2.2.6          /usr/local/lib/python3.9/dist-packages          pip
+jupyter-server            2.17.0         /usr/local/lib/python3.9/dist-packages          pip
+jupyter-server-terminals  0.5.3          /usr/local/lib/python3.9/dist-packages          pip
+jupyterlab                4.4.6          /usr/local/lib/python3.9/dist-packages          pip
+jupyterlab-pygments       0.3.0          /usr/local/lib/python3.9/dist-packages          pip
+jupyterlab-server         2.27.3         /usr/local/lib/python3.9/dist-packages          pip
+jupyterlab-widgets        3.0.15         /usr/local/lib/python3.9/dist-packages          pip
+kiwisolver                1.4.7          /home/tarryc/.local/lib/python3.9/site-packages pip
+lark                      1.2.2          /usr/local/lib/python3.9/dist-packages          pip
+lazy-object-proxy         0.0.0          /usr/lib/python3/dist-packages
+logilab-common            1.8.1          /usr/lib/python3/dist-packages
+lxml                      4.6.3          /usr/lib/python3/dist-packages
+Markdown                  3.3.4          /usr/lib/python3/dist-packages
+MarkupSafe                3.0.2          /usr/local/lib/python3.9/dist-packages          pip
+matplotlib                3.9.4          /home/tarryc/.local/lib/python3.9/site-packages pip
+matplotlib-inline         0.1.7          /usr/local/lib/python3.9/dist-packages          pip
+mccabe                    0.6.1          /usr/lib/python3/dist-packages
+microdotphat              0.2.1          /usr/lib/python3/dist-packages
+mistune                   3.1.3          /usr/local/lib/python3.9/dist-packages          pip
+mote                      0.0.4          /usr/lib/python3/dist-packages
+motephat                  0.0.3          /usr/lib/python3/dist-packages
+multidict                 6.6.4          /home/tarryc/.local/lib/python3.9/site-packages pip
+multitasking              0.0.12         /home/tarryc/.local/lib/python3.9/site-packages pip
+mutagen                   1.46.0         /home/tarryc/.local/lib/python3.9/site-packages pip
+mypy                      0.812          /usr/lib/python3/dist-packages
+mypy-extensions           0.4.3          /usr/lib/python3/dist-packages
+mysql-connector-python    8.2.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+mysqlclient               1.4.4          /usr/lib/python3/dist-packages
+nbclient                  0.10.2         /usr/local/lib/python3.9/dist-packages          pip
+nbconvert                 7.16.6         /usr/local/lib/python3.9/dist-packages          pip
+nbformat                  5.10.4         /usr/local/lib/python3.9/dist-packages          pip
+nest-asyncio              1.6.0          /usr/local/lib/python3.9/dist-packages          pip
+notebook-shim             0.2.4          /usr/local/lib/python3.9/dist-packages          pip
+numpy                     2.0.2          /home/tarryc/.local/lib/python3.9/site-packages pip
+numpy-financial           1.0.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+oauthlib                  3.1.0          /usr/lib/python3/dist-packages
+ofxparse                  0.21           /home/tarryc/.local/lib/python3.9/site-packages pip
+ofxtools                  0.9.5          /home/tarryc/.local/lib/python3.9/site-packages pip
+openpyxl                  3.1.5          /home/tarryc/.local/lib/python3.9/site-packages pip
+outcome                   1.3.0.post0    /home/tarryc/.local/lib/python3.9/site-packages pip
+overrides                 7.7.0          /usr/local/lib/python3.9/dist-packages          pip
+packaging                 25.0           /home/tarryc/.local/lib/python3.9/site-packages pip
+pandas                    2.3.1          /home/tarryc/.local/lib/python3.9/site-packages pip
+pandocfilters             1.5.1          /usr/local/lib/python3.9/dist-packages          pip
+pantilthat                0.0.7          /usr/lib/python3/dist-packages
+parso                     0.8.1          /usr/lib/python3/dist-packages
+peewee                    3.18.2         /home/tarryc/.local/lib/python3.9/site-packages pip
+pexpect                   4.8.0          /usr/lib/python3/dist-packages
+pgzero                    1.2            /usr/lib/python3/dist-packages
+phatbeat                  0.1.1          /usr/lib/python3/dist-packages
+pianohat                  0.1.0          /usr/lib/python3/dist-packages
+picamera2                 0.3.12         /usr/lib/python3/dist-packages
+pidng                     4.0.9          /usr/lib/python3/dist-packages
+piexif                    1.1.3          /usr/lib/python3/dist-packages
+piglow                    1.2.5          /usr/lib/python3/dist-packages
+pigpio                    1.78           /usr/lib/python3/dist-packages
+Pillow                    8.1.2          /usr/lib/python3/dist-packages
+pip                       20.3.4         /usr/lib/python3/dist-packages
+platformdirs              4.3.8          /home/tarryc/.local/lib/python3.9/site-packages pip
+prometheus-client         0.22.1         /usr/local/lib/python3.9/dist-packages          pip
+prompt-toolkit            3.0.51         /usr/local/lib/python3.9/dist-packages          pip
+propcache                 0.3.2          /home/tarryc/.local/lib/python3.9/site-packages pip
+protobuf                  4.21.12        /home/tarryc/.local/lib/python3.9/site-packages pip
+psutil                    5.8.0          /usr/lib/python3/dist-packages
+ptyprocess                0.7.0          /usr/local/lib/python3.9/dist-packages          pip
+pure-eval                 0.2.3          /usr/local/lib/python3.9/dist-packages          pip
+pycairo                   1.16.2         /usr/lib/python3/dist-packages
+pycparser                 2.22           /home/tarryc/.local/lib/python3.9/site-packages pip
+pycryptodomex             3.17           /home/tarryc/.local/lib/python3.9/site-packages pip
+pycups                    2.0.1          /usr/lib/python3/dist-packages
+pygame                    1.9.6          /usr/lib/python3/dist-packages
+Pygments                  2.7.1          /usr/lib/python3/dist-packages
+PyGObject                 3.38.0         /usr/lib/python3/dist-packages
+pyinotify                 0.9.6          /usr/lib/python3/dist-packages
+PyJWT                     1.7.1          /usr/lib/python3/dist-packages
+pylint                    2.7.2          /usr/lib/python3/dist-packages
+PyOpenGL                  3.1.5          /usr/lib/python3/dist-packages
+pyOpenSSL                 20.0.1         /usr/lib/python3/dist-packages
+pyparsing                 3.2.3          /home/tarryc/.local/lib/python3.9/site-packages pip
+PyQt5                     5.15.2         /usr/lib/python3/dist-packages                  sip-build
+PyQt5-sip                 12.8.1         /usr/lib/python3/dist-packages
+pyserial                  3.5b0          /usr/lib/python3/dist-packages
+pysmbc                    1.0.23         /usr/lib/python3/dist-packages
+PySocks                   1.7.1          /home/tarryc/.local/lib/python3.9/site-packages pip
+python-apt                2.2.1.1        /usr/lib/python3/dist-packages
+python-dateutil           2.9.0.post0    /home/tarryc/.local/lib/python3.9/site-packages pip
+python-json-logger        3.3.0          /usr/local/lib/python3.9/dist-packages          pip
+python-prctl              1.7            /usr/lib/python3/dist-packages
+pytz                      2025.2         /home/tarryc/.local/lib/python3.9/site-packages pip
+PyYAML                    5.3.1          /usr/lib/python3/dist-packages
+pyzmq                     27.0.2         /usr/local/lib/python3.9/dist-packages          pip
+rainbowhat                0.1.0          /usr/lib/python3/dist-packages
+referencing               0.36.2         /usr/local/lib/python3.9/dist-packages          pip
+reportlab                 3.5.59         /usr/lib/python3/dist-packages
+requests                  2.32.5         /home/tarryc/.local/lib/python3.9/site-packages pip
+requests-oauthlib         1.0.0          /usr/lib/python3/dist-packages
+requests-toolbelt         0.9.1          /usr/lib/python3/dist-packages
+responses                 0.12.1         /usr/lib/python3/dist-packages
+rfc3339-validator         0.1.4          /usr/local/lib/python3.9/dist-packages          pip
+rfc3986-validator         0.1.1          /usr/local/lib/python3.9/dist-packages          pip
+rfc3987-syntax            1.1.0          /usr/local/lib/python3.9/dist-packages          pip
+roman                     2.0.0          /usr/lib/python3/dist-packages
+rpds-py                   0.27.0         /usr/local/lib/python3.9/dist-packages          pip
+RPi.GPIO                  0.7.0          /usr/lib/python3/dist-packages
+RTIMULib                  7.2.1          /usr/lib/python3/dist-packages
+scipy                     1.13.1         /home/tarryc/.local/lib/python3.9/site-packages pip
+scrollphat                0.0.7          /usr/lib/python3/dist-packages
+scrollphathd              1.2.1          /usr/lib/python3/dist-packages
+seaborn                   0.13.2         /home/tarryc/.local/lib/python3.9/site-packages pip
+selenium                  4.36.0         /home/tarryc/.local/lib/python3.9/site-packages pip
+Send2Trash                1.8.3          /usr/local/lib/python3.9/dist-packages          pip
+sense-hat                 2.6.0          /usr/lib/python3/dist-packages
+setuptools                52.0.0         /usr/lib/python3/dist-packages
+simplejpeg                1.6.4          /usr/lib/python3/dist-packages
+simplejson                3.17.2         /usr/lib/python3/dist-packages
+six                       1.16.0         /usr/lib/python3/dist-packages
+skywriter                 0.0.7          /usr/lib/python3/dist-packages
+sn3218                    1.2.7          /usr/lib/python3/dist-packages
+sniffio                   1.3.1          /usr/local/lib/python3.9/dist-packages          pip
+sortedcontainers          2.4.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+soupsieve                 2.2.1          /usr/lib/python3/dist-packages
+spidev                    3.5            /usr/lib/python3/dist-packages
+sqlparse                  0.4.4          /home/tarryc/.local/lib/python3.9/site-packages pip
+ssh-import-id             5.10           /usr/lib/python3/dist-packages
+stack-data                0.6.3          /usr/local/lib/python3.9/dist-packages          pip
+terminado                 0.18.1         /usr/local/lib/python3.9/dist-packages          pip
+thonny                    4.0.1          /usr/lib/python3/dist-packages
+tinycss2                  1.4.0          /usr/local/lib/python3.9/dist-packages          pip
+toml                      0.10.1         /usr/lib/python3/dist-packages
+tomli                     2.2.1          /usr/local/lib/python3.9/dist-packages          pip
+tornado                   6.5.2          /usr/local/lib/python3.9/dist-packages          pip
+touchphat                 0.0.1          /usr/lib/python3/dist-packages
+traitlets                 5.14.3         /usr/local/lib/python3.9/dist-packages          pip
+trio                      0.31.0         /home/tarryc/.local/lib/python3.9/site-packages pip
+trio-websocket            0.12.2         /home/tarryc/.local/lib/python3.9/site-packages pip
+twython                   3.8.2          /usr/lib/python3/dist-packages
+typed-ast                 1.4.2          /usr/lib/python3/dist-packages
+types-python-dateutil     2.9.0.20250822 /usr/local/lib/python3.9/dist-packages          pip
+typing-extensions         4.15.0         /home/tarryc/.local/lib/python3.9/site-packages pip
+tzdata                    2025.2         /home/tarryc/.local/lib/python3.9/site-packages pip
+unicornhathd              0.0.4          /usr/lib/python3/dist-packages
+uri-template              1.3.0          /usr/local/lib/python3.9/dist-packages          pip
+urllib3                   2.5.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+v4l2-python3              0.3.2          /usr/lib/python3/dist-packages
+wcwidth                   0.2.13         /usr/local/lib/python3.9/dist-packages          pip
+webcolors                 24.11.1        /usr/local/lib/python3.9/dist-packages          pip
+webencodings              0.5.1          /usr/lib/python3/dist-packages
+websocket-client          1.8.0          /usr/local/lib/python3.9/dist-packages          pip
+websockets                15.0.1         /home/tarryc/.local/lib/python3.9/site-packages pip
+Werkzeug                  1.0.1          /usr/lib/python3/dist-packages
+wheel                     0.34.2         /usr/lib/python3/dist-packages
+widgetsnbextension        4.0.14         /usr/local/lib/python3.9/dist-packages          pip
+wrapt                     1.12.1         /usr/lib/python3/dist-packages
+wsproto                   1.2.0          /home/tarryc/.local/lib/python3.9/site-packages pip
+yarl                      1.20.1         /home/tarryc/.local/lib/python3.9/site-packages pip
+yfinance                  0.2.65         /home/tarryc/.local/lib/python3.9/site-packages pip
+youtube-dl                2021.12.17     /home/tarryc/.local/lib/python3.9/site-packages pip
+yt-dlp                    2025.1.26      /home/tarryc/.local/lib/python3.9/site-packages pip
+zipp                      3.23.0         /home/tarryc/.local/lib/python3.9/site-packages pip

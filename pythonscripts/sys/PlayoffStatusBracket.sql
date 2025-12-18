@@ -20,5 +20,5 @@ VALUES
 (15,2025,'Eliminated','14','Browns','cle.png','15','Cardinals','ari.png',NULL,NULL),
 (16,2025,'Eliminated','15','Raiders','oak.png','16','Giants','nyg.png',NULL,NULL),
 (17,2025,'Eliminated','16','Titans','ten.png','','','',NULL,NULL);
--- INSERT INTO teambrackettbl(imagename, season, week, final) 
--- VALUES ('NFLPlayOffBracketSuperbowl602025Wk14.png',2025,15,0)
+INSERT INTO teambrackettbl(imagename, season, week, final) 
+VALUES ('NFLPlayOffBracketSuperbowl602025Wk15.png',2025,15,0)
