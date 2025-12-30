@@ -253,8 +253,6 @@ def runsqlcode(sql, outfile):
       conn.close()
       cursor.close()    
 
-
-
   return  
 
 ##################################
