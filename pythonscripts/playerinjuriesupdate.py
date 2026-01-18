@@ -46,6 +46,7 @@ input_injury_file = ""
 # meta data globals
 injury_week = ""
 injury_season = ""
+injuryfile_template = "nfl-injury*.csv"
 
 conversion_dict = dict()
 file_list = []
@@ -305,7 +306,7 @@ dbparms['password'] = dbpasswd
 # 
 # get list of cvs files to process
 # 
-file_list = glob.glob("nfl-injury*.csv")
+file_list = glob.glob(injuryfile_template)
 file_list.sort(key=os.path.getmtime,reverse=True)  
 
 lcount = len(file_list)

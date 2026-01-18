@@ -37,7 +37,8 @@ stats = {
     "Items processed" : 0,
     }
 
-sqlfile = '*.sql'
+sqlfile_template = 'sql/*.sql'
+substring_to_remove = 'sql/'
 
 ##################################
 # functions
@@ -133,24 +134,28 @@ def getsqloutput(filename):
     if idx != -1: 
       substr = filename[:idx]
       outfile = substr + ".txt"
+      outfile = outfile.replace(substring_to_remove, "")
+
 
   if answer == "3":   
       idx = filename.find('.')
       if idx != -1: 
         substr = filename[:idx]
         outfile = substr + ".csv"
+        outfile = outfile.replace(substring_to_remove, "")
+
   return (outfile)
 
 # 
 # get filename to process
 # 
-def getfilename():
+def getSQLfilename():
   answer = ''
   
   # 
   # get list of sql files to process
   # 
-  file_list = glob.glob(sqlfile)
+  file_list = glob.glob(sqlfile_template)
   file_list.sort(key=os.path.getmtime,reverse=True)  
   
   lcount = len(file_list)
@@ -190,7 +195,7 @@ def readsqlfile(filename):
       print(f"An error occurred: {e}") 
 
   return runsql     
-    
+ 
 #
 # runsql
 #
@@ -274,7 +279,7 @@ dbparms['password'] = dbpasswd
 # 
 # get sql file 
 # 
-ffile = getfilename()
+ffile = getSQLfilename()
 if ffile == '':
   print("No SQL file entered!")
   quit()  

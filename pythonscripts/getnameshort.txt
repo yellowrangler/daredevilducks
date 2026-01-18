@@ -1,0 +1,35 @@
+=====================================================================================================
+SQL request: SELECT membername, screenname, id as memberid 
+FROM membertbl 
+WHERE membername like '%cutler%' 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('Tarrant Cutler', 'AirDreamer', 1)
+('Tammy Jamieson Cutler', 'Wildcat Wonder', 2)
+('Laura Cutler', 'Peanuts', 6)
+('William Cutler', 'DubCut', 7)
+('Ned and Lisa Cutler', 'Happy Campers', 18)
+('Wendy Cutler', 'Fizzbott ', 73)
+('Elliott Cutler', 'Clammer', 74)
+=====================================================================================================
+SQL request: 
+SELECT membername, screenname, id as memberid 
+FROM membertbl 
+WHERE membername like '%hunzelman%' 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('Lisa and David Hunzelman', 'Empty Nesters', 17)
+('Sabrina Hunzelman Guzman', 'Toothfairy', 22)
+=====================================================================================================
+SQL request: 
+SELECT membername, screenname, id as memberid 
+FROM membertbl 
+WHERE membername like '%bill%' 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('Bill Shuris', 'Kiver', 8)
+('Bill  Evans ', 'Billy Bad Fun', 65)
+('Bill Cowher', 'Bill Cowher', 84)
