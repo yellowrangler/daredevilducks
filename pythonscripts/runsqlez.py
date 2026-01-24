@@ -59,6 +59,27 @@ def getsqldbpassword():
   
   return (answer)
 
+###################################################################################################### 
+# Prompts the user for input until a valid number (integer or float) is entered.
+# 
+# Args:
+#     prompt_message: The message to display to the user.
+# 
+# Returns:
+#     The user's input as a number (int).
+######################################################################################################
+def get_number_input(prompt_message):
+
+  while True:
+    user_input = input(prompt_message)
+    try:
+      # Try converting to an integer
+      return int(user_input)
+    except ValueError:
+      # If both fail, print an error and continue the loop
+      print(f"'{user_input}' is not a number. Please enter a valid number.")
+
+
 # 
 # write sql results to terminal 
 # 
@@ -166,33 +187,34 @@ def getSQLfilename():
 
   idx = 0
   selected_file_idx = 0
-  options = []
 
   while (idx < lcount):
-      options.append(file_list[idx])
-      idx += 1
+    selected_file_number = idx + 1
+    print (f"File: {file_list[idx]:>40} File Nbr: { selected_file_number }")
+    idx += 1
 
-  # Create the menu
-  terminal_menu = TerminalMenu(options, title="Select an Item:")
+  # 
+  # prompt for file number from list
+  # 
+  selected_file_number = get_number_input("Chose the file number to proces: ") 
 
-  # Show the menu and get the selected index
-  menu_entry_index = terminal_menu.show()
+  # adjust number to idx
+  selected_file_idx = selected_file_number - 1
 
   # check that index is valid for list 
-  if 0 <= menu_entry_index < len(options):
-    selected_file_name = options[menu_entry_index]
-    print(f"You selected {options[menu_entry_index]}")
-
+  if 0 <= selected_file_idx < len(file_list):
+    selected_file_name = file_list[selected_file_idx]
+    print(f"You selected {selected_file_name}")
     answer = input(f"Do you want to continue Y/N ? ")  
     if answer.upper() == "N":
       print("Selection canceled by user")  
       quit()
   else:
-    print(f"No item selected!") 
+    print(f"Invalid file number {selected_file_number}!") 
     quit()
+
   
   return selected_file_name 
-
 
 # 
 # find type to output to

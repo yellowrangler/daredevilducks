@@ -1,0 +1,1 @@
+SELECT * FROM hallofmemorytbl WHERE ordr = (SELECT MAX(ordr) FROM hallofmemorytbl)

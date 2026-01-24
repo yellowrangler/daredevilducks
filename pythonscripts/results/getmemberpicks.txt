@@ -1,0 +1,86 @@
+=====================================================================================================
+SQL request: SELECT CONVERT(memberid, CHAR), QM.membername as membername, screenname, picks
+FROM
+(
+	SELECT memberid, membername, COUNT(*) as picks
+	FROM memberpickstbl MP
+	LEFT JOIN membertbl M on MP.memberid = M.id
+	WHERE season = 2025 and week = 17
+	GROUP BY membername, memberid
+
+	UNION
+
+	SELECT  DISTINCT id as memberid, membername, CAST('0' AS INT) as picks
+	FROM membertbl
+	WHERE id NOT IN
+	(
+		SELECT  memberid as id
+		FROM memberpickstbl MP
+		LEFT JOIN membertbl M on MP.memberid = M.id
+		WHERE season = 2025 and week = 17
+	)
+	AND status = 'active'
+) AS QM
+LEFT JOIN membertbl M on QM.memberid = M.id
+ORDER BY membername ASC 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('123', 'Away Man', 'AwayBoy', 16)
+('65', 'Bill  Evans ', 'Billy Bad Fun', 16)
+('25', 'Bob Craig', 'Scotsman357', 16)
+('46', 'Caroline Davis', 'Blue Grass Bombers', 16)
+('120', 'Chart Man', 'ChartMan', 16)
+('69', 'Chris Burgin', 'The Juice Is Loose', 16)
+('59', 'Christopher Eliopoulos', 'Blue Lion', 15)
+('13', 'Chuck Miemiec', 'Alaskan Fisherman', 16)
+('43', 'Cindy Rancort', 'Merida', 16)
+('93', 'Craig Donnelly', 'Day Walker', 14)
+('30', 'Dan and Marilyn Brady', 'Sville 5', 16)
+('40', 'David Donnelly', 'Hoosier Daddy', 16)
+('74', 'Elliott Cutler', 'Clammer', 16)
+('90', 'Frank Schornagle', 'Goalie29', 16)
+('98', 'Grace OMally', 'Wicked Wench', 16)
+('51', 'Healthcare Warrior', 'Healthcare Warrior', 16)
+('48', 'Holly Fitch', 'Mouse Girl', 16)
+('122', 'Home Boy', 'HomeBoy', 16)
+('121', 'Janet Hepner', 'Snapper47', 16)
+('54', 'Jeff Roberts', 'Daffy Duck', 16)
+('110', 'Jen Desimone', 'Jen Desimone', 16)
+('16', 'Jessica Joy Burgin', 'NFL Amateur', 16)
+('114', 'Jessica Kretlow', 'TampaJK', 16)
+('119', 'Jim and Dianne Pappas', 'Di-Namic Duo', 16)
+('103', 'Joann Smith', 'East Coaster', 16)
+('67', 'Kelly J. Gaitens', 'Island Girl', 16)
+('108', 'Laura Osmond', 'Blue Bird', 16)
+('53', 'Linda Kretlow', 'LindaK', 16)
+('17', 'Lisa and David Hunzelman', 'Empty Nesters', 16)
+('75', 'Little LuLu', 'Lulu', 16)
+('97', 'Louie Looser', 'The Brain', 16)
+('49', 'MarTinez Hardy', 'Red Gorillaz', 16)
+('101', 'Miss Patriot', 'Miss Patriot', 16)
+('66', 'Nikki and Dave Aitken', 'Mad Farah', 16)
+('71', 'Oscar Guzman', 'Hygenius', 16)
+('33', 'Pat MacKay', 'Lady Luck', 14)
+('105', 'Randy Paradis', 'Jack Straw', 16)
+('10', 'Sandy Friedman', 'SandyLand', 14)
+('77', 'Sandy Rudman', 'SandyR', 16)
+('62', 'Sandy Shaw', 'Smokey SouWester', 1)
+('113', 'Sandy Stewart', 'Peaceful Gardener', 16)
+('39', 'Scott Williamson', 'Classic JAG', 16)
+('29', 'Steve Paris', 'Exploding Brain', 16)
+('60', 'Susan Paradis', 'Blue Lioness', 16)
+('2', 'Tammy Jamieson Cutler', 'Wildcat Wonder', 16)
+('14', 'Tanya Gorman, Tony Bruehl and Remington', 'Team Remington', 16)
+('1', 'Tarrant Cutler', 'AirDreamer', 16)
+('111', 'Vincent Kretlow ', 'TampaVK', 16)
+('107', 'Wise Mariner', 'Wise Mariner', 16)
+=====================================================================================================
+SQL request: 
+SELECT COUNT(*) as activemembercount
+FROM membertbl
+WHERE status = 'active' 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+(49,)

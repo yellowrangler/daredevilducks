@@ -1,0 +1,13 @@
+INSERT INTO hallofmemorytbl 
+(ordr, memberid, lastname, firstname, 
+titleA, titleB, 
+detailA, 
+detailB, 
+photoA, photoB) 
+VALUES 
+(9, 14, 'Bruehl', 'Anthony (Tony)', 
+'Robert Anthony (Tony) Bruehl <br> 1943 - 2026', 
+'Tanya Gorman, Tony Bruehl and Remington <br> 10 year Member',
+"Tony served as an employee of the State of Georgia for 32 years from 1986 – 2008. Tony was loved, and will be remembered, for his kindness, generosity, dry wit, love of golf, and Mountain Cove – his beloved cabin in the North Georgia mountains.  He died with his 'best fur-buddy' Nixon providing love and warmth across his chest.",
+"Tony and Tanya with their dog Remington, joined the Daredevil Ducks in 2015! In 2019 they won the coveted Daredevil Ducks Trophy! We were lucky enough to have met Tony. During a tour of their home, Tony showed us a painting painted and given to Tony by Commander Cody! If you don't understand that - then you are too young! We will miss Tony very much. ",
+'TonyBruehlHallofMemory.png', 'RemingtonHallofFamePicture1.png')

@@ -1,0 +1,93 @@
+=====================================================================================================
+SQL request: -- tracktext, trackaction, trackmodule, trackseason, trackweek)
+SELECT count(*) 
+FROM tracktbl 
+WHERE 1 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+(31624,)
+=====================================================================================================
+SQL request: 
+SELECT id, memberid, screenname, season, week, trackaction, trackmodule, tracktext, trackdate, device 
+FROM tracktbl 
+WHERE tracktext = "hallofMemory" AND season = 2025 AND week > 18 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+(31697, 40, 'Hoosier Daddy', '2025', '19', 'hallofMemory', 'hallofmemoryController', 'hallofMemory', datetime.datetime(2026, 1, 7, 14, 32, 22), 'desktop')
+(31929, 14, 'Team Remington', '2025', '19', 'hallofMemory', 'hallofmemoryController', 'hallofMemory', datetime.datetime(2026, 1, 13, 11, 49, 11), 'desktop')
+=====================================================================================================
+SQL request: 
+SELECT DISTINCT trackaction
+FROM tracktbl 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('getMemberPickList',)
+('savePickGames',)
+('hallofFame',)
+('weeklyTotals',)
+('playerTotals',)
+('teamStatsDialog',)
+('teamScoresStats',)
+('teamStandings',)
+('hallofMemory',)
+('nflNews',)
+('teamCharts',)
+('login',)
+('faqs',)
+('viewTotalPickGames',)
+('ChristmasSnow',)
+('teamBrackets',)
+('memberUpdate',)
+('takeSurvey',)
+('surveyResults',)
+('helpRequest',)
+('init',)
+('teamDiscovery',)
+('hall of fame',)
+('hall of memory',)
+=====================================================================================================
+SQL request: 
+SELECT DISTINCT trackmodule
+FROM tracktbl 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('viewtotalpickgamesController',)
+('gamesController',)
+('halloffameController',)
+('playerstatsmemberweeklyController',)
+('playerstatstotalwinsController',)
+('pickgamesController',)
+('teamweeklyrankingController',)
+('teamstandingsController',)
+('hallofmemoryController',)
+('nflnewsController',)
+('teamstatschartsController',)
+('dddParentController',)
+('faqsController',)
+('playoffstandingsController',)
+('memberupdatememberController',)
+('takesurveyController',)
+('surveyresultsController',)
+('helpController',)
+('teamdiscoveryController',)
+=====================================================================================================
+SQL request: 
+-- SELECT DISTINCT tracktext
+-- FROM tracktbl 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+No Output
+=====================================================================================================
+SQL request: 
+SELECT DISTINCT device 
+FROM tracktbl 
+=====================================================================================================
+SQL responce follows 
+=====================================================================================================
+('desktop',)
+('mobile',)
