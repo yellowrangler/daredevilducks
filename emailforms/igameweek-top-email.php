@@ -2,30 +2,39 @@
 
 $emailtopwriteup = "
 <p>
-What an amazing Conference playoff week!  
+A 2025 Superbowl blowout! and What was up with that halftime show? 
 </p>
 
 <p>
-In the <span style='color:maroon;font-weight:900;'>AFC playoffs</span> the  <span style='color:#1280D6;font-weight:900;'>Patriots</span> beat the Bo Nix-less <span style='color:#1280D6;font-weight:900;'>Broncos</span>. Teams were tied coming out for the 2nd half. The snow was already creating large problems on the playing field. A miscue by the <span style='color:#1280D6;font-weight:900;'>Broncos</span> Stidham gave the <span style='color:#1280D6;font-weight:900;'>Patriots</span> a field goal which ended up being the difference! 
-</p>
-<p>
-  In the <span style='color:#000066;font-weight:900;'>NFC playoffs</span> the  <span style='color:#1280D6;font-weight:900;'>Seahawks</span> beat the <span style='color:#1280D6;font-weight:900;'>Rams</span>. This was an exciting high scoring game. No snow for this game! Only beautiful California weather. Both teams were able to move the ball up and down the field for 3 quarters. But in the end the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> just made too many plays. 
+  The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> are your <span style='color:#1280D6;font-weight:900;'>2025 Superbowl Champions</span>! They played a great game from start to finished and gave the <span style='color:#1280D6;font-weight:900;'>Patriots</span> more then they could handle. For <span style='color:#1280D6;font-weight:900;'>Seahawks</span> fans this was a great day. Their offense moved the ball seemingly at will. But their defense crushed the hearts of every Patriot fan. The <span style='color:#1280D6;font-weight:900;'>Patriots</span> offensive line was shattered on most plays. Drake Maye who had been in the running for the league MVP never got going until the end of the game. Congratulations <span style='color:#1280D6;font-weight:900;'>Seahawks</span>! 
 </p>
 
 <p>
-  Can you believe that we have come through the entire 2025 season! But here we  are - the Superbowl. That last defining moment in the NFL Season.
+  I wont dwell on this other then to say who is the person vetting the talent for these shows? Sheesh...
 </p>
 
 <p>
-  Break out the beer and pretzels! Grab that Fondue pot that never gets used, except for the Super Bowl! Make it clear to the Kids that the TV is off limits on Super Bowl day! Even if your favorite team is not playing don't be a curmudgeon! Enjoy and be part of the group!
+  Wow! Can you believe that we have come through another football season? Thank you all for Participating this year! We hoped you all enjoyed yourselves. 
 </p>
 
-<p >
-  <span style='font-family:'Middleearth',serif;font-size:17px;color:#1280d6;font-weight:900;'>Game On</span>
+<p>
+  The crowning of our season's Daredevil Ducks winner had to wait for the completion of the last game. <span style='color:#FF6E3B;font-weight:700;'>Scotsman357</span> and <span style='color:#FF6E3B;font-weight:700;'>Lady Luck</span> were one game apart at the start of the Superbowl! But you know the saying - Two walk in, but only one walks out! 
+</p>
+
+<p class='specialTextBold'>
+  Please raise your glass with the beverage of your choice to <span style='color:#FF6E3B;font-weight:700;'>Scotsman357</span> who outlasted, outfoxed, and out maneuvered the rest of us and so earned the coveted title of <span style='color:#FF6E3B;font-weight:700;'>Daredevil Ducks winner</span> for the 2025 NFL Season!</span>
+</p>
+
+<p>
+    Well done Bobby! You have been with us for 10 years. You have always been in the game. But this year you busted through! Persistence has its rewards! Congratulations!
+</p>
+
+<p>
+  For the rest of our members there is always next year! 
 </p>   
 
 <p>
-The Member stats are below! Read em and weep (I know I do)!
+The Final Member stats for the top 3 Members are below! Read em and weep (I know I do)!
 </p> 
 ";
 
