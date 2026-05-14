@@ -1,0 +1,5 @@
+[H[2J
+Showdir started!
+
+The file count is: 0
+Chose the showdir parm file number to proces: 

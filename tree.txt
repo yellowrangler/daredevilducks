@@ -1,0 +1,3287 @@
+.
+├── app
+│   ├── ajax
+│   │   ├── addgameinfo.php
+│   │   ├── addhalloffame.php
+│   │   ├── addhallofmemory.php
+│   │   ├── addmembergameteampick.php
+│   │   ├── addmembergroup.php
+│   │   ├── addmember.php
+│   │   ├── ajaxlist.csv
+│   │   ├── buildemail-gameweek.php
+│   │   ├── buildemail.php
+│   │   ├── buildmemberstats.php
+│   │   ├── buildmemberweekstats.php
+│   │   ├── buildmysqldump.php
+│   │   ├── buildteamstats.php
+│   │   ├── buildteamweekstats.php
+│   │   ├── buildwebstats.php
+│   │   ├── changetemppassword.php
+│   │   ├── convertdaydatetime.php
+│   │   ├── dbsql
+│   │   │   ├── ddd-dump-05222022181126.sql
+│   │   │   ├── ddd-dump-05222022181138.sql
+│   │   │   ├── ddd-dump-05222022181639-watertown.sql
+│   │   │   ├── ddd-dump-07232023181919.sql
+│   │   │   ├── ddd-dump-08022022172538-x.sql
+│   │   │   └── ddd-dump-10052022123945.sql
+│   │   ├── deletemembergroupmember.php
+│   │   ├── deletemembergroup.php
+│   │   ├── deletemember.php
+│   │   ├── fixanswertbl.php
+│   │   ├── fixrunimportnewseasongames.php
+│   │   ├── getadminteamweeklyranking.php
+│   │   ├── getallhalloffame.php
+│   │   ├── getallhallofmemory.php
+│   │   ├── getallmemberadmin.php
+│   │   ├── getallmembergroupmembers.php
+│   │   ├── getallmembergroup.php
+│   │   ├── getallmembergroups.php
+│   │   ├── getallmember.php
+│   │   ├── getallmembersadmin.php
+│   │   ├── getallmembers.php
+│   │   ├── getbadmemberpicks.php
+│   │   ├── getbadpicks.php
+│   │   ├── getcurrentseasonweek.php
+│   │   ├── getcurrentsurveydata.php
+│   │   ├── getcurrentweek.php
+│   │   ├── getlatepickbeforemembers.php
+│   │   ├── getlatepickdayofmembers.php
+│   │   ├── getlatepickmembers.php
+│   │   ├── getleadermembers.php
+│   │   ├── getmemberinfo.php
+│   │   ├── getmember.php
+│   │   ├── getmemberpicklist.php
+│   │   ├── getmemberprofiledialog.php
+│   │   ├── getmembers.php
+│   │   ├── getmemberstatus.php
+│   │   ├── getmemberteampicklistdialog.php
+│   │   ├── getmemberweekstats.php
+│   │   ├── getnetworks.php
+│   │   ├── getnextgamenbr.php
+│   │   ├── getnflbyeweekmemberteams.php
+│   │   ├── getnflcurrentseasonweek.php
+│   │   ├── getnflgamesteams.php
+│   │   ├── getnflgametypes.php
+│   │   ├── getnflgameweekmemberteampicks.php
+│   │   ├── getnflgameweekmemberteamsexpiredaugmented.php
+│   │   ├── getnflgameweekmemberteamsexpired.php
+│   │   ├── getnflgameweekmemberteams.php
+│   │   ├── getnflgameweekteams.php
+│   │   ├── getNFLpostseasonstatus.php
+│   │   ├── getnflrss.php
+│   │   ├── getnflseasons.php
+│   │   ├── getnflseasonweeks.php
+│   │   ├── getnflteam.php
+│   │   ├── getnflteams.php
+│   │   ├── getnflteamstats.php
+│   │   ├── getnflweekgamesinfo.php
+│   │   ├── getnow.php
+│   │   ├── getplayerinjurydialog.php
+│   │   ├── getplayerinjuryhtmldialog.php
+│   │   ├── getplayoffstatus.php
+│   │   ├── getrequestitems.php
+│   │   ├── getrss.php
+│   │   ├── getsecure.php
+│   │   ├── getsurveymemberdata.php
+│   │   ├── getsurveyquestiondata.php
+│   │   ├── getsurveyresultsmemberquestiondetaildata.php
+│   │   ├── getsurveyresultsmemberquestionsummarydata.php
+│   │   ├── getteambracket.php
+│   │   ├── getteambracketsmart.php
+│   │   ├── getteambrackets.php
+│   │   ├── getteamhead2head.php
+│   │   ├── getteampowerrankings.php
+│   │   ├── getteamseasoninfo.php
+│   │   ├── getteamspowerrankings.php
+│   │   ├── getteamsstatscurrentweek.php
+│   │   ├── getteamstatsdialog.php
+│   │   ├── getteamweekyranking.php
+│   │   ├── getteamwlt.php
+│   │   ├── gettrackerreview.php
+│   │   ├── gettrackerselectwhere.php
+│   │   ├── importnewseasonbyes.php
+│   │   ├── importnewseasongames.php
+│   │   ├── importnewseasongameweeks.php
+│   │   ├── importplayerinjuryfile.php
+│   │   ├── importsurveyquestiondata.php
+│   │   ├── importteamweeklyrankfile.php
+│   │   ├── initializememberweekstats.php
+│   │   ├── initializeteamweekstats.php
+│   │   ├── login.php
+│   │   ├── logs
+│   │   │   ├── access.log
+│   │   │   ├── error.log
+│   │   │   └── spy.log
+│   │   ├── makegametimestamp.php
+│   │   ├── memberupdatemember.php
+│   │   ├── modulelist.txt
+│   │   ├── mysqlconnect.php
+│   │   ├── mysqlquery.php
+│   │   ├── news.xml
+│   │   ├── registeremail.php
+│   │   ├── runphpmodule.php
+│   │   ├── saveadminteamweeklyranking.php
+│   │   ├── savegamedatetimeweekteamsinfo.php
+│   │   ├── savegameweekteamsnetworkinfo.php
+│   │   ├── savegameweekteamsscoreinfo.php
+│   │   ├── savememberavatar.php
+│   │   ├── savenflweekgamesInfo.php
+│   │   ├── saveteambracket.php
+│   │   ├── sendemail2members-original.php
+│   │   ├── sendemail2members-orininal.php
+│   │   ├── sendemail2members.php
+│   │   ├── sendsms2member.php
+│   │   ├── testdate.php
+│   │   ├── testemail.php
+│   │   ├── testlogs.php
+│   │   ├── testmail.php
+│   │   ├── testpear.php
+│   │   ├── test.php
+│   │   ├── testsms.php
+│   │   ├── track.php
+│   │   ├── updategameinfo.php
+│   │   ├── updatehalloffame.php
+│   │   ├── updatehallofmemory.php
+│   │   ├── updatemembergroup.php
+│   │   ├── updatemember.php
+│   │   ├── updatesurveymemberdata.php
+│   │   ├── updateteaminfo.php
+│   │   ├── updateteamseasoninfo.php
+│   │   └── uploadavatar.php
+│   ├── class
+│   │   ├── class.AccessLog.php
+│   │   ├── class.ErrorLog.php
+│   │   ├── class.Log.php
+│   │   ├── class.MailerDDD.php
+│   │   ├── class.MailerDDDsms.php
+│   │   ├── class.spyLog.php
+│   │   └── logs
+│   │       ├── access.log
+│   │       ├── error.log
+│   │       └── spy.log
+│   ├── controllers
+│   │   ├── adminController.js
+│   │   ├── awardsController.js
+│   │   ├── controllers-ag-grid.js
+│   │   ├── controllers-new.js
+│   │   ├── controllers-wip.js
+│   │   ├── faqsController.js
+│   │   ├── fireworksController.js
+│   │   ├── firstController.js
+│   │   ├── gamesController.js
+│   │   ├── helpController.js
+│   │   ├── lastController.js
+│   │   ├── parenthomeController.js
+│   │   ├── playerstatsController.js
+│   │   ├── spookyController.js
+│   │   ├── surveyController.js
+│   │   ├── teamsController.js
+│   │   └── trackerController.js
+│   ├── dddApp.js
+│   ├── directives
+│   │   ├── directives.js
+│   │   └── templates
+│   │       ├── statelistdisplay.html
+│   │       └── yesnolistdisplay.html
+│   ├── dist
+│   │   ├── angular-grid.css
+│   │   ├── angular-grid.d.ts
+│   │   ├── angular-grid.js
+│   │   ├── angular-grid.min.css
+│   │   ├── angular-grid.min.js
+│   │   ├── theme-dark.css
+│   │   ├── theme-dark.min.css
+│   │   ├── theme-fresh.css
+│   │   └── theme-fresh.min.css
+│   ├── factories
+│   │   ├── gamesfactory.js
+│   │   ├── loginfactory.js
+│   │   ├── membersfactory.js
+│   │   ├── scriptsfactory.js
+│   │   ├── surveyfactory.js
+│   │   ├── teamsfactory.js
+│   │   └── trackerfactory.js
+│   ├── load
+│   │   └── keyrequestsendemail.html
+│   ├── partials
+│   │   ├── addavatar.html
+│   │   ├── addmembergroup.html
+│   │   ├── addmember.html
+│   │   ├── editorial.html
+│   │   ├── faqs.html
+│   │   ├── fireworks.html
+│   │   ├── gameinfo.html
+│   │   ├── gamenetworkinfo.html
+│   │   ├── gameranking.html
+│   │   ├── gameteamdatetimeinfo.html
+│   │   ├── gameteamscoresinfo.html
+│   │   ├── gameweekinfo.html
+│   │   ├── gameweeks.html
+│   │   ├── halloffame.html
+│   │   ├── hallofmemory.html
+│   │   ├── help
+│   │   │   ├── pickgameshelp.html
+│   │   │   ├── playerstatsmemberweeklyhelp.html
+│   │   │   ├── playerstatstotalpercentagehelp.html
+│   │   │   ├── playerstatstotalwinshelp.html
+│   │   │   ├── surveyresultshelp.html
+│   │   │   ├── teamweeklyrankinghelp.html
+│   │   │   ├── viewselectpickgameshelp.html
+│   │   │   └── viewtotalpickgameshelp.html
+│   │   ├── home.html
+│   │   ├── homejessiebrian.html
+│   │   ├── idddupdates.html
+│   │   ├── ididyouknow.html
+│   │   ├── ihelpnews.html
+│   │   ├── imemberresultssummary.html
+│   │   ├── inewsopinion.html
+│   │   ├── inewsopinion-newseason.html
+│   │   ├── inewsopinion-regularseason.html
+│   │   ├── inflobservationsdynamic.html
+│   │   ├── inflobservations.html
+│   │   ├── ispooky.html
+│   │   ├── iweeksgameinfo.html
+│   │   ├── leaderboard.html
+│   │   ├── login.html
+│   │   ├── managehalloffame.html
+│   │   ├── managehallofmemory.html
+│   │   ├── memberupdatemember.html
+│   │   ├── memberweekly.html
+│   │   ├── memberweekly-original.html
+│   │   ├── nflnews.html
+│   │   ├── nflnews-new.html
+│   │   ├── nflnews-orig.html
+│   │   ├── pickgames-ag-grid.html
+│   │   ├── pickgames.html
+│   │   ├── playerinjuryscripts.html
+│   │   ├── playerstatsmemberweekly.html
+│   │   ├── playerstatstotalpercentage.html
+│   │   ├── playerstatstotalwins.html
+│   │   ├── playoffstandings.html
+│   │   ├── sendplayeremail.html
+│   │   ├── spooky.html
+│   │   ├── surveyresults.html
+│   │   ├── takesurvey.html
+│   │   ├── teamdiscovery.html
+│   │   ├── teaminfo.html
+│   │   ├── teamsbracketsinfo.html
+│   │   ├── teamseasoninfo.html
+│   │   ├── teamstandings.html
+│   │   ├── teamstatscharts.html
+│   │   ├── teamstats.html
+│   │   ├── teamweeklyranking.html
+│   │   ├── trackerreviewcount.html
+│   │   ├── trackerreviewselect.html
+│   │   ├── updatemembergroup.html
+│   │   ├── updatemember.html
+│   │   ├── viewallpicks.html
+│   │   ├── viewgames.html
+│   │   ├── viewselectpickgames.html
+│   │   ├── viewtotalpickgames.html
+│   │   ├── weeklybuilds.html
+│   │   ├── weeklyscripts-deleteme.html
+│   │   └── weeklyscripts.html
+│   ├── services
+│   │   ├── chartservice.js
+│   │   ├── dddservice.js
+│   │   ├── dddservice-old.js
+│   │   ├── loginservice.js
+│   │   ├── msgservice.js
+│   │   ├── selectlistservice.js
+│   │   └── teamservice.js
+│   ├── stats
+│   │   ├── ddd-webstats-10152016.html
+│   │   ├── rungoaccess
+│   │   ├── webstats-10152016.html
+│   │   ├── webstats-10192016.html
+│   │   └── webstats-current.html
+│   └── validations
+│       └── validate.js
+├── charts
+│   ├── leaders_chart_totalpercent.csv
+│   ├── leaders_chart_weekpercent.csv
+│   └── leaders_chart_wins.csv
+├── css
+│   ├── basic.css
+│   ├── ddd.css
+│   ├── dropzone
+│   │   ├── basic.css
+│   │   └── dropzone.css
+│   ├── dropzone-amd-module.js
+│   ├── dropzone.css
+│   ├── fonts
+│   │   ├── aileron
+│   │   │   ├── Aileron-Light-webfont.woff
+│   │   │   ├── Aileron-SemiBold-webfont.woff
+│   │   │   └── Aileron-Thin-webfont.woff
+│   │   ├── aniron-font
+│   │   │   ├── Aniron-7BaP.ttf
+│   │   │   ├── AnironBold-mL9P.ttf
+│   │   │   ├── AnironcBold-PKwr.ttf
+│   │   │   ├── Anironc-d9DK.ttf
+│   │   │   ├── info.txt
+│   │   │   └── misc
+│   │   │       ├── liesmich-081c.html
+│   │   │       ├── prochitay-0353.html
+│   │   │       └── readme-4ac2.html
+│   │   ├── aniron-font.zip
+│   │   ├── Anton
+│   │   │   ├── Anton-Regular.ttf
+│   │   │   └── OFL.txt
+│   │   ├── BeyondWonderland.ttf
+│   │   ├── ChopinScript.ttf
+│   │   ├── cormorant
+│   │   │   ├── cormorant
+│   │   │   │   ├── Cormorant-BoldItalic.ttf
+│   │   │   │   ├── Cormorant-Bold.ttf
+│   │   │   │   ├── Cormorant-Italic.ttf
+│   │   │   │   ├── Cormorant-LightItalic.ttf
+│   │   │   │   ├── Cormorant-Light.ttf
+│   │   │   │   ├── Cormorant-MediumItalic.ttf
+│   │   │   │   ├── Cormorant-Medium.ttf
+│   │   │   │   ├── Cormorant-Regular.ttf
+│   │   │   │   ├── Cormorant-SemiBoldItalic.ttf
+│   │   │   │   ├── Cormorant-SemiBold.ttf
+│   │   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   │   ├── METADATA.pb
+│   │   │   │   └── OFL.txt
+│   │   │   ├── cormorantgaramond
+│   │   │   │   ├── CormorantGaramond-BoldItalic.ttf
+│   │   │   │   ├── CormorantGaramond-Bold.ttf
+│   │   │   │   ├── CormorantGaramond-Italic.ttf
+│   │   │   │   ├── CormorantGaramond-LightItalic.ttf
+│   │   │   │   ├── CormorantGaramond-Light.ttf
+│   │   │   │   ├── CormorantGaramond-MediumItalic.ttf
+│   │   │   │   ├── CormorantGaramond-Medium.ttf
+│   │   │   │   ├── CormorantGaramond-Regular.ttf
+│   │   │   │   ├── CormorantGaramond-SemiBoldItalic.ttf
+│   │   │   │   ├── CormorantGaramond-SemiBold.ttf
+│   │   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   │   ├── METADATA.pb
+│   │   │   │   └── OFL.txt
+│   │   │   ├── cormorantinfant
+│   │   │   │   ├── CormorantInfant-BoldItalic.ttf
+│   │   │   │   ├── CormorantInfant-Bold.ttf
+│   │   │   │   ├── CormorantInfant-Italic.ttf
+│   │   │   │   ├── CormorantInfant-LightItalic.ttf
+│   │   │   │   ├── CormorantInfant-Light.ttf
+│   │   │   │   ├── CormorantInfant-MediumItalic.ttf
+│   │   │   │   ├── CormorantInfant-Medium.ttf
+│   │   │   │   ├── CormorantInfant-Regular.ttf
+│   │   │   │   ├── CormorantInfant-SemiBoldItalic.ttf
+│   │   │   │   ├── CormorantInfant-SemiBold.ttf
+│   │   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   │   ├── METADATA.pb
+│   │   │   │   └── OFL.txt
+│   │   │   ├── cormorantsc
+│   │   │   │   ├── CormorantSC-Bold.ttf
+│   │   │   │   ├── CormorantSC-Light.ttf
+│   │   │   │   ├── CormorantSC-Medium.ttf
+│   │   │   │   ├── CormorantSC-Regular.ttf
+│   │   │   │   ├── CormorantSC-SemiBold.ttf
+│   │   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   │   ├── METADATA.pb
+│   │   │   │   └── OFL.txt
+│   │   │   ├── cormorantunicase
+│   │   │   │   ├── CormorantUnicase-Bold.ttf
+│   │   │   │   ├── CormorantUnicase-Light.ttf
+│   │   │   │   ├── CormorantUnicase-Medium.ttf
+│   │   │   │   ├── CormorantUnicase-Regular.ttf
+│   │   │   │   ├── CormorantUnicase-SemiBold.ttf
+│   │   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   │   ├── METADATA.pb
+│   │   │   │   └── OFL.txt
+│   │   │   └── cormorantupright
+│   │   │       ├── CormorantUpright-Bold.ttf
+│   │   │       ├── CormorantUpright-Light.ttf
+│   │   │       ├── CormorantUpright-Medium.ttf
+│   │   │       ├── CormorantUpright-Regular.ttf
+│   │   │       ├── CormorantUpright-SemiBold.ttf
+│   │   │       ├── DESCRIPTION.en_us.html
+│   │   │       ├── METADATA.pb
+│   │   │       └── OFL.txt
+│   │   ├── coventrygarden
+│   │   │   ├── 1001fonts-coventrygarden-eula.txt
+│   │   │   ├── CoventryGardenNF.otf
+│   │   │   └── CoventryGardenNF.ttf
+│   │   ├── kingthings-christmas-2.regular.ttf
+│   │   ├── metro-retro.regular.ttf
+│   │   ├── middleearth-font
+│   │   │   ├── info.txt
+│   │   │   └── Middleearth-ao6m.ttf
+│   │   └── middleearth-font.zip
+│   ├── ui-grid-stable.css
+│   ├── ui-grid.svg
+│   ├── ui-grid.ttf
+│   └── ui-grid.woff
+├── csv
+│   ├── trackcsv.py
+│   ├── trackercountall.csv
+│   ├── trackercountallgroupdate.csv
+│   ├── trackercountallgroupdate.sql
+│   └── trackercountall.sql
+├── data
+│   ├── csv2json.json
+│   ├── ddd-dump-dump-2018-start.sql
+│   ├── ddd-dump-manchester-nfl2018.sql
+│   ├── ddd-dump-tammy.sql
+│   ├── importfiles
+│   │   ├── 2025fixgames-schedule.csv
+│   │   ├── 2025NFL-bye-games.csv
+│   │   ├── 2025NFL-Schedule.csv
+│   │   ├── 2025NFL-weeks.csv
+│   │   ├── injury-season2025-week11-11122025.csv
+│   │   ├── injury-season2025-week12-11182025.csv
+│   │   ├── injury-season2025-week13-11252025.csv
+│   │   ├── injury-season2025-week14-12032025.csv
+│   │   ├── injury-season2025-week15-12092025.csv
+│   │   ├── injury-season2025-week16-12162025.csv
+│   │   ├── injury-season2025-week17-12232025.csv
+│   │   ├── TeamWeekRank2025W10After.csv
+│   │   ├── TeamWeekRank2025W11After.csv
+│   │   ├── TeamWeekRank2025W11Before.csv
+│   │   ├── TeamWeekRank2025W12After.csv
+│   │   ├── TeamWeekRank2025W12Before.csv
+│   │   ├── TeamWeekRank2025W13After.csv
+│   │   ├── TeamWeekRank2025W13Before.csv
+│   │   ├── TeamWeekRank2025W14After.csv
+│   │   ├── TeamWeekRank2025W14Before.csv
+│   │   ├── TeamWeekRank2025W15After.csv
+│   │   ├── TeamWeekRank2025W15Before.csv
+│   │   ├── TeamWeekRank2025W16After.csv
+│   │   ├── TeamWeekRank2025W16Before.csv
+│   │   ├── TeamWeekRank2025W17After.csv
+│   │   ├── TeamWeekRank2025W17Before.csv
+│   │   ├── TeamWeekRank2025W18After.csv
+│   │   ├── TeamWeekRank2025W18Before.csv
+│   │   └── TeamWeekRank2025W19Before.csv
+│   ├── nfl2014.csv
+│   ├── nfl2014.json
+│   ├── nfl2014-scores.csv
+│   ├── nfl2014-scores.json
+│   ├── nfl2014season.csv
+│   ├── nfl2014-test.json
+│   ├── nfl2015.json
+│   ├── nfl-2015-schedule.csv
+│   ├── nfl2016.json
+│   ├── nfl-2016-schedule.csv
+│   ├── nfl2017.csv
+│   ├── nfl2018.csv
+│   ├── nfl2018.json
+│   ├── Sheet 1-Daredevilducks PHP and Ruby Modules.numbers
+│   ├── TeamWeekRank2020W13After.csv
+│   ├── TeamWeekRank2020W14Before.csv
+│   ├── teamweekranking2015
+│   │   ├── Off Def Total Weekly Stat-Table 1.csv
+│   │   ├── Team Week 2 Stats-Table 1.csv
+│   │   ├── Team Week 3 Stats-Table 1.csv
+│   │   ├── Team Week 4 Stats-Table 1.csv
+│   │   ├── Team Week 5 Stats-Table 1.csv
+│   │   ├── Team Week 6 Stats-Table 1.csv
+│   │   ├── Team Week 7 Stats-Table 1.csv
+│   │   ├── Team Week 8 Stats-Table 1.csv
+│   │   ├── teamweekrank2015w10After.csv
+│   │   ├── teamweekrank2015w11Before.csv
+│   │   ├── teamweekrank2015w1.csv
+│   │   └── teamweekrank2015w1.json
+│   ├── years_2014_games.csv
+│   └── years_2014_games.json
+├── deleteme
+│   ├── aniron-font
+│   │   ├── Aniron-7BaP.ttf
+│   │   ├── AnironBold-mL9P.ttf
+│   │   ├── AnironcBold-PKwr.ttf
+│   │   ├── Anironc-d9DK.ttf
+│   │   ├── info.txt
+│   │   └── misc
+│   │       ├── liesmich-081c.html
+│   │       ├── prochitay-0353.html
+│   │       └── readme-4ac2.html
+│   ├── aniron-font.zip
+│   ├── Anton
+│   │   ├── Anton-Regular.ttf
+│   │   └── OFL.txt
+│   ├── cormorant
+│   │   ├── cormorant
+│   │   │   ├── Cormorant-BoldItalic.ttf
+│   │   │   ├── Cormorant-Bold.ttf
+│   │   │   ├── Cormorant-Italic.ttf
+│   │   │   ├── Cormorant-LightItalic.ttf
+│   │   │   ├── Cormorant-Light.ttf
+│   │   │   ├── Cormorant-MediumItalic.ttf
+│   │   │   ├── Cormorant-Medium.ttf
+│   │   │   ├── Cormorant-Regular.ttf
+│   │   │   ├── Cormorant-SemiBoldItalic.ttf
+│   │   │   ├── Cormorant-SemiBold.ttf
+│   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   ├── METADATA.pb
+│   │   │   └── OFL.txt
+│   │   ├── cormorantgaramond
+│   │   │   ├── CormorantGaramond-BoldItalic.ttf
+│   │   │   ├── CormorantGaramond-Bold.ttf
+│   │   │   ├── CormorantGaramond-Italic.ttf
+│   │   │   ├── CormorantGaramond-LightItalic.ttf
+│   │   │   ├── CormorantGaramond-Light.ttf
+│   │   │   ├── CormorantGaramond-MediumItalic.ttf
+│   │   │   ├── CormorantGaramond-Medium.ttf
+│   │   │   ├── CormorantGaramond-Regular.ttf
+│   │   │   ├── CormorantGaramond-SemiBoldItalic.ttf
+│   │   │   ├── CormorantGaramond-SemiBold.ttf
+│   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   ├── METADATA.pb
+│   │   │   └── OFL.txt
+│   │   ├── cormorantinfant
+│   │   │   ├── CormorantInfant-BoldItalic.ttf
+│   │   │   ├── CormorantInfant-Bold.ttf
+│   │   │   ├── CormorantInfant-Italic.ttf
+│   │   │   ├── CormorantInfant-LightItalic.ttf
+│   │   │   ├── CormorantInfant-Light.ttf
+│   │   │   ├── CormorantInfant-MediumItalic.ttf
+│   │   │   ├── CormorantInfant-Medium.ttf
+│   │   │   ├── CormorantInfant-Regular.ttf
+│   │   │   ├── CormorantInfant-SemiBoldItalic.ttf
+│   │   │   ├── CormorantInfant-SemiBold.ttf
+│   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   ├── METADATA.pb
+│   │   │   └── OFL.txt
+│   │   ├── cormorantsc
+│   │   │   ├── CormorantSC-Bold.ttf
+│   │   │   ├── CormorantSC-Light.ttf
+│   │   │   ├── CormorantSC-Medium.ttf
+│   │   │   ├── CormorantSC-Regular.ttf
+│   │   │   ├── CormorantSC-SemiBold.ttf
+│   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   ├── METADATA.pb
+│   │   │   └── OFL.txt
+│   │   ├── cormorantunicase
+│   │   │   ├── CormorantUnicase-Bold.ttf
+│   │   │   ├── CormorantUnicase-Light.ttf
+│   │   │   ├── CormorantUnicase-Medium.ttf
+│   │   │   ├── CormorantUnicase-Regular.ttf
+│   │   │   ├── CormorantUnicase-SemiBold.ttf
+│   │   │   ├── DESCRIPTION.en_us.html
+│   │   │   ├── METADATA.pb
+│   │   │   └── OFL.txt
+│   │   └── cormorantupright
+│   │       ├── CormorantUpright-Bold.ttf
+│   │       ├── CormorantUpright-Light.ttf
+│   │       ├── CormorantUpright-Medium.ttf
+│   │       ├── CormorantUpright-Regular.ttf
+│   │       ├── CormorantUpright-SemiBold.ttf
+│   │       ├── DESCRIPTION.en_us.html
+│   │       ├── METADATA.pb
+│   │       └── OFL.txt
+│   ├── cormorant.zip
+│   ├── middleearth-font
+│   │   ├── info.txt
+│   │   └── Middleearth-ao6m.ttf
+│   └── middleearth-font.zip
+├── documents
+│   ├── code-snippets
+│   │   ├── bobbycraig-halloffame-data.txt
+│   │   └── email-2025-season-end-tio.html
+│   ├── DareDevil Duck NFL Create Player Letter.docx
+│   ├── Daredevil ducks modules2023.numbers
+│   ├── darefevilducks-build-new-season-new.pages
+│   ├── darefevilducks-build-new-season-new.txt
+│   ├── docs
+│   │   └── NFL Team Offical Website Links.docx
+│   ├── fall_images.txt
+│   ├── images
+│   │   ├── Button - Dare Devil Website - Hall of Fame No Line.png
+│   │   ├── Button - Dare Devil Website - Player Stats 4 No Line.png
+│   │   ├── doctored
+│   │   │   ├── Donald Duck as Post Man - Profile Scrn.png
+│   │   │   ├── Donald Duck Cartoon Think Sept Calender 2012 - Game Week Scrn.png
+│   │   │   ├── Donald Duck Number 1 - Pick Week Scrn.png
+│   │   │   ├── Donald Duck on PC Data - Team Stat Scrn.png
+│   │   │   ├── Donald Duck Reviewing Book  - LeaderBd Scrn.png
+│   │   │   ├── Donald Duck Snap His Fingers - LeaderBd Scrn.png
+│   │   │   └── Donald Duck Thinking 1 - Profile Scrn.png
+│   │   ├── Donald Duck as Post Man - Profile Scrn.png
+│   │   ├── Donald Duck Cartoon Think Sept Calender 2012 - Game Week Scrn.png
+│   │   ├── Donald Duck Number 1 - Pick Week Scrn.png
+│   │   ├── Donald Duck on PC Data - Team Stat Scrn.png
+│   │   ├── Donald Duck Reviewing Book  - LeaderBd Scrn.png
+│   │   ├── Donald Duck Snap His Fingers - LeaderBd Scrn.png
+│   │   └── Donald Duck Thinking 1 - Profile Scrn.png
+│   ├── nfl season 2014.pdf
+│   ├── screens
+│   │   ├── byeteams
+│   │   │   ├── NFL Website Pick Team for Week Screen - 2015-07-29.pdf
+│   │   │   ├── Pick Team Week Scrn - Donald Duck Sleeping in Hammck.png
+│   │   │   └── Pick Team Week Scrn - Donald Duck Sleeping in Hammck.xcf
+│   │   ├── NFL Website Game Week - 2015-07-29.pdf
+│   │   ├── NFL Website Leaderboard Regular Screen - 2015-08-24.pdf
+│   │   ├── NFL Website Leaderboard Screen - 2015-08-02.pdf
+│   │   ├── NFL Website Picks for Week vs Others Screen - 2015-08-23.pdf
+│   │   ├── NFL Website Profile Screen - 2015-07-22.pdf
+│   │   ├── NFL Website Team Stats Screen Stacked - 2015-08-04.pdf
+│   │   ├── screenforsystemdown
+│   │   │   ├── NFL Website Repair Screen - 2015-09-11.pdf
+│   │   │   └── Picture for Down - OFF Scrn.png
+│   │   └── sitedown.xcf
+│   ├── trackaction.txt
+│   ├── trackmodule.txt
+│   ├── trackseason.txt
+│   ├── tracktext.txt
+│   ├── trackweek.txt
+│   └── tvlogos
+│       ├── abc.png
+│       ├── cbs.png
+│       ├── espn.png
+│       ├── fox.png
+│       ├── nbc.png
+│       └── nfl.png
+├── emailforms
+│   ├── avatar-change-email.html
+│   ├── avatar-login-change-email.html
+│   ├── end-of-season-email.html
+│   ├── final-email-template.html
+│   ├── gameweek-email.html
+│   ├── gameweek-long-email.html
+│   ├── gameweek-short-email.html
+│   ├── igameweek-bottom-email.php
+│   ├── igameweek-top-email.php
+│   ├── ipchange-email.html
+│   ├── latepicksdaybefore-email.html
+│   ├── latepicksdayof-email.html
+│   ├── latepicks-email.html
+│   ├── login-change-email.html
+│   ├── oops-email.html
+│   ├── product-info.html
+│   ├── sitedown-email.html
+│   ├── siteproblems-email.html
+│   ├── survey-email.html
+│   ├── teamweeklyrankings-email.html
+│   ├── welcome-email.html
+│   ├── welcome-haveinfo-email.html
+│   ├── welcome-needinfo-email.html
+│   └── welcome-new-season-email.html
+├── Fireworks
+│   ├── css
+│   │   └── fireworks.css
+│   ├── fireworks.html
+│   ├── images
+│   │   ├── big-glow.png
+│   │   └── small-glow.png
+│   ├── index.html
+│   ├── js
+│   │   └── fireworks.js
+│   ├── LICENSE
+│   ├── README.md
+│   └── third_party
+│       └── requestanimframe.js
+├── img
+│   ├── afc.png
+│   ├── avatars
+│   │   ├── airstream.png
+│   │   ├── airstream.xcf
+│   │   ├── AwayBoy.png
+│   │   ├── BillEvans.png
+│   │   ├── BillEvans.xcf
+│   │   ├── BobbiePereira.png
+│   │   ├── BobbiePereira.xcf
+│   │   ├── bobby.png
+│   │   ├── bonnie.png
+│   │   ├── bonnie.xcf
+│   │   ├── brian-avatar-brady.png
+│   │   ├── brian-avatar-brady.xcf
+│   │   ├── BrianBurgin.png
+│   │   ├── BrianBurgin.xcf
+│   │   ├── brian.png
+│   │   ├── brian.xcf
+│   │   ├── CarolineDavisAvatar2A.png
+│   │   ├── CarolineDavisAvatar2A.xcf
+│   │   ├── CarolineDavisAvatar.png
+│   │   ├── CarolineDavisAvatar.xcf
+│   │   ├── CarolineDavis.png
+│   │   ├── CarolineDavis.xcf
+│   │   ├── CarolJamieson.png
+│   │   ├── CarolJamieson.xcf
+│   │   ├── CBSSportsAnalyst.png
+│   │   ├── CBSSportsAnalyst.xcf
+│   │   ├── ChartManAvatar.png
+│   │   ├── ChartManAvatar.xcf
+│   │   ├── ChrisBurgin.png
+│   │   ├── ChrisEliopoulos.png
+│   │   ├── ChrisEliopoulos.xcf
+│   │   ├── ChuckMiemiecAvatar2A.png
+│   │   ├── ChuckMiemiecAvatar2A.xcf
+│   │   ├── chuck.png
+│   │   ├── chuck.xcf
+│   │   ├── CindyRancourt.png
+│   │   ├── CindyRancourt.xcf
+│   │   ├── Craig Donnelly Avatar 2 A.png
+│   │   ├── CraigDonnellyAvatarB.png
+│   │   ├── dannyg.png
+│   │   ├── dannyg.xcf
+│   │   ├── davida.png
+│   │   ├── davida.xcf
+│   │   ├── DavidDonnelly.png
+│   │   ├── DavidDonnelly.xcf
+│   │   ├── ddt.png
+│   │   ├── default.png
+│   │   ├── default.xcf
+│   │   ├── DianeH.png
+│   │   ├── DianeH.xcf
+│   │   ├── Donald Duck Flying on Lightening Bolt 2.png
+│   │   ├── Donald Duck Flying on Lightening Bolt.jpg
+│   │   ├── donald.png
+│   │   ├── donald.xcf
+│   │   ├── EllenNelton.png
+│   │   ├── EllenNelton.xcf
+│   │   ├── EllenP.png
+│   │   ├── EllenP.xcf
+│   │   ├── ElliotCutler.png
+│   │   ├── ElliotCutler.xcf
+│   │   ├── espn.png
+│   │   ├── ESPNSportsAnalyst.png
+│   │   ├── ESPNSportsAnalyst.xcf
+│   │   ├── espn.xcf
+│   │   ├── FrankSchornagle.png
+│   │   ├── FredK.png
+│   │   ├── gary2.png
+│   │   ├── gary2.xcf
+│   │   ├── gary.png
+│   │   ├── gary.xcf
+│   │   ├── GeryDelgadoAvatar.png
+│   │   ├── GraceOMallyAvatar10242018.png
+│   │   ├── HealtcareWarrior.png
+│   │   ├── HealtcareWarrior.xcf
+│   │   ├── HollyFitchAvatar2A.png
+│   │   ├── HollyFitchAvatar3A.png
+│   │   ├── HollyFitchAvatar3A.xcf
+│   │   ├── HollyFitch.png
+│   │   ├── HomeBoyAvatar.png
+│   │   ├── HomeBoyAvatar.xcf
+│   │   ├── JackieAmeroAvatar2018.png
+│   │   ├── JasonShuris10132018.png
+│   │   ├── jasonshuris.png
+│   │   ├── JeffRoberts.png
+│   │   ├── JeffRoberts.xcf
+│   │   ├── JenD.png
+│   │   ├── JenD.xcf
+│   │   ├── JennIsbell1A.png
+│   │   ├── JennIsbell1 A.xcf
+│   │   ├── JennIsbell1A.xcf
+│   │   ├── jessica.png
+│   │   ├── jessica.xcf
+│   │   ├── JimPappasAvatar.png
+│   │   ├── JimPappasAvatar.xcf
+│   │   ├── JoanneGavatar2.png
+│   │   ├── JoanneGAvatar.png
+│   │   ├── JoanneSmith1A.png
+│   │   ├── JoanneSmith1A.xcf
+│   │   ├── judd.png
+│   │   ├── judd.xcf
+│   │   ├── JudsonJamiesonAvatar2.png
+│   │   ├── JulianneMarrie1A.png
+│   │   ├── JulianneMarrie1A.xcf
+│   │   ├── KarenHillier.png
+│   │   ├── KarenHillier.xcf
+│   │   ├── KatherineMacKayAvata410222018.png
+│   │   ├── KatherineMacKayAvatar2.png
+│   │   ├── KatherineMacKayAvatar2.xcf
+│   │   ├── KatherineMacKay.png
+│   │   ├── KatherineMacKay.xcf
+│   │   ├── kaya.png
+│   │   ├── KayAvatar10222018.png
+│   │   ├── KellyGaitens.png
+│   │   ├── KellyGaitens.xcf
+│   │   ├── KellyMacKay.png
+│   │   ├── KellyMacKay.xcf
+│   │   ├── kiver.png
+│   │   ├── kiver.xcf
+│   │   ├── kris.png
+│   │   ├── kris.xcf
+│   │   ├── LasVegasInsider.png
+│   │   ├── LasVegasInsider.xcf
+│   │   ├── laura2.png
+│   │   ├── laura2.xcf
+│   │   ├── lauracutler2.png
+│   │   ├── lauracutler2.xcf
+│   │   ├── LauraCutler.png
+│   │   ├── LauraCutler.xcf
+│   │   ├── LauraOsmondAvatar.png
+│   │   ├── laura.png
+│   │   ├── laura.xcf
+│   │   ├── leah.png
+│   │   ├── leah.xcf
+│   │   ├── leeann-avatar.png
+│   │   ├── LindaK.png
+│   │   ├── lisadavid.png
+│   │   ├── lisadavid.xcf
+│   │   ├── lori.png
+│   │   ├── lori.xcf
+│   │   ├── LukeCutlerAvatar1.png
+│   │   ├── LukeCutlerAvatar1.xcf
+│   │   ├── LuLuAvatar.png
+│   │   ├── LuLuAvatar.xcf
+│   │   ├── MarcCheck.png
+│   │   ├── MarcCheck.xcf
+│   │   ├── marc.png
+│   │   ├── Mary Ann Avatar 1 A.xcf
+│   │   ├── MaryAnn.png
+│   │   ├── MeghanGAvatar1.png
+│   │   ├── MikeGuelkerAvatar.png
+│   │   ├── MikeGuelkerAvatar.xcf
+│   │   ├── MissPatriotAvatar.png
+│   │   ├── MissPatriotAvatar.xcf
+│   │   ├── NancyPutnamAvatar2A.png
+│   │   ├── NancyPutnamAvatar2A.xcf
+│   │   ├── NancyPutnam.png
+│   │   ├── NancyPutnam.xcf
+│   │   ├── NateJoy.png
+│   │   ├── NateJoy.xcf
+│   │   ├── nedlisa.png
+│   │   ├── nedlisa.xcf
+│   │   ├── NFLNetworkSportsAnalyst.png
+│   │   ├── NFLNetworkSportsAnalyst.xcf
+│   │   ├── NikiDaveAitken.png
+│   │   ├── NikiDaveAitken.xcf
+│   │   ├── OscarGuzman2.png
+│   │   ├── OscarGuzman2.xcf
+│   │   ├── OscarGuzmanAvatar2A.png
+│   │   ├── OscarGuzmanAvatar2A.xcf
+│   │   ├── Pam Peck Avatar 1 A.png
+│   │   ├── PatMacdonald.png
+│   │   ├── PatMacdonald.xcf
+│   │   ├── PatMacKayAvatar7.png
+│   │   ├── PatMacKayAvatar7.xcf
+│   │   ├── PatMacKayAvatar.png
+│   │   ├── PatMacKayAvatar.xcf
+│   │   ├── PatrickRoberts.png
+│   │   ├── PatrickTranaAvatar.png
+│   │   ├── PaulaBishopAvatar10132018.png
+│   │   ├── PaulaBishopAvatar10222018.png
+│   │   ├── PaulaBishopAvatar2A.png
+│   │   ├── PaulaBishopAvatar2A.xcf
+│   │   ├── PaulaBishopAvatarA.png
+│   │   ├── peacefullGardner.png
+│   │   ├── peacefullGardner.xcf
+│   │   ├── PeggyDixon.png
+│   │   ├── pete.png
+│   │   ├── PetePriscoCBS.png
+│   │   ├── PetePriscoCBS.xcf
+│   │   ├── peteprisco.png
+│   │   ├── prev
+│   │   │   ├── bonnie.png
+│   │   │   ├── bonnie.xcf
+│   │   │   ├── chuck.png
+│   │   │   ├── chuck.xcf
+│   │   │   └── sandyavatar.jpg
+│   │   ├── RalphAntonelli2019.png
+│   │   ├── RalphAntonelli-B-2019.png
+│   │   ├── RandyParadis.png
+│   │   ├── redbird.png
+│   │   ├── rick-avatar.png
+│   │   ├── RobCraig.png
+│   │   ├── RobCraig.xcf
+│   │   ├── RolandJoyAvatar10132018.png
+│   │   ├── RolandJoyAvatar5.png
+│   │   ├── RolandJoyAvatar5.xcf
+│   │   ├── Sabrina Hunzelman10232018.png
+│   │   ├── SabrinaHunzelmanAvatar.png
+│   │   ├── sabrina.png
+│   │   ├── sabrina.xcf
+│   │   ├── sandyavatar.jpg
+│   │   ├── sandyavatar.png
+│   │   ├── sandyavatar.xcf
+│   │   ├── SandyKennedy1.png
+│   │   ├── SandyKennedy1.xcf
+│   │   ├── SandyKennedy2.png
+│   │   ├── SandyKennedy2.xcf
+│   │   ├── SandyShaw.png
+│   │   ├── SandyShaw.xcf
+│   │   ├── SandyTherrienAvatar10132018.png
+│   │   ├── SandyTherrien.png
+│   │   ├── SandyTherrien.xcf
+│   │   ├── ScottWilliamsonAvatar10132018.png
+│   │   ├── ScottWilliamson.png
+│   │   ├── ScottWilliamson.xcf
+│   │   ├── stevep.png
+│   │   ├── stevep.xcf
+│   │   ├── SteveTherrieAvatar10132018.png
+│   │   ├── SteveTherrienAvatar10222018.png
+│   │   ├── SteveTherrienAvatar2A.png
+│   │   ├── SteveTherrienAvatar2A.xcf
+│   │   ├── SteveTherrien.png
+│   │   ├── SteveTherrien.xcf
+│   │   ├── SueD.png
+│   │   ├── SueD.xcf
+│   │   ├── SuePNurse.png
+│   │   ├── SuePNurse.xcf
+│   │   ├── SummervilleAvatar.png
+│   │   ├── tammy.png
+│   │   ├── tammy.xcf
+│   │   ├── TampaJK.png
+│   │   ├── TampaJK.xcf
+│   │   ├── TampaVK.png
+│   │   ├── TampaVK.xcf
+│   │   ├── TanyaGormaAvatar10132018.png
+│   │   ├── TanyaGormanAvatar.png
+│   │   ├── tanya.png
+│   │   ├── tanya.xcf
+│   │   ├── TarryCAvatar2.png
+│   │   ├── tarryc-desert-airstream.png
+│   │   ├── tarryc-desert-airstream.xcf
+│   │   ├── TeamRankings.png
+│   │   ├── ThanksgivingHomeScreen2018.png
+│   │   ├── TheBrainLouieLooserAvatar10242018.png
+│   │   ├── TobyMcCormackAvatar10222018.png
+│   │   ├── TobyMcCormackAvatar.png
+│   │   ├── tomperkins-2019.png
+│   │   ├── WendyCutler Avatar.xcf
+│   │   ├── WendyCutler.png
+│   │   ├── willavatar2019.png
+│   │   ├── willavatar2019.xcf
+│   │   ├── will.png
+│   │   ├── will.xcf
+│   │   ├── WiseMarinerAvatar2A.png
+│   │   └── WiseMarinerAvatar2A.xcf
+│   ├── avatarsddt.png
+│   ├── big-glow.png
+│   ├── BillofRights2.png
+│   ├── BillofRights2.xcf
+│   ├── brady-bellicheck.jpg
+│   ├── brady-bellicheck.png
+│   ├── brady-bellicheck.xcf
+│   ├── Brady-Goodell.jpg
+│   ├── Brady-Goodell.png
+│   ├── Brady-Goodell.xcf
+│   ├── buttons
+│   │   ├── admin-mobile.png
+│   │   ├── admin-mobile.xcf
+│   │   ├── admin.png
+│   │   ├── admin.xcf
+│   │   ├── Button-DareDevilWebsite-HallofHonorwLine-mobile.png
+│   │   ├── Button-DareDevilWebsite-HallofHonorwLine-mobile.xcf
+│   │   ├── Button-DareDevilWebsite-HallofHonorwLine.png
+│   │   ├── Button-DareDevilWebsite-HallofHonorwLine.xcf
+│   │   ├── Button-DareDevilWebsite-Survey-mobile.png
+│   │   ├── Button-DareDevilWebsite-Survey-mobile.xcf
+│   │   ├── Button-DareDevilWebsite-Survey.png
+│   │   ├── Button-DareDevilWebsite-Survey.xcf
+│   │   ├── games-mobile.png
+│   │   ├── games-mobile.xcf
+│   │   ├── games.png
+│   │   ├── games.xcf
+│   │   ├── halloffame-mobile.png
+│   │   ├── halloffame-mobile.xcf
+│   │   ├── halloffame.png
+│   │   ├── halloffame.xcf
+│   │   ├── home-original.xcf
+│   │   ├── home.png
+│   │   ├── home.xcf
+│   │   ├── memberstats-mobile.png
+│   │   ├── memberstats-mobile.xcf
+│   │   ├── memberstatsnew.png
+│   │   ├── memberstatsnew.xcf
+│   │   ├── memberstats.png
+│   │   ├── memberstats.xcf
+│   │   ├── newsandopinion-mobile.png
+│   │   ├── newsandopinion-mobile.xcf
+│   │   ├── newsandopinion.png
+│   │   ├── newsandopinion.xcf
+│   │   ├── team2018.png
+│   │   ├── team2018.xcf
+│   │   ├── team-mobile2018.png
+│   │   ├── team-mobile2018.xcf
+│   │   ├── team-mobile.png
+│   │   ├── team-mobile.xcf
+│   │   ├── team.png
+│   │   └── team.xcf
+│   ├── cbs-logo.png
+│   ├── cbs-logo.xcf
+│   ├── ChartManSmallAvatar.png
+│   ├── ChartManSmallAvatar.xcf
+│   ├── Christmas2017HomePage.png
+│   ├── Christmas2017HomePage.xcf
+│   ├── Christmas2017MembersPicksfortheWeek.png
+│   ├── Christmas2017MembersPicksfortheWeek.xcf
+│   ├── Christmas2017NFLNews.png
+│   ├── Christmas2017NFLNews.xcf
+│   ├── Christmas2017TotalMembersTeamPicksforWeek.png
+│   ├── Christmas2017TotalMembersTeamPicksforWeek.xcf
+│   ├── Christmas2017TotalPercentageLeaders.png
+│   ├── Christmas2017TotalPercentageLeaders.xcf
+│   ├── Christmas2017TotalWinLeaders.png
+│   ├── Christmas2017TotalWinLeaders.xcf
+│   ├── Christmas2017WeeklyTotalLeaders.png
+│   ├── Christmas2017WeeklyTotalLeaders.xcf
+│   ├── Christmas-HomePage-2023.png
+│   ├── ChristmasHomeScrn2018.png
+│   ├── ChristmasHomeScrn2018.xcf
+│   ├── Christmas-HomeScrn-2022.png
+│   ├── Christmas-HomeScrn-2025.png
+│   ├── ChristmasMembersPickforWeek2018.png
+│   ├── ChristmasMembersPickforWeek2018.xcf
+│   ├── Christmas-NFLHeadlines-2023.png
+│   ├── Christmas-NFLHeadlines-2025.png
+│   ├── ChristmasNFLNews2018.png
+│   ├── ChristmasNFLNews2018.xcf
+│   ├── Christmas-TeamScoresStats-2022.png
+│   ├── Christmas-TeamScores-Stats-2023.png
+│   ├── Christmas-TeamScoresStats-2025.png
+│   ├── ChristmasTeamWeeklyRanking2018.png
+│   ├── ChristmasTeamWeeklyRanking2018.xcf
+│   ├── Christmas-TotalMembersPicksfortheWeek-2023.png
+│   ├── ChristmasTotalMembersTeamPicksforWeek2018.png
+│   ├── ChristmasTotalMembersTeamPicksforWeek2018.xcf
+│   ├── Christmas-TotalMembersTeamPicksforWeek-2022.png
+│   ├── ChristmasTotalPercentageLeaders2018.png
+│   ├── ChristmasTotalPercentageLeaders2018.xcf
+│   ├── ChristmasTotalWinLeaders2018.png
+│   ├── ChristmasTotalWinLeaders2018.xcf
+│   ├── Christmas-TotalWinLeaders-2022.png
+│   ├── Christmas-TotalWinsLeader-2023.png
+│   ├── Christmas-TotalWinsLeader-2025.png
+│   ├── Christmas-TotMemTeamPicksWeek2025.png
+│   ├── ChristmasWeeklyTotalLeaders2018.png
+│   ├── ChristmasWeeklyTotalLeaders2018.xcf
+│   ├── Christmas-WeeklyTotalsLeader-2022.png
+│   ├── Christmas-WeeklyTotalsLeader-2023.png
+│   ├── Christmas-WeeklyTotalsLeader-2025.png
+│   ├── ColumbusDay-HomeScrn-2025.png
+│   ├── ColumbusDayHomScrn2019.png
+│   ├── ColumbusDay-MembersPicksforWeek-2025.png
+│   ├── ColumbusDay-TotalMembersTeamPicksforWeek-2025.png
+│   ├── ColumbusDay-TotalWinsLeaders-2025.png
+│   ├── ColumbusDay-WeeklyTotalsLeaders-2025.png
+│   ├── ColumbusDay-WeeklyTotalsLeaders-2025.xcf
+│   ├── DareDevilDuckInfoButton.png
+│   ├── DareDevilDuckInfoButton.xcf
+│   ├── Dare Devil Duck Logo - Jess 21015-11-28.xcf
+│   ├── ddd-icon.png
+│   ├── ddd-Jess.png
+│   ├── ddd-Jess-small.png
+│   ├── ddd-Jess-small.xcf
+│   ├── ddd-Jess.xcf
+│   ├── ddd_lb_bot.png
+│   ├── ddd_lb_top.png
+│   ├── dddpickteams.png
+│   ├── ddd-small-footer.png
+│   ├── ddd-totalpicks.png
+│   ├── ddd-url-img.ico
+│   ├── ddd-url-img.png
+│   ├── ddd-url-img.xcf
+│   ├── DonaldDuckApplePlayerPickbyWeek.png
+│   ├── DonaldDuckApplePlayerPickbyWeek.xcf
+│   ├── DonaldDuckBeach.png
+│   ├── DonaldDuckBeach.xcf
+│   ├── DonaldDuckChristmas2016HomeScrn.png
+│   ├── DonaldDuckChristmas2016HomeScrn.xcf
+│   ├── DonaldDuckChristmas2016NFLNews.png
+│   ├── DonaldDuckChristmas2016NFLNews.xcf
+│   ├── DonaldDuckChristmas2016PlayersPickforWeekbyTeam.png
+│   ├── DonaldDuckChristmas2016PlayersPickforWeekbyTeam.xcf
+│   ├── DonaldDuckChristmas2016PlayersPickforWeek.png
+│   ├── DonaldDuckChristmas2016PlayersPickforWeek.xcf
+│   ├── DonaldDuckChristmas2016TotalPercentageLeader.png
+│   ├── DonaldDuckChristmas2016TotalPercentageLeader.xcf
+│   ├── DonaldDuckChristmas2016TotalWinLeaders.png
+│   ├── DonaldDuckChristmas2016TotalWinLeaders.xcf
+│   ├── DonaldDuckChristmas2016WeeklyTotalLeaders.png
+│   ├── DonaldDuckChristmas2016WeeklyTotalLeaders.xcf
+│   ├── DonaldDuckFall2018News.png
+│   ├── DonaldDuckFall2018News.xcf
+│   ├── Donald Duck Flying-orig.jpg
+│   ├── Donald Duck Flying.png
+│   ├── DonaldDuckFlying.png
+│   ├── DonaldDuckFlying-small-orig.png
+│   ├── DonaldDuckFlying-small.png
+│   ├── Donald Duck Flying-small.xcf
+│   ├── Donald Duck Flying.xcf
+│   ├── DonaldDuckHalloweenTotalPercentageLeader.png
+│   ├── DonaldDuckHalloweenTotalPercentageLeader.xcf
+│   ├── DonaldDuckHalloweenTotalWinLeaders.png
+│   ├── DonaldDuckHalloweenTotalWinLeaders.xcf
+│   ├── DonaldDuckHalloweenWeeklyTotalLeaders.png
+│   ├── DonaldDuckHalloweenWeeklyTotalLeaders.xcf
+│   ├── Donald Duck Look for 2018 Season 1.xcf
+│   ├── DonaldDuckLookfor2018Season.png
+│   ├── DonaldDuckNewYear2017HomeScrn.png
+│   ├── DonaldDuckNewYear2017HomeScrn.xcf
+│   ├── DonaldDuckNewYear2017PlayersPickforWeekbyTeam.png
+│   ├── DonaldDuckNewYear2017PlayersPickforWeekbyTeam.xcf
+│   ├── DonaldDuckNewYear2017PlayersPickforWeek.png
+│   ├── DonaldDuckNewYear2017PlayersPickforWeek.xcf
+│   ├── DonaldDuckNewYear2017TotalPercentageLeader.png
+│   ├── DonaldDuckNewYear2017 TotalPercentageLeader.xcf
+│   ├── DonaldDuckNewYear2017TotalWinLeaders.png
+│   ├── DonaldDuckNewYear2017TotalWinLeaders.xcf
+│   ├── DonaldDuckNewYear2017WeeklyTotalLeaders.png
+│   ├── DonaldDuckNewYear2017 WeeklyTotalLeaders.xcf
+│   ├── DonaldDuckNewYear2018HomeScrn.png
+│   ├── DonaldDuckNewYear2018HomeScrn.xcf
+│   ├── DonaldDuckNewYear2018PlayersPickforWeekbyTeam.png
+│   ├── DonaldDuckNewYear2018PlayersPickforWeekbyTeam.xcf
+│   ├── DonaldDuckNewYear2018PlayersPickforWeek.png
+│   ├── DonaldDuckNewYear2018PlayersPickforWeek.xcf
+│   ├── DonaldDuckNewYear2018TotalPercentageLeader.png
+│   ├── DonaldDuckNewYear2018TotalPercentageLeader.xcf
+│   ├── DonaldDuckNewYear2018TotalWinLeaders.png
+│   ├── DonaldDuckNewYear2018TotalWinLeaders.xcf
+│   ├── DonaldDuckNewYear2018WeeklyTotalLeaders.png
+│   ├── DonaldDuckNewYear2018WeeklyTotalLeaders.xcf
+│   ├── DonaldDuckSleepingHammck2016.png
+│   ├── DonaldDuckSleepingHammck2016.xcf
+│   ├── DonaldDuckSleepinginHammck2017.png
+│   ├── DonaldDuckSoldierArmyMedicnflnews2023.png
+│   ├── DonaldDuckSoldierArmyMedicnflnews2023.xcf
+│   ├── DonaldDuckSoldierArmyRevolutionMembersPicksforWeek2023.png
+│   ├── DonaldDuckSoldierArmyRevolutionMembersPicksforWeek2023.xcf
+│   ├── DonaldDuckSoldierCoastGuardplayerstatsmemberweekly2023.png
+│   ├── DonaldDuckSoldierCoastGuardplayerstatsmemberweekly2023.xcf
+│   ├── DonaldDuckSoldierMarinemain2023.png
+│   ├── DonaldDuckSoldierMarinemain2023.xcf
+│   ├── DonaldDuckSoldierNavyScreenplayerstatstotalwins2023.png
+│   ├── DonaldDuckSoldierNavyScreenplayerstatstotalwins2023.xcf
+│   ├── DonaldDuckSoliderAirForceteamweeklyranking2023.png
+│   ├── DonaldDuckSoliderAirForceteamweeklyranking2023.xcf
+│   ├── DonaldDuckSpring2018HomePage.png
+│   ├── DonaldDuckSpring2018HomePage.xcf
+│   ├── DonaldDuckSpring2018News.png
+│   ├── DonaldDuckSpring2018News.xcf
+│   ├── DonaldDuckSpring2018PlayersPicforWeek.png
+│   ├── DonaldDuckSpring2018PlayersPicforWeek.xcf
+│   ├── DonaldDuckSpring2018TeamWeeklyRankinbg.png
+│   ├── DonaldDuckSpring2018TeamWeeklyRankinbg.xcf
+│   ├── DonaldDuckSpring2018TotalPercentageLeader.png
+│   ├── DonaldDuckSpring2018TotalPercentageLeader.xcf
+│   ├── DonaldDuckSpring2018TotalWinLeaders.png
+│   ├── DonaldDuckSpring2018TotalWinLeaders.xcf
+│   ├── DonaldDuckSpring2018TotMembePick4Week.png
+│   ├── DonaldDuckSpring2018TotMembePick4Week.xcf
+│   ├── DonaldDuckSpring2018WeeklyTotalLeaders.png
+│   ├── DonaldDuckSpring2018WeeklyTotalLeaders.xcf
+│   ├── DonaldDuckThanksgiving-NFLNews.png
+│   ├── DonaldDuckThanksgiving-NFLNews.xcf
+│   ├── DonaldDuckThanksgiving-PlayersPicforWeek.png
+│   ├── DonaldDuckThanksgiving-PlayersPicforWeek.xcf
+│   ├── DonaldDuckThanksgiving-PlayersPickforWeekbyTeam.png
+│   ├── DonaldDuckThanksgiving-PlayersPickforWeekbyTeam.xcf
+│   ├── DonaldDuckThanksgiving-TotalPercentageLeader.png
+│   ├── DonaldDuckThanksgiving-TotalPercentageLeader.xcf
+│   ├── DonaldDuckThanksgiving-TotalWinLeaders.png
+│   ├── DonaldDuckThanksgiving-TotalWinLeaders.xcf
+│   ├── DonaldDuckThanksgiving-WeeklyTotalLeaders.png
+│   ├── DonaldDuckThanksgiving-WeeklyTotalLeaders.xcf
+│   ├── DonaldDuckUSAFlag.png
+│   ├── DonaldDuckUSAFlag.xcf
+│   ├── Donald-Duck-Winter-2017-Players-Pick-for-Week1.png
+│   ├── Donald-Duck-Winter-2017-Players-Pick-for-Week1.xcf
+│   ├── Donald-Duck-Winter-2017-Players-Pick-for-Week-by-Team 1.png
+│   ├── Donald-Duck-Winter-2017-Players-Pick-for-Week-by-Team 1.xcf
+│   ├── Donald-Duck-Winter-2017-Players-Pick-for-Week-by-Team.png
+│   ├── Donald-Duck-Winter-2017-Players-Pick-for-Week.png
+│   ├── Donald-Duck-Winter-2017-Total-Percentage-Leader1.png
+│   ├── Donald-Duck-Winter-2017-Total-Percentage-Leader.png
+│   ├── Donald-Duck-Winter-2017-Total-Percentage-Leader.xcf
+│   ├── Donald-Duck-Winter-2017-Total-Win-Leaders1.png
+│   ├── Donald-Duck-Winter-2017-Total-Win-Leaders.png
+│   ├── Donald-Duck-Winter-2017-Total-Win-Leaders.xcf
+│   ├── Donald-Duck-Winter-2017-Weekly-Total-Leaders1.png
+│   ├── Donald-Duck-Winter-2017-Weekly-Total-Leaders.png
+│   ├── Donald-Duck-Winter-2017-Weekly-Total-Leaders.xcf
+│   ├── DonaldDuckWinter2018HomePageA.png
+│   ├── DonaldDuckWinter2018HomePageA.xcf
+│   ├── DonaldDuckWinter2018HomePageB.png
+│   ├── DonaldDuckWinter2018HomePageB.xcf
+│   ├── DonaldDuckWinter2018News.png
+│   ├── DonaldDuckWinter2018PlayersPickforWeek.png
+│   ├── DonaldDuckWinter2018PlayersPickforWeek.xcf
+│   ├── DonaldDuckWinter2018TotalPercentageLeader.png
+│   ├── DonaldDuckWinter2018TotalPercentageLeader.xcf
+│   ├── DonaldDuckWinter2018TotalWinLeaders.png
+│   ├── DonaldDuckWinter2018TotalWinLeaders.xcf
+│   ├── DonaldDuckWinter2018WeeklyTotalLeaders.png
+│   ├── DonaldDuckWinter2018WeeklyTotalLeaders.xcf
+│   ├── dont-tread-on-me-A.png
+│   ├── download.xcf
+│   ├── email-icon.png
+│   ├── espn-logo.jpg
+│   ├── espn-logo.png
+│   ├── ESPN-logo.xcf
+│   ├── Fall-HarvestHomePage-2025.png
+│   ├── FallHomePage2019.png
+│   ├── FallHomePage2019.xcf
+│   ├── Fall-HomePage-2023.png
+│   ├── Fall-HomePage-2023.xcf
+│   ├── FallMembersPicksfortheWeek2019.png
+│   ├── FallMembersPicksfortheWeek2019.xcf
+│   ├── Fall-MembersPicksforWeek-2025.png
+│   ├── FallNews12019.png
+│   ├── FallNews12019.xcf
+│   ├── Fall-NFLHeadlines-2023.png
+│   ├── Fall-NFLHeadlines-2023.xcf
+│   ├── Fall-NFLHeadlines-2025.png
+│   ├── Fall-TeamScores&Stats-2023.png
+│   ├── Fall-TeamScores&Stats-2023.xcf
+│   ├── FallTeamWeeklyRanking2019.png
+│   ├── FallTeamWeeklyRanking2019.xcf
+│   ├── Fall-TeamWeeklyRanking-2025.png
+│   ├── FallTotalMembersPicksfortheWeek2019.png
+│   ├── FallTotalMembersPicksfortheWeek2019.xcf
+│   ├── Fall-TotalMembersPicksfortheWeek-2023.png
+│   ├── Fall-TotalMembersPicksfortheWeek-2023.xcf
+│   ├── Fall-TotalMembersTeamPicksforWeek-2025.png
+│   ├── FallTotalPercentageLeader2019.png
+│   ├── FallTotalPercentageLeader2019.xcf
+│   ├── Fall-TotalPercentageLeaders-2025.png
+│   ├── FallTotalWinsLeader2019.png
+│   ├── FallTotalWinsLeader2019.xcf
+│   ├── Fall-TotalWinsLeader-2023.png
+│   ├── Fall-TotalWinsLeader-2023.xcf
+│   ├── Fall-TotalWinsLeaders-2025.png
+│   ├── FallWeeklyTotalsLeader2019.png
+│   ├── FallWeeklyTotalsLeader2019.xcf
+│   ├── Fall-WeeklyTotalsLeader-2023.png
+│   ├── Fall-WeeklyTotalsLeader-2023.xcf
+│   ├── Fall-WeeklyTotalsLeaders-2025.png
+│   ├── faqicon.png
+│   ├── feedback-ddd.png
+│   ├── first-amendment-2024.png
+│   ├── first-amendment-2024.xcf
+│   ├── frenchflag.png
+│   ├── FrontPageStartof2016Final.png
+│   ├── FrontPageStartof2016.png
+│   ├── FrontPageStartof2016.xcf
+│   ├── FrontPageThanksgiving2017.png
+│   ├── FrontPageThanksgiving2017.xcf
+│   ├── halloffame
+│   │   ├── bobbycraig.png
+│   │   ├── bobbycraig.xcf
+│   │   ├── bobby.png
+│   │   ├── BonnieHallofFame Picture2.png
+│   │   ├── BonnieHallofFamePicture2.png
+│   │   ├── BonnieHallofFame Picture2.xcf
+│   │   ├── bonnie.png
+│   │   ├── BonnieSkinnyWinningAvatar.png
+│   │   ├── BonnieSkinnyWinningAvatar.xcf
+│   │   ├── ChrisBurginHalloffame.png
+│   │   ├── ChrisBurginHalloffame.xcf
+│   │   ├── ChrisBurgin.xcf
+│   │   ├── ChrisHallofFamePick4.png
+│   │   ├── ChrisHallofFamePick4.xcf
+│   │   ├── ChuckAlaskanFishWinningAvatar.png
+│   │   ├── ChuckAlaskanFishWinningAvatar.xcf
+│   │   ├── ChuckHallofFamePicture1.png
+│   │   ├── ChuckHallofFamePicture1.xcf
+│   │   ├── chuck.png
+│   │   ├── DandMBradyHallofFamePics.png
+│   │   ├── DandMBradyHallofFamePics.xcf
+│   │   ├── ddd_cup_2014.png
+│   │   ├── Don4HorsemanWinningAvatar.png
+│   │   ├── Don4HorsemanWinningAvatar.xcf
+│   │   ├── donald.png
+│   │   ├── donomalleyhof-2018-2.png
+│   │   ├── donomalleyhof-2018-2.xcf
+│   │   ├── donomalleyhof-2018.png
+│   │   ├── donomalleyhof-2018.xcf
+│   │   ├── HallofFameAngryDonald.png
+│   │   ├── Hall of Fame Angry Donald.xcf
+│   │   ├── HallofFamePicture2.png
+│   │   ├── HallofFamePicture.png
+│   │   ├── HallofFameWinners20201.png
+│   │   ├── HallofFameWinners20202.png
+│   │   ├── JefferyHallofFamePic3.png
+│   │   ├── JefferyHallofFamePic3.xcf
+│   │   ├── JeffRoberts.png
+│   │   ├── JeffRoberts.xcf
+│   │   ├── LauraCutler.png
+│   │   ├── LauraHallofFamePicture1.png
+│   │   ├── LauraHallofFamePicture1.xcf
+│   │   ├── LauraPeanutWinningAvatar.png
+│   │   ├── LauraPeanutWinningAvatar.xcf
+│   │   ├── MomKissCup.png
+│   │   ├── MomKissCup.xcf
+│   │   ├── MomVictor.png
+│   │   ├── MomVictor.xcf
+│   │   ├── OscarGuzmanAvatar2A.png
+│   │   ├── OscarGuzmanAvatar2A.xcf
+│   │   ├── OscarHallofFamePicture1B.png
+│   │   ├── OscarHallofFamePicture1B.xcf
+│   │   ├── OscarHallofFamePicture1.png
+│   │   ├── OscarHallofFamePicture1.xcf
+│   │   ├── PaulaBishopAvatar2A.png
+│   │   ├── PaulaBishopDDDWin7BScreenShot.png
+│   │   ├── PaulaBishopDDDWin7BScreenShot.xcf
+│   │   ├── PaulaBishopDDDWin8AFix.png
+│   │   ├── PaulaBishopDDDWin8AFix.xcf
+│   │   ├── PaulaBishopHallofFamePic.png
+│   │   ├── paulabishophof-2017-2.png
+│   │   ├── paulabishophof-2017-2.xcf
+│   │   ├── paulabishophof-2017.png
+│   │   ├── paulabishophof-2017.xcf
+│   │   ├── PaulaHowkeyeWinningAvatar.png
+│   │   ├── PaulaHowkeyeWinningAvatar.xcf
+│   │   ├── RemingtonHallofFamePicture1.png
+│   │   ├── Sabrina2ndWin5Crop.png
+│   │   ├── Sabrina2ndWin5Crop.xcf
+│   │   ├── Sabrina2ndWinC.png
+│   │   ├── Sabrina2ndWinCrop.png
+│   │   ├── SabrinaDisapointment.png
+│   │   ├── SabrinaDisapointment.xcf
+│   │   ├── SabrinaHallofFame2015.png
+│   │   ├── SabrinaHallofFame2015.xcf
+│   │   ├── SabrinaHallofFamePicture2015-1.png
+│   │   ├── SabrinaHallofFamePicture2015-1.xcf
+│   │   ├── SabrinaHunzelmanAvatar.png
+│   │   ├── SabrinaToothfairyWinningAvatar.png
+│   │   ├── SabrinaToothfairyWinningAvatar.xcf
+│   │   ├── SabrinaWinner.png
+│   │   ├── SabrinaWinner.xcf
+│   │   ├── SandyKennedy1.png
+│   │   ├── SandyRMaineWinningAvatar.png
+│   │   ├── SandyRMaineWinningAvatar.xcf
+│   │   ├── SandyRudmanHallofFame.png
+│   │   ├── SandyRudmanHallofFame.xcf
+│   │   ├── SummervilleAvatarHallFame.png
+│   │   ├── SummervilleAvatarHallFame.xcf
+│   │   ├── TanyaGormaAvatar10132018.png
+│   │   ├── TanyaHallofFame.png
+│   │   ├── TanyaHallofFame.xcf
+│   │   ├── Tanya-Temp-Hall-of-Fame-Pic.png
+│   │   ├── TanyaTonyHallofFamePicture2.png
+│   │   ├── thiscouldbeyou.png
+│   │   ├── thiscouldbeyou.xcf
+│   │   ├── TonyHallofFame.png
+│   │   └── TonyHallofFame.xcf
+│   ├── hallofmemory
+│   │   ├── AuntieKay.png
+│   │   ├── AuntieKay.xcf
+│   │   ├── DanBradyHallofMemoryPicture.png
+│   │   ├── DanBradyHallofMemoryPicture.xcf
+│   │   ├── FredK.png
+│   │   ├── FredKretlowHallofMemoryAvatar.png
+│   │   ├── FredKretlowHallofMemoryAvatar.xcf
+│   │   ├── FredKretlowHallofMemoryPicture.png
+│   │   ├── JudsonJamiesonAvatar2.png
+│   │   ├── JudsonJamiesonHallofMemoryAvatar.png
+│   │   ├── JudsonJamiesonHallofMemoryAvatar.xcf
+│   │   ├── JudsonJamiesonHallofMemoryPicture.png
+│   │   ├── JudsonJamiesonHallofMemoryPicture.xcf
+│   │   ├── KayAvatarHallofMemory.png
+│   │   ├── KayAvatarHallofMemory.xcf
+│   │   ├── LauraPeanutWinningAvatar.png
+│   │   ├── momobitpicture.png
+│   │   ├── momobitpicture.xcf
+│   │   ├── NancyPutnamAvatar2A.png
+│   │   ├── NancyPutnamHallofMemoryAvatar.png
+│   │   ├── NancyPutnamHallofMemoryAvatar.xcf
+│   │   ├── nancy-putnam.png
+│   │   ├── nancy-putnam.xcf
+│   │   ├── RemingtonHallofFamePicture1.png
+│   │   ├── SandyTherrienHallofMemoryAvatar.png
+│   │   ├── SandyTherrienHallofMemoryAvatar.xcf
+│   │   ├── SandyTherrienHallofMemoryPicture.png
+│   │   ├── SandyTherrienHallofMemoryPicture.xcf
+│   │   ├── SteveTherrienHallofMemoryAvatar.png
+│   │   ├── SteveTherrienHallofMemoryAvatar.xcf
+│   │   ├── SteveTherrienHallofMemoryPicture.png
+│   │   ├── SteveTherrienHallofMemoryPicture.xcf
+│   │   ├── SummervilleAvatarHallFame.png
+│   │   └── TonyBruehlHallofMemory.png
+│   ├── Halloween-HomeScreen-2018.png
+│   ├── Halloween-HomeScreen-2018.xcf
+│   ├── Halloween-MembersPicksforWeeks1-2018.png
+│   ├── Halloween-MembersPicksforWeeks1-2018.xcf
+│   ├── Halloween-NFLHeadlines-2023.png
+│   ├── Halloween-NFLHeadlines-2023.xcf
+│   ├── Halloween-NFLHeadlines-2025.png
+│   ├── Halloween-TeamScoresStats-2023.png
+│   ├── Halloween-TeamScoresStats-2023.xcf
+│   ├── Halloween-TeamScoresStats-2025.png
+│   ├── Halloween-TotalMembersTeamPicksforWeek1-2018.png
+│   ├── Halloween-TotalMembersTeamPicksforWeek1-2018.xcf
+│   ├── Halloween-TotalMembersTeamPicksforWeek-2023.png
+│   ├── Halloween-TotalMembersTeamPicksforWeek-2023.xcf
+│   ├── Halloween-TotalMembersTeamPicksforWeek-2025.png
+│   ├── Halloween-TotalPercentageLeader1-2018.png
+│   ├── Halloween-TotalPercentageLeader1-2018.xcf
+│   ├── Halloween-TotalWinLeaders1-2018.png
+│   ├── Halloween-TotalWinLeaders1-2018.xcf
+│   ├── Halloween-TotalWinsLeader-2023.png
+│   ├── Halloween-TotalWinsLeader-2023.xcf
+│   ├── Halloween-WeeklyTotalsLeader-2023.png
+│   ├── Halloween-WeeklyTotalsLeader-2023.xcf
+│   ├── Halloween-WeeklyTotalsLeaders1-2018.png
+│   ├── Halloween-WeeklyTotalsLeaders1-2018.xcf
+│   ├── Halloween-WeeklyTotalsLeaders-2025.png
+│   ├── happythanksgiving.gif
+│   ├── help
+│   │   ├── DonalDuckSoldierCanadiangoback.png
+│   │   ├── DonalDuckSoldierCanadiangoback.xcf
+│   │   ├── HelpButton3Circle.png
+│   │   ├── HelpButton3Circle.xcf
+│   │   ├── HelpButton4Circle.png
+│   │   ├── HelpButton4Circle.xcf
+│   │   ├── homenavbar.png
+│   │   ├── homenavbar.xcf
+│   │   ├── pickgamesbuttons.png
+│   │   ├── pickgamesbuttons.xcf
+│   │   ├── pickgamesmodalstats2.png
+│   │   ├── pickgamesmodalstats2.xcf
+│   │   ├── pickgamesmodalstats.png
+│   │   ├── pickgamesmodalstats.xcf
+│   │   ├── pickgamesselectlist.png
+│   │   ├── pickgamesselectlist.xcf
+│   │   ├── playerstatsmemberweeklybuttons.png
+│   │   ├── playerstatsmemberweeklybuttons.xcf
+│   │   ├── playerstatsmemberweeklylist.png
+│   │   ├── playerstatsmemberweeklylist.xcf
+│   │   ├── playerstatstotalpercentagelist.png
+│   │   ├── playerstatstotalpercentagelist.xcf
+│   │   ├── playerstatstotalwinsbuttons.png
+│   │   ├── playerstatstotalwinsbuttons.xcf
+│   │   ├── playerstatstotalwinslist2.png
+│   │   ├── playerstatstotalwinslist2.xcf
+│   │   ├── playerstatstotalwinslist.png
+│   │   ├── playerstatstotalwinslist.xcf
+│   │   ├── surveyresultsbuttons.png
+│   │   ├── surveyresultsbuttons.xcf
+│   │   ├── surveyresultslist.png
+│   │   ├── surveyresultslist.xcf
+│   │   ├── teamweeklyrankingbuttons.png
+│   │   ├── teamweeklyrankingbuttons.xcf
+│   │   ├── teamweeklyrankinglist.png
+│   │   ├── teamweeklyrankinglist.xcf
+│   │   ├── viewselectpickgamesbuttons.png
+│   │   ├── viewselectpickgamesbuttons.xcf
+│   │   ├── viewselectpickgamesteamslist.png
+│   │   ├── viewselectpickgamesteamslist.xcf
+│   │   ├── viewtotalpickgamesbuttons.png
+│   │   ├── viewtotalpickgamesbuttons.xcf
+│   │   ├── viewtotalpickgamesmemberlistmodalstats.png
+│   │   ├── viewtotalpickgamesmemberlistmodalstats.xcf
+│   │   ├── viewtotalpickgamesteamslist.png
+│   │   └── viewtotalpickgamesteamslist.xcf
+│   ├── HomePageEnd2016Season2.png
+│   ├── HomePageEnd2016Season.png
+│   ├── HomePageEnd2016Season.xcf
+│   ├── HomeScreenSoldierMarine.png
+│   ├── infozig.png
+│   ├── jessbrianengaged.png
+│   ├── jessbrianengaged.xcf
+│   ├── la-rams-win-superbowl-2021.png
+│   ├── la-rams-win-superbowl-2021.xcf
+│   ├── lb-bottom-dd.png
+│   ├── lb-bottom.png
+│   ├── lb-bottom.xcf
+│   ├── lb-top.png
+│   ├── lb-top.xcf
+│   ├── LeaderBdScrnBottomPicLastWeek2015.png
+│   ├── LeaderBdTopEnd2015Season.png
+│   ├── merryChristmas2019.png
+│   ├── mobile-icon.png
+│   ├── newsandopinion.png
+│   ├── newsandopinion.xcf
+│   ├── NewYear2016FrontPage.png
+│   ├── NewYear2016FrontPage.xcf
+│   ├── NewYear2021HomeScrn2.png
+│   ├── NewYear2021HomeScrn3.png
+│   ├── NewYear2021HomeScrn4.png
+│   ├── NewYear-2025Home.png
+│   ├── NewYear-2025Home.xcf
+│   ├── NewYear-Home-2024.png
+│   ├── NewYear-Home-2024.xcf
+│   ├── NewYear-HomeScrn1-2023.png
+│   ├── NewYearHomeScrn2019.png
+│   ├── NewYearHomeScrn2019.xcf
+│   ├── NewYear-HomeScrn-2020.png
+│   ├── NewYear-HomeScrn-2020.xcf
+│   ├── NewYear-HomeScrn-2026.png
+│   ├── NewYearHomeScrn62022.png
+│   ├── NewYearHomeScrn62022.xcf
+│   ├── NewYear-LeaderboardScrn2-2020.png
+│   ├── NewYear-LeaderboardScrn2-2020.xcf
+│   ├── NewYear-MembersPicksfortheWeek-2020.png
+│   ├── NewYear-MembersPicksfortheWeek-2020.xcf
+│   ├── NewYear-MembersPicksfortheWeek-2021.png
+│   ├── NewYearMembersPicksfortheWeek2022.png
+│   ├── NewYearMembersPicksfortheWeek2022.xcf
+│   ├── NewYearNFLHeadlines2022.png
+│   ├── NewYearNFLHeadlines2022.xcf
+│   ├── NewYear-NFLHeadlines-2025.png
+│   ├── NewYear-NFLHeadlines-2025.xcf
+│   ├── NewYear-NFLHeadlines-2026.png
+│   ├── NewYear-TeamScoresStats-2023.png
+│   ├── NewYear-TeamScoresStats-2024.png
+│   ├── NewYear-TeamScoresStats-2024.xcf
+│   ├── NewYear-TeamScores&Stats-2025.png
+│   ├── NewYear-TeamScores&Stats-2025.xcf
+│   ├── NewYear-TeamScoresStats-2026.png
+│   ├── NewYear-TeamWeeklyRankingScrn1-2021.png
+│   ├── NewYear-TotalMembersPicksfortheWeek-2020.png
+│   ├── NewYear-TotalMembersPicksfortheWeek-2020.xcf
+│   ├── NewYear-TotalMembersPicksfortheWeek-2021.png
+│   ├── NewYearTotalMembersPicksfortheWeek2022.png
+│   ├── NewYearTotalMembersPicksfortheWeek2022.xcf
+│   ├── NewYear-TotalMembersPicksfortheWeek-2023.png
+│   ├── NewYear-TotalMembersPicksfortheWeek-2024.png
+│   ├── NewYear-TotalMembersPicksfortheWeek-2024.xcf
+│   ├── NewYear-TotalMembersPicksfortheWeek-2025.png
+│   ├── NewYear-TotalMembersPicksfortheWeek-2025.xcf
+│   ├── NewYear-TotalPercentageLeader1-2020.png
+│   ├── NewYear-TotalPercentageLeader1-2020.xcf
+│   ├── NewYearTotalPercentageLeader12022.png
+│   ├── NewYearTotalPercentageLeader12022.xcf
+│   ├── NewYear-TotalWinLeaders1-2020.png
+│   ├── NewYear-TotalWinLeaders1-2020.xcf
+│   ├── NewYearTotalWinLeaders12022.png
+│   ├── NewYearTotalWinLeaders12022.xcf
+│   ├── NewYear-TotalWinLeaders1-2023.png
+│   ├── NewYear-TotalWinLeaders-2024.png
+│   ├── NewYear-TotalWinLeaders-2024.xcf
+│   ├── NewYear-TotalWinLeaders-2025.png
+│   ├── NewYear-TotalWinLeaders-2025.xcf
+│   ├── NewYear-TotalWinsLeader-2026.png
+│   ├── NewYear-TotMemTeamPickWeek-2026.png
+│   ├── NewYear-WeeklyTotalLeaders1-2020.png
+│   ├── NewYear-WeeklyTotalLeaders1-2020.xcf
+│   ├── NewYear-WeeklyTotalLeaders1-2021.png
+│   ├── NewYearWeeklyTotalLeaders12022.png
+│   ├── NewYearWeeklyTotalLeaders12022.xcf
+│   ├── NewYear-WeeklyTotalsLeader-2023.png
+│   ├── NewYear-WeeklyTotalsLeader-2024.png
+│   ├── NewYear-WeeklyTotalsLeader-2024.xcf
+│   ├── NewYear-WeeklyTotalsLeader-2025.png
+│   ├── NewYear-WeeklyTotalsLeader-2025.xcf
+│   ├── NewYear-WeeklyTotalsLeader-2026.png
+│   ├── nfc.png
+│   ├── nfl-badge.png
+│   ├── nfl-badge.xcf
+│   ├── NFLHeadlineSoldierCoastGuard.png
+│   ├── nflicons
+│   │   ├── ari.png
+│   │   ├── atl.png
+│   │   ├── atl.xcf
+│   │   ├── bal.png
+│   │   ├── buf.png
+│   │   ├── car.png
+│   │   ├── chi.png
+│   │   ├── cin.png
+│   │   ├── cle.png
+│   │   ├── cle.xcf
+│   │   ├── dal.png
+│   │   ├── den.png
+│   │   ├── det.png
+│   │   ├── gb.png
+│   │   ├── hou.png
+│   │   ├── ind.png
+│   │   ├── jac.png
+│   │   ├── kc.png
+│   │   ├── mia.png
+│   │   ├── min.png
+│   │   ├── min.xcf
+│   │   ├── ne.png
+│   │   ├── no.png
+│   │   ├── noselect.png
+│   │   ├── noselect.xcf
+│   │   ├── nyg.png
+│   │   ├── nyg.xcf
+│   │   ├── nyj.png
+│   │   ├── oak.png
+│   │   ├── orig
+│   │   │   ├── ari.png
+│   │   │   ├── atl.png
+│   │   │   ├── bal.png
+│   │   │   ├── buf.png
+│   │   │   ├── car.png
+│   │   │   ├── chi.png
+│   │   │   ├── cin.png
+│   │   │   ├── cle.png
+│   │   │   ├── dal.png
+│   │   │   ├── den.png
+│   │   │   ├── det.png
+│   │   │   ├── gb.png
+│   │   │   ├── hou.png
+│   │   │   ├── ind.png
+│   │   │   ├── jac.png
+│   │   │   ├── kc.png
+│   │   │   ├── mia.png
+│   │   │   ├── min.png
+│   │   │   ├── ne.png
+│   │   │   ├── no.png
+│   │   │   ├── nyg.png
+│   │   │   ├── nyj.png
+│   │   │   ├── oak.png
+│   │   │   ├── phi.png
+│   │   │   ├── pit.png
+│   │   │   ├── sd.png
+│   │   │   ├── sea.png
+│   │   │   ├── sf.png
+│   │   │   ├── stl.png
+│   │   │   ├── tb.png
+│   │   │   ├── ten.png
+│   │   │   └── was.png
+│   │   ├── phi.png
+│   │   ├── pit.png
+│   │   ├── sd.png
+│   │   ├── sd.xcf
+│   │   ├── sea.png
+│   │   ├── sea.xcf
+│   │   ├── sf.png
+│   │   ├── sf.xcf
+│   │   ├── statistics.png
+│   │   ├── statistics.xcf
+│   │   ├── stl-orig.png
+│   │   ├── stl.png
+│   │   ├── stl.xcf
+│   │   ├── tb.png
+│   │   ├── tb.xcf
+│   │   ├── ten.png
+│   │   ├── was.png
+│   │   ├── was..xcf
+│   │   └── was.xcf
+│   ├── NFLNewsScrn2017.png
+│   ├── NFLNewsScrn2017.xcf
+│   ├── NFLNewsScrn.png
+│   ├── NFLNewsScrn.xcf
+│   ├── NFLPlayOffBracket2014C2.png
+│   ├── NFLPlayOffBracket2014C.png
+│   ├── NFLPlayOffBracket2014C.xcf
+│   ├── NFLPlayOffBracket2014D.png
+│   ├── NFLPlayOffBracket2015DD.png
+│   ├── NFLPlayOffBracket2015D.png
+│   ├── NFLPlayOffBracket2015E.png
+│   ├── NFLPlayOffBracket2015E.xcf
+│   ├── NFLPlayOffBracket2015F.png
+│   ├── NFLPlayOffBracket2015F.xcf
+│   ├── NFLPlayOffBracket2015G.png
+│   ├── NFLPlayOffBracket2015G.xcf
+│   ├── NFLPlayOffBracket2015H.png
+│   ├── NFLPlayOffBracketPreSuperbowl53-2018A.png
+│   ├── NFLPlayOffBracketPreSuperbowl53-2018A.xcf
+│   ├── NFLPlayOffBracketPreSuperbowl532018B.png
+│   ├── NFLPlayOffBracketPreSuperbowl532018B.xcf
+│   ├── NFLPlayOffBracketPreSuperbowl532018C.png
+│   ├── NFLPlayOffBracketPreSuperbowl532018D.png
+│   ├── NFLPlayOffBracketPreSuperbowl532018D.xcf
+│   ├── NFLPlayOffBracketPreSuperbowl532018Wk16.png
+│   ├── NFLPlayOffBracketPreSuperbowl532018Wk16.xcf
+│   ├── NFLPlayOffBracketPreSuperbowl532018Wk17.png
+│   ├── NFLPlayOffBracketPreSuperbowl532018Wk17.xcf
+│   ├── NFLPlayOffBracketPreSuperbowl54-2019Wk17.png
+│   ├── NFLPlayOffBracketPreSuperbowl552021Wk16.png
+│   ├── NFLPlayOffBracketPreSuperbowl552021Wk17.png
+│   ├── NFLPlayOffBracketSuperbowl49Season2014.png
+│   ├── NFLPlayOffBracketSuperbowl50Season2015-2.png
+│   ├── NFLPlayOffBracketSuperbowl50Season2015-2.xcf
+│   ├── NFLPlayOffBracketSuperbowl50Season2015.png
+│   ├── NFLPlayOffBracketSuperbowl512016D.png
+│   ├── NFLPlayOffBracketSuperbowl512016E.png
+│   ├── NFLPlayOffBracketSuperbowl512017B.png
+│   ├── NFLPlayOffBracketSuperbowl512017B.xcf
+│   ├── NFLPlayOffBracketSuperbowl512017C.png
+│   ├── NFLPlayOffBracketSuperbowl512017C.xcf
+│   ├── NFLPlayOffBracketSuperbowl512017D2.png
+│   ├── NFLPlayOffBracketSuperbowl512017D2.xcf
+│   ├── NFLPlayOffBracketSuperbowl512017D.png
+│   ├── NFLPlayOffBracketSuperbowl512017D.xcf
+│   ├── NFL-PlayOff-Bracket-Superbowl-51-2017E.png
+│   ├── NFL-PlayOff-Bracket-Superbowl-51-2017E.xcf
+│   ├── NFLPlayOffBracketSuperbowl51-2017.png
+│   ├── NFLPlayOffBracketSuperbowl51-2017.xcf
+│   ├── NFLPlayOffBracketSuperbowl51Season2016.png
+│   ├── NFLPlayOffBracketSuperbowl522018A2.png
+│   ├── NFLPlayOffBracketSuperbowl522018A2.xcf
+│   ├── NFLPlayOffBracketSuperbowl52-2018A.png
+│   ├── NFLPlayOffBracketSuperbowl52-2018A.xcf
+│   ├── NFLPlayOffBracketSuperbowl522018B.png
+│   ├── NFLPlayOffBracketSuperbowl522018B.xcf
+│   ├── NFLPlayOffBracketSuperbowl522018C.png
+│   ├── NFLPlayOffBracketSuperbowl522018C.xcf
+│   ├── NFLPlayOffBracketSuperbowl522018D.png
+│   ├── NFLPlayOffBracketSuperbowl52-2018E.png
+│   ├── NFLPlayOffBracketSuperbowl52-2018E.xcf
+│   ├── NFLPlayOffBracketSuperbowl522018F.png
+│   ├── NFLPlayOffBracketSuperbowl522018F.xcf
+│   ├── NFLPlayOffBracketSuperbowl52Season2016.png
+│   ├── NFLPlayOffBracketSuperbowl52Season2017.png
+│   ├── NFLPlayOffBracketSuperbowl532019A.png
+│   ├── NFLPlayOffBracketSuperbowl532019A.xcf
+│   ├── NFLPlayOffBracketSuperbowl532019Week19.png
+│   ├── NFLPlayOffBracketSuperbowl532019Week20.png
+│   ├── NFLPlayOffBracketSuperbowl532019Week21.png
+│   ├── NFLPlayOffBracketSuperbowl53-2019Week22B.png
+│   ├── NFLPlayOffBracketSuperbowl53-2019Week22B.xcf
+│   ├── NFLPlayOffBracketSuperbowl532019Week22.png
+│   ├── NFLPlayOffBracketSuperbowl532019Week22.xcf
+│   ├── NFLPlayOffBracketSuperbowl532019wk18.png
+│   ├── NFLPlayOffBracketSuperbowl532019wk18.xcf
+│   ├── NFLPlayOffBracketSuperbowl53Season2018-2.png
+│   ├── NFLPlayOffBracketSuperbowl53Season2018-2.xcf
+│   ├── NFLPlayOffBracketSuperbowl53Season2018.png
+│   ├── NFLPlayOffBracketSuperbowl53Season2018.xcf
+│   ├── NFLPlayOffBracketSuperbowl-54-2020A.png
+│   ├── NFLPlayOffBracketSuperbowl-54-2020B.png
+│   ├── NFLPlayOffBracketSuperbowl542020C.png
+│   ├── NFLPlayOffBracketSuperbowl54-2020D2.png
+│   ├── NFLPlayOffBracketSuperbowl54-2020D.png
+│   ├── NFLPlayOffBracketSuperbowl54Season2019.png
+│   ├── NFLPlayOffBracketSuperbowl552020B.png
+│   ├── NFLPlayOffBracketSuperbowl552020C.png
+│   ├── NFLPlayOffBracketSuperbowl552020D.png
+│   ├── NFLPlayOffBracketSuperbowl552020E.png
+│   ├── NFLPlayOffBracketSuperbowl552021A.png
+│   ├── NFLPlayOffBracketSuperbowl552021B.png
+│   ├── NFLPlayOffBracketSuperbowl552021C.png
+│   ├── NFLPlayOffBracketSuperbowl552021D.png
+│   ├── NFLPlayOffBracketSuperbowl55Season2020E.png
+│   ├── NFLPlayOffBracketSuperbowl55Season2020.png
+│   ├── NFLPlayOffBracketSuperbowl562021B.png
+│   ├── NFLPlayOffBracketSuperbowl562021B.xcf
+│   ├── NFLPlayOffBracketSuperbowl562021C.png
+│   ├── NFLPlayOffBracketSuperbowl562021C.xcf
+│   ├── NFLPlayOffBracketSuperbowl562021D.png
+│   ├── NFLPlayOffBracketSuperbowl562021D.xcf
+│   ├── NFLPlayOffBracketSuperbowl562021E.png
+│   ├── NFLPlayOffBracketSuperbowl562021E.xcf
+│   ├── NFLPlayOffBracketSuperbowl562021Wk18.png
+│   ├── NFLPlayOffBracketSuperbowl562021Wk18.xcf
+│   ├── NFL Play Off Bracket Superbowl 56 Season 2021-2.png
+│   ├── NFL Play Off Bracket Superbowl 56 Season 2021-2.xcf
+│   ├── NFLPlayOffBracketSuperbowl56Season2021.png
+│   ├── NFLPlayOffBracketSuperbowl57Season2022A.png
+│   ├── NFLPlayOffBracketSuperbowl57Season2022A.xcf
+│   ├── NFLPlayOffBracketSuperbowl57Season2022B.png
+│   ├── NFLPlayOffBracketSuperbowl57Season2022B.xcf
+│   ├── NFLPlayOffBracketSuperbowl57Season2022C.png
+│   ├── NFLPlayOffBracketSuperbowl57Season2022D.png
+│   ├── NFLPlayOffBracketSuperbowl57Season2022E.png
+│   ├── NFLPlayOffBracketSuperbowl58Season2023A.png
+│   ├── NFLPlayOffBracketSuperbowl58Season2023B.png
+│   ├── NFLPlayOffBracketSuperbowl58Season2023C.png
+│   ├── NFLPlayOffBracketSuperbowl58Season2023D.png
+│   ├── NFLPlayOffBracketSuperbowl58Season2023Final.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024A1.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024A1.xcf
+│   ├── NFLPlayOffBracketSuperbowl59Season2024A.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024A.xcf
+│   ├── NFLPlayOffBracketSuperbowl59Season2024B.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024B.xcf
+│   ├── NFLPlayOffBracketSuperbowl59Season2024C.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024D.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024E.png
+│   ├── NFLPlayOffBracketSuperbowl59Season2024F.png
+│   ├── NFLPlayOffBracketSuperbowl602025Wk14.png
+│   ├── NFLPlayOffBracketSuperbowl602025Wk15.png
+│   ├── NFLPlayOffBracketSuperbowl602025Wk16.png
+│   ├── NFLPlayOffBracketSuperbowl602025Wk17.png
+│   ├── NFLPlayOffBracketSuperbowl60Season2025A.png
+│   ├── NFLPlayOffBracketSuperbowl60Season2025B.png
+│   ├── NFLPlayOffBracketSuperbowl60Season2025C.png
+│   ├── NFLPlayOffBracketSuperbowl60Season2025D.png
+│   ├── NFLPlayOffBracketSuperbowl60Season2025Final.png
+│   ├── NFPlayOffBracket2014B.png
+│   ├── NFPlayOffBracket2015B.png
+│   ├── NFPlayOffBracket2015B.xcf
+│   ├── OlympicOverFootballTime.png
+│   ├── OlympicOverFootballTime.xcf
+│   ├── paris-france-eiffel.png
+│   ├── patriots2018champions.png
+│   ├── patriots2018champions.xcf
+│   ├── patriots.png
+│   ├── patriots.xcf
+│   ├── phone-mobile.png
+│   ├── phone-mobile.xcf
+│   ├── PicksforWeekbyTeamScrnFinal.png
+│   ├── PicksforWeekbyTeamScrnPlayoffs.png
+│   ├── PicksforWeekbyTeamScrnPlayoffs.xcf
+│   ├── pickteamsbye.png
+│   ├── PictureLeaderBdBottomcrn.png
+│   ├── PictureLeaderBdBottomcrn.xcf
+│   ├── PictureLeaderBdTopScrn.png
+│   ├── PictureLeaderBdTopScrn.xcf
+│   ├── PictureNewYearLeaderboardScrn.png
+│   ├── PlayerPickforWeekbyTeam2017.png
+│   ├── PlayerPickforWeekbyTeam2017.xcf
+│   ├── PlayersPickfortheWeek2017.png
+│   ├── PlayersPickfortheWeek2017.xcf
+│   ├── PlayersPickfortheWeekFall2018.png
+│   ├── PlayersPickfortheWeekFall2018.xcf
+│   ├── playerweeklynewyear.png
+│   ├── PlayerWeeklyTotEndof2015.png
+│   ├── PlayOffCodeChart2.png
+│   ├── PlayOffCodeChart2.xcf
+│   ├── postman.png
+│   ├── profilebio.png
+│   ├── pumkin-house.png
+│   ├── Sabrina2ndWin5Crop.xcf
+│   ├── Sabrina2ndWinCrop.xcf
+│   ├── Screen Shot 2015-05-24 at 5.17.59 PM.png
+│   ├── Screen Shot 2015-05-24 at 5.18.29 PM.png
+│   ├── sitedown.png
+│   ├── small-glow.png
+│   ├── spooky
+│   │   ├── hallowback2.svg
+│   │   ├── hallowfront4.svg
+│   │   ├── hallowmid2.svg
+│   │   ├── hallowmidfront2.svg
+│   │   └── horse-hallow5.svg
+│   ├── Spring-HomePage1-2021.png
+│   ├── SpringHomePage2019.png
+│   ├── SpringHomePage2019.xcf
+│   ├── Spring-HomePage-2023B.png
+│   ├── SpringMemberPicksfortheWeek2019.png
+│   ├── SpringMemberPicksfortheWeek2019.xcf
+│   ├── Spring-MembersPicksforWeek-2021.png
+│   ├── Spring-News1-2021.png
+│   ├── SpringNews2019.png
+│   ├── SpringNews2019.xcf
+│   ├── Spring-News-2023.png
+│   ├── Spring-TeamScoresStats-2023.png
+│   ├── SpringTeamWeeklyRankinbg2019.png
+│   ├── SpringTeamWeeklyRankinbg2019.xcf
+│   ├── Spring-TeamWeeklyRanking1-2021.png
+│   ├── SpringTotalMembersPicksfortheWeek2019.png
+│   ├── SpringTotalMembersPicksfortheWeek2019.xcf
+│   ├── Spring-TotalMembersPicksfortheWeek-2023.png
+│   ├── Spring-TotalMembersTeamPicksforWeek-2021.png
+│   ├── SpringTotalPercentageLeader2019.png
+│   ├── SpringTotalPercentageLeader2019.xcf
+│   ├── Spring-TotalPercentageLeaders-2021.png
+│   ├── SpringTotalWinsLeader2019.png
+│   ├── SpringTotalWinsLeader2019.xcf
+│   ├── Spring-TotalWinsLeader-2023.png
+│   ├── Spring-TotalWinsLeaders-2021.png
+│   ├── SpringWeeklyTotalsLeader2019.png
+│   ├── SpringWeeklyTotalsLeader2019.xcf
+│   ├── Spring-WeeklyTotalsLeader-2023.png
+│   ├── survey
+│   │   ├── 1CurrentScoresScreenShot1.png
+│   │   ├── 1SurveyHomeScreen1.png
+│   │   ├── 1SurveyHomeScreen2.png
+│   │   ├── 1SurveyHomeScreen3.png
+│   │   ├── 1SurveyMobileScreenHomePage.png
+│   │   ├── 1TotalMembersTeamsPickforWeekScreen.png
+│   │   ├── 1TotalPercentageLeadersScreen.png
+│   │   ├── 1WeeklyTotalLeadersScreen.png
+│   │   ├── 2SurveyHomeScreen1.png
+│   │   ├── 2SurveyHomeScreen2.png
+│   │   ├── 2TotalMembersTeamsPickforWeekScreen.png
+│   │   ├── 2WeeklyTotalLeadersGroupScreen.png
+│   │   ├── 3SurveyHomeScreen3.png
+│   │   ├── 4HomeFixScreenShot4.png
+│   │   ├── 5SurveyHomeScreen5.png
+│   │   ├── 6SurveyHomeScreenNewCompany.png
+│   │   ├── DonaldDuckHopeYouEnjoy.png
+│   │   ├── HallofFameFixScreenShot1.png
+│   │   ├── HallofFameFixScreenShot2.png
+│   │   ├── MembersPicksfortheWeekFixScreenShot2.png
+│   │   ├── MoneyGivetoLeague1.png
+│   │   ├── MoneyRagstoRiches.png
+│   │   ├── PickYourTeamFixScreenShot2.png
+│   │   ├── PickYourTeamFixScreenShot3.png
+│   │   ├── PickYourTeamFixScreenShot4.png
+│   │   ├── PlayoffBracketsScreenShotFix.png
+│   │   ├── ProfileManageFixScreenShot.png
+│   │   ├── SurveyAvatarExample.png
+│   │   ├── SurveyBaseballCapIdea.png
+│   │   ├── SurveyScreenNameExample.png
+│   │   ├── TeamDiscoveryFixScreenShot.png
+│   │   ├── TeamNFLHeadlinesFixScreenShot1.png
+│   │   ├── TeamNFLHeadlinesFixScreenShot2.png
+│   │   ├── TeamStandingsFixScreenShot.png
+│   │   ├── TeamStatsChartsFixScreenShot.png
+│   │   ├── TeamWeeklyRankingFixScreenShot1.png
+│   │   ├── TeamWeeklyRankingFixScreenShot2.png
+│   │   ├── TotalWinsLeadersExpertFixScreenShot.png
+│   │   ├── TotalWinsLeadersFixScreenShot1.png
+│   │   └── TotalWinsLeadersFixScreenShot2.png
+│   ├── TeamScoreStatsSoliderAirForce.png
+│   ├── teamstandingspostseasonkey.png
+│   ├── teamstandingspostseasonkey.xcf
+│   ├── TeamWeeklyRankingFall2018.png
+│   ├── TeamWeeklyRankingFall2018.xcf
+│   ├── teamweeklyranking.png
+│   ├── teamweeklyranking-small.png
+│   ├── teamweeklyranking-small.xcf
+│   ├── teamweeklyranking.xcf
+│   ├── ThanksgivingHomeScreen2018-noborder.png
+│   ├── ThanksgivingHomeScreen2018.png
+│   ├── ThanksgivingHomeScreen2022.png
+│   ├── ThanksgivingHomeScreen2022.xcf
+│   ├── Thanksgiving-HomeScreen-2023.png
+│   ├── Thanksgiving-HomeScreen-2023.xcf
+│   ├── Thanksgiving-HomeScreen-2025.png
+│   ├── thanksgivingleaderboard.png
+│   ├── ThanksgivingMembersPicksforWeek2018.png
+│   ├── Thanksgiving-NFLHeadlines-2023.png
+│   ├── Thanksgiving-NFLHeadlines-2023.xcf
+│   ├── Thanksgiving-NFLHeadlines-2025.png
+│   ├── ThanksgivingNFLNews2018.png
+│   ├── thanksgivingpickteams.png
+│   ├── Thanksgiving-TeamScoresStats-2023.png
+│   ├── Thanksgiving-TeamScoresStats-2023.xcf
+│   ├── Thanksgiving-TeamScoresStats-2025.png
+│   ├── ThanksgivingTeamsScoresStatsScrn2022.png
+│   ├── ThanksgivingTeamsScoresStatsScrn2022.xcf
+│   ├── ThanksgivingTeamWeeklyRanking2018.png
+│   ├── ThanksgivingTeamWeeklyRanking2020.png
+│   ├── Thanksgiving-TotalMembersPicksfortheWeek-2023.png
+│   ├── Thanksgiving-TotalMembersPicksfortheWeek-2023.xcf
+│   ├── ThanksgivingTotalMembersTeamPicksforWeek2018.png
+│   ├── ThanksgivingTotalMembersTeamPicksforWeek2022.png
+│   ├── ThanksgivingTotalMembersTeamPicksforWeek2022.xcf
+│   ├── Thanksgiving-TotalMembersTeamPicksforWeek-2025.png
+│   ├── ThanksgivingTotalPercentageLeaders2018.png
+│   ├── Thanksgiving-TotalWinLeaders-2025.png
+│   ├── ThanksgivingTotalWinsLeader2022.png
+│   ├── ThanksgivingTotalWinsLeader2022.xcf
+│   ├── Thanksgiving-TotalWinsLeader-2023.png
+│   ├── Thanksgiving-TotalWinsLeader-2023.xcf
+│   ├── ThanksgivingTotalWinsLeaders2018.png
+│   ├── ThanksgivingWeeklyTotalsLeader2022.png
+│   ├── ThanksgivingWeeklyTotalsLeader2022.xcf
+│   ├── Thanksgiving-WeeklyTotalsLeader-2023.png
+│   ├── Thanksgiving-WeeklyTotalsLeader-2023.xcf
+│   ├── Thanksgiving-WeeklyTotalsLeader-2025.png
+│   ├── ThanksgivingWeeklyTotalsLeaders2018.png
+│   ├── The-First-Amendment-A.png
+│   ├── thinking.png
+│   ├── TotalMembersTeamPicksWeekFall2018.png
+│   ├── TotalMembersTeamPicksWeekFall2018.xcf
+│   ├── TotalMemPicks4WeekSoldierArmyMedic.png
+│   ├── TotalPercentageLeaderDDPose2017.png
+│   ├── TotalPercentageLeaderDDPose2017.xcf
+│   ├── TotalPercentageLeaderFall2018.png
+│   ├── TotalPercentageLeaderFall2018.xcf
+│   ├── totalteampicksweek-bot.png
+│   ├── totalteampicksweek-top.png
+│   ├── TotalWinLeaderSoldierArmyRevolution.png
+│   ├── TotalWinsLeaderDDMathCalcul.png
+│   ├── TotalWinsLeaderDDMathCalcul.xcf
+│   ├── TotalWinsLeaderFall2018.png
+│   ├── TotalWinsLeaderFall2018.xcf
+│   ├── tvicons
+│   │   ├── abc.png
+│   │   ├── abc.xcf
+│   │   ├── amazon.png
+│   │   ├── amazon.xcf
+│   │   ├── cbs.png
+│   │   ├── default.png
+│   │   ├── espn.png
+│   │   ├── fox.png
+│   │   ├── nbc.png
+│   │   ├── netflix.png
+│   │   ├── netflix.xcf
+│   │   ├── nfl.png
+│   │   ├── peacock.png
+│   │   ├── peacock.xcf
+│   │   ├── prime.png
+│   │   ├── prime.xcf
+│   │   ├── yahootv.png
+│   │   ├── yahootv.xcf
+│   │   ├── youtube-logo-2431.xcf
+│   │   └── youtube.png
+│   ├── viewselectpicks.png
+│   ├── viewselectpicks.xcf
+│   ├── weeklystats.png
+│   ├── weeklystats.xcf
+│   ├── WeeklyTotalLeaders2017.png
+│   ├── WeeklyTotalLeaders2017.xcf
+│   ├── WeeklyTotalLeadersFall2018.png
+│   ├── WeeklyTotalLeadersFall2018.xcf
+│   ├── weeklytotals.png
+│   ├── WeeklyTotalsScrn.png
+│   ├── WeeklyTotalsScrn.xcf
+│   ├── WeekTotLeadSoldierNavy.png
+│   ├── Winter-HomePage1-2025.png
+│   ├── Winter-HomePage-2023.png
+│   ├── Winter-HomePage-2024.png
+│   ├── Winter-HomePage-2026.png
+│   ├── Winter-HomePage2-2020.png
+│   ├── Winter-HomePage2-2020.xcf
+│   ├── Winter-MembersPickfortheWeek-2019.png
+│   ├── Winter-MembersPickfortheWeek-2019.xcf
+│   ├── Winter-MembersPicksfortheWeek1-2020.png
+│   ├── Winter-News1-2019.png
+│   ├── Winter-News1-2019.xcf
+│   ├── Winter-News1-2020.png
+│   ├── Winter-News-2023.png
+│   ├── Winter-News-2024.png
+│   ├── Winter-News-2025.png
+│   ├── Winter-News-2026.png
+│   ├── Winter-TeamScores&Stats1-2025.png
+│   ├── Winter-TeamScoresStats-2023.png
+│   ├── Winter-TeamScoresStats-2024.png
+│   ├── Winter-TeamScoresStats-2026.png
+│   ├── Winter-TeamWeeklyRanking-2019.png
+│   ├── Winter-TeamWeeklyRanking-2019.xcf
+│   ├── Winter-TotalMemberPicksfortheWeek-2023.png
+│   ├── Winter-TotalMemberPicksfortheWeek-2024.png
+│   ├── Winter-TotalMemberPicksfortheWeek-2025.png
+│   ├── Winter-TotalMembersPicksfortheWeek1-2020.png
+│   ├── Winter-TotalMembersPicksfortheWeek-2019.png
+│   ├── Winter-TotalMembersPicksfortheWeek-2019.xcf
+│   ├── Winter-TotalPercentageLeader1-2020.png
+│   ├── Winter-TotalPercentageLeaders-2019.png
+│   ├── Winter-TotalPercentageLeaders-2019.xcf
+│   ├── Winter-TotalWinLeaders-2019.png
+│   ├── Winter-TotalWinLeaders-2019.xcf
+│   ├── Winter-TotalWinsLeader1-2020.png
+│   ├── Winter-TotalWinsLeader1-2025.png
+│   ├── Winter-TotalWinsLeader-2023.png
+│   ├── Winter-TotalWinsLeader-2024.png
+│   ├── Winter-TotalWinsLeader-2026.png
+│   ├── Winter-TotMemPicksforWeek-2026.png
+│   ├── Winter-WeeklyTotalLeaders-2019.png
+│   ├── Winter-WeeklyTotalLeaders-2019.xcf
+│   ├── Winter-WeeklyTotalLeaders-2026.png
+│   ├── Winter-WeeklyTotalsLeader1-2020.png
+│   ├── Winter-WeeklyTotalsLeader-2023.png
+│   ├── Winter-WeeklyTotalsLeader-2024.png
+│   ├── Winter-WeeklyTotalsLeader-2025.png
+│   ├── xmashomepage.png
+│   ├── xmashomepage.xcf
+│   ├── xmas-lb-bottom-dd.png
+│   ├── xmas-lb-bottom-dd.xcf
+│   ├── xmas-lb-top.png
+│   ├── xmas-lb-top.xcf
+│   ├── xmasstreeStopNew.png
+│   ├── xmasstreeStopNew.xcf
+│   ├── xmas-totalteampicksweek-top.png
+│   ├── xmas-totalteampicksweek-top.xcf
+│   ├── xmastree2mobile.png
+│   ├── xmastree2mobile.xcf
+│   ├── xmastree2.png
+│   ├── xmastree2.xcf
+│   ├── xmastree.png
+│   ├── xmastreeStop.png
+│   ├── xmastree.xcf
+│   ├── xmas-weeklytotals.png
+│   └── xmas-weeklytotals.xcf
+├── index.html
+├── index.html.bak
+├── index-repair.html
+├── index-working.html
+├── listmanchester.txt
+├── mobile
+│   ├── app
+│   │   ├── ajax
+│   │   │   ├── addgameinfo.php
+│   │   │   ├── addhalloffame.php
+│   │   │   ├── addhallofmemory.php
+│   │   │   ├── addmembergameteampick.php
+│   │   │   ├── addmembergroup.php
+│   │   │   ├── addmember.php
+│   │   │   ├── ajaxlist.csv
+│   │   │   ├── buildemail-gameweek.php
+│   │   │   ├── buildemail.php
+│   │   │   ├── buildmemberstats.php
+│   │   │   ├── buildmemberweekstats.php
+│   │   │   ├── buildmysqldump.php
+│   │   │   ├── buildteamstats.php
+│   │   │   ├── buildteamweekstats.php
+│   │   │   ├── buildwebstats.php
+│   │   │   ├── changetemppassword.php
+│   │   │   ├── convertdaydatetime.php
+│   │   │   ├── dbsql
+│   │   │   │   ├── ddd-dump-04192019115558.sql
+│   │   │   │   ├── ddd-dump-07232023181736.sql
+│   │   │   │   ├── ddd-dump-0920201823455.sql
+│   │   │   │   ├── ddd-dump-11012017191025.sql
+│   │   │   │   └── ddd-dump-findme-1101201719853.sql
+│   │   │   ├── deletemembergroupmember.php
+│   │   │   ├── deletemembergroup.php
+│   │   │   ├── deletemember.php
+│   │   │   ├── getadminteamweeklyranking.php
+│   │   │   ├── getallhalloffame.php
+│   │   │   ├── getallhallofmemory.php
+│   │   │   ├── getallmemberadmin.php
+│   │   │   ├── getallmembergroupmembers.php
+│   │   │   ├── getallmembergroup.php
+│   │   │   ├── getallmembergroups.php
+│   │   │   ├── getallmember.php
+│   │   │   ├── getallmembersadmin.php
+│   │   │   ├── getallmembers.php
+│   │   │   ├── getbadmemberpicks.php
+│   │   │   ├── getcurrentseasonweek.php
+│   │   │   ├── getcurrentsurveydata.php
+│   │   │   ├── getcurrentweek.php
+│   │   │   ├── getlatepickbeforemembers.php
+│   │   │   ├── getlatepickdayofmembers.php
+│   │   │   ├── getlatepickmembers.php
+│   │   │   ├── getleadermembers.php
+│   │   │   ├── getmember.php
+│   │   │   ├── getmemberpicklist.php
+│   │   │   ├── getmemberprofiledialog.php
+│   │   │   ├── getmembers.php
+│   │   │   ├── getmemberstatus.php
+│   │   │   ├── getmemberteampicklistdialog.php
+│   │   │   ├── getmemberweekstats-orig.php
+│   │   │   ├── getmemberweekstats.php
+│   │   │   ├── getnetworks.php
+│   │   │   ├── getnextgamenbr.php
+│   │   │   ├── getnflbyeweekmemberteams.php
+│   │   │   ├── getnflcurrentseasonweek.php
+│   │   │   ├── getnflgamesteams.php
+│   │   │   ├── getnflgametypes.php
+│   │   │   ├── getnflgameweekmemberteampicks.php
+│   │   │   ├── getnflgameweekmemberteamsexpiredaugmented.php
+│   │   │   ├── getnflgameweekmemberteamsexpired.php
+│   │   │   ├── getnflgameweekmemberteams.php
+│   │   │   ├── getnflgameweekteams.php
+│   │   │   ├── getNFLpostseasonstatus.php
+│   │   │   ├── getnflrss.php
+│   │   │   ├── getnflseasons.php
+│   │   │   ├── getnflseasonweeks.php
+│   │   │   ├── getnflteam.php
+│   │   │   ├── getnflteams.php
+│   │   │   ├── getnflteamstats.php
+│   │   │   ├── getnow.php
+│   │   │   ├── getplayerinjurydialog.php
+│   │   │   ├── getplayerinjuryhtmldialog.php
+│   │   │   ├── getplayoffstatus.php
+│   │   │   ├── getrequestitems.php
+│   │   │   ├── getrss.php
+│   │   │   ├── getsurveymemberdata.php
+│   │   │   ├── getsurveyquestiondata.php
+│   │   │   ├── getsurveyresultsmemberquestiondetaildata.php
+│   │   │   ├── getsurveyresultsmemberquestionsummarydata.php
+│   │   │   ├── getteambracket.php
+│   │   │   ├── getteambracketsmart.php
+│   │   │   ├── getteambrackets.php
+│   │   │   ├── getteamhead2head.php
+│   │   │   ├── getteampowerrankings.php
+│   │   │   ├── getteamseasoninfo.php
+│   │   │   ├── getteamspowerrankings.php
+│   │   │   ├── getteamsstatscurrentweek.php
+│   │   │   ├── getteamstatsdialog.php
+│   │   │   ├── getteamweekyranking.php
+│   │   │   ├── getteamwlt.php
+│   │   │   ├── importplayerinjuryfile.php
+│   │   │   ├── importsurveyquestiondata.php
+│   │   │   ├── importteamweeklyrankfile.php
+│   │   │   ├── initializememberweekstats.php
+│   │   │   ├── initializeteamweekstats.php
+│   │   │   ├── login.php
+│   │   │   ├── logs
+│   │   │   │   ├── access.log
+│   │   │   │   └── error.log
+│   │   │   ├── makegametimestamp.php
+│   │   │   ├── memberupdatemember.php
+│   │   │   ├── modulelist.txt
+│   │   │   ├── mysqlconnect.php
+│   │   │   ├── mysqlquery.php
+│   │   │   ├── news.xml
+│   │   │   ├── registeremail.php
+│   │   │   ├── runphpmodule.php
+│   │   │   ├── saveadminteamweeklyranking.php
+│   │   │   ├── savegamedatetimeweekteamsinfo.php
+│   │   │   ├── savegameweekteamsnetworkinfo.php
+│   │   │   ├── savegameweekteamsscoreinfo.php
+│   │   │   ├── savememberavatar.php
+│   │   │   ├── saveteambracket.php
+│   │   │   ├── sendemail2members-orininal.php
+│   │   │   ├── sendemail2members.php
+│   │   │   ├── sendsms2member.php
+│   │   │   ├── testdate.php
+│   │   │   ├── testmail.php
+│   │   │   ├── testpear.php
+│   │   │   ├── test.php
+│   │   │   ├── testsms.php
+│   │   │   ├── track.php
+│   │   │   ├── updategameinfo.php
+│   │   │   ├── updatehalloffame.php
+│   │   │   ├── updatehallofmemory.php
+│   │   │   ├── updatemembergroup.php
+│   │   │   ├── updatemember.php
+│   │   │   ├── updatesurveymemberdata.php
+│   │   │   ├── updateteaminfo.php
+│   │   │   ├── updateteamseasoninfo.php
+│   │   │   └── uploadavatar.php
+│   │   ├── class
+│   │   │   ├── class.AccessLog.php
+│   │   │   ├── class.ErrorLog.php
+│   │   │   ├── class.Log.php
+│   │   │   ├── class.MailerDDD.php
+│   │   │   └── logs
+│   │   │       ├── access.log
+│   │   │       └── error.log
+│   │   ├── controllers
+│   │   │   ├── adminController.js
+│   │   │   ├── awardsController.js
+│   │   │   ├── controllers-ag-grid.js
+│   │   │   ├── controllers-new.js
+│   │   │   ├── controllers-wip.js
+│   │   │   ├── faqsController.js
+│   │   │   ├── fireworksController.js
+│   │   │   ├── firstController.js
+│   │   │   ├── gamesController.js
+│   │   │   ├── happyholidaysController.js
+│   │   │   ├── lastController.js
+│   │   │   ├── newsopinionController.js
+│   │   │   ├── parenthomeController.js
+│   │   │   ├── playerstatsController.js
+│   │   │   ├── spookyController.js
+│   │   │   ├── surveyController.js
+│   │   │   └── teamsController.js
+│   │   ├── dddAppMobile.js
+│   │   ├── directives
+│   │   │   ├── directives.js
+│   │   │   └── templates
+│   │   │       ├── statelistdisplay.html
+│   │   │       └── yesnolistdisplay.html
+│   │   ├── dist
+│   │   │   ├── angular-grid.css
+│   │   │   ├── angular-grid.d.ts
+│   │   │   ├── angular-grid.js
+│   │   │   ├── angular-grid.min.css
+│   │   │   ├── angular-grid.min.js
+│   │   │   ├── theme-dark.css
+│   │   │   ├── theme-dark.min.css
+│   │   │   ├── theme-fresh.css
+│   │   │   └── theme-fresh.min.css
+│   │   ├── factories
+│   │   │   ├── factories.js
+│   │   │   ├── loginfactory.js
+│   │   │   ├── membersfactory.js
+│   │   │   ├── scriptsfactory.js
+│   │   │   ├── surveyfactory.js
+│   │   │   └── teamsfactory.js
+│   │   ├── load
+│   │   │   └── keyrequestsendemail.html
+│   │   ├── partials
+│   │   │   ├── addavatar.html
+│   │   │   ├── addmembergroup.html
+│   │   │   ├── addmember.html
+│   │   │   ├── faqs.html
+│   │   │   ├── fireworks.html
+│   │   │   ├── gameinfo.html
+│   │   │   ├── gamenetworkinfo.html
+│   │   │   ├── gameranking.html
+│   │   │   ├── gameteamdatetimeinfo.html
+│   │   │   ├── gameteamscoresinfo.html
+│   │   │   ├── gameweeks.html
+│   │   │   ├── halloffame.html
+│   │   │   ├── hallofmemory.html
+│   │   │   ├── happyholidays.html
+│   │   │   ├── home.html
+│   │   │   ├── ispooky.html
+│   │   │   ├── leaderboard.html
+│   │   │   ├── login.html
+│   │   │   ├── managehalloffame.html
+│   │   │   ├── managehallofmemory.html
+│   │   │   ├── memberupdatemember.html
+│   │   │   ├── memberweekly.html
+│   │   │   ├── memberweekly-original.html
+│   │   │   ├── newsopinion.html
+│   │   │   ├── nflnews.html
+│   │   │   ├── nflnews-new.html
+│   │   │   ├── nflnews-orig.html
+│   │   │   ├── pickgames2.html
+│   │   │   ├── pickgames2-old.html
+│   │   │   ├── pickgames-ag-grid.html
+│   │   │   ├── pickgames.html
+│   │   │   ├── playerstatsmemberweekly.html
+│   │   │   ├── playerstatstotalpercentage.html
+│   │   │   ├── playerstatstotalwins.html
+│   │   │   ├── playoffstandings.html
+│   │   │   ├── sendplayeremail.html
+│   │   │   ├── spooky.html
+│   │   │   ├── survey.html
+│   │   │   ├── surveyresults.html
+│   │   │   ├── takesurvey.html
+│   │   │   ├── teamdiscovery.html
+│   │   │   ├── teaminfo.html
+│   │   │   ├── teamsbracketsinfo.html
+│   │   │   ├── teamseasoninfo.html
+│   │   │   ├── teamstandings.html
+│   │   │   ├── teamstatscharts.html
+│   │   │   ├── teamstats.html
+│   │   │   ├── teamweeklyranking.html
+│   │   │   ├── updatemembergroup.html
+│   │   │   ├── updatemember.html
+│   │   │   ├── viewallpicks.html
+│   │   │   ├── viewgames.html
+│   │   │   ├── viewselectpickgames.html
+│   │   │   ├── viewtotalpickgames.html
+│   │   │   ├── weeklybuilds.html
+│   │   │   └── weeklyscripts.html
+│   │   ├── services
+│   │   │   ├── chartservice.js
+│   │   │   ├── dddservice.js
+│   │   │   ├── dddservice-old.js
+│   │   │   ├── loginservice.js
+│   │   │   ├── msgservice.js
+│   │   │   ├── selectlistservice.js
+│   │   │   └── teamservice.js
+│   │   └── validations
+│   │       └── validate.js
+│   ├── css
+│   │   ├── basic.css
+│   │   ├── dddMobile.css
+│   │   └── fonts
+│   │       ├── aileron
+│   │       │   ├── Aileron-Light-webfont.woff
+│   │       │   ├── Aileron-SemiBold-webfont.woff
+│   │       │   └── Aileron-Thin-webfont.woff
+│   │       ├── aniron-font
+│   │       │   ├── Aniron-7BaP.ttf
+│   │       │   ├── AnironBold-mL9P.ttf
+│   │       │   ├── AnironcBold-PKwr.ttf
+│   │       │   ├── Anironc-d9DK.ttf
+│   │       │   ├── info.txt
+│   │       │   └── misc
+│   │       │       ├── liesmich-081c.html
+│   │       │       ├── prochitay-0353.html
+│   │       │       └── readme-4ac2.html
+│   │       ├── Anton
+│   │       │   ├── Anton-Regular.ttf
+│   │       │   └── OFL.txt
+│   │       ├── BeyondWonderland.ttf
+│   │       ├── ChopinScript.ttf
+│   │       ├── cormorant
+│   │       │   ├── cormorant
+│   │       │   │   ├── Cormorant-BoldItalic.ttf
+│   │       │   │   ├── Cormorant-Bold.ttf
+│   │       │   │   ├── Cormorant-Italic.ttf
+│   │       │   │   ├── Cormorant-LightItalic.ttf
+│   │       │   │   ├── Cormorant-Light.ttf
+│   │       │   │   ├── Cormorant-MediumItalic.ttf
+│   │       │   │   ├── Cormorant-Medium.ttf
+│   │       │   │   ├── Cormorant-Regular.ttf
+│   │       │   │   ├── Cormorant-SemiBoldItalic.ttf
+│   │       │   │   ├── Cormorant-SemiBold.ttf
+│   │       │   │   ├── DESCRIPTION.en_us.html
+│   │       │   │   ├── METADATA.pb
+│   │       │   │   └── OFL.txt
+│   │       │   ├── cormorantgaramond
+│   │       │   │   ├── CormorantGaramond-BoldItalic.ttf
+│   │       │   │   ├── CormorantGaramond-Bold.ttf
+│   │       │   │   ├── CormorantGaramond-Italic.ttf
+│   │       │   │   ├── CormorantGaramond-LightItalic.ttf
+│   │       │   │   ├── CormorantGaramond-Light.ttf
+│   │       │   │   ├── CormorantGaramond-MediumItalic.ttf
+│   │       │   │   ├── CormorantGaramond-Medium.ttf
+│   │       │   │   ├── CormorantGaramond-Regular.ttf
+│   │       │   │   ├── CormorantGaramond-SemiBoldItalic.ttf
+│   │       │   │   ├── CormorantGaramond-SemiBold.ttf
+│   │       │   │   ├── DESCRIPTION.en_us.html
+│   │       │   │   ├── METADATA.pb
+│   │       │   │   └── OFL.txt
+│   │       │   ├── cormorantinfant
+│   │       │   │   ├── CormorantInfant-BoldItalic.ttf
+│   │       │   │   ├── CormorantInfant-Bold.ttf
+│   │       │   │   ├── CormorantInfant-Italic.ttf
+│   │       │   │   ├── CormorantInfant-LightItalic.ttf
+│   │       │   │   ├── CormorantInfant-Light.ttf
+│   │       │   │   ├── CormorantInfant-MediumItalic.ttf
+│   │       │   │   ├── CormorantInfant-Medium.ttf
+│   │       │   │   ├── CormorantInfant-Regular.ttf
+│   │       │   │   ├── CormorantInfant-SemiBoldItalic.ttf
+│   │       │   │   ├── CormorantInfant-SemiBold.ttf
+│   │       │   │   ├── DESCRIPTION.en_us.html
+│   │       │   │   ├── METADATA.pb
+│   │       │   │   └── OFL.txt
+│   │       │   ├── cormorantsc
+│   │       │   │   ├── CormorantSC-Bold.ttf
+│   │       │   │   ├── CormorantSC-Light.ttf
+│   │       │   │   ├── CormorantSC-Medium.ttf
+│   │       │   │   ├── CormorantSC-Regular.ttf
+│   │       │   │   ├── CormorantSC-SemiBold.ttf
+│   │       │   │   ├── DESCRIPTION.en_us.html
+│   │       │   │   ├── METADATA.pb
+│   │       │   │   └── OFL.txt
+│   │       │   ├── cormorantunicase
+│   │       │   │   ├── CormorantUnicase-Bold.ttf
+│   │       │   │   ├── CormorantUnicase-Light.ttf
+│   │       │   │   ├── CormorantUnicase-Medium.ttf
+│   │       │   │   ├── CormorantUnicase-Regular.ttf
+│   │       │   │   ├── CormorantUnicase-SemiBold.ttf
+│   │       │   │   ├── DESCRIPTION.en_us.html
+│   │       │   │   ├── METADATA.pb
+│   │       │   │   └── OFL.txt
+│   │       │   └── cormorantupright
+│   │       │       ├── CormorantUpright-Bold.ttf
+│   │       │       ├── CormorantUpright-Light.ttf
+│   │       │       ├── CormorantUpright-Medium.ttf
+│   │       │       ├── CormorantUpright-Regular.ttf
+│   │       │       ├── CormorantUpright-SemiBold.ttf
+│   │       │       ├── DESCRIPTION.en_us.html
+│   │       │       ├── METADATA.pb
+│   │       │       └── OFL.txt
+│   │       ├── coventrygarden
+│   │       │   ├── 1001fonts-coventrygarden-eula.txt
+│   │       │   ├── CoventryGardenNF.otf
+│   │       │   └── CoventryGardenNF.ttf
+│   │       ├── GingerbreadHouse.ttf
+│   │       ├── home_christmas
+│   │       │   ├── Home Christmas.otf
+│   │       │   └── Readme.txt
+│   │       ├── kingthings-christmas-2.regular.ttf
+│   │       ├── metro-retro.regular.ttf
+│   │       ├── middleearth-font
+│   │       │   ├── info.txt
+│   │       │   └── Middleearth-ao6m.ttf
+│   │       ├── RothenburgDecorative.ttf
+│   │       └── Sentinel.ttf
+│   ├── data
+│   │   ├── ddd-dump-tammy.sql
+│   │   ├── importfiles
+│   │   │   ├── ddd-survey-questions-2019.csv
+│   │   │   ├── teamweekrank2015w10After.csv
+│   │   │   ├── teamweekrank2015w10P.csv
+│   │   │   ├── teamweekrank2015w11After.csv
+│   │   │   ├── teamweekrank2015w11Before.csv
+│   │   │   ├── teamweekrank2015w12After.csv
+│   │   │   ├── teamweekrank2015w12Before.csv
+│   │   │   ├── teamweekrank2015w13After.csv
+│   │   │   ├── teamweekrank2015w13Before.csv
+│   │   │   ├── teamweekrank2015w14After.csv
+│   │   │   ├── teamweekrank2015w14Before.csv
+│   │   │   ├── teamweekrank2015w15After.csv
+│   │   │   ├── teamweekrank2015w15Before.csv
+│   │   │   ├── teamweekrank2015w16After.csv
+│   │   │   ├── teamweekrank2015w16Before.csv
+│   │   │   ├── teamweekrank2015w17After.csv
+│   │   │   ├── teamweekrank2015w17Before.csv
+│   │   │   ├── teamweekrank2015w18After.csv
+│   │   │   ├── teamweekrank2015w18Before.csv
+│   │   │   ├── teamweekrank2015w19After.csv
+│   │   │   ├── teamweekrank2015w19Before.csv
+│   │   │   ├── teamweekrank2015w1.csv
+│   │   │   ├── teamweekrank2015w20Before.csv
+│   │   │   ├── teamweekrank2015w2.csv
+│   │   │   ├── teamweekrank2015w3.csv
+│   │   │   ├── teamweekrank2015w4.csv
+│   │   │   ├── teamweekrank2015w5.csv
+│   │   │   ├── teamweekrank2015w6.csv
+│   │   │   ├── teamweekrank2015w7.csv
+│   │   │   ├── teamweekrank2015w8A.csv
+│   │   │   ├── teamweekrank2015w9A.csv
+│   │   │   ├── teamweekrank2015w9P.csv
+│   │   │   ├── teamweekrank2016w1After.csv
+│   │   │   ├── teamweekrank2016w1Before.csv
+│   │   │   ├── teamweekrank2016w2After.csv
+│   │   │   ├── teamweekrank2016w2Before.csv
+│   │   │   ├── teamweekrank2016w3After.csv
+│   │   │   ├── teamweekrank2016w3Before.csv
+│   │   │   ├── teamweekrank2016w4After.csv
+│   │   │   ├── teamweekrank2016w4Before.csv
+│   │   │   └── teamweekrank2016w5Before.csv
+│   │   ├── nfl2014.csv
+│   │   ├── nfl2014.json
+│   │   ├── nfl2014-scores.csv
+│   │   ├── nfl2014-scores.json
+│   │   ├── nfl2014season.csv
+│   │   ├── nfl2014-test.json
+│   │   ├── nfl2015.json
+│   │   ├── nfl-2015-schedule.csv
+│   │   ├── nfl2016.json
+│   │   ├── nfl-2016-schedule.csv
+│   │   ├── teamweekranking2015
+│   │   │   ├── Off Def Total Weekly Stat-Table 1.csv
+│   │   │   ├── Team Week 2 Stats-Table 1.csv
+│   │   │   ├── Team Week 3 Stats-Table 1.csv
+│   │   │   ├── Team Week 4 Stats-Table 1.csv
+│   │   │   ├── Team Week 5 Stats-Table 1.csv
+│   │   │   ├── Team Week 6 Stats-Table 1.csv
+│   │   │   ├── Team Week 7 Stats-Table 1.csv
+│   │   │   ├── Team Week 8 Stats-Table 1.csv
+│   │   │   ├── teamweekrank2015w10After.csv
+│   │   │   ├── teamweekrank2015w11Before.csv
+│   │   │   ├── teamweekrank2015w1.csv
+│   │   │   └── teamweekrank2015w1.json
+│   │   ├── years_2014_games.csv
+│   │   └── years_2014_games.json
+│   ├── emailforms
+│   │   ├── avatar-change-email.html
+│   │   ├── avatar-login-change-email.html
+│   │   ├── gameweek-email.html
+│   │   ├── gameweek-long-email.html
+│   │   ├── gameweek-short-email.html
+│   │   ├── latepicksdayof-email.html
+│   │   ├── latepicks-email.html
+│   │   ├── login-change-email.html
+│   │   ├── oops-email.html
+│   │   ├── product-info.html
+│   │   ├── sitedown-email.html
+│   │   ├── siteproblems-email.html
+│   │   ├── survey-email.html
+│   │   ├── teamweeklyrankings-email.html
+│   │   ├── welcome-email.html
+│   │   ├── welcome-haveinfo-email.html
+│   │   ├── welcome-needinfo-email.html
+│   │   └── welcome-new-season-email.html
+│   ├── Fireworks
+│   │   ├── css
+│   │   │   └── fireworks.css
+│   │   ├── fireworks.html
+│   │   ├── images
+│   │   │   ├── big-glow.png
+│   │   │   └── small-glow.png
+│   │   ├── index.html
+│   │   ├── js
+│   │   │   └── fireworks.js
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   └── third_party
+│   │       └── requestanimframe.js
+│   ├── index.html
+│   ├── index.html.bak
+│   ├── index-repair.html
+│   ├── index-working.html
+│   └── script
+│       ├── bwip-js
+│       │   ├── barcode-2013-01-25.ps
+│       │   ├── bwip.js
+│       │   ├── bwipp
+│       │   │   ├── auspost.js
+│       │   │   ├── azteccode.js
+│       │   │   ├── bc412.js
+│       │   │   ├── channelcode.js
+│       │   │   ├── codablockf.js
+│       │   │   ├── code11.js
+│       │   │   ├── code128.js
+│       │   │   ├── code16k.js
+│       │   │   ├── code2of5.js
+│       │   │   ├── code32.js
+│       │   │   ├── code39ext.js
+│       │   │   ├── code39.js
+│       │   │   ├── code49.js
+│       │   │   ├── code93ext.js
+│       │   │   ├── code93.js
+│       │   │   ├── codeone.js
+│       │   │   ├── daft.js
+│       │   │   ├── databarexpandedcomposite.js
+│       │   │   ├── databarexpanded.js
+│       │   │   ├── databarexpandedstackedcomposite.js
+│       │   │   ├── databarexpandedstacked.js
+│       │   │   ├── databarlimitedcomposite.js
+│       │   │   ├── databarlimited.js
+│       │   │   ├── databaromnicomposite.js
+│       │   │   ├── databaromni.js
+│       │   │   ├── databarstackedcomposite.js
+│       │   │   ├── databarstacked.js
+│       │   │   ├── databarstackedomnicomposite.js
+│       │   │   ├── databarstackedomni.js
+│       │   │   ├── databartruncatedcomposite.js
+│       │   │   ├── databartruncated.js
+│       │   │   ├── datamatrix.js
+│       │   │   ├── ean13composite.js
+│       │   │   ├── ean13.js
+│       │   │   ├── ean14.js
+│       │   │   ├── ean2.js
+│       │   │   ├── ean5.js
+│       │   │   ├── ean8composite.js
+│       │   │   ├── ean8.js
+│       │   │   ├── flattermarken.js
+│       │   │   ├── gs1-128composite.js
+│       │   │   ├── gs1-128.js
+│       │   │   ├── gs1-cc.js
+│       │   │   ├── gs1datamatrix.js
+│       │   │   ├── hibccodablockf.js
+│       │   │   ├── hibccode128.js
+│       │   │   ├── hibccode39.js
+│       │   │   ├── hibcdatamatrix.js
+│       │   │   ├── hibcmicropdf417.js
+│       │   │   ├── hibcpdf417.js
+│       │   │   ├── hibcqrcode.js
+│       │   │   ├── identcode.js
+│       │   │   ├── interleaved2of5.js
+│       │   │   ├── isbn.js
+│       │   │   ├── ismn.js
+│       │   │   ├── issn.js
+│       │   │   ├── itf14.js
+│       │   │   ├── japanpost.js
+│       │   │   ├── kix.js
+│       │   │   ├── leitcode.js
+│       │   │   ├── maxicode.js
+│       │   │   ├── micropdf417.js
+│       │   │   ├── msi.js
+│       │   │   ├── onecode.js
+│       │   │   ├── pdf417.js
+│       │   │   ├── pharmacode2.js
+│       │   │   ├── pharmacode.js
+│       │   │   ├── planet.js
+│       │   │   ├── plessey.js
+│       │   │   ├── posicode.js
+│       │   │   ├── postnet.js
+│       │   │   ├── pzn.js
+│       │   │   ├── qrcode.js
+│       │   │   ├── rationalizedCodabar.js
+│       │   │   ├── raw.js
+│       │   │   ├── renlinear.js
+│       │   │   ├── renmatrix.js
+│       │   │   ├── renmaximatrix.js
+│       │   │   ├── royalmail.js
+│       │   │   ├── sscc18.js
+│       │   │   ├── symbol.js
+│       │   │   ├── telepen.js
+│       │   │   ├── upcacomposite.js
+│       │   │   ├── upca.js
+│       │   │   ├── upcecomposite.js
+│       │   │   └── upce.js
+│       │   ├── demo.html
+│       │   ├── fonts
+│       │   │   ├── ocrb10-01.js
+│       │   │   ├── ocrb10-02.js
+│       │   │   ├── ocrb10-03.js
+│       │   │   ├── ocrb10-04.js
+│       │   │   ├── ocrb10-05.js
+│       │   │   ├── ocrb10-06.js
+│       │   │   ├── ocrb10-07.js
+│       │   │   ├── ocrb10-08.js
+│       │   │   ├── ocrb10-09.js
+│       │   │   ├── ocrb10-10.js
+│       │   │   ├── ocrb12-01.js
+│       │   │   ├── ocrb12-02.js
+│       │   │   ├── ocrb12-03.js
+│       │   │   ├── ocrb12-04.js
+│       │   │   ├── ocrb12-05.js
+│       │   │   ├── ocrb12-06.js
+│       │   │   ├── ocrb12-07.js
+│       │   │   ├── ocrb12-08.js
+│       │   │   ├── ocrb12-09.js
+│       │   │   └── ocrb12-10.js
+│       │   ├── lib
+│       │   │   ├── baropts.js
+│       │   │   ├── canvas.js
+│       │   │   ├── dn-arrow.gif
+│       │   │   ├── jquery-1.4.1.js
+│       │   │   ├── needyoffset.js
+│       │   │   ├── symdesc.js
+│       │   │   └── up-arrow.gif
+│       │   ├── LICENSE
+│       │   ├── node-bwipjs
+│       │   └── node-demo
+│       ├── dddMobile.js
+│       ├── jqFancyTransitions.1.8.js
+│       ├── jquery.rotate.js
+│       ├── jquery.slides.js
+│       ├── rssfeed.js
+│       └── typeahead.js
+├── prizes
+│   └── 2015
+│       ├── 2014 Shirt Sleeve - 2016-02-28.xcf
+│       ├── 2014 Shirt Sleeve.png
+│       ├── 2015 Shirt Sleeve - 2016-02-28.xcf
+│       ├── 2015 Shirt Sleeve.png
+│       ├── Cutler Shirt - 2016-02-28.xcf
+│       ├── Cutler Shirt Sleeve.png
+│       ├── DareDevil Duck Arch for Logo in Shirt.png
+│       ├── DareDevil Duck Arch for Shirt - 2016-02-28.xcf
+│       ├── Dare Devil Duck Logo for Embroidery 1.xcf
+│       ├── Dare Devil Duck Logo for Embroidery orig.xcf
+│       ├── Dare Devil Duck Logo - Jess 21015-11-28.xcf
+│       ├── Dare Devil Duck Logo.png
+│       ├── Hunzelman Shirt - 2016-02-28.xcf
+│       ├── Hunzelman Shirt Sleeve.png
+│       ├── Year 1 Shirt 2014-2015.pdf
+│       └── Year 2 Shirt 2015-2016.pdf
+├── pythonscripts
+│   ├── conversionfile.csv
+│   ├── cursemenu.py
+│   ├── ddd-02012026-season2025-week21-prod-sbgame-added-python.sql
+│   ├── getddd.py
+│   ├── history
+│   │   ├── ddd-01052026-season2025-week18-prod-final-python.sql
+│   │   ├── ddd-01052026-season2025-week19-playoffs-prod-python.sql
+│   │   ├── ddd-01142026-season2025-week19-prod-end-python.sql
+│   │   ├── injury-season2025-week11-11122025.csv
+│   │   ├── injury-season2025-week12-11182025.csv
+│   │   ├── injury-season2025-week13-11252025.csv
+│   │   ├── injury-season2025-week14-12032025.csv
+│   │   ├── injury-season2025-week15-12092025.csv
+│   │   ├── injury-season2025-week16-12162025.csv
+│   │   ├── injury-season2025-week17-12232025.csv
+│   │   ├── injury-season2025-week9-11052025.csv
+│   │   ├── nfl-injury-report.csv
+│   │   ├── TeamWeekRank2025-19.csv
+│   │   ├── TeamWeekRank2025W18After.csv
+│   │   ├── TeamWeekRank2025W19After.csv
+│   │   ├── TeamWeekRank2025W19Before.csv
+│   │   ├── TeamWeekRank2025W20After.csv
+│   │   ├── TeamWeekRank2025W20Before.csv
+│   │   ├── TeamWeekRank2025W20.csv
+│   │   ├── TeamWeekRank2025W21After.csv
+│   │   ├── TeamWeekRank2025W21Before.csv
+│   │   ├── TeamWeekRank2025W21.csv
+│   │   └── TeamWeekRank2025W22Before.csv
+│   ├── nfl-injury-report.csv
+│   ├── pipinstall.txt
+│   ├── playerinjuriesupdate.py
+│   ├── previewmenu.py
+│   ├── prodset.py
+│   ├── putddd.py
+│   ├── results
+│   │   ├── getlasthallmemoryrowadd.txt
+│   │   ├── getmemberpicks.txt
+│   │   ├── getnameshort1.csv
+│   │   ├── getnameshort2.csv
+│   │   ├── getnameshort3.csv
+│   │   ├── getnameshort.csv
+│   │   └── gettracktbkitems.txt
+│   ├── runsqlez.py
+│   ├── runsql.py
+│   ├── sql
+│   │   ├── addhalloffame.sql
+│   │   ├── getlasthallmemoryrowadd.sql
+│   │   ├── getmemberpicks.sql
+│   │   ├── getnameshort.sql
+│   │   └── gettracktbkitems.sql
+│   ├── teamstatsupdate.py
+│   ├── TeamWeekRank2025W22.csv
+│   ├── termmenusimple.py
+│   └── wip
+│       ├── getfilelistselect.py
+│       ├── injury
+│       │   ├── buildinjurycvsfileold.py
+│       │   ├── conversionfile.csv
+│       │   ├── injurybuild.py
+│       │   ├── injury-season2025-week11-11122025.csv
+│       │   ├── injury-season2025-week12-11182025.csv
+│       │   ├── injury-season2025-week13-11252025.csv
+│       │   ├── injury-season2025-week14-12032025.csv
+│       │   ├── injury-season2025-week15-12092025.csv
+│       │   ├── injury-season2025-week16-12162025.csv
+│       │   ├── injury-season2025-week17-12232025.csv
+│       │   ├── injury-season2025-week9-11052025.csv
+│       │   ├── msqqltest.py
+│       │   └── nfl-injury-report.csv
+│       ├── results
+│       ├── sql
+│       │   ├── addhalloffame.sql
+│       │   ├── getlasthallmemoryrowadd.sql
+│       │   ├── getmemberpicks.sql
+│       │   └── getnameshort.sql
+│       ├── sys
+│       │   ├── ddd-01042026-hold4teamranktest-python.sql
+│       │   ├── getnflteamwinslosstie.sql
+│       │   ├── getnflteamwinslosstie.txt
+│       │   ├── getPlayoffInfo.sql
+│       │   ├── PlayoffStatusBracket.sql
+│       │   ├── prodset.py
+│       │   ├── putddd.py
+│       │   └── runsql.py
+│       └── updatepreplayoffstats.py
+├── README.md
+├── rubyscripts
+│   ├── csv2json.json
+│   ├── csv2json.rb
+│   ├── csv2json-wrong.rb
+│   ├── dddcsv2json.json
+│   ├── ddd-dump-nfl2018.sql
+│   ├── importdata.rb
+│   ├── info.log
+│   ├── makesql-nfl2015.rb
+│   ├── makesql-nfl2016.rb
+│   ├── makesql-nfl2017.rb
+│   ├── makesql-nfl2018.rb
+│   ├── makesql-original.rb
+│   ├── makesql.rb
+│   ├── makesql-withscores.rb
+│   ├── mysql.rb
+│   ├── MYsqlService.rb
+│   ├── nfl2014-insert-bye.sql
+│   ├── nfl2014-insert-play.sql
+│   ├── nfl2015-insert-bye.sql
+│   ├── nfl2015-insert-play.sql
+│   ├── nfl2016-insert-bye.sql
+│   ├── nfl2016-insert-play.sql
+│   ├── nfl2017.csv
+│   ├── nfl2017-insert-bye.sql
+│   ├── nfl2017-insert-play.sql
+│   ├── nfl2017.json
+│   ├── nfl2018-2.csv
+│   ├── nfl2018-2.json
+│   ├── nfl2018.csv
+│   ├── nfl2018-insert-bye.sql
+│   ├── nfl2018-insert-play.sql
+│   ├── nfl2018.json
+│   ├── teamrankweek1.csv
+│   ├── teamrankweek1.json
+│   ├── test2018byes.csv
+│   ├── test2018games.csv
+│   ├── test2019byes.csv
+│   ├── test2019.csv
+│   ├── test2019games.csv
+│   └── test2019seasonweeks.csv
+├── script
+│   ├── bwip-js
+│   │   ├── barcode-2013-01-25.ps
+│   │   ├── bwip.js
+│   │   ├── bwipp
+│   │   │   ├── auspost.js
+│   │   │   ├── azteccode.js
+│   │   │   ├── bc412.js
+│   │   │   ├── channelcode.js
+│   │   │   ├── codablockf.js
+│   │   │   ├── code11.js
+│   │   │   ├── code128.js
+│   │   │   ├── code16k.js
+│   │   │   ├── code2of5.js
+│   │   │   ├── code32.js
+│   │   │   ├── code39ext.js
+│   │   │   ├── code39.js
+│   │   │   ├── code49.js
+│   │   │   ├── code93ext.js
+│   │   │   ├── code93.js
+│   │   │   ├── codeone.js
+│   │   │   ├── daft.js
+│   │   │   ├── databarexpandedcomposite.js
+│   │   │   ├── databarexpanded.js
+│   │   │   ├── databarexpandedstackedcomposite.js
+│   │   │   ├── databarexpandedstacked.js
+│   │   │   ├── databarlimitedcomposite.js
+│   │   │   ├── databarlimited.js
+│   │   │   ├── databaromnicomposite.js
+│   │   │   ├── databaromni.js
+│   │   │   ├── databarstackedcomposite.js
+│   │   │   ├── databarstacked.js
+│   │   │   ├── databarstackedomnicomposite.js
+│   │   │   ├── databarstackedomni.js
+│   │   │   ├── databartruncatedcomposite.js
+│   │   │   ├── databartruncated.js
+│   │   │   ├── datamatrix.js
+│   │   │   ├── ean13composite.js
+│   │   │   ├── ean13.js
+│   │   │   ├── ean14.js
+│   │   │   ├── ean2.js
+│   │   │   ├── ean5.js
+│   │   │   ├── ean8composite.js
+│   │   │   ├── ean8.js
+│   │   │   ├── flattermarken.js
+│   │   │   ├── gs1-128composite.js
+│   │   │   ├── gs1-128.js
+│   │   │   ├── gs1-cc.js
+│   │   │   ├── gs1datamatrix.js
+│   │   │   ├── hibccodablockf.js
+│   │   │   ├── hibccode128.js
+│   │   │   ├── hibccode39.js
+│   │   │   ├── hibcdatamatrix.js
+│   │   │   ├── hibcmicropdf417.js
+│   │   │   ├── hibcpdf417.js
+│   │   │   ├── hibcqrcode.js
+│   │   │   ├── identcode.js
+│   │   │   ├── interleaved2of5.js
+│   │   │   ├── isbn.js
+│   │   │   ├── ismn.js
+│   │   │   ├── issn.js
+│   │   │   ├── itf14.js
+│   │   │   ├── japanpost.js
+│   │   │   ├── kix.js
+│   │   │   ├── leitcode.js
+│   │   │   ├── maxicode.js
+│   │   │   ├── micropdf417.js
+│   │   │   ├── msi.js
+│   │   │   ├── onecode.js
+│   │   │   ├── pdf417.js
+│   │   │   ├── pharmacode2.js
+│   │   │   ├── pharmacode.js
+│   │   │   ├── planet.js
+│   │   │   ├── plessey.js
+│   │   │   ├── posicode.js
+│   │   │   ├── postnet.js
+│   │   │   ├── pzn.js
+│   │   │   ├── qrcode.js
+│   │   │   ├── rationalizedCodabar.js
+│   │   │   ├── raw.js
+│   │   │   ├── renlinear.js
+│   │   │   ├── renmatrix.js
+│   │   │   ├── renmaximatrix.js
+│   │   │   ├── royalmail.js
+│   │   │   ├── sscc18.js
+│   │   │   ├── symbol.js
+│   │   │   ├── telepen.js
+│   │   │   ├── upcacomposite.js
+│   │   │   ├── upca.js
+│   │   │   ├── upcecomposite.js
+│   │   │   └── upce.js
+│   │   ├── demo.html
+│   │   ├── fonts
+│   │   │   ├── ocrb10-01.js
+│   │   │   ├── ocrb10-02.js
+│   │   │   ├── ocrb10-03.js
+│   │   │   ├── ocrb10-04.js
+│   │   │   ├── ocrb10-05.js
+│   │   │   ├── ocrb10-06.js
+│   │   │   ├── ocrb10-07.js
+│   │   │   ├── ocrb10-08.js
+│   │   │   ├── ocrb10-09.js
+│   │   │   ├── ocrb10-10.js
+│   │   │   ├── ocrb12-01.js
+│   │   │   ├── ocrb12-02.js
+│   │   │   ├── ocrb12-03.js
+│   │   │   ├── ocrb12-04.js
+│   │   │   ├── ocrb12-05.js
+│   │   │   ├── ocrb12-06.js
+│   │   │   ├── ocrb12-07.js
+│   │   │   ├── ocrb12-08.js
+│   │   │   ├── ocrb12-09.js
+│   │   │   └── ocrb12-10.js
+│   │   ├── lib
+│   │   │   ├── baropts.js
+│   │   │   ├── canvas.js
+│   │   │   ├── dn-arrow.gif
+│   │   │   ├── jquery-1.4.1.js
+│   │   │   ├── needyoffset.js
+│   │   │   ├── symdesc.js
+│   │   │   └── up-arrow.gif
+│   │   ├── LICENSE
+│   │   ├── node-bwipjs
+│   │   └── node-demo
+│   ├── ddd.js
+│   ├── dropzone
+│   │   ├── dropzone-amd-module.js
+│   │   ├── dropzone-diff.js
+│   │   └── dropzone.js
+│   ├── dropzone.js
+│   ├── fireworks.js
+│   ├── jqFancyTransitions.1.8.js
+│   ├── jquery.rotate.js
+│   ├── jquery.slides.js
+│   ├── jquery.snow.js
+│   ├── jquery.snow.min.1.0.js.html
+│   ├── jquery.snow.original.js
+│   ├── min
+│   │   ├── basic.min.css
+│   │   ├── dropzone-amd-module.min.js
+│   │   ├── dropzone.min.css
+│   │   └── dropzone.min.js
+│   ├── parallax-js
+│   │   ├── LICENSE
+│   │   ├── parallax.js
+│   │   ├── parallax.min.js
+│   │   └── README.md
+│   ├── requestanimframe.js
+│   ├── rssfeed.js
+│   ├── snow
+│   │   ├── font
+│   │   │   └── snowflakes.ttf
+│   │   └── js
+│   │       └── snow.js
+│   ├── typeahead.js
+│   ├── ui-grid-stable.js
+│   └── yamm3-master
+│       ├── bower.json
+│       ├── composer.json
+│       ├── demo
+│       │   ├── components
+│       │   │   ├── bootstrap
+│       │   │   │   ├── bower.json
+│       │   │   │   ├── dist
+│       │   │   │   │   ├── css
+│       │   │   │   │   │   ├── bootstrap.css
+│       │   │   │   │   │   ├── bootstrap.css.map
+│       │   │   │   │   │   ├── bootstrap.min.css
+│       │   │   │   │   │   ├── bootstrap-theme.css
+│       │   │   │   │   │   ├── bootstrap-theme.css.map
+│       │   │   │   │   │   └── bootstrap-theme.min.css
+│       │   │   │   │   ├── fonts
+│       │   │   │   │   │   ├── glyphicons-halflings-regular.eot
+│       │   │   │   │   │   ├── glyphicons-halflings-regular.svg
+│       │   │   │   │   │   ├── glyphicons-halflings-regular.ttf
+│       │   │   │   │   │   ├── glyphicons-halflings-regular.woff
+│       │   │   │   │   │   └── glyphicons-halflings-regular.woff2
+│       │   │   │   │   └── js
+│       │   │   │   │       ├── bootstrap.js
+│       │   │   │   │       ├── bootstrap.min.js
+│       │   │   │   │       └── npm.js
+│       │   │   │   ├── fonts
+│       │   │   │   │   ├── glyphicons-halflings-regular.eot
+│       │   │   │   │   ├── glyphicons-halflings-regular.svg
+│       │   │   │   │   ├── glyphicons-halflings-regular.ttf
+│       │   │   │   │   ├── glyphicons-halflings-regular.woff
+│       │   │   │   │   └── glyphicons-halflings-regular.woff2
+│       │   │   │   ├── grunt
+│       │   │   │   │   ├── bs-commonjs-generator.js
+│       │   │   │   │   ├── bs-glyphicons-data-generator.js
+│       │   │   │   │   ├── bs-lessdoc-parser.js
+│       │   │   │   │   ├── bs-raw-files-generator.js
+│       │   │   │   │   ├── configBridge.json
+│       │   │   │   │   └── sauce_browsers.yml
+│       │   │   │   ├── Gruntfile.js
+│       │   │   │   ├── js
+│       │   │   │   │   ├── affix.js
+│       │   │   │   │   ├── alert.js
+│       │   │   │   │   ├── button.js
+│       │   │   │   │   ├── carousel.js
+│       │   │   │   │   ├── collapse.js
+│       │   │   │   │   ├── dropdown.js
+│       │   │   │   │   ├── modal.js
+│       │   │   │   │   ├── popover.js
+│       │   │   │   │   ├── scrollspy.js
+│       │   │   │   │   ├── tab.js
+│       │   │   │   │   ├── tooltip.js
+│       │   │   │   │   └── transition.js
+│       │   │   │   ├── less
+│       │   │   │   │   ├── alerts.less
+│       │   │   │   │   ├── badges.less
+│       │   │   │   │   ├── bootstrap.less
+│       │   │   │   │   ├── breadcrumbs.less
+│       │   │   │   │   ├── button-groups.less
+│       │   │   │   │   ├── buttons.less
+│       │   │   │   │   ├── carousel.less
+│       │   │   │   │   ├── close.less
+│       │   │   │   │   ├── code.less
+│       │   │   │   │   ├── component-animations.less
+│       │   │   │   │   ├── dropdowns.less
+│       │   │   │   │   ├── forms.less
+│       │   │   │   │   ├── glyphicons.less
+│       │   │   │   │   ├── grid.less
+│       │   │   │   │   ├── input-groups.less
+│       │   │   │   │   ├── jumbotron.less
+│       │   │   │   │   ├── labels.less
+│       │   │   │   │   ├── list-group.less
+│       │   │   │   │   ├── media.less
+│       │   │   │   │   ├── mixins
+│       │   │   │   │   │   ├── alerts.less
+│       │   │   │   │   │   ├── background-variant.less
+│       │   │   │   │   │   ├── border-radius.less
+│       │   │   │   │   │   ├── buttons.less
+│       │   │   │   │   │   ├── center-block.less
+│       │   │   │   │   │   ├── clearfix.less
+│       │   │   │   │   │   ├── forms.less
+│       │   │   │   │   │   ├── gradients.less
+│       │   │   │   │   │   ├── grid-framework.less
+│       │   │   │   │   │   ├── grid.less
+│       │   │   │   │   │   ├── hide-text.less
+│       │   │   │   │   │   ├── image.less
+│       │   │   │   │   │   ├── labels.less
+│       │   │   │   │   │   ├── list-group.less
+│       │   │   │   │   │   ├── nav-divider.less
+│       │   │   │   │   │   ├── nav-vertical-align.less
+│       │   │   │   │   │   ├── opacity.less
+│       │   │   │   │   │   ├── pagination.less
+│       │   │   │   │   │   ├── panels.less
+│       │   │   │   │   │   ├── progress-bar.less
+│       │   │   │   │   │   ├── reset-filter.less
+│       │   │   │   │   │   ├── resize.less
+│       │   │   │   │   │   ├── responsive-visibility.less
+│       │   │   │   │   │   ├── size.less
+│       │   │   │   │   │   ├── tab-focus.less
+│       │   │   │   │   │   ├── table-row.less
+│       │   │   │   │   │   ├── text-emphasis.less
+│       │   │   │   │   │   ├── text-overflow.less
+│       │   │   │   │   │   └── vendor-prefixes.less
+│       │   │   │   │   ├── mixins.less
+│       │   │   │   │   ├── modals.less
+│       │   │   │   │   ├── navbar.less
+│       │   │   │   │   ├── navs.less
+│       │   │   │   │   ├── normalize.less
+│       │   │   │   │   ├── pager.less
+│       │   │   │   │   ├── pagination.less
+│       │   │   │   │   ├── panels.less
+│       │   │   │   │   ├── popovers.less
+│       │   │   │   │   ├── print.less
+│       │   │   │   │   ├── progress-bars.less
+│       │   │   │   │   ├── responsive-embed.less
+│       │   │   │   │   ├── responsive-utilities.less
+│       │   │   │   │   ├── scaffolding.less
+│       │   │   │   │   ├── tables.less
+│       │   │   │   │   ├── theme.less
+│       │   │   │   │   ├── thumbnails.less
+│       │   │   │   │   ├── tooltip.less
+│       │   │   │   │   ├── type.less
+│       │   │   │   │   ├── utilities.less
+│       │   │   │   │   ├── variables.less
+│       │   │   │   │   └── wells.less
+│       │   │   │   ├── LICENSE
+│       │   │   │   ├── package.js
+│       │   │   │   ├── package.json
+│       │   │   │   └── README.md
+│       │   │   └── jquery
+│       │   │       ├── bower.json
+│       │   │       ├── dist
+│       │   │       │   ├── jquery.js
+│       │   │       │   ├── jquery.min.js
+│       │   │       │   └── jquery.min.map
+│       │   │       ├── MIT-LICENSE.txt
+│       │   │       └── src
+│       │   │           ├── ajax
+│       │   │           │   ├── jsonp.js
+│       │   │           │   ├── load.js
+│       │   │           │   ├── parseJSON.js
+│       │   │           │   ├── parseXML.js
+│       │   │           │   ├── script.js
+│       │   │           │   ├── var
+│       │   │           │   │   ├── nonce.js
+│       │   │           │   │   └── rquery.js
+│       │   │           │   └── xhr.js
+│       │   │           ├── ajax.js
+│       │   │           ├── attributes
+│       │   │           │   ├── attr.js
+│       │   │           │   ├── classes.js
+│       │   │           │   ├── prop.js
+│       │   │           │   ├── support.js
+│       │   │           │   └── val.js
+│       │   │           ├── attributes.js
+│       │   │           ├── callbacks.js
+│       │   │           ├── core
+│       │   │           │   ├── access.js
+│       │   │           │   ├── init.js
+│       │   │           │   ├── parseHTML.js
+│       │   │           │   ├── ready.js
+│       │   │           │   └── var
+│       │   │           │       └── rsingleTag.js
+│       │   │           ├── core.js
+│       │   │           ├── css
+│       │   │           │   ├── addGetHookIf.js
+│       │   │           │   ├── curCSS.js
+│       │   │           │   ├── defaultDisplay.js
+│       │   │           │   ├── hiddenVisibleSelectors.js
+│       │   │           │   ├── support.js
+│       │   │           │   ├── swap.js
+│       │   │           │   └── var
+│       │   │           │       ├── cssExpand.js
+│       │   │           │       ├── getStyles.js
+│       │   │           │       ├── isHidden.js
+│       │   │           │       ├── rmargin.js
+│       │   │           │       └── rnumnonpx.js
+│       │   │           ├── css.js
+│       │   │           ├── data
+│       │   │           │   ├── accepts.js
+│       │   │           │   ├── Data.js
+│       │   │           │   └── var
+│       │   │           │       ├── data_priv.js
+│       │   │           │       └── data_user.js
+│       │   │           ├── data.js
+│       │   │           ├── deferred.js
+│       │   │           ├── deprecated.js
+│       │   │           ├── dimensions.js
+│       │   │           ├── effects
+│       │   │           │   ├── animatedSelector.js
+│       │   │           │   └── Tween.js
+│       │   │           ├── effects.js
+│       │   │           ├── event
+│       │   │           │   ├── ajax.js
+│       │   │           │   ├── alias.js
+│       │   │           │   └── support.js
+│       │   │           ├── event.js
+│       │   │           ├── exports
+│       │   │           │   ├── amd.js
+│       │   │           │   └── global.js
+│       │   │           ├── intro.js
+│       │   │           ├── jquery.js
+│       │   │           ├── manipulation
+│       │   │           │   ├── _evalUrl.js
+│       │   │           │   ├── support.js
+│       │   │           │   └── var
+│       │   │           │       └── rcheckableType.js
+│       │   │           ├── manipulation.js
+│       │   │           ├── offset.js
+│       │   │           ├── outro.js
+│       │   │           ├── queue
+│       │   │           │   └── delay.js
+│       │   │           ├── queue.js
+│       │   │           ├── selector.js
+│       │   │           ├── selector-native.js
+│       │   │           ├── selector-sizzle.js
+│       │   │           ├── serialize.js
+│       │   │           ├── sizzle
+│       │   │           │   └── dist
+│       │   │           │       ├── sizzle.js
+│       │   │           │       ├── sizzle.min.js
+│       │   │           │       └── sizzle.min.map
+│       │   │           ├── traversing
+│       │   │           │   ├── findFilter.js
+│       │   │           │   └── var
+│       │   │           │       └── rneedsContext.js
+│       │   │           ├── traversing.js
+│       │   │           ├── var
+│       │   │           │   ├── arr.js
+│       │   │           │   ├── class2type.js
+│       │   │           │   ├── concat.js
+│       │   │           │   ├── hasOwn.js
+│       │   │           │   ├── indexOf.js
+│       │   │           │   ├── pnum.js
+│       │   │           │   ├── push.js
+│       │   │           │   ├── rnotwhite.js
+│       │   │           │   ├── slice.js
+│       │   │           │   ├── strundefined.js
+│       │   │           │   ├── support.js
+│       │   │           │   └── toString.js
+│       │   │           └── wrap.js
+│       │   ├── css
+│       │   │   └── demo.css
+│       │   ├── img
+│       │   │   ├── 190.jpg
+│       │   │   ├── 260.jpg
+│       │   │   └── 64x64.gif
+│       │   └── jade
+│       │       ├── index.jade
+│       │       ├── navbar-fixed.jade
+│       │       ├── navbar-grid.jade
+│       │       └── navbar-more.jade
+│       ├── gulpfile.js
+│       ├── index.html
+│       ├── LICENSE.txt
+│       ├── package.json
+│       ├── README.md
+│       └── yamm
+│           ├── yamm.css
+│           ├── yamm.less
+│           ├── _yamm.scss
+│           └── yamm.styl
+├── secure
+│   ├── ddd.php
+│   └── emailaccounts.php
+├── sql
+│   ├── buildcharts.sql
+│   ├── crazysql.sql
+│   ├── creategameweektbl.sql
+│   ├── ddd-08112024-milestone-b4-2024update-python.sql
+│   ├── ddd-09162021-resetrankings-small.sql
+│   ├── dddselects.sql
+│   ├── ddd.sql
+│   ├── finddoublepicks.sql
+│   ├── gamestblinsert.sql
+│   ├── getpicks.sql
+│   ├── halloffametbl.sql
+│   ├── halloffmemory2tbl.sql
+│   ├── halloffmemoryfametbl.sql
+│   ├── hallofmemorytbl.sql
+│   ├── jessieB-sqlerror.sql
+│   ├── memberfinance.sql
+│   ├── membergrouptables.sql
+│   ├── membertbl-profile-new.sql
+│   ├── mustdo.sql
+│   ├── myrv-db-dump-09042019.sql
+│   ├── mysqldump.sql
+│   ├── nfl2014-insert-bye.sql
+│   ├── nfl2014-insert-play.sql
+│   ├── nflrsstbl.sql
+│   ├── playerinjury.sql
+│   ├── preplayofftbl2025.sql
+│   ├── preplayofftbl.sql
+│   ├── setpasswordroot.sql
+│   ├── sqlcommands.sql
+│   ├── sqlinserts.ql
+│   ├── surveyquiries.sql
+│   ├── survey.sql
+│   ├── tarrygamenbrstuff.sql
+│   ├── teambracket.sql
+│   ├── teamrankstatstbl.sql
+│   ├── teamstable.sql
+│   ├── teamstatsunion.php
+│   ├── teamstatsunion.sql
+│   ├── test.sql
+│   ├── tracker-sql-requests.sql
+│   ├── tracktbl-dump.sql
+│   └── tracktbl.sql
+├── stevesserver
+│   ├── index.html
+│   ├── nginx2-.conf
+│   └── nginx.conf
+├── support
+│   ├── Screen Shot 2016-10-23 at 6.13.27 PM.png
+│   ├── Screen Shot 2016-10-23 at 6.13.40 PM.png
+│   └── Screen Shot 2016-10-23 at 6.13.54 PM.png
+├── treefind.txt
+├── tree.txt
+└── vendor
+    ├── Exception.php
+    ├── OAuth.php
+    ├── PHPMailer.php
+    ├── POP3.php
+    └── SMTP.php
+
+191 directories, 3093 files
