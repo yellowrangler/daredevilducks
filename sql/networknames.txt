@@ -1,0 +1,13 @@
+network
+FOX
+CBS
+NBC
+NFL
+ESPN
+Yahoo TV
+TBD
+Amazon
+ABC
+Peacock
+Netflix
+YouTube
