@@ -18,13 +18,19 @@ import os
 
 from pprint import pp
 
+######################################################################################################
+# Author: Tarrant Cutler Jr
+# Date: 08/03/2026
+# Description: Read in injury file from rotto wire. Script will import downloaded file, fix
+# team ids and then apply information to 
+#  fix csv file for later import to DDD Database
+######################################################################################################
+
 #-----------------------------------------------------------------
 # Notes
-# Read al team data into dictionary ? key = team name value = teamid
+# Read all team data into dictionary ? key = team name value = teamid
 # SELECT name, id FROM teamstbl ORDER BY name
 # 
-# 
-#  
 #----------------------------------------------------------------- 
 
 
