@@ -15,7 +15,11 @@ NFL in a nutshell: 32 teams, each play 17 games in regular season that spans 18 
 
 5. DO A COMPLETE BACKUP OF THE DDD DATABASE. This way you can stop and re-add data if you make a mistake.  Use the following command: mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd > ddd-dump-nflxxxx.sql. 
 
+Note: Use getddd.py to create backup
+
 If you need to restore the backup you must do it from the linux command line. EG. mysql -u tarryc -p ddd < ddd-dump-nfl2015-bkup.sql
+
+Note: Use putddd.py to restore backup
 
 6. Go to the admin screen -> System scripts -> choose New Season Setup. Put appropriate file names into each input field and hit button.
 
@@ -25,9 +29,12 @@ If you need to restore the backup you must do it from the linux command line. EG
 
 9. You must import last seasons last TeamWeeklyRanking and rename it to be first before EG TeamWeekRank2025W1Before.csv. If you dont do this the stats that pop up will be broken. 
 
+Note: Use teamsstatusupdate.py no to update weekly ranking. Must edit last weekly ranking from last season and remove first set and edit second set of weekly data changing season to new season EG 2025 to 2026 and change all weeks to 1
+
 10. Add new images.
 
 11. Get injury reports from https://www.rotowire.com/football/injury-report.php. Clean up a css file and review injury folder in sys directory for tools to create for import.
+
 
 --------- Important python scripts for Daredevil Ducks -------
 
@@ -42,9 +49,7 @@ fixnewseasongames.py - This script reads in a number of files. A game file for t
 
 playerinjuriesupdate.py - This script reads in weekly player injury file. See #11. It will require a number of files. A conversion file named "conversionfile.csv" to convert the team abbrev into teamid usefull to ddd database. A downloaded injury file named in the format of "nfl-injury*.csv". The script update the injury information on the ddd database.
 
-
 prodset.py - This script is used to change all tokens 'DDV' and 'DMV' to have new timestamp applied to the token. This allows the web program to appear "changed" for web cache purposes. After running all link urls in desktop and mobile (if choosen) will have updated tokens.
-
 
 getddd.py - This will dump the ddd database to file with drops, creates and inserts.
 
@@ -52,6 +57,33 @@ putddd.py - This will take a previously dumped ddd datbase and roll it back.
 
 runsql.py - This script run a sql file identified while running the script.
 
+Note for all python usage:  
 
+You must run all scripts in a python environment. Use these commands.
 
+python3 -m venv venv      (creates the scafolding for the environment)
+
+source venv/bin/activate  (Activates the virtual environment)
+
+May need to do this into env:
+pip install mysql-connector-python
+pip install simple-term-menu
+pip install pandas
+
+Run this command to output a complete list of your packages:
+pip freeze > requirements.txt 
+
+To reinstall these packages later or in a new environment, use:
+pip install -r requirements.txt
+
+To create more verbose list:
+pip list >pipinstall.txt
+
+To Deactivate the Environment:
+
+If the environment is currently running in your terminal, turn it off first. 
+Run: deactivate 
+
+Remove the Environment Folder
+Delete the actual folder where the virtual environment was created (common names include .venv, venv, or env).
 
