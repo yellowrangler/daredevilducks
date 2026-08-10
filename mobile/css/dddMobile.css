@@ -123,6 +123,25 @@
 	height:50px;
 }*/
 
+/* below added to remove blue border outline on main menu 08042026 */
+
+/* start of blue border outlin css */
+.navbar-default .navbar-toggle:focus,
+.navbar-toggle:focus,
+.navbar-default .navbar-toggle,
+.navbar-collapse .navbar-nav > li > a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+outline: none !important;
+}
+/* end of blue border outlin css */
+
 .pickGameLine :hover {
 	outline: 1px solid blue;
 }
