@@ -123,7 +123,7 @@ foreach($seasonArray as $gameKey => $gameValue)
 	// get tv id from tv name
 	// 
 	$sql = "SELECT id as networkid FROM gamenetworktbl WHERE network = '" . $gameValue['network'] . "'";
-	print "sql to get network id = $sql <br><br>";
+	// print "sql to get network id = $sql <br><br>";
 
 	//
 	// sql query
@@ -135,7 +135,7 @@ foreach($seasonArray as $gameKey => $gameValue)
 	$r = mysqli_fetch_assoc($sql_result);
 	$networkid = $r['networkid'];
 
-	print "Net work id = $networkid <br><br>";
+	// print "Net work id = $networkid <br><br>";
 
 	// 
 	// build the detail insert sql
