@@ -29,7 +29,7 @@ Note: Use putddd.py to restore backup
 
 9. You must import last seasons last TeamWeeklyRanking and rename it to be first before EG TeamWeekRank2025W1Before.csv. If you dont do this the stats that pop up will be broken. 
 
-Note: Use teamsstatusupdate.py no to update weekly ranking. Must edit last weekly ranking from last season and remove first set and edit second set of weekly data changing season to new season EG 2025 to 2026 and change all weeks to 1
+Note: Use teamsstatusupdate.py to update weekly ranking. Must edit last weekly ranking from last season and remove first set and edit second set of weekly data changing season to new season EG 2025 to 2026 and change all weeks to 1
 
 10. Add new images.
 
@@ -59,7 +59,7 @@ runsql.py - This script run a sql file identified while running the script.
 
 Note for all python usage:  
 
-You must run all scripts in a python environment. Use these commands.
+You will need to run yahoo finace scripts in a python environment. Use these commands.
 
 python3 -m venv venv      (creates the scafolding for the environment)
 
