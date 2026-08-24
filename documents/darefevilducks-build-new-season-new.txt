@@ -13,11 +13,11 @@ NFL in a nutshell: 32 teams, each play 17 games in regular season that spans 18 
 
 4. At this time make any changes to team names or locations via the admin screen.
 
-5. DO A COMPLETE BACKUP OF THE DDD DATABASE. This way you can stop and re-add data if you make a mistake.  Use the following command: mysqldump --extended-insert=FALSE --complete-insert=TRUE -u tarryc -ptarryc ddd > ddd-dump-nflxxxx.sql. 
+5. DO A COMPLETE BACKUP OF THE DDD DATABASE. This way you can stop and re-add data if you make a mistake.  Use the following command: mysqldump --extended-insert=FALSE --complete-insert=TRUE -u xxxxx -pxxxx ddd > ddd-dump-nflxxxx.sql. 
 
 Note: Use getddd.py to create backup
 
-If you need to restore the backup you must do it from the linux command line. EG. mysql -u tarryc -p ddd < ddd-dump-nfl2015-bkup.sql
+If you need to restore the backup you must do it from the linux command line. EG. mysql -u xxxxx -p ddd < ddd-dump-nfl2015-bkup.sql
 
 Note: Use putddd.py to restore backup
 
