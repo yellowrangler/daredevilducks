@@ -19,7 +19,7 @@ remote_user = ""
 remote_host = ""
 remote_path = ""
 
-scpfiletemplate = "*.*"
+# scpfiletemplate = "*.*"
 
 cmd = ""
 
@@ -28,33 +28,14 @@ cmd = ""
 # get local_file to process
 # 
 def get_local_file():
-	answer = ''
-	selected_file_name = ''
+	selected_file = ''
 	
-	# 
-	# get list of sql files to process
-	# 
-	file_list = glob.glob(scpfiletemplate)
-	file_list.sort(key=os.path.getmtime,reverse=True)  
-	
-	lcount = len(file_list)
-	idx = 0
-	while (idx < lcount):
-		print ("The count is:", lcount)
-		fname = file_list[idx]
-		answer = input(f"Do you want to use '{fname}' for scp Y/N ?")  
-		if answer.upper() == "Y":  
-			selected_file_name = fname
-			break;  
-		
-		idx += 1
-
-	if selected_file_name == "":
-		print("No file picked!")
+	selected_file = input(f"What is the local filename: ")  
+	if selected_file == "":
+		print("No local filename picked! {selected_file}")
 		quit()
-
 	
-	return selected_file_name
+	return selected_file  
 
 # 
 # get remote_user to process
@@ -120,7 +101,6 @@ def run_command(cmd):
 		print("Command successful!")
 	else:
 		print(f"Command failed with exit code: {exit_code}")
-
 
 
 # 
