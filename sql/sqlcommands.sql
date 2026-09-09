@@ -1,3 +1,28 @@
+UPDATE membertbl SET membername='Betty Bird' WHERE membername='Laura Osmond';
+SELECT * FROM  membertbl WHERE membername='Betty Bird';
+
+UPDATE membertbl SET membername='Lori Henderson' WHERE membername='Holly Fitch';
+SELECT * FROM  membertbl WHERE membername='Lori Henderson';
+
+UPDATE membertbl SET membername='Harry Truman' WHERE membername='Healthcare Warrior';
+SELECT * FROM  membertbl WHERE membername='Harry Truman';
+
+UPDATE membertbl SET membername='Lisa Hunzelman' WHERE membername='Lisa and David Hunzelman';
+SELECT * FROM  membertbl WHERE membername='Lisa Hunzelman';
+
+UPDATE membertbl SET membername='Vicky Phillups', screenname='Little LuLu' WHERE membername='Little Lulu';
+SELECT * FROM  membertbl WHERE membername='Vicky Phillups';
+
+UPDATE membertbl SET membername='Louie Smith' WHERE membername='Louie Looser';
+SELECT * FROM  membertbl WHERE membername='Louie Smith';
+
+UPDATE membertbl SET membername='Meg Waters' WHERE membername='Miss Patriot';
+SELECT * FROM  membertbl WHERE membername='Meg Waters';
+
+UPDATE membertbl SET membername='Tom Hawkens' WHERE membername='Wise Mariner';
+SELECT * FROM  membertbl WHERE membername='Tom Hawkens';
+
+Wise Mariner
 CREATE USER 'tarryc'@'localhost' IDENTIFIED BY 'tarryc';
 -- GRANT [type of permission] ON [database name].[table name] TO ‘[username]’@'localhost’;
 GRANT ALL PRIVILEGES ON ddd.* TO 'tarryc'@'localhost';
