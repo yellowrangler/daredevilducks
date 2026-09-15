@@ -2,35 +2,44 @@
 
 $emailtopwriteup = "
 <p>
-A 2025 Superbowl blowout! and What was up with that halftime show? 
+A great start to the 2026 NFL Season! 
 </p>
 
 <p>
-  The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> are your <span style='color:#1280D6;font-weight:900;'>2025 Superbowl Champions</span>! They played a great game from start to finished and gave the <span style='color:#1280D6;font-weight:900;'>Patriots</span> more then they could handle. For <span style='color:#1280D6;font-weight:900;'>Seahawks</span> fans this was a great day. Their offense moved the ball seemingly at will. But their defense crushed the hearts of every Patriot fan. The <span style='color:#1280D6;font-weight:900;'>Patriots</span> offensive line was shattered on most plays. Drake Maye who had been in the running for the league MVP never got going until the end of the game. Congratulations <span style='color:#1280D6;font-weight:900;'>Seahawks</span>! 
+In Wednesdays night game the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> retained their Super Bowl swagger beating the <span style='color:#1280D6;font-weight:900;'>Patriots</span>. No comment...
 </p>
 
 <p>
-  I wont dwell on this other then to say who is the person vetting the talent for these shows? Sheesh...
+In Thursdays night game the <span style='color:#1280D6;font-weight:900;'>49ers</span> crushed their southern brother beating the <span style='color:#1280D6;font-weight:900;'>Rams</span> in LA! A tough game for the Rams's $204 million Myles Garrett who was injured and immediately placed on IR!
 </p>
 
 <p>
-  Wow! Can you believe that we have come through another football season? Thank you all for Participating this year! We hoped you all enjoyed yourselves. 
-</p>
+In Sundays games the <span style='color:#1280D6;font-weight:900;'>Bears</span> beat the <span style='color:#1280D6;font-weight:900;'>Panthers</span> in a close and entertaining contest! The <span style='color:#1280D6;font-weight:900;'>Bengals</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in a game that featured 3 fumbles by Baker Mayfield! The <span style='color:#1280D6;font-weight:900;'>Ravens</span> decisively beat the <span style='color:#1280D6;font-weight:900;'>Colts</span>. The <span style='color:#1280D6;font-weight:900;'>Lions</span> held on to win against the <span style='color:#1280D6;font-weight:900;'>Saints</span> in overtime! The game featured both teams scoring touchdowns with the Saints failing to win the game outright by going for 2 in Detroit. 
+</p> 
 
 <p>
-  The crowning of our season's Daredevil Ducks winner had to wait for the completion of the last game. <span style='color:#FF6E3B;font-weight:700;'>Scotsman357</span> and <span style='color:#FF6E3B;font-weight:700;'>Lady Luck</span> were one game apart at the start of the Superbowl! But you know the saying - Two walk in, but only one walks out! 
-</p>
-
-<p class='specialTextBold'>
-  Please raise your glass with the beverage of your choice to <span style='color:#FF6E3B;font-weight:700;'>Scotsman357</span> who outlasted, outfoxed, and out maneuvered the rest of us and so earned the coveted title of <span style='color:#FF6E3B;font-weight:700;'>Daredevil Ducks winner</span> for the 2025 NFL Season!</span>
-</p>
+The <span style='color:#1280D6;font-weight:900;'>Bills</span> outlasted the <span style='color:#1280D6;font-weight:900;'>Texans</span> in Texas. The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> crushed the <span style='color:#1280D6;font-weight:900;'>Browns</span>. The <span style='color:#1280D6;font-weight:900;'>Jets</span> beat the <span style='color:#1280D6;font-weight:900;'>Titans</span> in Nashville! The <span style='color:#1280D6;font-weight:900;'>Steelers</span> held on to beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span>.
+</p> 
 
 <p>
-    Well done Bobby! You have been with us for 10 years. You have always been in the game. But this year you busted through! Persistence has its rewards! Congratulations!
-</p>
+The <span style='color:#1280D6;font-weight:900;'>Vikings</span> came back to beat the <span style='color:#1280D6;font-weight:900;'>Packers</span>. A game eerily reminiscent of Green Bays playoff loss to Chicago! The <span style='color:#1280D6;font-weight:900;'>Eagles</span> beat the  <span style='color:#1280D6;font-weight:900;'>Commanders</span>. The <span style='color:#1280D6;font-weight:900;'>Raiders</span> decisively beat the <span style='color:#1280D6;font-weight:900;'>Dolphins</span>. The <span style='color:#1280D6;font-weight:900;'>Cardinals</span> beat the <span style='color:#1280D6;font-weight:900;'>Chargers</span> in a bad day for LA teams!
+</p> 
 
 <p>
-  For the rest of our members there is always next year! 
+In the Sunday night game the <span style='color:#1280D6;font-weight:900;'>Giants</span> came out swinging as they beat the <span style='color:#1280D6;font-weight:900;'>Cowboys</span>! 
+</p> 
+
+
+<p>
+In the Monday night game the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the  <span style='color:#1280D6;font-weight:900;'>Broncos</span>!  
+</p> 
+
+<p>
+  All in all a superb week of football!
+</p> 
+
+<p>
+  Don't dispare if you not doing as well as you like! Remember that there is still plenty of the season to go!  
 </p>   
 
 <p>
