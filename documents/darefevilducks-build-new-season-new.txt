@@ -40,7 +40,7 @@ Note: Use teamsstatusupdate.py to update weekly ranking. Must edit last weekly r
 
 All python scripts can be found in the daredevilducks/pythonscripts directory
 
-teamsstatusupdate.py - This script prompts the user for the team week ranking cvs file which is built independently from a website. This file must be be named like 'TeamWeekRank*.csv'. The user will also be prompted for db password. After importing team ranking file the resulting data will be inserted or updated into the ddd database.
+teamstatusupdate.py - This script prompts the user for the team week ranking cvs file which is built independently from a website. This file must be be named like 'TeamWeekRank*.csv'. The user will also be prompted for db password. After importing team ranking file the resulting data will be inserted or updated into the ddd database.
 
 Note on the 'TeamWeekRank*.csv' file. You will get 2 weeks of stats in one file. EG TeamWeekRank2025W2 would have end of week stats for week 1 and beginning of week stats for 2. At weekk 3 you would have end of week stats for week 2 and beggining of week  3. In this way the charts that use this data will reflect best data.
 
@@ -57,7 +57,7 @@ putddd.py - This will take a previously dumped ddd datbase and roll it back.
 
 runsql.py - This script run a sql file identified while running the script.
 
-Note for all python usage:  
+Note for all python yahoo finance usage ONLY! Do not use for all other Daredevil Ducks python scripts:  
 
 You will need to run yahoo finace scripts in a python environment. Use these commands.
 
