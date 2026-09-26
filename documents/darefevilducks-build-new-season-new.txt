@@ -35,6 +35,7 @@ Note: Use teamsstatusupdate.py to update weekly ranking. Must edit last weekly r
 
 11. Get injury reports from https://www.rotowire.com/football/injury-report.php. Clean up a css file and review injury folder in sys directory for tools to create for import.
 
+12. Ai Boy gets the ai infor from https://www.rotowire.com/football/article/nfl-ai-projections-simulation-winners-and-closest-calls-129869
 
 --------- Important python scripts for Daredevil Ducks -------
 
