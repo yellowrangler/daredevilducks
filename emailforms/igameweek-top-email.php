@@ -1,37 +1,30 @@
 <?php
 
 $emailtopwriteup = "
-
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Thursday night</span> game the <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the <span style='color:#1280D6;font-weight:900;'>Lions</span> in a very entertaining game!
+In the <span style='font-weight:bold; color:#228b22;'>Thursday night</span> game the <span style='color:#1280D6;font-weight:900;'>Falcons</span> suprised most people as they clubbed the <span style='color:#1280D6;font-weight:900;'>49ers</span> in Green Bay!
 </p>
-
-<!-- 
-<p>
-In a special Friday night game the <span style='color:#1280D6;font-weight:900;'>Chargers</span> beat the heavily favored <span style='color:#1280D6;font-weight:900;'>Chiefs</span> in Brazil! 
-</p>
--->
 
 <p>
 In <span style='font-weight:bold; color:#228b22;'>Sundays</span> games the 
-  <span style='color:#1280D6;font-weight:900;'>Panthers</span> crushed the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in Atlanta! The <span style='color:#1280D6;font-weight:900;'>Vikings</span> beat the <span style='color:#1280D6;font-weight:900;'>Bears</span> in low scoring game that featured a game ending injury to Chicago's Caleb Williams! The <span style='color:#1280D6;font-weight:900;'>Bengals</span> decisively beat the <span style='color:#1280D6;font-weight:900;'>Texans</span> in Texas! The <span style='color:#1280D6;font-weight:900;'>Patriots</span> beat the <span style='color:#1280D6;font-weight:900;'>Steelers</span>. 
+  <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the <span style='color:#1280D6;font-weight:900;'>Chargers</span>. The <span style='color:#1280D6;font-weight:900;'>Browns</span> beat the <span style='color:#1280D6;font-weight:900;'>Panthers</span>. The <span style='color:#1280D6;font-weight:900;'>Colts</span> held on to beat the <span style='color:#1280D6;font-weight:900;'>Texans</span>. The <span style='color:#1280D6;font-weight:900;'>Lions</span> beat the <span style='color:#1280D6;font-weight:900;'>Jets</span> in a back and forth affair. 
 </p> 
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Packers</span> came back to beat the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York! The <span style='color:#1280D6;font-weight:900;'>Eagles</span> dramatically came back to beat the <span style='color:#1280D6;font-weight:900;'>Titans</span> in Tennessee! The <span style='color:#1280D6;font-weight:900;'>Saints</span> beat the <span style='color:#1280D6;font-weight:900;'>Ravens</span> in Baltimore! The <span style='color:#1280D6;font-weight:900;'>Browns</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in Tampa.
+The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> humiliated the <span style='color:#1280D6;font-weight:900;'>Patriots</span> in a game where Drake Maye fumbled twice and threw 2 interceptions. The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> in Miami! The <span style='color:#1280D6;font-weight:900;'>Giants</span> beat the woeful <span style='color:#1280D6;font-weight:900;'>Titans</span>. The <span style='color:#1280D6;font-weight:900;'>Steelers</span> beat the <span style='color:#1280D6;font-weight:900;'>Bengals</span> in a close contest.
 </p> 
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Broncos</span> eked by the <span style='color:#1280D6;font-weight:900;'>Jaguars</span>. The <span style='color:#1280D6;font-weight:900;'>Raiders</span> beat the  <span style='color:#1280D6;font-weight:900;'>Chargers</span> in LA! The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> crushed  the <span style='color:#1280D6;font-weight:900;'>Cardinals</span>. The <span style='color:#1280D6;font-weight:900;'>Cowboys</span> beat the <span style='color:#1280D6;font-weight:900;'>Commanders</span> in a game featuring a game ending injury to  Jayden Daniels! The <span style='color:#1280D6;font-weight:900;'>49ers</span> decisively beat the <span style='color:#1280D6;font-weight:900;'>Dolphins</span>.
+The <span style='color:#1280D6;font-weight:900;'>Commanders</span> upset the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> with there second string quarterback Marcus Mariota! The <span style='color:#1280D6;font-weight:900;'>49ers</span> beat the <span style='color:#1280D6;font-weight:900;'>Cardinals</span>. The <span style='color:#1280D6;font-weight:900;'>Vikings</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in Tampa! The <span style='color:#1280D6;font-weight:900;'>Ravens</span> in a thriller beat the <span style='color:#1280D6;font-weight:900;'>Cowboys</span> in Brazil! The <span style='color:#1280D6;font-weight:900;'>Raiders</span> beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in New Orleans!
 </p> 
 
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Sunday night</span> game the <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the <span style='color:#1280D6;font-weight:900;'>Colts</span> in a thrilling overtime game! 
+In the <span style='font-weight:bold; color:#228b22;'>Sunday night</span> game the <span style='color:#1280D6;font-weight:900;'>Broncos</span> came back to beat the <span style='color:#1280D6;font-weight:900;'>Rams</span> in another thrilling game! 
 </p> 
 
 
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Monday</span> night game the <span style='color:#1280D6;font-weight:900;'>Rams</span> beat the  <span style='color:#1280D6;font-weight:900;'>Giants</span> who lost Jaxson Dart for the game!  
+In the <span style='font-weight:bold; color:#228b22;'>Monday</span> night game the <span style='color:#1280D6;font-weight:900;'>Bears</span> crushed the  <span style='color:#1280D6;font-weight:900;'>Eagles</span>.  
 </p> 
 
 <p>
