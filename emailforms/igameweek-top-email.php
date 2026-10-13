@@ -49,6 +49,14 @@ In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game 
 
 <p>
   Don't dispare if you not doing as well as you like! Remember that there is still plenty of the season to go!  
+</p> 
+
+<p>
+  It time to celebrate <span style='color:#FF6E3B;font-weight:900;'>Halloween</span>! It's that spooky time of the year! When the sun goes down and the moon comes out, the Headless Horseman makes his rounds! Clicking on the <span style='color:#FF6E3B;font-weight:900;'>Donald Duck Halloween</span> image will reveal the dreaded headless horseman looking for You!.
+</p>
+
+<p> 
+  Mobile users swipe the icon at the bottom of the screen to the left until you see the <span style='color:#FF6E3B;font-weight:900;'>Donald Duck Halloween</span> image! Select that image and watch the headless Horseman making his rounds!
 </p>   
 
 <p>
