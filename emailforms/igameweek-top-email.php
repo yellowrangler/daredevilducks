@@ -52,7 +52,7 @@ In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game 
 </p> 
 
 <p>
-  It time to celebrate <span style='color:#FF6E3B;font-weight:900;'>Halloween</span>! It's that spooky time of the year! When the sun goes down and the moon comes out, the Headless Horseman makes his rounds! Clicking on the <span style='color:#FF6E3B;font-weight:900;'>Donald Duck Halloween</span> image will reveal the dreaded headless horseman looking for You!.
+  It time to celebrate <span style='color:#FF6E3B;font-weight:900;'>Halloween</span>! It's that spooky time of the year! When the sun goes down and the moon comes out, the Headless Horseman makes his rounds! Clicking on the <span style='color:#FF6E3B;font-weight:900;'>Spooky Halloween</span> image will reveal the dreaded headless horseman looking for You!.
 </p>
 
 <p> 
