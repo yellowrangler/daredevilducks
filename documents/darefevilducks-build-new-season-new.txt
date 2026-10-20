@@ -1,7 +1,7 @@
 How to build new NFL Dare Devil Ducks Season New
 
 
-1. Go to the website http://www.pro-football-reference.com/years/xxxx/games.htm where xxxx is the NFL season (eg 2023) and create csv game file. Screen scrape (copy the relevant items) copy into a spreadsheet and pear it down. Export into a file  named 2023NFLSeasonSchedule.csv. Alternative website is https://fixturedownload.com/results/nfl-2025#google_vignette. Use the python file fixnewseasongames.py to fill in and clean up the file.
+1. Go to the website http://www.pro-football-reference.com/years/xxxx/games.htm where xxxx is the NFL season (eg 2023) and create csv game file. Screen scrape (copy the relevant items) copy into a spreadsheet and pear it down. Export into a file  named 2023NFLSeasonSchedule.csv. Alternative website is https://fixturedownload.com/results/nfl-2025#google_vignette. Use the python file fixnewseasongames.py to fill in and clean up the file. Make sure network field is filled in or it will fail entering those games.
 
 1.1 Use this https://www.cbssports.com/nfl/news/2026-nfl-schedule-dates-times-tv-streaming-matchups-for-all-272-games/ to get information on all games - tv information.
 

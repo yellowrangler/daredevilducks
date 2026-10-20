@@ -2,45 +2,44 @@
 
 $emailtopwriteup = "
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Thursday night</span> game the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> beat the <span style='color:#1280D6;font-weight:900;'>Cowboys</span> in Dallas with undrafted rookie Jalon Daniels as their starting quarterback!
+In the <span style='font-weight:bold; color:#228b22;'>Thursday night</span> game the <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Seahawks</span>.
 </p>
 
 <p>
 In <span style='font-weight:bold; color:#228b22;'>Sundays</span> games the 
-  <span style='color:#1280D6;font-weight:900;'>Jaguars</span> beat the <span style='color:#1280D6;font-weight:900;'>Eagles</span> in a squeaker. 
+  <span style='color:#1280D6;font-weight:900;'>Texans</span> beat the <span style='color:#1280D6;font-weight:900;'>Jaguars</span> in a competitive match at Wembley Stadium. 
   
-  The <span style='color:#1280D6;font-weight:900;'>Bengals</span> upset the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> in Miami! 
+  In another close match, the <span style='color:#1280D6;font-weight:900;'>Bears</span> beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in Atlanta! 
 
-  The <span style='color:#1280D6;font-weight:900;'>Vikings</span> beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in New Orleans! 
+  The <span style='color:#1280D6;font-weight:900;'>Browns</span> beat the <span style='color:#1280D6;font-weight:900;'>Ravens</span> securing first place in their division! 
 
-  The <span style='color:#1280D6;font-weight:900;'>Patriots</span> crushed the <span style='color:#1280D6;font-weight:900;'>Raiders</span>. 
+  The <span style='color:#1280D6;font-weight:900;'>Titans</span> won their first game against the <span style='color:#1280D6;font-weight:900;'>Colts</span> in Indiana. 
 </p> 
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Jets</span> beat the <span style='color:#1280D6;font-weight:900;'>Browns</span> in a sloppy game. 
+The <span style='color:#1280D6;font-weight:900;'>Patriots</span> beat the <span style='color:#1280D6;font-weight:900;'>Jets</span>. 
 
-The <span style='color:#1280D6;font-weight:900;'>Texans</span> crushed the 0 and 5 <span style='color:#1280D6;font-weight:900;'>Titans</span>. 
+The <span style='color:#1280D6;font-weight:900;'>Saints</span> beat the <span style='color:#1280D6;font-weight:900;'>Giants</span> in New York! 
 
-The <span style='color:#1280D6;font-weight:900;'>Steelers</span> held on to beat the <span style='color:#1280D6;font-weight:900;'>Colts</span>. 
+The <span style='color:#1280D6;font-weight:900;'>Panthers</span> beat the <span style='color:#1280D6;font-weight:900;'>Eagles</span> in Philadelphia. 
 
-The <span style='color:#1280D6;font-weight:900;'>Commanders</span> game ended in a tie with the <span style='color:#1280D6;font-weight:900;'>Giants</span>. The <span style='color:#1280D6;font-weight:900;'>Commanders</span> blew a chance to win the game by letting the clock run out of time in OT! 
+The <span style='color:#1280D6;font-weight:900;'>Steelers</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> in overtime! 
 </p> 
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Chargers</span>. 
+The <span style='color:#1280D6;font-weight:900;'>Cardinals</span> beat the <span style='color:#1280D6;font-weight:900;'>Rams</span> in Los Angeles! 
 
-The <span style='color:#1280D6;font-weight:900;'>Lions</span> crushed the <span style='color:#1280D6;font-weight:900;'>Cardinals</span> in Arizona! 
+The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the hapless <span style='color:#1280D6;font-weight:900;'>Chargers</span>. 
 
-The <span style='color:#1280D6;font-weight:900;'>Packers</span> battered the <span style='color:#1280D6;font-weight:900;'>Bears</span>. 
+The <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the <span style='color:#1280D6;font-weight:900;'>Raiders</span> in Las Vegas in another competitive game! 
 </p> 
 
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Sunday night</span> game the <span style='color:#1280D6;font-weight:900;'>49ers</span> edged by the <span style='color:#1280D6;font-weight:900;'>Seahawks</span> in Seattle! 
+In the <span style='font-weight:bold; color:#228b22;'>Sunday night</span> game the <span style='color:#1280D6;font-weight:900;'>Packers</span> beat the <span style='color:#1280D6;font-weight:900;'>Cowboys</span>. 
 </p> 
 
-
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game the we had another overtime as the <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the  <span style='color:#1280D6;font-weight:900;'>Rams </span> in Los Angles.  
+In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game the <span style='color:#1280D6;font-weight:900;'>49ers</span> beat the  <span style='color:#1280D6;font-weight:900;'>Commanders </span> in Los Angles.  
 </p> 
 
 <p>
