@@ -2257,7 +2257,7 @@ controllers.sendplayeremailController = function ($scope, $http, $location, memb
 
     function setMembereMail (email)
     {
-        if ($scope.current.emailto == "")
+        if ( (fieldIsEmpty($scope.current.emailto)) || ($scope.current.emailto == "") )
         {
             $scope.current.emailto = email;
         }
