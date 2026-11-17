@@ -2,46 +2,45 @@
 
 $emailtopwriteup = "
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Thursday night</span> game the <span style='color:#1280D6;font-weight:900;'>Jaguars</span> beat the <span style='color:#1280D6;font-weight:900;'>Ravens</span>.
+In the <span style='font-weight:bold; color:#228b22;'>Thursday night</span> game the <span style='color:#1280D6;font-weight:900;'>Commanders</span> eeked out the <span style='color:#1280D6;font-weight:900;'>Giants</span> in New York!
 </p>
 
 <p>
 In <span style='font-weight:bold; color:#228b22;'>Sundays</span> games the 
-  <span style='color:#1280D6;font-weight:900;'>Bengals</span> beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in Atlanta!
+  <span style='color:#1280D6;font-weight:900;'>Lions</span> decapitated the <span style='color:#1280D6;font-weight:900;'>Patriots</span> in Germany!
   
- The <span style='color:#1280D6;font-weight:900;'>Broncos</span> beat the <span style='color:#1280D6;font-weight:900;'>Panthers</span> in an Carolina! 
+ The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the <span style='color:#1280D6;font-weight:900;'>Falcons</span> in Atlanta! 
 
-  The <span style='color:#1280D6;font-weight:900;'>Cowboys</span> came back and beat the <span style='color:#1280D6;font-weight:900;'>Colts</span> in a thriller in Indiana! 
+  The <span style='color:#1280D6;font-weight:900;'>Browns</span> came back and beat the <span style='color:#1280D6;font-weight:900;'>Texans</span>! 
 
-  The <span style='color:#1280D6;font-weight:900;'>Chiefs</span> beat the <span style='color:#1280D6;font-weight:900;'>Jets</span>! 
+  The <span style='color:#1280D6;font-weight:900;'>Colts</span> beat the <span style='color:#1280D6;font-weight:900;'>Dolphins</span>! 
 </p> 
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Lions</span> beat the <span style='color:#1280D6;font-weight:900;'>Dolphins</span> in Miami! 
+The <span style='color:#1280D6;font-weight:900;'>Vikings</span> decisively beat the <span style='color:#1280D6;font-weight:900;'>Packers</span> in Green Bay! 
 
-In a thriller the <span style='color:#1280D6;font-weight:900;'>Saints</span> squeaked by the <span style='color:#1280D6;font-weight:900;'>Browns</span>. 
+The <span style='color:#1280D6;font-weight:900;'>Panthers</span> beat the <span style='color:#1280D6;font-weight:900;'>Saints</span> in New Orleans! 
 
-The <span style='color:#1280D6;font-weight:900;'>Giants</span> beat the <span style='color:#1280D6;font-weight:900;'>Eagles</span>. 
+The <span style='color:#1280D6;font-weight:900;'>Bills</span> stampeded the <span style='color:#1280D6;font-weight:900;'>Jets</span> in New York! 
 
-The <span style='color:#1280D6;font-weight:900;'>Rams</span> beat the <span style='color:#1280D6;font-weight:900;'>Commanders</span> in Washington! 
+The <span style='color:#1280D6;font-weight:900;'>Jaguars</span> whumped the <span style='color:#1280D6;font-weight:900;'>Titans</span> in Nashville! 
 </p> 
 
 <p>
-The <span style='color:#1280D6;font-weight:900;'>Texans</span> beat the now 0 and 8 <span style='color:#1280D6;font-weight:900;'>Chargers</span> in LA! 
+The <span style='color:#1280D6;font-weight:900;'>Rams</span> bludgeoned the <span style='color:#1280D6;font-weight:900;'>Cardinals</span> in Arizona! 
 
-In another thriller the <span style='color:#1280D6;font-weight:900;'>49ers</span> crushed the <span style='color:#1280D6;font-weight:900;'>Raiders</span>!
+The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> beat the <span style='color:#1280D6;font-weight:900;'>Raiders</span> in Las Vegas!
 
-In another thriller the <span style='color:#1280D6;font-weight:900;'>Packers</span> embarrassed the <span style='color:#1280D6;font-weight:900;'>Patriots</span> at home in Foxborough! 
-
-The <span style='color:#1280D6;font-weight:900;'>Seahawks</span> easily handled the <span style='color:#1280D6;font-weight:900;'>Cardinals</span>. 
+The <span style='color:#1280D6;font-weight:900;'>49ers</span> held on to defeat the <span style='color:#1280D6;font-weight:900;'>Cowboys</span> in Dallas! 
 </p> 
 
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Sunday night</span> game the <span style='color:#1280D6;font-weight:900;'>Bears</span> beat the <span style='color:#1280D6;font-weight:900;'>Buccaneers</span> with a last second field goal! 
+In the <span style='font-weight:bold; color:#228b22;'>Sunday night</span> game the <span style='color:#1280D6;font-weight:900;'>Bengals</span> put a hurt on the <span style='color:#1280D6;font-weight:900;'>Steelers</span>!
 </p> 
 
+
 <p>
-In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game the <span style='color:#1280D6;font-weight:900;'>Bills</span> beat the  <span style='color:#1280D6;font-weight:900;'>Vikings </span> in Minnesota!
+In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game the <span style='color:#1280D6;font-weight:900;'>Chargers</span> won their first game in the 2026 season as they beat the <span style='color:#1280D6;font-weight:900;'>Ravens </span> in Baltimore!
 </p> 
 
 <p>
