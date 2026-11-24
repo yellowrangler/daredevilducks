@@ -50,6 +50,10 @@ In the <span style='font-weight:bold; color:#228b22;'>Monday night </span> game 
 </p> 
 
 <p>
+    <span style='color:#FF6E3B;font-weight:900;'>Thanksgiving week games are played on Wednesday, Thursday, Friday, Sunday and Monday!</span> 
+</p>
+
+<p>
   <span style='color:#FF6E3B;font-weight:900;'>Thanksgiving</span> is that very special time of year! It is a time to reflect on all our Blessings! A time to give thanks to simple pleasures, like food on the table and personal freedom! 
 </p>
 
